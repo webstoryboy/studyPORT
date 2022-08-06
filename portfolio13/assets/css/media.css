@@ -1,0 +1,432 @@
+@media screen and (max-width: 1220px){
+    .progress-ani {
+        width: 175px; height: 135px;
+        background-size: 1400px;
+    }
+    @keyframes progressWalk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -1400px 0px;}
+    }
+    .walkCha {
+        width: 233.33px; height: 180px;
+        background-size: 1866.67px;
+    }
+    .walkCha.left {
+        background-position: 0px -180px;
+    }
+    @keyframes walk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -1866.67px 0px;}
+    }
+    @keyframes walk2 {
+        0% {background-position: 0px -180px;}
+        100% {background-position: -1866.67px -180px;}
+    }
+    .skillsCha {
+        width: 233.33px; height: 180px;
+        background-size: 1866.67px;
+    }
+    .skillsCha.left {
+        background-position: 0px -180px;
+    }
+    .siteLastCha {
+        width: 233.33px; height: 180px;
+        background-size: 1866.67px;
+    }
+    .siteLastCha.left {
+        background-position: 0px -180px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .progress-ani {
+        width: 140px; height: 108px;
+        background-size: 1120px;
+    }
+    @keyframes progressWalk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -1120px 0px;}
+    }
+}
+@media screen and (max-width: 960px){
+    .walkCha {
+        width: 175px; height: 135px;
+        background-size: 1400px;
+    }
+    .walkCha.left {
+        background-position: 0px -135px;
+    }
+    @keyframes walk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -1400px 0px;}
+    }
+    @keyframes walk2 {
+        0% {background-position: 0px -135px;}
+        100% {background-position: -1400px -135px;}
+    }
+    .skillsCha {
+        width: 175px; height: 135px;
+        background-size: 1400px;
+    }
+    .skillsCha.left {
+        background-position: 0px -135px;
+    }
+    .siteLastCha {
+        width: 175px; height: 135px;
+        background-size: 1400px;
+    }
+    .siteLastCha.left {
+        background-position: 0px -135px;
+    }
+}
+@media screen and (max-width: 760px){
+    .progress-ani {
+        width: 116.67px; height: 90px;
+        background-size: 933.33px;
+    }
+    @keyframes progressWalk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -933.33px 0px;}
+    }
+    .sitePage .videoWrap {border-radius: 0; width: 70vw; height: 38vw;}
+    .sitePage .siteText .left {flex: 0 0 70%;}
+    .sitePage .siteText .right {flex: 0 0 30%;}
+
+    .sitePopup {width: 80vw;}
+}
+@media screen and (max-width: 600px){
+    .scroll {display: none;}
+    .progress-ani {
+        width: 100px; height: 77.14px;
+        background-size: 800px;
+    }
+    @keyframes progressWalk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -800px 0px;}
+    }
+    .walkCha {width: 140px; height: 108px; background-size: 1120px;}
+    .walkCha.left {background-position: 0px -108px;}
+    @keyframes walk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -1120px 0px;}
+    }
+    @keyframes walk2 {
+        0% {background-position: 0px -108px;}
+        100% {background-position: -1120px -108px;}
+    }
+    .skillsCha {width: 140px; height: 108px; background-size: 1120px;}
+    .skillsCha.left {background-position: 0px -108px;}
+    .siteLastCha {width: 140px; height: 108px; background-size: 1120px;}
+    .siteLastCha.left {background-position: 0px -108px;}
+    .sitePage .videoWrap {border-radius: 0;}
+    .sitePage .siteText .left {flex: 0 0 20%;}
+    .sitePage .siteText .right {flex: 0 0 20%;}
+
+    /* cha */
+    .walkCha {bottom: 24vw;}
+    .skillsCha {bottom: 24vw;}
+    .siteLastCha {bottom: 24vw;}
+    .scriptCha {width: 15vw; margin-left: 8vw;}
+
+    .progress .bar-wrap {width: 19vw;}
+
+    /* main */
+    .main .waveBack {bottom: 20vw;}
+    .main .waveFront {bottom: 20vw;}
+    .main .waveFront::after {
+        content: '';
+        width: 100%; height: 22vw;
+        background: #D3D57C;
+        position: absolute;
+        left: 0; bottom: -20vw;
+    }
+    .main .tree1 {bottom: 25vw;}
+    .main .tree2 {bottom: 23vw;}
+    .main .tree3 {bottom: 23vw;}
+    .main .tree4 {bottom: 27vw;}
+    .main .tree5 {bottom: 22vw;}
+    .main .tree6 {bottom: 24vw;}
+    @keyframes treeMove {
+        0% {transform: translateY(0);}
+        25% {transform: translateY(3px);}
+        50% {transform: translateY(-5px);}
+        100% {transform: translateY(0);}
+    }
+    .main .mainCha {width: 20vw; left: 39vw; bottom: 23vw;}
+    .main .cloud1 {top: 13vw;}
+    .main .cloud2 {top: 6.5vw;}
+    .main .cloud3 {top: 18vw;}
+    .main .introTitle h2 {font-size: 5vw;}
+    .main .scrollStart {left: 37vw; bottom: 50%;}
+    .main .scrollStart h2 {font-size: 4vw;}
+    .main .introTitle.loading {z-index: 9999;}
+
+    /* about */
+    .about1 .aboutText {font-size: 3vw;}
+    .about2 {background-image: linear-gradient(to bottom, #D4D77D , #BEC1B6);}
+
+    /* skills - skills1 */
+    .skills1 .waveTop {top: 20vw; opacity: 1;}
+    .skills1 .waveTop::before {
+        content: '';
+        width: 100%; height: 20vw;
+        position: absolute;
+        left: 0; top: -20vw;
+        background: #BEC1B6;
+    }
+    .skills1 .tree1 {bottom: 27vw;}
+    .skills1 .tree2 {bottom: 25vw;}
+    .skills1 .tree3 {bottom: 27vw;}
+    .skills1 .tree4 {bottom: 25vw;}
+    .skills1 .waveFront {bottom: 20vw;}
+    .skills1 .waveFront::after {
+        content: '';
+        width: 100%; height: 20vw;
+        background: #D3D57C;
+        position: absolute;
+        left: 0; bottom: -20vw;
+    }
+    .skills1 .waveBack {bottom: 20vw;}
+
+
+    /* skills - skills2 */
+    .skills2 .waveTop {top: 20vw; opacity: 1;}
+    .skills2 .waveTop::before {
+        content: '';
+        width: 100%; height: 20vw;
+        position: absolute;
+        left: 0; top: -20vw;
+        background: #BEC1B6;
+    }
+    .skills2 .waveFront {bottom: 20vw;}
+    .skills2 .waveFront::after {
+        content: '';
+        width: 100%; height: 20vw;
+        background: #D3D57C;
+        position: absolute;
+        left: 0; bottom: -20vw;
+    }
+    .skills2 .waveBack {bottom: 20vw;}
+    .skills2 .tree1 {bottom: 24vw;}
+    .skills2 .tree2 {bottom: 26vw;}
+    .skills2 .tree3 {bottom: 25vw;}
+    .skills2 .door h2 {
+        top: 10vw;
+        font-size: 4vw;
+        word-break: keep-all;
+        z-index: 9999;
+    }
+    .skills2 .door h2::before{
+        content: '';
+        width: 37vw; height: 40vw;
+        background: #447BA0;
+        position: absolute;
+        left: 0; bottom: -10vw;
+        z-index: -1;
+    }
+    
+    /* skills - skillsWrap - 아이템 */
+    .skillsWrap .skillsTitle {font-size: 3vw; width: 20vw; margin-left: -5vw; margin-top: 5vw;}
+    .skillsWrap .skillsItem .itemSub {display: none;}
+    .skillsWrap .skillsItem .item {margin-top: 10vw;}
+    .skillsWrap .skillsItem .item4 {margin-left: 3vw;}
+    .skillsWrap .skillsItem .item5 {margin-left: 3vw;}
+    .skillsWrap .skillsItem .item6 {margin-left: 3vw;}
+    .skillsWrap .skillsItem .itemName h3 {font-size: 3vw;}
+    .skillsWrap .skillsItem .itemPer h3 {font-size: 6vw;}
+    .skillsWrap .skillsItem .itemPer span {font-size: 4vw;}
+
+    /* site - intro */
+    .intro .cloud1 {top: 20vw;}
+    .intro .cloud2 {top: 10vw;}
+    .intro .cloud3 {top: 25vw;}
+    .intro .road,  .site .road, .mart .road, .react .road, .figma .road, .siteLast .road {bottom: 20vw;}
+    .intro .road::after, .site .road::after, .mart .road::after, 
+    .react .road::after, .figma .road::after, .siteLast .road::after {
+        content: '';
+        width: 100%; height: 20vw;
+        background: #B5B5B5;
+        position: absolute;
+        left: 0; bottom: -20vw;
+    }
+    .intro .tree1, .intro .tree2, .intro .tree3 {bottom: 27vw;}
+    .intro .car {bottom: 26vw;}
+
+    /* site - site */
+    .site .cloud1 {top: 25vw;}
+    .site .tree1 {bottom: 27vw;}
+    .site .siteStore {bottom: 27vw;}
+    .site .subCha {bottom: 26vw;}
+    .site .siteTalk {width: 30vw; right: 5vw; bottom: 45vw;}
+    .site .siteText .site-typing {top: 18%; width: 30vw; font-size: 3vw;}
+    .site .subCha {width: 13vw; right: 14vw;}
+
+    /* site - sitePopup */
+    .sitePopup ul {margin-left: 10%;}
+    .sitePopup li {flex: 0 0 50%;}
+    .sitePopup li:nth-child(9){display: none;}
+    .sitePopup li .num {font-size: 4vw;}
+    .sitePopup li .sub {font-size: 4vw; margin-bottom: 5%;}
+    .sitePopup li .ex {display: none;}
+    .sitePopup li .siteBtn {font-size: 3vw; padding-left: 5%;}
+    .sitePopup li .siteBtn::before {width: 1vw; height: 4vw;}
+    .sitePopup li .siteBtn span {padding: 5% 5%; border-radius: 5vw;}
+
+    /* sitePage - 사이트, 리액트 클릭하면 나오는 페이지 */
+    .sitePage .videoWrap {width: 80vw; height: 50vw;}
+    .sitePage .siteText .left {flex: 0 0 70%;}
+    .sitePage .siteText .right {flex: 0 0 30%;}
+    .sitePage .siteText .left h2 {font-size: 5vw;}
+    .sitePage .siteText .left li {font-size: 3vw;}
+    .sitePage .siteText .right h2 {font-size: 3vw; border-radius: 2vw;}
+
+    /* site - mart */
+    .mart .cloud1 {top: 20vw;}
+    .mart .tree1 {bottom: 25vw;}
+    .mart .heemMart {bottom: 27vw;}
+    .mart .martCha {width: 15vw; left: 30vw; bottom: 55vw;}
+
+    /* site - react */
+    .react .tree1, .react .tree2 {bottom: 27vw;}
+    .react .shoes {bottom: 26vw;}
+    .react .reactCha {width: 13vw; left: 20vw; bottom: 26vw;}
+    .react .reactTalk {width: 30vw; bottom: 45vw; left: 12vw;}
+    .react .reactTalk .react-typing {top: 18%; width: 30vw; font-size: 3vw;}
+    .react .nikeLogo {bottom: 50vw;}
+    .react .reactTitle > div {right: 31vw; bottom: 31vw;}
+    .reactCursor {display: none;}
+    .react .cloud1 {top: 23vw;}
+    .react .cloud2 {top: 12vw;}
+
+    /* site - figma */
+    .figma .cloud1 {top: 26vw;}
+    .figma .tree1 {bottom: 25vw;}
+    .figma .tree2 {bottom: 27vw;}
+    .figma .figmaStore {bottom: 26.5vw;}
+    .figma .figmaCha {width: 23vw; right: 8vw; bottom: 26vw;}
+    .figma .figmaTalk {width: 30vw; bottom: 45vw; right: 4vw;}
+    .figma .figmaTalk .figma-typing {top: 18%; width: 30vw; font-size: 3vw; left: 10%; top: 18%;}
+    .figmaPopup ul {font-size: 4vw;}
+    .figmaPopup .book1 {left: 2%;}
+    .figmaPopup .book2 {left: 15%;}
+    .figmaPopup .book3 {left: 29%;}
+    .figmaPopup .book4 {left: 40%;}
+    .figmaPopup .book5 {left: 49%;}
+    .figmaPopup .book6 {left: 57%;}
+    .figmaPopup .book7 {left: 66%;}
+    .figmaPopup .book8 {left: 75%;}
+    .figmaPopup .book9 {left: 84%;}
+    .figmaPopup .book10 {left: 92%;}
+
+    /* site - siteLast */
+    .siteLast .cloud1 {top: 15vw;}
+    .siteLast .cloud2 {top: 23vw;}
+    .siteLast .door h2 {
+        top: 10vw;
+        font-size: 4vw;
+        word-break: keep-all;
+        z-index: 9999;
+    }
+    .siteLast .door h2::before{
+        content: '';
+        width: 37vw; height: 40vw;
+        background: #F1A6A7;
+        position: absolute;
+        left: 0; bottom: -10vw;
+        z-index: -1;
+    }
+
+    /* animation - balloon3 */
+    .balloon3 .aniCha {width: 80vw; left: 8.5vw;}
+    .balloon3 .aniCha .aniTitle {font-size: 4vw;}
+    .balloon3 .aniBall .aniBtn {font-size: 6vw;}
+    .balloon3 .aniBall1 {width: 40vw; top: 10vw;}
+    .balloon3 .aniBall2 {width: 40vw; top: -8vw;}
+    .balloon3 .aniBall3 {width: 40vw; top: 10vw;}
+    .balloon3 .aniBall4 .aniBtn {left: 12vw;}
+    .balloon3 .aniBall5 .aniBtn {right: 10vw;}
+    .balloon3 .aniFrame .ani {width: 40vw; height: 40vw;}
+    .balloon3 .aniFrame .ani1 {top: 10vw;}
+    .balloon3 .aniFrame .ani2 {top: -8vw;}
+    .balloon3 .aniFrame .ani3 {top: 10vw;}
+
+    /* animation - ball */
+    @keyframes ballMove {
+        0% {width: 40vw; transform: translateY(-300%);}
+        100% {width: 1vw; transform: translateY(4800%);}
+    }
+
+    /* animation - aniLast */
+    .aniLast .door {width: 45vw;}
+    .aniLast .door h2 {
+        top: 13vw;
+        font-size: 4vw;
+        word-break: keep-all;
+        z-index: 9999;
+    }
+    .aniLast .door h2::before{
+        content: '';
+        width: 37vw; height: 20vw;
+        background: #44525F;
+        position: absolute;
+        left: 0; bottom: -15vw;
+        z-index: -1;
+    }
+    .aniLast .door::before {width: 12vw;}
+    .aniLast .door::after {width: 14vw;}
+    .aniLast .balloon1 {top: 25vw;}
+    .aniLast .balloon2 {top: 35vw;}
+    .aniLast .balloon3 {top: 30vw;}
+    .aniLast .balloon4 {top: 27vw; z-index: 9999;}
+    .aniLast .ballCha {width: 15vw; left: 40vw;}
+
+    /* script - script1,2 */
+    .lime, .mint {left: 5vw;}
+    .effect img {width: 55vw; height: 42vw;}
+    .effect .effectTxt {width: 45vw; height: 38vw;}
+    .effect .effectTxt .scriptTitle h2 {font-size: 4.5vw;}
+    .effect .effectTxt .scriptEx p {font-size: 2.5vw;}
+    .effect .effectTxt .scriptBtn h3 {font-size: 2.5vw;}
+
+    /* script - scriptPopup */
+    .effectIframe {width: 83vw; height: 50vw;}
+    .effectPopupWrap {left: 5vw;}
+    .effectPopupWrap .effectClose {font-size: 3.5vw; padding: 0.3% 1.2%; right: -6%;}
+
+    /* script - scriptLast */
+    .scriptLast .scriptLastTitle {width: 40vw; left: 15vw; top: 50%; font-size: 3vw;}
+    .scriptLast .scriptLastCha {width: 15vw; left: 73.2%;}
+    .siteLast .tree1 {bottom: 27vw;}
+
+    
+}
+@media screen and (max-width: 480px){
+    .progress .bar-wrap {width: 28vw;}
+    .walkCha {width: 87.5px; height: 67.5px; background-size: 700px;}
+    .walkCha.left {background-position: 0px -67.5px;}
+    @keyframes walk {
+        0% {background-position: 0px 0px;}
+        100% {background-position: -700px 0px;}
+    }
+    @keyframes walk2 {
+        0% {background-position: 0px -67.5px;}
+        100% {background-position: -700px -67.5px;}
+    }
+    .skillsCha {width: 87.5px; height: 67.5px; background-size: 700px;}
+    .skillsCha.left {background-position: 0px -67.5px;}
+    .siteLastCha {width: 87.5px; height: 67.5px; background-size: 700px;}
+    .siteLastCha.left {background-position: 0px -67.5px;}
+
+    .figma .figmaStore h2 {top: -20%;}
+
+    /* contact */
+    .contactInfo {flex: 0 0 90%;}
+    .contactInfo h2 {font-size: 5vw;}
+    .inputBox .left {font-size: 4vw; line-height: 2;}
+    .input-text {font-size: 3vw; border-radius: 2vw;}
+    .inputBox .bottom {font-size: 4vw;}
+    .sendMessage {font-size: 4vw; border-radius: 2vw;}
+    .myProfile {display: none;}
+}
+@media screen and (max-width: 320px){
+    
+}

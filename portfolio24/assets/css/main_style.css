@@ -1,0 +1,79 @@
+body {
+  background: #000;
+}
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 62px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* 도형 */
+.circle {
+  position: absolute;
+  top: 15.78vw;
+  left: 8vw;
+  width: 17.13vw;
+  height: 27.08vw;
+  border-radius: 8.56vw;
+  border: 1px solid #585858;
+}
+/* .triangle {
+  width: 0;
+  height: 1px;
+  border-right: 60px solid transparent;
+  border-bottom: 103.92px solid transparent;
+  border-left: 60px solid transparent;
+} */
+/* header */
+header h1 {
+  padding: 1.3vw  2.08vw;
+  float: left;
+  font-size: 0.83vw;
+  color: #fff;
+  text-align: left;
+  font-family: 'Roboto';
+}
+header ul {
+  float: right;
+}
+header ul li {
+  padding: 1.3vw 0;
+  display: inline-block;
+  padding: 1.3vw 0;
+  margin-left: 1.77vw;
+}
+header ul li:last-child {
+  padding-right :2.08vw;
+}
+header ul li a{
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: 300;
+}
+/* section */
+section {
+  position: relative;
+  height: 100vh;
+}
+/* main */
+#main .title {
+  position: absolute;
+  bottom: 13vw;
+  left: 16.82vw;
+  font-size: 9.37vw;
+  color: #fff;
+  font-family: "NewYork";
+  line-height: 79%;
+}
+#main .name {
+  position: absolute;
+  bottom:13vw;
+  right: 16.82vw;
+  font-size: 1.56vw;
+  color: rgb(226, 226, 226);
+  font-family: "NewYork";
+  line-height: 95%;
+  text-align: right;
+}

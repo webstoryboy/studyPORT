@@ -1,0 +1,293 @@
+/* font */
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-8Heavy';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* common */
+.bigTitle{
+  font-size: 12vw;
+  font-weight: 300;
+  line-height: 1;
+  padding-top: 5vh;
+}
+.bigTitle span{
+  display: block;
+}
+.subTitle{
+  font-size: 9vw;
+  font-weight: 300;
+}
+.site-btn{
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: inline-block;
+  z-index: 3;
+}
+.site-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 35px;
+  background: rgba(76, 38, 150,1);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.site-btn:hover:before {
+  width: 100%;
+  background: rgba(255, 255, 255, 85%);
+}
+.site-btn span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  transition: 0.35s;
+  font-weight: 900;
+}
+.site-btn:hover span{
+  color:rgb(0, 0, 0);
+}
+.site-btn svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #000;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.site-btn:hover svg {
+  margin-left: 25px;
+}
+/* cursor */
+.cursor1,.cursor2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 80%;
+  backface-visibility: hidden;
+  pointer-events: none;
+	z-index: 3;
+	text-indent: -9999em;
+}
+.cursor1{
+  width: 80px;
+  height: 80px;
+  margin: -50px 0 0 -50px;
+	background: #ffab88;
+	opacity: .5;
+}
+.cursor2{
+  width: 40px;
+  height: 40px;
+  margin: -70px 0 0 -70px;
+	background: #ffd188;
+	opacity: .5;
+}
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex: 0 1 auto
+}
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* 디자인 초기화 */
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  font-size: 16px;
+  /* 확대 방지 */
+}
+img {
+  vertical-align: top;
+}
+
+img, fieldset {
+  border: 0 none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+/* ir */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+button:active {
+  outline: none;
+}

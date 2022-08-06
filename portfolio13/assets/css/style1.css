@@ -1,0 +1,1356 @@
+/* layout */
+#vertical1 {position: relative; z-index: 6000;}
+#horizontal1 {position: relative; z-index: 5000; height: 17280px;}
+.vertical1 {position: relative;}
+.horizontal1 {
+    overflow: hidden;
+    width: 19200px;
+    position: fixed;
+    left: 0; top: 0;
+}
+
+#skills {float: left;}
+#site {float: left;}
+#ani {float: left;}
+#effect {float: left;}
+
+.car {float: left;}
+.site {float: left;}
+.mart {float: left;}
+.react {float: left;}
+.figma {float: left;}
+.siteLast {float: left;}
+
+#horizontal2 {display: none;}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 10px; top:10px;
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 50px;
+    z-index: 8000;
+}
+
+/* character */
+.heewon {
+    position: fixed;
+    width: 374px; height: 270px;
+    left: 50%; bottom: 7%;
+    margin-left: -200px;
+    background: url(../img/walk_character.svg);
+    background-size: 3740px;
+    z-index: 7000;
+}
+.heewon.walk {
+    animation: walk 0.8s steps(10, start) infinite;
+}
+@keyframes walk {
+    0% {background-position: 0px 0px;}
+    100% {background-position: -3740px 0px;}
+}
+.heewon.left {
+    background-position: 0px -270px;
+}
+.heewon.leftWalk {
+    animation: walk2 0.8s steps(10, start) infinite;
+}
+@keyframes walk2 {
+    0% {background-position: 0px -270px;}
+    100% {background-position: -3740px -270px;}
+}
+.heewonBall {
+    position: fixed;
+    z-index: 7000;
+    /* left: 43%; bottom: 7%; */
+    width: 235px; height: 430px;
+    background: url(../img/cha_ball.png);
+    background-size: cover;
+}
+/* main */
+#intro {
+    position: relative;
+    background: url(../img/back01.png);
+    width: 100%; height: 1000px;
+    background-size: cover;
+}
+#intro .introTitle h2 {
+    position: absolute;
+    left: 100px; bottom: 70px;
+    width: 20%;
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: flash 1.2s 1.5 linear;
+}
+#intro .cloud {
+    background: url(../img/cloud.png);
+    background-size: cover;
+    width: 210px; height: 150px;
+}
+#intro .cloud.cloud1 {
+    position: absolute;
+    left: 10%; top: 15%;
+}
+#intro .cloud.cloud2 {
+    position: absolute;
+    left: 35%; top: 5%;
+}
+#intro .cloud.cloud3 {
+    position: absolute;
+    right: 10%; top: 25%;
+}
+#intro .tree1 {
+    background: url(../img/tree_left04.png);
+    background-size: cover;
+    width: 340px; height: 420px;
+    position: absolute;
+    left: 3%; bottom: 10%;
+}
+#intro .tree2 {
+    background: url(../img/tree_left03.png);
+    background-size: cover;
+    width: 260px; height: 350px;
+    position: absolute;
+    left: 25%; bottom: 10%;
+}
+#intro .tree3 {
+    background: url(../img/tree_left01.png);
+    background-size: cover;
+    width: 370px; height: 465px;
+    position: absolute;
+    left: 13%; bottom: 10%;
+}
+#intro .tree4 {
+    background: url(../img/tree_right01.png);
+    background-size: cover;
+    width: 195px; height: 250px;
+    position: absolute;
+    right: 23%; bottom: 10%;
+}
+#intro .tree5 {
+    background: url(../img/tree_right03.png);
+    background-size: cover;
+    width: 305px; height: 390px;
+    position: absolute;
+    right: 14%; bottom: 10%;
+}
+#intro .tree6 {
+    background: url(../img/tree_right02.png);
+    background-size: cover;
+    width: 265px; height: 355px;
+    position: absolute;
+    right: 4%; bottom: 10%;
+}
+#intro .waveBottom {
+    background: url(../img/main_wave.png);
+    background-size: cover;
+    width: 100%; height: 160px;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+#intro .mainCha {
+    position: absolute;
+    left: 48%; bottom: 10%;
+    margin-left: -100px;
+    width: 195px; height: 270px;
+    background: url(../img/cha_hand.png);
+    background-size: cover;
+}
+#intro .mainChaDog {
+    position: absolute;
+    right: 43%; bottom: 10%;
+    margin-left: -100px;
+    width: 105px; height: 120px;
+    background: url(../img/cha_hand_dog.png);
+    background-size: cover;
+}
+
+/* about */
+#about {
+    width: 100%; height: 1000px;
+    background-image: linear-gradient(to bottom, #D4D77D , #BEC1B7);
+}
+#about .aboutText {
+    padding-top: 370px;
+}
+#about .aboutText >div {
+    font-size: 60px;
+    color: #fff;
+    font-family: 'yg-jalnan';
+    display: flex;
+    justify-content: center; 
+    line-height: 1.3;
+}
+
+/* skills */
+#skills {
+    position: relative;
+    width: 3840px; height: 1000px;
+    background: url(../img/back02.png);
+    background-size: cover;
+    color: #fff;
+}
+#skills .tree1 {
+    width: 370px; height: 465px;
+    background: url(../img/tree_left01.png);
+    background-size: cover;
+    position: absolute;
+    left: 2%; bottom: 10%;
+}
+#skills .tree2 {
+    width: 260px; height: 350px;
+    background: url(../img/tree_left03.png);
+    background-size: cover;
+    position: absolute;
+    left: 12%; bottom: 10%;
+}
+#skills .tree3 {
+    width: 195px; height: 250px;
+    background: url(../img/tree_right01.png);
+    background-size: cover;
+    position: absolute;
+    left: 30%; bottom: 13%;
+}
+#skills .tree4 {
+    width: 305px; height: 390px;
+    background: url(../img/tree_right03.png);
+    background-size: cover;
+    position: absolute;
+    left: 40%; bottom: 10%;
+}
+#skills .tree5 {
+    width: 340px; height: 420px;
+    background: url(../img/tree_left05.png);
+    background-size: cover;
+    position: absolute;
+    right: 40%; bottom: 10%;
+}
+#skills .tree6 {
+    width: 260px; height: 350px;
+    background: url(../img/tree_left03.png);
+    background-size: cover;
+    position: absolute;
+    right: 36%; bottom: 8%;
+}
+#skills .tree7 {
+    width: 265px; height: 355px;
+    background: url(../img/tree_right02.png);
+    background-size: cover;
+    position: absolute;
+    right: 25%; bottom: 9%;
+}
+#skills .tree8 {
+    width: 310px; height: 390px;
+    background: url(../img/tree_right03.png);
+    background-size: cover;
+    position: absolute;
+    right: 8%; bottom: 8%;
+}
+#skills .waveTop {
+    width: 3840px; height: 635px;
+    background: url(../img/skills_wave_top.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; top: 0;
+}
+#skills .skillsTitle h2{
+    width: 10%;
+    word-break:keep-all;
+    font-family: 'yg-jalnan';
+    font-size: 60px;
+    line-height: 1.2;
+    position: absolute;
+    left: 2%; top: 5%;
+}
+#skills .skillsItem {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    color: #fff;
+}
+#skills .skillsItem .itemName h3{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#skills .skillsItem .itemPer {
+    font-size: 70px;
+    display: inline-block;
+    padding: 20px 10px;
+    border: 15px solid #fff;
+    border-radius: 50%;
+}
+#skills .skillsItem .itemPer span {
+    font-size: 30px;
+}
+#skills .skillsItem .item1 {
+    position: absolute;
+    left: 15%; top: 10%;
+}
+#skills .skillsItem .item2 {
+    position: absolute;
+    left: 23%; top: 25%;
+}
+#skills .skillsItem .item3 {
+    position: absolute;
+    left: 31%; top: 15%;
+}
+#skills .skillsItem .item4 {
+    position: absolute;
+    left: 40%; top: 13%;
+}
+#skills .skillsItem .item5 {
+    position: absolute;
+    left: 48%; top: 10%;
+}
+#skills .waveBottom {
+    width: 3840px; height: 160px;
+    background: url(../img/skills_wave_bottom.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+#skills .door {
+    position: relative;
+    width: 710px; height: 1000px;
+    background: url(../img/door_blue.png);
+    background-size: cover;
+    position: absolute;
+    right: 0; top: 0;
+}
+#skills .skillsLast h2 {
+    width: 15%;
+    font-family: 'yg-jalnan';
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.3;
+    word-break: keep-all;
+    position: absolute;
+    right: 1%; top: 5%;
+}
+
+
+#site {}
+.car {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.car .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.car .cloud {
+    background: url(../img/cloud.png);
+    background-size: cover;
+    width: 210px; height: 150px;
+}
+.car .cloud.cloud1 {
+    position: absolute;
+    left: 5%; top: 20%;
+}
+.car .cloud.cloud2 {
+    position: absolute;
+    left: 40%; top: 5%;
+}
+.car .cloud.cloud3 {
+    position: absolute;
+    right: 10%; top: 15%;
+}
+.car .tree1 {
+    width: 260px; height: 350px;
+    background: url(../img/tree_left03.png);
+    background-size: cover;
+    position: absolute;
+    left: 5%; bottom: 10%;
+}
+.car .tree2 {
+    width: 340px; height: 420px;
+    background: url(../img/tree_left04.png);
+    background-size: cover;
+    position: absolute;
+    right: 20%; bottom: 10%;
+}
+.car .tree3 {
+    width: 370px; height: 465px;
+    background: url(../img/tree_left01.png);
+    background-size: cover;
+    position: absolute;
+    right: 5%; bottom: 10%;
+}
+.car .carYellow {
+    width: 740px; height: 445px;
+    background: url(../img/car.png);
+    background-size: cover;
+    position: absolute;
+    left: 20%; bottom: 10%;
+}
+.car .carCloud {
+    width: 220px; height: 120px;
+    background: url(../img/car_cloud.png);
+    background-size: cover;
+    position: absolute;
+    right: 29%; bottom: 22%;
+}
+
+.site {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.site .cloud {
+    width: 210px; height: 150px;
+    background: url(../img/cloud.png);
+    background-size: cover;
+    position: absolute;
+    right: 30%; top: 10%;
+}
+.site .tree {
+    width: 450px; height: 600px;
+    background: url(../img/tree_left02.png);
+    background-size: cover;
+    position: absolute;
+    right: 10%; bottom: 8%;
+}
+.site .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.site .store {
+    width: 970px; height: 770px;
+    background: url(../img/store.png);
+    background-size: cover;
+    position: absolute;
+    left: 10%; bottom: 13%;
+}
+.site .storeLight {
+    width: 310px; height: 200px;
+    background: url(../img/light.png);
+    background-size: cover;
+    position: absolute;
+    left: 27%; top: 13%;
+}
+.site .siteTitle h2 {
+    width: 10%;
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    left: 23%; top: 17%;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+.site .siteTalk {
+    position: absolute;
+    right: 21%; top: 33%;
+    width: 335px; height: 270px;
+    background-image: url(../img/talk.png);
+    background-size: cover;
+}
+.site .siteTalk span{
+    display: inline-block;
+    padding: 60px 40px;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+.siteCha {
+    position: absolute;
+    right: 480px; bottom: 120px;
+    width: 195px; height: 270px;
+    background: url(../img/sub_cha_fafa.png);
+    background-size: cover;
+}
+.sitePopup {
+    display: none;
+    width: 1440px; height: 880px;
+    background-color: rgba(85, 81, 77, 0.9);
+    border-radius: 50px;
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.sitePopup ul {
+    height: 880px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 80px;
+}
+.sitePopup li {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 32%;
+    letter-spacing: 1px;
+}
+.sitePopup li .num {
+    font-family: 'Fredoka One', cursive;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.sitePopup li .sub {
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+}
+.sitePopup li .ex {
+    font-family: 'yg-jalnan';
+    font-size: 20px;
+}
+.sitePopup li a {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 23px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+.sitePopup li a::before {
+    content: '';
+    width: 19px; height: 19px;
+    background: url(../img/button01.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; top: 2px;
+}
+
+
+.mart {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.mart .tree {
+    background: url(../img/tree_left01.png);
+    background-size: cover;
+    width: 370px; height: 465px;
+    position: absolute;
+    right: 0; bottom: 10%;
+}
+.mart .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.mart .martImg {
+    width: 1325px; height: 840px;
+    background: url(../img/mart.png);
+    background-size: cover;
+    position: absolute;
+    left: 6%; bottom: 13%;
+}
+.mart .martLogo {
+    position: absolute;
+    left: 11%; top: 36%;
+}
+.mart .martLogo h2 {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    width: 10%;
+    color: #D46249;
+    text-align: center;
+    line-height: 1;
+}
+.mart .cloud {
+    width: 210px; height: 150px;
+    background: url(../img/cloud.png);
+    background-size: cover;
+    position: absolute;
+    right: 15%; top: 20%;
+}
+
+/* react */
+.react {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.react .tree1 {
+    background: url(../img/tree_left03.png);
+    background-size: cover;
+    width: 260px; height: 350px;
+    position: absolute;
+    left: 10%; bottom: 10%;
+}
+.react .tree2 {
+    background: url(../img/tree_right02.png);
+    background-size: cover;
+    width: 265px; height: 355px;
+    position: absolute;
+    right: 8%; bottom: 10%;
+}
+.react .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.react .cloud {
+    width: 210px; height: 150px;
+    background: url(../img/cloud.png);
+    background-size: cover;
+}
+.react .cloud1 {
+    position: absolute;
+    left: 10%; top: 5%;
+}
+.react .cloud2 {
+    position: absolute;
+    right: 15%; top: 15%;
+}
+.react .reactTalk {
+    position: absolute;
+    left: 16%; top: 33%;
+    width: 335px; height: 270px;
+    background-image: url(../img/talk.png);
+    background-size: cover;
+}
+.react .reactTalk span {
+    display: inline-block;
+    padding: 60px 40px;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+.react .reactCha {
+    position: absolute;
+    left: 365px; bottom: 120px;
+    width: 195px; height: 270px;
+    background: url(../img/sub_cha_cow.png);
+    background-size: cover;
+}
+.react .reactImg {
+    width: 785px; height: 350px;
+    background: url(../img/nike_shoes.png);
+    background-size: cover;
+    position: absolute;
+    left: 30%; bottom: 10%;
+}
+.react .reactTitle {
+}
+.react .reactTitle h2 {
+    position: absolute;
+    left: 800px; bottom: 300px;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 150px;
+}
+
+.figma {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.figma .tree1 {
+    width: 450px; height: 600px;
+    background: url(../img/tree_left02.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 10%;
+}
+.figma .tree2 {
+    width: 305px; height: 390px;
+    background: url(../img/tree_right03.png);
+    background-size: cover;
+    position: absolute;
+    right: 5%; bottom: 8%;
+}
+.figma .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.figma .cloud {
+    width: 210px; height: 150px;
+    background: url(../img/cloud.png);
+    background-size: cover;
+    position: absolute;
+    right: 35%; top: 12%;
+}
+.figma .figmaImg {
+    width: 860px; height: 650px;
+    background: url(../img/figma.png);
+    background-size: cover;
+    position: absolute;
+    left: 16%; bottom: 13%;
+}
+.figma .figmaTitle h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    left: 350px; top: 9%;
+    letter-spacing: 2px;
+    word-break: keep-all;
+    line-height: 1.1;
+}
+.figma .figmaTalk {
+    position: absolute;
+    right: 370px; bottom: 43%;
+    width: 335px; height: 270px;
+    background-image: url(../img/talk.png);
+    background-size: cover;
+}
+.figma .figmaTalk span {
+    display: inline-block;
+    padding: 60px 40px;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+.figma .figmaCha {
+    position: absolute;
+    right: 365px; bottom: 130px;
+    width: 355px; height: 270px;
+    background: url(../img/sub_cha_ufo.png);
+    background-size: cover;
+}
+
+.siteLast {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png) no-repeat;
+    background-size: cover;
+}
+.siteLast .tree1 {
+    width: 305px; height: 390px;
+    background: url(../img/tree_right03.png);
+    background-size: cover;
+    position: absolute;
+    left: 25%; bottom: 12%;
+}
+.siteLast .tree2 {
+    width: 265px; height: 355px;
+    background: url(../img/tree_right02.png);
+    background-size: cover;
+    position: absolute;
+    right: 40%; bottom: 12%;
+}
+.siteLast .cloud {
+    background: url(../img/cloud.png);
+    background-size: cover;
+    width: 210px; height: 150px;
+}
+.siteLast .cloud1 {
+    position: absolute;
+    left: 5%; top: 30%;
+}
+.siteLast .cloud2 {
+    position: absolute;
+    left: 40%; top: 5%;
+}
+.siteLast .road {
+    width: 1920px; height: 140px;
+    background: url(../img/road.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.siteLast .door {
+    position: relative;
+    width: 710px; height: 1000px;
+    background: url(../img/door_pink.png);
+    background-size: cover;
+    position: absolute;
+    right: 0; top: 0;
+}
+.siteLast .siteLastTitle {
+    position: absolute;
+    right: 260px; top: 5%;
+    width: 360px;
+}
+.siteLast .siteLastTitle h2 {
+    font-family: 'yg-jalnan';
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+/* ani */
+#ani {
+    position: relative;
+    background: url(../img/ani_back01.png);
+}
+
+#ani .ball1 {
+    background: url(../img/ball01.png);
+    background-size: cover;
+    width: 340px; height: 340px;
+    position: absolute;
+    left: 0; top: 0;
+}
+#ani .ball2 {
+    background: url(../img/ball02.png);
+    background-size: cover;
+    width: 340px; height: 340px;
+    position: absolute;
+    left: 50px; top: 0;
+}
+#ani .ball3 {
+    background: url(../img/ball03.png);
+    background-size: cover;
+    width: 210px; height: 210px;
+    position: absolute;
+    left: 100px; top: 0
+}
+#ani .ball4 {
+    background: url(../img/ball01.png);
+    background-size: cover;
+    width: 340px; height: 340px;
+    position: absolute;
+    left: 150px; top: 0;
+}
+#ani .ball5 {
+    background: url(../img/ball03.png);
+    background-size: cover;
+    width: 210px; height: 210px;
+    position: absolute;
+    left: 200px; top: 0
+}
+
+.ani1 {
+    width: 1920px; height: 1000px;
+    background: url(../img/ani_back01.png);
+    background-size: cover;
+}
+.ani2 {
+    width: 1920px; height: 1000px;
+    background: url(../img/ani_back01.png);
+    background-size: cover;
+}
+.ani3 {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/ani_back01.png);
+    background-size: cover;
+}
+.ani3 .aniTitle {
+    font-size: 250px;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'yg-jalnan';
+    text-align: center;
+    line-height: 1000px;
+}
+.ani3 .aniCha {
+    width: 750px; height: 975px;
+    background: url(../img/cha_big.png);
+    background-size: cover;
+    position: absolute;
+    left: 32%; bottom: 0;
+}
+.aniBall h3 {
+    font-family: 'yg-jalnan';
+    font-size: 65px;
+    margin: 0 auto;
+}
+.aniBall1 a:hover {
+    color: #E7625E;
+}
+.ani3 .aniBall1 {
+    width: 340px; height: 340px;
+    background: url(../img/ball01.png);
+    background-size: cover;
+
+}
+
+.aniLast {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/ani_back01.png);
+    background-size: cover;
+}
+.aniLast .road {
+    width: 1920px; height: 195px;
+    background: url(../img/road_green.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.aniLast .balloon1 {
+    width: 175px; height: 325px;
+    background: url(../img/balloon01.png);
+    background-size: cover;
+    position: absolute;
+    left: 5%; top: 10%;
+}
+.aniLast .balloon2 {
+    width: 175px; height: 325px;
+    background: url(../img/balloon02.png);
+    background-size: cover;
+    position: absolute;
+    left: 20%; top: 30%;
+}
+.aniLast .balloon3 {
+    width: 175px; height: 325px;
+    background: url(../img/balloon03.png);
+    background-size: cover;
+    position: absolute;
+    left: 40%; top: 20%;
+}
+.aniLast .balloon4 {
+    width: 175px; height: 325px;
+    background: url(../img/balloon04.png);
+    background-size: cover;
+    position: absolute;
+    left: 55%; top: 20%;
+}
+.aniLast .door {
+    width: 710px; height: 1000px;
+    background: url(../img/door_dark.png);
+    background-size: cover;
+    position: absolute;
+    right: 0; top: 0;
+}
+.aniLast .aniLastTitle {
+    position: absolute;
+    right: 220px; top: 6%;
+    width: 400px;
+}
+.aniLast .aniLastTitle h2 {
+    font-family: 'yg-jalnan';
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+/* effect */
+#effect {}
+#effect .contact {
+    width: 1920px; height: 1000px;
+    background: #3DB8A9;
+    background-size: cover;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+.contact .left {
+    flex: 1 1 45%;
+    padding-left: 200px;
+}
+.contact .left h2 {
+    font-size: 68px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+.contact .left .title {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact .left .title .titleLeft {}
+.contact .left .title .titleLeft h3 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+.contact .left .title .titleLeft h3:nth-child(1) {
+    margin-top: 5px;
+}
+.contact .left .title .titleRight {}
+.contact .left .title .titleRight > div {
+    width: 450px; height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 10px;
+}
+.contact .left .title .titleCenter {}
+.contact .left .title .titleCenter .message {
+    width: 720px; height: 390px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+.contact .left .title .titleCenter .button {
+    margin-top: 10px;
+    width: 720px; height: 80px;
+    background-color: #00977C;
+    border-radius: 15px;
+}
+.contact .left .title .titleCenter .button h2 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+}
+.contact .right {
+    flex: 1 1 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.contact .right .myface {
+    flex: 1 1 30%;
+}
+.contact .right .myface .img{
+    width: 370px; height: 370px;
+    background: url(../img/img01.jpeg);
+    background-size: cover;
+}
+.contact .right .info {
+    margin-left: 40px;
+    margin-top: -8px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 47%;
+}
+.contact .right .info h3 {
+    font-weight: normal;
+    font-size: 30px;
+    
+}
+.contact .right .info h3:nth-child(1) {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contact .right .info .sns {
+    width: 300px; height: 80px;
+    background-color: #00977C;
+    border-radius: 15px;
+    flex: 0 0 20%;
+}
+.contact .right .info .sns h3 {
+    text-align: center;
+    line-height: 80px;   
+}
+.contact .right .info .info1 {
+    flex: 0 0 80%;
+}
+.contact .contactCha {
+    position: relative;
+    width: 720px; height: 450px;
+    
+}
+.contact .contactCha .cha1{
+    width: 195px; height: 270px;
+    background: url(../img/cha_hand.png);
+    background-size: cover;
+    position: absolute;
+    left: 10%; bottom: 0%;
+    z-index: 500;
+    animation: shakeY 5s linear infinite;
+}
+.contact .contactCha .cha2{
+    width: 105px; height: 120px;
+    background: url(../img/cha_hand_dog.png);
+    background-size: cover;
+    position: absolute;
+    left: 35%; bottom: 0%;
+    animation: shakeY 1.5s linear infinite;
+    
+}
+.contact .contactCha .cha3{
+    width: 195px; height: 270px;
+    background: url(../img/sub_cha_fafa.png);
+    background-size: cover;
+    position: absolute;
+    left: 50%; bottom: 0%;
+    z-index: 500;
+    animation: shakeY 4s linear infinite;
+}
+.contact .contactCha .cha4{
+    width: 195px; height: 270px;
+    background: url(../img/sub_cha_cow.png);
+    background-size: cover;
+    position: absolute;
+    left: 0%; bottom: 25%;
+    animation: shakeY 2.5s linear infinite;
+}
+.contact .contactCha .cha5{
+    width: 355px; height: 270px;
+    background: url(../img/sub_cha_ufo.png);
+    background-size: cover;
+    position: absolute;
+    left: 50%; bottom: 25%;
+    animation: shakeY 1s linear infinite;
+}
+.contact .contactCha .cha6{
+    width: 195px; height: 270px;
+    background: url(../img/sub_cha_et.png);
+    background-size: cover;
+    position: absolute;
+    left: 30%; bottom: 25%;
+    animation: shakeY 3s linear infinite;
+}
+
+#effect .effect5 {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.effect5 .effect5Title {
+    position: absolute;
+    left: 23%; top: 50%;
+}
+.effect5 .effect5Title h2{
+    font-family: 'yg-jalnan';
+    width: 500px;
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+}
+.effect5 .wave {
+    width: 1920px; height: 225px;
+    background: url(../img/wave_last.png);
+    background-size: cover;
+}
+#effect .effect4 {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.effect4 .slider {
+    position: absolute;
+    left: 20%; top: 0;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;   
+    background: #DED545;
+    width: 618px; height: 300px;
+}
+.effect4 .slider::before {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; top: -49px;
+    background: url(../img/script_green_top.png);
+    background-size: cover;
+}
+.effect4 .slider::after {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; bottom: -49px;
+    background: url(../img/script_green_bottom.png);
+    background-size: cover;
+}
+.effect4 .slider h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 10px 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.effect4 .slider p {
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    padding: 30px 20px;
+    word-break: keep-all;
+}
+.effect4 .slider .button {
+   margin-left: 20px;
+}
+.effect4 .slider .button h3 {
+    display: inline-block;
+    background: rgba(254, 253, 234, 0.8);
+    font-size: 20px;
+    font-weight: normal;
+    color: #DED545;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+.effect4 .quiz {
+    position: absolute;
+    left: 20%; top: 50%;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;   
+    background: #3DB8A9;
+    width: 618px; height: 300px;
+}
+.effect4 .quiz::before {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; top: -49px;
+    background: url(../img/script_mint_top.png);
+    background-size: cover;
+}
+.effect4 .quiz::after {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; bottom: -49px;
+    background: url(../img/script_mint_bottom.png);
+    background-size: cover;
+}
+.effect4 .quiz h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 10px 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.effect4 .quiz p {
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    padding: 30px 20px;
+    word-break: keep-all;
+}
+.effect4 .quiz .button {
+   margin-left: 20px;
+}
+.effect4 .quiz .button h3 {
+    display: inline-block;
+    background: rgba(254, 253, 234, 0.8);
+    font-size: 20px;
+    font-weight: normal;
+    color: #3DB8A9;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+#effect .effect3 {
+    position: relative;
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+.effect3 .parallax {
+    position: absolute;
+    left: 20%; top: 0;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;   
+    background: #DED545;
+    width: 618px; height: 300px;
+}
+.effect3 .parallax::before {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; top: -49px;
+    background: url(../img/script_green_top.png);
+    background-size: cover;
+}
+.effect3 .parallax::after {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; bottom: -49px;
+    background: url(../img/script_green_bottom.png);
+    background-size: cover;
+}
+.effect3 .parallax h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 10px 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.effect3 .parallax p {
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    padding: 30px 20px;
+    word-break: keep-all;
+}
+.effect3 .parallax .button {
+   margin-left: 20px;
+}
+.effect3 .parallax .button h3 {
+    display: inline-block;
+    background: rgba(254, 253, 234, 0.8);
+    font-size: 20px;
+    font-weight: normal;
+    color: #DED545;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+.effect3 .mouse {
+    position: absolute;
+    left: 20%; top: 50%;
+    color: #fff;
+    font-family: 'Fredoka One', cursive;   
+    background: #3DB8A9;
+    width: 618px; height: 300px;
+}
+.effect3 .mouse::before {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; top: -49px;
+    background: url(../img/script_mint_top.png);
+    background-size: cover;
+}
+.effect3 .mouse::after {
+    content: '';
+    width: 680px; height: 49px;
+    position: absolute;
+    left: -31px; bottom: -49px;
+    background: url(../img/script_mint_bottom.png);
+    background-size: cover;
+}
+.effect3 .mouse h2 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 10px 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.effect3 .mouse p {
+    font-size: 20px;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    padding: 30px 20px;
+    word-break: keep-all;
+}
+.effect3 .mouse .button {
+   margin-left: 20px;
+}
+.effect3 .mouse .button h3 {
+    display: inline-block;
+    background: rgba(254, 253, 234, 0.8);
+    font-size: 20px;
+    font-weight: normal;
+    color: #3DB8A9;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+#effect .effect2 {
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}
+#effect .effect1 {
+    width: 1920px; height: 1000px;
+    background: url(../img/back01.png);
+    background-size: cover;
+}

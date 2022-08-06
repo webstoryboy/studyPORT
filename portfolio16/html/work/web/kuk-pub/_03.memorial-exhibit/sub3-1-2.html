@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <title>국가기념관 스마트전시 안내시스템</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core js -->
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script> 
+    
+    
+    <!-- jquery -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+    <!-- main css -->
+    <link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/font.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="../css/xeicon.css" rel="stylesheet">
+    <link href="../css/datepicker.css" rel="stylesheet">
+
+  
+
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+</head>
+
+<body class="pt0">
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="navbar-brand" href="#">
+                    <ul>
+                        <a href="../_main/main.html">
+                            <li style="margin-right:10px;"><img src="../images/logo.svg"></li>
+                            <li>국가기념관 스마트 전시안내 시스템</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul class="row">
+                        <li class=" ">
+                            <a class="nav-link" href="../_styleGuide/component.html"><span class="btn btn-xs btn-secondary"><i class="xi-cog"></i> 스타일가이드</span></a>
+                        </li>
+                        <li class="dropdown-select">
+                            <select class="custom-select" style="background-color: #f3f5f7;">
+                                <option selected>독립기념관</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"><img src="../images/icon/notice.png" class="ico-box">공지사항</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false"><img src="../images/icon/alert.png"
+                                    class="ico-box">알림<span class="alarm-num">12</span></a>
+                            <div class="dropdown-menu alarm-menu" aria-labelledby="alarm-notice"
+                                style="transform: translate3d(0px, 54px, 0px);!important">
+                                <button class="dropdown-item" type="button">기념관 및 계정생성 신청<span class="alarm-num"
+                                        style="position: absolute;">4</span></button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item" type="button">비콘 베터리 교체<span
+                                        class="alarm-num">33</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"><img src="../images/icon/mypage.png" class="ico-box">마이페이지</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="../_main/login.html"><img src="../images/icon/logout.png"
+                                    class="ico-box">로그아웃</a>
+                        </li>
+                        <li>
+                            <button class="btn search-btn" type="submit"><img src="../images/icon/search.png"></button>
+                        </li>
+
+                    </ul>
+                    <div class="search-bar">
+                        <!-- D : search-btn 클릭 나타나기 -->
+                        <div class="search-bar-box float-right">
+                            <form class="" style="width: 670px;">
+                                <select class="custom-select " style="width: 175px; background-color:#ffffff">
+                                    <option selected>전시품명</option>
+                                    <option value="1">전시안내번호</option>
+                                    <option value="2">전시품 ID</option>
+                                    <option value="3">전시안내내용</option>
+                                </select>
+                                <input class="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="col-md-2">전시품 전시안내 관리</li><!-- D : 활성화페이지일 경우 : on 처리 -->
+                    <li class="col-md-2">실내측위 관리</li>
+                    <li class="col-md-2">기념관,전시품 관리</li>
+                    <li class="col-md-2">주요통계</li>
+                    <li class="col-md-2">시스템관리</li>
+                    <li class="col-md-2">컨텐츠 및 서비스 관리</li>
+                </ul>
+            </div>
+            <!-- 메뉴드롭 -->
+            <div class="menu-drop" id="multiCollapseExample1">
+                <div class="container">
+                    <ul class="menu-drop-list">
+                        <li class="col-md-2">
+                            <ul>
+                                <li class="on"><a href="../_01_exhibit-info/sub1-1-1.html">기념관 APP메인 관리</a></li>
+                                <!-- D : 활성화페이지일 경우 : on 처리 -->
+                                <li><a href="../_01_exhibit-info/sub1-2-1.html">카테고리별 전시안내 관리</a></li>
+                                <li><a href="../_01_exhibit-info/sub1-3.html">현충시설 컨텐츠 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_02_indoor-position/sub2-1-1.html">비콘 기본정보 관리</a></li>
+                                <li><a href="../_02_indoor-position/sub2-2-1.html">Zoning 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_03.memorial-exhibit/sub3-1-1.html">전시품 정보 관리</a></li>
+                                <li><a href="../_03.memorial-exhibit/sub3-2-1.html">기념관 정보 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_04.statistics/sub4-1.html">방문자 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-2.html">전시품별 전시안내 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-3.html">ICT 컨텐츠 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-4.html">군장병 관람인증 현황</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_05.system/sub5-1-1.html">시스템 공지사항</a></li>
+                                <li><a href="../_05.system/sub5-2.html">계정요청처리</a></li>
+                                <li><a href="../_05.system/sub5-2-1.html">관리자 계정관리</a></li>
+                                <li><a href="../_05.system/sub5-3.html">그룹/권한 관리</a></li>
+                                <li><a href="../_05.system/sub5-4.html">공통코드 관리</a></li>
+                                <li><a href="../_05.system/sub5-5-1.html">컨텐츠 변경이력관리</a></li>
+                                <li><a href="../_05.system/sub5-6-1.html">로그 관리</a></li>
+                                <li><a href="../_05.system/sub5-7.html">데이터연동 수동관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_06.contents-service/sub6-1.html">영상 컨텐츠 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-0.html">텍스트AR 정보 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-2.html">APP 공지사항 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-3.html">군인별 관람인증 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-4.html">관람인증 문제은행 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="tit-area  clear-fix">
+                <div class="title">
+                    <h2>전시품 관리 <span> 전시품 등록</span></h2>
+                </div>
+                <div class="loc-line">
+                    <a href="../_main/main.html">홈</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                    <a href="#">기념관,전시품 관리</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                    <a href="#" class="active">전시품 관리</a>
+                </div>
+            </div>
+
+            <div class="top-btn-box float-right">
+                <div class="btn-group">
+                    <a href="sub3-1-1.html" type="submit" class="btn btn-border btn-md"><i class="xi-list"></i> 목록</a>
+                    <button type="submit" class="btn btn-border btn-md"><i class="xi-time-o"></i> 변경이력</button>
+                    <a href="sub3-1-1.html"  type="submit" class="btn btn-danger btn-md">등록</a>
+                    <!-- 수정버튼  <button type="submit" class="btn top-btn en-btn" style="background-color: #666; color: #fff;">수정</button> -->
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row mb80">
+                <div class="col-6 pr0">
+                    <div class="sub-box bg-gray" style="border-bottom: none;">
+                        전시품 기본정보
+                    </div>
+                    <div class="sub-box" style="border-top: none;">
+                        <div class="inner pt0">
+                            <table class="table-list-2t">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <span class="en-check">APP 전시 상태 </span>
+                                        </th>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="radio1" value="전시중">
+                                                <label class="form-check-label" for="radio1"> 전시중 </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="radio2" value="미전시">
+                                                <label class="form-check-label" for="radio2"> 미전시 </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th>
+                                            전시안내 번호
+                                        </th>
+                                        <td>
+                                            <ul class="row">
+                                                <li class="col-12 pr0"><input type="text" class="form-control" disabled></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            전시안내 번호
+                                        </th>
+                                        <td>
+                                            <ul class="row">
+                                                <li class="col-12 pr0"><input type="text" class="form-control" disabled></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            전시안내 위치
+                                        </th>
+                                        <td class="space-bw input-d4">
+                                            <ul class="row">
+                                                <li class="col-3 pr0"><input type="text" class="form-control" disabled></li>
+                                                <li class="col-3 pr0"><input type="text" class="form-control" disabled></li>
+                                                <li class="col-3 pr0"><input type="text" class="form-control" disabled></li>
+                                                <li class="col-3 pr0"><input type="text" class="form-control" disabled></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            전시품 ID
+                                        </th>
+                                        <td>
+                                            <ul class="row">
+                                                <li class="col-12 pr0"><input type="text" class="form-control" value="438729" disabled></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="en-check">전시품명</span>
+                                        </th>
+                                        <td>
+
+                                            <ul class="row">
+                                                <li class="col-3">한국어</li>
+                                                <li class="col-9 pr0"><input type="text" class="form-control"
+                                                        placeholder="(입력하지 않으면 출력되지 않음)"></li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3">영어</li>
+                                                <li class="col-9 pr0"><input type="text" class="form-control"></li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="en-check">사용여부</span>
+                                        </th>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions3"
+                                                    id="radio5" value="Y">
+                                                <label class="form-check-label" for="radio5"> Y </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions3"
+                                                    id="radio6" value="N">
+                                                <label class="form-check-label" for="radio6"> N </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <span class="en-check">검색 키워드</span>
+                                        </th>
+                                        <td>
+
+                                            <ul class="row">
+                                                <li class="col-3">한국어</li>
+                                                <li class="col-9 pr0"><input type="text" class="form-control"
+                                                        value="구석기, 도구"></li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3">영어</li>
+                                                <li class="col-9 pr0"><input type="text" class="form-control"
+                                                        value="Tools, Paleolithic Period"></li>
+                                             </ul>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="sub-box bg-gray mt15" style="border-bottom: none;">
+                        전시품 이미지
+                        <a class="btn btn-xs btn-primary rounded float-right mt-2">
+                            <label for="ADD_FILE_INPUT" style="margin-bottom:0px;">이미지 등록 <i class="xi-library-add ml-1"></i></label>
+                            <input style="display: none;" type="file" id="ADD_FILE_INPUT" accept="image/*" onchange="addFile(this)">
+                        </a>
+                    </div>
+                    <div class="sub-box" style="border-top: none;">
+                        <div class="inner pt0">
+                            <div class="row px-2">
+                                <div class="col-3  img-section"> <!-- img-section on시 border생김-->
+                                               <div class="card">
+                                               <!-- 첫화면만  대표 달기 Badge -->
+                                                     <div class="badge badge-dark card-badge card-badge-left text-uppercase">
+                                                                   대표이미지
+                                                     </div>
+                                                     <!-- Image Part-->
+                                                     <div class="card-img dp-img">
+                                                           <!-- Image -->
+                                                           <a class="card-img-hover" href="#none">
+                                                              <svg class="bd-placeholder-img card-img" style="background-image: url(../images/sample-item01.png);" width="100%" height="100" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Card image">
+                                                              <title>이미지제목</title>
+                                                              </svg>
+                                                           </a>
+                                                           <!-- Actions -->
+                                                           <div class="card-actions text-center p-2">
+                                                               <span class="card-action mr-2">
+                                                                   <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" data-toggle="button" aria-pressed="true" title="확대보기">
+                                                                     <i class="xi-zoom-in xi-x"></i>
+                                                                   </button>
+                                                                </span>
+                                                                <span class="card-action">
+                                                                  <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" title="삭제">
+                                                                   <i class="xi-trash-o xi-x"></i>
+                                                                  </button>
+                                                                </span>
+                                                            </div>
+                                                     </div>
+                                               </div>
+                                           </div>
+                                <div class="col-3  img-section">
+                                 <div class="card">
+                                 <!-- Image Part-->
+                                     <div class="card-img dp-img">
+                                               <!-- Image -->
+                                               <a class="card-img-hover" href="#none">
+                                                              <svg class="bd-placeholder-img card-img" style="background-image: url(../images/sample-item01.png);" width="100%" height="100" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Card image">
+                                                              <title>이미지제목</title>
+                                                              </svg>
+                                               </a>
+                                               <!-- Actions -->
+                                               <div class="card-actions text-center p-2">
+                                                   <span class="card-action mr-2">
+                                                       <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" data-toggle="button" aria-pressed="true" title="확대보기">
+                                                         <i class="xi-zoom-in xi-x"></i>
+                                                       </button>
+                                                    </span>
+                                                    <span class="card-action">
+                                                      <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" title="삭제">
+                                                       <i class="xi-trash-o xi-x"></i>
+                                                      </button>
+                                                    </span>
+                                                </div>
+                                         </div>
+                           </div>
+                                </div>
+                                <div class="col-3  img-section">
+                                       <div class="card">
+                                     <div class="card-img dp-img">
+                                               <!-- Image -->
+                                               <a class="card-img-hover" href="#none">
+                                                              <svg class="bd-placeholder-img card-img" style="background-image: url(../images/sample-item01.png);" width="100%" height="100" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Card image">
+                                                              <title>이미지제목</title>
+                                                              </svg>
+                                               </a>
+                                               <!-- Actions -->
+                                               <div class="card-actions text-center p-2">
+                                                   <span class="card-action mr-2">
+                                                       <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" data-toggle="button" aria-pressed="true" title="확대보기">
+                                                         <i class="xi-zoom-in xi-x"></i>
+                                                       </button>
+                                                    </span>
+                                                    <span class="card-action">
+                                                      <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" title="삭제">
+                                                       <i class="xi-trash-o xi-x"></i>
+                                                      </button>
+                                                    </span>
+                                                </div>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="col-3  img-section">
+                                       <div class="card">
+                                     <div class="card-img dp-img">
+                                               <!-- Image -->
+                                               <a class="card-img-hover" href="#none">
+                                                           <svg class="bd-placeholder-img card-img" style="background-image: url(../images/sample-item01.png);" width="100%" height="100" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Card image">
+                                                           <title>이미지제목</title>
+                                                           </svg>
+                                               </a>
+                                               <!-- Actions -->
+                                               <div class="card-actions text-center p-2">
+                                                   <span class="card-action mr-2">
+                                                       <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" data-toggle="button" aria-pressed="true" title="확대보기">
+                                                         <i class="xi-zoom-in xi-x"></i>
+                                                       </button>
+                                                    </span>
+                                                    <span class="card-action">
+                                                      <button class="btn btn-xs btn-circle btn-white rounded-pill" style="width:40px; height:40px" title="삭제">
+                                                       <i class="xi-trash-o xi-x"></i>
+                                                      </button>
+                                                    </span>
+                                                </div>
+                                         </div>
+                                     </div>
+                                </div>
+                               
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="sub-box bg-gray" style="border-bottom: none;">
+                        전시품 상세안내
+                    </div>
+                    <div class="sub-box" style="border-top: none;">
+
+                        <div class="inner">
+                            <table class="table-list-2t">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 79px !important;">
+                                            <span class="en-check">한국어</span>
+                                        </th>
+                                        <td>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">APP 전시용 안내</li>
+                                                <li class="col-9 pr0"><textarea type="text" class="form-control" style="height: 150px;">1950년 6월 25일 새벽. 북한군이 남북군사분계선이던 38선 전역에 걸쳐 불법 남침함으로써 동족상잔의 비극이라 불리는 6·25전쟁이 일어났다. 1953년 7월 27일 정전협정이 체결되기까지 유엔군의 참전, 중공군의 개입 등 전쟁의 양상은 시시각각 변하여 남북은 긴장의 끈을 놓을 수 없었다.
+                                                    </textarea></li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">TTS 변환용 안내</li>
+                                                <li class="col-9 pr0"><textarea type="text" class="form-control" style="height: 150px;">950년 6월 25일 새벽. 북한군이 남북군사분계선이던 38선 전역에 걸쳐 불법 남침함으로써 동족상잔의 비극이라 불리는 6·25전쟁이 일어났다. 1953년 7월 27일 정전협정이 체결되기까지 유엔군의 참전, 중공군의 개입 등 전쟁의 양상은 시시각각 변하여 남북은 긴장의 끈을 놓을 수 없었다.
+                                                    </textarea>
+                                                </li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">음성듣기</li>
+                                                <li class="col-9 pr0">
+                                                    <audio controls="controls" class="col-12 p0">
+                                                        
+                                                    </audio>
+                                                </li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">음성파일첨부</li>
+                                                <li class="col-9 pr0">
+                                                    <div class="input-group filebox mt-2">
+                                                        <div class="input-group-append">
+                                                            <label class="btn file-btn" for="ex_filename">파일찾기</label>
+                                                        </div>
+                                                        <input class="form-control upload-name file-btn-label" value="파일을 업로드 하세요." disabled="disabled"><a href="#"
+                                                            class="close-btn">닫기</a>
+                                                        <input type="file" id="ex_filename" class="upload-hidden">
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="width: 79px !important;">
+                                            <span class="en-check">영어</span>
+                                        </th>
+                                        <td>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">APP 전시용 안내</li>
+                                                <li class="col-9 pr0"><textarea type="text" class="form-control" style="height: 150px;">June 25, 1950: Dawn. The North Korean War broke out across the 38th parallel of the inter-Korean military demarcation line, resulting in the June 25 War, which was called the tragedy of a felony. Until the Armistice Agreement was concluded on July 27, 1953, the aspect of the war, such as the participation of UN forces and the intervention of the Chinese army, changed every moment and
+                                                        </textarea></li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">TTS 변환용 안내</li>
+                                                <li class="col-9 pr0"><textarea type="text" class="form-control"  style="height: 150px;">June 25, 1950: Dawn. The North Korean War broke out across the 38th parallel of the inter-Korean military demarcation line, resulting in the June 25 War, which was called the tragedy of a felony. Until the Armistice Agreement was concluded on July 27, 1953, the aspect of the war, such as the participation of UN forces and the intervention of the Chinese army, changed every moment and
+                                                        </textarea>
+                                                </li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">음성듣기</li>
+                                                <li class="col-9 pr0">
+                                                    <audio controls="controls" class="col-12 p0">
+                                                     
+                                                    </audio>
+                                                </li>
+                                            </ul>
+                                            <ul class="row">
+                                                <li class="col-3 pr0">음성파일첨부</li>
+                                                <li class="col-9 pr0">
+                                                    <div class="input-group filebox mt-2">
+                                                        <div class="input-group-append">
+                                                            <label class="btn file-btn" for="ex_filename">파일찾기</label>
+                                                        </div>
+                                                        <input class="form-control upload-name file-btn-label" value="파일을 업로드 하세요." disabled="disabled"><a href="#"
+                                                            class="close-btn">닫기</a>
+                                                        <input type="file" id="ex_filename" class="upload-hidden">
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <h5>Copyrights © NATIONAL MUSEUM OF KOREA. All right reserved.</h5>
+
+        </div>
+    </footer>
+
+    <!-- 팝업창 -->
+    <!-- 이미지확대 Modal -->
+    <div class="modal fade bd-example-modal-xl" id="dp-popup03" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal -title" id="exampleModalLabel"><img src="../images/icon/zoom-in-ico2.png" alt="" class="ico-box"> 이미지 확대보기 </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="table-tit bt0 d-inline" style="line-height: 3;">
+                      <input class="upload-name file-btn-label" value="images.png" disabled="disabled" style="padding: 0;">
+                    </div>
+                    <div class="inner pt0" style="padding-top: 0;">
+                        <img src="../images/sample-item01.png" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="modal-footer mt15">
+                    <button type="button" class="btn btn-cancel btn-lg" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

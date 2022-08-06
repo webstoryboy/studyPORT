@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.scroll {
+    position: fixed; left: 10px; bottom: 10px;
+    width: 40px; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    z-index: 100000;
+}
+
+
+/* contents */
+#contents {}
+#section1 {
+    height: 100vh;
+    background: #FCDA00;
+}
+#section2 {
+    height: 100vh;
+    background: #111; color: #fff;
+}
+#section3 {
+    height: 100vh;
+    background: #222; color: #fff
+}
+#section4 {
+    height: 100vh;
+    background: #333; color: #fff
+}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {}
+
+/* sec1 */
+.sec1 {
+    height: 100vh;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'GmarketSansBold';
+}
+.sec1 .text-wrap {
+    position: relative;
+    z-index: 10;
+}
+.sec1 .text-wrap h1 {
+    font-size: 7vw;
+}
+.sec1 .text-wrap span:nth-child(1) {
+    font-size: 20px;
+    color: #000;
+    display: block;
+    text-align: left;
+    margin-left: -5vw;
+    position: relative;
+}
+.sec1 .text-wrap span:nth-child(1):before {
+    content: '';
+    width: 100px; height: 10px;
+    background: #fff;
+    position: absolute;
+    bottom: 0; left: 60px;
+    z-index: -1;
+    border-radius: 5px;
+}
+.sec1 .text-wrap span:nth-child(3) {
+    font-size: 20px;
+    color: #000;
+    display: block;
+    text-align: right;
+    margin-right: -5vw;
+}
+.sec1 .img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+}
+.sec1 .img img {
+    width: 100%;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.sec3 {}
+.sec3.fixed {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    background: #f00;
+}
+.sec3.fixed .box1 {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ccc;
+}
+
+
+
+

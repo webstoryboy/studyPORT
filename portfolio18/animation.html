@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Portfolio animation</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO 검색엔진 -->
+    <meta name="author" content="yeong">
+    <meta name="description" content="리액트 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">  <!-- 모든정보가져감 -->
+
+    <!-- facebook -->
+    <meta property="og:url" content="#none">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="React Portfolio animation">
+    <meta property="og:description" content="리액트 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio animation">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FEDB01" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="manifest" href="" />
+    <link rel="icon" href="assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-152.png" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <link rel="icon" typse="image/png" sizes="152x152" href="assets/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/favicon-128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <link rel="stylesheet" href="assets/styles/variables.css">
+    <link rel="stylesheet" href="assets/styles/mixins.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    
+</head>
+<body>
+    <div id="skip">
+        <a href="#">바로가기 스킵메뉴</a>
+    </div>
+    <!-- //skip -->
+    <div id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 로딩 애니메이션 -->
+    <header>
+        <div id="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="index.html"><span>Yeong's</span></a>
+            </div>
+            <nav class="menu">
+                <div class="nav">
+                    <div class="nav-background">
+                        <div class="nav-bg nav-bg1"></div>
+                        <div class="nav-bg nav-bg2"></div>
+                        <div class="nav-bg nav-bg3"></div>
+                        <div class="nav-bg nav-bg4"></div>
+                    </div>
+                    <h2 class="sr-only">메인 메뉴</h2>
+                    <ul>
+                        <li><a href="javascript:navLink1()">home</a></li>
+                        <li><a href="javascript:navLink2()">about</a></li>
+                        <li><a href="javascript:navLink3()">portfolio</a></li>
+                        <li><a href="javascript:navLink6()">contact</a></li>
+                        <li><a href="javascript:navLink4()">animation</a></li>
+                        <li><a href="javascript:navLink5()">javascript</a></li>
+                    </ul>
+                </div>
+                <!-- 햄버거버튼 -->
+                <div class="menu-line">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hamburger-close">
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <!-- header -->
+    <main>
+        <section id="section1">
+            <div class="sec1 content-box">
+                <span>work</span>
+                <h1 class="sr-only">javascript</h1>
+                <div class="text-box">
+                    <p aria-hidden="true"><span class="tit">it takes 7 seconds</span></p>
+                    <p aria-hidden="true"><span class="tit">to make an</span></p>
+                    <p aria-hidden="true"><span class="tit"><span>impression</span></span></p>
+                    <p aria-hidden="true"><span class="tit">me do it in 5</span></p>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2" class="work">
+            <div class="sec2 content-box">
+               <figure>
+                <div class="workImg1"><img src="assets/images/react-ai1.jpg" alt="애니메이션 목업"></div>
+                   <img src="assets/images/react-ai2.jpg" alt="애니메이션 목업">
+               </figure>
+               <div>
+                    <div class="ani-text-wrap">
+                        <h2 aria-label="애니메이션"><span aria-hidden="true">애</span><span aria-hidden="true">니</span><span aria-hidden="true">메</span><span aria-hidden="true">이</span><span aria-hidden="true">션</span></h2>
+                        <p>순수CSS만 이용하여 애니메이션 제작, 피그마로 간단한 벡터이미지를
+                        만들어서 svg로 변환하여 애니메이션 제작 등을 연습하였습니다.
+                        </p>
+                        <!-- <p>열정을 놓아버리는 순간 배운모든지식은 무용지물이 된다
+                        성공여부는 전적으로 당신에게 달려 있다</p> -->
+                    </div>
+                    <div class="rolling-wrap">
+                        <div>
+                            <span>github</span>
+                            <span>코드보기</span>
+                            <span>github</span>
+                            <span>코드보기</span>
+                            <span>github</span>
+                            <span>코드보기</span>
+                        </div>
+                        <div>
+                            <span>github</span>
+                            <span>코드보기</span>
+                            <span>github</span>
+                            <span>코드보기</span>
+                            <span>github</span>
+                            <span>코드보기</span>
+                        </div>
+                    </div>
+                    <div class="scroll-down">
+                        <div>
+                            <span>scroll</span>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+        <section id="section3" class="work">
+            <div class="sec3 content-box">
+               <ul>
+                    <li>
+                        <div class="ani-tit">
+                            <span>01</span>
+                            <h3 aria-label="유령 애니메이션"><span aria-hidden="true">유</span><span aria-hidden="true">령</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">애</span><span aria-hidden="true">니</span><span aria-hidden="true">메</span><span aria-hidden="true">이</span><span aria-hidden="true">션</span></h3>
+                            <span class="ani-btn"></span>
+                        </div>
+                        <div class="ani-cont">
+                            <div>
+                                <div class="ani-img"><iframe src="https://yeong-ji.github.io/port_animation/css_ani1/"></iframe></div>
+                                <div class="ani-text">
+                                    <div>Pure CSS로 작업<br>
+                                    filter blur로 글로우<br>
+                                    효과를 주었습니다.</div>
+                                    <div class="btn">
+                                        <a href="https://github.com/yeong-ji/port_animation/tree/main/css_ani1" target="_blank"><span>코드보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <div class="ani-tit">
+                        <span>02</span>
+                        <h3 aria-label="텍스트 애니메이션"><span aria-hidden="true">텍</span><span aria-hidden="true">스</span><span aria-hidden="true">트</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">애</span><span aria-hidden="true">니</span><span aria-hidden="true">메</span><span aria-hidden="true">이</span><span aria-hidden="true">션</span></h3>
+                        <span class="ani-btn"></span>
+                    </div>
+                    <div class="ani-cont">
+                            <div>
+                                <div class="ani-img"><iframe src="https://yeong-ji.github.io/port_animation/text_ani1/"></iframe></div>
+                                <div class="ani-text">
+                                    <div>텍스트에 Pure CSS<br>
+                                        사용하여 작업하였으며,<br>
+                                        애니메이션은 keyframes을 사용</div>
+                                    <div class="btn">
+                                        <a href="https://github.com/yeong-ji/port_animation/tree/main/text_ani1" target="_blank"><span>코드보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="ani-tit">
+                        <span>03</span>
+                        <h3 aria-label="스케일러블 벡터 그래픽"><span aria-hidden="true">스</span><span aria-hidden="true">케</span><span aria-hidden="true">일</span><span aria-hidden="true">러</span><span aria-hidden="true">블</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">벡</span><span aria-hidden="true">터</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">그</span><span aria-hidden="true">래</span><span aria-hidden="true">픽</span></h3>
+                        <span class="ani-btn"></span>
+                    </div>
+                    <div class="ani-cont">
+                            <div>
+                                <div class="ani-img"><iframe src="https://yeong-ji.github.io/port_animation/svg_ani1/"></iframe></div>
+                                <div class="ani-text">
+                                    <div>figma로 간단한 벡터이미지<br>
+                                    그려서 svg로 내보내기<br>
+                                    css로 애니메이션 효과를 주었습니다.</div>
+                                    <div class="btn">
+                                        <a href="https://github.com/yeong-ji/port_animation/tree/main/svg_ani1" target="_blank"><span>코드보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="ani-tit">
+                        <span>04</span>
+                        <h3 aria-label="큐브 애니메이션"><span aria-hidden="true">큐</span><span aria-hidden="true">브</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">애</span><span aria-hidden="true">니</span><span aria-hidden="true">메</span><span aria-hidden="true">이</span><span aria-hidden="true">션</span></h3>
+                        <span class="ani-btn"></span>
+                    </div>
+                    <div class="ani-cont">
+                            <div>
+                                <div class="ani-img"><iframe src="https://yeong-ji.github.io/port_animation/3d_ani1/"></iframe></div>
+                                <div class="ani-text">
+                                    <div>preserve-3d 속성 사용하기<br>
+                                    translateZ로 입체감 만들기<br>
+                                    애니메이션으로 rotation 적용</div>
+                                    <div class="btn">
+                                        <a href="https://github.com/yeong-ji/port_animation/tree/main/3d_ani1" target="_blank"><span>코드보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </li>
+               </ul>
+            </div>
+        </section>
+        <!-- //section3 -->
+    </main>
+    <footer>
+        <div class="content-box">
+            <div class="foot">
+                <span><span>speak to</span> a me now!</span>
+                <h2>
+                    <div class="cursor">
+                        <figure>
+                            <img src="assets/images/cursor.png" alt="커서이미지">
+                        </figure>
+                    </div>
+                    <span><span>g</span><span>e</span><span>t</span><span>&nbsp;</span><span>i</span><span>n</span><span>&nbsp;</span><span>t</span><span>o</span><span>u</span><span>c</span><span>h</span></span>
+                </h2>
+                <div>
+                    <address>ⓒ yeong portfolio 2021</address>
+                    <ul>
+                        <li><a href="https://blog.naver.com/rladudwl210"><span class="sr-only">naver blog</span></a></li>
+                        <li><a href="https://www.figma.com/file/x5SGbXNJzAqxTDXGcxpzNq/Untitled"><span class="sr-only">figma</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/loading.js"></script>
+</body>
+</html>

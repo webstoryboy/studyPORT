@@ -1,0 +1,1587 @@
+/*loading*/
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+body.active {
+    height: auto;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/*loading*/
+.progress {
+    position: fixed; 
+    left: 0; top: 0; z-index: 999999;
+    width: 100%; height: 100vh; 
+    background: #2C3641;
+}
+.progressWrap {
+    position: absolute;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.progress-ani {
+    margin: 0 auto;
+    background: url(../img/cha_walk.png);
+    width: 233.33px; height: 180px;
+    left: 45%; bottom: 8%;
+    background-size: 1866.67px;
+    animation: progressWalk 0.5s steps(8, start) infinite;
+    margin-bottom: 5%;
+}
+@keyframes progressWalk {
+    0% {background-position: 0px 0px;}
+    100% {background-position: -1866.67px 0px;}
+}
+.progress-text {
+    font-size: 4.5vw;
+    font-family: var(--font-eng);
+    color: #FEFDEE;
+}
+.progress .bar-wrap {
+    margin: 0 auto;
+    width: 12vw; height: 0.5vw; background: #FEFDEE;
+    border-radius: 15px;
+}
+.progress .bar-wrap .progress-bar {
+    width: 0;
+    height: 0.5vw;
+    background: #F2D386;
+    border-radius: 15px;
+}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    font-family: var(--font-eng);
+    left: 10px; top:10px;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+/* walk cha */
+.walkCha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 42vw; bottom: 4vw;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.walkCha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.walkCha.left {
+    background-position: 0px -270px;
+}
+.walkCha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+@keyframes walk {
+    0% {background-position: 0px 0px;}
+    100% {background-position: -2800px 0px;}
+}
+@keyframes walk2 {
+    0% {background-position: 0px -270px;}
+    100% {background-position: -2800px -270px;}
+}
+
+/* skills cha */
+.skillsCha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 42vw; bottom: 4vw;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.skillsCha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.skillsCha.left {
+    background-position: 0px -270px;
+}
+.skillsCha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+
+/* siteLast cha */
+.siteLastCha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 42vw; bottom: 4vw;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.siteLastCha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.siteLastCha.left {
+    background-position: 0px -270px;
+}
+.siteLastCha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+
+/* script cha */
+.scriptCha {
+    width: 12vw;
+    position: fixed;
+    z-index: 9999;
+}
+
+/* pageClose cursor */
+.pageClose {
+    display: none;
+    width: 30px; height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 99999;
+    font-family: var(--font-eng);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10vw;
+    background-color: #283542;
+    cursor: pointer;
+    transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+.pageClose:hover {
+    background: #E7625E;
+    cursor: none;
+}
+
+/* reactCursor */
+.reactCursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    background:rgba(255, 255, 255, 0.5);
+    user-select: none;
+    pointer-events: none;
+    transform: scale(1);
+    z-index: 9999;
+    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+}
+.reactCursor.active {
+    transform: scale(20);
+    background: url(../img/react_site.jpg);
+    background-size: cover;
+}
+
+/* main */
+.main .waveBack {
+    opacity: 0;
+    position: absolute;
+    left: 0; bottom: 0;
+    transform: translateY(100px);
+    z-index: 500;
+}
+.main .waveBack.loading {
+    animation: waveBack 7s infinite linear;
+}
+.main .waveFront {
+    opacity: 0;
+    position: absolute;
+    left: 0; bottom: 0;
+    transform: translateY(100px);
+    z-index: 600;
+}
+.main .waveFront.loading {
+    animation: waveFront 6s infinite linear;
+}
+.main .tree1 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 2vw; bottom: 6vw;
+    transform: translateY(150px);
+    z-index: 400;
+}
+.main .tree1.loading {
+    animation: treeMove 4s infinite ease;
+}
+.main .tree2 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 26vw; bottom: 5vw;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree3 {
+    opacity: 0;
+    width: 19vw;
+    position: absolute;
+    left: 12vw; bottom: 4vw;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree4 {
+    opacity: 0;
+    width: 10vw;
+    position: absolute;
+    right: 30vw; bottom: 7vw;
+    transform: translateY(200px);
+    z-index: 400;
+}
+.main .tree5 {
+    opacity: 0;
+    width: 16vw;
+    position: absolute;
+    right: 13vw; bottom: 3vw;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree5.loading {
+    animation: treeMove 5s infinite ease;
+}
+.main .tree6 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    right: 2vw; bottom: 5vw;
+    transform: translateY(150px);
+}
+.main .cloud {
+    width: 11vw;
+}
+.main .cloud1 {
+    opacity: 0;
+    position: absolute;
+    left: 10vw; top: 9vw;
+    transform: scale(1.3);
+}
+.main .cloud2 {
+    opacity: 0;
+    position: absolute;
+    left: 35vw; top: 2.5vw;
+    transform: scale(1.3);
+}
+.main .cloud3 {
+    opacity: 0;
+    position: absolute;
+    right: 10vw; top: 14vw;
+    transform: scale(1.3);
+}
+.main .star {
+    opacity: 0;
+}
+.main .star.loading {
+    animation: flash 4s infinite linear;
+}
+.main .mainCha {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 43vw; bottom: 5vw;
+    z-index: 600;
+    transform: translateY(300px);
+}
+.main .mainCha.loading {
+    animation: chaMove 6s linear infinite;
+}
+.main .introTitle {
+    opacity: 0;
+    width: 18vw;
+    position: absolute;
+    left: 6vw; bottom: 4.5vw;
+    z-index: 600;
+    transform: scale(.9,.9) rotate(-50deg);
+}
+.main .introTitle.loading {
+    z-index: 500;
+}
+.main .introTitle h2 {
+    font-size: 3vw;
+    font-family: var(--font-eng);
+    color: #fff;
+    letter-spacing: 0.1vw;
+    line-height: 1.1;
+}
+.main .scrollStart {
+    display: none;
+    position: absolute;
+    left: 44vw; bottom: 24vw;
+    text-align: center;
+    z-index: 600;
+    animation: flash 2.5s infinite linear;
+}
+.main .scrollStart h2 {
+    font-size: 2vw;
+    font-family: var(--font-eng);
+    color: #fff;
+    letter-spacing: 0.1vw;
+    line-height: 1.1;
+    margin-bottom: 5%;
+}
+
+/* main keyframes */
+@keyframes waveBack {
+    0% {transform: translateY(5px) scaleY(1);}
+    20% {transform: translateY(0px) scaleY(0.8);}
+    40% {transform: translateY(8px) scaleY(1.2);}
+    60% {transform: translateY(5px) scaleY(1);}
+    80% {transform: translateY(10px) scaleY(1.3);}
+    100% {transform: translateY(5px) scaleY(1);}
+}
+@keyframes waveFront {
+    0% {transform: translateY(10px) scaleY(1.3);}
+    20% {transform: translateY(5px) scaleY(1);}
+    40% {transform: translateY(10px) scaleY(1);}
+    60% {transform: translateY(10px) scaleY(1.2);}
+    80% {transform: translateY(5px) scaleY(1.5);}
+    100% {transform: translateY(10px) scaleY(1.3);}
+}
+@keyframes treeMove {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(5px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+@keyframes chaMove {
+    0% {transform: translateY(0);}
+    20% {transform: translateY(0px);}
+    40% {transform: translateY(0px);}
+    60% {transform: translateY(-0.5vw);}
+    80% {transform: translateY(-1vw);}
+    100% {transform: translateY(0);}
+}
+
+/* about */
+.about1 {
+    background: #d4d77d;
+    font-family: var(--font-kor);
+}
+.about1 .aboutText {
+    position: absolute; 
+    left: 50%; bottom: 0%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.3;
+}
+.about1 .aboutText .textEffect1 {
+    display: inline-block;
+    animation: swing 1s infinite alternate;
+}
+.about1 .aboutText .textEffect2 {
+    display: inline-block;
+    animation: swing 2s infinite linear;
+}
+.about2 {background-image: linear-gradient(to bottom, #D4D77D , #757B7C);}
+
+/* skills - skills1 */
+.skills1 .tree1 {
+    width: 17vw;
+    position: absolute;
+    left: 2vw; bottom: 7vw;
+}
+.skills1 .tree2 {
+    width: 14vw;
+    position: absolute;
+    left: 25vw; bottom: 5vw;
+}
+.skills1 .tree3 {
+    width: 10vw;
+    position: absolute;
+    right: 30vw; bottom: 7.5vw;
+}
+.skills1 .tree4 {
+    width: 16vw;
+    position: absolute;
+    right: 2vw; bottom: 5vw;
+}
+.skills1 .waveTop {
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0.5;
+}
+
+/* skills - skills2 */
+.skills2 .star {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -3;
+}
+.skills2 .tree1 {
+    width: 18vw;
+    position: absolute;
+    left: 5vw; bottom: 4vw;
+}
+.skills2 .tree2 {
+    width: 14vw;
+    position: absolute;
+    left: 33vw; bottom: 6vw;
+}
+.skills2 .tree3 {
+    width: 16vw;
+    position: absolute;
+    right: 0%; bottom: 5vw;
+}
+.skills2 .waveTop {
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0.5;
+    z-index: -2;
+}
+.skills2 .door {
+    width: 37vw; height: 100vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.skills2 .door h2 {
+    font-family: var(--font-kor);
+    width: 20vw;
+    font-size: 2.5vw;
+    line-height: 1.3;
+    position: absolute;
+    left: 5vw; top: 5vw;
+}
+.skills2 .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.skills2 .door::before{
+    content: '';
+    width: 12vw; height: 100vh;
+    background-image: linear-gradient(to left, #2D5D84 60% , #447BA0 40%);
+    /* background: #447BA0; */
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 99999;
+}
+.skills2 .door::after{
+    content: '';
+    width: 10vw; height: 100vh;
+    background-image: linear-gradient(to left, #2D5D84 50% , #447BA0 50%);
+    position: absolute;
+    left:0; bottom: 0;
+    z-index: -1;
+}
+
+/* skills - skillsWrap - 아이템 */
+.skillsWrap {
+    position: fixed;
+    width: 100%; height: 100vh;
+}
+.skillsWrap .skillsTitle {
+    font-family: var(--font-kor);
+    font-size: 1.6vw;
+    width: 13vw;
+    position: absolute;
+    left: 0; top: 0;
+    line-height: 1.2;
+}
+.skillsWrap .skillsTitle h2 span {
+    display: inline-block;
+    animation: tada 1s infinite;
+}
+.skillsWrap .skillsItem {
+    font-family: var(--font-eng);
+}
+.skillsWrap .skillsItem .itemSub h3 {
+    color: #2C3641;
+    line-height: 1;
+    font-size: 1vw;
+}
+.skillsWrap .skillsItem .itemName h3 {
+    font-size: 2vw;
+    color: #2C3641;
+    font-weight: bolder;
+}
+.skillsWrap .skillsItem .itemPer h3 {
+    font-size: 5vw;
+}
+.skillsWrap .skillsItem .itemPer span {
+    font-size: 2vw;
+}
+.skillsWrap .skillsItem .item {
+    position: absolute;
+}
+
+/* site - intro */
+.intro .cloud {width: 11vw;}
+.intro .cloud1 {
+    position: absolute;
+    left: 5vw; top: 10vw;
+}
+.intro .cloud2 {
+    position: absolute;
+    left: 40vw; top: 2vw;
+}
+.intro .cloud3 {
+    position: absolute;
+    right: 10vw; top: 8vw;
+}
+.intro .tree1 {
+    width: 14vw;
+    position: absolute;
+    left: 5vw; bottom: 7vw;
+}
+.intro .tree2 {
+    width: 18vw;
+    position: absolute;
+    right: 20vw; bottom: 7vw;
+}
+.intro .tree3 {
+    width: 19vw;
+    position: absolute;
+    right: 5vw; bottom: 7vw;
+}
+.intro .car {
+    width: 39vw;
+    position: absolute;
+    left: 40%; bottom: 6vw;
+}
+.intro .carCloud {
+    width: 11vw;
+    position: absolute;
+    left: 102%; bottom: 6.5vw;
+    animation: rubberBand 1s ease infinite;
+}
+
+/* site - site */
+.site .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 30vw; top: 5vw;
+}
+.site .tree1 {
+    width: 23vw;
+    position: absolute;
+    right: 10vw; bottom: 7vw;
+}
+.site .siteStore {
+    width: 53vw;
+    position: absolute;
+    left: 5vw; bottom: 7vw;
+}
+.site .siteStore .siteTitle {
+    position: absolute;
+    top: 9%;
+    margin-left: 25%;
+    font-family: var(--font-eng);
+    width: 18vw;
+    font-size: 2.5vw;
+    line-height: 1;
+    position: absolute;
+    left: 0; bottom: 0%;
+}
+.site .light {
+    width: 7vw; height: 40vw;
+    animation: flash 2s linear infinite;
+}
+.site .light.siteLight1 {
+    position: absolute;
+    left: 15.3%; top: 5%;
+}
+.site .light.siteLight2 {
+    position: absolute;
+    left: 34%; top: 5%;
+}
+.site .light.siteLight3 {
+    position: absolute;
+    left: 52.53%; top: 5%;
+}
+.site .light.siteLight4 {
+    position: absolute;
+    left: 71.5%; top: 5%;
+}
+.site .subCha {
+    width: 10vw;
+    position: absolute;
+    right: 25vw; bottom: 6vw;
+    animation: bounceInUp 1.2s 1 ease;
+}
+.site .siteTalk {
+    width: 17vw;
+    position: absolute;
+    right: 21vw; bottom: 22vw;
+    animation: bounceIn 1.2s 1 ease;
+}
+.site .siteText .site-typing-txt {
+    display: none;
+}
+.site .siteText .site-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: var(--font-kor);
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+
+/* site - mart */
+.mart .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 15vw; top: 10vw;
+}
+.mart .tree1 {
+    width: 19vw;
+    position: absolute;
+    right: 5vw; bottom: 5vw;
+}
+.mart .heemMart {
+    width: 69vw;
+    position: absolute;
+    left: 6vw; bottom: 7vw;
+}
+.mart .heemMart h2 {
+    display: inline-block;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: var(--font-eng);
+    width: 10%;
+    color: #D46249;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    left: 8%; top: 39%;
+}
+.mart .martCha {
+    width: 12vw;
+    position: absolute;
+    left: 50vw; bottom: 31vw;
+}
+
+/* site - sitePopup */
+.sitePopup {
+    width: 70vw; height: 89vh;
+    background-color: rgba(85, 81, 77, 0.9);
+    border-radius: 5vw;
+    position: fixed; 
+    left: 0; top: 5%; right: 0; bottom: 0; 
+    margin: 0 auto;
+    z-index: 9999;
+    animation: bounceIn 0.8s 1 ease;
+}
+.sitePopup ul {
+    height: 89vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 6%;
+}
+.sitePopup li {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 32%;
+    letter-spacing: 0.05vw;
+}
+.sitePopup li .num {
+    font-family: var(--font-eng);
+    font-size: 2.6vw;
+    letter-spacing: 0.1vw;
+}
+.sitePopup li .sub {
+    font-family: var(--font-eng);
+    font-size: 2vw;
+}
+.sitePopup li .ex {
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    color: #2e2e2e;
+}
+.sitePopup li .siteBtn {
+    position: relative;
+    line-height: 2vw;
+    padding-left: 3%;
+    font-family: var(--font-eng);
+    font-size: 1vw;
+    font-weight: bold;
+}
+.sitePopup li .siteBtn::before {
+    content: '';
+    width: 0.5vw; height: 2vw;
+    background: #2e2e2e;
+    border-radius: 1vw;
+    position: absolute;
+    left: 0; top: 10%;
+}
+.sitePopup li .siteBtn span {
+    display: inline-block;
+    color: #2e2e2e;
+    transition: all 0.2s;
+    padding: 1% 2%;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+.sitePopup li .siteBtn span:hover {
+    background: #2e2e2e;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* site - react */
+.react .tree1 {
+    width: 14vw;
+    position: absolute;
+    left: 15vw; bottom: 7vw;
+}
+.react .tree2 {
+    width: 14vw;
+    position: absolute;
+    right: 8vw; bottom: 7vw;
+}
+.react .cloud {width: 11vw;}
+.react .cloud1 {
+    position: absolute;
+    left: 10vw; top: 3vw;
+}
+.react .cloud2 {
+    position: absolute;
+    right: 15%; top: 4vw;
+}
+.react .reactTitle {
+    font-family: var(--font-eng);
+    color: #fff;
+    font-size: 7vw;
+}
+.react .reactTitle > div {
+    position: absolute;
+    right: 34vw; bottom: 11vw;
+}
+.react .shoes {
+    width: 41vw;
+    position: absolute;
+    left: 35vw; bottom: 6vw;
+}
+.react .nikeLogo {
+    width: 8vw;
+    position: absolute;
+    left: 45vw; bottom: 30vw;
+}
+.react .nikeLogo h2 {
+    font-family: var(--font-eng);
+    font-size: 8vw;
+    color: #C95551;
+    position: absolute;
+    left: 10%; top: -68%;
+    animation: flash 1.5s infinite linear;
+}
+.react .reactCha {
+    width: 10vw;
+    position: absolute;
+    left: 24vw; bottom: 6vw;
+    animation: bounceInUp 1.2s 1 ease;
+}
+.react .reactTalk {
+    width: 17vw;
+    position: absolute;
+    left: 21vw; bottom: 22vw;
+    animation: bounceIn 1.2s 1 ease;
+}
+.react .reactText .react-typing-txt {
+    display: none;
+}
+.react .reactText .react-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: var(--font-kor);
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+
+/* site - figma */
+.figma .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 35vw; top: 6vw;
+}
+.figma .tree1 {
+    width: 23vw;
+    position: absolute;
+    left: 0; bottom: 5vw;
+}
+.figma .tree2 {
+    width: 16vw;
+    position: absolute;
+    right: 5vw; bottom: 7vw;
+}
+.figma .figmaStore {
+    width: 45vw;
+    position: absolute;
+    left: 16vw; bottom: 6.5vw;
+}
+.figma .figmaStore h2 {
+    font-family: var(--font-eng);
+    font-size: 3vw;
+    line-height: 1;
+    position: absolute;
+    left: 5%; top: -18%;
+}
+.figma .figmaCha {
+    width: 18vw;
+    position: absolute;
+    right: 20vw; bottom: 6vw;
+}
+.figma .figmaTalk {
+    width: 17vw;
+    position: absolute;
+    right: 20vw; bottom: 22vw;
+    animation: bounceIn 1.2s 1 ease;
+}
+.figma .figmaText .figma-typing-txt {
+    display: none;
+}
+.figma .figmaText .figma-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: var(--font-kor);
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+
+/* site - figmaPopup */
+.figmaPopup {
+    width: 75vw; height: 50vw;
+    position: fixed;
+    left: 0; top: 5%; right: 0; bottom: 0; 
+    margin: 0 auto;
+    z-index: 9999;
+    animation: bounceIn 0.8s 1 ease;
+}
+.figmaPopup img {
+    padding: 6% 0;
+    border-radius: 2vw;
+    background: #685035;
+}
+.figmaPopup a {
+    transition: all 0.2s;
+}
+.figmaPopup a:hover {
+    color:rgba(85, 81, 77, 0.9)
+}
+.figmaPopup ul {
+    color: #fff;
+    font-family: var(--font-eng);
+    font-size: 3vw;
+}
+.figmaPopup li {
+    writing-mode: vertical-rl;
+}
+.figmaPopup .book1 {
+    position: absolute;
+    left: 3.3%; top: 28%;
+}
+.figmaPopup .book2 {
+    position: absolute;
+    left: 16%; top: 28%;
+}
+.figmaPopup .book3 {
+    position: absolute;
+    left: 30%; top: 28%;
+}
+.figmaPopup .book4 {
+    position: absolute;
+    left: 41%; top: 28%;
+}
+.figmaPopup .book5 {
+    position: absolute;
+    left: 50%; top: 28%;
+}
+.figmaPopup .book6 {
+    position: absolute;
+    left: 58%; top: 28%;
+}
+.figmaPopup .book7 {
+    position: absolute;
+    left: 67%; top: 28%;
+}
+.figmaPopup .book8 {
+    position: absolute;
+    left: 76%; top: 28%;
+}
+.figmaPopup .book9 {
+    position: absolute;
+    left: 85%; top: 28%;
+}
+.figmaPopup .book10 {
+    position: absolute;
+    left: 93%; top: 28%;
+}
+
+/* site - siteLast */
+.siteLast .star {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -3;
+}
+.siteLast .cloud {width: 11vw;}
+.siteLast .cloud1 {
+    position: absolute;
+    left: 5vw; top: 15vw;
+}
+.siteLast .cloud2 {
+    position: absolute;
+    left: 40vw; top: 2.5vw;
+}
+.siteLast .tree1 {
+    width: 23vw;
+    position: absolute;
+    right: 33vw; bottom: 7vw;
+    z-index: -3;
+}
+.siteLast .door {
+    width: 37vw; height: 100vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.siteLast .door h2 {
+    font-family: var(--font-kor);
+    font-size: 2.5vw;
+    line-height: 1.3;
+    position: absolute;
+    left: 5vw; top: 5vw;
+}
+.siteLast .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.siteLast .door::before{
+    content: '';
+    width: 10vw; height: 100vh;
+    background-image: linear-gradient(to left, #E48289 50% , #F1A6A7 50%);
+    position: absolute;
+    left:0; bottom: 0;
+    z-index: -1;
+}
+.siteLast .door::after{
+    content: '';
+    width: 12vw; height: 100vh;
+    background-image: linear-gradient(to left, #E48289 60% , #F1A6A7 40%);
+    /* background: #447BA0; */
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 99999;
+}
+
+/* animation - balloon3 */
+.balloon1, .balloon2, .balloon3, .aniLast {background: #E48289;}
+.balloon3 .ballBackTxt {
+    position: absolute;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.balloon3 .ballBackTxt h2 {
+    font-family: var(--font-eng);
+    font-size: 19vw;
+    color: rgba(255, 255, 255, 0.2);
+}
+.balloon3 .aniCha {
+    width: 39vw;
+    position: absolute;
+    left: 30vw; bottom: 0;
+}
+.balloon3 .aniCha .aniTitle {
+    font-family: var(--font-eng);
+    text-align: center;
+    line-height: 1;
+    font-size: 2vw;
+    position: absolute;
+    left: 50%; top: 75%; 
+    transform: translate(-50%, -50%);
+    animation: flash 2.5s ease infinite;
+}
+.balloon3 .aniCha .aniTitle h2 {
+    color: #e7e5bc;
+}
+.balloon3 .aniBall .aniBtn {
+    font-family: var(--font-eng);
+    font-size: 4vw;
+    color: #fff;
+    transition: all 0.2s;
+}
+.balloon3 .aniBall .aniBtn:hover {
+    color: rgba(85, 81, 77, 0.8);
+    cursor: pointer;
+}
+.balloon3 .aniBall1 {
+    width: 18vw;
+    position: absolute;
+    left: 0; top: 13%;
+}
+.balloon3 .aniBall1 .aniBtn {
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.balloon3 .aniBall2 {
+    width: 18vw;
+    position: absolute;
+    left: 25%; top: -5%;
+}
+.balloon3 .aniBall2 .aniBtn {
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.balloon3 .aniBall3 {
+    width: 18vw;
+    position: absolute;
+    left: 53%; top: 15%;
+}
+.balloon3 .aniBall3 .aniBtn {
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.balloon3 .aniBall4 .aniBtn {
+    position: absolute;
+    left: 10%; top: 48%;
+}
+.balloon3 .aniBall5 .aniBtn {
+    position: absolute;
+    right: 7%; top: 48%;
+}
+.balloon3 .aniFrame .ani {
+    width: 18vw; height: 18vw;
+    border-radius: 50vw;
+    overflow: hidden;
+    transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+.balloon3 .aniFrame .ani1 {
+    position: absolute;
+    left: 0; top: 13%;
+    transform: scale(0);
+    opacity: 0.8;
+}
+.balloon3 .aniFrame .ani2 {
+    position: absolute;
+    left: 25%; top: -5%;
+    transform: scale(0);
+    opacity: 0.8;
+}
+.balloon3 .aniFrame .ani3 {
+    position: absolute;
+    left: 53%; top: 15%;
+    transform: scale(0);
+    opacity: 0.8;
+}
+.balloon3 .aniFrame .ani4 {
+    display: none;
+    overflow: visible;
+    position: absolute;
+    border-radius: 0;
+    left: 50%; top: 30%;
+    transform: translate(-200%,180%);
+}
+.balloon3 .aniFrame .ani4.move {
+    animation: aniMove1 4s 1 ease-in-out;
+}
+@keyframes aniMove1 {
+    0% {transform: translate(-200%,180%);}
+    100% {transform: translate(200%,-180%)}
+}
+.balloon3 .aniFrame .ani5 {
+    display: none;
+    width: 100%; height: 100vh;
+    position: absolute;
+    left: 0%; top: 0%;
+    transform: translateX(100%);
+}
+.balloon3 .aniFrame .ani5.move {
+    animation: aniMove2 10s 1 ease-in-out;
+}
+@keyframes aniMove2 {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+/* animation - ball */
+.ball {
+    position: fixed;
+    width: 100%; height: 100vh;
+}
+.ball .ball1 {
+    position: absolute;
+    left: -10%; bottom: 0%;
+    animation: ballMove 2.2s -1000ms ease-in infinite;
+}
+.ball .ball2 {
+    position: absolute;
+    left: 10%; bottom: 0%;
+    animation: ballMove 2.5s -4920ms ease-in infinite;
+}
+.ball .ball3 {
+    position: absolute;
+    left: 20%; bottom: 0%;
+    animation: ballMove 2s -1510ms ease-in infinite;
+}
+.ball .ball4 {
+    position: absolute;
+    left: 25%; bottom: 0%;
+    animation: ballMove 2.5s -3040ms ease-in infinite;
+}
+.ball .ball5 {
+    position: absolute;
+    left: 40%; bottom: 0%;
+    animation: ballMove 1.9s -2250ms ease-in infinite;
+}
+.ball .ball6 {
+    position: absolute;
+    left: 58%; bottom: 0%;
+    animation: ballMove 2.3s -1150ms ease-in infinite;
+}
+.ball .ball7 {
+    position: absolute;
+    left: 62%; bottom: 0%;
+    animation: ballMove 2.5s -420ms ease-in infinite;
+}
+.ball .ball8 {
+    position: absolute;
+    left: 70%; bottom: 0%;
+    animation: ballMove 2s -380ms ease-in infinite;
+}
+.ball .ball9 {
+    position: absolute;
+    left: 80%; bottom: 0%;
+    animation: ballMove 2.6s -3040ms ease-in infinite;
+}
+.ball .ball10 {
+    position: absolute;
+    left: 90%; bottom: 0%;
+    animation: ballMove 2.8s -4810ms ease-in infinite;
+}
+@keyframes ballMove {
+    0% {width: 18vw; transform: translateY(-300%);}
+    100% {width: 1vw; transform: translateY(4800%);}
+}
+
+/* animation - aniLast */
+.aniLast .star {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -3;
+}
+.aniLast .door {
+    width: 37vw; height: 100vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.aniLast .door h2 {
+    font-family: var(--font-kor);
+    font-size: 2.5vw;
+    line-height: 1.3;
+    position: absolute;
+    left: 5vw; top: 5vw;
+}
+.aniLast .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.aniLast .door::before{
+    content: '';
+    width: 10vw; height: 100vh;
+    background-image: linear-gradient(to left, #2C3641 50% , #44525F 50%);
+    position: absolute;
+    left:0; bottom: 0;
+    z-index: -1;
+}
+.aniLast .door::after{
+    content: '';
+    width: 12vw; height: 100vh;
+    background-image: linear-gradient(to left, #2C3641 60% , #44525F 40%);
+    /* background: #447BA0; */
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 99999;
+}
+.aniLast .balloon1 {
+    width: 9vw;
+    position: absolute;
+    left: 5vw; top: 5vw;
+    animation: balloonMove 2.5s ease-in-out infinite;
+}
+.aniLast .balloon2 {
+    width: 9vw;
+    position: absolute;
+    left: 20vw; top: 15vw;
+    animation: balloonMove 4s ease-in-out infinite;
+}
+.aniLast .balloon3 {
+    width: 9vw;
+    position: absolute;
+    left: 40vw; top: 10vw;
+    animation: balloonMove 4.2s ease-in-out infinite;
+}
+.aniLast .balloon4 {
+    width: 9vw;
+    position: absolute;
+    left: 57vw; top: 7vw;
+    animation: balloonMove 2s ease-in-out infinite;
+}
+@keyframes balloonMove {
+    50% {transform: translateY(10%);}
+}
+.aniLast .ballCha {
+    width: 12vw;
+    position: fixed;
+    left: 42vw; bottom: 7vw;
+}
+
+/* script - script1,2 */
+.lime {
+    position: absolute;
+    left: 18vw; top: 0;
+}
+.lime .effectTxt {
+    position: absolute;
+    left: 8%; top: 8%;
+}
+.lime .scriptBtn h3 {color: #DED545;}
+.mint {
+    position: absolute;
+    left: 18vw; top: 50%;
+}
+.mint .effectTxt {
+    position: absolute;
+    left: 8%; top: 8%;
+}
+.mint .scriptBtn h3 {color: #3BB6A7;}
+
+.effect img {position: relative; width: 35vw; height: 20vw;} 
+.effect .effectTxt {
+    width: 29vw; height: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.effect .effectTxt .scriptTitle {
+    flex: 0 0 10%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid #fff;
+}
+.effect .effectTxt .scriptTitle h2 {
+    font-size: 3vw;
+    font-family: var(--font-eng);
+}
+.effect .effectTxt .scriptEx {flex: 0 0 10%;}
+.effect .effectTxt .scriptEx p {
+    font-size: 1vw;
+    font-family: var(--font-kor);
+    color: #fff;
+    word-break: keep-all;
+}
+.effect .effectTxt .scriptBtn {flex: 0 0 10%;}
+.effect .effectTxt .scriptBtn h3 {
+    font-size: 1vw;
+    font-family: var(--font-eng);
+    display: inline-block;
+    padding: 0.8vw 1vw;
+    background: rgba(254, 253, 234, 0.8);
+    border-radius: 2vw;
+}
+.effect .effectTxt .scriptBtn h3:hover {
+    cursor: pointer;
+    background-color:#ffffff33;
+    color: rgba(255,255,255,0.8);
+    transition: background-color 1000ms ease, background 500ms ease ;
+}
+
+/* script - scriptLast */
+.scriptLast .scriptLastTitle {
+    position: absolute;
+    left: 24vw; top: 28vw;
+    font-family: var(--font-kor);
+    width: 26vw;
+    font-size: 2vw;
+    word-break: keep-all;
+    line-height: 1.2;
+    animation: shakeY 1.5s 1s ease-in-out infinite;
+}
+.scriptLast .scriptLastCha {
+    width: 12vw;
+    position: fixed;
+    left: 65%; bottom: 30%;
+}
+.scriptLast .wave {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+/* script - scriptPopup */
+.scriptPopup {
+    width: 100%; height: 100vh;
+}
+.effectIframe {
+    width: 70vw; height: 40vw;
+    border-radius: 3vw;
+    overflow: hidden;
+}
+.effectPopupWrap {
+    transform: scale(0);
+    transition:  all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+    position: fixed; 
+    left: 15vw; top: 10%; 
+}
+.effectPopupWrap .effectClose {
+    font-family: var(--font-eng);
+    font-size: 1.5vw;
+    color: #fff;
+    background: #f0aa53;
+    padding: 0.5% 1%;
+    border-radius: 10vw;
+    position: absolute;
+    right: -4%; top: 0;
+    transition: all 0.2s;
+}
+.effectPopupWrap .effectClose:hover {
+    cursor: pointer;
+    background-color:#ffffff33;
+    color: rgba(255,255,255,0.8);
+    border-radius: 10vw;
+}
+
+/* contact */
+.contact {
+    width: 100%; height: 100vh;
+    background: #3DB8A9;
+    font-family: var(--font-eng);
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contactInfo {flex: 0 0 40%;}
+.contactInfo h2 {font-size: 3vw; margin-bottom: 5%;}
+.contactInfo .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+.inputBox .left {
+    flex: 0 0 35%;
+    font-size: 2vw;
+    line-height: 1.5;
+}
+.inputBox .right {flex: 0 0 65%;}
+.input-text {
+    width: 100%;
+    border: none;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    padding: 2% 3%;
+    margin-bottom: 2%;
+    color: #00977C;
+}
+.inputBox .bottom {
+    flex: 0 0 100%;
+    font-size: 2vw;
+}
+.inputBox .bottom li:nth-child(1) {margin-bottom: 1%;}
+.sendMessage {
+    font-family: var(--font-eng);
+    width: 100%;
+    font-size: 2vw;
+    border-radius: 1vw;
+    background: #00977C;
+    color: #fff;
+    border: 0;
+    padding: 2% 0;
+    transition: background-color 1000ms ease, background 500ms ease ;
+}
+.sendMessage:hover {
+    background-color:#ffffff33;
+    color: #00977b81;
+    cursor: pointer;
+}
+.myProfile {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.myProfile .myPhoto {
+    flex: 0 0 50%;
+    width: 100%;
+    height: 20vw;
+    background: url(../img/img01.jpg) no-repeat;
+    background-size: cover;
+}
+.myProfile .info {
+    flex: 0 0 47%;
+    font-size: 1.9vw;
+    display: flex;
+    flex-direction: column;
+}
+.myProfile .info h2 {flex: 0 1 10%;}
+.myProfile .info ul {
+    flex: 0 1 80%;
+    padding-top: 5%;
+}
+.myProfile .info .sns a {
+    flex: 0 1 10%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-radius: 1vw;
+    padding: 3% 0;
+    background: #00977C;
+    transition: background-color 1000ms ease, background 500ms ease ;
+}
+.myProfile .info .sns a:hover {
+    background-color:#ffffff33;
+    color: #00977b81;
+}
+.myProfile .photo {
+    flex: 0 0 100%;
+    position: relative;
+    margin-top: 3vw;
+}
+.myProfile .photo .heart {
+   position: absolute;
+   width: 4vw;
+   right: 47%; top: 25%;
+   animation: shakeY 2s infinite;
+}
+
+
+/* sitePage - 사이트, 리액트 클릭하면 나오는 페이지 */
+.sitePage {
+    overflow: hidden;
+    transition:  all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+    z-index: 9999;
+    top: -100%;
+}
+.sitePage .siteWave {
+    width: 6400px; height: 400px;
+    background: url(../img/waveBlue.svg) repeat-x;
+    position: absolute;
+    top: 0; left: 0;
+    animation: siteWave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes siteWave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+.sitePage .siteInfo {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.sitePage .videoWrap {
+    border-radius: 30px;
+    overflow: hidden;
+}
+.sitePage .siteText {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-family: var(--font-eng);
+    color: #fff;
+    margin-top: 4%;
+}
+.sitePage .siteText .left {
+    flex: 0 0 70%;
+}
+.sitePage .siteText .left h2 {
+    font-size: 2.5vw;
+}
+.sitePage .siteText .left ul {
+    margin-top: 1vw;
+}
+.sitePage .siteText .left li {
+    font-size: 1.3vw;
+    line-height: 1.3;
+}
+.sitePage .siteText .right {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.sitePage .siteText .right a {
+    display: inline-block;
+}
+.sitePage .siteText .right a:nth-child(1){
+    margin-bottom: 4%;
+}
+.sitePage .siteText .right h2 {
+    font-size: 1.3vw;
+    padding: 4% 8%;
+    border-radius: 1vw;
+    display: inline-block;
+    background: #2D5E85;
+}
+.sitePage .siteText .right h2:hover {
+    background-color: #565e67;
+    color: rgba(255,255,255,0.8);
+    transition: background-color 1000ms ease, background 500ms ease ;
+}
+.sitePage1 .siteText .right a:nth-child(2){
+    margin-bottom: 4%;
+}
+.sitePage2 .siteText .right a:nth-child(2){
+    margin-bottom: 4%;
+}
+.video1 {width: 768px; height: 424px;}
+.video2 {width: 768px; height: 389px;}
+.video3 {width: 768px; height: 393px;}
+.video4 {width: 768px; height: 393px;}
+.video5 {width: 768px; height: 394px;}
+.video6 {width: 768px; height: 396px;}
+.video7 {width: 768px; height: 394px;}
+.video8 {width: 768px; height: 394px;}
+.video9 {width: 768px; height: 395px;}
+.video10 {width: 768px; height: 397px;}
+
+.sitePage10 .siteWave {
+    background: url(../img/waveYellow.svg) repeat-x;
+}
+.sitePage10 .siteText .left li {
+    font-family: var(--font-kor);
+}
+.sitePage10 .siteText .right h2 {
+    background: #d9a93c;
+}
+
+/* saveMsg */
+.saveMsg {
+    width: 100%; height: 100vh;
+    background: #3DB8A9;
+    position: relative;
+}
+.saveMsg .info {
+    color: #fff;
+    font-family: var(--font-kor);
+    font-size: 1.5vw;
+    text-align: center;
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 5% 5%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2vw;
+    border: 2px dashed #fff;
+}
+.saveMsg .info p:nth-child(2) {
+    font-family: var(--font-eng);
+}

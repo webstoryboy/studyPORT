@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 반응형 X-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>국가기념관 스마트전시 안내시스템</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script>
+    <script type="text/javascript" src="../plugins/datepicker/js/moment.min.js"></script>
+
+    <!-- jquery -->
+    <script src="../js/jquery-3.4.1.min.js"  type="text/javascript" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"  type="text/javascript" ></script>
+    <script src="../js/chart/utils.js"  type="text/javascript" ></script>
+    <script src="../js/chart/Chart.bundle.min.js"  type="text/javascript" ></script>
+    <script src="../js/chart/Chart.min.js"  type="text/javascript" ></script>
+
+    <!-- main css -->
+    <link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/font.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="../css/xeicon.css" rel="stylesheet">
+
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+    <script src="../js/bar-chart.js"></script>
+
+</head>
+<style type="text/css">
+    /* Chart.js */
+    @-webkit-keyframes 
+    chartjs-render-animation{
+        from{opacity:0.99}
+        to{opacity:1}
+    }
+    @keyframes 
+    chartjs-render-animation{
+        from{opacity:0.99}
+        to{opacity:1}
+    }
+    .chartjs-render-monitor{
+        -webkit-animation:chartjs-render-animation 0.001s;
+        animation:chartjs-render-animation 0.001s;
+    }
+</style>
+
+<body style="padding-top: 0;">
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="navbar-brand" href="#">
+                    <ul>
+                        <a href="/">
+                            <li style="margin-right:10px;"><img src="../images/logo.svg"></li>
+                            <li>국가기념관 스마트 전시안내 시스템</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul class="row">
+                        <li class=" ">
+                            <a class="nav-link" href="../_styleGuide/component.html"><span class="btn btn-xs btn-secondary"><i class="xi-cog"></i> 스타일가이드</span></a>
+                        </li>
+                        <li class="dropdown-select">
+                            <select class="custom-select" style="background-color: #f3f5f7;">
+                                <option selected>독립기념관</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"><img src="../images/icon/notice.png" class="ico-box">공지사항</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false"><img src="../images/icon/alert.png"
+                                    class="ico-box">알림<span class="alarm-num">12</span></a>
+                            <div class="dropdown-menu alarm-menu" aria-labelledby="alarm-notice"
+                                style="transform: translate3d(0px, 54px, 0px);!important">
+                                <button class="dropdown-item" type="button">기념관 및 계정생성 신청<span class="alarm-num"
+                                        style="position: absolute;">4</span></button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item" type="button">비콘 베터리 교체<span
+                                        class="alarm-num">33</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"><img src="../images/icon/mypage.png" class="ico-box">마이페이지</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="../_main/login.html"><img src="../images/icon/logout.png"
+                                    class="ico-box">로그아웃</a>
+                        </li>
+                        <li>
+                            <button class="btn search-btn" type="submit"><img src="../images/icon/search.png"></button>
+                        </li>
+
+                    </ul>
+                    <div class="search-bar">
+                        <!-- D : search-btn 클릭 나타나기 -->
+                        <div class="search-bar-box float-right">
+                            <form class="" style="width: 670px;">
+                                <select class="custom-select " style="width: 175px; background-color:#ffffff">
+                                    <option selected>전시품명</option>
+                                    <option value="1">전시안내번호</option>
+                                    <option value="2">전시품 ID</option>
+                                    <option value="3">전시안내내용</option>
+                                </select>
+                                <input class="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="col-md-2">전시품 전시안내 관리</li><!-- D : 활성화페이지일 경우 : on 처리 -->
+                    <li class="col-md-2">실내측위 관리</li>
+                    <li class="col-md-2">기념관,전시품 관리</li>
+                    <li class="col-md-2">주요통계</li>
+                    <li class="col-md-2">시스템관리</li>
+                    <li class="col-md-2">컨텐츠 및 서비스 관리</li>
+                </ul>
+            </div>
+            <!-- 메뉴드롭 -->
+            <div class="menu-drop" id="multiCollapseExample1">
+                <div class="container">
+                    <ul class="menu-drop-list">
+                        <li class="col-md-2">
+                            <ul>
+                                <li class="on"><a href="../_01_exhibit-info/sub1-1-1.html">기념관 APP메인 관리</a></li>
+                                <!-- D : 활성화페이지일 경우 : on 처리 -->
+                                <li><a href="../_01_exhibit-info/sub1-2-1.html">카테고리별 전시안내 관리</a></li>
+                                <li><a href="../_01_exhibit-info/sub1-3.html">현충시설 컨텐츠 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_02_indoor-position/sub2-1-1.html">비콘 기본정보 관리</a></li>
+                                <li><a href="../_02_indoor-position/sub2-2-1.html">Zoning 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_03.memorial-exhibit/sub3-1-1.html">전시품 정보 관리</a></li>
+                                <li><a href="../_03.memorial-exhibit/sub3-2-1.html">기념관 정보 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_04.statistics/sub4-1.html">방문자 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-2.html">전시품별 전시안내 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-3.html">ICT 컨텐츠 이용현황</a></li>
+                                <li><a href="../_04.statistics/sub4-4.html">군장병 관람인증 현황</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_05.system/sub5-1-1.html">시스템 공지사항</a></li>
+                                <li><a href="../_05.system/sub5-2.html">계정요청처리</a></li>
+                                <li><a href="../_05.system/sub5-2-1.html">관리자 계정관리</a></li>
+                                <li><a href="../_05.system/sub5-3.html">그룹/권한 관리</a></li>
+                                <li><a href="../_05.system/sub5-4.html">공통코드 관리</a></li>
+                                <li><a href="../_05.system/sub5-5-1.html">컨텐츠 변경이력관리</a></li>
+                                <li><a href="../_05.system/sub5-6-1.html">로그 관리</a></li>
+                                <li><a href="../_05.system/sub5-7.html">데이터연동 수동관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="../_06.contents-service/sub6-1.html">영상 컨텐츠 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-0.html">텍스트AR 정보 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-2.html">APP 공지사항 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-3.html">군인별 관람인증 관리</a></li>
+                                <li><a href="../_06.contents-service/sub6-4.html">관람인증 문제은행 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- 메인 -->
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <!-- 공지사항 -->
+                <div class="col-12 pl10 pr10">
+                    <div class="main-box notice rounded-lg">
+                        <ul class="d-flex">
+                            <li class="col-3">
+                                <h2>시스템 공지사항</h2>
+                            </li>
+
+                            <li class="col-8">
+                                <ul class="notice-list" id="ticker_02">
+                                    <li>
+                                        <a href="#">
+                                            <div class="badge badge-danger mr10"> 공지 </div> 1안녕하세요! 국가기념관 통합 전시안내 관리시스템이
+                                            오픈 되었습니다. <span class="float-right">2019-12-12</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="badge badge-danger mr10"> 공지 </div> 2안녕하세요! 국가기념관 통합 전시안내 관리시스템이
+                                            오픈 되었습니다. <span class="float-right">2019-12-10</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="badge badge-danger mr10"> 공지 </div> 3안녕하세요! 국가기념관 통합 전시안내 관리시스템이
+                                            오픈 되었습니다. <span class="float-right">2019-12-02</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="col-1" style="justify-content: flex-end; display: flex;">
+                                <div class="btn-group">
+                                    <sapn class="ico-box-m">up</sapn><span class="ico-box-m">down</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 전시품 현황 -->
+                <div class="col-3 mb15 pl10 pr10">
+                    <div class="sub-box bg-gray" style="border-bottom: none;">
+                        <div class="sub-tit">전시품 현황<a href="../_03.memorial-exhibit/sub3-1-1.html" class="float-right more-btn-w"
+                                style="color: transparent;">더보기</a></div>
+                    </div>
+                    <div class="s-box text-center">
+                        <div style="margin:0 auto;">
+                            <h2>전체 전시품 : <strong>99,999</strong></h2>
+
+                            <div class="progress">
+                                <div class="progress-bar bg-focus" role="progressbar" style="width: 90%;"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li class="list-inline-item text-primary font-weight-bold">전시 <span>99,000</span></li>
+                                <li class="list-inline-item">미전시 <span>999</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 컨텐츠 업데이트 -->
+                <div class="col-3 mb15 pl10 pr10">
+                    <div class="sub-box bg-gray" style="border-bottom: none;">
+                        <div class="sub-tit">컨텐츠 업데이트 <span class="pl15">변경이력</span><a href="../_05.system/sub5-5-1.html"
+                                class="float-right more-btn-w" style="color: transparent;">더보기</a></div>
+                    </div>
+                    <div class="s-box">
+                        <div class="sc-table">
+                            <table class="table notice-table" id="scroll-03">
+                                <tr>
+                                    <td class="t-day">08/09</td>
+                                    <td class="t-writer">홍길동</td>
+                                    <td class="t-contents">관리자 계정관리</td>
+                                </tr>
+                                <tr>
+                                    <td class="t-day">08/08 </td>
+                                    <td class="t-writer">운영자</td>
+                                    <td class="t-contents">전시품 관리</td>
+                                </tr>
+                                <tr>
+                                    <td class="t-day">08/08 </td>
+                                    <td class="t-writer">운영자</td>
+                                    <td class="t-contents">가상체험 콘텐츠 관리</td>
+                                </tr>
+                                <tr>
+                                    <td class="t-day">08/08 </td>
+                                    <td class="t-writer">운영자</td>
+                                    <td class="t-contents">가상체험 콘텐츠 관리</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="t-day">08/08 </td>
+                                    <td class="t-writer">운영자</td>
+                                    <td class="t-contents">가상체험 콘텐츠 관리</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 전시품 현황 -->
+                <div class="col-6 mb15 pl10 pr10">
+                    <div class="sub-box bg-gray" style="border-bottom: none;">
+                        <div class="sub-tit">비콘 운영 현황 <span class="pl15">전체 비콘: <strong> 99,999 </strong>개</span><a
+                                href="../_02_indoor-position/sub2-1-1.html" class="float-right more-btn-w" style="color: transparent;">더보기</a></div>
+                    </div>
+                    <div class="s-box">
+                        <div>
+                            <table class="w-100">
+                                <tr>
+                                    <td>
+                                        <div class="tile-info text-center bg-green">
+                                            <span>여유</span>
+                                            <p>99</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tile-info text-center bg-red">
+                                            <span>교체임박</span>
+                                            <p>23</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tile-info text-center bg-yellow">
+                                            <span>즉시교체</span>
+                                            <p>3</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- APP 전시안내 설정-->
+                <div class="col-3 pl10 pr10 mb15">
+                    <div class="m-box text-center">
+                        <i class="setting-ico"></i>
+                        <h2>APP 전시안내 설정</h2>
+                        <p>우리 기념관 APP 메인, 전시관, 전시실 등의<br>
+                            컨텐츠를 설정하실 수 있습니다.</p>
+                        <a href="../_01_exhibit-info/sub1-1-1.html" class="btn btn-border btn-sm rounded-pill">바로가기</a>
+                    </div>
+                </div>
+                <!-- 전시품 등록/수정 -->
+                <div class="col-3 pl10 pr10 mb15">
+                    <div class="m-box text-center">
+                        <i class="dp-ico"></i>
+                        <h2>전시품 등록/수정</h2>
+                        <p>신규 전시품 정보를 등록/수정하실 수 있습니다.</p>
+                        <a href="/_03.memorial-exhibit/sub3-1-2.html" class="btn btn-border btn-sm rounded-pill">바로가기</a>
+                    </div>
+                </div>
+                <!--데이터연동 수동실행 -->
+                <div class="col-3 pl10 pr10 mb15">
+                    <div class="m-box text-center">
+                        <i class="data-ico"></i>
+                        <h2>데이터연동 수동실행</h2>
+                        <p>국가기념관 APP에 변경된 데이터가즉시 반영됩니다.</p>
+                        <a href="../_03.memorial-exhibit/sub3-1-1.html" class="btn btn-border btn-sm rounded-pill">바로가기</a>
+                    </div>
+
+                </div>
+                <!-- 관리자 계정 등록/수정 -->
+                <div class="col-3 pl10 pr10 mb15">
+                    <div class="m-box text-center">
+                        <i class="admin-ico"></i>
+                        <h2>관리자 계정 등록/수정</h2>
+                        <p>기념관 전시안내 운영자계정을 <br>
+                            등록/수정합니다.</p>
+                        <a href="../_05.system/sub5-2-1.html" class="btn btn-border btn-sm rounded-pill">바로가기</a>
+                    </div>
+                </div>
+                <!-- 8월 1주차 주간 현황 -->
+                <div class="col-12 pl10 pr10 mb80">
+                    <ul class="graph-list nav nav-tabs" id="myTab" role="tablist">
+                        <li class="chart-tit col-4">
+                            <div class="text-center">8월 1주차 주간 현황<br><span>( 2019.08.04~2019.08.10 )</span></div>
+                        </li>
+                        <li class="nav-item col-4 p0">
+                            <a class="nav-link active text-center" id="profile-tab" data-toggle="tab" href="#profile"
+                                role="tab" aria-controls="profile" aria-selected="false">일별 방문이용현황<br> <span>( APP 이용현황
+                                    )</span></a>
+                        </li>
+                        <li class="nav-item col-4 p0">
+                            <a class="nav-link text-center" id="contact-tab" data-toggle="tab" href="#contact"
+                                role="tab" aria-controls="contact" aria-selected="false">인기 전시안내 TOP 10<br> <span>( 전시품별
+                                    안내현황 )</span></a>
+                        </li>
+                    </ul>
+                    <div class=" tab-content" id="myTabContent">
+
+                        <div class="main-box tab-pane fade show active border-top-0" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div style="overflow:hidden;"><small>마지막 업데이트 2019-08-11 01:00:00:00</small> 
+                                <a href="../_04.statistics/sub4-1.html" class="btn btn-border btn-sm float-right">더보기 <i class="xi-angle-right"></i></a></div>
+
+                            <div style="padding:20px 0;">
+                                <div style="height:380px;">
+                                    <div class="chartjs-size-monitor"
+                                        style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                        <div class="chartjs-size-monitor-expand"
+                                            style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div
+                                                style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                            </div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink"
+                                            style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="chartResult03" width="1168" height="380" class="chartjs-render-monitor" style="display: block;"></canvas>
+                                </div>
+                            </div>
+                            <script>
+                                function drawChart3() {
+                                    ctx = document.getElementById('chartResult03').getContext('2d');
+                                    chart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['12.2(월)', '12.3(화)', '12.4(수)', '12.5(목)', '12.6(금)', '12.72(토)', '12.8(일)', '12.9(월)', '12.10(화)'],
+                                            datasets: [
+                                                {
+                                                    label: '이미지',
+                                                    backgroundColor: '#106CB3',
+                                                    borderColor: 0,
+                                                    borderWidth: 0,
+                                                    data: ['66747', '121223', '102321', '123232', '92314', '64545', '23434', '13433', '4343', '21145']
+                                                }
+
+                                            ]
+                                        },
+                                        options: {
+                                            legend: {
+                                                display: false,
+                                                position: 'bottom',
+                                                labels: {
+                                                    boxWidth: 13,
+                                                    padding: 0
+                                                }
+                                            }
+                                        }
+                                    });
+                                    //document.getElementById('legendData03').innerHTML = chart.generateLegend();
+                                }
+                                drawChart3();
+                            </script>
+
+                        </div>
+
+                        <div class="main-box tab-pane fade border-top-0" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div style="overflow:hidden;"><small>마지막 업데이트 2019-08-11 01:00:00:00</small>
+                                <a href="../_04.statistics/sub4-2.html" class="btn btn-border btn-sm float-right"> 더보기 <i class="xi-angle-right"></i></a>
+                            </div>
+                            <div style="padding:20px 0;">
+                                <div style="height:380px;">
+                                    <div class="chartjs-size-monitor"
+                                        style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                        <div class="chartjs-size-monitor-expand"
+                                            style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div
+                                                style="position:absolute;width:1000000px;height:1000000px;left:0;top:0">
+                                            </div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink"
+                                            style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                            <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="chartResult04" width="1168" height="380" class="chartjs-render-monitor"
+                                        style="display: block; width: 1168px; height: 380px;"></canvas>
+                                </div>
+                            </div>
+                            <script>
+                                function drawChart4() {
+                                    ctx = document.getElementById('chartResult04').getContext('2d');
+                                    chart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['독립기념관', '백범김구기념관', 'UN평화기념관', '기념관D', '기념관E', '기념관F', '기념관G', '기념관H', '기념관I', '기념관j'],
+                                            datasets: [
+                                                {
+                                                    label: '이미지',
+                                                    backgroundColor: '#106CB3',
+                                                    borderColor: 0,
+                                                    borderWidth: 0,
+                                                    data: ['28432', '22341', '18775', '16432', '15441', '12950', '9513', '8841', '4321', '2145', '1124']
+                                                }
+
+                                            ]
+                                        },
+                                        options: {
+                                            legend: {
+                                                display: false,
+                                                position: 'bottom',
+                                                labels: {
+                                                    boxWidth: 13,
+                                                    padding: 0
+                                                }
+                                            }
+                                        }
+                                    });
+                                    //document.getElementById('legendData03').innerHTML = chart.generateLegend();
+                                }
+                                drawChart4();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <h5>Copyrights © NATIONAL MUSEUM OF KOREA. All right reserved.</h5>
+
+        </div>
+    </footer>
+
+</body>
+
+</input>

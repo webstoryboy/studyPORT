@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="portfolio">
+    <meta property="og:description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주">
+    <meta name="description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주">
+    <meta name="keywords" content="portfolio">
+    <meta property="og:url" content="portfolio">
+    <meta property="og:image" content="./assets/img/thumb.png">
+    <link href="./assets/img/favicon.png" rel="shortcut icon">
+    <title>나윤주 포트폴리오</title>
+
+    <!-- 부트스트랩 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- aos-js 스타일-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    
+    <!-- loading 스타일-->
+    <link rel="stylesheet" href="assets/css/load.css">
+
+    <!-- page전환 스타일-->
+    <link rel="stylesheet" href="assets/css/landingpage.css">
+    </head>
+
+<body naver_screen_capture_injected="true" data-barba="wrapper" >
+    <!-- 로딩애니메이션 -->
+    <!-- loading -->
+    <div class="loading">
+        <div class="load-container">
+            <div class="ico-loading"></div>
+            <span>I create digital awesomeness.</span>
+            <div class="percent mt-3">0%</div>
+        </div>
+    </div>
+    <!-- OVERLAY Loading 끝난뒤 화면 -->
+    <div class="loader-container">
+        <div class="loader-overlay one"></div>
+        <div class="loader-overlay two"></div>
+    </div>
+
+    <!-- logo & 헤더-->
+    <a href="#" class="logo text-indet">logo</a>
+    <header>
+        <nav class="">
+            <span class="title">I create digital awesomeness.</span>
+            
+            <div class="nav-right">
+                <button class="top-menu-btn open">
+                    <span class="text">menu</span>
+                    <span></span>
+                </button>
+                <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 왼쪽 햄버거 메뉴 -->
+    <aside class="sidebar">
+        <button class="side-menu-btn open">
+            <span class="text">menu</span>
+            <span></span>
+        </button>
+    </aside>
+
+    <!-- 햄버거 버튼 펼침 메뉴 -->
+    <section class="side-menu">
+            <header class="fixed ml-0">
+                <nav>
+                    <span class="title">I create digital awesomeness.</span>
+                    
+                    <div class="nav-right">
+                        <button class="top-menu-btn open">
+                            <span class="text">menu</span>
+                            <span></span>
+                        </button>
+                        <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                        <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+                    </div>
+                </nav>
+            </header>
+            <div class="menu-text">
+                <ul class="w-100">
+                    <li onclick="location.href='#aboutMe'">
+                        <a href="#none" onmouseenter="changeImage('url(./assets/img/profile-b.png)')">
+                            <h3>ABOUT ME</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='#website'">
+                        <a href="#none" onmouseenter="changeImage('url(./assets/img/bg-sample.png)')">
+                            <h3>WESITE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='#mobile'">
+                        <a href="#none" onmouseenter="changeImage('url(./assets/img/1.jpg)')">
+                            <h3>MOBILE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='#javascript'">
+                        <a href="#none" onmouseenter="changeImage('url(./assets/img/2.jpg)')">
+                            <h3>JAVASCRIPT</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='#animation'">
+                        <a href="#none" onmouseenter="changeImage('url(./assets/img/3.jpg)')">
+                            <h3>ANIMATION</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-img" style="background: url(./assets/img/bg-sample.png)no-repeat center; background-size: cover;">
+                <div class="h-100 hover-menu" id="slideImg"></div>
+            </div>
+    </section>
+
+    <!-- 햄버거 버튼 펼침 메뉴 -->
+    <a href="./sub/gallery.html" class="all-btn" title="갤러리">갤러리</a>
+    <span class="scroll-btn" style="transform: rotate(-90deg);">SCROLL</span>
+    <a href="./sub/contact.html" class="contact-btn" title="contact" style="transform: translate(0px, 0px); opacity: 1;">Contact</a>
+
+    <!-- 메인 내용 -->
+    <main data-barba="container" data-barba-namespace="home-section">
+        <!-- 섹션 내용 -->
+        <section class="sec1">
+            <div class="col-md-7  col-12 left-sec px-0">
+                <div class="main-text">
+                    <h1><span class="hide-text i1">HELLO!</span></h1>
+                    <h2><span class="hide-text i2">THIS IS MY</span></h2>
+                    <h1><span class="hide-text i3">PORTFOLIO</span></h1>
+                    <h2><span class="hide-text i4">@2021</span></h2>
+                </div>
+            </div>
+            <div class="col-md-5 col-12 right-sec px-0" style="transform: translate(0px, 0px); opacity: 1;">
+                <div class="top-sec" style="transform: translate(0px, 0px); opacity: 1;">
+                    <div class="notice" data-aos="fade-up">
+                        <label>Notice</label>
+                        <div class="notice-table">
+                            <ul>
+                                <li><a href="http://momo87.dothome.co.kr/php/board/viewBoard.php?boardID=403">[OPEN] 포트폴리오 페이지에 오신 것을 환영합니다.</a></li>
+                                <li><a href="http://momo87.dothome.co.kr/php/board/viewBoard.php?boardID=403">[OPEN] 포트폴리오 페이지에 오신 것을 환영합니다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-sec">
+                    <div class="name" style="transform: translate(0px, 0px); opacity: 1;">
+                        <span>front-end developer</span>
+                        <h3>NAYOONJU</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec2">
+            <span class="keyword i1" data-aos="fade-up">#재밌는</span>
+            <span class="keyword i2" data-aos="fade-up">#시크한</span>
+            <span class="keyword i3" data-aos="fade-up">#도전적인</span>
+        </section>
+        
+        <section class="sec3 pt-3" id="aboutMe">
+            <div class="wrap">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="about-me mx-auto text-center mt-2">
+                            <h2 data-aos="fade-up">About me</h2>
+                            <h3 class="desc" data-aos="fade-up">안녕하세요. 프론트앤드 개발자 나윤주입니다.<br/>
+                                현재 퍼블리셔와 프론트 영역까지 꿈꾸며 개발자와의 소통을 위해<br/>
+                                현재에 안주하지 않고 열심히 배우는 중입니다.<br/>
+                                저는 기존에 인하우스 디자이너로 시작해서 다양한 경험을 통해<br/>
+                                웹개발에 흥미를 느껴 도전하게 되었습니다.<br/>
+                                <em>
+                                    <a href="#web" class="web-hover">웹사이트</a> /
+                                    <a href="#mobile" class="mobile-hover">모바일앱</a> /
+                                    <a href="#javascript" class="js-hover">자바스크립트</a> /
+                                    <a href="#animation" class="animation-hover">애니메이션</a></em>
+                                을 공부하면서<br/> 웹과 앱 개발에 있어 전문가로 성장하기 위해 노력 중입니다.
+                            </h3>
+                        </div>
+                        <!-- cursor 이미지호버 -->
+                        <div class="cursor" style="transform: translate(987px, 153px);"></div>
+                        <div class="cursorHover" style="transform: translate(987px, 153px);"></div>
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+        <section class="sec5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 career-title">
+                        <div class="bg-box">
+                            <h2 data-aos="fade-right" data-aos-delay="100">Career</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 career-desc">
+                            <h3 class="mt-5"></h3>
+                            <h3 class="mt-5"></h3>
+                            <h3 data-aos="fade-up" class="mt-5">2020</h3>
+                            <p class="mb-5" data-aos="fade-up">
+                                주) hp솔루션 / 사무기기 플랫폼 서비스</br>
+                                국가지원 벤처 기업으로 SI 웹 개발 프로젝트 디자인</br>
+                                초기부터 세팅기획 참여, 디자인 - 구현 전반적으로 진행</br>
+                                스케치, 포토샵 - 디자인 설계 / 협업공유</br>
+                                bootstrap3.4.1 라이브러리 사용</br>
+                                모바일, 패드 PC media 3버전 반응형 홈페이지 제작</br>
+                            </p>
+                            <h3 data-aos="fade-up">2019</h3>
+                            <p class="mb-5" data-aos="fade-up">
+                                주) 디스커버리 / 앱 관리 및 개발 SI업체</br>
+                                국가기념관 관리자 페이지 및 앱 메인디자인 외주</br>　
+                                기존 어플리케이션 리뉴얼작업</br>　
+                                어플 관리자 페이지</br>　
+                                Bootstrap4 라이브러리 사용 퍼블리싱</br>　
+                                스케치, 포토샵 - 디자인 설계 / 협업공유<br>
+                            </p>
+                            <h3 data-aos="fade-up">2017</h3>
+                            <p class="mb-5" data-aos="fade-up">
+                                주) 세이브 / 무역회사</br>
+                                중국팀 / 일본팀 / 그밖에 해외 용 제안서, 카다로그 작업</br>
+                                자사 세이브 홈페이지 리뉴얼 (기획부터 제작까지 기여 100%)</br>
+                                www.saveinc.co.kr</br>
+                                신사업 홈페이지 추가 제작: 피톤치드 코리아 세팅 (한/영/중/일) (기획부터 제작까지 기여 100%)</br>
+                                www.phytoncidekorea.com</br>
+                            </p>
+                            <h3 data-aos="fade-up">2013</h3>
+                            <p data-aos="fade-up">
+                                주) 더사랑 / 생활용품 도소매 유통 (사회적기업)</br>
+                                사회적기업 디자이너이자 전체 관리 팀장으로 근무</br>　
+                                구스토커피 x 더사랑 커피</br>　
+                                홈페이지 기획 및 영상홍보 기획 / 페키지 단품,세트 디자인</br>　
+                                니즈몰 x 더사랑 문구</br>
+                                아름다운가게 X 더사랑 콜라보 다이어리</br>        
+                                결제 , 인터페이스 개선 / cafe24 템플릿을 활용한 코딩 수정 디자인 개선, 블로그를 통한 검색 노출
+                                www.thesarang.co.kr (기획부터 제작까지 기여도 100%)
+                                구급키트 신상품 8개 정도 개발</br>
+                                견적서 및 간단한 외부 영업 미팅</br>
+                                장애인 노인과 함께 하는 기업으로 제품 생산 관리 및 검수</br>
+                                포장 단계 개선 및 직원 관리</br>
+                            </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- website  -->
+        <section class="sec6" id="website">
+            <div class="w-title">
+                <span class="right-move"></span>
+                <div class="col-md-8">
+                    <h1><span>Website</span></h1>
+                    <p class="sub"><span>html/css/javacsript로 퍼블리싱한 사이트입니다.</span></p>
+                </div>
+                <div class="col-md-4 offset-md-0 offset-8 col-4 bg-num" data-aos="fade-up">
+                    <svg class="svgWrap" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 -400 1000 800" xml:space="preserve">
+                        <text x="0" y="200">01</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="cont-1">
+                <div class="wrap">
+                    <div class="row">
+                        <div class="col-md-5" data-aos="fade-right" data-aos-delay="400">
+                            <div class="cont-text d-flex">
+                                <ul>
+                                    <li class="active">
+                                        <h3>하나은행 퍼블리싱</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                            기존 사이트 클론 퍼블리싱</br>
+                                            W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                            웹접근성을 고려한 탭 메뉴</br>
+                                            브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>CSS효과</h3>
+                                        <div class="con-desc">
+                                            애니메이션을 활용 / 탭 기능</br>
+                                            슬라이드 애니메이션</br>
+                                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>JS효과</h3>
+                                        <div class="con-desc">
+                                            Jquery를 이용 addClass와 removeClass를 이용해 매뉴바/ 텝메뉴 생성</br>
+                                            setimeout과 append를 활용해 슬라이드 무한 Rotate</br>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7" data-aos="fade-left">
+                            <div class="cont-img">
+                                <span class="box1"></span>
+                                <img src="./assets/img/bg-web-01.jpg">
+                                <a href="./html/work/web/hana/index.html" class="cursor-next" target="_blank">
+                                    <svg class="scroll-down-wrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </defs>
+                                        <text class="siteView-btn text-dark" dy="0" textLength="50">
+                                            <textPath xlink:href="#textcircle_top">SITE  VEIW  SITE  VEIW  SITE  VEIW  SITE  VEIW</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-1">
+                <div class="wrap">
+                    <div class="row">
+                        <div class="col-md-7" data-aos="fade-right">
+                            <div class="cont-img web-hover">
+                                <span class="box1"></span>
+                                <img src="./assets/img/w-mock-2.png" class="w-100">
+                                <a href="./html/work/web/kuk-pub/_01_exhibit-info/sub1-1-9.html" class="cursor-next" target="_blank">
+                                    <svg class="scroll-down-wrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </defs>
+                                        <text class="siteView-btn text-dark" dy="0" textLength="50">
+                                            <textPath xlink:href="#textcircle_top">SITE  VEIW  SITE  VEIW  SITE  VEIW  SITE  VEIW</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5" data-aos="fade-left" data-aos-delay="400">
+                            <div class="d-flex cont-text">
+                                <ul>
+                                    <li class="active">
+                                        <h3>국가기념관 ADMIN</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                앱컨트롤 어드민 웹페이지</br>
+                                                부트스트랩 그리드 시스템을 활용. 어플</br>
+                                                테이블 구조 및 전체적인 어드민 페이지를 경험</br>
+                                                </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>사용한 API</h3>
+                                        <div class="con-desc">
+                                            Datepicker 달력 API</br>
+                                            Bootstrap 시스템</br>
+                                            슬라이드 애니메이션</br>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>CSS효과</h3>
+                                        <div class="con-desc">
+                                            애니메이션을 활용 / 탭 기능</br>
+                                            슬라이드 애니메이션, 모달창</br>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-1">
+                <div class="wrap">
+                    <div class="row">
+                        <div class="col-md-5" data-aos="fade-right" data-aos-delay="400">
+                            <div class="d-flex cont-text">
+                                <ul>
+                                    <li class="active">
+                                        <h3>도미노피자</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                웹접근성을 고려한 탭 메뉴</br>
+                                                브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>CSS 효과</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                웹접근성을 고려한 탭 메뉴</br>
+                                                브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>JS효과</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                gsap를 이용한 스크롤 애니메이션 효과</br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7" data-aos="fade-left">
+                            <div class="cont-img">
+                                <span class="box1"></span>
+                                <img src="./assets/img/w-mock-3.png" class="w-100">
+                                <a href="./html/work/web/pizza/" class="cursor-next" target="_blank">
+                                    <svg class="scroll-down-wrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </defs>
+                                        <text class="siteView-btn text-dark" dy="0" textLength="50">
+                                            <textPath xlink:href="#textcircle_top">SITE  VEIW  SITE  VEIW  SITE  VEIW  SITE  VEIW</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-1">
+                <div class="wrap">
+                    <div class="row">
+                        <div class="col-md-7" data-aos="fade-right">
+                            <div class="cont-img">
+                                <span class="box1"></span>
+                                <img src="./assets/img/bg-web-03.jpg">
+                                <a href="./html/work/web/compuzone/index.html" class="cursor-next" target="_blank">
+                                    <svg class="scroll-down-wrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </defs>
+                                        <text class="siteView-btn text-dark" dy="0" textLength="50">
+                                            <textPath xlink:href="#textcircle_top">SITE  VEIW  SITE  VEIW  SITE  VEIW  SITE  VEIW</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-5" data-aos="fade-left" data-aos-delay="400">
+                            <div class="d-flex cont-text">
+                                <ul>
+                                    <li class="active">
+                                        <h3>컴퓨존</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                기존 사이트 클론 퍼블리싱 </br>
+                                                W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                웹접근성을 고려한 탭 메뉴</br>
+                                                브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>CSS효과</h3>
+                                        <div class="con-desc">
+                                            <span class="pt-3 pb-3">
+                                                <p data-aos="fade-up">
+                                                    W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                    웹접근성을 고려한 탭 메뉴</br>
+                                                    브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>JS효과</h3>
+                                        <div class="con-desc">
+                                            <span class="pt-3 pb-3">
+                                                <p data-aos="fade-up">
+                                                    W3C Validation통과 브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                    웹접근성을 고려한 탭 메뉴</br>
+                                                    브라우저별 크로스 브라우징과 Internet explore 버전별 호환가능</br>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-1">
+                <div class="wrap">
+                    <div class="row">
+                        <div class="col-md-5" data-aos="fade-right" data-aos-delay="400">
+                            <div class="d-flex cont-text">
+                                <ul>
+                                    <li class="active">
+                                        <h3>1gram</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                동영상 학습도구를 제작하는 솔루션 회사 메인 홈페이지 
+                                                리뉴얼 작업입니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>사용한 API</h3>
+                                        <div class="con-desc">
+                                            <p data-aos="fade-up">
+                                                현재 퍼블리싱 진행 중 입니다.
+                                                디자인 피그마 작업으로 연결됩니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7" data-aos="fade-left">
+                            <div class="cont-img">
+                                <span class="box1"></span>
+                                <img src="./assets/img/bg-web-05.png">
+                                <a href="https://www.figma.com/proto/rrSZqHury4wIjfomMXVwY7/Untitled?node-id=5%3A32&scaling=min-zoom" target="_blank" class="cursor-next">
+                                    <svg class="scroll-down-wrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                                        <defs>
+                                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </defs>
+                                        <text class="siteView-btn text-dark" dy="0" textLength="50">
+                                            <textPath xlink:href="#textcircle_top">SITE  VEIW  SITE  VEIW  SITE  VEIW  SITE  VEIW</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- mobile  -->
+        <section class="sec7" id="mobile">
+            <div class="w-title">
+                <span class="right-move"></span>
+                <div class="col-md-8">
+                    <h1><span>Mobile</span></h1>
+                    <p class="sub"><span>html/css/javacsript로 퍼블리싱한 사이트입니다.</span></p>
+                </div>
+                <div class="col-md-4 offset-md-0 offset-8 col-4 bg-num"  data-aos="fade-up">
+                    <svg class="svgWrap" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 -400 1000 800" xml:space="preserve">
+                        <text x="0" y="200">02</text>
+                    </svg>
+                </div>
+            </div>
+            <!-- <div class="title-img">
+                <canvas id="mobile-cav"></canvas>
+            </div> -->
+            <div class="mobile-cont i-1">
+                <ul class="row">
+                    <li class="phone"><img src="./assets/img/m-mock2-5.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock2-4.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock2-3.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock2-2.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock2-1.png"></li>
+                </ul>
+                <div class="mob-text">
+                    <h3 data-aos="fade-down">프린트히어로</h3>
+                    <p data-aos="fade-up">디자인과 퍼블리싱에 참여한 사이트입니다.</br>
+                        <button class="btn btn-dark px-5 mt-5" onclick="window.open('./html/work/web/printhero/hpsolution/index','popup01','toolbar=no,scrollbars=no,resizable=yes,top=0 left=0,width=375,height=667')">자세히보기</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mobile-cont i-2">
+                <ul class="row">
+                    <li class="phone"><img src="./assets/img/m-mock1-5.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock1-4.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock1-3.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock1-2.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock1-1.png"></li>
+                </ul>
+                <div class="mob-text">
+                    <h3 data-aos="fade-down">국가기념관 앱</h3>
+                    <p data-aos="fade-up">스케치로 디자인에 참여한 앱입니다.</br>
+                        <button class="btn btn-dark px-5 mt-5" onclick="window.open('https://www.figma.com/proto/7Do0ZJq1IkPxmCynGeGJm8/%EA%B5%AD%EA%B0%80%EA%B8%B0%EB%85%90%EA%B4%80-%EC%96%B4%ED%94%8C?node-id=1%3A823&viewport=223%2C166%2C0.2387496680021286&scaling=scale-down','popup02','toolbar=no,scrollbars=no,resizable=yes,top=0 left=0,width=375,height=667')">자세히보기</button>
+                    </p>
+                </div>
+            </div>
+            <div class="mobile-cont i-3">
+                <ul class="row">
+                    <li class="phone"><img src="./assets/img/m-mock3-1.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock3-1.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock3-1.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock3-1.png"></li>
+                    <li class="phone"><img src="./assets/img/m-mock3-1.png"></li>
+                </ul>
+                <div class="mob-text">
+                    <h3 data-aos="fade-down">TO DO LIST APP</h3>
+                    <p data-aos="fade-up">React로 만든 앱입니다.</br>
+                        <button class="btn btn-dark px-5 mt-5" onclick="window.open('./html/work/mobile/popup-2.html','준비중','toolbar=no,scrollbars=no,resizable=yes,top=0 left=0,width=375,height=667')">자세히보기</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- javascript  -->
+        <section class="sec8" id="javascript">
+            <div class="w-title border-bottom-0">
+                <span class="right-move"></span>
+
+                <div class="col-md-8">
+                    <h1><span>Javascript</span></h1>
+                    <p class="sub"><span>html/css/javacsript로 퍼블리싱한 사이트입니다.</span></p>
+                </div>
+                <div class="col-md-4 offset-md-0 offset-8 col-4 bg-num"  data-aos="fade-up">
+                    <svg class="svgWrap" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 -400 1000 800" xml:space="preserve">
+                        <text x="0" y="200">03</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="row js-list"></div>
+
+
+        </section>
+        <!-- animation  -->
+        <section class="sec9" id="animation">
+            <div class="w-title">
+                <span class="right-move"></span>
+                <div class="col-md-8">
+                    <h1><span>Animation</span></h1>
+                    <p class="sub"><span>동적인 모션으로 사이트를 표현하기 위한 애니메이션입니다.</span></p>
+                </div>
+                <div class="col-md-4 offset-md-0 offset-8 col-4 bg-num"  data-aos="fade-down">
+                    <svg class="svgWrap" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 -400 1000 800" xml:space="preserve">
+                        <text x="0" y="200">04</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="animation-cont">
+                <div class="wrap px-0">
+                    <div class="row">
+                        <div class="col-5 box" data-aos="fade-left">
+                            <iframe src="./html/animation/01.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-7 text">
+                            <span data-aos="fade-down" aos-duration="500">Animation 01</span>
+                            <h3>로딩 바</h3>
+                            <p>키프레임을 사용해 무한 반목 로테이트 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <!-- <div class="v-line">
+                            <span class="right-move"></span>
+                        </div> -->
+                        <div class="col-8 text">
+                            <span data-aos="fade-down" aos-duration="500">Animation 01</span>
+                            <h3>물결 점선</h3>
+                            <p>원의 스케일 차이와 로테이션 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-3 box" data-aos="fade-right">
+                            <iframe src="./html/animation/02.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="offset-1 col-5 box" data-aos="fade-left">
+                            <iframe src="./html/animation/03.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-6 text">
+                            <h3>움직이는 3D 큐브</h3>
+                            <p>3D를 이용해서 만든 애니메이션입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-8 text">
+                            <h3>떨어지는 공</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-4 box" data-aos="fade-right">
+                            <iframe src="./html/animation/04.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-6 box" data-aos="fade-left">
+                            <iframe src="./html/animation/05.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-6 text">
+                            <h3>별동별효과</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-6 text">
+                            <h3>떨어지는 공</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="offset-1 col-6 box" data-aos="fade-right">
+                            <iframe src="./html/animation/06.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-5 box" data-aos="fade-left">
+                            <iframe src="./html/animation/07.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-7 text">
+                            <h3>svg로 만든 애니메이션</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-7 text">
+                            <h3>svg로 만든 애니메이션</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                        <div class="col-5 box" data-aos="fade-left">
+                            <iframe src="./html/animation/08.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-5 box" data-aos="fade-left">
+                            <iframe src="./html/animation/09.html" frameborder="0" framespacing="0" resize="resize" scrolling="no"></iframe>
+                        </div>
+                        <div class="col-7 text">
+                            <h3>svg로 만든 애니메이션</h3>
+                            <p>공의 위치값과 딜레이 값을 이용해 만든 애니메이션 입니다.</p>
+                            <!-- <button class="btn btn-outline-dark mt-4 px-3">소스보기</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap position-relative">
+            <span class="right-move bg-white"></span>
+            <div class="row">
+                <div class="col-md-8" data-aos="fade-up">
+                    <div class="footer-box mb-5" >
+                        <h3>Let's talk</h3>
+                        <a class="btn btn-outline-light px-4 rounded-pill" href="sub/contact.html">You can send me the message</a>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 mb-2" data-aos="fade-up">
+                    <div class="footer-box">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#aboutMe">About me</a></li>
+                            <li><a href="#website">Web</a></li>
+                            <li><a href="#mobile">Mobile</a></li>
+                            <li><a href="#javascript">Javascript</a></li>
+                            <li><a href="#animation">Animation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12" data-aos="fade-up">
+                    <ul class="footer-box d-flex">
+                        <li>
+                            <a href="https://naynara.tistory.com/" target="_blank">Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/naynara87/"
+                            target="_blank">Instagram</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://codepen.io/your-work/"
+                            target="_blank">Codepen</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://github.com/naynara87"
+                            target="_blank">Github</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="counter mt-2 px-1"><img src="https://www.webfreecounter.com/hit.php?id=gvnpcfp&nd=6&style=31" border="0" alt="visitor counter"></div>
+            
+        </div>
+        <div class="copy-right w-100 d-block">
+            Copyright© 2020 naynara
+        </div>
+    </footer>
+
+    
+    <!-- 자바스크립트 모달 -->
+    <div class="modal fade" id="js-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <button onclick="location.href='address'" class="modal-tab-btn" data-dismiss="modal" target="_blank">코드보기</button>
+                <button class="modal-tab-btn t-1" data-dismiss="modal">닫기</button>
+                <iframe class="w-100" src="./html/javascript/to-do-list.html"></iframe>
+                <h3 class="modal-title text-center mt-2" id="exampleModalCenterTitle">투두리스트</h3>
+                <p class="text-center text-secondary" style="font-size: 1rem;">자바스크립트 addclass/removeclass를 이용</p>
+            </div>
+            <!-- <div class="modal-footer">
+                <div class="btn btn-group mx-auto">
+                   <button class="btn btn-dark px-3" data-dismiss="modal" aria-label="Close">코드보기</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!--스크롤애니메이션 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <!-- three js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js" integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
+    
+    <!-- 랜딩애니메이션 -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="./assets/js/loading.js"></script>
+    <script src="./assets/js/landingMotions.js"></script>
+    <!-- hover-effect js -->
+    <script src="./assets/js/hover-effect.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main-scroll.js"></script>
+    <script src="./assets/js/cursor-effect.js"></script>
+    <script src="./assets/js/mainflow.js"></script>
+    <!-- 스크롤시 하나씩 나옴 -->
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script src="./assets/js/aos-scroll.js"></script>
+    <!-- 내용넣기 -->
+    <script src="./assets/js/javascript-data.js"></script>
+    <script>
+        $(document).ready(function () {
+            var list = $('.js-list');
+            var list_block;
+            var body = $('body');
+            for (var key in js_list) {
+                list_block = $('<div class="col-md-6 item"></div>');
+                list.append(list_block);
+                list_block.append(
+                    '<p data-aos="fade-down">Javascript ' +
+                        js_list[key].num +
+                        '</p>',
+                );
+                list_block.append(
+                    '<h3 data-aos="fade-down">' +
+                        js_list[key].title +
+                        '</h3>',
+                );
+                list_block.append(
+                    '<div class="w-100 iftoggle" data-toggle="modal" data-target="#js-modal" data-aos="fade-up"' +
+                        'data-link="' +
+                        js_list[key].ifUrl +
+                        '" data-code="' +
+                        js_list[key].codeUrl +
+                        '" data-title="' +
+                        js_list[key].title +
+                        '">' +
+                        '<img src="./assets/img/' +
+                        js_list[key].images +
+                        '"data-url"' +
+                        js_list[key].codeUrl +
+                        '"></div>',
+                );
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $('#js-modal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var recipient = button.data('link');
+            var code = button.data('code');
+            var title = button.data('title');
+            var title = button.data('title');
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this);
+            modal
+                .find('.modal-body iframe')
+                .attr('src', './html/javascript/' + recipient);
+            modal.find('.modal-body .modal-tab-btn').attr('onclick',"window.open('" + code + "')" );
+            modal.find('.modal-body h3').text(title);
+        });
+    </script>
+</body>
+</html>

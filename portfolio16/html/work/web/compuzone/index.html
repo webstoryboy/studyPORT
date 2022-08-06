@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뉴얼</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
+
+    <!-- 스크립트 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script><!-- //슬라이드효과 -->
+    <script src="./assets/js/slide.js"></script><!-- //슬라이드효과 -->
+    <script src="./assets/js/seach.js"></script><!-- //header 검색효과 -->
+    <script src="./assets/js/ranktop.js"></script><!-- //header좌측 검색순위 -->
+    <script src="./assets/js/fixedmenu.js"></script><!-- //메인 메뉴아이콘 고정 -->
+
+    
+
+    <!-- 모바일일때 -->
+    <!-- <link rel="stylesheet" type="text/css" media="all and (조건B)" href="B.css"> -->
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-top">
+                <ul class="left">
+                    <li class="on">
+                        <a href="#">컴퓨존</a>
+                    </li>
+                    <li>
+                        <a href="#">코즈몰</a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="stabox">
+                <div class="sta">
+                    <div class="logo">
+                        <a href="#">
+                            <h1>프린트히어로</h1>
+                        </a>
+                    </div>
+                </div>
+                <!-- //로고 -->
+                <div class="search_wrap">
+                    <div class="search_area search_box">
+                        <input type="text" class="sch_txet ui-autocomplete-input" name="HeadSearchKeyword" id="HeadSearchKeyword" maxlength="40" autocomplete="off"
+                            onkeydown="return clearBg('HeadSearchKeyword');" onmousedown="return clearBg('HeadSearchKeyword');"
+                            onblur="return_search_txt('HeadSearchKeyword');" onkeypress="if(event.keyCode == '13') searchr('HeadSearchKeyword');" 
+                            value="네 목소리에 블루를 더해봐!" style="color:#8e8e8e;">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                        <a href="./sub_page.html">
+                            <div class="sch_btn">검색</div>
+                        </a>
+                    </div>
+
+                    <!-- autocomplete -->
+                    <div class="search_dropbox autolist" style="display:none;">
+                        <ul class="jqlists">
+                            <li class="jqlist">
+                                <a href="javascript:void(0);" onclick="sch_cook_word('컴퓨터');">컴퓨터</a>
+                                <span class="del_btn" onclick="del_btn(this);">삭제</span>
+                            </li>
+                            <li class="jqlist">
+                                <a href="javascript:void(0);" onclick="sch_cook_word('프린터');">프린터</a>
+                                <span class="del_btn" onclick="del_btn(this);">삭제</span>
+                            </li>
+                        </ul>
+                        <div class="search_bottom">
+                            <div class="left">
+                                <a href="javascript:void(0);" onclick="del_total_word();"
+                                    class="search_del">최근
+                                    검색어 전체 삭제</a>
+                            </div>
+                            <div class="right"><a href="javascript:void(0);" onclick="dropClose();">닫기</a></div>
+                        </div>
+                    </div>
+                    <!-- //autocomplete -->
+
+                    <!-- search_dropbox -->
+                    <div class="search_dropbox nolist" style="display:none;">
+                        <div class="jqClsRecentWordWrap listnone">최근 검색 내역이 없습니다.</div>
+                        <div class="search_bottom">
+                            <div class="left">
+                                <a href="javascript:void(0);" onclick="del_total_word();" class="search_del">최근
+                                    검색어 전체 삭제</a>
+                            </div>
+                            <div class="right"><a href="javascript:void(0);" onclick="dropClose();">닫기</a></div>
+                        </div>
+                    </div>
+                    <!-- //search_dropbox -->
+                </div>
+                <!-- //search_wrap -->
+                <div class="recommend_wrap ">
+                    <div class="ink_cable_iconbox">
+                        <a href="#" class="" title="케이블검색"><span
+                                class="cable_icon"></span></a>
+                        <a href="#" class="" title="잉크토너검색"><span
+                                class="ink_icon"></span></a>
+                    </div>
+                    <div class="recommend_list">
+                        <ul>
+                            <li><a href="#">●컴퓨존 7월 월간견적●</a></li>
+                            <li><a href="#">ALLO 특별할인</a></li>
+                            <li><a href="#">수돗물, 안녕한가요?</a></li>
+                        </ul>
+                    </div>
+                </div><!-- //recommend-->
+                <div class="sta_rolling_banner">
+                    <div class="top_bnr_container">
+                        <div class="slides_control">
+                            <a href="#">
+                                <img src="./assets/images/rb1.jpg" alt="우측 상단 배너">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/rb2.jpg" alt="우측 상단 배너">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/rb3.jpg" alt="우측 상단 배너">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/rb4.jpg" alt="우측 상단 배너">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/rb5.jpg" alt="우측 상단 배너" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bnr_paging">
+                        <a href="javascript:void(0)" class="small_rolling_prev head_rolling_prev">이전 배너 보기</a>
+                        <a href="javascript:void(0)" class="small_rolling_next head_rolling_next">다음 배너 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- //header -->
+    <!-- 고정 헤더 -->
+    <div class="top_fix_head lnb_wrap">
+        <div class="inner top_fix_wrap">
+            <div class="logo">
+                <a href="http://www.compuzone.co.kr/main/main.htm">
+                    <h1>compuzone</h1>
+                </a>
+            </div>
+            <div class="fixedlnb_search_area search_box">
+                <input type="text" class="sch_txet ui-autocomplete-input blue11">
+                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                <a href="javascript:searchr('fixedSearchKeyword');"><div class="sch_btn">검색</div></a>
+            </div>
+            <div class="right popular-list fixed">
+                <ul>
+                    <li><a href="#">1. 모니터</a><span>NEW</span></li>
+                    <li><a href="#">2. 삼성</a><span>34 ↑</span></li>
+                    <li><a href="#">3. 프린터</a><span style="color: #999;">2 ↓</span></li>
+                    <li><a href="#">4. hp</a><span>NEW</span></li>
+                    <li><a href="#">5. 오키</a><span>23 ↑</span></li>
+                    <li><a href="#">6. 3dpen</a><span style="color: #999;">9 ↓</span></li>
+                    <li><a href="#">7. 앱손</a><span>NEW</span></li>
+                    <li><a href="#">8. 수리센터</a><span>23 ↑</span></li>
+                    <li><a href="#">9. 스피커</a><span style="color: #999;">8 ↓</span></li>
+                    <li><a href="#">10. 케이블</a><span>NEW</span></li>
+                    <li><a href="#">11. 멀티탭</a><span>97 ↑</span></li>
+                    <li><a href="#">12. 갤럭시노트</a><span style="color: #999;">2 ↓</span></li>
+                </ul>
+            </div>
+            <div class="userfixed">
+                <div class="right_icon_area">
+                    <div class="cart_icon">
+                        <a href="#">
+                        <span class="blind">장바구니 바로가기</span>
+                        <span class="cart_num">1</span>
+                        </a>
+                    </div>
+                    <div class="mypage_icon">
+                        <a href="#">
+                        <span class="blind">마이페이지 바로가기</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--//고정 헤더 -->
+    <div class="lab">
+        <div class="container">
+            <div class="catbtn">
+                <div class="hbg">
+                    <button class="hbg-btn">전체메뉴</button>
+                </div>
+                <div class="hbg-menu">
+                    <ul>
+                        <li><a href="./sub_page.html">데스크탑</a>
+                            <div class="second-ct">
+                                <div class="list-1">
+                                    <span class="cate_divide_line"></span>
+                                    <h2>데스크탑</h2>
+                                    <div class="s-ct-list">
+                                        <ul>
+                                            <li><a href="./sub_page.html">아이웍스PC</a></li>
+                                            <li><a href="./sub_page.html">추천조립PC</a></li>
+                                            <li><a href="./sub_page.html">브랜드PC</a></li>
+                                            <li><a href="./sub_page.html">올인원PC</a></li>
+                                            <li><a href="./sub_page.html">미니PC</a></li>
+                                        </ul>
+                                    </div>
+                                    <a class="ct-close ">close</a>
+                                </div>
+                            </div></li>
+                        <li><a href="./sub_page.html">노트북</a></li>
+                        <li><a href="./sub_page.html">애플</a></li>
+                        <li><a href="./sub_page.html">컴퓨터 부품</a></li>
+                        <li><a href="./sub_page.html">키보드</a></li>
+                        <li><a href="./sub_page.html">모니터</a></li>
+                        <li><a href="./sub_page.html">네트워크</a></li>
+                        <li><a href="./sub_page.html">생활</a></li>
+                        <li><a href="./sub_page.html">가구</a></li>
+                        <li><a href="./sub_page.html">프린터</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="left">
+                <ul>
+                    <li><a href="./sub_page.html">파견할인</a></li>
+                    <li><a href="./sub_page.html">이상품어때?</a></li>
+                    <li><a href="./sub_page.html">전용관</a></li>
+                    <li><a href="./sub_page.html">온라인견적</a></li>
+                    <li><a href="./sub_page.html">아이웍스PC</a></li>
+                    <li><a href="./sub_page.html">조립PC</a></li>
+                    <li><a href="./sub_page.html">커뮤니티</a></li>
+                    <li><a href="./sub_page.html">이벤트</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><span class="hot_icon"></span></li>
+                    <li><a href="./sub_page.html"><span>hot</span>삼성모니터 브랜드관</a></li>
+                    <li><a href="./sub_page.html"><span>hot</span>삼성모니터 브랜드관</a></li>
+                    <li class="popular-list">
+                        <ul>
+                            <li><a href="./sub_page.html">1. 모니터</a><span>NEW</span></li>
+                            <li><a href="./sub_page.html">2. 삼성</a><span>34 ↑</span></li>
+                            <li><a href="./sub_page.html">3. 프린터</a><span style="color: #999;">2 ↓</span></li>
+                            <li><a href="./sub_page.html">4. hp</a><span>NEW</span></li>
+                            <li><a href="./sub_page.html">5. 오키</a><span>23 ↑</span></li>
+                            <li><a href="./sub_page.html">6. 3dpen</a><span style="color: #999;">9 ↓</span></li>
+                            <li><a href="./sub_page.html">7. 앱손</a><span>NEW</span></li>
+                            <li><a href="./sub_page.html">8. 수리센터</a><span>23 ↑</span></li>
+                            <li><a href="./sub_page.html">9. 스피커</a><span style="color: #999;">8 ↓</span></li>
+                            <li><a href="./sub_page.html">10. 케이블</a><span>NEW</span></li>
+                            <li><a href="./sub_page.html">11. 멀티탭</a><span>97 ↑</span></li>
+                            <li><a href="./sub_page.html">12. 갤럭시노트</a><span style="color: #999;">2 ↓</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //lab -->
+    <div id="leftwing_section" class="leftwing_section line_bnr">
+        <div class="leftwing_wrap">
+            <div class="leftwing_box">
+                <div class="wingrolling_area left_wing_rolling">
+                    <div class="wingrolling_bnr_wrap">
+                        <div class="wingrolling_bnr_box">
+                            <ul class="wingrolling_cont">
+                                <li class="left_wing_rolling_item" >
+                                    <div>
+                                        <a href="#" target="_self">
+                                            <img src="./assets/images/LeftWingRollingBanner_63890.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- //좌측롤링날개-->
+                <!-- 좌측고정날개-->
+                <div class="wing_fix_bnr" style="margin-top:20px;">
+                    <a href="#" target="_self"><img src="./assets/images/LeftWingFixBanner_61938.jpg" alt="좌측고정날개 배너" width="115"></a>
+                </div>
+                <!-- //좌측고정날개-->
+                <!-- 좌측고정날개-->
+                <div class="wing_fix_bnr">
+                    <a href="#" target="_self"><img src="./assets/images/LeftWingFixBanner_55026.jpg" alt="좌측고정날개 배너" width="115"></a>
+                </div>
+                <!-- //좌측고정날개-->
+            </div>
+        </div>
+    </div>
+    <!-- //좌측배너 -->
+    <div id="rightwing_section" class="rightwing_section line_bnr _minisection">
+        
+        <div class="rightwing_wrap" id="rightwing_wrap">
+            <button class="rightwing_xbtn" id="rightwing_xbtn" onclick="del_btn(this); mini()"><span class="blind">최근 본 쇼핑정보 최소화</span></button>
+            <div class="rightwing_box">
+                <div class="counselling">
+                    <ul class="counselling_ul slick-initialized slick-slider">
+                        <!-- 동영상 가이드 추가. 200707 J.sunga -->
+                        <div class="slick-list" style="height: 87px;">
+                            <div class="slick-track">
+                                <li class="btn_kakao slick-slide slick-cloned"><a href="#">페이스톡 상담</a></li>
+                                <li class="btn_youtube slick-slide">
+                                    <a href="#" tabindex="-1">동영상 가이드</a></li>
+                                <li class="btn_chatbot slick-slide"><a href="#">상담센터</a></li>
+                                <li class="btn_kakao slick-slide slick-current slick-active">
+                                    <a href="#">페이스톡 상담</a>
+                                </li>
+                                <li class="btn_youtube slick-slide slick-cloned">
+                                    <a href="#" tabindex="-1">동영상 가이드</a>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="rightwing_paging">
+                        <a href="#" class="small_rolling_prev cscenter_prev slick-arrow" style="display: block;"></a>
+                        <a href="#" class="small_rolling_next cscenter_next slick-arrow" style="display: block;"></a>
+                    </div>
+                </div>
+                <div class="history_box">
+                    <ul class="history_list" style="margin-top: 0px; height: auto; display:">
+                        <li class="history_txt chk_target">
+                            <p class="history_txt">"최근 본 쇼핑<br>정보가<br>없습니다."</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 관심상품 -->
+                <a href="#" class="wish_btn"><span class="wish_icon"></span>관심상품</a>
+                <!-- //관심상품-->
+                <div class="rightwing_bnr">
+                    <a href="#" target="_self"><img src="./assets/images/quikmenu-img.jpg" alt=""></a>
+                </div>
+                <!-- 위로가기버튼 -->
+                <a href="#" class="rightwing_btn_top">
+                    <span class="blind">위로가기</span>
+                    <span class="btn_top_icon"></span>
+                </a>
+            </div>
+            <!-- 코로나방역 200528 J.sunga -->
+            <div style="position:absolute; top:572px;">
+                <a href="#"><img src="./assets/images/quikmenu-img2.jpg"></a>
+            </div>
+    
+        </div>
+        <div class="miniwing" id="miniwing" >
+            <!-- 동영상 가이드 추가. 200707 J.sunga -->
+            <span class="mini_btn_youtube"><a href="#">동영상<br>가이드</a></span>
+            <span class="mini_btn_chatbot"><a href="#">상담센터</a></span>
+            <span class="mini_btn_kakao"><a href="#">페이스톡<br>상담</a></span>
+            <span class="history_btn"><a href="#">최근 본</a></span>
+            <span class="wish_btn"><a href="#">관심상품</a></span>
+            <!-- 위로가기버튼 -->
+            <a href="#" class="miniwing_btn_top">
+                <span class="blind">위로가기</span>
+                <span class="btn_top_icon"></span>
+            </a>
+        </div>
+    
+    </div><!-- //우측배너 -->
+    <div class="banner1">
+        <a class="close" href="#" onclick="del_btn(this);">오늘 안보기 x</a>
+    </div>
+    <!-- //하루보기배너 -->
+    <div class="main-banner">
+        <div class="container">
+            <div class= "slide">
+                <div class="banner-box">
+                    <ul class="banner-list">
+                        <li class="mainlist01" banner-id="1">
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main1.jpg" alt="메인배너이미지1"></a>
+                                <div class="title bg_white top">
+                                    <dt>강한 내구성에 착한 가격까지!</dt>
+                                    <dd>앱코 케이스로 대만족하는 7월의 혜택♥</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main2.jpg" alt="메인배너이미지2"></a>
+                                <div class="title bg_black down">
+                                    <dt>HP, 시원한 여름 맞이!</dt>
+                                    <dd>컬러레이저젯 특가 + 적립금 추가 증정!</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mainlist02" banner-id="2">
+                            <div class="half-box ">
+                                <a href="./sub_page.html"><img src="./assets/images/main3.jpg" alt="메인배너이미지3"></a>
+                                <div class="title bg_black top">
+                                    <dt>3분기 최강자</dt>
+                                    <dd>이지넷 3분기 구매왕의 주인공은?</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="half-box ">
+                                <a href="./sub_page.html"><img src="./assets/images/main4.jpg" alt="메인배너이미지4"></a>
+                                <div class="title bg_black top">
+                                    <dt>효율적인 업무 환경</dt>
+                                    <dd>HP 데스크탑&모니터 더블 할인 찬스</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mainlist03" banner-id="3">
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main1.jpg" alt="메인배너이미지1"></a>
+                                <div class="title bg_white top">
+                                    <dt>강한 내구성에 착한 가격까지!</dt>
+                                    <dd>앱코 케이스로 대만족하는 7월의 혜택♥</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main2.jpg" alt="메인배너이미지2"></a>
+                                <div class="title bg_black down">
+                                    <dt>HP, 시원한 여름 맞이!</dt>
+                                    <dd>컬러레이저젯 특가 + 적립금 추가 증정!</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mainlist04" banner-id="4">
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main1.jpg" alt="메인배너이미지1"></a>
+                                <div class="title bg_white top">
+                                    <dt>강한 내구성에 착한 가격까지!</dt>
+                                    <dd>앱코 케이스로 대만족하는 7월의 혜택♥</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="half-box ">
+                                <a href="./sub_page.html"><img src="./assets/images/main2.jpg" alt="메인배너이미지2"></a>
+                                <div class="title bg_black down">
+                                    <dt>HP, 시원한 여름 맞이!</dt>
+                                    <dd>컬러레이저젯 특가 + 적립금 추가 증정!</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mainlist05" banner-id="5">
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main3.jpg" alt="메인배너이미지1"></a>
+                                <div class="title bg_white top">
+                                    <dt>강한 내구성에 착한 가격까지!</dt>
+                                    <dd>앱코 케이스로 대만족하는 7월의 혜택♥</dd>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="half-box">
+                                <a href="./sub_page.html"><img src="./assets/images/main4.jpg" alt="메인배너이미지2"></a>
+                                <div class="title bg_black down">
+                                    <dt>HP, 시원한 여름 맞이!</dt>
+                                    <dd>컬러레이저젯 특가 + 적립금 추가 증정!</dd>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 메인롤링 이동버튼 -->
+                <div class="btn-arrow">
+                    <ul>
+                        <li class="btn_main_prev prev"><a href="">이전버튼</a></li>
+                        <li class="btn_main_next next"><a href="">다음버튼</a></li>
+                    </ul>
+                </div>
+                <!-- //메인롤링 이동버튼 -->
+                <!-- 메인롤링 카테코리 -->
+                <div class="mainslide_cate">
+                    <div class="nav_arrow">
+                        <a class="main_slide_prev btn_main_prev slick-arrow"><i>이전</i></a>
+                        <a class="main_slide_next btn_main_next slick-arrow"><i>다음</i></a>
+                    </div>
+                    <ul>
+                        <li><a href="./sub_page.html">특별한 쇼핑</a></li>
+                        <li class="divide_line"></li>
+                        <li><a href="./sub_page.html">HOT쇼핑</a></li>
+                        <li class="divide_line"></li>
+                        <li><a href="./sub_page.html">놀라운 혜택</a></li>
+                        <li class="divide_line"></li>
+                        <li><a href="./sub_page.html">컴퓨존 추천</a></li>
+                        <li class="divide_line"></li>
+                        <li><a href="./sub_page.html">놓치기 아까운</a></li>
+                    </ul>
+                </div>
+                <!-- //메인롤링 카테코리 -->
+            </div>
+            <div class="aside">
+                배너
+                <span onclick="del_btn(this);">close</span>
+            </div>
+            <!-- //사이드 배너 강조 -->
+        </div>
+    </div>
+    <!-- //메인베너 -->
+    <div class="m-banner" style="margin-bottom: 25px;">
+        <div class="container">
+            <div class="amd_event8" style="display:block; position:relative;  margin:35px 0;">
+                <img src="./assets/images/banner-m1.png" alt="갓성비PC" style="position:relative;">
+                <a href="#" style="position:absolute; left:0; top:0; width:50%; height:100%;" target="_blank"></a>
+                <a href="#" style="position:absolute; left:50%; top:0; width:50%; height:100%;" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+    <!-- //중앙가로배너 -->
+    <div class="recommend1">
+        <div class="container">
+            <ul>
+                <li>
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="./assets/images/p1.jpg">
+                        </a>
+                    </div>
+                    <div class="info_area">
+                        <a href="#"
+                            class="fixbnr_info">
+                            <dl class="infotxt">
+                                <dd class="tit">쉬는 날 피자 한판!<br>ADATA SSD</dd>
+                                <dd class="stit">찬란한 순간을 담다</dd>
+                                <dd class="evt_type">
+                                    <em class="t3">#경품</em>
+                                    <em class="t5">#후기추첨</em>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="./assets/images/p2.jpg">
+                        </a>
+                    </div>
+                    <div class="info_area">
+                        <a href="#"
+                            class="fixbnr_info">
+                            <dl class="infotxt">
+                                <dd class="tit">한계점 없는 속도<br>실리콘파워 SSD</dd>
+                                <dd class="stit">찬란한 순간을 담다</dd>
+                                <dd class="evt_type">
+                                    <em class="t3">#경품</em>
+                                    <em class="t5">#후기추첨</em>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="./assets/images/p3.jpg">
+                        </a>
+                    </div>
+                    <div class="info_area">
+                        <a href="#"
+                            class="fixbnr_info">
+                            <dl class="infotxt">
+                                <dd class="tit">자신 있게 추천<br>하이클라스 FSP</dd>
+                                <dd class="stit">상품권을 차지하라!</dd>
+                                <dd class="evt_type">
+                                    <em class="t2">#경품</em>
+                                    <em class="t5">#후기추첨</em>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumb">
+                        <a href="#">
+                            <img src="./assets/images/p4.jpg">
+                        </a>
+                    </div>
+                    <div class="info_area">
+                        <a href="#"
+                            class="fixbnr_info">
+                            <dl class="infotxt">
+                                <dd class="tit">삼성 모니터와 <br> 홈캉스 시작!</dd>
+                                <dd class="stit">푸짐한 경품 확인하기</dd>
+                                <dd class="evt_type">
+                                    <em class="t2">#경품</em>
+                                    <em class="t5">#후기추첨</em>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="m1-slide">
+                        <ul>
+                            <li><a href=""><img src="./assets/images/sb1.jpg"></a></li>
+                            <li><a href=""><img src="./assets/images/sb2.jpg"></a></li>
+                            <li><a href=""><img src="./assets/images/sb3.jpg"></a></li>
+                            <li><a href=""><img src="./assets/images/sb4.jpg"></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <!-- //상품추천 배너 1 -->
+    <div class="recommend2">
+        <div class="container">
+            <a target="_blank" style="display:block;" href="#"><img src="./assets/images/mb2.jpg"></a>
+        </div>
+    </div>
+    <!-- //상품추천 배너 2 -->
+    <div class="recommend3">
+        <div class="container">
+            <div class="inner">
+                <div class="btn-mb2">
+                    <a class="prev" href="#">이전</a>
+                    <a class="next" href="#">다음</a>
+                </div>
+                <h3>
+                    즐기자 홈캉스
+                    <span>올해 피서는 집에서!</span>
+                </h3>
+                <div class="product-list overflow-hidden">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb1.jpg">
+                                    <p class="product_name">삼성 UHD TV</p>
+                                </div>
+                                <div class="desc">
+                                    <p>우리집이 영화관 <br> 82인치 TV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb2.jpg">
+                                    <p class="product_name">JBL 사운드바</p>
+                                </div>
+                                <div class="desc">
+                                    <p>우리집이 영화관 <br> 82인치 TV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb3.jpg">
+                                    <p class="product_name">리클라이너</p>
+                                </div>
+                                <div class="desc">
+                                    <p>우리집이 영화관 <br> 82인치 TV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb4.jpg">
+                                    <p class="product_name">LG 전자레인지</p>
+                                </div>
+                                <div class="desc">
+                                    <p>우리집이 영화관 <br> 82인치 TV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb5.jpg">
+                                    <p class="product_name">삼성 UHD TV</p>
+                                </div>
+                                <div class="desc">
+                                    <p>우리집이 영화관 <br> 82인치 TV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <div class="product_img">
+                                    <img src="./assets/images/pb1.jpg">
+                                    <p class="product_name">삼성 UHD TV</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- //상품추천 배너 3 -->
+    <div class="content">
+        <div class="container">
+            <!-- 카테고리 아이콘 네비게이션 -->
+            <div class="bestcate_icon_nav ">
+                <a class="on" href="#none" style="background-image: url(./assets/images/m_icon_1.png);">데스크탑ㆍ서버</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_2.png);">노트북ㆍ태블릿</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_3.png);">컴퓨터부품</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_4.png);">애플</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_5.png);">키보드ㆍ마우스 저장장치</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_6.png);">모니터</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_7.png);">소프트웨어</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_8.png);">프린터사무용품</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_9.png);">네트워크 케이블</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_10.png);">TVㆍ냉장고 세탁ㆍ건조기</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_11.png);">계절가전</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_12.png);">생활ㆍ주방가전</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_13.png);">가구 인테리어</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_14.png);">생활 건강용품</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_15.png);">게임ㆍ완구</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_16.png);">스포츠ㆍ캠핑</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_17.png);">카메라 영상ㆍ음향</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_18.png);">코즈몰</a>
+                <a href="#none" style="background-image: url(./assets/images/m_icon_20.png);">코즈몰</a>
+            </div>
+            <div class="bestcate">
+                <ul>
+                    <li class="bestcate_area">
+                        <div class="left">
+                            <dl class="category">
+                                <dt>데스크탑ㆍ서버</dt>
+                                <dd><a href="#"
+                                        target="_blank">전체보기</a></dd>
+                            </dl>
+                            <dl class="hashtag bestcate_tag0">
+                                <dt>HOT 키워드</dt>
+                                <dd><a href="#"
+                                        target="_blank"># 배송비를 부탁해</a></dd>
+                                <dd><a href="#"
+                                        target="_blank"># 단독 올인원</a></dd>
+                                <dd><a href="#"
+                                        target="_blank"># 미니PC 랜덤박스 </a></dd>
+                            </dl>
+                        </div>
+                        <div class="bestcate_rolling _v1">
+                            <div class="nav_arrow">
+                                <a href="#" class="middle_rolling_prev cate_roll_prev6 slick-arrow"
+                                    style="display: block;"><i>이전</i></a><a href="#"
+                                    class="middle_rolling_next cate_roll_next6 slick-arrow"
+                                    style="display: block;"><i>다음</i></a>
+                            </div>
+                            <ul class="category_rolling slick-slider">
+                                <div aria-live="polite" class="slick-list draggable">
+                                    <div class="slick-track">
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" width="397" height="563" alt="">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll01.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll02.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v1">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">ASUS Expert PC</strong><i class="stit">스마트한 서포터, 썸머
+                                                            세일</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll03.jpg">
+
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="product_list">
+                                <ul>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 아이웍스5-83 (i5/710) </dt>
+                                                <dd> <span class="sale">13%</span> <span class="price"><b>449,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp1.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 프로데스크 400 G6 MT 6CF44AV (i5-95...</dt>
+                                                <dd> <span class="price"><b>649,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp2.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[삼성전자] 삼성 올인원 DM530ABE-L38A [프...</dt>
+                                                <dd> <span class="price"><b>898,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp3.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 게이밍추천PC_R0520 (R3/1660S) ...</dt>
+                                                <dd> <span class="sale">8%</span> <span class="price"><b>749,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp4.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[레노버] 씽크센터 M720T i5-9400 DOS [구...</dt>
+                                                <dd> <span class="sale">12%</span> <span class="price"><b>599,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp5.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 엔비 TE01-0112kl i5-9400 (8GB / 256...</dt>
+                                                <dd> <span class="sale">9%</span> <span class="price"><b>618,420</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp6.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li><!-- //데스크탑ㆍ서버 -->
+                    <li class="bestcate_area ">
+                        <div class="left">
+                            <dl class="category">
+                                <dt>노트북ㆍ태블릿</dt>
+                                <dd><a href="#"
+                                        target="_blank">전체보기</a></dd>
+                            </dl>
+                            <dl class="hashtag bestcate_tag0">
+                                <dt>HOT 키워드</dt>
+                                <dd><a href="#"
+                                        target="_blank"># 배송비를 부탁해</a></dd>
+                                <dd><a href="#"
+                                        target="_blank"># 단독 올인원</a></dd>
+                                <dd><a href="#"
+                                        target="_blank"># 미니PC 랜덤박스 </a></dd>
+                            </dl>
+                        </div>
+                        <div class="bestcate_rolling _v1">
+                            <div class="nav_arrow">
+                                <a href="#" class="middle_rolling_prev cate_roll_prev6 slick-arrow"
+                                    style="display: block;"><i>이전</i></a><a href="#"
+                                    class="middle_rolling_next cate_roll_next6 slick-arrow"
+                                    style="display: block;"><i>다음</i></a>
+                            </div>
+                            <ul class="category_rolling slick-slider">
+                                <div aria-live="polite" class="slick-list draggable">
+                                    <div class="slick-track">
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" width="397" height="563" alt="">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll01.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll02.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v1">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">ASUS Expert PC</strong><i class="stit">스마트한 서포터, 썸머
+                                                            세일</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll03.jpg">
+
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="product_list">
+                                <ul>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 아이웍스5-83 (i5/710) </dt>
+                                                <dd> <span class="sale">13%</span> <span class="price"><b>449,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp1.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 프로데스크 400 G6 MT 6CF44AV (i5-95...</dt>
+                                                <dd> <span class="price"><b>649,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp2.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[삼성전자] 삼성 올인원 DM530ABE-L38A [프...</dt>
+                                                <dd> <span class="price"><b>898,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp3.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 게이밍추천PC_R0520 (R3/1660S) ...</dt>
+                                                <dd> <span class="sale">8%</span> <span class="price"><b>749,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp4.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[레노버] 씽크센터 M720T i5-9400 DOS [구...</dt>
+                                                <dd> <span class="sale">12%</span> <span class="price"><b>599,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp5.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 엔비 TE01-0112kl i5-9400 (8GB / 256...</dt>
+                                                <dd> <span class="sale">9%</span> <span class="price"><b>618,420</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp6.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li><!-- //노트북ㆍ태블릿 -->
+                    <li class="bestcate_area mb80">
+                        <div class="left">
+                            <dl class="category">
+                                <dt>컴퓨터부품</dt>
+                                <dd><a href="#" target="_blank">전체보기</a></dd>
+                            </dl>
+                            <dl class="hashtag bestcate_tag0">
+                                <dt>HOT 키워드</dt>
+                                <dd><a href="#" target="_blank"># 배송비를 부탁해</a></dd>
+                                <dd><a href="#" target="_blank"># 단독 올인원</a></dd>
+                                <dd><a href="#" target="_blank"># 미니PC 랜덤박스 </a></dd>
+                            </dl>
+                        </div>
+                        <div class="bestcate_rolling _v1">
+                            <div class="nav_arrow">
+                                <a href="#" class="middle_rolling_prev cate_roll_prev6 slick-arrow"
+                                    style="display: block;"><i>이전</i></a><a href="#"
+                                    class="middle_rolling_next cate_roll_next6 slick-arrow"
+                                    style="display: block;"><i>다음</i></a>
+                            </div>
+                            <ul class="category_rolling slick-slider">
+                                <div aria-live="polite" class="slick-list draggable">
+                                    <div class="slick-track">
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" width="397" height="563" alt="">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll01.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v2">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">Lenovo ThinkCentre</strong>
+                                                        <i class="stit">무료 업그레이드 &amp; 경품 증정</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll02.jpg">
+                                            </a>
+                                        </li>
+                                        <li class="slick-slide" style="width: 387px;">
+                                            <a href="#" target="_blank">
+                                                <span class="caption _v1">
+                                                    <span class="tit_box">
+                                                        <strong class="tit">ASUS Expert PC</strong><i class="stit">스마트한 서포터, 썸머
+                                                            세일</i>
+                                                    </span>
+                                                </span>
+                                                <img src="./assets/images/p_roll03.jpg">
+
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="product_list">
+                                <ul>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 아이웍스5-83 (i5/710) </dt>
+                                                <dd> <span class="sale">13%</span> <span class="price"><b>449,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp1.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 프로데스크 400 G6 MT 6CF44AV (i5-95...</dt>
+                                                <dd> <span class="price"><b>649,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp2.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[삼성전자] 삼성 올인원 DM530ABE-L38A [프...</dt>
+                                                <dd> <span class="price"><b>898,000</b>원</span> </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp3.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[컴퓨존] 게이밍추천PC_R0520 (R3/1660S) ...</dt>
+                                                <dd> <span class="sale">8%</span> <span class="price"><b>749,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp4.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[레노버] 씽크센터 M720T i5-9400 DOS [구...</dt>
+                                                <dd> <span class="sale">12%</span> <span class="price"><b>599,000</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp5.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                    <li class="product"> 
+                                        <a href="#" target="_blank">
+                                            <dl class="prdInfo">
+                                                <dt>[HP] 엔비 TE01-0112kl i5-9400 (8GB / 256...</dt>
+                                                <dd> <span class="sale">9%</span> <span class="price"><b>618,420</b>원</span>
+                                                </dd>
+                                            </dl> 
+                                            <span class="product_img">
+                                                <img src="./assets/images/sp6.jpg">
+                                            </span>
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li><!-- //컴퓨터부품 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //메인콘텐츠리스트 -->
+    <div class="brand">
+        <div class="container">
+            <ul>
+                <li><a href=""><img src="./assets/images/brand1.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand2.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand3.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand4.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand5.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand6.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand7.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand8.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand9.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand10.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand11.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand12.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand13.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand14.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand15.jpg"></a></li>
+                <li><a href=""><img src="./assets/images/brand16.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="service">
+        <div class="container">
+            <div class="notice_area">
+                <span class="more notice_more">+ 더보기</span>
+                <div class="tab">
+                    <ul>
+                        <li><a href="#" class="on">공지사항</a></li>
+                        <li><a href="#">이벤트 발표</a></li>
+                    </ul>
+                </div>
+                <div class="notice_list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">용산 전자상가 휴가기간 정상영업 안...</span>
+                                <span class="date">2020-07-29</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">5월 5일 어린이날 휴무안내</span>
+                                <span class="date">2020-05-04</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">5월 1일 근로자의 날 정상영업 안내</span>
+                                <span class="date">2020-04-23</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">4월 30일 석가탄신일 휴무안내</span>
+                                <span class="date">2020-04-23</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">시스템 작업에 따른 고객서비스 일시...</span>
+                                <span class="date">2020-04-17</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">4월 15일 국회의원 선거일 휴무안내</span>
+                                <span class="date">2020-04-10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="list_tit">코로나19 관련 방문수령 이용 시 유의...</span>
+                                <span class="date">2020-02-26</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service_area">
+                <div class="service_list">
+                    <div class="ser_title">배송서비스</div>
+                    <ul>
+                        <li><a href="#">택배배송<span class="service_btn">경동화물</span></a></li>
+                        <li><a href="#">당일택배</a></li>
+                        <li><a href="#">경동화물</a></li>
+                        <li><a href="#">퀵서비스<span class="service_btn">경동화물</span></a></li>
+                        <li><a href="#">방문수령</a></li>
+                        <li><a href="#">택배무료안내</a></li>
+                    </ul>
+                </div>
+                <div class="service_list">
+                    <div class="ser_title">결제서비스</div>
+                    <ul>
+                        <li><a href="#">신용카드 무이자 할부</a></li>
+                        <li><a href="#">전자세금계산서</a></li>
+                        <li><a href="#">현금영수증</a></li>
+                        <li><a href="#">결제계좌안내</a></li>
+                        <li><a href="#">카드승인내역</a></li>
+                        <li><a href="#">세금계산서 발행내역</a></li>
+                        <li><a href="#">취소/환불안내</a></li>
+                    </ul>
+                </div>
+                <div class="service_list">
+                    <div class="ser_title">고객서비스</div>
+                    <ul>
+                        <li><a href="#">디지털라운지 안내</a></li>
+                        <li><a href="#">출장A/S 설치서비스 안내</a></li>
+                        <li><a href="#">오프라인매장 운영안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //서비스 -->
+
+    <footer>
+        <div class="footer_nav">
+            <div class="footer_nav_area">
+                <ul>
+                    <li><a href="#" title="회사소개" target="_blank">회사소개</a></li>
+                    <li><a href="#" title="이용약관">이용약관</a></li>
+                    <li><a href="#" title="입점문의" target="_blank">입점문의</a></li>
+                    <li><a href="#" title="개인정보처리방침" style="font-weight:bold;">개인정보처리방침</a></li>
+                    <li><a href="#" title="협력사">협력사</a></li>
+                    <li><a href="#" style="cursor:pointer">광고안내</a></li>
+                    <li><a href="#" title="찾아오시는길">찾아오시는길</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <ul>
+                    <li class="left">
+                        <p>
+                            <strong>㈜ 컴퓨존</strong> 대표이사 : 노인호 <em>｜</em> 사업자등록번호 : 106-81-83458 <a href="#" class="btn">사업자정보확인</a>
+                        </p>
+                        <p>서울특별시 용산구 원효로 58길 1 <em>｜</em> 이메일주소 무단수집거부 : coz_help@compuzone.co.kr <em>｜</em> 호스팅 제공자 :
+                            (주)컴퓨존 <em>｜</em> 개인정보책임관리자 : 김종석 </p>
+                        <p>통신판매업신고 : 용산 제 00417호 <em>｜</em> 분쟁조정기관 : 소비자보호원, 전자거래분쟁중재위원회<em>｜</em> 에스크로 구매안전 서비스 이용가능 
+                            <a href="#" class="btn">자세히보기</a>
+                        </p>
+                        <p>
+                            <b>[방문상담·구매·A/S]</b> 용산점: 서울시 용산구 원효로 58길 1/가산점:서울시 금천구 가산로 9길 87 
+                            <a href="#" class="btn">영업시간 안내</a>
+                        </p>
+                        <p>
+                            <b>[택배A/S접수]</b> 서울시 용산구 원효로2가 50번지 <em>｜</em> <b>[고객센터]</b> 1588-8377 (팩스번호 02-718-8276)
+                            <a href="#" class="btn">1:1문의하기</a><a href="#" class="btn">문자상담</a>
+                        </p>
+                    </li>
+                    <li class="right">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="footer_mark mark1"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" style="cursor:pointer">
+                                    <span class="footer_mark mark2"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" style="cursor:pointer">
+                                    <span class="footer_mark mark3"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span class="footer_mark mark4"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <span class="footer_mark mark5"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 풋터 -->
+</body>
+
+</html>

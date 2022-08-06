@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect03</title>
+    <style>
+        @font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 10px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+            cursor: none;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        body {
+            background: url(../slider/img/so11.jpg) no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            transform: all 0.2s;
+            cursor: none;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(156, 204, 255, 0.514);            
+            z-index: -1;
+        }
+
+        .info {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 20px;
+        }
+
+        .info h1 {
+            margin-bottom: 10px;
+        }
+
+
+        .info2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .info2 li a{
+            color: #000;
+        }
+
+        .info2 li.active a {
+            border-bottom: 1px #000 dashed;
+        }
+
+
+        .info3{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .info3 li { list-style: none;}
+
+
+        .contents{
+            margin-right: 10px;
+            display: flex;
+            align-items: center ;
+            justify-content: center;
+            width: 100%;height: 100%;
+            flex-direction: column;
+        }
+        .contents p {
+            font-family: 'Recipekorea'; 
+            max-width: 80vw;
+            font-size: 3vw;
+            text-align: justify;
+            font-weight: 500;
+            color: #eee;
+            font-weight: 700;
+        }
+        .contents p a {text-decoration: none; color: rgb(132, 171, 255);}
+
+
+        .cursor {
+            position: absolute;
+            width: 10px;height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(1);
+            transition:transform 0.3s ease-in-out;
+            /* mix-blend-mode: normal; */
+            /* mix-blend-mode: multiply; */
+            /* mix-blend-mode: screen; */
+            /* mix-blend-mode: overlay; */
+            /* mix-blend-mode: darken; */
+            /* mix-blend-mode: lighten; */
+            /* mix-blend-mode: color-dodge; */
+            /* mix-blend-mode: color-burn; */
+            /* mix-blend-mode: hard-light; */
+            /* mix-blend-mode: soft-light; */
+            mix-blend-mode: difference;
+            /* mix-blend-mode: exclusion; */
+            /* mix-blend-mode: hue; */
+            /* mix-blend-mode: saturation; */
+            /* mix-blend-mode: color; */
+            /* mix-blend-mode: luminosity; */ 
+        }
+        .cursor.active{
+            transform: scale(8);
+        }
+        
+        .container > .btn {
+            margin: 60px;
+            font-size: 20px;
+            border-radius: 40px;
+        }
+        
+
+        .infor4 {position: absolute; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
+        .infor4 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
+        .infor4 .modal {
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            text-align: left;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .infor4 .modal.show {
+            top: 0;
+        }
+        .infor4 .modal .close {
+            position: absolute; right: 10px; top: 20px;
+        }
+
+ 
+
+
+
+
+        
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="info">
+        <h1>Mouse Effect03</h1>
+        <p>마우스 효과</p>
+
+    </div>
+
+    <div class="info2">
+        <ul>
+            <li><a href="mouse01.html">Mouse01</a></li>
+            <li><a href="mouse02.html">Mouse02</a></li>
+            <li class="active"><a href="mouse03.html">Mouse03</a></li>
+            <li><a href="mouse04.html">Mouse04</a></li>
+            <li><a href="mouse05.html">Mouse05</a></li>
+            <li><a href="mouse06.html">Mouse06</a></li>
+            <li><a href="mouse07.html">Mouse07</a></li>
+            <li><a href="mouse08.html">Mouse08</a></li>
+        </ul>
+    </div>
+
+    <div class="info3">
+      
+        <li>pageX:<span class="pageX">0</span></li>  
+        <li>pageY:<span class="pageY">0</span></li>  
+      
+    </div>
+
+    <div class="infor4">
+        <a href="#" class="view">소스보기</a>
+        <!-- modal -->
+        <div class="modal">
+            <div class="code-editor">   
+                <span class="control"></span>
+                <span class="control"></span>
+                <span class="control"></span>
+<pre class="line-numbers"><code class="language-js">$(window).mousemove(function(e){
+    gsap.to(".cursor",{duration: .5,left: e.pageX -5 ,top: e.pageY -5})
+});
+
+document.querySelectorAll("a").forEach(elem => {
+    elem.addEventListener("mouseenter", () => {
+        document.querySelector(".cursor").classList.add("active");
+    });
+    elem.addEventListener("mouseleave", () => {
+        document.querySelector(".cursor").classList.remove("active");
+    });
+});
+
+
+
+</code></pre>
+                
+                
+            </div>
+            <a class="close">Close</a>
+        </div>
+    </div>
+
+<!-- 
+    clientX :브라우저 페이지에서의 X좌표 위치를 반환하나 스크롤은 무시하고 해당 페이지의 상단을 0으로 측정합니다.
+    clientY :브라우저 페이지에서의 Y좌표 위치를 반환하나 스크롤은 무시하고 해당 페이지의 상단을 0으로 측정합니다.
+    offsetX :이벤트 대상 객체에서의 상대적 마우스 x좌표 위치를 반환합니다.
+    offsetY :이벤트 대상 객체에서의 상대적 마우스 Y좌표 위치를 반환합니다.
+    pageX:브라우저 페이지에서의 x좌표 위치를 반환합니다.
+
+    pageY:브라우저 페이지에서의 Y좌표 위치를 반환합니다.
+    screenX:전체 모니터 스크린에서의 x좌표 위치를 반환합니다.
+    screenY:전체 모니터 스크린에서의 Y좌표 위치를 반환합니다.
+ -->
+    <!-- contents -->
+    <div class="cursor"></div>
+    <div class="contents">
+        <p>당신은 <a href="#">딱 한번만</a> 산다 하지만 똑바로 산다면</p><p><a href="#" style="color: orange">한번</a> 이면 충분하다</p> <br>
+        <p> <a href="#" style="color: red">잘 살아라</a> 그게<a href="#" style="color: yellow">최고의</a> 복수이다</p>
+    </div>
+
+
+    <!-- modal -->
+   
+
+
+
+
+
+
+
+
+    <!-- script -->
+    <script src="../parallax/js/jquery.min_1.12.4.js"></script>
+    <script src="../parallax/js/jquery-ui.min.js"></script>
+    <script src="../parallax/js/gsap.min.js"></script>
+    <script src="js/ss.js"></script>
+    <script>
+        $(window).mousemove(function(e){
+            gsap.to(".cursor",{duration: .5,left: e.pageX -5 ,top: e.pageY -5})
+        });
+
+        document.querySelectorAll("a").forEach(elem => {
+            elem.addEventListener("mouseenter", () => {
+                document.querySelector(".cursor").classList.add("active");
+            });
+            elem.addEventListener("mouseleave", () => {
+                document.querySelector(".cursor").classList.remove("active");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

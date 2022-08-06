@@ -1,0 +1,1604 @@
+
+/* scroll */
+.scroll {
+    position: fixed;
+    left: 10px; top:10px;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    z-index: 99999;
+}
+
+/* character */
+.cha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 45%; bottom: 8%;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.cha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.cha.left {
+    background-position: 0px -270px;
+}
+.cha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+@keyframes walk {
+    0% {background-position: 0px 0px;}
+    100% {background-position: -2800px 0px;}
+}
+@keyframes walk2 {
+    0% {background-position: 0px -270px;}
+    100% {background-position: -2800px -270px;}
+}
+
+/* skills cha */
+.skillsCha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 45%; bottom: 8%;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.skillsCha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.skillsCha.left {
+    background-position: 0px -270px;
+}
+.skillsCha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+
+/* siteLast cha */
+.siteLastCha {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 45%; bottom: 8%;
+    background: url(../img/cha_walk.png);
+    background-size: 2800px;
+    z-index: 9999;
+}
+.siteLastCha.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+.siteLastCha.left {
+    background-position: 0px -270px;
+}
+.siteLastCha.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+
+/* script cha */
+.scriptCha {
+    width: 12vw;
+    position: fixed;
+    z-index: 99999;
+}
+
+/* cursor */
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    background:rgba(255, 255, 255, 0.5);
+    user-select: none;
+    pointer-events: none;
+    transform: scale(1);
+    z-index: 99999;
+    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+}
+.cursor.active {
+    transform: scale(20);
+    background: url(../img/react_site.jpg);
+    background-size: cover;
+}
+
+
+/* close cursor */
+.close {
+    display: none;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 999999;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.2% 0.5%;
+    border-radius: 10vw;
+    background-color: #283542;
+    position: absolute;
+    right: 3%; top: 3%;
+    cursor: pointer;
+    transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+
+
+/* main */
+.main {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    background: #2C3641;
+}
+.main .waveBack {
+    opacity: 0;
+    position: absolute;
+    left: 0; bottom: 0;
+    transform: translateY(100px);
+    z-index: 500;
+}
+.main .waveBack.loading {
+    animation: waveBack 7s infinite linear;
+}
+.main .waveFront {
+    opacity: 0;
+    position: absolute;
+    left: 0; bottom: 0;
+    transform: translateY(100px);
+    z-index: 600;
+}
+.main .waveFront.loading {
+    animation: waveFront 6s infinite linear;
+}
+.main .tree1 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 3%; bottom: 14%;
+    transform: translateY(150px);
+    z-index: 400;
+}
+.main .tree1.loading {
+    animation: treeMove 4s infinite ease;
+}
+.main .tree2 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 26%; bottom: 9%;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree3 {
+    opacity: 0;
+    width: 19vw;
+    position: absolute;
+    left: 12%; bottom: 8%;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree4 {
+    opacity: 0;
+    width: 10vw;
+    position: absolute;
+    right: 30%; bottom: 14%;
+    transform: translateY(200px);
+    z-index: 400;
+}
+.main .tree5 {
+    opacity: 0;
+    width: 16vw;
+    position: absolute;
+    right: 14%; bottom: 8%;
+    transform: translateY(150px);
+    z-index: 500;
+}
+.main .tree5.loading {
+    animation: treeMove 5s infinite ease;
+}
+.main .tree6 {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    right: 4%; bottom: 10%;
+    transform: translateY(150px);
+}
+.main .cloud {
+    width: 11vw;
+}
+.main .cloud1 {
+    opacity: 0;
+    position: absolute;
+    left: 10%; top: 18%;
+    transform: scale(1.3);
+}
+.main .cloud2 {
+    opacity: 0;
+    position: absolute;
+    left: 35%; top: 5%;
+    transform: scale(1.3);
+}
+.main .cloud3 {
+    opacity: 0;
+    position: absolute;
+    right: 10%; top: 28%;
+    transform: scale(1.3);
+}
+.main .star {
+    opacity: 0;
+}
+.main .star.loading {
+    animation: flash 4s infinite linear;
+}
+.main .mainCha {
+    opacity: 0;
+    width: 14vw;
+    position: absolute;
+    left: 43%; bottom: 10%;
+    z-index: 600;
+    transform: translateY(300px);
+}
+.main .mainCha.loading {
+    animation: chaMove 6s linear infinite;
+}
+.main .introTitle {
+    opacity: 0;
+    width: 18vw;
+    position: absolute;
+    left: 6%; bottom: 8.5%;
+    z-index: 600;
+    transform: scale(.9,.9) rotate(-50deg);
+}
+.main .introTitle.loading {
+    z-index: 500;
+}
+.main .introTitle h2 {
+    font-size: 3vw;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+.main .scrollStart {
+    display: none;
+    position: absolute;
+    left: 45%; bottom: 45%;
+    text-align: center;
+    z-index: 600;
+    animation: flash 2.5s infinite linear;
+}
+.main .scrollStart h2 {
+    font-size: 2vw;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 5%;
+}
+
+/* main keyframes */
+@keyframes waveBack {
+    0% {transform: translateY(5px) scaleY(1);}
+    20% {transform: translateY(0px) scaleY(0.8);}
+    40% {transform: translateY(8px) scaleY(1.2);}
+    60% {transform: translateY(5px) scaleY(1);}
+    80% {transform: translateY(10px) scaleY(1.3);}
+    100% {transform: translateY(5px) scaleY(1);}
+}
+@keyframes waveFront {
+    0% {transform: translateY(10px) scaleY(1.3);}
+    20% {transform: translateY(5px) scaleY(1);}
+    40% {transform: translateY(10px) scaleY(1);}
+    60% {transform: translateY(10px) scaleY(1.2);}
+    80% {transform: translateY(5px) scaleY(1.5);}
+    100% {transform: translateY(10px) scaleY(1.3);}
+}
+@keyframes treeMove {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(5px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+@keyframes chaMove {
+    0% {transform: translateY(0);}
+    20% {transform: translateY(0px);}
+    40% {transform: translateY(0px);}
+    60% {transform: translateY(-10px);}
+    80% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+}
+
+
+/* about */
+.about1 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #d4d77d;
+    font-family: 'yg-jalnan';
+    color: #fff;
+}
+.about1 .aboutText {
+    position: absolute; 
+    left: 50%; bottom: 0%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.3;
+}
+.about1 .aboutText .textEffect1 {
+    display: inline-block;
+    animation: swing 1s infinite alternate;
+}
+.about1 .aboutText .textEffect2 {
+    display: inline-block;
+    animation: swing 2s infinite linear;
+}
+
+.about2 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background-image: linear-gradient(to bottom, #D4D77D , #757B7C);
+}
+
+
+/* skills */
+.skills1 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.skills1 .star {
+    position: absolute;
+    left: 0; top: 0;
+    animation: flash 4s infinite linear;
+}
+.skills1 .waveBack {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.skills1 .tree1 {
+    width: 17vw;
+    position: absolute;
+    left: 2%; bottom: 14%;
+}
+.skills1 .tree2 {
+    width: 14vw;
+    position: absolute;
+    left: 25%; bottom: 10%;
+}
+.skills1 .tree3 {
+    width: 10vw;
+    position: absolute;
+    right: 30%; bottom: 15%;
+}
+.skills1 .tree4 {
+    width: 16vw;
+    position: absolute;
+    right: 2%; bottom: 10%;
+}
+.skills1 .waveFront {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.skills1 .waveTop {
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0.5;
+}
+
+.skills2 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.skills2 .star {
+    animation: flash 4s infinite linear;
+}
+.skills2 .waveBack {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.skills2 .waveFront {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.skills2 .tree1 {
+    width: 18vw;
+    position: absolute;
+    left: 5%; bottom: 8%;
+}
+.skills2 .tree2 {
+    width: 14vw;
+    position: absolute;
+    left: 33%; bottom: 13%;
+}
+.skills2 .tree3 {
+    width: 16vw;
+    position: absolute;
+    right: 0%; bottom: 10%;
+}
+.skills2 .waveTop {
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0.5;
+
+}
+.skills2 .door {
+    width: 37vw;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.skills2 .door h2 {
+    font-family: 'yg-jalnan';
+    width: 20vw;
+    font-size: 2.5vw;
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    left: 13%; top: 118px;
+}
+.skills2 .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.skills2 .door::before{
+    content: '';
+    width: 90px; height: 100vh;
+    background: #447BA0;
+    position: absolute;
+    right: 13%; bottom: 0%;
+    z-index: 99999;
+}
+.skills2 .door::after{
+    content: '';
+    width: 94px; height: 100vh;
+    background: #2D5D84;
+    position: absolute;
+    right: 0%; bottom: 0%;
+    z-index: 99999;
+}
+.skillsWrap {
+    position: fixed;
+    width: 100vw; height: 100vh;
+}
+.skillsWrap .skillsTitle {
+    font-family: 'yg-jalnan';
+    font-size: 1.6vw;
+    width: 13vw;
+    position: absolute;
+    left: 0; top: 0;
+    color: #fff;
+    line-height: 1.2;
+}
+.skillsWrap .skillsTitle h2 span {
+    display: inline-block;
+    animation: tada 1s infinite;
+}
+.skillsWrap .skillsItem {
+    font-family: 'Fredoka One', cursive;
+}
+.skillsWrap .skillsItem .itemSub {
+    color: #2c364171;
+    line-height: 1;
+}
+.skillsWrap .skillsItem .itemName {
+    font-size: 2vw;
+    color: #2C3641;
+}
+.skillsWrap .skillsItem .itemPer {
+    color: #fff;
+}
+.skillsWrap .skillsItem .itemPer h3 {
+    font-size: 5vw;
+}
+.skillsWrap .skillsItem .itemPer span {
+    font-size: 2vw;
+}
+.skillsWrap .skillsItem .item1 {
+    position: absolute;
+    left: 20%; top: 0;
+}
+.skillsWrap .skillsItem .item2 {
+    position: absolute;
+    left: 35%; top: 0;
+}
+.skillsWrap .skillsItem .item3 {
+    position: absolute;
+    left: 50%; top: 0;
+}
+.skillsWrap .skillsItem .item4 {
+    position: absolute;
+    left: 65%; top: 0;
+}
+.skillsWrap .skillsItem .item5 {
+    position: absolute;
+    left: 80%; top: 0;
+}
+.skillsWrap .skillsItem .item6 {
+    position: absolute;
+    left: 95%; top: 0;
+}
+
+/* site */
+.intro {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.intro .star {
+    animation: flash 4s infinite linear;
+}
+.intro .cloud {width: 11vw;}
+.intro .cloud1 {
+    position: absolute;
+    left: 5%; top: 20%;
+}
+.intro .cloud2 {
+    position: absolute;
+    left: 40%; top: 5%;
+}
+.intro .cloud3 {
+    position: absolute;
+    right: 10%; top: 15%;
+}
+.intro .tree1 {
+    width: 14vw;
+    position: absolute;
+    left: 5%; bottom: 10%;
+}
+.intro .tree2 {
+    width: 18vw;
+    position: absolute;
+    right: 20%; bottom: 10%;
+}
+.intro .tree3 {
+    width: 19vw;
+    position: absolute;
+    right: 5%; bottom: 10%;
+}
+.intro .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.intro .car {
+    width: 39vw;
+    position: absolute;
+    left: 40%; bottom: 10%;
+}
+.intro .carCloud {
+    width: 11vw;
+    position: absolute;
+    left: 102%; bottom: 29%;
+    animation: rubberBand 1s ease infinite;
+}
+
+/* site */
+.site {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.site .star {
+    animation: flash 4s infinite linear;
+}
+.site .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 30%; top: 10%;
+}
+.site .tree1 {
+    width: 23vw;
+    position: absolute;
+    right: 10%; bottom: 8%;
+}
+.site .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.site .siteStore {
+    width: 51vw;
+    position: absolute;
+    left: 10%; bottom: 13%;
+}
+.site .siteStore .siteTitle {
+    font-family: 'Fredoka One', cursive;
+    width: 18vw;
+    font-size: 2.5vw;
+    color: #fff;
+    line-height: 1;
+    position: absolute;
+    left: 25%; top: 8%;
+}
+.site .light {
+    width: 7vw;
+    animation: flash 2s linear infinite;
+}
+.site .light.siteLight1 {
+    position: absolute;
+    left: 17.7%; top: 14%;
+}
+.site .light.siteLight2 {
+    position: absolute;
+    left: 27.2%; top: 14%;
+}
+.site .light.siteLight3 {
+    position: absolute;
+    left: 36.8%; top: 14%;
+}
+.site .light.siteLight4 {
+    position: absolute;
+    left: 46.4%; top: 14%;
+}
+.site .subCha {
+    width: 10vw;
+    position: absolute;
+    right: 25%; bottom: 12%;
+    animation: bounceInUp 1.2s 1 ease;
+}
+.site .siteTalk {
+    width: 17vw;
+    position: absolute;
+    right: 21%; top: 33%;
+    animation: bounceIn 1.2s 1 ease;
+}
+.site .siteText .site-typing-txt {
+    display: none;
+}
+.site .siteText .site-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+
+.site .sitePopup {
+    width: 75vw; height: 46vw;
+    background-color: rgba(85, 81, 77, 0.9);
+    border-radius: 5vw;
+    position: absolute; 
+    left: 0; top: 6%; right: 0; bottom: 0; 
+    margin: 0 auto;
+    z-index: 9999;
+    animation: bounceIn 1s 1 ease;
+}
+.site .sitePopup ul {
+    height: 46vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 6%;
+}
+.site .sitePopup li {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 32%;
+    letter-spacing: 0.05vw;
+}
+.site .sitePopup li .num {
+    font-family: 'Fredoka One', cursive;
+    font-size: 50px;
+    letter-spacing: 0.1vw;
+}
+.site .sitePopup li .sub {
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2vw;
+}
+.site .sitePopup li .ex {
+    font-family: 'yg-jalnan';
+    font-size: 1vw;
+}
+.site .sitePopup li a {
+    position: relative;
+    margin-top: 0.5vw;
+    padding-left: 6%;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    font-weight: bold;
+
+}
+.site .sitePopup li a::before {
+    content: '';
+    width: 1vw; height: 1vw;
+    background: url(../img/button01.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0; top: 0.1vw;
+}
+
+/* mart */
+.mart {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.mart .star {
+    animation: flash 4s infinite linear;
+}
+.mart .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 15%; top: 20%;
+}
+.mart .tree1 {
+    width: 19vw;
+    position: absolute;
+    right: 5%; bottom: 10%;
+}
+.mart .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.mart .heemMart {
+    width: 69vw;
+    position: absolute;
+    left: 6%; bottom: 13%;
+}
+.mart .heemMart h2 {
+    display: inline-block;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+    width: 10%;
+    color: #D46249;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    left: 8%; top: 39%;
+}
+.mart .martCha {
+    width: 12vw;
+    position: absolute;
+    left: 50%; top: 10%;
+}
+
+/* react */
+.react {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #2C3641;
+}
+.react .star {
+    animation: flash 4s infinite linear;
+}
+.react .tree1 {
+    width: 14vw;
+    position: absolute;
+    left: 15%; bottom: 10%;
+}
+.react .tree2 {
+    width: 14vw;
+    position: absolute;
+    right: 8%; bottom: 10%;
+}
+.react .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.react .cloud {width: 11vw;}
+.react .cloud1 {
+    position: absolute;
+    left: 10%; top: 5%;
+}
+.react .cloud2 {
+    position: absolute;
+    right: 15%; top: 15%;
+}
+.react .reactTitle {
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    font-size: 7vw;
+}
+.react .reactTitle > div {
+    /* transform: rotate(-60deg); */
+    position: absolute;
+    right: 35%; bottom: 20%;
+}
+.react .shoes {
+    width: 41vw;
+    position: absolute;
+    left: 35%; bottom: 10%;
+}
+.react .nikeLogo {
+    width: 10vw;
+    position: absolute;
+    left: 42%; top: 40%;
+}
+.react .nikeLogo h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 10vw;
+    color: #C95551;
+    position: absolute;
+    left: 10%; top: -68%;
+    animation: flash 1.5s infinite linear;
+}
+.react .reactCha {
+    width: 10vw;
+    position: absolute;
+    left: 24%; bottom: 12%;
+    animation: bounceInUp 1.2s 1 ease;
+}
+.react .reactTalk {
+    width: 17vw;
+    position: absolute;
+    left: 21%; bottom: 40%;
+    animation: bounceIn 1.2s 1 ease;
+}
+.react .reactText .react-typing-txt {
+    display: none;
+}
+.react .reactText .react-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+
+/* figma */
+.figma {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #2C3641;
+}
+.figma .star {animation: flash 4s infinite linear;}
+.figma .cloud1 {
+    width: 11vw;
+    position: absolute;
+    right: 35%; top: 12%;
+}
+.figma .tree1 {
+    width: 23vw;
+    position: absolute;
+    left: 0; bottom: 10%;
+}
+.figma .tree2 {
+    width: 16vw;
+    position: absolute;
+    right: 5%; bottom: 8%;
+}
+.figma .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.figma .figmaStore {
+    width: 45vw;
+    position: absolute;
+    left: 16%; bottom: 13%;
+}
+.figma .figmaStore h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3vw;
+    line-height: 1;
+    color: #fff;
+    position: absolute;
+    left: 5%; top: -18%;
+}
+.figma .figmaCha {
+    width: 18vw;
+    position: absolute;
+    right: 20%; bottom: 12%;
+}
+.figma .figmaTalk {
+    width: 17vw;
+    position: absolute;
+    right: 21%; bottom: 40%;
+    animation: bounceIn 1.2s 1 ease;
+}
+.figma .figmaText .figma-typing-txt {
+    display: none;
+}
+.figma .figmaText .figma-typing {
+    width: 12vw;
+    word-break: keep-all;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    font-size: 1.5vw;
+    line-height: 1.4;
+    position: absolute;
+    left: 13%; top: 20%;
+}
+.figma .figmaPopup {
+    width: 75vw;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3% 0;
+    background: #685035;
+    border-radius: 2vw;
+}
+.figma .figmaPopup a:hover {
+    color:rgba(85, 81, 77, 0.9)
+}
+.figma .figmaPopup ul {
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3vw;
+}
+.figma .figmaPopup li {
+    writing-mode: vertical-rl;
+}
+.figma .figmaPopup .book1 {
+    position: absolute;
+    left: 3.3%; top: 28%;
+}
+.figma .figmaPopup .book2 {
+    position: absolute;
+    left: 16%; top: 28%;
+}
+.figma .figmaPopup .book3 {
+    position: absolute;
+    left: 30%; top: 28%;
+}
+.figma .figmaPopup .book4 {
+    position: absolute;
+    left: 41%; top: 28%;
+}
+.figma .figmaPopup .book5 {
+    position: absolute;
+    left: 50%; top: 28%;
+}
+.figma .figmaPopup .book6 {
+    position: absolute;
+    left: 59%; top: 28%;
+}
+.figma .figmaPopup .book7 {
+    position: absolute;
+    left: 68%; top: 28%;
+}
+.figma .figmaPopup .book8 {
+    position: absolute;
+    left: 77%; top: 28%;
+}
+.figma .figmaPopup .book9 {
+    position: absolute;
+    left: 86%; top: 28%;
+}
+.figma .figmaPopup .book10 {
+    position: absolute;
+    left: 94%; top: 28%;
+}
+
+/* siteLast */
+.siteLast {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #2C3641;
+}
+.siteLast .star {animation: flash 4s infinite linear;}
+.siteLast .cloud {width: 11vw;}
+.siteLast .cloud1 {
+    position: absolute;
+    left: 5%; top: 30%;
+}
+.siteLast .cloud2 {
+    position: absolute;
+    left: 40%; top: 5%;
+}
+.siteLast .tree1 {
+    width: 23vw;
+    position: absolute;
+    right: 33%; bottom: 8%;
+}
+.siteLast .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+.siteLast .door {
+    width: 37vw;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.siteLast .door h2 {
+    font-family: 'yg-jalnan';
+    font-size: 2.5vw;
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    left: 13%; top: 118px;
+}
+.siteLast .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.siteLast .door::before{
+    content: '';
+    width: 90px; height: 100vh;
+    background: #F1A6A7;
+    position: absolute;
+    right: 13%; bottom: 0;
+    z-index: 99999;
+}
+.siteLast .door::after{
+    content: '';
+    width: 94px; height: 100vh;
+    background: #E48289;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 99999;
+}
+
+/* animation */
+.balloon1 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #E48289;
+}
+.balloon2 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #E48289;
+}
+
+.ball {
+    position: fixed;
+    width: 100vw; height: 100vh;
+}
+.ball .ball1 {
+    position: absolute;
+    left: -10%; bottom: 0%;
+    animation: ballMove 2.2s -1000ms ease-in infinite;
+}
+.ball .ball2 {
+    position: absolute;
+    left: 10%; bottom: 0%;
+    animation: ballMove 2.5s -4920ms ease-in infinite;
+}
+.ball .ball3 {
+    position: absolute;
+    left: 20%; bottom: 0%;
+    animation: ballMove 2s -1510ms ease-in infinite;
+}
+.ball .ball4 {
+    position: absolute;
+    left: 25%; bottom: 0%;
+    animation: ballMove 2.5s -3040ms ease-in infinite;
+}
+.ball .ball5 {
+    position: absolute;
+    left: 40%; bottom: 0%;
+    animation: ballMove 1.9s -2250ms ease-in infinite;
+}
+.ball .ball6 {
+    position: absolute;
+    left: 58%; bottom: 0%;
+    animation: ballMove 2.3s -1150ms ease-in infinite;
+}
+.ball .ball7 {
+    position: absolute;
+    left: 62%; bottom: 0%;
+    animation: ballMove 2.5s -420ms ease-in infinite;
+}
+.ball .ball8 {
+    position: absolute;
+    left: 70%; bottom: 0%;
+    animation: ballMove 2s -380ms ease-in infinite;
+}
+.ball .ball9 {
+    position: absolute;
+    left: 80%; bottom: 0%;
+    animation: ballMove 2.6s -3040ms ease-in infinite;
+}
+.ball .ball10 {
+    position: absolute;
+    left: 90%; bottom: 0%;
+    animation: ballMove 2.8s -4810ms ease-in infinite;
+}
+@keyframes ballMove {
+    0% {width: 18vw; transform: translateY(-300%);}
+    100% {width: 1vw; transform: translateY(4800%);}
+}
+
+.balloon3 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #E48289;
+}
+.balloon3 .ballBackTxt {
+    position: absolute;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.balloon3 .ballBackTxt h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 19vw;
+    color: rgba(255, 255, 255, 0.2);
+}
+.balloon3 .aniCha {
+    width: 39vw; height: 100vh;
+    position: absolute;
+    left: 30%; bottom: 0;
+}
+.balloon3 .aniBall a {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4vw;
+    color: #fff;
+}
+.balloon3 .aniBall a:hover {
+    color: rgba(85, 81, 77, 0.8);
+}
+.balloon3 .aniBall1 {}
+.balloon3 .aniBall1 a {
+    position: absolute;
+    left: 42%; top: 40%;
+}
+.balloon3 .aniBall2 {}
+.balloon3 .aniBall2 a {
+    position: absolute;
+    left: 32%; top: 46%;
+}
+.balloon3 .aniBall3 {}
+.balloon3 .aniBall3 a {
+    position: absolute;
+    left: 55%; top: 48%;
+}
+.balloon3 .aniBall4 {
+    width: 18vw;
+    position: absolute;
+    left: 28%; top: 12%;
+}
+.balloon3 .aniBall4 a {
+    position: absolute;
+    left: 18%; top: 37%;
+}
+.balloon3 .aniBall5 {
+    width: 18vw;
+    position: absolute;
+    left: 40%; top: 0%;
+}
+.balloon3 .aniBall5 a {
+    position: absolute;
+    left: 20%; top: 35%;
+}
+.balloon3 .aniBall6 {
+    width: 18vw;
+    position: absolute;
+    left: 53%; top: 15%;
+}
+.balloon3 .aniBall6 a {
+    position: absolute;
+    left: 5%; top: 35%;
+}
+
+
+.aniLast {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #E48289;
+}
+.aniLast .star {animation: flash 4s infinite linear;}
+.aniLast .door {
+    width: 37vw; height: 100vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.aniLast .door h2 {
+    font-family: 'yg-jalnan';
+    font-size: 2.5vw;
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    left: 13%; top: 10%;
+}
+.aniLast .door h2 span {
+    display: inline-block;
+    animation: tada 2s infinite;
+}
+.aniLast .door::before{
+    content: '';
+    width: 90px; height: 100vh;
+    background: #44525F;
+    position: absolute;
+    right: 13%; bottom: 0%;
+    z-index: 99999;
+}
+.aniLast .door::after{
+    content: '';
+    width: 94px; height: 100vh;
+    background: #2C3641;
+    position: absolute;
+    right: 0%; bottom: 0%;
+    z-index: 99999;
+}
+.aniLast .balloon1 {
+    width: 9vw;
+    position: absolute;
+    left: 5%; top: 10%;
+    animation: balloonMove 2.5s ease-in-out infinite;
+}
+.aniLast .balloon2 {
+    width: 9vw;
+    position: absolute;
+    left: 20%; top: 30%;
+    animation: balloonMove 4s ease-in-out infinite;
+}
+.aniLast .balloon3 {
+    width: 9vw;
+    position: absolute;
+    left: 40%; top: 20%;
+    animation: balloonMove 4.2s ease-in-out infinite;
+}
+.aniLast .balloon4 {
+    width: 9vw;
+    position: absolute;
+    left: 57%; top: 15%;
+    animation: balloonMove 2s ease-in-out infinite;
+}
+.aniLast .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+@keyframes balloonMove {
+    50% {transform: translateY(10%);}
+}
+.aniLast .ballCha {
+    width: 12vw;
+    position: fixed;
+    left: 45%; bottom: 8%;
+}
+
+.scriptIntro {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.scriptIntro .star {animation: flash 4s infinite linear;}
+.scriptIntro .road {
+    position: absolute;
+    left: 0; bottom: 0;
+}
+
+.script1 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.script1 .star {animation: flash 4s infinite linear;}
+.script1 .effect1 {
+    width: 35vw;
+    position: absolute;
+    left: 18%; top: 0;
+}
+.script1 .effect .effectTxt {
+    position: absolute;
+    top: 18%;
+    margin-left: 8%;
+    width: 29vw;
+}
+.script1 .effect .effectTxt h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3vw;
+    color: #fff;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #fff;
+}
+.script1 .effect .effectTxt p {
+    font-size: 1vw;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    padding: 5% 0;
+}
+.script1 .effect .effectTxt .button h3 {
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1vw;
+    color: #DED545;
+    padding: 15px 20px;
+    background: rgba(254, 253, 234, 0.8);
+    border-radius: 20px;
+}
+.script1 .effect2 {
+    width: 35vw;
+    position: absolute;
+    left: 18%; top: 50%;
+}
+.script1 .effect2 .effectTxt .button h3 {
+    color: #3BB6A7;
+}
+
+.script2 {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.script2 .star {
+    animation: flash 4s infinite linear;
+}
+.script2 .effect3 {
+    width: 35vw;
+    position: absolute;
+    left: 18%; top: 0;
+}
+.script2 .effect .effectTxt {
+    position: absolute;
+    top: 18%;
+    margin-left: 8%;
+    width: 29vw;
+}
+.script2 .effect .effectTxt h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3vw;
+    color: #fff;
+    padding-bottom: 4%;
+    border-bottom: 1px solid #fff;
+}
+.script2 .effect .effectTxt p {
+    font-size: 1vw;
+    font-family: 'yg-jalnan';
+    color: #fff;
+    padding: 5% 0;
+}
+.script2 .effect .effectTxt .button h3 {
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1vw;
+    color: #DED545;
+    padding: 15px 20px;
+    background: rgba(254, 253, 234, 0.8);
+    border-radius: 20px;
+}
+.script2 .effect4 {
+    width: 35vw;
+    position: absolute;
+    left: 18%; top: 50%;
+}
+.script2 .effect4 .effectTxt .button h3 {
+    color: #3BB6A7;
+}
+
+.scriptLast {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #2C3641;
+}
+.scriptLast .star {
+    animation: flash 4s infinite linear;
+}
+.scriptLast .scriptLastTitle {
+    position: absolute;
+    left: 24%; top: 50%;
+    font-family: 'yg-jalnan';
+    width: 500px;
+    font-size: 2vw;
+    color: #fff;
+    line-height: 1.2;
+    animation: shakeY 1.5s 1s ease-in-out infinite;
+}
+.scriptLast .wave {
+    position: absolute;
+    left: 0; top: 0;
+} 
+.scriptLast .scriptLastCha {
+    width: 12vw;
+    position: fixed;
+    left: 65%; bottom: 30%;
+}
+
+.contact {
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background: #3DB8A9;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact .left {
+    flex: 0 0 46%;
+    height: 80vh;
+    padding-left: 5%;
+}
+.contact .left h2 {
+    font-size: 3vw;
+}
+.contact .left .txtBox {
+    display: flex;
+    margin-top: 5%;
+}
+.contact .left .txtBox .txtLeft {
+    font-size: 2vw;
+    line-height: 1.5;
+}
+.contact .left .txtBox .txtRight {
+    line-height: 1.5;
+}
+.contact .left .txtBox .txtRight div {
+    width: 27.8vw; height: 2.4vw;
+    margin: 2% 0 2% 3%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1vw;
+}
+.contact .left .txtBox .txtRight div:nth-child(1) {
+    margin-top: 1%;
+}
+.contact .left .message {
+    width: 41vw; height: 40vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1vw;
+}
+.contact .left .send {
+    margin-top: 2%;
+    font-size: 2vw;
+    text-align: center;
+    padding: 2% 0;
+    background-color: #00977C;
+    border-radius: 1vw;
+}
+
+.contact .right {
+    flex: 0 0 46%;
+    height: 80vh;
+    padding-right: 5%;
+}
+.contact .right .rightTop {
+    display: flex;
+    justify-content: space-between;
+}
+.contact .right .rightTop .imgBox {
+    flex: 0 0 48%;
+}
+.contact .right .rightTop .myInfo {
+    flex: 0 0 48%;
+    font-size: 1.9vw;
+    position: relative;
+}
+.contact .right .rightTop .myInfo h2 {
+    margin-bottom: 5%;
+}
+.contact .right .rightTop .myInfo .sns {
+    width: 20vw;
+    padding: 4% 0;
+    text-align: center;
+    background-color: #00977C;
+    border-radius: 1vw;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.contact .right .rightBottom {
+    width: 23vw;
+    padding-top: 10%;
+    margin: 0 auto;
+}
+
+
+
+/* siteSection */
+#site1 {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    background: #283542;
+    top: -100%;
+    transition:  all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+#site1 .siteWave {
+    position: absolute;
+    left: 0; top: 0;
+}
+#site1 .siteInfo {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+#site1 .siteImg {
+    width: 44vw;
+    height: 26vw;
+    background: url(../img/site_webstandard.png);
+    background-size: cover;
+    border-radius: 2vw;
+}
+#site1 .siteText {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    margin-top: 3vw;
+}
+#site1 .siteText .left {
+    flex: 0 0 70%;
+}
+#site1 .siteText .left h2 {
+    font-size: 2.5vw;
+}
+#site1 .siteText .left ul {
+    margin-top: 1vw;
+}
+#site1 .siteText .left li {
+    font-size: 1.3vw;
+    line-height: 1.3;
+}
+#site1 .siteText .right {
+    flex: 0 0 30%;
+    margin-left: 18%;
+}
+#site1 .siteText .right h2 {
+    font-size: 1.3vw;
+    padding: 5% 8%;
+    border-radius: 1vw;
+    display: inline-block;
+    background: #2D5E85;
+}
+#site1 .siteText .right h2:hover {
+    background-color: #ffffff33;
+    color: rgba(255,255,255,0.8);
+    transition: background-color 1000ms ease, background 500ms ease ;
+}
+
+#react {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    background: #283542;
+    top: -100%;
+    z-index: 99999;
+    transition:  all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+#react .siteWave {
+    position: absolute;
+    left: 0; top: 0;
+}
+#react .siteInfo {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+#react .siteImg {
+    width: 44vw;
+    height: 26vw;
+    background: url(../img/react_site.jpg);
+    background-size: cover;
+    border-radius: 2vw;
+}
+#react .siteText {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    margin-top: 3vw;
+}
+#react .siteText li {
+    font-family: 'yg-jalnan';
+}
+#react .siteText .left {
+    flex: 0 0 70%;
+}
+#react .siteText .left h2 {
+    font-size: 2.5vw;
+}
+#react .siteText .left ul {
+    margin-top: 1vw;
+}
+#react .siteText .left li {
+    font-size: 1.3vw;
+    line-height: 1.3;
+}
+#react .siteText .right {
+    flex: 0 0 30%;
+    margin-left: 18%;
+}
+#react .siteText .right h2 {
+    font-size: 1.3vw;
+    padding: 5% 8%;
+    border-radius: 1vw;
+    display: inline-block;
+    background: #D9A93C;
+}
+#react .siteText .right h2:hover {
+    background-color: #ffffff33;
+    color: rgba(255,255,255,0.8);
+    transition: background-color 1000ms ease, background 500ms ease ;
+}

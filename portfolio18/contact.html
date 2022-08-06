@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Portfolio contact</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO 검색엔진 -->
+    <meta name="author" content="yeong">
+    <meta name="description" content="리액트 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">  <!-- 모든정보가져감 -->
+
+    <!-- facebook -->
+    <meta property="og:url" content="#none">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="React Portfolio Contact">
+    <meta property="og:description" content="리액트 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio Contact">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FEDB01" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="manifest" href="" />
+    <link rel="icon" href="assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-152.png" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <link rel="icon" typse="image/png" sizes="152x152" href="assets/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/favicon-128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <link rel="stylesheet" href="assets/styles/variables.css">
+    <link rel="stylesheet" href="assets/styles/mixins.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+
+    <!-- 연락폼전송 -->
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_hl2eUG4vgNeBAeVGyK2cd");
+        })();
+    </script>
+    
+</head>
+<body class="notScroll">
+    <div id="skip">
+        <a href="#">바로가기 스킵메뉴</a>
+    </div>
+    <!-- //skip -->
+    <div id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 로딩 애니메이션 -->
+    <header>
+        <div id="header">
+            <!-- 로고 -->
+            <div class="logo black">
+                <a href="index.html"><span>Yeong's</span></a>
+            </div>
+            <nav class="menu">
+                <div class="nav">
+                    <div class="nav-background">
+                        <div class="nav-bg nav-bg1"></div>
+                        <div class="nav-bg nav-bg2"></div>
+                        <div class="nav-bg nav-bg3"></div>
+                        <div class="nav-bg nav-bg4"></div>
+                    </div>
+                    <h2 class="sr-only">메인 메뉴</h2>
+                    <ul>
+                        <li><a href="javascript:navLink1()">home</a></li>
+                        <li><a href="javascript:navLink2()">about</a></li>
+                        <li><a href="javascript:navLink3()">portfolio</a></li>
+                        <li><a href="javascript:navLink6()">contact</a></li>
+                        <li><a href="javascript:navLink4()">animation</a></li>
+                        <li><a href="javascript:navLink5()">javascript</a></li>
+                    </ul>
+                </div>
+                <!-- 햄버거버튼 -->
+                <div class="menu-line">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hamburger-close">
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <!-- header -->
+    <main>
+        <section id="contact">
+            <div class="contact">
+               <div class="contact-left">
+                   <img src="assets/images/contact1-1.jpg" alt="연락">
+               </div>
+               <div class="contact-right">
+                <!-- 연락form 한달200건 무료-->
+                <script>
+                    window.onload = function() {
+                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            // generate a five digit number for the contact_number variable
+                            this.contact_number.value = Math.random() * 100000 | 0;
+                            // these IDs from the previous steps
+                            emailjs.sendForm('kyj210', 'template_h7n4mht', this)
+                                .then(function() {
+                                    console.log('SUCCESS!');
+                                    alert("SUCCESS!");
+                                    document.querySelector("#name").value = "";
+                                    document.querySelector("#mail").value = "";
+                                    document.querySelector("#message").value = "";
+                                }, function(error) {
+                                    console.log('FAILED...', error);
+                                });
+                        });
+                    }
+                </script>
+                   <h2 aria-label="contact me"><span aria-hidden="true">c</span><span aria-hidden="true">o</span><span aria-hidden="true">n</span><span aria-hidden="true">t</span><span aria-hidden="true">a</span><span aria-hidden="true">c</span><span aria-hidden="true">t</span><span aria-hidden="true">&nbsp;</span><span aria-hidden="true">m</span><span aria-hidden="true">e</span></h2>
+                   <form id="contact-form">
+                        <fieldset>
+                            <legend class="sr-only">연락 폼요소입니다.</legend>
+                            <input type="hidden" name="contact_number">
+                            <label for="name">name</label>
+                            <input type="text" name="to_name" id="name" required>
+                            <label for="mail">email</label>
+                            <input type="text" name="from_name" id="mail" required>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" required></textarea>
+                            <div class="contact-btn">
+                            <!-- <input type="button" name="submit" id="send" value="SEND"/> -->
+                            <button type="submit" id="send"><span>SEND</span></button>
+                            </div>
+                        </fieldset>
+                    </form>
+               </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+    </main>
+    <footer>
+        <div class="content-box">
+            <div class="foot">
+                <span><span>speak to</span> a me now!</span>
+                <h2>
+                    <div class="cursor">
+                        <figure>
+                            <img src="assets/images/cursor.png" alt="커서이미지">
+                        </figure>
+                    </div>
+                    <span><span>g</span><span>e</span><span>t</span><span>&nbsp;</span><span>i</span><span>n</span><span>&nbsp;</span><span>t</span><span>o</span><span>u</span><span>c</span><span>h</span></span>
+                </h2>
+                <div>
+                    <address>ⓒ yeong portfolio 2021</address>
+                    <ul>
+                        <li><a href="https://blog.naver.com/rladudwl210"><span class="sr-only">naver blog</span></a></li>
+                        <li><a href="https://www.figma.com/file/x5SGbXNJzAqxTDXGcxpzNq/Untitled"><span class="sr-only">figma</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/loading.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tail</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+ /* background-image: linear-gradient(to right, #4dd0e1 0%, #9575cd 100%); */
+}
+
+.circle {
+  position: absolute;
+  animation: movex 2s ease alternate infinite;
+}
+/* alternate => 앞으로 갔다가 뒤로 갔다가를 순서대로 애니메이션이 계속 이어지는 것처럼 보이는 효과를 갖는다. (animation-direction속성.)*/
+
+
+.circle > div {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  animation: movey 1s linear infinite;
+}
+
+.circle:nth-of-type(2) > div {
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+}
+/* nth-of-type() => 자식 중에 유형이 똑같은 것만 순서대로 정하는 것. */
+/* nth-of-child() => 자식의 유형이 달라도 순서를 정할 수 있다. */
+
+.circle:nth-of-type(3) > div {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+}
+.circle:nth-of-type(4) > div {
+  width: 20px;
+  height: 20px;
+  opacity: 0.4;
+}
+.circle:nth-of-type(5) > div {
+  width: 10px;
+  height: 10px;
+  opacity: 0.2;
+}
+
+.circle:nth-of-type(2),
+.circle:nth-of-type(2) > div {
+  animation-delay: 0.1s;
+}
+.circle:nth-of-type(3),
+.circle:nth-of-type(3) > div {
+  animation-delay: 0.2s;
+}
+.circle:nth-of-type(4),
+.circle:nth-of-type(4) > div {
+  animation-delay: 0.3s;
+}
+.circle:nth-of-type(5),
+.circle:nth-of-type(5) > div {
+  animation-delay: 0.4s;
+}
+
+@keyframes movex {
+  0% {transform: translate(-100px, 0);}
+  100% {transform: translate(100px, 0);}
+}
+
+@keyframes movey {
+  0% {transform: translate(0, 0);}
+  25% {
+    background-color: #f8bbd0;
+    transform: translate(0, -100px) scale(0.5);
+  }
+  50% {transform: translate(0, 0);}
+  75% {
+    background-color: #f06292;
+    transform: translate(0, 100px) scale(2);
+  }
+  100% {transform: translate(0, 0);}
+}
+    </style>
+</head>
+<body>
+  <div class="circle">
+    <div></div>
+  </div>
+  <div class="circle">
+    <div></div>
+  </div>
+  <div class="circle">
+    <div></div>
+  </div>
+  <div class="circle">
+    <div></div>
+  </div>
+  <div class="circle">
+    <div></div>
+  </div>
+</body>
+</html>

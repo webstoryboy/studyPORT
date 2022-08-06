@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- title -->
+	<title>HP Solution 프린팅 서비스 플랫폼</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- for-mobile-apps -->
+	<link href="./images/favicon.ico" rel="shortcut icon" />
+	<!-- title -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="./css/animate.css">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="국내 최초 프린팅 서비스 플랫폼">
+	<meta property="og:url" content="http://oaic.co.kr:8090/">
+	<meta property="og:description" content="프린팅 서비스 습관을 혁신합니다.">
+	<meta property="og:image" content="./images/thumnail.jpg">
+	<meta name="robots" content="index,follow">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="HP Solution">
+	<!-- description -->
+	<meta name="description" content="프린팅 서비스 습관을 혁신합니다.">
+	<!-- keywords -->
+	<meta name="keywords" content="프린트 히어로">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="./css/demo.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!--메인 슬라이드-->
+
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<!--//슬라이드끝-->
+
+	<script type="text/javascript" src="./js/wow.js"></script>
+	<script type="text/javascript" src="./js/wow.min.js"></script>
+
+	<script>
+		new WOW().init();
+	</script>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- jquery -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.counterup.min.js"></script>
+	<!--카운터 -->
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter2').counterUp({
+				delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+				time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+			});
+		});
+	</script>
+	<!--//카운터 -->
+	<!--//js-카운터 -->
+	<!-- price range (top products) -->
+	<script src="./js/jquery-ui.js"></script>
+	<!-- //price range (top products) -->
+	<!-- flexisel (for special offers) -->
+	<script src="./js/jquery.flexisel.js"></script>
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+	<!-- //flexisel (for special offers) -->
+	<!-- 탑클릭 부드럽게 -->
+	<script>
+		$('.banner').click(function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 0);
+			return false;
+		});
+	</script>
+	<!--// 탑클릭 부드럽게 -->
+	<!-- smoothscroll -->
+	<script src="./js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+	<!-- start-smooth-scrolling -->
+	<script src="./js/move-top.js"></script>
+	<script src="./js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!--고정배너 스크립트 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.show-on-scroll');
+			if ($(this).scrollTop() >= 600) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//고정배너 스크립트 -->
+	<!--탑서칭 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.top-search-show-on-scroll');
+			if ($(this).scrollTop() >= 500) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//탑서칭 -->
+	<!--알람 -->
+	<script>
+		function button1_click() {
+			alert("준비중입니다.");
+		}
+	</script>
+	<!--//알람 -->
+
+
+
+	<!-- for bootstrap working -->
+	<script src="./js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+
+	<!-- //js-files -->
+	<!--//tags -->
+	<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/font-awesome.css" rel="stylesheet">
+	<!--pop-up-box-->
+	<link href="./css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//pop-up-box-->
+	<!-- price range -->
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui1.css">
+	<!-- fonts -->
+</head>
+
+<body>
+
+
+
+	<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+	<div class="mnk-main-menu-toggle menu-container">
+		<div class="fdr-menu-box">
+
+			<div class="container">
+				<div class="logo" style="float: none; margin-right: 10px;">
+					<div class="site-logo">
+						<a href="index.html">
+							<img src="images/logo.png" alt="로고">
+							<img src="images/logo.png" alt="로고작은거">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+
+							<ul class="menu-line">
+
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 active">
+									<a href="shopping-center/shop-main.html">쇼핑센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="repair-center/repair-main.html">수리센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="rental-center/rental-main.html">렌탈센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="edu-center/edu-main.html">교육센터</a>
+								</li>
+								<li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064 hvr-icon-rotate"
+									style="margin-right: 40px;">
+									<a target="_blank" onclick="location.href='partner-form.html'"><span>파트너신청 &nbsp;<i
+												class="fa fa-paper-plane hvr-icon" aria-hidden="true"></i></span></a>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+
+			<input type="checkbox" id="menuicon2">
+			<label for="menuicon2">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<!--전체메뉴 토글버튼-->
+			<div class="sidebar">
+				<div class="mobile-toggle-bar">
+
+					<div class="box-m1 service-m">
+						<h4>전체서비스</h4>
+						<table class="info2">
+							<tr>
+								<td>
+									<img src="./images/shopping-ico.svg" alt="쇼핑센타아이콘"
+										onclick="location.href='./shopping-center/shop-main.html'"><br><a>쇼핑센터</a>
+								</td>
+								<td>
+									<img src="./images/repair-ico.svg" alt="수리센타아이콘"
+										onclick="location.href='./repair-center/repair-main.html'"><br><a>수리센터</a>
+								</td>
+								<td>
+									<img src="./images/rental-ico.svg" alt="렌탈센타아이콘"
+										onclick="location.href='./rental-center/rental-main.html'"><br><a>렌탈센터</a>
+								</td>
+								<td>
+									<img src="./images/edu-ico.svg" alt="교츅센타아이콘"
+										onclick="location.href='./edu-center/edu-main.html'"><br><a>교육센터</a>
+								</td>
+							</tr>
+						</table>
+						<!-- 
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="찾으시는 물건을 검색하세요.">
+					<span class="input-group-btn">
+					<button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</span>
+				</div>
+				input-group -->
+					</div>
+					<!-- /input-group
+			<div class="simple-cart box-m1">
+				<h5>최근 본 상품<span>상품더보기&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span></h5>
+				<div class="cart-img">
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+				</div>
+				<div><h6>최근 본 상품이 등록됩니다.</h6></div>등록 안된상태는 이 화면 보여주기
+			</div> -->
+
+					<table class="info1" style="margin-bottom:10px;">
+
+						<tr>
+							<td>
+								<h5><img src="./images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;고객센터</h5>
+							</td>
+							<td>
+								<h5><img src="./images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;회사소개</h5>
+							</td>
+						</tr>
+
+					</table>
+					<table class="info1" style="background:#3399FD; color: #fff; padding:5px;margin-bottom:10px;">
+						<tr>
+							<td style="border:none;" onclick="location.href='./partner-form.html'">
+								<h5>파트너 신청 <i class="fa fa-paper-plane" aria-hidden="true"></i></h5>
+							</td>
+						</tr>
+
+
+					</table>
+					<!--<table class="info1" style="background:#3399FD; color: #fff; padding:5px">
+			    <tr>
+					<td  style="border:none;"  onclick="location.href='../index.html'">
+						<h5>만능키 메인 바로가기 <i class="fa fa-search" aria-hidden="true"></i></h5>
+					</td>
+				</tr>
+				
+				
+			</table>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+
+	<div class="height-70">
+	</div>
+	<!-- //header 메뉴 시작 전면수정-->
+
+
+
+
+	<!-- //header 메뉴 시작 전면수정-->
+	<!--상단검색-->
+	<div class="fix-search top-search-show-on-scroll scroll-top">
+		<div class="container">
+			<div class="input-group" style="margin-bottom: 0px;">
+				<input type="text" class="form-control" placeholder="부품번호 또는 모델명 입력을 하세요.">
+				<span class="input-group-btn " style="height: 45px; ">
+					<button class="btn btn-default inset-shadow" type="button"><i class="fa fa-search "
+							aria-hidden="true" type="submit"></i></button>
+				</span>
+
+			</div>
+		</div>
+	</div>
+	<!--//상단검색바-->
+
+
+
+	<!--메인대치-->
+	<div class="main-slide">
+		<ul class="main-panel" style="margin-left: 0px;">
+			<li class="sub-text2 main-bg">
+				<center data-wow-delay="0.6s" class="wow fadeInUp"
+					style="animation-delay: 0.6s; animation-name: fadeInUp; visibility: visible;">
+					<h3>프린터 문제 해결 <strong>10분</strong>이면 충분합니다.</h3>
+				    <h5>업계최대 인증, 특허 보유 고객 사용패턴 분석 기술(중기부 사업선정)</br>
+					15년 부품 제조 노하우 (IOS 9001, 14001보유)</br>
+					검증된 150여곳 협력사 (2019.8월 기준)</h5>
+				</center>
+			</li>
+			<li>
+				<div class="visual">
+					<div class="container">
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 main-text">
+							<h3>만능키에게 물어봐!</h3>
+							
+							<ul class="visual-controller">
+								<li href="#">에러코드</li>
+								<li href="#">부품검색</li>
+                 			    <li href="#">도면검색</li>
+                  				<li href="#">구매정보</li>
+							</ul>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 visual-list wow fadeInUp" data-wow-delay="1s"
+							style="visibility: visible; animation-delay: 1s; animation-name: fadeInRight;">
+							<ul class="visual-panel">
+								<li style="display: none;">
+									<div class="counter-text2">
+										<h5>[ 검색엔진&nbsp;<span class="counter2">687,830</span>건 ]</h5>
+									</div>
+									<div class="img"><img src="./images/main-mnk-img1.png"></div>
+								</li>
+								<li style="display: none;">
+									<div class="counter-text2">
+										<h5>[ 검색엔진&nbsp;<span class="counter2">2,638,689</span>건 ]</h5>
+									</div>
+									<div class="img"><img src="./images/main-mnk-img2.png"></div>
+								</li>
+								<li  style="display: none;">
+									<div class="counter-text2">
+										<h5>[ 검색엔진&nbsp;<span class="counter2">99,834</span>건 ]</h5>
+									</div>
+									<div class="img"><img src="./images/main-mnk-img3.png"></div>
+								</li>
+								<li style="display: none;">
+									<div class="counter-text2">
+										<h5>[ 검색엔진&nbsp;<span class="counter2">44,706</span>건 ]</h5>
+									</div>
+									<div class="img"><img src="./images/main-mnk-img4.png"></div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 main-text2">
+							<ul class="visual-panel">
+								<li class="active">
+									<h3>에러코드를 입력하시면 프린트 오류에 대한 안내를 도와드립니다.</h3>
+								</li>
+								<li>
+									<h3>지도와 함께 부품에 정보를 안내해드립니다.</h3>
+								</li>
+								<li>
+									<h3>도면 이미지 및 상세한 정보를 안내해드립니다.</h3>
+								</li>
+								<li>
+									<h3>소모품에 대한 정보/구매 정보를 제공합니다.</h3>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="sub-text2">
+				<center data-wow-delay="3s" class="wow fadeInUp"
+					style="visibility: visible; animation-delay: 3s; animation-name: fadeInUp;">
+					<h3>쇼핑 / 수리 / 렌탈 / 교육 전국 어디에서나! </h3>
+					<h5>고객의 복잡한 프린팅 환경 개선을 통해 효율과 비용절감을 실현합니다.</h5>
+				</center>
+			</li>
+		</ul>
+		<ul class="dot">
+			<li class="on">슬라이드 버튼1번</li>
+			<li class="">슬라이드 버튼2번</li>
+			<li class="">슬라이드 버튼3번</li>
+		</ul>
+		<div class="prev"></div>
+		<div class="next"></div>
+	</div>
+	<!--//메인대치-->
+	<script>
+
+
+	</script>
+	<div class="fix-mainbar">
+		<div class="container">
+
+			<div class="mnk-bar">
+				<!--만능키-->
+				<form action="#" method="post" class="">
+					<table>
+						<tr>
+							<td rowspan="2" class="mnk-text">
+								만능키
+							</td>
+							<td colspan="2">
+								<div>
+									<input class="mnk-searchbox1" type="search" name="search"
+										placeholder="모델명 / 에러코드 / 부품번호 / 증상을 입력하세요." required="">
+									<span class="mnk-searchbox-button"
+										onclick="location.href='./mnk/mnk-total.html'"></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select class="mnk-searchbox2" style="border-left: 0;">
+									<option selected>브랜드<span class="fa fa-arrow-circle-down" aria-hidden="true"></span>
+									</option>
+									<option value="1">HP</option>
+									<option value="2">samsung</option>
+									<option value="3">
+										shindorikoDssfgffgfgfg333399999999999999999999999999999999999999999999999909080808098098098
+									</option>
+								</select>
+							</td>
+							<td>
+								<input class="mnk-searchbox3" placeholder="모델명">
+
+							</td>
+						</tr>
+
+					</table>
+					<!--브랜드 모델명검색어--->
+
+					<span class="update2">검색엔진 업데이트 : 2019년 3월 28일</span>
+				</form>
+				<!-- //만능키--->
+
+			</div>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<!--퀵서비스탭-->
+	<div class="qs-menu">
+		<div class="container">
+			<div class="qs-wrap">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-0 left-qs">
+					<div class="qs-text2">
+						<span>
+							OUR<br>SERVICE
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 right-qs">
+					<div class="qs-icon">
+						<div class="qs-icon-box pointer" onclick="location.href='./shopping-center/shop-main.html'">
+							<img src="./images/shopping-ico.svg">
+
+						</div>
+						<span>쇼핑센터</span>
+					</div>
+					<div class="qs-icon">
+						<div class="qs-icon-box pointer" onclick="location.href='./repair-center/repair-main.html'">
+							<img src="./images/repair-ico.svg">
+
+						</div>
+						<span>수리센터</span>
+					</div>
+					<div class="qs-icon">
+						<div class="qs-icon-box pointer" onclick="location.href='./rental-center/rental-main.html'">
+							<img src="./images/rental-ico.svg">
+
+						</div>
+						<span>렌탈센터</span>
+					</div>
+					<div class="qs-icon">
+						<div class="qs-icon-box pointer" onclick="location.href='./edu-center/edu-main.html'">
+							<img src="./images/edu-ico.svg">
+
+						</div>
+						<span>교육센터</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--//퀵서비스탭-->
+
+	<!--섹선2 공지-->
+	<div class="main-notice-board">
+		<div class="container">
+			<div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 cc-repair-list2">
+					<div class="cc-box">
+						<h4>고장문의 게시판
+
+							<span class="float-right pointer"
+								onclick="location.href='./repair-center/repair-faq-list.html'">
+
+
+								<img src="./images/plus-icon.png" style="width: 16px; margin-right: 5px;">
+							</span>
+							<!--//
+						    <div class="control-updown-btn float-right" style="margin-right: 15px;">
+										<i class="fa fa-angle-up" aria-hidden="true"></i>
+										<i class="fa fa-angle-down" aria-hidden="true"></i>
+						    </div>
+						   삭제-->
+
+
+						</h4>
+						<ul id="ticker_05">
+							<li>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<div class="tt">고장이 났습니다. 이렇게 적어서 글이 길어요.</div>
+											</td>
+											<td class="name">나**</td>
+											<td class="day">19.06.30</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">HPLJ5100급지불량.글이 길어요.글이 길어요.</div>
+											</td>
+											<td class="name">이**</td>
+											<td class="day">19.06.07</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">용지걸림 반복현상이 빈번합니다.글이 길어요.</div>
+											</td>
+											<td class="name">김**</td>
+											<td class="day">19.06.03</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">잉크 및 헤드정렬 문제있습니다.글이 길어요.</div>
+											</td>
+											<td class="name">박**</td>
+											<td class="day">19.06.01</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">잉크 및 헤드정렬 문ㅈㄷ제가.글이 길어요.</div>
+											</td>
+											<td class="name">박**</td>
+											<td class="day">19.05.30</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<div class="tt">2고장이 났습니다. 이렇게 적어서 글이 길어요.</div>
+											</td>
+											<td class="name">나**</td>
+											<td class="day">19.05.30</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">2HPLJ5100급지불량.글이 길어요.글이 길어요.</div>
+											</td>
+											<td class="name">이**</td>
+											<td class="day">19.05.07</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">2용지걸림 반복현상이 빈번합니다.글이 길어요.</div>
+											</td>
+											<td class="name">김**</td>
+											<td class="day">19.05.03</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">2잉크 및 헤드정렬 문제있습니다.글이 길어요.</div>
+											</td>
+											<td class="name">박**</td>
+											<td class="day">19.05.01</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="tt">2잉크 및 헤드정렬 문ㅈㄷ제가.글이 길어요.</div>
+											</td>
+											<td class="name">박**</td>
+											<td class="day">19.04.30</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 cc-repair-list">
+					<div class="cc-box">
+						<h4>BEST! <span style="font-weight:400">수리 히어로</span>
+
+						</h4>
+						<ul>
+							<li>
+								<table class="table table-hover" id="scroll-01" onmouseover="stopRepeat();"
+									onmouseout="startRepeat();">
+									<tbody class="table-hover">
+										<tr>
+											<td>1</td>
+											<th>수리업체1</th>
+											<td>경기 구리</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<th>수리업체2</th>
+											<td>경기 수원</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<th>수리업체3</th>
+											<td>서울 용산</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<th>수리업체4</th>
+											<td>서울 종로</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<th>수리업체5</th>
+											<td>서울 종로</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<th>수리업체1</th>
+											<td>경기 구리</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<th>수리업체2</th>
+											<td>경기 수원</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<th>수리업체3</th>
+											<td>서울 용산</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<th>수리업체4</th>
+											<td>서울 종로</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<th>수리업체5</th>
+											<td>서울 종로</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 cc-repair-list">
+					<div class="cc-box">
+						<h4>BEST! <span style="font-weight:400">렌탈 히어로</span>
+
+						</h4>
+						<ul>
+							<li>
+								<table class="table table-hover" id="scroll-02" onmouseover="stopRepeat2();"
+									onmouseout="startRepeat2();">
+									<tbody>
+										<tr>
+											<td>1</td>
+											<th>렌탈업체1</th>
+											<td>경기 수원</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<th>렌탈업체2</th>
+											<td>서울 노원</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<th>렌탈업체3</th>
+											<td>경기 안양</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<th>렌탈업체4</th>
+											<td>서울 서초</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<th>렌탈업체5</th>
+											<td>서울 서초</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<th>렌탈업체1</th>
+											<td>경기 수원</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<th>렌탈업체2</th>
+											<td>서울 노원</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<th>렌탈업체3</th>
+											<td>경기 안양</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<th>렌탈업체4</th>
+											<td>서울 서초</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<th>렌탈업체5</th>
+											<td>서울 서초</td>
+										</tr>
+									</tbody>
+
+								</table>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--섹선2 공지-->
+
+
+	<!--광고배너-->
+	<div class="shop-ad-banner">
+		<center>
+			<img class="mobile-no pad-no" src="./images/main-center-ad2.jpg"
+				style="width: 100%; max-width:1800px; min-width: 700px;">
+			<img class="mobile-yes pad-yes" src="./images/mobile-main-ad2.jpg" style="width: 100%;">
+		</center>
+	</div>
+	<!--//광고배너-->
+
+
+	<!--수리센터안내-->
+	<div class="repair-info" >
+		<div class="container">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+				<h3>수리센터 이용안내 <div class="float-right hr-countbox">전체 수리히어로 <a href="">00명</a></div>
+				</h3>
+				<div class="rp-info-imgbox"><img src="images/rp-process.jpg"></div>
+				<div class="group-btn">
+					<button class="blue-btn" onclick="location.href='./repair-center/repair-letter.html'">고장문의</button>
+					<button class="border-btn" onclick="location.href='./repair-center/repair-main.html'">수리신청</button>
+				</div>
+				<div class="number-com">
+					<table>
+						<tr>
+							<td>진행사항 조회하기</td>
+							<td><input type="text" placeholder="휴대전화번호를 입력하세요."></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h3>수리신청 현황
+					<span class="float-right pointer" onclick="location.href='./repair-center/repair-list.html'"><img
+							src="./images/plus-icon-w.png" style="width: 18px"></span>
+				</h3>
+				<div class="flow-list">
+					<ul id="ticker_03">
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>출장요청</a></td>
+									<td><span class="name">김**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류1 내용이 길어요.</div>
+									</td>
+									<td><span class="day">19.06.14</span><br><i class="fa fa-circle"
+											style="color:#f9d423"></i> 접수대기</td>
+								</tr>
+
+							</table>
+						</li>
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>온라인상담</a></td>
+									<td><span class="name">이**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류2</div>
+									</td>
+									<td><span class="day">19.06.01</span><br><i class="fa fa-refresh fa-spin"
+											style="color:green"></i> 진행중</td>
+								</tr>
+
+							</table>
+						</li>
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>택배수리</a></td>
+									<td><span class="name">박**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류3</div>
+									</td>
+									<td><span class="day">19.05.30</span><br><i class="fa fa-check-circle"
+											style="color:#007bbe"></i> 처리완료</td>
+								</tr>
+
+							</table>
+						</li>
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>출장요청</a></td>
+									<td><span class="name">김**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류4</div>
+									</td>
+									<td><span class="day">19.06.14</span><br><i class="fa fa-circle"
+											style="color:#f9d423"></i> 접수대기</td>
+								</tr>
+
+							</table>
+						</li>
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>온라인상담</a></td>
+									<td><span class="name">이**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류5</div>
+									</td>
+									<td><span class="day">19.06.01</span><br><i class="fa fa-refresh fa-spin"
+											style="color:green"></i> 진행중</td>
+								</tr>
+
+							</table>
+						</li>
+						<li>
+							<table class="now-box">
+								<tr>
+									<td rowspan="2"><a>택배수리</a></td>
+									<td><span class="name">박**</span><br>
+										<div class="tt-omit">시스템 오류, 잉크오류6</div>
+									</td>
+									<td><span class="day">19.05.30</span><br><i class="fa fa-check-circle"
+											style="color:#007bbe"></i> 처리완료</td>
+								</tr>
+
+							</table>
+						</li>
+					</ul>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--//수리센터안내-->
+
+	<!--상품소개카드-->
+	<div class="best-product">
+		<div class="inner-pattern">
+
+			<div class="container">
+
+
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 br-box">
+
+					<h5>특허출원</h5>
+					<h3 style="font-weight: 100">부담<span style="font-weight: bold;">제로렌탈</span></h3>
+					<h6>전국 100곳의 랜탈전문점!</h6>
+
+
+					<div class="group-btn">
+						<button class="blue-btn now-btn" style="margin-bottom: 10px;"
+							onclick="location.href='./rental-center/rental-letter2.html'">실시간 견적문의 <i
+								class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+						<button class="border-btn now-btn"
+							onclick="location.href='./rental-center/rental-faq-list.html'">비교견적 <i
+								class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+					</div>
+				</div>
+				<div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 cc-rental-list">
+
+					<div class="cc-box2">
+						<h4>실시간 렌탈문의
+
+							<span class="float-right" onclick="location.href='./rental-center/rental-faq-list.html'">
+
+
+								<img src="./images/plus-icon.png" style="width: 16px;">
+							</span>
+
+
+
+						</h4>
+						<ul>
+							<li>
+
+								<table class="table table-hover" id="scroll-03" onmouseover="stopRepeat3();"
+									onmouseout="startRepeat3();">
+									<tbody>
+										<tr>
+											<th style="color: #555">[견적문의]</th>
+											<td class="tt">
+												<div class="tt-omit">렌탈10대 문의 글이 길어요</div>
+											</td>
+											<td class="name">(주)에드***</td>
+											<td class="day">19.06.17</td>
+
+										</tr>
+										<tr>
+											<th style="color: #555">[견적문의]</th>
+											<td class="tt">
+												<div class="tt-omit">견적문의합니다. 글이 길어요</div>
+											</td>
+											<td class="name">김**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+										<tr>
+											<th style="color: blue">[렌탈신청]</th>
+											<td class="tt">
+												<div class="tt-omit">[HP]컬러레이저 M750 글이 길어요</div>
+											</td>
+											<td class="name">서**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+										<tr>
+											<th style="color: blue">[렌탈신청]</th>
+											<td class="tt">
+												<div class="tt-omit">[삼성]컬러레이저 M122 글이 길어요</div>
+											</td>
+											<td class="name">오**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+										<tr>
+											<th style="color: #555">2[견적문의]</th>
+											<td class="tt">
+												<div class="tt-omit">렌탈10대 문의 글이 길어요</div>
+											</td>
+											<td class="name">(주)에드***</td>
+											<td class="day">19.06.17</td>
+
+										</tr>
+										<tr>
+											<th style="color: #555">2[견적문의]</th>
+											<td class="tt">
+												<div class="tt-omit">견적문의합니다. 글이 길어요</div>
+											</td>
+											<td class="name">김**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+										<tr>
+											<th style="color: blue">2[렌탈신청]</th>
+											<td class="tt">
+												<div class="tt-omit">[HP]컬러레이저 M750 글이 길어요</div>
+											</td>
+											<td class="name">서**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+										<tr>
+											<th style="color: blue">2[렌탈신청]</th>
+											<td class="tt">
+												<div class="tt-omit">[삼성]컬러레이저 M122 글이 길어요</div>
+											</td>
+											<td class="name">오**</td>
+											<td class="day">19.06.17</td>
+										</tr>
+
+
+
+									</tbody>
+								</table>
+
+							</li>
+						</ul>
+
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--상품소개카드-->
+
+
+	<!--고객센터 정보-->
+	<div class="customer-center">
+		<div class="container">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 cc-inner-box">
+				<div class="bg-info">
+					<h4>고객센터</h4>
+					<h5>상담을 원하실때는!</h5>
+					<h2>1855-4832</h2>
+					<h5 style="font-size: 13px; margin-bottom: 5px;">상담시간 | 평일 오전 10:00 ~ 오후 6:00</h5>
+					<h5 style="font-size: 13px; margin-bottom: 20px;">점심시간 | 평일 오전 12:00 ~ 오후 1:00</h5>
+					<div class="cc-icon-box">
+						<ul>
+							<li><img src="images/info-icon.png">이용안내</li>
+							<li><img src="images/faq-icon.png">자주묻는 질문</li>
+							<li><img src="images/company-intro.png">회사소개</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 main-notice-box">
+				<div>
+					<h3>공지사항</h3>
+					<h5>HP솔루션의 신속하고 다양한 소식을 만나보세요.
+						<span class="float-right" onclick="location.href='#'"><img src="./images/plus-icon.png"
+								style="width: 18px"></span>
+					</h5>
+
+					<div class="nt-d-box">
+						<div class="nt-box">
+							<div class="tt-omit">[ 공지 ] 7.1 신규 홈페이지를 오픈했습니다.</div><span>19.03.21</span>
+						</div>
+						<div class="nt-box">
+							<div class="tt-omit">[ 수리 ] 시스템점검 2019년 2월 26일(일)</div><span>19.02.19</span>
+						</div>
+						<div class="nt-box">
+							<div class="tt-omit">[ 렌탈 ] 시스템점검 2019년 2월 26일(일)</div><span>19.02.19</span>
+						</div>
+						<div class="nt-box">
+							<div class="tt-omit">[ 교육일정3 ] 시스템점검 2019년 2월 26일 (일)</div><span>19.02.19</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--고객센터 정보-->
+
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<!-- footer third section -->
+			<div class="footer-info2">
+				<!-- quick links -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-inner">
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 footer-inner2">
+						<div class="footerbox-1 mobile-no">
+							<img src="images/logo-w.png">
+						</div>
+						<div class="footerbox-1">
+							<ul class="footer-grid">
+								<li>
+									<a href="#">회사소개</a>
+								</li>
+								<li>
+									<a href="#">파트너신청</a>
+								</li>
+								<li>
+									<a href="#">고객센터</a>
+								</li>
+								<li>
+									<a href="#">개인정보취급방법</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-inner2 sns-right ">
+						<ul>
+							<i class="fa fa-2x"><img src="./images/blog.png" alt="블로그" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/insta.png" alt="인스타그램" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/facebook.png" alt="페이스북" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/youtube.png" alt="유튜브" class="sns"></i>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-xs-12 footerbox-2">
+						<h5 class="">
+							<span
+								style="color:#2AFADF; font-size: 18px; font-weight: 500; letter-spacing: 1.2px; line-height:2.2;">대표전화
+								1855-4832</span><br>
+							본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055<br>
+							공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+							대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+							통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+						</h5>
+						<p class="copyright-text">
+							© Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved
+							<!-- 3.5일 수정 -->
+						</p>
+						<div class="top-button" onclick="window.scrollTo(0,0);">
+							<span><i class="fa fa-arrow-up"></i></span>
+							<sapn>TOP</sapn>
+						</div>
+					</div>
+				</div>
+				<!-- //quick links -->
+				<!-- social icons -->
+				<!-- //social icons -->
+				<div class="clearfix">
+				</div>
+			</div>
+			<!-- //footer third section -->
+			<!-- footer fourth section (text) -->
+			<!-- //footer fourth section (text) -->
+		</div>
+	</footer>
+	<!-- //footer -->
+</body>
+
+	<script type="text/javascript" src="./js/main-sub.js"></script>
+	<script type="text/javascript" src="./js/main-slide.js"></script>
+	<!-- scrolltrigger -->
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+window.counter = function() {
+	// this refers to the html element with the data-scroll-showCallback tag
+	var span = this.querySelector('span');
+	var current = parseInt(span.textContent);
+
+	span.textContent = current + 1;
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+	  addHeight: true
+  });
+});
+</script>
+
+</html>

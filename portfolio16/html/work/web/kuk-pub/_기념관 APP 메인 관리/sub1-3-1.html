@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <title>국가기념관 스마트전시 안내시스템</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script>
+
+    <!-- jquery -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- main css -->
+    <link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/font.css" rel="stylesheet">
+
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+
+</head>
+
+<body class="pt0">
+    <header>
+        <nav class="nav-bar">
+            <div class="container">
+                <div class="navbar-brand" href="#">
+                    <ul>
+                        <a href="#">
+                            <li class="mr10"><img src="../images/logo.svg"></li>
+                            <li>국가기념관 스마트 전시안내 시스템</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul class="row">
+                        <li class="dropdown-select">
+                            <select class="custom-select" style="background-color: #f3f5f7;">
+                                <option selected>독립기념관</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </li>
+                        <li class=" ">
+                            <a class="nav-link" href="#"><img src="../images/icon/notice.png" class="ico-box">공지사항</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false"><img src="../images/icon/alert.png"
+                                    class="ico-box">알림<span class="alarm-num">12</span></a>
+                            <div class="dropdown-menu alarm-menu" aria-labelledby="alarm-notice"
+                                style="transform: translate3d(0px, 54px, 0px);!important">
+                                <button class="dropdown-item" type="button">기념관 및 계정생성 신청<span class="alarm-num"
+                                        style="position: absolute;">4</span></button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item" type="button">비콘 베터리 교체<span
+                                        class="alarm-num">33</span></button>
+                            </div>
+                        </li>
+                        <li class=" ">
+                            <a class="nav-link" href="#"><img src="../images/icon/mypage.png" class="ico-box">마이페이지</a>
+                        </li>
+                        <li class=" ">
+                            <a class="nav-link" href="#"><img src="../images/icon/logout.png" class="ico-box">로그아웃</a>
+                        </li>
+                        <li>
+                            <button class="btn search-btn" type="submit"><img src="../images/icon/search.png"></button>
+                        </li>
+
+                    </ul>
+                    <div class="search-bar">
+                        <!-- D : search-btn 클릭 나타나기 -->
+                        <div class="search-bar-box float-right">
+                            <form class="" style="width: 627px;">
+                                <select class="custom-select " style="width: 175px; background-color:#ffffff">
+                                    <option selected>전시품명</option>
+                                    <option value="1">전시안내번호</option>
+                                    <option value="2">전시품 ID</option>
+                                    <option value="3">전시안내내용</option>
+                                </select>
+                                <input class="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="col-md-2">전시품 전시안내 관리</li><!-- D : 활성화페이지일 경우 : on 처리 -->
+                    <li class="col-md-2">실내측위 관리</li>
+                    <li class="col-md-2">기념관,전시품 관리</li>
+                    <li class="col-md-2">주요통계</li>
+                    <li class="col-md-2">시스템관리</li>
+                    <li class="col-md-2">컨텐츠 및 서비스 관리</li>
+                </ul>
+            </div>
+            <!-- 메뉴드롭 -->
+            <div class="menu-drop" id="multiCollapseExample1">
+                <div class="container">
+                    <ul class="menu-drop-list">
+                        <li class="col-md-2">
+                            <ul>
+                                <li class="on"><a href="#none">기념관 APP메인 관리</a></li> <!-- D : 활성화페이지일 경우 : on 처리 -->
+                                <li><a href="#none">카테고리별 전시안내 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="#none">비콘 기본정보 관리</a></li>
+                                <li><a href="#none">Zoning 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="#none">전시품 정보 관리</a></li>
+                                <li><a href="#none">기념관 정보 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="#none">방문자 이용현황</a></li>
+                                <li><a href="#none">전시품별 전시안내 이용현황</a></li>
+                                <li><a href="#none">ICT 컨텐츠 이용현황</a></li>
+                                <li><a href="#none">군장병 관람인증 현황</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="#none">시스템 공지사항</a></li>
+                                <li><a href="#none">관리자 계정관리</a></li>
+                                <li><a href="#none">그룹/권한 관리</a></li>
+                                <li><a href="#none">공통코드 관리</a></li>
+                                <li><a href="#none">데이터연동 수동관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 ">
+                            <ul>
+                                <li><a href="#none">가상체험 컨텐츠 관리</a></li>
+                                <li><a href="#none">모바일 APP 공지관리</a></li>
+                                <li><a href="#none">군인별 관람인증 관리</a></li>
+                                <li><a href="#none">관람인증 문제은행 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="tit-area  clearfix">
+                <div class="title">
+                    <h2>기념관 APP 메인 관리 <span> APP메인 설정</span></h2>
+                </div>
+                <div class="loc-line">
+                    <a href="#">홈</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                    <a href="#">전시품 전시안내 관리</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                    <a href="#" class="active">기념관 APP 메인관리</a>
+                </div>
+            </div>
+
+            <div class="top-btn-box float-right">
+                <div class="btn-group">
+                    <button type="submit" class="btn top-btn">목록</button>
+                    <button type="submit" class="btn top-btn">미리보기</button>
+                    <button type="submit" class="btn top-btn en-btn" data-toggle="modal" data-target="#dp-popup01"
+                        style="background-color: #e4032e; border-color: #e4032e; color: #fff;">등록</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row mb80">
+            
+                 
+                <!-- 모바일 뷰 -->
+                <div class="col-5 pr0" style="padding-left: 30px;">
+                    <div class="sub-box d-flex">
+                        <div class="mobile-box" style="border-right:1px solid #e7eaee;">
+                            <div class="m-header clearfix">
+                                <div class="col-4 p0">
+                                    <span class="ico-box-l"><img src="../images/icon/back-btn.png"></span>
+                                </div>
+
+                                <div class="col-4 text-center p0"> </div>
+
+                                <div class="col-4 d-flex justify-content-end p0">
+                                    <span class="ico-box-l"><img src="../images/icon/search-m.png"></span>
+                                    <span class="ico-box-l pr0"><img src="../images/icon/hbg-btn.png"></span>
+                                </div>
+                            </div>
+                            <!-- 입력후 -->
+                            <div class="inner-tit-box input-bg02 on">
+                                <!-- 클릭시 on 활성화 우측 뷰 보임 -->
+                                <h4>백범김구 기념관</h4>
+                                <p>입력된 소개문구가 최대 2줄 출력됩니다.<br>
+                                    (입력하지 않으면 출력되지 않음)</p>
+                            </div>
+                            <!-- 입력전 
+                            <div class="inner-box box-l">
+                                <button class="btn gray-btn mb10">정보입력</button><br>
+                                <strong>메인 상단</strong><br>
+                                기념관 메인 이미지를 등록해주세요.
+
+
+                            </div> -->
+
+                            <div class="float-right mb5">
+                                <div class="btn-group">
+                                    <span style="margin-right:33px; margin-top: 13px; font-size: 13px;">자동전시안내</span>
+                                    <div class="custom-control custom-switch">
+                                        <label class="custom-control-label" for="customSwitch1"></label>
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                            <div class="inner-box box">
+                                <div>
+                                    <button class="btn gray-btn mb10">정보입력</button><br>
+
+                                    <strong>추모대상 안내</strong><br>
+                                    컨텐츠 선택&입력해주세요.
+                                </div>
+                            </div>
+                            <div class="v-sc"> <!-- 세로스크롤 -->
+                                <div class="d-flex">
+                                    <div class="col-2 p0 dept2-bar"></div>
+
+                                    <div class="inner-box  col-10 mt10 p10">
+                                        <div>
+                                            <button class="btn gray-btn mb10">정보입력</button><br>
+                                            <strong>1depth (전시관)</strong><br>
+                                            컨텐츠 선택&입력해주세요.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="col-2 p0 default-bar"></div>
+                                    <div class="col-1 p0 dept3-bar"></div>
+                                    <div class="inner-box col-9 mt10 mb10 p10">
+                                        1depth 하위 컨텐츠는<br> [상세 전시안내 관리]<br>
+                                        메뉴에서 등록해주세요.
+                                    </div>
+                                </div>
+
+
+                                <div class="d-flex">
+                                    <div class="col-2 p0 dept2-bar"></div>
+                                    <div class="col-10 p0">
+                                        <button class="add-btn btn ">추가</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="col-2 p0 default-bar"></div>
+
+                                    <div class="col-10 mb30">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="setting-box">
+                            <ul>
+                                <li>
+                                    <button class="btn gray-btn">한국어</button>
+                                    <button class="btn border-btn ">영어</button>
+                                </li>
+                                <li>
+                                    <input class="form-control" type="text" placeholder="정보입력">
+                                </li>
+                                <li>
+                                    <button class="add-btn btn">추가</button>
+                                </li>
+                                <li> 순서변경
+                                    <div class="float-right btn-group">
+                                        <sapn class="ico-box-m">up</sapn><span class="ico-box-m">down</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+
+                    <div class="sub-box bg-gray bb0">
+                       메인 상단 영역
+                    </div>
+                    <div class="sub-box" style="border-top: none;">
+                        <div class="inner pt0">
+                          
+                            <h5>메인 상단 상세정보 </h5>
+                            <table class="table-list-2t">
+                                <tbody>
+                                    <tr>
+                                        <th>BG 이미지 </th>
+                                        <td>
+                                            <div class="filebox">
+
+                                                <label class="btn file-btn" for="ex_filename">파일찾기</label>
+                                                <input class="upload-name file-btn-label" value="백범김구기념관.png"
+                                                    disabled="disabled">
+                                                <input type="file" id="ex_filename" class="upload-hidden">
+                                                <a href="#" class="close-btn"
+                                                    style="top: 11px; position: relative;right: 39px;">닫기</a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기념관명 및 소개<br> 노출여부</th>
+                                        <td>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="radio1" value="Y">
+                                                <label class="form-check-label" for="radio1"> Y </label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="radio2" value="N">
+                                                <label class="form-check-label" for="radio2"> N </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>TEXT 컬러선택</th>
+                                        <td>
+                                            <div class="color-option row">
+                                                <div class="s-btn" value="white"><span></span> 흰색</div>
+                                                <div class="s-btn" value="black"><span style="background: #000;"></span>
+                                                    검정색</div>
+                                                <div class="s-btn" value="gray"><span style="background: #aaa;"></span>
+                                                    회색</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기념관명</th>
+                                        <td>
+
+                                            <dl>
+                                                <dd>한국어</dd>
+                                                <dd>제 2전시관</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>영어</dd>
+                                                <dd><input type="text" class="form-control"></dd>
+                                            </dl>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기념관소개</th>
+                                        <td>
+
+                                            <dl>
+                                                <dd>한국어</dd>
+                                                <dd>
+                                                    <textarea type="text" class="form-control"
+                                                        rows="2">"입력된 소개문구가 최대 2줄 출력됩니다.(입력하지 않으면 출력되지 않음)" </textarea>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>영어</dd>
+                                                <dd><textarea type="text" class="form-control" rows="2"></textarea></dd>
+                                            </dl>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 풋터 -->
+    <footer>
+        <div class="container">
+
+            <h5>Copyrights © NATIONAL MUSEUM OF KOREA. All right reserved.</h5>
+
+        </div>
+    </footer>
+
+    <!-- 팝업창 -->
+    <!-- Modal -->
+    <div class="modal fade" id="dp-popup01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">전시품 검색</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="filter-box-gray mb15">
+                        <dl>
+                            <dd class="table-tit" style="width: 120px">
+                                <h5>상태</h5>
+                                <span class="table-num-view">
+                                    <select class="custom-select" style="width: 76px;">
+                                        <option>전체</option>
+                                        <option>미전시</option>
+                                        <option>전시</option>
+                                    </select>
+                                </span>
+                            </dd>
+                            <dd class="table-tit" style="width: 346px">
+                                <h5>검색어</h5>
+                                <span class="table-num-view">
+                                    <select class="custom-select" style="width: 96px;">
+                                        <option>전시품 ID</option>
+                                        <option>201934</option>
+                                        <option>432142</option>
+                                    </select>
+                                </span>
+                                <div class="search-m">
+                                    <input type="search" class="search-m-text" placeholder="입력하세요.">
+                                    <button type="submit" class="search-m-btn">검색</button>
+                                </div>
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <div class="table-tit bt0 d-inline" style="line-height: 3;">
+                        목록 <span class="float-right table-search-num m0" style="margin:0; text-align: right;">총
+                            <strong>100</strong>건</span>
+                    </div>
+                    <div class="inner pt0" style="padding-top: 0;">
+                        <table class="table table-bordered table-list-t3">
+                            <thead>
+                                <tr>
+                                    <th>상태</th>
+                                    <th>전시품ID</th>
+                                    <th width="50%">전시품명</th>
+                                    <th>사용여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>미전시</td>
+                                    <td>523432</td>
+                                    <td>전시품명AA</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>미전시</td>
+                                    <td>523432</td>
+                                    <td>전시품명AA</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>미전시</td>
+                                    <td>523432</td>
+                                    <td>전시품명AA</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>미전시</td>
+                                    <td>523432</td>
+                                    <td>전시품명AA</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>미전시</td>
+                                    <td>523432</td>
+                                    <td>전시품명AA</td>
+                                    <td>Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn apply-btn" style="background: #e4032e;">적용</button>
+                    <button type="button" class="btn cancel-btn" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

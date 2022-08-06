@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Portfolio Portfolio</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO 검색엔진 -->
+    <meta name="author" content="yeong">
+    <meta name="description" content="리액트 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">  <!-- 모든정보가져감 -->
+
+    <!-- facebook -->
+    <meta property="og:url" content="#none">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="React Portfolio work">
+    <meta property="og:description" content="리액트 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio work">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FEDB01" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="manifest" href="" />
+    <link rel="icon" href="assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-152.png" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <link rel="icon" typse="image/png" sizes="152x152" href="assets/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/favicon-128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <link rel="stylesheet" href="assets/styles/variables.css">
+    <link rel="stylesheet" href="assets/styles/mixins.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    
+</head>
+<body>
+    <div id="skip">
+        <a href="#">바로가기 스킵메뉴</a>
+    </div>
+    <!-- //skip -->
+    <div id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 로딩 애니메이션 -->
+    <header>
+        <div id="header">
+            <!-- 로고 -->
+            <div class="logo black">
+                <a href="index.html"><span>Yeong's</span></a>
+            </div>
+            <nav class="menu">
+                <div class="nav">
+                    <div class="nav-background">
+                        <div class="nav-bg nav-bg1"></div>
+                        <div class="nav-bg nav-bg2"></div>
+                        <div class="nav-bg nav-bg3"></div>
+                        <div class="nav-bg nav-bg4"></div>
+                    </div>
+                    <h2 class="sr-only">메인 메뉴</h2>
+                    <ul>
+                        <li><a href="javascript:navLink1()">home</a></li>
+                        <li><a href="javascript:navLink2()">about</a></li>
+                        <li><a href="javascript:navLink3()">portfolio</a></li>
+                        <li><a href="javascript:navLink6()">contact</a></li>
+                        <li><a href="javascript:navLink4()">animation</a></li>
+                        <li><a href="javascript:navLink5()">javascript</a></li>
+                    </ul>
+                </div>
+                <!-- 햄버거버튼 -->
+                <div class="menu-line">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hamburger-close">
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <!-- header -->
+    <main>
+        <section id="section1" class="black">
+            <div class="sec1 content-box">
+                <span>portfolio</span>
+                <h1 class="sr-only">let's discover our best projects ever</h1>
+                <div class="text-box">
+                    <p aria-hidden="true"><span class="tit">let's discover</span></p>
+                    <p aria-hidden="true"><span class="tit">our best</span></p>
+                    <p aria-hidden="true"><span class="tit">projects ever</span></p>
+                    <!-- <p aria-hidden="true"><span class="tit">web developer</span></p> -->
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2" class="black">
+            <div class="sec2">
+                <div class="content-box">
+                <ul>
+                    <li class="port port1">
+                        <div class="port-cont">
+                            <div class="port-text-wrap">
+                                <span>01 - 05</span>
+                                <span>web standard</span>
+                                <h2>웹표준</h2>
+                            </div>
+                            <div class="port-code-wrap">
+                                <div></div>
+                                <ul>
+                                    <li data-index-number="1"><i class="fa fa-cog" aria-hidden="true"></i><span>skip menu <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="2"><i class="fa fa-cog" aria-hidden="true"></i><span>layer popup <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="3"><i class="fa fa-cog" aria-hidden="true"></i><span>slick slider <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                </ul>
+                                <span class="port-code-link" data-index-number="4"><pre><code><span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#site"</span><span class="tag">></span>사이트 보기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span></code></pre></span>
+                            </div>
+                        </div>
+                        <div class="port-img-wrap">
+                            <figure class="show">
+                                <a href="#"><img src="assets/images/react-port1.jpg" alt="포트폴리오1"></a>
+                            </figure>
+                            <ul class="code-tab">
+                                <li>
+                                    <pre><code>  <span class="remark">/* 스킵메뉴 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="selector">id</span>=<span class="name">"skip"</span><span class="tag">></span>
+        <span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#cont_nav"</span><span class="tag">></span>전체 메뉴 바로가기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span>
+        <span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#cont_ban"</span><span class="tag">></span>배너 영역 바로가기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span>
+        <span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#cont_cont"</span><span class="tag">></span>컨텐츠 영역 바로가기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span>
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">style</span><span class="tag">></span>
+        <span class="name">#skip</span> <span class="tag">{</span> <span class="attr">position</span>: relative; <span class="tag">}</span>
+        <span class="name">#skip a</span> <span class="tag">{</span>
+            <span class="attr">position</span>: absolute; 
+            <span class="attr">left</span>: 0; <span class="attr">top</span>: -35px; 
+            <span class="attr">border</span>: 1px solid #fff; 
+            <span class="attr">color</span>: #fff; 
+            <span class="attr">background</span>: #333; 
+            <span class="attr">line-height</span>: 30px; 
+            <span class="attr">width</span>: 140px; 
+            <span class="attr">text-align</span>: center;
+        <span class="tag">}</span>
+        <span class="name">#skip a:active</span>, <span class="name">#skip a:focus</span> <span class="tag">{</span> <span class="attr">top</span>: 0; <span class="tag">}</span>
+    <span class="tag">&lt;/</span><span class="tag">style</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 레이어팝업 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="selector">id</span>=<span class="name">"layer"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">img</span> <span class="attr">src</span>=<span class="val">"img/webstandard1.jpg"</span> <span class="attr">alt</span>=<span class="val">"웹표준 사이트"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#"</span> <span class="selector">class</span>=<span class="name">"close"</span>Close<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">script</span><span class="tag">></span>
+        <span class="tag">$(</span><span class="name">".layer"</span><span class="tag">)</span>.<span class="event">click</span><span class="tag">(</span><span class="selector">function</span><span class="tag">(</span>e<sapn class="tag">){</sapn>
+            e.<span class="attr">preventDefault()</span>;
+            <span class="remark">//$("#layer").css("display","block");</span>
+            <span class="tag">$(</span><span class="name">"#layer"</span><span class="tag">)</span>.<span class="event">fadeIn()</span>;
+            <span class="remark">//$("#layer").slideDown();</span>
+            <span class="remark">//$("#layer").show();</span>
+        <span class="tag">});</span>
+        <span class="tag">$(</span><span class="name">"#layer .close"</span><span class="tag">)</span>.<span class="event">click</span><span class="tag">(</span><span class="selector">function</span><span class="tag">(</span>e<sapn class="tag">){</sapn>
+            e.<span class="attr">preventDefault()</span>;
+            <span class="remark">//$("#layer").css("display","none");</span>
+            <span class="tag">$(</span><span class="name">"#layer"</span><span class="tag">)</span>.<span class="event">fadeOut()</span>;
+            <span class="remark">//$("#layer").slideUp();</span>
+            <span class="remark">//$("#layer").hide();</span>
+        <span class="tag">});</span>
+    <span class="tag">&lt;/</span><span class="tag">script</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 슬릭슬라이드 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">script</span><span class="tag">></span>
+        <span class="remark">//배너</span>
+        <span class="remark">//html 마크업 셋팅 -> css 연동 -> 제이쿼리 연동 -> 제이쿼리 호출</span>
+        <span class="tag">$(</span><span class="name">".ban"</span><span class="tag">)</span>.<span class="event">slick</span><span class="tag">({</span>
+            <span class="attr">infinite</span>: <span class="val">true</span>,
+            <span class="attr">slidesToShow</span>: <span class="val">3</span>,
+            <span class="attr">slidesToScroll</span>: <span class="val">1</span>,
+            <span class="attr">autoplay</span>: <span class="val">true</span>,
+            <span class="attr">autoplaySpeed</span>: <span class="val">3000</span>,
+            <span class="attr">dots</span>: <span class="val">true</span>
+        <span class="tag">});</span>
+        <span class="remark">//갤러리</span>
+        <span class="tag">$(</span><span class="name">".gallery_img"</span><span class="tag">)</span>.<span class="event">slick</span><span class="tag">({</span>
+            <span class="attr">arrows</span>: <span class="val">false</span>,
+            <span class="attr">fade</span>: <span class="val">true</span>,
+            <span class="attr">pauseOnHover</span>: <span class="val">true</span>,
+            <span class="attr">arrows</span>: <span class="val">false</span>,
+            <span class="attr">infinite</span>: <span class="val">true</span>,
+            <span class="attr">autoplay</span>: <span class="val">true</span>,
+            <span class="attr">autoplaySpeed</span>: <span class="val">3000</span>,
+            <span class="attr">speed</span>: <span class="val">300</span>,
+            <span class="attr">slidesToShow</span>: <span class="val">1</span>,
+        <span class="tag">});</span>
+    <span class="tag">&lt;/</span><span class="tag">script</span><span class="tag">></span>
+</span>                                    
+                                    </code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="port port2">
+                        <div class="port-cont">
+                            <div class="port-text-wrap">
+                                <span>02 - 05</span>
+                                <span>web standard</span>
+                                <h2>반응형</h2>
+                            </div>
+                            <div class="port-code-wrap">
+                                <div></div>
+                                <ul>
+                                    <li data-index-number="1"><i class="fa fa-cog" aria-hidden="true"></i><span>말줄임효과 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="2"><i class="fa fa-cog" aria-hidden="true"></i><span>이미지해상도 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="3"><i class="fa fa-cog" aria-hidden="true"></i><span>media query <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                </ul>
+                                <span class="port-code-link" data-index-number="4"><pre><code><span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#site"</span><span class="tag">></span>사이트 보기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span></code></pre></span>
+                            </div>
+                        </div>
+                        <div class="port-img-wrap">
+                            <figure class="show">
+                                <a href="#"><img src="assets/images/react-port2.jpg" alt="포트폴리오1"></a>
+                            </figure>
+                            <ul class="code-tab">
+                                <li>
+                                    <pre><code>  <span class="remark">/* 말줄임효과 */</span>
+<span class="token">
+    <span class="remark"><span>&lt;!--</span> 게시판2 <span>--></span></span>
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="selector">class</span>=<span class="name">"notice2"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">h5</span><span class="tag">></span>Notice2<span class="tag">&lt;/</span><span class="tag">h5</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">ul</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">li</span><span class="tag">></span><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">></span>
+                이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다.
+            <span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">li</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">li</span><span class="tag">></span><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag">></span>
+                이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다. 이 줄은 두 줄 효과입니다.
+            <span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">li</span><span class="tag">></span>
+        <span class="tag">&lt;/</span><span class="tag">ul</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#"</span><span class="tag"> <span class="selector">class</span>=<span class="nam">"more"</span> <span class="attr">title</span>=<span class="val">"더 보기"</span>></span>More <span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">style</span><span class="tag">></span>
+        <span class="name">.notice2 li</span> <span class="tag">{</span>
+            <span class="attr">max-height</span>: 39px; 
+            <span class="attr">overflow</span>: hidden; 
+            <span class="attr">text-overflow</span>: ellipsis; 
+            <span class="attr">display</span>: -webkit-box; 
+            <span class="attr">-webkit-box-orient</span>: vertical; 
+            <span class="attr">-webkit-line-clamp</span>: 2;
+        <span class="tag">}</span>
+    <span class="tag">&lt;/</span><span class="tag">style</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 해상도에 따른 이미지 사이즈 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="selector">class</span>=<span class="name">"blog1"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">h5</span> <span class="selector">class</span>=<span class="name">"ir_su"</span><span class="tag">></span>image1<span class="tag">&lt;/</span><span class="tag">h5</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">figure</span><span class="tag">></span>
+            <span class="remark"><span>&lt;!</span><span>--</span> <span class="tag">&lt;</span><span class="tag">img</span> <span class="attr">src</span>=<span class="val">"img/blog1_@1.jpg"</span> <span class="selector">class</span>=<span class="name">"img-normal"</span> <span class="attr">alt</span>=<span class="val">"normal image"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">img</span> <span class="attr">src</span>=<span class="val">"img/blog1_@2.jpg"</span> <span class="selector">class</span>=<span class="name">"img-retina"</span> <span class="attr">alt</span>=<span class="val">"retina image"</span> <span class="attr">width</span>=<span class="val">"100%"</span><span class="tag">></span> <span>--></span></span>
+            <span class="tag">&lt;</span><span class="tag">img</span> <span class="attr">src</span>=<span class="val">"img/blog3_@1.jpg"</span> <span class="attr">srcset</span>=<span class="val">"img/blog3_@1.jpg 1x, img/blog3_@2.jpg 2x, img/blog3_@3.jpg 3x"</span> <span class="attr">alt</span>=<span class="val">"이미지"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">figcaption</span><span class="tag">></span>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 
+            반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.<span class="tag">&lt;/</span><span class="tag">figcaption</span><span class="tag">></span>
+        <span class="tag">&lt;/</span><span class="tag">figure</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 미디어쿼리 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">style</span><span class="tag">></span>
+        <span class="remark">/* mediaquery */</span>
+        <span class="remark">/* 화면 너비 0~ 1220px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:1220px<span class="tag">) {</span>
+            <span class="name">.container</span> <span class="tag">{</span><span class="attr"> width</span>:100%; <span class="tag">}</span>
+            <span class="name">.row</span> <span class="tag">{</span><span class="attr"> padding</span>:0 15px; <span class="tag">}</span>
+            <span class="name">#contents .container</span> <span class="tag">{</span><span class="attr"> border</span>:0; <span class="tag">}</span>
+        <span class="tag">}</span>
+
+        <span class="remark">/* 화면 너비 0~ 1024px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:1024px<span class="tag">) {</span>
+
+        <span class="tag">}</span>
+
+        <span class="remark">/* 화면 너비 0~ 960px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:960px<span class="tag">) {</span>
+            <span class="name">.nav > div</span> <span class="tag">{</span><span class="attr"> float</span>:none;<span class="attr"> width</span>:100%; <span class="tag">}</span>
+            <span class="name">.nav > div:last-child</span> <span class="tag">{</span><span class="attr"> width</span>:100%; <span class="tag">}</span>
+            <span class="name">.nav > div ol</span> <span class="tag">{</span><span class="attr"> margin-bottom</span>:10px; <span class="tag">}</span>
+            <span class="name">.nav > div li</span> <span class="tag">{</span><span class="attr"> width</span>:33.3333%; <span class="tag">}</span>
+            <span class="name">.nav > div:last-child li</span> <span class="tag">{</span><span class="attr"> width</span>:33.3333%; <span class="tag">}</span>
+        <span class="tag">}</span>
+
+        <span class="remark">/* 화면 너비 0~ 768px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:768px<span class="tag">) {</span>
+
+        <span class="tag">}</span>
+    
+        <span class="remark">/* 화면 너비 0~ 600px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:600px<span class="tag">) {</span>
+            <span class="name">.nav > div li</span> <span class="tag">{</span><span class="attr"> width</span>:50%; <span class="tag">}</span>
+            <span class="name">.nav > div:last-child li</span> <span class="tag">{</span><span class="attr"> width</span>:50%; <span class="tag">}</span>
+        <span class="tag">}</span>
+
+        <span class="remark">/* 화면 너비 0~ 480px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:480px<span class="tag">) {</span>
+
+        <span class="tag">}</span>
+
+        <span class="remark">/* 화면 너비 0~ 320px */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>:320px<span class="tag">) {</span>
+            <span class="name">.nav > div li</span> <span class="tag">{</span><span class="attr"> width</span>:100%; <span class="tag">}</span>
+            <span class="name">.nav > div:last-child li</span> <span class="tag">{</span><span class="attr"> width</span>:100%; <span class="tag">}</span>
+        <span class="tag">}</span>
+    <span class="tag">&lt;/</span><span class="tag">style</span><span class="tag">></span>
+</span>
+                                    </code></pre>   
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="port port3">
+                        <div class="port-cont">
+                            <div class="port-text-wrap">
+                                <span>03 - 05</span>
+                                <span>web standard</span>
+                                <h2>아마도</h2>
+                            </div>
+                            <div class="port-code-wrap">
+                                <div></div>
+                                <ul>
+                                    <li data-index-number="1"><i class="fa fa-cog" aria-hidden="true"></i><span>다단 레이아웃 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="2"><i class="fa fa-cog" aria-hidden="true"></i><span>index.php <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="3"><i class="fa fa-cog" aria-hidden="true"></i><span>login <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                </ul>
+                                <span class="port-code-link" data-index-number="4"><pre><code><span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#site"</span><span class="tag">></span>사이트 보기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span></code></pre></span>
+                            </div>
+                        </div>
+                        <div class="port-img-wrap">
+                            <figure class="show">
+                                <a href="#"><img src="assets/images/react-port3.jpg" alt="포트폴리오1"></a>
+                            </figure>
+                            <ul class="code-tab">
+                                <li>
+                                    <pre><code>  <span class="remark">/* 다단 레이아웃 */</span>
+<span class="token">
+    <span class="name">#container ul</span> <span class="tag">{</span>
+        <span class="remark">/* display:flex; 
+              flex-direction:column; 
+              flex-wrap:wrap; justify-content:space-between;
+              align-content: space-around; */</span>
+        <span class="attr">width</span>: 100%; 
+        <span class="attr">column-count</span>: 3; 
+        <span class="attr">column-gap</span>: 0; 
+        <span class="attr">max-width</span>: 100%; 
+        <span class="attr">padding-bottom</span>: 50px;
+    <span class="tag">}</span> <span class="remark">/* 이미지 3단 배열 */</span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 최근 게시글 출력 */</span>
+<span class="token">
+    <span class="tag">&lt;?</span><span class="tag">php</span> <span class="attr">echo</span> <span class="event">latest</span><span class="tag">(</span><span class="name">'theme/amadoSkin'</span>, <span class="name">'portfolio'</span>, <span class="val">9</span>, <span class="val">23</span><span class="tag">)</span>;
+    <span class="remark">// latest(스킨명, 게시판명, 최근게시물수, 제목의 글자수)</span>
+    <span class="tag">?></span>
+    <span class="remark">&lt;!--</span> <span class="remark">포트폴리오 게시판에서 9개의 게시물을 뽑아온다는 의미, 23 제목의 글자수</span> <span class="remark">--></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 로그인 폼 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="selector">id</span>=<span class="name">"wrap_login"</span><span class="tag">></span>
+    <span class="tag">&lt;</span><span class="tag">form</span> <span class="attr">name</span>=<span class="val">"flogin"</span> <span class="attr">action</span>=<span class="val">"&lt;?php echo $login_action_url ?>"</span> <span class="attr">method</span>=<span class="val">"post"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">fieldset</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">legend</span> <span class="selector">class</span>=<span class="name">"ir_su"</span><span class="tag">></span>로그인<span class="tag">&lt;/</span><span class="tag">legend</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">label</span> <span class="attr">for</span>=<span class="val">"login_id"</span> <span class="selector">class</span>=<span class="name">"ir_su"</span><span class="tag">></span>아이디 :<span class="tag">&lt;/</span><span class="tag">label</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">input</span> <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">name</span>=<span class="val">"mb_id"</span> <span class="selector">id</span>=<span class="name">"login_id"</span> <span class="attr">required</span> <span class="attr">placeholder</span>=<span class="val">"아이디"</span> <span class="attr">autocomplete</span>=<span class="val">"off"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">label</span> <span class="attr">for</span>=<span class="val">"login_pw"</span> <span class="selector">class</span>=<span class="name">"ir_su"</span><span class="tag">></span>비밀번호 :<span class="tag">&lt;/</span><span class="tag">label</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">input</span> <span class="attr">type</span>=<span class="val">"password"</span> <span class="attr">name</span>=<span class="val">"mb_password"</span> <span class="selector">id</span>=<span class="name">"login_pw"</span> <span class="attr">required</span> <span class="attr">placeholder</span>=<span class="val">"비밀번호"</span><span class="tag">></span>   
+            <span class="tag">&lt;</span><span class="tag">input</span> <span class="attr">type</span>=<span class="val">"submit"</span> <span class="attr">value</span>=<span class="val">"로그인"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">input</span> <span class="attr">type</span>=<span class="val">"reset"</span> <span class="attr">value</span>=<span class="val">"다시쓰기"</span> <span class="selector">class</span>=<span class="name">"ir_su"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">label</span> <span class="attr">for</span>=<span class="val">"auto"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">input</span> <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="selector">id</span>=<span class="name">"auto"</span> <span class="attr">name</span>=<span class="val">"auto_login"</span><span class="tag">></span>
+                로그인 상태 유지  
+            <span class="tag">&lt;/</span><span class="tag">label</span><span class="tag">></span>
+        <span class="tag">&lt;/</span><span class="tag">fieldset</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">form</span><span class="tag">></span>  
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="port port4">
+                        <div class="port-cont">
+                            <div class="port-text-wrap">
+                                <span>04 - 05</span>
+                                <span>web standard</span>
+                                <h2>티스토리</h2>
+                            </div>
+                            <div class="port-code-wrap">
+                                <div></div>
+                                <ul>
+                                    <li data-index-number="1"><i class="fa fa-cog" aria-hidden="true"></i><span>애니메이션 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="2"><i class="fa fa-cog" aria-hidden="true"></i><span>main slider <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="3"><i class="fa fa-cog" aria-hidden="true"></i><span> <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                </ul>
+                                <span class="port-code-link" data-index-number="4"><pre><code><span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#site"</span><span class="tag">></span>사이트 보기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span></code></pre></span>
+                            </div>
+                        </div>
+                        <div class="port-img-wrap">
+                            <figure class="show">
+                                <a href="#"><img src="assets/images/react-port4.jpg" alt="포트폴리오1"></a>
+                            </figure>
+                            <ul class="code-tab">
+                                <li>
+                                    <pre><code>  <span class="remark">/* 가입하기 애니메이션 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">div</span> <span class="attr">aria-hidden</span>=<span class="val">"true"</span> <span class="selector">id</span>=<span class="name">"start_bg"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">span</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">span</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">span</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">span</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">span</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">span</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">span</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">span</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">></span>
+</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">style</span><span class="tag">></span>
+        <span class="name">#start #start_bg span</span> <span class="tag">{</span> <span class="attr">display</span>: block; <span class="attr">height</span>: 148px; <span class="attr">width</span>: 100%; <span class="attr">transition</span>: all .5s ease; <span class="attr">position</span>: absolute; <span class="tag">}</span>
+        <span class="name">#start #start_bg span:nth-child(1)</span> <span class="tag">{</span> <span class="attr">background-image</span>: url(image/bg_bottom.png); <span class="attr">transform</span>: translateY(217px); <span class="attr">z-index</span>: 10; <span class="tag">}</span>
+        <span class="name">#start.on #start_bg span:nth-child(1)</span> <span class="tag">{</span> <span class="attr">transform</span>: translateY(69px); <span class="tag">}</span>
+        <span class="name">#start #start_bg span:nth-child(2)</span> <span class="tag">{</span> 
+            <span class="attr">background-image</span>: url(image/bg_door1.png); 
+            <span class="attr">width</span>: 80px; <span class="attr">height</span>: 159px; 
+            <span class="attr">left</span>: 50%; <span class="attr">transform</span>: translateY(376px); 
+            <span class="attr">transition-delay</span>: .6s; 
+        <span class="tag">}</span>   
+        <span class="name">#start.on #start_bg span:nth-child(2)</span> <span class="tag">{</span> <span class="attr">transform</span>: translateY(0px); <span class="tag">}</span>
+        <span class="name">#start #start_bg span:nth-child(3)</span> <span class="tag">{</span> 
+            <span class="attr">background-image</span>: url(image/bg_door2.png); 
+            <span class="attr">width</span>: 20px; <span class="attr">height</span>: 139px; 
+            <span class="attr">left</span>: 50%; <span class="attr">transform</span>: translateY(0px); 
+            <span class="attr">top</span>: 20px; <span class="attr">transition-delay</span>: 1.0s; 
+            <span class="attr">background-position</span>: -30px 30px; <span class="attr">background-repeat</span>: no-repeat; 
+        <span class="tag">}</span>
+        <span class="name">#start.on #start_bg span:nth-child(3)</span> <span class="tag">{</span> <span class="attr">background-position</span>: right top; <span class="tag">}</span>
+        <span class="name">#start #start_bg span:nth-child(4)</span> <span class="tag">{</span> 
+            <span class="attr">background-image</span>: url(image/bg_stair.png); 
+            <span class="attr">width</span>: 73px; <span class="attr">height</span>: 62px; 
+            <span class="attr">left</span>: 50%; <span class="attr">transform</span>: translateY(0px); 
+            <span class="attr">top</span>: 84px; <span class="attr">transition-delay</span>: 1.4s; 
+            <span class="attr">background-position</span>: -243px 31px; <span class="attr">background-repeat</span>: no-repeat; 
+        <span class="tag">}</span> 
+        <span class="name">#start.on #start_bg span:nth-child(4)</span> <span class="tag">{</span> <span class="attr">background-position</span>: -170px 0; <span class="tag">}</span>   
+    <span class="tag">&lt;/</span><span class="tag">style</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* 메인슬라이드 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">script</span><span class="tag">></span>
+        <span class="event">var</span> <span class="name">firstLi</span>=<span class="tag">$(</span><span class="name">"#slider li:first"</span><span class="tag">)</span>.<span class="event">clone()</span>,  <span class="remark">// clone 선택요소에 복제</span>
+        <span class="name">w</span>=<span class="tag">$(</span><span class="name">"#slider"</span><span class="tag">)</span>.<span class="event">width()</span>,
+        <span class="name">n</span>=<span class="val">0</span>, <span class="name">li</span>=<span class="tag">$(</span><span class="name">"#slider li"</span><span class="tag">)</span>.<span class="event">length</span>,
+        <span class="name">sliderAuto</span>=<span class="val">true</span>;
+
+        <span class="tag">$(</span><span class="name">"#slider ul"</span><span class="tag">)</span>.<span class="event">width</span><span class="tag">(</span><span class="val">w*</span><span class="tag">(</span><span class="val">li+1</span><span class="tag">)</span><span class="tag">)</span>; <span class="remark">// ul의 크기 지정</span>
+        <span class="tag">$(</span><span class="name">"#slider ul"</span><span class="tag">)</span>.<span class="event">append</span><span class="tag">(</span><span class="name">firstLi</span><span class="tag">)</span> <span class="remark">// append 선택요소에 추가</span>
+        <span class="tag">$(</span><span class="name">"#slider li"</span><span class="tag">)</span>.<span class="event">width</span><span class="tag">(</span><span class="val">"calc</span><span class="tag">(</span><span class="val">100% / "+<span class="tag">(</span>li+1<span class="tag">)</span>+"</span><span class="tag">)</span><span class="val">"</span><span class="tag">)</span>;
+        <span class="event">setInterval</span><span class="tag">(</span><span class="selector">function</span><span class="tag">(){</span>
+            <span class="selector">if</span><span class="tag">(</span><span class="name">sliderAuto</span>=<span>=</span><span class="val">true</span><span class="tag">) {</span>
+                <span class="tag">$(</span><span class="name">"#slider ul"</span><span class="tag">)</span>.<span class="event">animate</span><span class="tag">({</span><span class="attr">marginLeft</span>: <span class="val">- <span class="tag">(</span>++n<span class="tag">)</span>*w</span><span class="tag">}</span>, <span class="val">"fast"</span>, <span class="event">function</span><span class="tag">(){</span>
+                    <span class="selector">if</span><span class="tag">(</span><span class="name">n</span>><span>=</span><span class="name">li</span><span class="tag">){</span><span class="name">n</span>=<span class="val">0</span>; <span class="tag">$(</span><span class="name">"#slider ul"</span><span class="tag">)</span>.<span class="event">css</span><span class="tag">(</span><span class="attr">"margin-left"</span>, <span class="val">0</span><span class="tag">)}</span>
+                <span class="tag">})</span>;
+            <span class="tag">}</span>
+        <span class="tag">}</span>, <span class="val">3000</span><span class="tag">)</span>;
+    <span class="tag">&lt;/</span><span class="tag">script</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="port port5">
+                        <div class="port-cont">
+                            <div class="port-text-wrap">
+                                <span>05 - 05</span>
+                                <span>web standard</span>
+                                <h2>애플뮤직</h2>
+                            </div>
+                            <div class="port-code-wrap">
+                                <div></div>
+                                <ul>
+                                    <li data-index-number="1"><i class="fa fa-cog" aria-hidden="true"></i><span>해상도 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li data-index-number="2"><i class="fa fa-cog" aria-hidden="true"></i><span>모바일 레이아웃 <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                    <li><i class="fa fa-cog" aria-hidden="true"></i><span> <i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+                                </ul>
+                                <span class="port-code-link" data-index-number="4"><pre><code><span class="token"><span class="tag">&lt;</span><span class="tag">a</span> <span class="attr">href</span>=<span class="val">"#site"</span><span class="tag">></span>사이트 보기<span class="tag">&lt;/</span><span class="tag">a</span><span class="tag">></span></span></code></pre></span>
+                            </div>
+                        </div>
+                        <div class="port-img-wrap">
+                            <figure class="show">
+                                <a href="#"><img src="assets/images/react-port5.jpg" alt="포트폴리오1"></a>
+                            </figure>
+                            <ul class="code-tab">
+                                <li>
+                                    <pre><code>  <span class="remark">/* 해상도에 따른 이미지 */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">picture</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">source</span> <span class="attr">srcset</span>=<span class="val">"img/next01@3x.jpg"</span> <span class="attr">media</span>=<span class="val">"(min-width:800px)"</span><span class="tag">></span> <span class="remark">&lt;!-- 크기 별로 --></span>
+        <span class="tag">&lt;</span><span class="tag">source</span> <span class="attr">srcset</span>=<span class="val">"img/next01@2x.jpg"</span> <span class="attr">media</span>=<span class="val">"(min-width:600px)"</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">img</span> <span class="attr">src</span>=<span class="val">"img/next01.jpg"</span> <span class="attr">srcset</span>=<span class="val">"img/next01.jpg 1x, img/next01@2x.jpg 2x, img/next01@3x.jpg 3x"</span> <span class="attr">alt</span>=<span class="val">"이미지1"</span><span class="tag">></span> <span class="remark">&lt;!-- 해상도 별로 --></span>
+    <span class="tag">&lt;/</span><span class="tag">picture</span><span class="tag">></span>    
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <pre><code>  <span class="remark">/* layout */</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">header</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">header</span><span class="tag">></span>
+    <span class="tag">&lt;</span><span class="tag">main</span><span class="tag">></span>
+        <span class="tag">&lt;</span><span class="tag">section</span> <span class="selector">class</span>=<span class="name">"music"</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">article</span> <span class="selector">class</span>=<span class="name">"bestM"</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">article</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">article</span> <span class="selector">class</span>=<span class="name">"recentM"</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">article</span><span class="tag">></span>
+            <span class="tag">&lt;</span><span class="tag">article</span> <span class="selector">class</span>=<span class="name">"nextM"</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">article</span><span class="tag">></span>
+        <span class="tag">&lt;/</span><span class="tag">section</span><span class="tag">></span>
+    <span class="tag">&lt;/</span><span class="tag">main</span><span class="tag">></span>
+    <span class="tag">&lt;</span><span class="tag">section</span> <span class="selector">class</span>=<span class="name">"play"</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">section</span><span class="tag">></span>
+    <span class="tag">&lt;</span><span class="tag">nav</span><span class="tag">></span><span class="tag">&lt;/</span><span class="tag">nav</span><span class="tag">></span>
+</span>
+<span class="token">
+    <span class="tag">&lt;</span><span class="tag">style</span><span class="tag">></span>
+        <span class="remark">/* container */</span>
+        <span class="name">.container</span> <span class="tag">{</span><span class="attr">width</span>: 1000px; <span class="attr">margin</span>: 0 auto;<span class="tag">}</span>
+
+        <span class="remark">/* row */</span>
+        <span class="name">.row</span> <span class="tag">{</span><span class="attr">position</span>: relative; <span class="attr">margin</span>: 0 20px;<span class="tag">}</span>
+
+        <span class="remark">/* mediaquery */</span>
+        <span class="event">@media</span> <span class="tag">(</span><span class="attr">max-width</span>: 1020px<span class="tag">){</span>
+            <span class="name">.container</span> <span class="tag">{</span><span class="attr">width</span>: 100%;<span class="tag">}</span>
+        <span class="tag">}</span>
+    <span class="tag">&lt;/</span><span class="tag">style</span><span class="tag">></span>
+</span>
+                                    </code></pre>
+                                </li>
+                                <li>
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+    </main>
+    <footer>
+        <div class="content-box">
+            <div class="foot">
+                <span><span>speak to</span> a me now!</span>
+                <h2>
+                    <div class="cursor">
+                        <figure>
+                            <img src="assets/images/cursor.png" alt="커서이미지">
+                        </figure>
+                    </div>
+                    <!-- 마우스 -->
+                    <span><span>g</span><span>e</span><span>t</span><span>&nbsp;</span><span>i</span><span>n</span><span>&nbsp;</span><span>t</span><span>o</span><span>u</span><span>c</span><span>h</span></span>
+                </h2>
+                <div>
+                    <address>ⓒ yeong portfolio 2021</address>
+                    <ul>
+                        <li><a href="https://blog.naver.com/rladudwl210"><span class="sr-only">naver blog</span></a></li>
+                        <li><a href="https://www.figma.com/file/x5SGbXNJzAqxTDXGcxpzNq/Untitled"><span class="sr-only">figma</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/loading.js"></script>
+</body>
+</html>

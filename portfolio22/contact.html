@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- web font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <!--email-->
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="scroll">0</div>
+      <li class="react_btn"><a href="index.html">REACT</a></li>
+      <ul>
+        <li><a href="works.html">SITE</a></li>
+        <li><a href="js.html">CSS/ANI</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <section id="section2">
+      <!-- <div class="section2_bg"></div> -->
+      <div class="contact_container">
+        <div class="contact_left">
+          <h2>Contact me</h2>
+          <div class="form-box">
+            <form id="form">
+              <!-- <div class="field">
+                <label for="from_name">보내는분의 이름</label>
+                <input type="text" name="from_name" id="to_name" />
+              </div> -->
+              
+              </div>
+              <div class="field">
+                <label for="from_name"
+                  >보내는분의 이메일(@포함하여 적어주세요)</label
+                >
+                <input type="text" name="from_name" id="from_name" />
+              </div>
+
+              <!-- <div class="field">
+                <label for="reply_to">reply_to</label>
+                <input type="text" name="reply_to" id="reply_to" />
+              </div> -->
+              <div class="field">
+                <label for="test">보내는분의 이름</label>
+                <input type="text" name="test" id="test" />
+              </div>
+              <div class="field">
+                <label for="message">보낼 메시지</label>
+                <input
+                  class="message_box"
+                  type="text"
+                  name="message"
+                  id="message"
+                />
+              <input
+                class="send_btn"
+                type="submit"
+                id="button"
+                value="메일 보내기"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="contact_right">
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+    <!--email-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("user_RSNfD6pKzsNI9eiYQjWDT");
+    </script>
+    <script>
+      const btn = document.getElementById("button");
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          btn.value = "메일 보내는중...";
+          const serviceID = "default_service";
+          const templateID = "template_3lfd22j";
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
+              alert("메일 보내기에 성공했습니다!");
+            },
+            (err) => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
+
+    <!--아래부터 지도-->
+    <script
+      type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a64f54fc48e7ec6c049949e50c08a39">
+    </script>
+    <script>
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.55688489062793 , 126.94619635365977), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    var iwContent = '<div style="padding:10px;">집에서 가까운 역이에요!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(37.55688489062793, 126.94619635365977), //인포윈도우 표시 위치입니다
+        iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+    // 인포윈도우를 생성하고 지도에 표시합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        map: map, // 인포윈도우가 표시될 지도
+        position : iwPosition, 
+        content : iwContent,
+        removable : iwRemoveable
+    });
+    </script>
+  </body>
+</html>

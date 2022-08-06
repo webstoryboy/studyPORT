@@ -1,0 +1,299 @@
+/*######### 레이아웃 #########*/
+body {
+  background: #000;
+  color: #fff;
+}
+h1,h2,h3 {
+  font-family: 'athene';
+  
+}
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/*######### 공통영역 #########*/
+.title {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.title h2 {
+  position: absolute;
+  top: 57%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 9.37vw;
+}
+.r {
+  letter-spacing: -20px;
+}
+
+
+/*######### header #########*/
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-family: 'Rajdhani';
+  padding: 0 2.08vw;
+  width: 100%;
+  height: 3.38vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+header h1 {
+  float: left;
+  line-height: 3.38vw;
+  font-size: 0.93vw;
+  color: #B7B7B7;
+  font-family: 'Rajdhani';
+}
+header ul {
+  float: right;
+}
+header ul li {
+  display: inline-block;
+  height: 3.38vw;
+}
+header ul li a {
+  padding: 0 0.6vw;
+  line-height: 3.38vw;
+  font-size: 0.93vw;
+  font-weight: 100;
+  color: #B7B7B7;
+  box-sizing: border-box;
+}
+header ul li:last-child a {
+  padding-right: 0;
+}
+
+
+
+/*######### main #########*/
+.main-cont {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-cont h2 {
+  position: absolute;
+  top: 57%; left: 38.5%;
+  transform: translate(-50%,-50%);
+  line-height: 1;
+  font-size: 9.37vw;
+  
+}
+.main-cont svg {
+  position: absolute;
+  bottom: -20%; right: -13%;
+
+}
+
+
+/*######### about #########*/
+
+.about-cont > div {
+  position: absolute;
+  top: 10%; left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.14vw;
+  text-align: center;
+}
+.about-cont h3 {
+  position: absolute;
+  top: 25%; left: 50%;
+  width :100%;
+  transform: translateX(-50%);
+  font-size: 7.81vw;
+  line-height: 1;
+  text-align: center;
+  z-index: 100;
+}
+.about-cont > img {
+  position: absolute;
+  top: 63%; left: 24%;
+  width: 5.4vw;
+  height: 5.4vw;
+}
+.about-cont svg {
+  position: absolute;
+  top: 41%; left: 50%;
+  transform: translateX(-50%);
+  width: 550px;
+  height: 550px;
+}
+.about-cont svg image {
+  width:  550px;
+  height:  550px;
+}
+.about-cont p {
+  position: absolute;
+  top: 70%; left: 58%;
+  font-size: 1.14vw;
+  width: 21.8vw;
+}
+
+
+
+/*######### project #########*/
+#project .title svg{
+  position: absolute;
+  bottom: 10%;
+}
+.project-cont {
+  height: 500vh;
+}
+.project-cont .list {
+  width: 100%;
+  height: 200vh;
+  padding-top: 10vw;
+}
+.project-cont .list ul li {
+  width: 80vw;
+  height: 42vw;
+  margin: auto;
+}
+.project-cont .list-img {
+  float: left;
+  position: relative;
+  width: 23.17vw;
+  height: 23.17vw;
+  background: #EDC1CD;
+  border-radius: 50%;
+}
+.project-cont .list-img::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 113%;
+  height: 113%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+.project-cont .list-img img{
+  position: absolute;
+  top: 53%; left: 53%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+}
+.project-cont .list-info {
+  padding-top: 5vw;
+  float: left;
+  padding-left: 10vw;
+  height: 26vw;
+}
+.project-cont .list-info h2 {
+  font-size: 5.2vw;
+  line-height: 1;
+  
+}
+
+.project-cont .list-info p {
+  font-family: 'S-CoreDream-1Thin';
+  font-size: 1.04vw;
+  width: 33vw;
+  line-height: 1.8;
+}
+.project-cont .list-info button {
+  text-transform: uppercase;
+  font-family: 'athene';
+  line-height: 1;
+  margin-top: 2.18vw;
+  font-size: 1.04vw;
+  width: 6.4vw;
+  height: 1.56vw;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+}
+.project-cont svg {
+  position: absolute;
+  top: 3%;
+}
+.project-cont svg:nth-child(2) {
+  position: absolute;
+  top: 25%;
+}
+
+.project-cont .list ul li:nth-child(2) .list-img {
+  float: right;
+}
+.project-cont .list ul li:nth-child(2) .list-info  {
+  float: right;
+  padding-left: 0;
+  padding-right: 10vw;
+}
+.project-cont .list ul li:nth-child(4) .list-img {
+  float: right;
+}
+.project-cont .list ul li:nth-child(4) .list-info  {
+  float: right;
+  padding-left: 0;
+  padding-right: 10vw;
+}
+
+
+
+
+
+/*######### footer #########*/
+footer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+footer svg.shape1 {
+  position: absolute;
+  top: 5%; left: 50%;
+  transform: translateX(-50%);
+}
+footer svg.shape2 {
+  position: absolute;
+  top: 35%; left: 50%;
+  transform: translateX(-50%);
+}
+footer svg.shape3 {
+  position: absolute;
+  top: 65%; left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+footer textPath {
+  fill: #fff;
+  font-size: 3vw;
+  text-align: center;
+  font-family: 'athene';
+}
+footer h2 {
+  position: absolute;
+  top: 35%; left: 50%;
+  width :100%;
+  transform: translateX(-50%);
+  font-size: 7.81vw;
+  line-height: 1;
+  text-align: center;
+}
+footer span {
+  position: absolute;
+  top: 60%; left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.45vw;
+  
+}
+footer p {
+  position: absolute;
+  bottom: 5%; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Rajdhani';
+  color: #cecece;
+  font-size: 1vw;
+}
+

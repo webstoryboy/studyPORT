@@ -1,0 +1,1181 @@
+/* layout */
+body {
+    width: 100vw;
+    background: #f1efed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #f1efed;
+    padding: 0 1rem;
+}
+
+#header.header_2 {
+    border-bottom: 1px solid #919191;
+}
+
+/* #main {
+    width: 100vw;
+    height: 100vh;
+    background: #fa4446;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#login, #signUp {
+    width: 100vw;
+    height: 100vh;
+    background: #fa4446;
+}
+
+#login_save, #signup_save {
+    width: 100vw;
+    height: 100vh;
+    background: #fa4446;
+}
+
+#board {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#board-cont {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#reference {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#youtube {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio {
+    width: 100vw;
+    background: #fa4446;
+    display: flex;
+    justify-content: center;
+}
+
+#script {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#contact {
+    width: 100vw;
+    height: 100vh;
+    background: #fa4446;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.section {
+    width: 1200px;
+    padding-top: 10rem;
+}
+
+#login .login_section,
+#signUp .signUp_section {
+    width: 30rem;
+    height: 40rem;
+    padding-top: 0;
+    background: #f1efed;
+    position: absolute;
+    top: calc(50% - 20rem + 35px);
+    left: calc(50% - 15rem);
+}
+
+#board .board_section {
+    width: 1200px;
+    position: absolute;
+    top: 5rem;
+}
+
+#board-cont .board_section {
+    width: 1200px;
+    position: absolute;
+    top: 5rem;
+    padding-top: 8rem;
+}
+
+#contact .contact_section {
+    padding-top: 70px;
+}
+
+/* title */
+.section_title {
+    font-family: "nexaLight";
+    font-weight: 100;
+    font-size: 8rem;
+}
+
+.section_title:nth-child(2) {
+    margin-top: -4rem;
+    margin-bottom: 5rem;
+}
+
+/* scrollBar */
+body::-webkit-scrollbar {
+    width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fa4446;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* header */
+#header .menuBtn {
+    width: calc(100% / 3);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#header .menuBtn a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #f1efed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header.header_2 .menuBtn a {
+    border: 1px solid #919191;
+}
+
+#header .menuBtn a span {
+    display: block;
+    width: 20px;
+    height: 8px;
+    border-top: 1px solid #f1efed;
+    border-bottom: 1px solid #f1efed;
+}
+
+#header.header_2 .menuBtn a span {
+    border-top: 1px solid #919191;
+    border-bottom: 1px solid #919191;
+}
+
+#header .logo {
+    width: calc(100% / 3);
+    font-family: nexaLight;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#header .logo a {
+    color: #f1efed;
+}
+
+#header.header_2 .logo a {
+    color: #919191;
+}
+
+#header nav {
+    width: calc(100% / 3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#header ul {
+    width: 100%;
+    font-family: "nexaLight";
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header ul li {
+    display: inline-block;
+    margin-right: 1.7rem;
+}
+
+#header ul li:last-child {
+    margin-right: 0;
+}
+
+#header ul li a {
+    color: #f1efed;
+}
+
+#header.header_2 ul li a {
+    color: #919191;
+}
+
+/* main */
+#main .main_title {
+    font-size: 9rem;
+    color: #f1efed;
+    font-weight: normal;
+    font-family: 'nexaLight';
+    width: 100%;
+    margin-top: -70px;
+}
+
+#main .main_title span {
+    display: block;
+    margin-top: -4rem;
+}
+
+#main .main_title span:nth-child(1) {
+    margin-top: 0;
+}
+
+
+/* login */
+#login {
+    font-family: nexaLight;
+}
+
+#login .login_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#login h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #747474;
+    margin: 2rem 0;
+    font-family: nexaLight;
+    font-weight: normal;
+}
+
+#login form {
+    width: 20rem;
+    position: relative;
+}
+
+#login form input,
+#signUp form input {
+    width: 20rem;
+    margin-bottom: 1rem;
+    background: #f1efed;
+    border: none;
+    border: 1px solid #fa4446;
+    color: #fa4446;
+    font-family: nexaBold, "Noto Sans KR", sans-serif;
+    padding: 1rem;
+    font-size: 13px;
+}
+
+#login form input::placeholder,
+#signUp form input::placeholder {
+    color: #fa4446;
+}
+
+form input:focus {
+    outline:none;
+}
+
+select:focus {
+    outline:none;
+}
+
+#login form button,
+#signUp form button {
+    width: 20rem;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    background: #fa4446;
+    font-family: "nexaBold";
+    color: #f1efed;
+    font-size: 13px;
+}
+
+#login form a {
+    font-family: "nexaBold";
+    color: #fa4446;
+}
+
+#login #keyword_star,
+#signUp #keyword_star {
+    width: 25%;
+    fill: #fa4446;
+    animation: keyword_star 10s linear infinite;
+}
+
+@keyframes keyword_star {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* login save */
+#login_save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInfo {
+    font-family: 'SpoqaHanSansThin';
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #f1efed;
+}
+
+/* signUp */
+#signUp {
+    font-family: nexaLight;
+}
+
+#signUp .signUp_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#signUp .signUp_section > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#signUp form {
+    width: 20rem;
+}
+
+#signUp .select{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+#signUp label {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #747474;
+}
+
+#signUp select {
+    width: 100%;
+    margin-bottom: 1rem;
+    background: #f1efed;
+    border: none;
+    border: 1px solid #fa4446;
+    color: #fa4446;
+    font-family: nexaBold, "Noto Sans KR", sans-serif;
+    padding: 1rem;
+    margin-top: 0.3rem;
+}
+
+#signUp select option {
+    margin-top: 0.5rem;
+}
+
+/* signUp save */
+#signup_save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* board */
+.board_section h2 {
+    font-family: "nexaLight";
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.board_section h2 span {
+    font-size: 2rem;
+}
+
+.board_section > .board {
+    border-top: 2px solid #919191;
+    border-bottom: 2px solid #919191;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.board_section > .board > li {
+    border-bottom: 1px solid #919191;
+}
+
+.board_section > .board > li:last-child {
+    border-bottom: 0;
+}
+
+.board_section > .board > li > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-family: 'SpoqaHanSansLight';
+    font-size: 0.9rem;
+    padding: 0.7rem;
+}
+
+.board_section > .board > li.board_head > ul {
+    background: #e8e6e3;
+    font-family: 'SpoqaHanSansRegular';
+} 
+
+.board_section > .board > li.board_head li:nth-child(2) {
+    text-align: center;
+}
+
+.board_section > .board > li.board_head li:nth-child(4) {
+    padding-right: 3rem;
+}
+
+.board_section .board > li > ul > li:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+.board_section .board > li > ul > li:nth-child(2) {
+    width: 65%;
+    padding-left: 5rem;
+}
+
+.board_section .board > li > ul > li:nth-child(3) {
+    width: 15%;
+    text-align: center;
+}
+
+.board_section .board > li > ul > li:nth-child(4) {
+    width: 15%;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.board_section .board_list li:last-child span {
+    color: #919191;
+}
+
+.borad_btn_list {
+    overflow: hidden;
+}
+
+#board form {
+    width: 100%;
+    float: right;
+    margin-bottom: 0.5rem;
+}
+
+#board form fieldset {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#board form #board_search {
+    width: 10rem;
+    background: #f1efed;
+    border: 1px solid #919191;
+    color: #919191;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+}
+
+#board form input::placeholder {
+    color: #919191;
+}
+
+#board form button,
+#board form select,
+#board form a {
+    width: 5rem;
+    padding: 0.5rem;
+    background: #f1efed;
+    border: 1px solid #919191;
+    color: #919191;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+}
+
+#board form select {
+    padding: 0.55rem;
+}
+
+#board form button#write_btn {
+    background: #919191;
+    color: #f1efed;
+    margin-right: 0;
+}
+
+#board form a#write_btn {
+    background: #919191;
+    color: #f1efed;
+    margin-right: 0;
+}
+
+#board form a {
+    font-family: "nexaBold";
+    text-align: center;
+}
+
+#board .pagenation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board .pagenation li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background: #f1efed;
+    border: 1px solid #919191;
+    margin-left: -1px;
+}
+
+#board .pagenation li.active {
+    background: #919191;
+}
+
+#board .pagenation li a {
+    color: #919191;
+}
+
+#board .pagenation li.active a {
+    color: #f1efed;
+}
+
+/* about */
+.about_section article {
+    margin-bottom: 20rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about_section .about_art_1 figure {
+    width: 100%;
+    height: 588px;
+    background: #cecece;
+    margin-bottom: 1.5rem;
+}
+
+.about_text h6 {
+    font-size: 1.3rem;
+    font-family: 'SpoqaHanSansThin';
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.about_text p {
+    font-family: 'SpoqaHanSansLight';
+    font-size: 1rem;
+}
+
+.about_section .about_art_1 .about_text {
+    width: 800px;
+}
+
+.about_section .about_art_2 figure {
+    width: 800px;
+    height: 1000px;
+    background: #bbbbbb;
+}
+
+.about_section .about_art_2 .about_text {
+    width: 350px;
+}
+
+.about_section .about_art_3 figure {
+    width: 700px;
+    height: 480px;
+    background: #acacac;
+}
+
+.about_section .about_art_3 .about_text {
+    width: 450px;
+}
+
+/* footer */
+#footer {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    font-family: 'nexaLight';
+    position: absolute;
+    bottom: 0;
+}
+
+#footer h6 {
+    width: 100%;
+    font-size: 1rem;
+    color: #f1efed;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#footer h1 {
+    font-size: 10rem;
+    font-weight: 100;
+    color: #f1efed;
+    text-align: center;
+    width: 100%;
+}
+
+#footer h1 span {
+    display: block;
+    margin-top: -5rem;
+}
+
+#footer button {
+    font-size: 1rem;
+    color: #f1efed;
+    border: 1px solid #f1efed;
+    background: transparent;
+    padding: 1rem 3rem;
+    font-family: 'nexaLight';
+    border-radius: 30px;
+}
+
+/* reference */
+.reference_section {
+    margin-bottom: 20rem;
+}
+
+.reference_section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'nexaLight';
+}
+
+.reference_section .reference_list_wrap > ul {
+    border-top: 2px solid #919191;
+    border-bottom: 2px solid #919191;
+}
+
+.reference_list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #919191;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+.reference_list ul li:nth-child(1) {
+    width: 10%;
+}
+
+.reference_list ul li:nth-child(2) {
+    width: 30%;
+}
+
+.reference_list ul li:nth-child(3) {
+    width: 60%;
+}
+
+/* youtube */
+.youtube_section article {
+    margin-bottom: 15rem;
+}
+
+.youtube_art_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+
+.youtube_art_title h1 {
+    font-family: 'SpoqaHanSansThin';
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+.youtube_art_title h1 span {
+    display: block;
+    margin-top: -1rem;
+}
+
+article .youtube_art_title figure {
+    width: 700px;
+    height: 400px;
+    background: #cecece;
+}
+
+.youtube_art_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+article .youtube_art_content figure {
+    width: 450px;
+    height: 360px;
+    background: #b5b4b4;
+}
+
+.youtube_art_content > ul {
+    width: 700px;
+}
+
+.youtube_art_content > ul > li > ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.youtube_art_content > ul > li > ul > li:nth-child(1) {
+    font-family: 'SpoqaHanSansThin';
+    font-size: 1.2rem;
+    width: 15%;
+}
+
+.youtube_art_content > ul > li > ul > li:nth-child(2) {
+    width: 85%;
+}
+
+
+/* script */
+.script_section article {
+    margin-bottom: 10rem;
+}
+
+.script_section article figure {
+    width: 100%;
+    height: 480px;
+    background: #cecece;
+    margin-bottom: 2rem;
+}
+
+.script_section article h1 {
+    font-family: nexaLight;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.script_section .article_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.script_section .article_content p {
+    width: 32%;
+    font-size: 1rem;
+}
+
+.script_section .article_content .circle_list {
+    width: 26%;
+}
+
+.script_section .circle_list > ul > li > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.script_section .script_circle {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_list > ul > li:nth-child(1) .script_circle:nth-child(1) {
+    border-style: dashed;
+}
+
+
+.script_section .script_circle:last-child {
+    margin-right: 0;
+}
+
+/* portfolio */
+.portfolio_section {
+    padding-bottom: 250px;
+}
+
+.portfolio_section .section_title {
+    color: #f1efed;
+}
+
+.portfolio_section .portfolio_article_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio_section article {
+    margin-bottom: 5rem;
+}
+
+.portfolio_section article figure {
+    width: 390px;
+    height: 300px;
+    background: #dfdfdf;
+    margin-bottom: 2rem;
+}
+
+.portfolio_section .article_content {
+    font-family: 'nexaLight';
+}
+
+.portfolio_section article h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    color: #f1efed;
+}
+
+.portfolio_section article h1 span {
+    display: block;
+}
+
+.portfolio_section article h1 span:nth-child(2) {
+    margin-top: -1.5rem;
+} 
+
+.portfolio_art .article_text {
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    font-family: nexaBold;
+
+}
+
+/* contact */
+.contact_section {
+    overflow: hidden;
+}
+
+#contact .main_title {
+    font-size: 9rem;
+    color: #f1efed;
+    font-weight: normal;
+    font-family: 'nexaLight';
+    width: 100%;
+}
+
+#contact .main_title span {
+    display: block;
+}
+
+#contact .main_title span:nth-child(2) {
+    text-align: center;
+    margin-left: -15rem;
+    margin-top: -4rem;
+}
+
+#contact .main_title span:nth-child(3) {
+    text-align: right;
+    margin-top: -4rem;
+}
+
+.contact_section p {
+    color: #f1efed;
+    font-size: 1rem;
+    float: right;
+    margin-top: -2rem;
+}
+
+/* --------------------------------- */
+/* main */
+main {
+    background: #f1efed;
+}
+#main-cont {
+    height: 100vh;
+    background: #000;
+}
+
+.main-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.main-cont>div {
+    font-size: 170px;
+    line-height: 0.9;
+    font-family: 'Saol_Display_Regular';
+    white-space: nowrap;
+}
+
+/* board */
+.listBoard {
+    font-family: 'S-CoreDream-3Light';
+}
+.listBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+#board-cont {
+    min-height: 100vh;
+    background: #F0EEEB;
+}
+
+.board {
+    padding-top: 200px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.board h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.board-search {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.board-search .form-search {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 20px 10px 20px;
+    background: transparent;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.board-search .form-select {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 20px 10px 20px;
+    background: transparent;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.board-search .form-btn {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 20px 10px 20px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.board-search .form-btn-black {
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 15px 20px 14px 20px;
+    font-family: 'S-CoreDream-3Light';
+    vertical-align: 2px;
+}
+
+.board-table {
+    margin-top: 20px;
+}
+
+.board-table .table {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.board-table .table tr {
+    transition: all 0.2s;
+}
+
+.board-table .table tr:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.board-table .table td a {
+    display: block;
+    padding: 17px 10px;
+}
+
+.board-table .table td,
+.board-table .table th {
+    border-top: 1px solid #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.board-table .table .left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.board-table .table .height {
+    height: 300px;
+}
+
+.board-table .table th {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 17px 0;
+}
+
+.board-page .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 360px;
+}
+
+.board-page .pagination li.active a {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+.board-page .pagination li a {
+    display: block;
+    border: 1px solid #bebebe;
+    padding: 13px 10px 10px 10px;
+    margin-left: -1px;
+}
+
+.saveBoard {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* writeBoard */
+.writeBoard label {
+    display: block;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.writeBoard .title-text {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 30px;
+}
+.writeBoard .writeBoardBtn {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    padding: 10px 30px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.listTable {
+    margin-top: 20px;
+}
+.listTable .table {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.listTable .table tr {
+    transition: all 0.2s;
+}
+.listTable .table tr:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.listTable .table td a {
+    display: block;
+    padding: 17px 10px;
+}
+.listTable .table td,
+.listTable .table th {
+    border-top: 1px solid #000;
+    text-align: center;
+    font-size: 16px;
+}
+.listTable .table .left {
+    text-align: left;
+    padding-left: 20px;
+}
+.listTable .table .height {
+    height: 300px;
+}
+.listTable .table th {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 17px 0;
+}
+
+.listPage .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 360px;
+}
+.listPage .pagination li.active a {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+.listPage .pagination li a {
+    display: block;
+    border: 1px solid #bebebe;
+    padding: 13px 10px 10px 10px;
+    margin-left: -1px;
+}

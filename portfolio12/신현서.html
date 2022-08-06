@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+
+    <style>
+        body {
+            color: #fff;
+        }
+        header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%; height: 50px;
+            z-index: 199;
+            background: #000;
+            border-bottom: 1px solid #fff;
+        }
+        #website {
+            margin-top: 50px;
+            position: relative;
+            height: 100%;
+            display: flex;
+            border-right: 1px solid #fff;
+            background: #000;
+        }
+        .column-menu {
+            position: fixed;
+            left: 0; top: 50px;
+            width: 70px;
+            height: calc(100vh - 50px);
+            background: #000;
+            border-right: 1px solid #fff;
+            box-sizing: border-box;
+        }
+        .column-menu .rotate {
+            transform: translateY(85vh) rotate(-90deg);
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        .btn-wrap {
+            position: absolute;
+            right: 10%; bottom: 7%;
+        }
+        .btn-wrap .btn {
+            margin-left: 6vmin;
+        }
+        .btn {
+            position: relative;
+            display: inline-block;
+            font-size: 0.9vw;
+            font-family: 'S-CoreDream-1Thin';
+        }
+        .btn .whiteCircle {
+            position: absolute;
+            top: 50%; left: -4vmin;
+            transform: translateY(-50%);
+            width: 1.4vmin; height: 1.4vmin;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            background: #fff;
+            transition: all 0.3s;
+        }
+        .btn .blackCircle {
+            position: absolute;
+            top: 50%; left: -2.9vmin;
+            transform: translateY(-50%);
+            width: 1.4vmin; height: 1.4vmin;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            transition: all 0.3s;
+        }
+
+        .website {}
+        .website .site-list {}
+        .website .site-list .site-contents {
+            height: calc(100vh - 50px);
+            width: calc(100% - 70px);
+            margin-left: 70px;
+            box-sizing: border-box;
+        }
+        .website .site-list .site-contents.website1 {}
+        .website .site-list .site-contents.website2 {}
+        .website .site-list .site-contents.website3 {}
+        .website .site-list .site-contents .site-bar {
+            display: block; 
+            height: 7vmin; 
+            border-bottom: 1px solid #fff; 
+            border-top: 1px solid #fff;
+            padding-left: 2vmax;
+            box-sizing: border-box;
+            font-size: 2vmax;
+            line-height: 7vmin;
+            font-weight: 100;
+            text-transform: capitalize;
+            background: #000;
+            width: 100%;
+        }
+        .website .site-list .site-contents .site-detail {
+            display: flex;
+            height: calc(100vh - 50px - 7vmin);
+        }
+        .website .site-list .site-contents .site-detail .left {
+            position: relative;
+            flex: 1 1 45%;
+            height: 73vh;
+            box-sizing: border-box;
+        }
+        .website .site-list .site-contents .site-detail .left .title {
+            padding: 6vmin 0 0 8vmin;
+            font-size: 5vmax;
+            text-transform: capitalize;
+            margin-bottom: 5vmin;
+        }
+        .website .site-list .site-contents .site-detail .left .desc {
+            color: #999;
+            font-family: var(--font-ko-light);
+            font-size: 1.2vmax;
+            width: 70%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .website .site-list .site-contents .site-detail .left .btn-wrap {}
+        .website .site-list .site-contents .site-detail .right {
+            flex: 1 1 55%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: calc(100vh - 50px - 7vmin);
+        }
+        .website .site-list .site-contents .site-detail .right img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>d</header>
+    <section id="website">
+        <div class="column-menu">
+            <div class="rotate">website</div>
+        </div>
+        <div class="website">
+            <div class="site-list">
+                <div class="site-contents website1">
+                    <div class="site-bar">web standard</div>
+                    <div class="site-detail">
+                        <div class="left">
+                            <div class="title">web standard</div>
+                            <div class="desc">
+                                &nbsp;웹 표준이란 브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, 다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현하여 웹 페이지를 제작하는 기법을 의미합니다. 웹 표준은 웹 접근성 준수를 위한 핵심이기 때문에 중요합니다.<br /> 
+                                &nbsp;웹 표준을 준수한 사이트를 직접 제작하면서 장애인, 노약자를 포함한 모든 사용자가 동일한 조건에서 웹 사이트를 이용하려면 어떻게 해야 하는지 고려하게 되었고 검색 엔진 최적화, 서버 공간 절약 등의 장점들에 대해서도 알게 되었습니다.
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="http://paneoy.dothome.co.kr/webstandard/index.html" target="_blank" class="btn">
+                                    사이트보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="https://www.figma.com/proto/OtF1mhT2gOi7MSviAv9X7H/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=22%3A794&viewport=417%2C338%2C0.05342353507876396&scaling=contain" target="_blank" class="btn">
+                                    피그마보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="#" class="btn">
+                                    코드보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="assets/img/webStandard.jpg" srcset="assets/img/webStandard@2.jpg 2x, assets/img/webStandard@3.jpg 3x" alt="web standard">
+                        </div>
+                    </div>
+                </div>
+                <div class="site-contents website2">
+                    <div class="site-bar">responsive</div>
+                    <div class="site-detail">
+                        <div class="left">
+                            <div class="title">responsive</div>
+                            <div class="desc">
+                                반응형 웹 디자인(responsive web design, RWD)이란 하나의 웹사이트에서 PC, 스마트폰, 태블릿 PC 등 접속하는 디스플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 만든 웹페이지 접근 기법을 의미합니다.<br />
+                                어떤 종류의 디스플레이로 접속해도 불편함이 없도록 미디어쿼리를 이용해서 반응형 웹 사이트를 제작했습니다. 시맨틱 태그를 사용하여 문서의 구조를 체계적으로 표현했습니다. 또한, 이미지 슬라이드와 라이트 박스를 구현하기 위해 자바스크립트 라이브러리를 활용했습니다.                               
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="http://paneoy.dothome.co.kr/responsive/index.html" target="_blank" class="btn">
+                                    사이트보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="https://www.figma.com/proto/iMQKWjfQviIGboIIddLirc/%EB%B0%98%EC%9D%91%ED%98%95-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=72%3A64&viewport=304%2C485%2C0.05604719743132591&scaling=contain" target="_blank" class="btn">
+                                    피그마보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="#" class="btn">
+                                    코드보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="assets/img/responsive.jpg" srcset="assets/img/responsive@2.jpg 2x, assets/img/responsive@3.jpg 3x" alt="web standard">
+                        </div>
+                    </div>
+                </div>
+                <div class="site-contents website3">
+                    <div class="site-bar">megabox</div>
+                    <div class="site-detail">
+                        <div class="left">
+                            <div class="title">megabox</div>
+                            <div class="desc">
+                                메가박스 사이트입니다. swiper 자바스크립트 라이브러리를 사용하여 영화 목록이 자동으로 한 칸씩 옆으로 이동하도록 했고, 간단한 아이콘은 SVG를 활용하여 나타냈습니다. 새로운 영화 소식은 input 태그와 select 태그를 이용하여 구현했습니다. 시간 메뉴를 클릭하면 자신이 원하는 시간대를 선택할 수 있도록 시간 목록이 나타납니다.<br />
+                                미디어쿼리를 활용해서 반응형 사이트로 제작했고, 시맨틱 태그를 사용하여 코딩했습니다. 구글의 웹 API를 사용하여 새로운 영화를 클릭했을 때 유튜브의 영상이 레이어 팝업으로 나타나도록 작업했습니다.
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="http://paneoy.dothome.co.kr/megabox/index.html" target="_blank" class="btn">
+                                    사이트보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="#" class="btn">
+                                    코드보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="assets/img/megabox.jpg" srcset="assets/img/megabox@2.jpg 2x, assets/img/megabox@3.jpg 3x" alt="web standard">
+                        </div>
+                    </div>
+                </div>
+                <div class="site-contents website4">
+                    <div class="site-bar">naver clova</div>
+                    <div class="site-detail">
+                        <div class="left">
+                            <div class="title">naver clova</div>
+                            <div class="desc">
+                                네이버 클로바 사이트입니다. 네이버 로고와 푸터의 SNS 아이콘, 페이지 중간중간에 있는 아이콘들은 이미지 스프라이트 기법을 이용해서 나타냈습니다.<br />
+                                메뉴를 클릭하면 클로바 사이트의 서브 페이지로 이동하도록 했습니다.
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="http://paneoy.dothome.co.kr/megabox/index.html" target="_blank" class="btn">
+                                    사이트보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                                <a href="#" class="btn">
+                                    코드보기
+                                    <div class="whiteCircle" aria-hidden="true"></div>
+                                    <div class="blackCircle" aria-hidden="true"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="assets/img/clova.jpg" srcset="assets/img/clova@2.jpg 2x, assets/img/clova@3.jpg 3x" alt="web standard">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- //website -->
+</body>
+</html>

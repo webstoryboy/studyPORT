@@ -1,0 +1,174 @@
+/* to do list */
+body {background: #e8e8e8;}
+.jsmock_mid .script_img .script_desc1 {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    min-width: 300px;
+    text-align: center;
+}
+.jsmock_mid .script_img .script_desc1 .js-clock {
+    margin-bottom: 20px;
+}
+.jsmock_mid .script_img .script_desc1 .js-clock h1 {
+    font-size: 4.5vw; font-family: 'GyeonggiBatang';
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoForm input {
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    font-family: 'GyeonggiBatang';
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoList {
+    margin: 0 auto;
+    margin-top: 19px;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 10px 10px 0 0 rgba(0,0,0,0.2);
+    list-style: none;
+    overflow: hidden;
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoList li{
+    list-style: none;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ecf0f1;
+    position: relative;
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoList li:last-child{
+    border: 0;
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoList li button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoList li button:hover {
+    background:#000;
+    border: 1px solid #000;
+    color: #fff;
+}
+.jsmock_mid .script_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ff1f25;
+    padding: 60px;
+    box-sizing: border-box;
+}
+.jsmock_mid .script_txt p {
+    font-family: 'GyeonggiBatang';
+    font-size: 30px;
+    color: #fff;
+    word-break: keep-all;
+}
+.jsmock_mid .script_txt .script_btn {
+    font-family: 'GyeonggiBatang';
+    width: 220px; height: 70px;
+    line-height: 70px;
+    background: #ffdd18;
+    font-size: 24px;
+    cursor: pointer;
+}
+.hidden-box{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0;
+    display: none;
+}
+.label-box{
+    display: flex;
+    align-self: center;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin: 0 1rem;
+    border: 2px solid #3498db;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.label-text{
+    display: flex;
+    align-self: center;
+    position: relative;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-left: 1px solid #ecf0f1;
+}
+.check-label {
+    font-size: 1rem;
+    margin: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.hidden-box:checked + .check-label {
+    background-color: #F9F9F9;
+}
+.hidden-box:checked + .check-label .label-box {
+    background-color: #3498db;
+}
+.hidden-box:checked + .check-label .label-box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    width: 6px;
+    height: 12px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.hidden-box:checked + .check-label .label-text:after,.label-text:hover:after {
+    width: 85%;
+}
+.label-text:after  {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: width 100ms ease-in-out;
+    transition: width 100ms ease-in-out;
+}
+
+@media (max-width: 414px){
+
+.jsmock_mid .script_img .script_desc1 .js-clock h1 {
+    font-size: 12.5vw;
+}
+.jsmock_mid .script_img .script_desc1 .js-toDoForm input {
+    border-bottom: 1px solid #000;
+    width: 78%;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Portfolio Main</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO 검색엔진 -->
+    <meta name="author" content="yeong">
+    <meta name="description" content="리액트 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">  <!-- 모든정보가져감 -->
+
+    <!-- facebook -->
+    <meta property="og:url" content="#none">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="React Portfolio Main">
+    <meta property="og:description" content="리액트 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio Main">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="리액트 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#FEDB01" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="manifest" href="" />
+    <link rel="icon" href="assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-152.png" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <link rel="icon" typse="image/png" sizes="152x152" href="assets/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicons/favicon-128.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <link rel="stylesheet" href="assets/styles/variables.css">
+    <link rel="stylesheet" href="assets/styles/mixins.css">
+    <link rel="stylesheet" href="assets/styles/loading.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    
+</head>
+<body>
+    <div id="skip">
+        <a href="#">바로가기 스킵메뉴</a>
+    </div>
+    <!-- //skip -->
+    <!-- <div class="cursor">
+        <figure>
+            <img src="assets/images/cursor.png" alt="커서이미지">
+        </figure>
+    </div> -->
+    <!-- 마우스 -->
+    <div id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 로딩 애니메이션 -->
+    <header>
+        <div id="header">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="index.html"><span>Yeong's</span></a>
+            </div>
+            <nav class="menu">
+                <div class="nav">
+                    <div class="nav-background">
+                        <div class="nav-bg nav-bg1"></div>
+                        <div class="nav-bg nav-bg2"></div>
+                        <div class="nav-bg nav-bg3"></div>
+                        <div class="nav-bg nav-bg4"></div>
+                    </div>
+                    <h2 class="sr-only">메인 메뉴</h2>
+                    <ul>
+                        <li><a href="javascript:navLink1()">home</a></li>
+                        <li><a href="javascript:navLink2()">about</a></li>
+                        <li><a href="javascript:navLink3()">portfolio</a></li>
+                        <li><a href="javascript:navLink6()">contact</a></li>
+                        <li><a href="javascript:navLink4()">animation</a></li>
+                        <li><a href="javascript:navLink5()">javascript</a></li>
+                    </ul>
+                </div>
+                <!-- 햄버거버튼 -->
+                <div class="menu-line">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hamburger-close">
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <!-- header -->
+    <main>
+        <section id="main">
+            <div class="main content-box">
+                <div class="main-text-wrap">
+                    <p class="main-sub-title"><!-- aria-label="Web publisher portfolio"-->
+                        <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>-</span><span>E</span><span>n</span><span>d</span><span>&nbsp;</span><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+                    </p>
+                    <h1 class="sr-only">I developed this website with React.js</h1>
+                    <div class="main-title">
+                        <span>I developed this</span>
+                        <span>website with React.js</span>
+                    </div>
+                    <p class="main-sub-title2"><!-- aria-label="Thank you for visiting"-->
+                        <span>T</span><span>h</span><span>a</span><span>n</span><span>k</span><span>&nbsp;</span><span>y</span><span>o</span><span>u</span><span>&nbsp;</span><span>f</span><span>o</span><span>r</span><span>&nbsp;</span><span>v</span><span>i</span><span>s</span><span>i</span><span>t</span><span>i</span><span>n</span><span>g</span>
+                    </p>
+                </div>
+                <div class="main-img">
+                    <img src="assets/images/main-img.png" alt="메인이미지">
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/loading.js"></script>
+</body>
+</html>

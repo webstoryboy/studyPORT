@@ -1,0 +1,212 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  cursor: none;
+}
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  cursor: none;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0 none;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+select,
+textarea,
+button {
+  border-radius: 0;
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+body {
+  direction: ltr;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 13px;
+  font-family: "Klarheit-regular", "S-CoreDream-4Regular",
+    AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움",
+    sans-serif;
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+.os_mac body,
+.os_mac th,
+.os_mac td,
+.os_mac input,
+.os_mac select,
+.os_mac textarea,
+.os_mac button {
+  letter-spacing: 0;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+a:active {
+  background-color: transparent;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.screen_out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/*--- ELAND_Choice ---*/
+@font-face {
+  font-family: "ELAND_Choice_L";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-4Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ELAND_Choice_B";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_B.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*--- KlarheitGrotesk ---*/
+@font-face {
+  font-family: "Klarheit-regular";
+  src: url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Regular.otf") format("otf"),
+    url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Regular.woff") format("woff"),
+    url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Regular.woff2")
+      format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Klarheit-bold";
+  src: url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Bold.otf") format("otf"),
+    url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Bold.woff") format("woff"),
+    url("../fonts/KlarheitGrotesk/KlarheitGrotesk-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*--- RightGrotesk ---*/
+@font-face {
+  font-family: "RightGrotesk-tall";
+  src: url("../fonts/RightGrotesk/RightGrotesk-TallBold.otf") format("otf"),
+    url("../fonts/RightGrotesk/RightGrotesk-TallBold.woff") format("woff"),
+    url("../fonts/RightGrotesk/RightGrotesk-TallBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RightGrotesk-spatial";
+  src: url("../fonts/RightGrotesk/RightGrotesk-SpatialBlack.otf") format("otf"),
+    url("../fonts/RightGrotesk/RightGrotesk-SpatialBlack.woff") format("woff"),
+    url("../fonts/RightGrotesk/RightGrotesk-SpatialBlack.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

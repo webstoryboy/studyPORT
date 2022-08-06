@@ -1,0 +1,131 @@
+body {background: transparent; margin:0;}
+#wrap{position: relative; overflow: hidden;}
+#wrap #gameContainer{
+    width:508px; height:508px; text-align: center; position: relative;margin:0px auto;}
+#wrap #gameContainer h1{}
+#wrap #gameContainer .obj{position: absolute;}
+#wrap #gameContainer .pin{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 28px;
+    background: url(../img/pin.png) no-repeat center;
+    background-size: contain;
+    z-index: 9;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#wrap #gameContainer .board_start{  
+
+    background: #f00;
+    text-align: center;
+    vertical-align: middle; 
+    text-align: center;
+    vertical-align: middle;
+    position:absolute; 
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index:9; 
+    width:120px;
+    line-height: 120px; 
+    border-radius:120px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FCCF31), to(#F55555));
+    background-image: linear-gradient(135deg, rgb(67, 203, 255) 10%, rgb(151, 8, 204) 100%);
+    border: 2px solid rgb(60, 22, 73);
+    color: #FFF;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
+    -webkit-transition: box-shadow 0.2s, -webkit-transform 0.1s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: box-shadow 0.2s, -webkit-transform 0.1s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
+    transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s, -webkit-transform 0.1s cubic-bezier(0.5, 0, 0.5, 1);
+    outline: none;
+}
+#wrap #gameContainer .board_start:hover{ box-shadow: 0 0 2em rgba(white, .3);}
+#wrap #gameContainer .board_start img{width:100%;}
+#wrap #gameContainer .board_bg{width:508px; height:508px; top:0px; left:0px; z-index: 2;}
+#wrap #gameContainer .board_bg img{width:100%;}
+#wrap #gameContainer .board_on{width:508px; height:508px; top:0px; left:0px; z-index: 3; 
+    background-image: url('../img/roulette_circle_bg.png'); background-size: 508px;
+}
+#wrap #gameContainer .board_on img{position:absolute; width:100px; top:115px; height:100px;}
+#wrap #gameContainer .board_on img:nth-child(1){left: 97px;  transform: rotate( -60deg );  top: 138px;}
+#wrap #gameContainer .board_on img:nth-child(2){left: 97px;  transform: rotate( -113deg );  top: 269px;  }
+#wrap #gameContainer .board_on img:nth-child(3){left: 203px; top: 330px; transform: rotate(-180deg);}  
+#wrap #gameContainer .board_on img:nth-child(4){left: 311px; top: 263px;  transform: rotate(-245deg);}
+#wrap #gameContainer .board_on img:nth-child(5){left: 310px; top: 140px;  transform: rotate(-292deg);   }
+#wrap #gameContainer .board_on img:nth-child(6){left: 205px; top: 78px;  transform: rotate(0deg); }  
+
+#wrap #gameContainer .obj.board_arrow{width:90px; height:105px; top:0px; left:195px; z-index: 5;}
+#wrap #gameContainer .char1{width:259px; height:246px; top:400px; left:90px; z-index: 1;}
+#wrap #gameContainer .char2{width:175px; height:198px; top:449px; left:600px; z-index: 1;}
+#wrap #gameContainer .char3{width:112px; height:108px; top:540px; left:550px; z-index: 3;}
+#wrap #gameContainer .txt1{width:420px; height:30px; bottom:20px; left:260px; z-index: 3;}
+
+.popup {display: none; position: fixed; left: 50%; z-index: 99999; text-align: center; background:#fff; font-size:20px; color:#000;}
+#fade {display: none;background: #000;position: fixed;left: 0;top: 0;width: 100%;height: 100%;opacity: .60;z-index: 9999;}
+#popup_gift{width:475px; height:300px; top: 50%;transform: translate(0, -50%);}
+#popup_gift .lottery_present {text-align:center;}
+#popup_gift .lottery_present img{ 
+    width: 117px;
+    display: block;
+    padding: 30px;
+    margin: 0 auto;
+}
+#popup_fail{width:475px; height:505px; top:120px;}
+.popup  .close{ 
+    text-decoration: none;
+    display:inline-block; 
+    width:150px; height:50px; 
+    font-size: 1rem;
+    line-height:50px; color:#fff; background:#333; margin: 30px 0 0;} 
+.popup  .reset{ 
+    text-decoration: none;
+    display:inline-block; 
+    width:150px; height:50px; 
+    font-size: 1rem;
+    line-height:50px; color:#fff; background:#F46001; margin: 30px 0 0;} 
+
+
+@media (max-width: 414px){
+    #wrap #gameContainer{
+        width:285px; 
+        height: 285px;
+        text-align: center; 
+        position: relative;
+        margin:0px auto;
+    }
+    #wrap #gameContainer .board_on{
+        background-size:285px;
+        width: 285px;
+        height: 285px;
+    }
+    #wrap #gameContainer .pin{
+    top: 28px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+    #wrap #gameContainer .board_start{  
+
+        width:25vw;
+        height: 25vw;
+        line-height: 25vw;
+    }
+    #wrap #gameContainer .board_on img{position:absolute; width:50px; top:115px; height:50px;}
+    #wrap #gameContainer .board_on img:nth-child(1){left: 50px;  top: 76px; transform: rotate( -60deg );  }
+    #wrap #gameContainer .board_on img:nth-child(2){ left: 49px;  top: 154px; transform: rotate( -113deg );}
+    #wrap #gameContainer .board_on img:nth-child(3){left: 117px;  top: 197px;  transform: rotate(-180deg);}  
+    #wrap #gameContainer .board_on img:nth-child(4){left: 193px; top: 160px;  transform: rotate(-245deg);}
+    #wrap #gameContainer .board_on img:nth-child(5){left: 184px;top: 75px; transform: rotate(-292deg);   }
+    #wrap #gameContainer .board_on img:nth-child(6){left: 119px; top: 43px;  transform: rotate(0deg); }  
+
+}

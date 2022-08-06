@@ -1,0 +1,120 @@
+@media (max-width:1290px){
+  
+}
+
+@media (max-width:1024px){
+  
+}
+
+@media (max-width:960px){
+  
+
+  
+}
+
+@media (max-width:768px){
+#home {
+  height: 200vh;
+  padding-right : 0;
+}
+.title {
+  display: none;
+}
+.m-title {
+  display: block;
+  position: absolute;
+  top: 2vh;
+  width: 100%;
+  overflow: hidden;
+
+}
+h1 {
+  transform: rotate(0deg);
+  font-size: 225px;
+  opacity: .2;
+}
+/* main */
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  float: none;
+  padding-top: 0;
+}
+.main .text-area {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 100%;
+}
+.main .text-area p {
+  text-align: center;
+  font-size: 15.6vw;
+  line-height: 7vw;
+}
+.main .text-area p span:first-child {
+  display: none;
+}
+.main .text-area p:nth-child(2) {
+  text-align: center;
+  line-height: 24vw;
+}
+.main .text-area p:nth-child(3) {
+  padding-left: 0;
+}
+.main .text-area p:nth-child(5) {
+  text-align: center;
+}
+.main .text-area p span.name {
+  line-height: 24vw;
+  margin-left: 0;
+  font-size: 12vw;
+  top: -7px;
+}
+.main .text-area p.and {
+  font-size: 12vw;
+  line-height: 23vw;
+}
+/* about */
+.about {
+  float: none;
+  padding-top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+.about h2 {
+  padding-bottom: 14px;
+  font-family: 'MaruBuri-Regular';
+  font-size: 3.4vw;
+}
+.profile {
+  float: left;
+  width: 51%;
+  height: 60vw;
+  margin-right: 3%;
+  margin-top: 0vh;
+  box-sizing: border-box;
+}
+.about-text {
+  width: 46%;
+}
+.about-text p {
+  padding-top: 15px;
+  font-size: 2vw;
+}
+
+}
+
+@media (max-width:600px){
+  
+  
+}
+
+@media (max-width:480px){
+  
+}
+
+@media (max-width:320px){
+  
+}

@@ -1,0 +1,2010 @@
+@charset "utf-8";
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap'); /* Alata 제목 */
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} /* Gmarket Sans B */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}  /* Gmarket Sans M */
+/*
+@font-face {
+    font-family: 'S-CoreDream-8Heavy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}  에스코어드림Hvy  어바웃미 아래 폰트*/
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} /* 코트라 볼드체  어바웃미 아래 폰트/포트폴리오 타이틀 */
+@font-face {
+    font-family: 'JSDongkang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 정선동강체 Regular */
+
+@font-face {
+    font-family: 'JSDongkang-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-BoldA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} /* 정선동강체 Bold */
+
+/* 콘텐츠 */
+.content-box {width: 1220px; margin: 0 auto;}
+#contents {padding-right: 65px; background-color: #fedb01;} /* 왼쪽 메뉴 65px */
+#contents.black {background-color: #000000;}
+#main {
+    height: 100vh;
+    background-color: #fedb01;
+}
+#about {
+    background-color: #fedb01;
+    padding-bottom: 3.5vh;
+}
+#skill-banner {
+    background-color: #fedb01;
+    /* padding-top: 3vh; */
+}
+#skills {
+    height: 100vh;
+    background-color: #fedb01;
+}
+#port1 {
+    height: 100vh;
+    background-color: #fedb01;
+}
+#port2 {
+    background-color: #000;
+        /* background-color: #FB7EA8; */
+    color: #fff;
+    padding-top: 300vh;
+}
+#port3 {
+    height: 100vh;
+    background-color: #fedb01;
+}
+#port4 {
+    background-color: #fedb01;
+}
+#contact {
+    background-color: #fedb01;
+}
+#footer {
+    background-color: #fedb01;
+    padding-right: 65px;
+}
+
+/* 헤더 */
+#header .logo a {
+    position: absolute;
+    display: block;
+    top:20px; left: 20px;
+    opacity: 0;
+    /* width: 5vw; */
+  
+}
+#header .logo span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: -1px;
+    z-index: 1;
+    font-style: italic;
+}
+#header .logo span::after {
+   content: "";
+   display: block;
+   position: absolute;
+   width: 105%;
+   height: 7px;
+   background-color: #fff;
+   bottom: 7px;
+   z-index: -1;
+}
+#header .logo a:hover {
+    color: #000;
+}
+
+/* #header .logo a img {
+    width: 100%;
+} */
+
+/* 메뉴 */
+
+#header .menu .menu-line {   /* 왼쪽 메뉴 65px */
+    background-color: #fff;
+    position:fixed;
+    width: 65px;
+    height: 100vh;
+    right: 0;
+    z-index: 999;
+    transition: height .3s ease, display .2s ease;
+    transform: translateX(100px)
+}
+#header .menu .menu-line::after {
+    content: "yeong's portfolio";
+    writing-mode: vertical-rl;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#header .menu .menu-line::before {
+    content: "";
+    display: block;
+    height: 160px;
+    width: 5px;
+    background-color: #0eff86;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-45%, -50%);
+}
+#header .menu .nav {
+    display: none;
+}
+
+#header .menu .hamburger {
+    position: absolute;
+    right: 13px;
+    top: 20px;
+    cursor: pointer;
+    transition: left .2s linear;
+}
+#header .menu .hamburger .line {
+    display: block;
+    width: 39px;
+    height:4px;
+    background-color:#000;
+    margin-top: 7px;
+    box-shadow: 3px 3px #0eff86;
+    transition: margin-top .3s ease-in-out;
+}
+#header .menu .hamburger .line:nth-child(1) {
+    margin-top: 0;
+}
+
+#header .menu .hamburger:hover .line:nth-child(1) {
+    margin-top: -3px;
+}
+
+#header .menu .hamburger:hover .line:nth-child(2) {
+    margin-top: 10px;
+}
+
+#header .menu .hamburger:hover .line:nth-child(3) {
+    margin-top: 10px;
+}
+#header .menu .hamburger-close {
+    display: none;
+}
+
+/* 클로즈화면 */
+#header .menu.close .nav {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+}
+#header .menu.close .nav .nav-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+#header .menu.close .nav .nav-background .nav-bg {
+    width: 26%;
+    height: 100vh;
+    background-color: #000;
+    transform-origin: right;
+    transform: scale(1.1, 1);
+}
+#header .menu.close .nav ul {
+   position: absolute;
+   z-index: 1;
+   left: 25%;
+   top: 50%;
+   transform: translate(-25%, -50%);
+}
+#header .menu.close .nav ul li {
+    overflow: hidden;
+    padding-right: 5vw;
+}
+#header .menu.close .nav ul li a {
+    color: #fff;
+    font-size: 4.5vw;
+    letter-spacing: 4px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* transform: translate(0px, 100%); */
+    transition: transform .3s linear; /* 안됨 ㅜㅜ*/
+}
+
+/* 메뉴 오픈 애니메이션 */
+#header .menu.close .nav.active ul li:nth-child(1) a {
+    animation: navA 1s 1s backwards;
+}
+#header .menu.close .nav.active ul li:nth-child(2) a {
+    animation: navA 1s 1.2s backwards;
+}
+#header .menu.close .nav.active ul li:nth-child(3) a {
+    animation: navA 1s 1.4s backwards;
+}
+#header .menu.close .nav.active ul li:nth-child(4) a {
+    animation: navA 1s 1.6s backwards;
+}
+
+#header .menu.close .nav.not_active ul li:nth-child(1) a {
+    animation: navA-reverse 1s 0.6s forwards;
+}
+#header .menu.close .nav.not_active ul li:nth-child(2) a {
+    animation: navA-reverse 1s 0.4s forwards;
+}
+#header .menu.close .nav.not_active ul li:nth-child(3) a {
+    animation: navA-reverse 1s 0.2s forwards;
+}
+#header .menu.close .nav.not_active ul li:nth-child(4) a {
+    animation: navA-reverse 1s forwards;
+}
+
+
+#header .menu.close .nav.active .nav-background .nav-bg:nth-child(1) {
+    animation: navBg 1s 0.6s backwards;
+}
+#header .menu.close .nav.active .nav-background .nav-bg:nth-child(2) {
+    animation: navBg 1s 0.4s backwards;
+}
+#header .menu.close .nav.active .nav-background .nav-bg:nth-child(3) {
+    animation: navBg 1s 0.2s backwards;
+}
+#header .menu.close .nav.active .nav-background .nav-bg:nth-child(4) {
+    animation: navBg 1s backwards;
+}
+#header .menu.close .nav.not_active .nav-background .nav-bg:nth-child(1) {
+    animation: navBg-reverse 1s 1s forwards;
+}
+#header .menu.close .nav.not_active .nav-background .nav-bg:nth-child(2) {
+    animation: navBg-reverse 1s 1.2s forwards;
+}
+#header .menu.close .nav.not_active .nav-background .nav-bg:nth-child(3) {
+    animation: navBg-reverse 1s 1.4s forwards;
+}
+#header .menu.close .nav.not_active .nav-background .nav-bg:nth-child(4) {
+    animation: navBg-reverse 1s 1.6s forwards;
+}
+#header .menu.close .nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 16px;
+    position: absolute;
+    background-color: #fedb01;
+    bottom: 1.5vw;
+    left: 0;
+    z-index: -1;
+    transition: width .3s linear;
+}
+#header .menu.close .nav ul li a:hover {
+    transform: translate(20px, 0px);
+
+}
+#header .menu.close .nav ul li a:hover::after {
+    width: 100%;
+}
+@keyframes navBg {
+    0% {transform: scale(0, 1);}
+    100% {transform: scale(1, 1);}
+}
+@keyframes navBg-reverse {
+    0% {transform: scale(1, 1);}
+    100% {transform: scale(0, 1);}
+}
+@keyframes navA {
+    0% {transform: translate(0px, 100%);}
+    100% {transform: translate(0px, 0px);}
+}
+@keyframes navA-reverse {
+    0% {transform: translate(0px, 0px);}
+    100% {transform: translate(0px, 100%);}
+}
+#header .menu.close .menu-line {
+    background-color: #fedb01;
+}
+#header .menu.close .menu-line::before, #header .menu.close .menu-line::after {
+    opacity: .3;
+}
+
+#header .menu.close .hamburger {
+    left: 100%;
+}
+#header .menu.close .hamburger-close {
+    position: absolute;
+    right: 13px;
+    top: 25px;
+    cursor: pointer;
+    display: block;
+    transform-origin: center;
+    filter: drop-shadow(3px 3px 0 #fff);
+    transition: transform .3s linear;
+    height: 20px;
+}
+#header .menu.close .hamburger-close:hover {
+    transform: rotate(90deg);
+}
+#header .menu.close .hamburger-close:active {
+    transform: rotate(90deg);
+}
+#header .menu.close .hamburger-close::before {
+    content: "";
+    display: block;
+    width: 39px;
+    height:4px;
+    background-color:#000;
+    margin-top: 7px;
+    transform: rotate(-45deg)
+}
+#header .menu.close .hamburger-close::after {
+    content: "";
+    display: block;
+    width: 39px;
+    height:4px;
+    background-color:#000;
+    margin-top: -4px;
+    transform: rotate(45deg)
+}
+/* 메인 */
+#main .main-cont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#main .main-text-wrap {
+    position: relative;
+    z-index: 1;
+    transform-style: preserve-3d;
+    /* perspective : 1200px; */
+}
+
+#main .main-cont h1 {
+    font-size: 6.47vw;
+    color: #fff;
+    font-family: 'Alata', sans-serif;
+    /* text-shadow: 0px 0px 1px rgba(0,0,0,0.5); */
+    font-weight: bold;
+    opacity: 0;
+    transform: translate3d(0px, 0px, 50px);
+}
+
+#main .main-cont p {
+    font-size: 1.27vw;
+    position: relative;
+    z-index: 0;
+    letter-spacing: -0.5px;
+}
+#main .main-cont p span {
+    opacity: 0;
+    display: inline-block;
+}
+
+#main .main-cont p:nth-child(1) {
+    display: block;
+    text-align: left;
+    margin-left: -7vw;
+}
+#main .main-cont p:nth-child(3) {
+    display: block;
+    text-align: right;
+    margin-right: -7vw;
+}
+
+#main .main-cont p:nth-child(1)::after {
+    content: "";
+    width: 0vw;
+    height: 11px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0.4vh;
+    left: 0;
+    z-index: -1;
+    transition: width 1.4s linear;
+}
+
+#main .main-cont p:nth-child(3)::after {
+    content: "";
+    width: 0vw;
+    height: 11px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0.4vh;
+    left: 40.5vw;
+    z-index: -1;
+    transition: width 0.8s linear;
+}
+
+#main .main-cont p:nth-child(1).show::after {
+    width: 10.2vw;
+}
+#main .main-cont p:nth-child(3).show::after {
+    width: 7.4vw;
+}
+
+#main .main-cont .main-img {   /* 왼쪽 메뉴 65px */
+    position: absolute;
+    left: calc(50% - 32.5px); top: 50%; transform: translate(-50%, -50%); 
+    width: 45vw;
+    opacity: 0;
+    transform-style: preserve-3d;
+}
+
+#main  .main-cont .main-img img {
+    width: 100%;
+    transform: translate3d(0px, 0px, -50px);
+}
+
+
+/* 소개 */
+
+#about .about-cont1 {
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 12.5vw;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#about .about-cont1 h2 {
+    font-size: 24px;
+    margin-bottom: 2vh;
+}
+
+#about .about-cont1 .about-text-wrap {
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+#about .about-cont1 .about-text-wrap div {
+  
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#about .about-cont1 .about-text-wrap div:nth-child(1) {
+    padding-top: 2vh;
+}
+
+#about .about-cont1 .about-text-wrap div:nth-child(2) {
+    padding-bottom: 1.7vh;
+}
+
+#about .about-cont1 .about-text-wrap span { 
+    /* font-family: 'S-CoreDream-8Heavy'; */
+    font-family: 'KOTRA_BOLD-Bold';
+    font-size: 4.95vw;
+    /* white-space: nowrap; */
+}
+
+#about .about-cont1 .about-text-wrap div:nth-child(1) span {
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-fill-color: transparent;
+}
+
+#about .about-cont1 .about-text-wrap div:nth-child(2) span {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1;
+
+}
+
+#about .about-cont1 .about-text-wrap div:nth-child(2) span::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 18px;
+    position: absolute;
+    background-color: #fff;
+    top: 5.3vw;
+    z-index: -1;
+    transition: width 1s ease-in-out;
+}
+#about .about-cont1 .about-text-wrap div span:hover::after {
+    width: 100%;
+}
+
+/* 장점1 & 장점2 */
+#about .about-cont2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2vh;
+}
+
+#about .advan-img1 {
+    width: 35%;
+    opacity: 0;
+}
+.about-cont2 .advan-img1 {
+    transform: scale(0.5) rotate(180deg);
+}
+.about-cont3 .advan-img1 {
+    transform: scale(0.5) rotate(-180deg);
+}
+
+#about .advan-img1 img {width: 100%;}
+#about .advan-text-wrap {
+    width: 60%;
+}
+#about .advan-text-wrap>span {
+    font-size:20px;
+    padding-left: 40px;
+    font-family: 'Alata';
+    font-weight:bold;
+    opacity: 0;
+    display: inline-block;
+}
+.about-cont2 .advan-text-wrap>span {
+    transform: translateX(100px);
+}
+.about-cont3 .advan-text-wrap>span {
+    transform: translateX(-100px);
+}
+
+#about .advan-text-wrap h3 {
+    font-size: 3.5vw;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+#about .advan-text-wrap h3 .advan-t1 {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+}
+#about .advan-text-wrap h3 .advan-t2 {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+}
+
+#about .advan-text-wrap h3::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 15px;
+    position: absolute;
+    bottom: 1.2vw;
+    background-color: #fff;
+    z-index: -1;
+    transition: width 0.5s linear;
+}
+#about .advan-text-wrap h3.show::after {
+    width: 100%;
+}
+
+#about .advan-text-wrap div {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'JSDongkang-Regular';
+    padding-left: 40px;
+    opacity: 0;
+}
+
+.about-cont2 .advan-text-wrap div {
+    transform: translateX(200px);
+}
+.about-cont3 .advan-text-wrap div {
+    transform: translateX(-200px);
+}
+
+#about .advan-text-wrap div.advan-btn {
+    transform: translate(0px, 500px);
+}
+
+#about .about-cont3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2vh;
+}
+
+#about .advan-text-wrap {
+    overflow: hidden;
+}
+
+
+
+/* 프로필 */
+#about .about-cont4 .profile-img {
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 1vw;
+    opacity: 0;
+    transform: scale(0.5) rotate(180deg);
+}
+
+#about .about-cont4 .profile-img img {
+    width: 100%;
+}
+
+#about .about-cont4 .profile-text-wrap {
+    text-align: center;
+    overflow: hidden;
+}
+
+#about .about-cont4 .profile-text-wrap>span {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Alata';
+}
+#about .about-cont4 .profile-text-wrap>span {
+    transform: translateX(100px);
+    opacity: 0;
+    display: inline-block;
+}
+
+#about .about-cont4 .profile-text-wrap h3 {
+    font-size: 3.5vw;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+#about .about-cont4 .profile-text-wrap h3::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 1.2vw;
+    background-color: #fff;
+    z-index: -1;
+    transition: transform 1.7s linear;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+#about .about-cont4 .profile-text-wrap h3 span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+}
+
+#about .about-cont4 .profile-text-wrap h3.show::after {
+    transform: scaleX(1);
+}
+
+#about .about-cont4 .profile-text {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    font-family: 'JSDongkang-Regular';
+    font-size: 16px;
+    padding-bottom: 3vh;
+}
+
+#about .about-cont4 .profile-text li {
+    display: flex;
+}
+#about .about-cont4 .profile-text>ul>li {
+    opacity: 0;
+    transform: translateX(200px);
+}
+
+#about .about-cont4 .profile-text li em {
+    width: 125px;
+}
+#about .about-cont4 .profile-text li em {
+    opacity: 0;
+    transform: translateX(-400px)
+}
+
+#about .about-cont4 .profile-text li em span {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    font-family: 'Alata';
+   
+}
+#about .about-cont4 .profile-text li em span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    z-index: -1;
+    background-color: #fff;
+    top: 14px;
+}
+
+/* 버튼 */
+
+#about .about-cont4 .profile-btn {
+    text-align: center;
+    transform: scale(0);
+    opacity: 0;
+}
+#about .about-cont4 .profile-btn a, .advan-btn a {
+    display: inline-block;
+    position: relative;
+    transition: opacity .3s, z-index .3s ease, transform .3s;
+}
+#about .about-cont4 .profile-btn a span, .advan-btn a span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border: 5px solid #000;
+    background-color: #0eff86;
+    color: #000;
+    padding: 4px 25px;
+    width: 80px;
+}
+
+#about .about-cont4 .profile-btn a::before, .advan-btn a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: 8px;
+    height: 100%;
+    left: -15px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 8px 14px;
+    background-position: 0 100%;
+}
+
+#about .about-cont4 .profile-btn a::after, .advan-btn a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: calc(100% - 10px);
+    height: 8px;
+    left: -8px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 14px 8px;
+}
+#about .about-cont4 .profile-btn a:hover, .advan-btn a:hover {
+    transform:translate(-15px,15px);
+}
+#about .about-cont4 .profile-btn a:hover::before, #about .about-cont4 .profile-btn a:hover::after, .advan-btn a:hover::before, .advan-btn a:hover::after {
+    transform:translate(15px,-15px)
+}
+
+/* 장점 버튼 추가 위에는 공통 아래는 다른부분 */
+
+.advan-btn a {margin:30px 20px; text-align: center; cursor: auto;}
+#about .advan-text-wrap .advan-btn a span {padding-left: 25px; font-size: 14px; font-family: 'JSDongkang-Bold';  padding: 3px 25px; width: 80px; letter-spacing: 0.25px;}
+
+
+/* 스킬 배너 */
+
+#skill-banner .skill-banner-cont {
+    text-align: center;
+    padding-top: 3.5vh;
+    /* padding-bottom: 3vw; */
+}
+
+#skill-banner .skill-banner-cont h2 {
+    font-size: 20px;
+    margin-bottom: 5vw;
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap {
+    overflow: hidden;
+    white-space:nowrap;
+   
+}
+#skill-banner .skill-banner-cont .skill-banner-text-wrap div {
+    display: inline-block;
+    animation: textLoop 25s linear infinite;
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap span { 
+    font-family: 'Alata';
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0 2.1vw;
+    display: inline-block;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    /* transition: transform .1s cubic-bezier(0.18, 0.89, 0.42, 3.28); */
+}
+
+#skill-banner .skill-banner-cont .skill-banner-text-wrap span:hover {
+    transform:rotate(-4deg);
+    -webkit-animation:67ms twitchup;
+    animation:67ms twitchup;
+}
+
+/* 애니메이션 */
+@keyframes twitchup{
+    60%{
+        transform:rotate(-6deg)
+    }
+    100%{
+        transform:rotate(-4deg)
+    }
+}
+
+@keyframes textLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* 스킬 */
+#skills .skills-cont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* background-color: violet; */
+}
+
+#skills .skills-cont h2 {
+    font-size: 3.5vw;
+    /* margin-bottom: 5vw; */
+    padding-top: 4vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    background: url(../img/skill3.gif) no-repeat; 
+    background-size: 7vw;
+    background-position:top right;
+    opacity: 0;
+    transform: scaleX(0.5);
+    transform-origin: center;
+}
+
+#skills .skills-cont h2 span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+#skills .skills-cont h2 span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 1.2vw;
+    z-index: -1;
+}
+
+#skills .skills-cont .skills-text-wrap {
+    width: 100%;
+    position: relative;
+}
+
+#skills .skills-cont ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills .skills-cont ul li {
+    width: 50%;
+    height: 18vh;
+    font-family: 'JSDongkang-Regular';
+    font-size: 1vw;
+    position: relative;
+    perspective: 600px;
+}
+
+#skills .skills-cont ul li:first-child, #skills .skills-cont ul li:last-child {
+    width: 100%;
+}
+
+#skills .skills-cont ul li em {
+    display: block;
+    font-family: 'Alata';
+    font-size: 2vw;
+    /* line-height: 12vh; */
+    font-weight: bold;
+}
+#skills .skills-cont ul li .skill-box {
+    width: 13.9vw;
+    height: 92px;
+    margin: 4.5vh auto 0;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+#skills .skills-cont ul li .skill-hover {
+    width: 13.9vw;
+    height: 92px;
+    transition: all 1s ease-in-out;
+    backface-visibility: hidden;  /* 뒤로갔을 때 숨김 */
+    -webkit-backface-visibility: hidden;
+    /* -webkit-user-select: none;
+    user-select: none; */
+}
+/* transition: transform .1s cubic-bezier(0.18, 0.89, 0.42, 3.28); */
+#skills .skills-cont ul li .skill-back {
+    background-color: #FF69C3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(-180deg);
+    width: 13.9vw;
+    height: 92px;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+    backface-visibility: hidden; /* 뒤로갔을 때 숨김 */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-backface-visibility: hidden;
+    /* -webkit-user-select: none;
+    user-select: none; */
+}
+#skills .skills-cont ul li:nth-child(2) .skill-back {
+    background-color:#0066FF;
+}
+#skills .skills-cont ul li:nth-child(3) .skill-back {
+    background-color:#003F5C;
+}
+#skills .skills-cont ul li:nth-child(4) .skill-back {
+    background-color:#44C607;
+}
+#skills .skills-cont ul li:nth-child(5) .skill-back {
+    background-color:#8F89D2;
+}
+#skills .skills-cont ul li:nth-child(6) .skill-back {
+    background-color:#C51B1B;
+}
+
+#skills .skills-cont ul li .skill-back span {
+    color: #fff;
+    font-size: 16px;
+}
+#skills .skills-cont ul li .skill-back img {
+    max-width:40%;
+}
+
+#skills .skills-cont ul li .skill-box:hover .skill-hover {
+    transform: rotateY(180deg);
+}
+#skills .skills-cont ul li .skill-box.show .skill-hover {
+    transform: rotateY(180deg);
+}
+#skills .skills-cont ul li .skill-box:hover .skill-back {
+    transform: translate(-50%, -50%) rotateY(0deg);
+}
+#skills .skills-cont ul li .skill-box.show .skill-back {
+    transform: translate(-50%, -50%) rotateY(0deg);
+}
+
+#skills .skills-cont .skills-img {
+    position: absolute;
+    width: 12vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(240deg);
+}
+
+#skills .skills-cont .skills-img img {
+    width: 100%;
+    transform: rotate(0deg);
+}
+
+#skills .skills-cont ul li:nth-child(1) em {
+    color: #FF69C3;
+}
+#skills .skills-cont ul li:nth-child(2) em {
+    color: #0066FF;
+}
+#skills .skills-cont ul li:nth-child(3) em {
+    color: #003F5C;
+}
+#skills .skills-cont ul li:nth-child(4) em {
+    color: #44C607;
+}
+#skills .skills-cont ul li:nth-child(5) em {
+    color: #8F89D2;
+}
+#skills .skills-cont ul li:nth-child(6) em {
+    color: #C51B1B;
+}
+
+/* 포트폴리오 타이틀 */
+#port1 .port-title {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#port1 .port-title .port-title-wrap h2 {
+    font-size: 250px;
+    line-height: 30vh;
+    /* font-family: 'KOTRA_BOLD-Bold'; */
+    /* font-family: 'Alata'; */
+    letter-spacing: 0.5px;
+}
+
+#port1 .port-title .port-title-wrap p {
+    font-size: 1.5vw;
+}
+
+/* 퍼블리싱 전체 */
+#port2 .publi-title {
+    font-size: 5.5vw;
+    text-align: right;
+    /* padding-top: 16vw; */
+    padding-right: 7.1vw;
+   
+}
+#port2 .publi-title>span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+#port2 .publi-title>span span {
+    /* 스크롤 등장씬 */
+    display: inline-block;
+    opacity: 0;
+    transform: translate(0px, 100px) rotate(24deg);
+}
+#port2 .publi-title>span::after{
+    content: "";
+    width: 0;
+    height: 16px;
+    display: block;
+    background-color: #4733db;
+    position: absolute;
+    bottom: 2vw;
+    z-index: -1;
+    transition: width 1.4s linear;
+}
+#port2 .publi-title>span.show::after {
+    width: 100%;
+}
+#port2 .publi-box {
+    height: 100vh;    /*한화면 가득 */
+    align-items: center;  /*  한화면 가득 */
+
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    overflow: hidden;
+    
+    /*  padding: 5vw 0;한화면x*/
+
+     /* 스크롤 등장씬 */
+     /* opacity: 1;
+     transform: translate(0px, 100px) rotateX(16deg) rotateY(16deg); */
+}
+#port2 .publi-box.reverse {
+    flex-direction: row-reverse;
+}
+#port2 .publi-text-wrap {
+    height: 30vw;    /*한화면 가득 */
+
+    width: 30%;
+    position: relative;
+    /* 스크롤 등장씬 */
+     /* opacity: 0;
+     transform: translate(0px, 100px) rotateX(16deg) rotateY(16deg);
+     transition: transform .5s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.19,1,.22,1); */
+}
+
+#port2 .publi-img {
+    width: 55%;
+    position: relative;
+}
+
+
+#port2 .publi-img a {
+    display: block;
+}
+
+#port2 .publi-img img {
+    max-width: 75%;
+    transform: translate3d(-50%, -40%, 0px) scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 2;
+    transition: transform .3s ease;
+    opacity: 0;
+}
+
+#port2 .publi-img:hover img {
+    transform: translate3d(-50%, -40%, 0px) scale3d(1.1, 1.1, 1);
+}
+
+#port2 .publi-img .publi-bg {
+    position: inherit;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    transition: transform .3s ease;
+    opacity: 0;
+}
+
+#port2 .publi-img:hover .publi-bg {
+    transform: translate3d(0px, 0px, 0px) scale3d(0.95, 0.95, 1);
+}
+
+#port2 .publi-text-wrap>span {
+    font-family: 'Alata';
+    font-size: 20px;
+    display: block;
+}
+
+#port2 .publi-box.reverse .publi-text-wrap span.reverse {
+    margin-left: 20%;
+}
+
+#port2 .publi-text-wrap h3 {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 1.5vw;
+}
+
+#port2 .publi-box.reverse .publi-text-wrap h3 {
+    margin-left: 20%;
+}
+
+#port2 .publi-text-wrap .publi-text {
+    font-family: 'JSDongkang-Regular';
+    color: #939393;
+    font-size: 18px;
+    line-height: 28px;
+    width: 80%;
+}
+#port2 .publi-box.reverse .publi-text-wrap .publi-text {
+    margin-left: 20%;
+}
+
+#port2 .publi-btn a span {
+    color:#fff;
+}
+
+/* 퍼블리싱 view 버튼 */
+
+#port2 .publi-wrap .publi-btn {
+    margin-left: 17px;
+    position: absolute;
+    bottom: 25px;
+    width: 75%;
+}
+#port2 .publi-wrap .publi-box.reverse .publi-btn {
+    margin-left: calc(20% + 15px);
+}
+
+#port2 .publi-wrap .publi-btn a {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 90%;
+    transition: opacity .3s, z-index .3s ease, transform .3s;
+}
+#port2 .publi-wrap .publi-btn a span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border: 5px solid #939393;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 25px 4px;
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+}
+
+#port2 .publi-wrap .publi-btn a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: 8px;
+    height: 100%;
+    left: -15px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#939393 5px,#939393 10px,transparent 10px);
+    background-size: 8px 14px;
+    background-position: 0 100%;
+}
+
+#port2 .publi-wrap .publi-btn a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: calc(100% - 10px);
+    height: 8px;
+    left: -8px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#939393 5px,#939393 10px,transparent 10px);
+    background-size: 14px 8px;
+}
+#port2 .publi-wrap .publi-btn a:hover {
+    transform:translate(-15px,15px);
+}
+#port2 .publi-wrap .publi-btn a:hover::before, #port2 .publi-wrap .publi-btn a:hover::after {
+    transform:translate(15px,-15px)
+}
+
+
+
+/* 애니메이션 자바스크립트 타이틀 */
+#port3 .port3-title {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#port3 .port3-title .port3-title-wrap h2 {
+    font-size: 270px;
+    line-height: 30vh;
+    /* font-family: 'KOTRA_BOLD-Bold'; */
+    /* font-family: 'Alata'; */
+    letter-spacing: 0.5px;
+    color: #000;
+}
+
+#port3 .port3-title .port3-title-wrap p {
+    font-size: 1.5vw;
+    color: #000;
+}
+
+/* 애니메이션 자바스크립트 사이 배너 */
+
+#work-banner .work-banner-cont {
+    text-align: center;
+    padding-top: 7.5vw;
+    padding-bottom: 5vw;
+}
+
+#work-banner .work-banner-cont h2 {
+    font-size: 20px;
+    margin-bottom: 5vw;
+}
+
+#work-banner .work-banner-cont .work-banner-text-wrap {
+    overflow: hidden;
+    white-space:nowrap;
+   
+}
+#work-banner .work-banner-cont .work-banner-text-wrap div {
+    display: inline-block;
+    animation: textLoop 10s linear infinite;
+}
+
+#work-banner .work-banner-cont .work-banner-text-wrap span { 
+    font-family: 'Alata';
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0 2.1vw;
+    display: inline-block;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    /* transition: transform .1s cubic-bezier(0.18, 0.89, 0.42, 3.28); */
+}
+
+#work-banner .work-banner-cont .work-banner-text-wrap span:hover {
+    transform:rotate(-4deg);
+    -webkit-animation:67ms twitchup;
+    animation:67ms twitchup;
+}
+
+
+/* 애니메이션 자바스크립트 */
+#port4 .port4-wrap {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+#port4 .ani-wrap, #port4 .script-wrap  {
+    /* width: 50%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#port4 .ani-title, #port4 .script-title {
+    width: 100%;
+}
+#port4 .ani-title h2, #port4 .script-title h2 {
+    font-size: 3.5vw;
+    margin: 5vh 10%;
+    padding: 4vw 3vw 0;
+    display: inline-block;
+    transition: background-position .5s ease ;
+}
+
+
+#port4 .script-title {
+    text-align: right;
+}
+#port4 .ani-title h2>span, #port4 .script-title h2>span{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+#port4 .ani-title h2>span::after, #port4 .script-title h2>span::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 16px;
+    position: absolute;
+    background-color: #fff;
+    bottom: 1vw;
+    z-index: -1;
+    transition: width 0.3s linear;
+}
+#port4 .ani-title h2>span.show::after, #port4 .script-title h2>span.show::after {
+    width: 100%;
+}
+
+#port4 .ani-title h2.show, #port4 .script-title h2.show {
+    background: url(../img/skill3.gif) no-repeat;
+    background-size: 7vw;
+    background-position: top right;
+}
+
+#port4 .ani-cont, #port4 .script-cont { 
+    width: 50%;
+    margin-bottom: 10vh;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+}
+#port4 .ani-cont.show, #port4 .script-cont.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+#port4 .ani-cont:nth-child(2n), #port4 .script-cont:nth-child(2n+1) {
+    padding-top: 5vw;
+}
+
+#port4 .ani-img, #port4 .script-img {
+    width: 80%;
+    margin:0 auto;
+    max-height: 520px;
+    height: 35vw;
+    transition: transform 0.5s ease;
+}
+/* #port4 .ani-img .ani-bg, #port4 .script-img .script-bg {
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    left: -10%;
+    top: -10%;
+} */
+#port4 .ani-img iframe {
+    width: 100%;
+    height: 100%;
+    border:none;
+    /* transform: translate3d(0px, 0px, 0px) scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s ease; */
+}
+
+/* #port4 .ani-img:hover iframe {
+    transform: translate3d(-15px, -15px, 0px) scale(1);
+}
+#port4 .ani-img .ani-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #4733db;
+    z-index: -1;
+} */
+#port4 .script-img iframe {
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+#port4 .ani-text, #port4 .script-text {
+    margin: 2vh auto 6vh;
+    width: 80%;
+    transition: transform 0.5s ease;
+}
+#port4 .ani-text h3, #port4 .script-text h3 {
+    font-size: 2vw;
+}
+
+#port4 .ani-text p, #port4 .script-text p{
+    font-size: 16px;
+    font-family: 'JSDongkang-Regular';
+}
+
+
+/* 연락 */
+#contact .contact-cont1 {
+    text-align: center;
+    padding-top: 5.2vh;
+    padding-bottom: 6.5vw;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#contact .contact-cont1 h2 {
+    font-size: 24px;
+    margin-bottom: 2vh;
+}
+
+#contact .contact-cont1 .contact-text-wrap {
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+#contact .contact-cont1 .contact-text-wrap div {
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#contact .contact-cont1 .contact-text-wrap div:nth-child(1) {
+    padding-top: 2vh;
+}
+
+#contact .contact-cont1 .contact-text-wrap div:nth-child(2) {
+    padding-bottom: 1.7vh;
+}
+
+#contact .contact-cont1 .contact-text-wrap span { 
+    /* font-family: 'S-CoreDream-8Heavy'; */
+    font-family: 'KOTRA_BOLD-Bold';
+    font-size: 4.95vw;
+}
+
+#contact .contact-cont1 .contact-text-wrap div:nth-child(1) span {
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-fill-color: transparent;
+}
+
+#contact .contact-cont1 .contact-text-wrap div:nth-child(2) span {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1;
+
+}
+
+#contact .contact-cont1 .contact-text-wrap div:nth-child(2) span::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 18px;
+    position: absolute;
+    background-color: #fff;
+    top: 5.3vw;
+    z-index: -1;
+    transition: width 1s ease-in-out;
+}
+#contact .contact-cont1 .contact-text-wrap div span:hover::after {
+    width: 100%;
+}
+
+/*  연락 폼 */
+
+#contact .contact-cont2 {
+    padding-bottom: 4.5vh;
+}
+
+#contact .contact-cont2 fieldset {
+    border:none;
+}
+
+#contact .contact-cont2 input {
+    width: calc(100% - 50px);
+    height: 30px;
+    border: 5px solid #000;
+    margin-bottom: 20px;
+    padding: 7px 20px 3px;
+}
+
+#contact .contact-cont2 input::placeholder {
+    color: #000;
+    font-family: 'JSDongkang-Bold';
+}
+
+#contact .contact-cont2 textarea {
+    width: calc(100% - 50px);
+    height: 280px;
+    padding: 10px 20px;
+    border: 5px solid #000;
+    resize:none;
+    margin-bottom: 20px;
+}
+
+#contact .contact-cont2 textarea::placeholder {
+    color: #000;
+    font-family: 'JSDongkang-Bold';
+}
+
+#contact .contact-cont2 textarea::-webkit-scrollbar {
+    width: 10px;
+}
+#contact .contact-cont2 textarea::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+#contact .contact-cont2 textarea::-webkit-scrollbar-thumb {
+    background-color: #ffeb66;
+    border-radius: 35px;
+}
+#contact .contact-cont2 textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #fedb01;
+}
+#contact .contact-cont2 textarea::-webkit-scrollbar-thumb:active {
+    background-color: #fedb01;
+}
+#contact .contact-cont2 textarea::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+/* 폼 버튼 */
+
+#contact .contact-cont2 .contact-btn {
+    text-align: center;
+}
+#contact .contact-cont2 .contact-btn button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: opacity .3s, z-index .3s ease, transform .3s;
+}
+#contact .contact-cont2 .contact-btn button span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border: 5px solid #000;
+    background-color: #0eff86;
+    color: #000;
+    padding: 5px 25px 4px;
+    width: 80px;
+}
+
+#contact .contact-cont2 .contact-btn button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: 8px;
+    height: 100%;
+    left: -15px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 8px 14px;
+    background-position: 0 100%;
+}
+
+#contact .contact-cont2 .contact-btn button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: transform .3s ease;
+    width: calc(100% - 10px);
+    height: 8px;
+    left: -8px;
+    bottom: -15px;
+    background-image: linear-gradient(135deg,transparent 0,transparent 5px,#000 5px,#000 10px,transparent 10px);
+    background-size: 14px 8px;
+}
+#contact .contact-cont2 .contact-btn button:hover {
+    transform:translate(-15px,15px);
+}
+#contact .contact-cont2 .contact-btn button:hover::before, #contact .contact-cont2 .contact-btn button:hover::after {
+    transform:translate(15px,-15px)
+}
+
+
+/* 푸터 */
+#footer .ft-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+}
+#footer .ft-logo {
+    width: 200px;
+}
+
+#footer .ft-logo a {   
+    display: block;
+}
+
+#footer .ft-logo a:hover {   
+    color: #000;
+}
+
+#footer .ft-logo span {
+    position: relative;
+    display: inline-block;
+    font-size:32px;
+    letter-spacing: -1px;
+    z-index: 1;
+    font-style: italic;
+}
+
+#footer .ft-logo span::after {
+   content: "";
+   display: block;
+   position: absolute;
+   width: 105%;
+   height: 10px;
+   background-color: #fff;
+   bottom: 14px;
+   z-index: -1;
+}
+
+#footer .ft-cont {
+    width: calc(100% - 400px);
+    text-align: center;
+    font-size: 5vw;
+    line-height: 5.5vw;
+    font-family: 'Alata', sans-serif;
+    font-weight: bold;
+}
+
+#footer .ft-cont span {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+#footer .ft-cont span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 17px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 4.3vw;
+}
+
+
+#footer .ft-text-wrap {
+    width: 200px;
+    text-align: right;
+    font-family: 'Alata', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#footer address {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 2vw 0;
+}
+
+#footer .ft-icon a {
+    display: inline-block;
+    background-color: #fff;
+    width: 3vw;
+    height: 3vw;
+    line-height: 3vw;
+    margin: 0 0.2vw;
+    font-size: 1vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28%;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+    opacity: 0.99;
+}
+#footer .ft-icon a, #footer .ft-icon a::before, #footer .ft-icon a .fa {
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+
+#footer .ft-icon a:nth-child(1) {
+    color: #2db400;
+}
+#footer .ft-icon a:nth-child(2) {
+    color: #3985ff;
+}
+
+#footer .ft-icon a::before {
+    content: '';
+    display: block;
+    width: 120%;
+    height: 120%;
+    top: 90%;
+    left: -110%;
+    position: absolute;
+    transform: rotate(45deg);
+}
+#footer .ft-icon a .fa{
+    transform: scale(1);
+}
+
+#footer .ft-icon a:hover .fa, #footer .ft-icon a:focus .fa {
+    color: #fff;
+    transform: scale(1.2);
+}
+#footer .ft-icon a:nth-child(1)::before {
+    background-color: #2db400;
+}
+#footer .ft-icon a:nth-child(2)::before {
+    background-color: #3985ff;
+}
+#footer .ft-icon a:hover::before, #footer .ft-icon a:hover:focus {
+    top: -10%;
+    left: -10%;
+}
+
+
+/* 반응형 */
+@media (max-width:1450px) { 
+    #port2 .publi-box.reverse .publi-text-wrap span.reverse {margin-left: 5%;}
+    #port2 .publi-box.reverse .publi-text-wrap h3 {margin-left: 5%;}
+    #port2 .publi-box.reverse .publi-text-wrap .publi-text {margin-left: 5%;}
+    #port2 .publi-wrap .publi-box.reverse .publi-btn {margin-left: calc(5% + 15px);}
+}
+
+@media (max-width:1280px) {
+    #port1 .port-title .port-title-wrap h2 {font-size: 230px;}   /* 포트폴리오 타이틀 폰트 사이즈 */
+    #port3 .port3-title .port3-title-wrap h2 {font-size: 260px;}
+}
+
+@media (max-width:1325px) { /* max-width:1240px  컨텐츠 박스 반응형 크기로 <왼쪽메뉴 없애면 원래로 돌리기> */ /* 왼쪽 메뉴 65px  */
+    .content-box {width: 96%; padding: 0 2%;}
+    #port2 .publi-title>span::after {bottom: 1.5vw;}
+    /* #port2 { padding-top: 170vh;} */
+}
+
+@media (max-width:1220px) {
+    #header .menu.close .nav ul li a {font-size: 7.5vw;} 
+    #header .menu.close .nav ul li a::after {bottom: 2.5vw;}
+
+    #main .main-cont .main-img { width: 60%; }
+    #main .main-cont p {font-size: 20px;}
+    #main .main-cont p:nth-child(1) {margin-left: -15vw;}
+    #main .main-cont p:nth-child(3) {margin-right: -15vw;}
+    #main .main-cont p:nth-child(1).show::after {width: 160px;}
+    #main .main-cont p:nth-child(3).show::after {left: auto; right: 120px; width: 115px;}
+
+    #about .about-cont4 .profile-img {width: 40%;}
+    
+    #skills .skills-cont ul li {font-size: 1.5vw; height: 15vh; }
+    #skills .skills-cont ul li em {/*line-height: 9.5vh;*/ font-size: 3vw;}
+    #skills .skills-cont ul li .skill-box {width: 20vw;}
+    #skills .skills-cont ul li .skill-hover {margin: 3.4vh auto 0; width: 20vw;}
+    #skills .skills-cont ul li .skill-back {width: 20vw;}
+
+    #port1 .port-title .port-title-wrap h2 {font-size: 180px;}
+    #port3 .port3-title .port3-title-wrap h2{font-size: 200px;}
+    #port1 .port-title .port-title-wrap p {font-size: 2vw;}
+    #port3 .port3-title .port3-title-wrap p{font-size: 2vw;}
+
+    #port2 .publi-text-wrap {width: 35%;}
+    #port2 .publi-img {width: 50%;}
+    #port2 .publi-text-wrap .publi-text {width: 95%; font-size: 16px; line-height: 20px;}
+    #port2 .publi-text-wrap h3 {font-size: 2.8vw;  line-height: 3.3vw;  margin-top: 1vw; }
+    #port2 .publi-wrap .publi-btn a span {padding: 5px 15px 4px;}
+    
+    #footer .ft-icon a {width: 40px; height: 40px; line-height: 40px; font-size: 16px; }
+
+  
+}
+@media (max-width:1025px) {
+    #port2 .publi-box {align-content: center;}
+    #port2 .publi-text-wrap {width: 90%; position: initial;margin-bottom: 3vh;}
+    #port2 .publi-img {width: 90%; margin-top: 1vh;}
+    #port2 .publi-text-wrap h3 {font-size: 32px; line-height: 42px; margin:2vh 0;}
+    #port2 .publi-text-wrap .publi-text {width: 100%; margin-bottom: 5.2vw;}
+    #port2 .publi-box.reverse .publi-text-wrap span.reverse {margin-left: 0;}
+    #port2 .publi-box.reverse .publi-text-wrap h3 {margin-left: 0;}
+    #port2 .publi-box.reverse .publi-text-wrap .publi-text {margin-left: 0;}
+    #port2 .publi-title {font-size: 7.5vw;}
+    #port2 .publi-title>span::after {bottom: 2vw;}
+    #port2 .publi-text-wrap>span {font-size:18px;}
+    #port2 .publi-wrap .publi-btn {position: initial; display: inline-block; width: 92%;}
+    #port2 .publi-wrap .publi-box.reverse .publi-btn {margin-left: 15px;}
+    #port2 .publi-wrap .publi-btn a {width: 92%;}
+    #port2 .publi-wrap .publi-btn a span {width: 92%;}
+}
+
+@media (max-width:960px) {
+    #header .logo a {width: 8vw;}
+
+    #main .main-cont .main-img { width: 70%; }
+
+    #skill-banner .skill-banner-cont .skill-banner-text-wrap span {font-size: 16px;}
+    #skill-banner .skill-banner-cont .skill-banner-text-wrap span::after {top: 13px;}
+
+    #port1 .port-title .port-title-wrap h2 {font-size: 150px;}
+    #port3 .port3-title .port3-title-wrap h2 {font-size: 150px;}
+    #port1 .port-title .port-title-wrap p {font-size: 2.5vw;}
+    #port3 .port3-title .port3-title-wrap p {font-size: 2.5vw;}
+
+    #port2 .publi-box {align-content: inherit;}
+    
+    #port4 .ani-text h3, #port4 .script-text h3 {font-size: 3vw;}
+    #work-banner .work-banner-cont .work-banner-text-wrap span {font-size: 16px;}
+    #work-banner .work-banner-cont .work-banner-text-wrap span::after {top: 13px;}
+
+    #footer .ft-cont span::after {height: 10px;}
+}
+
+@media (max-width:794px) {
+    #contents {padding-right: 0;} /* 왼쪽 메뉴 65px */
+
+    #header .menu .menu-line {height: 65px;}
+    #header .menu .menu-line::after {display: none;}
+    #header .menu .menu-line::before {display: none;}  /* 메뉴 작게 표시 */
+    #header .menu.close .nav ul li a {font-size: 10.5vw;}
+    #header .menu.close .nav ul li a::after {bottom: 3.5vw;}
+
+    #main .main-cont {align-items: flex-end;}
+    #main .main-text-wrap {margin-bottom: 16vh;}
+    #main .main-cont .main-img {width: 80%; top: calc(18vh + 20%); left: 50%; }  /* 왼쪽 메뉴 65px  transform: translate(-50%, 0) scale(0);*/
+    #main .main-cont h1 {font-size: 8.47vw;}
+    #main .main-cont p {font-size: 23px;}
+    #main .main-cont p:nth-child(1) {margin-left: 0;}
+    #main .main-cont p:nth-child(3) {margin-right: 0; margin-top: 1.4vh;}
+    #main .main-cont p:nth-child(1).show::after {width: 185px;}
+    #main .main-cont p:nth-child(3).show::after {right: 140px; width: 135px;}
+
+    #about .about-cont1 .about-text-wrap span {font-size:50px;}
+    #about .about-cont1 .about-text-wrap div:nth-child(2) span::after {top: 43px;}
+    #about .advan-img1 {width: 60%; margin: 0 auto;}
+    #about .advan-text-wrap {width: 90%; margin: 0 auto;}
+    #about .advan-text-wrap span {padding-left: 0;}
+    #about .advan-text-wrap h3 {font-size: 6.5vw;}
+    #about .advan-text-wrap h3::after {bottom: 2.5vw;}
+    #about .advan-text-wrap div {padding-left: 0;}
+    /* #about .about-cont2, #about .about-cont3, #about .about-cont4, #skills .skills-cont, #port1 .port-title {padding-right: 0;}  메뉴bar 사라지면서 중앙정렬 */ /* 왼쪽 메뉴 65px */
+    #about .about-cont4 .profile-img {width: 60%;}
+    #about .about-cont4 .profile-text-wrap {text-align: left; width: 90%; margin: 0 auto;}
+    #about .about-cont4 .profile-text-wrap h3 {font-size: 6.5vw;}
+    #about .about-cont4 .profile-text-wrap h3::after {bottom: 2.5vw;}
+    #about .about-cont4 .profile-text {justify-content: inherit;}  
+
+    #skills .skills-cont h2 {font-size: 6.5vw;}
+    #skills .skills-cont h2 span::after {bottom: 2.5vw;}
+    #skills .skills-cont ul li {font-size: 16px;}
+    #skills .skills-cont ul li em {/*line-height: 9.5vh;*/ font-size: 20px;}
+    #skills .skills-cont ul li .skill-box {width: 160px; height: 78px; margin: 4.8vh auto 0;}
+    #skills .skills-cont ul li .skill-hover {width: 160px; line-height: inherit; height: 78px;}
+    #skills .skills-cont ul li .skill-back {width: 160px; height: 78px;}
+
+    #port1 .port-title .port-title-wrap h2 {font-size: 95px;}
+    #port1 .port-title .port-title-wrap p {font-size: 16px;}
+    
+    #port2 .publi-title {text-align: left; padding-left: 5%; padding-right:0;margin-bottom: 5vw;}
+    #port2 .publi-text-wrap .publi-text {margin-bottom: 8vh;}
+
+    #port3 .port3-title .port3-title-wrap h2 {font-size: 95px;}
+    #port3 .port3-title .port3-title-wrap p {font-size: 16px;}
+
+    #port4 .ani-cont, #port4 .script-cont {width: 100%;}
+    #port4 .ani-cont:nth-child(2n), #port4 .script-cont:nth-child(2n+1) {padding-top: 0;}
+    #port4 .ani-wrap, #port4 .script-wrap {width: 100%;}
+    #port4 .ani-img, #port4 .script-img {height:65vw;}
+    #port4 .ani-title h2, #port4 .script-title h2 {font-size: 6.5vw;}
+    #port4 .ani-title h2>span::after, #port4 .script-title h2>span::after {bottom: 2.5vw;}
+    #port4 .ani-text h3, #port4 .script-text h3 {font-size: 4vw;}
+
+    #contact .contact-cont1 .contact-text-wrap span {font-size:50px;}
+    #contact .contact-cont1 .contact-text-wrap div:nth-child(2) span::after {top: 43px;}
+
+    #footer {padding-right: 0;}
+    #footer .ft-logo {width: 90%; margin: 0 auto;}
+    #footer .ft-logo span {font-size: 20px;}
+    #footer .ft-logo span::after {bottom: 7px;}
+    #footer .ft-cont {width: 90%; text-align: left; margin: 2vw auto 5vw; font-size: 30px; line-height: 30px;}
+    #footer .ft-cont p {display: inline-block;}
+    #footer .ft-cont span::after {top: 20px;}
+    #footer .ft-text-wrap {width: 90%; text-align: left; margin: 0 auto; font-size:20px;}
+}
+
+@media (max-width:600px) {
+    #header .logo a {width: 10vw;}
+   
+    #about .about-cont4 .profile-text li {flex-direction: column; }
+    #about .about-cont4 .profile-text li em {width: auto;}
+}
+
+@media (max-width:480px) {
+    #header .logo a {width: 15vw;}
+    #header .menu.close .nav ul li a {font-size: 45px;}
+    #header .menu.close .nav ul li a::after {bottom: 12px;}
+
+    #main .main-cont .main-img {width: 95%; top: calc(16vh + 20%); }
+    #main .main-text-wrap {margin-bottom: 16vh; transform: perspective(0) !important;}
+    #main .main-cont p {font-size: 16px;}
+    #main .main-cont h1 {font-size: 10.47vw; margin-left: 10px; transform: translate3d(0px, 0px, 0px);}
+    #main .main-cont p:nth-child(3) { text-align: left;}
+    #main .main-cont p:nth-child(1).show::after {width: 125px; height: 7px;}
+    #main .main-cont p:nth-child(3).show::after {right: 0; left: 0; width: 90px; height: 7px;}
+
+    #about .advan-img1 {width: 80%;}
+    #about .advan-text-wrap h3 {font-size: 24px;}
+    #about .about-cont4 .profile-img {width: 80%;}
+    #about .about-cont4 .profile-text-wrap h3 {font-size: 24px;}
+    #about .about-cont4 .profile-btn a span, .advan-btn a span {width: auto;}
+    #about .advan-text-wrap .advan-btn a span {width: auto;}
+
+    #skills .skills-cont ul li {width: 100%; height: 13vh;}
+    #skills .skills-cont .skills-img {display: none;}
+    /* #skills .skills-cont .skills-img {left: 15vw; transform: translate(-13vw, -50%) rotate(300deg);} */
+    #skills .skills-cont h2 {font-size: 24px;}
+    /* #skills .skills-cont h2 span::before {width: 4.9vw; height: 4.1vw;} */
+    #skills .skills-cont ul li em {/* line-height: 25px;*/}
+    #skills .skills-cont ul li .skill-box.show:hover .skill-hover{transform:rotateY(180deg)}
+    #skills .skills-cont ul li .skill-box.show .skill-hover { transform: inherit;}
+    #skills .skills-cont ul li .skill-box.show .skill-back {transform: translate(-50%, -50%) rotateY(-180deg);}
+    #skills .skills-cont ul li .skill-box.show:hover .skill-back {transform: translate(-50%, -50%) rotateY(0deg);}
+    
+    #port1 .port-title .port-title-wrap h2 {font-size:18vw;}
+    #port1 .port-title .port-title-wrap p {font-size: 11px;}
+    
+
+    #port2 {padding-top: 450vh;}
+    #port2 .publi-title {font-size: 10vw;}
+    #port2 .publi-text-wrap h3 {font-size: 28px; line-height: 38px;}
+    #port2 .publi-text-wrap .publi-text {margin-bottom: 5vh;}
+    #port2 .publi-img {margin-top: 12vh;}
+    #port2 .publi-wrap .publi-btn {width: 90%;}
+    #port2 .publi-wrap .publi-btn a span {width: 90%;}
+
+    #port3 .port3-title .port3-title-wrap h2 {font-size: 18vw;}
+    #port3 .port3-title .port3-title-wrap p {font-size: 11px;}
+
+    #port4 .ani-title h2, #port4 .script-title h2 {font-size: 24px;}
+    #port4 .ani-text h3, #port4 .script-text h3 {font-size: 18px;}
+}

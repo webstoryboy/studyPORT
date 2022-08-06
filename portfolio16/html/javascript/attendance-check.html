@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인원표시</title>
+    <link rel="stylesheet" type="text/css" href="./css/06.css" />
+</head>
+<body>
+  <h1>출석체크</h2>
+    <div class="result">
+      <h2 id="date"><span>2020.11.21</span></h2>
+      <ul class="member">
+        <li>총:<span id="tot"></span></li>
+        <li>남자:<span id="mNum"></span></li>
+        <li>여자:<span id="wNum"></span></li>
+      </ul>
+    </div>
+  <table class="table table-border table-list">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>성별</th>
+        <th>생년월일</th>
+        <th>출석체크</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>홍길동</td>
+        <td name='sex'><button class="sex male" onclick = "changeSex();">남자</button></td>
+        <td>87.11.21</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>아이유</td>
+        <td name='sex'><button class="sex female" onclick = "changeSex();">여자</button></td>
+        <td>87.11.21</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>유인나</td>
+        <td name='sex'><button class="sex female" onclick = "changeSex();">여자</button></td>
+        <td>82.01.4</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>레이나</td>
+        <td name='sex'><button class="sex female" onclick = "changeSex();">여자</button></td>
+        <td>90.05.23</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>강창근</td>
+        <td name='sex'><button class="sex male" onclick = "changeSex();">남자</button></td>
+        <td>85.05.23</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>나종현</td>
+        <td name='sex'><button class="sex male" onclick = "changeSex();">남자</button></td>
+        <td>55.01.23</td>
+        <td><input type="checkbox" name="atta" onclick='getCheckedCnt()'></td>
+      </tr>
+    </tbody>
+  </table>
+  <small>*성별버튼 클릭시 변경가능</small>
+</body>
+<script src="./js/06.js"></script>
+
+</html>

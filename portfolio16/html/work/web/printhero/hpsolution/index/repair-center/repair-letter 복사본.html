@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- title -->
+	<title>HP Solution 프린팅 서비스 플랫폼</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- for-mobile-apps -->
+	<link href="../images/favicon.png" rel="shortcut icon" />
+	<!-- title -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="../css/animate.css">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="프린팅 서비스의 모든 것 HP 솔루션">
+	<meta property="og:url" content="http://oaic.co.kr:8090/">
+	<meta property="og:description" content="고객의 프린팅 서비스 습관을 혁신합니다.">
+	<meta property="og:image" content="../images/thumnail.jpg">
+	<meta name="robots" content="index,follow">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="HP Solution">
+	<!-- description -->
+	<meta name="description" content="대한민국 최초의 프린팅 서비스 플랫폼">
+	<!-- keywords -->
+	<meta name="keywords" content="hp솔루션">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script type="text/javascript" src="../js/wow.js"></script>
+	<script type="text/javascript" src="../js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- jquery -->
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+	<!-- js-카운터 -->
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter').counterUp({
+				delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+				time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+			});
+		});
+	</script>
+	<script src="../js/waypoints.min.js"></script>
+	<script src="../js/jquery.counterup.min.js"></script>
+	<!--//js-카운터 -->
+	<!-- price range (top products) -->
+	<script src="../js/jquery-ui.js"></script>
+	<!-- //price range (top products) -->
+	<!-- flexisel (for special offers) -->
+	<script src="../js/jquery.flexisel.js"></script>
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+	<!-- //flexisel (for special offers) -->
+	<!-- 탑클릭 부드럽게 -->
+	<script>
+		$('.banner').click(function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 0);
+			return false;
+		});
+	</script>
+	<!--// 탑클릭 부드럽게 -->
+	<!-- smoothscroll -->
+	<script src="../js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+	<!-- start-smooth-scrolling -->
+	<script src="../js/move-top.js"></script>
+	<script src="../js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!--고정배너 스크립트 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.show-on-scroll');
+			if ($(this).scrollTop() >= 600) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//고정배너 스크립트 -->
+	<!--탑서칭 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.top-search-show-on-scroll');
+			if ($(this).scrollTop() >= 500) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//탑서칭 -->
+	<!--알람 -->
+	<script>
+		function button1_click() {
+			alert("준비중입니다.");
+		}
+	</script>
+	<!--//알람 -->
+	<!--첨부파일-->
+	<script>
+		$(document).ready(function () {
+			var fileTarget = $('.filebox .upload-hidden');
+			fileTarget.on('change', function () { // 값이 변경되면 
+				if (window.FileReader) { // modern browser 
+					var filename = $(this)[0].files[0].name;
+				} else { // old IE 
+					var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+				}
+				// 추출한 파일명 삽입 
+				$(this).siblings('.upload-name').val(filename);
+			});
+		});
+		var imgTarget = $('.preview-image .upload-hidden');
+		imgTarget.on('change', function () {
+			var parent = $(this).parent();
+			parent.children('.upload-display').remove();
+			if (window.FileReader) {
+				//image 파일만 
+				if (!$(this)[0].files[0].type.match(/image\//)) return;
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					var src = e.target.result;
+					parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="' + src +
+						'" class="upload-thumb"></div></div>');
+				}
+				reader.readAsDataURL($(this)[0].files[0]);
+			} else {
+				$(this)[0].select();
+				$(this)[0].blur();
+				var imgSrc = document.selection.createRange().text;
+				parent.prepend(
+					'<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>'
+					);
+				var img = $(this).siblings('.upload-display').find('img');
+				img[0].style.filter =
+					"progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" +
+					imgSrc + "\")";
+			}
+		});
+	</script>
+	<!--첨부파일-->
+	<!-- for bootstrap working -->
+	<script src="../js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
+	<!--//tags -->
+	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<!--pop-up-box-->
+	<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!--//pop-up-box-->
+	<!-- price range -->
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui1.css">
+	<!-- fonts -->
+</head>
+
+<body>
+
+	<div class="m-shoppingcenter-text">
+		<a href="./repair-main.html">수리센터</a>
+	</div>
+	<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+	<div class="mnk-main-menu-toggle menu-container">
+		<div class="fdr-menu-box">
+
+			<div class="container">
+				<div class="logo" style="float: none; margin-right: 10px;">
+					<div class="site-logo">
+						<a href="../index.html">
+							<img src="../images/logo.png" alt="로고">
+							<img src="../images/logo-small.png" alt="로고작은거">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+
+							<ul class="menu-line">
+
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 active">
+									<a href="../shopping-center/shop-main.html">쇼핑센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="../repair-center/repair-main.html" class="active">수리센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="../rental-center/rental-main.html">렌탈센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="../edu-center/edu-main.html">교육센터</a>
+								</li>
+								<li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064"
+									style="margin-right: 40px;">
+									<a target="_blank" onclick="location.href='../partner-form.html'"><span>파트너신청
+											&nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+
+			<input type="checkbox" id="menuicon2">
+			<label for="menuicon2">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<!--전체메뉴 토글버튼-->
+			<div class="sidebar">
+				<div class="mobile-toggle-bar">
+
+					<div class="box-m1 service-m">
+						<h4>전체서비스</h4>
+						<table class="info2">
+							<tr>
+								<td>
+									<img src="../images/shopping-ct-ico.png" alt="쇼핑센타아이콘"
+										onclick="location.href='../shopping-center/shop-main.html'"><br><a>쇼핑센터</a>
+								</td>
+								<td>
+									<img src="../images/repair-ct-ico.png" alt="수리센타아이콘"
+										onclick="location.href='../repair-center/repair-main.html'"><br><a>수리센터</a>
+								</td>
+								<td>
+									<img src="../images/rental-ct-ico.png" alt="렌탈센타아이콘"
+										onclick="location.href='../rental-center/rental-main.html'"><br><a>렌탈센터</a>
+								</td>
+								<td>
+									<img src="../images/edu-ct-ico.png" alt="교츅센타아이콘"
+										onclick="location.href='../edu-center/edu-main.html'"><br><a>교육센터</a>
+								</td>
+							</tr>
+						</table>
+						<!-- 
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="찾으시는 물건을 검색하세요.">
+					<span class="input-group-btn">
+					<button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</span>
+				</div>
+				input-group -->
+					</div>
+					<!-- /input-group
+			<div class="simple-cart box-m1">
+				<h5>최근 본 상품<span>상품더보기&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span></h5>
+				<div class="cart-img">
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+				</div>
+				<div><h6>최근 본 상품이 등록됩니다.</h6></div>등록 안된상태는 이 화면 보여주기
+			</div> -->
+
+					<table class="info1" style="margin-bottom:10px;">
+
+						<tr>
+							<td>
+								<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;고객센터
+								</h5>
+							</td>
+							<td>
+								<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;회사소개
+								</h5>
+							</td>
+						</tr>
+
+					</table>
+					<table class="info1" style="background:#3399FD; color: #fff; padding:5px;margin-bottom:10px;">
+						<tr>
+							<td style="border:none;" onclick="location.href='../partner-form.html'">
+								<h5>파트너 신청 <i class="fa fa-paper-plane" aria-hidden="true"></i></h5>
+							</td>
+						</tr>
+
+
+					</table>
+					<!--<table class="info1" style="background:#3399FD; color: #fff; padding:5px">
+			    <tr>
+					<td  style="border:none;"  onclick="location.href='../index.html'">
+						<h5>만능키 메인 바로가기 <i class="fa fa-search" aria-hidden="true"></i></h5>
+					</td>
+				</tr>
+				
+				
+			</table>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+
+	<div class="height-70">
+	</div>
+	<!-- //header 메뉴 시작 전면수정-->
+
+	<!--수리 탑네비-->
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 top-title">
+		<div class="repair-tit-img">
+			<div class="container">
+
+
+
+				<div class="sub-group-box">
+					<div class="mobile-no" style="margin-bottom:10px; text-align: center;">
+						<h2 style="font-weight: 600; padding-bottom: 10px; font-size: 40px;">수리센터</h2>
+						<span> 사무기기 고장증상문의 수리신청 페이지입니다.</span>
+
+					</div>
+
+					<ul class="sub-group3">
+						<li class="active">
+							<a href="./repair-letter.html">고장 문의</a>
+						</li>
+
+						<li>
+							<a href="./repair-main.html">수리 신청</a>
+						</li>
+
+						<li>
+							<a href="./repair-list.html">수리 상태조회</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--//수리 탑네비-->
+
+	<!--수리신청 포맷-->
+	<div class="repairletter-info" style="background: #FAFCFF;">
+		<div class="container">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 title-box">
+				<h3><img src="../images/letter-icon.png" style="width: 40px; margin-right: 5px;">고장 문의<span>사무기기 고장이 증상을
+						작성해주시면 안내하드리겠습니다.</span>
+					<div class="side-btn"><button class="btn blue-btn"
+							onclick="location.href='./repair-faq-list.html'"><i class="fa fa-list"
+								aria-hidden="true"></i> 문의 목록</button></div>
+				</h3>
+
+			</div>
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 letter-box repair-map" style="padding-top: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info ">
+					<p>
+						<i class="fa fa-camera-retro" aria-hidden="true"></i>첨부사진
+					</p>
+				</div>
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info">
+					<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 input-group filebox bs3-primary preview-image"
+						style="margin-bottom: 5px;">
+						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 input-group filebox bs3-primary preview-image"
+							style="margin-bottom: 5px;">
+							<input class="upload-name " value="정면사진(10MB를 넘을 수 없습니다.)" disabled="disabled">
+							<span class="input-group-addon hover-blue" type="button"><label
+									for="input_file">사진등록</label></span>
+							<input type="file" id="input_file" class="upload-hidden">
+						</div>
+						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 input-group filebox bs3-primary preview-image"
+							style="margin-bottom: 5px;">
+							<input class="upload-name " value="후면사진 (10MB를 넘을 수 없습니다.)" disabled="disabled">
+							<span class="input-group-addon hover-blue" type="button"><label
+									for="input_file1">사진등록</label></span>
+							<input type="file" id="input_file1" class="upload-hidden">
+						</div>
+						<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 input-group filebox bs3-primary preview-image"
+							style="margin-bottom: 5px;">
+							<input class="upload-name " value="기타 (10MB를 넘을 수 없습니다.)" disabled="disabled">
+							<span class="input-group-addon hover-blue" type="button"><label
+									for="input_file2">사진등록</label></span>
+							<input type="file" id="input_file2" class="upload-hidden">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info ">
+					<p>
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>접수내용
+					</p>
+				</div>
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info input-group ">
+					<form class="ps-content">
+						<select class="col-md-3 col-lg-3 col-sm-3 col-xs-12 ps-info"
+							style="padding: 6px 12px; background-color: #fff;">
+							<option>기종</option>
+							<option>잉크젯</option>
+							<option>레이저</option>
+							<option>데스크탑</option>
+							<option>노트북</option>
+							<option>부품</option>
+						</select>
+						<div class="col-md-9 col-lg-9 col-sm-9 col-xs-12" style="padding-right: 0; padding-left:0;">
+							<input class=" ps-info serial-input" placeholder="브랜드"
+								style="padding: 6px 12px; margin-bottom: 5px; width: 100%;">
+
+						</div>
+						<input class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info" placeholder="시리얼 번호"
+							style="padding: 6px 12px; margin-bottom: 5px;">
+						<input class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info" placeholder="제목을 입력해주세요."
+							style="padding: 6px 12px; margin-bottom: 5px;">
+						<textarea class=" col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info form-control" rows="5">
+고장증상:</textarea>
+					</form>
+				</div>
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 ps-info">
+					<p>
+						<i class="fa fa-user-circle" aria-hidden="true"></i>신청자 정보
+					</p>
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 padding-r0" style="margin-bottom: 5px; ">
+					<input placeholder="이름(상호)" type="text" class="form-control must-input"
+						aria-label="Text input with checkbox">
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 padding-l5" style="margin-bottom: 5px; ">
+					<input placeholder="이메일" type="text" class="form-control must-input"
+						aria-label="Text input with checkbox">
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 padding-r0" style="margin-bottom: 5px; ">
+					<input placeholder="휴대폰번호" type="text" class="form-control must-input"
+						aria-label="Text input with checkbox">
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 padding-l5" style="margin-bottom: 5px; ">
+					<input placeholder="비밀번호" type="password" class="form-control must-input" id="inputPassword">
+				</div>
+
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<input type="text" class="form-control" placeholder="주소" style=" margin-bottom: 5px;">
+				</div>
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="padding: 5px;">
+					<label class="txt2"><input type="checkbox" class="cb">비밀글 설정</label>
+				</div>
+
+
+
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="margin: 20px auto;">
+					<div class="bottom-buttom">
+						<button class="col-md-6 col-lg-6 col-sm-6 col-xs-6 con-btn gray-btn">취소</button>
+						<button class="col-md-6 col-lg-6 col-sm-6 col-xs-6 con-btn blue-btn">작성완료</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--수리지도클릭 검색결과-->
+	<div class="height-50">
+	</div>
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<!-- footer third section -->
+			<div class="footer-info2">
+				<!-- quick links -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-inner">
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 footer-inner2">
+						<div class="footerbox-1 mobile-no">
+							<img src="../images/logo-w.png">
+						</div>
+						<div class="footerbox-1">
+							<ul class="footer-grid">
+								<li>
+									<a href="#">회사소개</a>
+								</li>
+								<li>
+									<a href="#">파트너신청</a>
+								</li>
+								<li>
+									<a href="#">고객센터</a>
+								</li>
+								<li>
+									<a href="#">개인정보취급방법</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-inner2 sns-right ">
+						<ul>
+							<i class="fa fa-2x"><img src="../images/blog.png" alt="블로그" class="sns"></i>
+							<i class="fa fa-2x"><img src="../images/insta.png" alt="인스타그램" class="sns"></i>
+							<i class="fa fa-2x"><img src="../images/facebook.png" alt="페이스북" class="sns"></i>
+							<i class="fa fa-2x"><img src="../images/youtube.png" alt="유튜브" class="sns"></i>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-xs-12 footerbox-2">
+						<h5 class="">
+							<span
+								style="color:#2AFADF; font-size: 18px; font-weight: 500; letter-spacing: 1.2px; line-height:2.2;">대표전화
+								1855-4832</span><br>
+							본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055<br>
+							공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+							대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+							통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+						</h5>
+						<p class="copyright-text">
+							© Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved
+							<!-- 3.5일 수정 -->
+						</p>
+						<div class="top-button" onclick="window.scrollTo(0,0);">
+							<span><i class="fa fa-arrow-up"></i></span>
+							<sapn>TOP</sapn>
+						</div>
+					</div>
+				</div>
+				<!-- //quick links -->
+				<!-- social icons -->
+				<!-- //social icons -->
+				<div class="clearfix">
+				</div>
+			</div>
+			<!-- //footer third section -->
+			<!-- footer fourth section (text) -->
+			<!-- //footer fourth section (text) -->
+		</div>
+	</footer>
+	<!-- //footer -->
+	<div class="banner show-on-scroll btn-top">
+		<div class="ban-inner">
+			<div class="ban">
+				<img src="../images/cpicon.jpg"><br>
+				회사소개
+			</div>
+			<div class="ban" onclick="location.href='../total-info.html'">
+				<img src="../images/faqicon.jpg"><br>
+				이용안내
+			</div>
+		</div>
+		<a class="btn-top" href="#">TOP<i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+	</div>
+	<!--위치찾기 모달-->
+	<section class="location-modal ">
+		<div class="modal fade location-search " tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document" style="max-width:800px; width:100%; padding: 0; margin:0 auto;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" style="font-size: 15px; font-weight: 600;"><i class="fa fa-map-marker"
+								aria-hidden="true"></i> 업체검색</h4>
+					</div>
+					<div class="modal-body" style="padding: 0 10px;">
+						<div class="repair-search">
+
+
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 map-search-box">
+								<select class="form-control">
+									<option>시/도</option>
+									<option>강원</option>
+									<option>경기</option>
+									<option>경상남도</option>
+									<option>경상북도</option>
+								</select>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 map-search-box">
+								<select class="form-control">
+									<option>구/군</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 map-search-box">
+								<select class="form-control">
+									<option>동</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-search-box">
+								<input type="text" class="form-control" placeholder="매장명 또는 주소를 입력해주세요.">
+							</div>
+							<button class="col-md-12 col-lg-12 col-sm-12 col-xs-12 con-btn blue-btn"
+								onclick="button1_click();" style="line-height: 1.3;">수리센터 검색 <i class="fa fa-angle-down"
+									aria-hidden="true"></i></button>
+
+
+
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-search-box">
+								<h3><i class="fa fa-search" aria-hidden="true" style="color:#555; "></i>
+									검색결과<span>&nbsp;4건</span></h3>
+							</div>
+							<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-box sc"
+								style="max-height: 185px;">
+								<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-text">
+									<div class="col-md-7 col-lg-7 col-sm-7 col-xs-8" style="padding:0;">
+										<p>
+											<a href="./partner-board.html">헬로아</a>
+										</p>
+										<h4>경기도 수원시 권선구 동안동</h4>
+										<img src="../images/op1.png" alt="잉크젯">
+										<img src="../images/op2.png" alt="레이저">
+										<img src="../images/op3.png" alt="데스크탑">
+										<img src="../images/op4.png" alt="노트북">
+										<img src="../images/op5.png" alt="부품">
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 float-right" style="padding:0;">
+										<button class="border-btn rp-btn float-right"
+											onclick="location.href='./partner-board.html'">업체정보</button>
+										<button class="blue-btn rp-btn float-right"
+											onclick="location.href='./repair-letter2.html'">수리신청</button>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-text">
+									<div class="col-md-7 col-lg-7 col-sm-7 col-xs-8" style="padding:0;">
+										<p>
+											<a href="./partner-board.html">아이봉</a>
+										</p>
+										<h4>경기도 수원시 권선구 동안동</h4>
+										<img src="../images/op1.png" alt="잉크젯">
+										<img src="../images/op2.png" alt="레이저">
+										<img src="../images/op3.png" alt="데스크탑">
+										<img src="../images/op4.png" alt="노트북">
+										<img src="../images/op5.png" alt="부품">
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 float-right" style="padding:0;">
+										<button class="border-btn rp-btn float-right"
+											onclick="location.href='./partner-board.html'">업체정보</button>
+										<button class="blue-btn rp-btn float-right"
+											onclick="location.href='./repair-letter2.html'">수리신청</button>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-text">
+									<div class="col-md-7 col-lg-7 col-sm-7 col-xs-8" style="padding:0;">
+										<p>
+											<a href="./partner-board.html">아이봉</a>
+										</p>
+										<h4>경기도 수원시 권선구 동안동</h4>
+										<img src="../images/op1.png" alt="잉크젯">
+										<img src="../images/op2.png" alt="레이저">
+										<img src="../images/op3.png" alt="데스크탑">
+										<img src="../images/op4.png" alt="노트북">
+										<img src="../images/op5.png" alt="부품">
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 float-right" style="padding:0;">
+										<button class="border-btn rp-btn float-right"
+											onclick="location.href='./partner-board.html'">업체정보</button>
+										<button class="blue-btn rp-btn float-right"
+											onclick="location.href='./repair-letter2.html'">수리신청</button>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-text">
+									<div class="col-md-7 col-lg-7 col-sm-7 col-xs-8" style="padding:0;">
+										<p>
+											<a href="./partner-board.html">티엔아이텍</a>
+										</p>
+										<h4>경기도 수원시 권선구 동안동</h4>
+										<img src="../images/op1.png" alt="잉크젯">
+										<img src="../images/op3.png" alt="데스크탑">
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 float-right" style="padding:0;">
+										<button class="border-btn rp-btn float-right"
+											onclick="location.href='./partner-board.html'">업체정보</button>
+										<button class="blue-btn rp-btn float-right"
+											onclick="location.href='./repair-letter2.html'">수리신청</button>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 map-result-text">
+									<div class="col-md-7 col-lg-7 col-sm-7 col-xs-8" style="padding:0;">
+										<p>
+											<a href="./partner-board.html">수리텍</a>
+										</p>
+										<h4>경기도 수원시 권선구 동안동</h4>
+										<img src="../images/op1.png" alt="잉크젯">
+										<img src="../images/op3.png" alt="데스크탑">
+									</div>
+									<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 float-right" style="padding:0;">
+										<button class="border-btn rp-btn float-right"
+											onclick="location.href='./partner-board.html'">업체정보</button>
+										<button class="blue-btn rp-btn float-right"
+											onclick="location.href='./repair-letter2.html'">수리신청</button>
+									</div>
+								</div>
+							</div>
+							<div class="float-left index-box">
+								<h3 class="vertical-bar"><i class="fa fa-question-circle-o" aria-hidden="true"></i> 제공가능
+									서비스</h3>
+								<ul class="grid-type">
+									<li><img src="../images/op1.png" alt="잉크젯"> 잉크젯 </li>
+									<li><img src="../images/op2.png" alt="레이저"> 레이저 </li>
+									<li><img src="../images/op3.png" alt="데스트탑"> 데스크탑 </li>
+									<li><img src="../images/op4.png" alt="노트북"> 노트북 </li>
+									<li><img src="../images/op5.png" alt="부품"> 부품 </li>
+								</ul>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+	</section>
+	<!--//위치찾기 모달-->
+</body>
+
+</html>

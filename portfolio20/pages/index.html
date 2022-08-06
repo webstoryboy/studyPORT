@@ -1,0 +1,977 @@
+<?php
+include '../connect/connect.php';
+include '../connect/session.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HYO JU DEV</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <meta name="author" content="hyojudev">
+    <meta name="description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 프론트엔드, 개발자한효주">
+    <meta name="robots" content="all">
+
+    <!-- facebook -->
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hyojudev Portfolio App">
+    <meta property="og:description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="#">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio App">
+    <meta name="twitter:url" content="#">
+    <meta name="twitter:image" content="#">
+    <meta name="twitter:description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+    <noscript>페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다. You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Loading -->
+    <div class='progress'>
+        <div class="progress-text">0%</div>
+        <div class='loader'>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header id="header">
+        <a href="../pages/index.html" class="logo">hyoju</a>
+        <div class="menu-wrap">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+            <nav class="navigation">
+                <div class="nav-radial">
+                    <div class="nav-menu-wrap">
+                        <ul class="main-menu">
+                            <li class="main-menu__link">
+                                <a href="#home">home</a>
+                            </li>
+                            <li class="main-menu__link">
+                                <a href="#about">about</a>
+                            </li>
+                            <li class="main-menu__link">
+                                <a href="#project">project</a>
+                            </li>
+                            <li class="main-menu__link">
+                                <a href="#contact">contact</a>
+                            </li>
+                        </ul>
+                        <ul class="sign-menu">
+                            <?php if (isset($_SESSION['memberID'])) { ?>
+                            <li class="youNickName sign-menu__link">
+                                <?= $_SESSION[
+                                                        'youNickName'
+                                                    ] ?> 님
+                            </li>
+                            <li class="sign-menu__link"><a href="../sign/logOut.php">logOut</a></li>
+                            <?php } else { ?>
+                            <li class="sign-menu__link"><a href="../sign/logIn.php">logIn</a></li>
+                            <li class="sign-menu__link"><a href="../sign/signUp.php">signUp</a></li>
+                            <?php } ?>
+                            <li class="sign-menu__link"><a href="../board/board.php">board</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>protfolio</div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <main>
+        <!-- home -->
+        <section id="home" class="page__home section">
+            <div class="home-title">
+                <div>welcome to</div>
+                <div class="home-title__circle">
+                    <svg viewBox="0 0 177 173" width="177" height="173" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M172.106 65.165C159.742 19.02 112.311-8.365 66.166 4l-.259-.966c46.678-12.507 94.658 15.194 107.165 61.872 12.508 46.678-15.193 94.658-61.872 107.165l-.259-.966c46.145-12.364 73.53-59.795 61.165-105.94zM66.295 4.483C20.417 16.776-6.81 63.933 5.483 109.811l-1.931.518C-9.028 63.384 18.832 15.13 65.777 2.551l.518 1.932z"
+                            fill="#000" stroke-width="2" />
+                    </svg>
+                </div>
+                <div>portfolio</div>
+                <div class="home-title__desc-wrap">
+                    <div class="home-title__of">
+                        <div class="home-title__of-circle">
+                            <svg viewBox="0 0 154 154" width="154" height="154" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M77 153c41.974 0 76-34.026 76-76S118.974 1 77 1 1 35.026 1 77s34.026 76 76 76zm0 1c42.526 0 77-34.474 77-77S119.526 0 77 0 0 34.474 0 77s34.474 77 77 77z"
+                                    fill="#000" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <div>of</div>
+                    </div>
+                    <div class="home-title__desc">
+                        It’s nice to meet you. I’m front-end<br />
+                        developer from south korea.
+                    </div>
+                </div>
+                <div>hyo ju</div>
+            </div>
+            <div class="home__subText">
+                <div>Front-end Developer</div>
+                <div>Art</div>
+            </div>
+            <svg class="home__scroll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 500 500">
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="home__scroll-path">
+                        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <text class="home__scroll__text" dy="0" textLength="50">
+                    <textPath xlink:href="#home__scroll-path">scroll down scroll down scroll down</textPath>
+                </text>
+            </svg>
+        </section>
+        <!-- //home -->
+
+        <!-- about -->
+        <section id="about" class="page__about section">
+            <div class="about-view">
+                <div class="about-view__rect">
+                    <p>Let me introduce myself!</p>
+                </div>
+                <div class="about-view__main">
+                    <img class="about-view__img" src="../assets/img/about-img.png" alt="My Profile Image">
+                    <svg class="about-view__circle" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                        <defs>
+                            <path
+                                d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                                id="about-view__circle-path">
+                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate"
+                                    from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                            </path>
+                        </defs>
+                        <text class="about-view__circle-text" dy="-10" textLength="50">
+                            <textPath xlink:href="#about-view__circle-path">
+                                Hello! I'm Hyo-ju Han, Front-end developer
+                                from South Korea.
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="about-view__rect">
+                    <p>Let me introduce myself!</p>
+                </div>
+            </div>
+            <div class="about-resume">
+                <h3 class="about-title about-split">I can make it better</h3>
+                <div class="about-desc-wrap">
+                    <div class="about-desc">
+                        논리적으로 사고하고 표현하는 프론트
+                    </div>
+                    <div class="about-desc">
+                        개발자 <strong class="about-desc-en">{DEVELOPER}</strong> 로 성장하고
+                    </div>
+                    <div class="about-desc">
+                        싶은 한효주입니다<span class="about-desc-sign">****</span> 빠르게
+                    </div>
+                    <div class="about-desc">
+                        발전하는<span class="about-desc-sign">>>></span>기술속에서
+                        끊임없는
+                    </div>
+                    <div class="about-desc">
+                        연구 <strong class="about-desc-en"> {STUDY} </strong> 를 하며
+                        <div class="about-smile">
+                            <svg viewBox="0 0 97 59" width="97" height="59" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24.821 29.678c5.422 0 9.832-6.644 9.832-14.81S30.243.057 24.821.057c-5.422 0-9.833 6.644-9.833 14.81s4.412 14.81 9.833 14.81zM71.604 29.678c5.422 0 9.833-6.644 9.833-14.81S77.027.057 71.604.057c-5.42 0-9.83 6.644-9.83 14.81s4.41 14.81 9.83 14.81zM95.855 36.806a1.998 1.998 0 00-2.285-.4C81.232 42.29 65.125 45.53 48.214 45.53c-16.907 0-33.015-3.24-45.354-9.123a2 2 0 00-2.653 2.69c5.606 11.351 25.35 19.277 48.008 19.277 22.668 0 42.412-7.929 48.012-19.279a2.002 2.002 0 00-.372-2.289z"
+                                    fill="#88B2C4" />
+                            </svg>
+                        </div>
+                        매일매일
+                    </div>
+                    <div class="about-desc">
+                        발전하는 사람이 되겠습니다<span class="about-desc-sign">/*~*/</span>
+                        <div class="about-circle">
+                            <svg viewBox="0 0 204 162" width="204" height="162" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M197.408 90.91c-52.211 19.726-184.702 57.751-189.14-9.136C4.696 27.9 89.643 18.744 97.123 16.972 104.604 15.2 196.782.956 199.494 41.804c4.07 61.328-154.738 111.087-136.552 107.003"
+                                    stroke="#88B2C4" stroke-width="4" stroke-miterlimit="10" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //about -->
+
+        <!-- project -->
+        <section id="project" class="page__project section">
+            <!-- project-headline -->
+            <div class="project-headline">
+                <div class="project-headline__wrap">
+                    <div class="project-headline-text">Let me</div>
+                    <div class="project-headline-text">Show you</div>
+                    <div class="project-headline-text">
+                        My works
+                        <svg class="project-circle" viewBox="0 0 416 178" width="416" height="178" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="projects-circle-path"
+                                d="M410.253 113.699c-111.805 25.438-395.886 73.056-407.44-21.27-9.3-75.975 173.292-85.082 189.343-87.243 16.05-2.16 214.059-18.105 221.119 39.5C423.872 131.172 189.5 163.5 137.5 176"
+                                stroke="#88B2C4" stroke-width="3" stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- //project-headline -->
+            <!-- project-slider -->
+            <div class="project-slider">
+                <!-- project--00 -->
+                <div class="project-slide project--00">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link" href="http://hyojudev.dothome.co.kr/port02/pages/home.html"
+                                target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-00.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">1&#47;6</span>
+                                <a class="project-text" href="http://hyojudev.dothome.co.kr/port02/pages/home.html"
+                                    target="_blank">
+                                    <h4 class="project-text-link">PORTFOLIO</h4>
+                                </a>
+                                <h5 class="project-caption">My 2nd portfolio</h5>
+                                <p class="project-text-desc">
+                                    2021 두번째 인터렉티브
+                                    <br />
+                                    포트폴리오
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--00 -->
+                <!-- project--01 -->
+                <div class="project-slide project--01">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link"
+                                href="https://hyojudev.github.io/portfolio/port00__aff/index.html" target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-01.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">2&#47;6</span>
+                                <a class="project-text"
+                                    href="https://hyojudev.github.io/portfolio/port00__aff/index.html" target="_blank">
+                                    <h4 class="project-text-link">AFF</h4>
+                                </a>
+                                <h5 class="project-caption">All of the fruits</h5>
+                                <p class="project-text-desc">
+                                    과일을 위한 모든 아이템을
+                                    <br />
+                                    판매하는 쇼핑몰
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--01 -->
+                <!-- project--02 -->
+                <div class="project-slide project--02">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link"
+                                href="https://hyojudev.github.io/portfolio/port00__reiss/index.html" target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-02.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">3&#47;6</span>
+                                <a class="project-text"
+                                    href="https://hyojudev.github.io/portfolio/port00__reiss/index.html"
+                                    target="_blank">
+                                    <h4 class="project-text-link">REISS</h4>
+                                </a>
+                                <h5 class="project-caption">2018 REISS Collection</h5>
+                                <p class="project-text-desc">
+                                    여성 브랜드 REISS
+                                    <br />
+                                    2018 S/S 컬렉션 웹사이트
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--02 -->
+                <!-- project--03 -->
+                <div class="project-slide project--03">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link"
+                                href="https://hyojudev.github.io/portfolio/port00__dogParty/index.html" target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-03.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">4&#47;6</span>
+                                <a class="project-text"
+                                    href="https://hyojudev.github.io/portfolio/port00__dogParty/index.html"
+                                    target="_blank">
+                                    <h4 class="project-text-link">
+                                        DOG
+                                        <br />
+                                        PARTY
+                                    </h4>
+                                </a>
+                                <h5 class="project-caption">2019 Day & Night</h5>
+                                <p class="project-text-desc">
+                                    강아지들과 애완인들이
+                                    <br />
+                                    함께하는 All day 행사 웹사이트
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--03 -->
+                <!-- project--04 -->
+                <div class="project-slide project--04">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link"
+                                href="https://hyojudev.github.io/portfolio/port00__responsibleWeb/index.html"
+                                target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-04.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">5&#47;6</span>
+                                <a class="project-text"
+                                    href="https://hyojudev.github.io/portfolio/port00__responsibleWeb/index.html"
+                                    target="_blank">
+                                    <h4 class="project-text-link">
+                                        Responsive
+                                        <br />
+                                        web
+                                    </h4>
+                                </a>
+                                <h5 class="project-caption">Responsive web</h5>
+                                <p class="project-text-desc">
+                                    데스크탑/모바일
+                                    <br />
+                                    최적화 반응형 웹사이트
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--04 -->
+                <!-- project--05 -->
+                <div class="project-slide project--05">
+                    <div class="project-slide-wrap">
+                        <div class="project-bg project-bg-round"></div>
+                        <div class="project-bg project-bg-square"></div>
+                        <div class="project-content">
+                            <a class="project-card-link" href="http://dgauaid.com/" target="_blank">
+                                <div class="project-card-wrap">
+                                    <div class="project-card">
+                                        <div class="project-card__bar">
+                                            <div class="project-card__bar-bg">
+                                                <span class="project-card__circle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="project-card-content">
+                                            <img class="project-card-img" src="../assets/img/project-img-05.png"
+                                                alt="project AFF image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="project-text-wrap">
+                                <span class="project-numbering">6&#47;6</span>
+                                <a class="project-text" href="http://dgauaid.com/" target="_blank">
+                                    <h4 class="project-text-link">RESILIENCE</h4>
+                                </a>
+                                <h5 class="project-caption">Daegu Arts University</h5>
+                                <p class="project-text-desc">
+                                    2020 대구예술대학교
+                                    <br />
+                                    졸업작품전 웹사이트
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //project--05 -->
+            </div>
+            <!-- //project-slider -->
+        </section>
+        <!-- //project -->
+
+        <!-- animation -->
+        <section id="animation" class="page__animation">
+            <div class="animation-slider">
+                <!-- animation-headline -->
+                <div class="animation-headline">
+                    <div class="animation-headline-title">
+                        <h2>
+                            Animation
+                            <br />
+                            collection
+                        </h2>
+                    </div>
+                </div>
+                <!-- //animation-headline -->
+
+                <!-- animation--01 -->
+                <div class="animation-slide animation--01">
+                    <div class="animation-slide-wrap">
+                        <div class="animation-bg animation-bg-round"></div>
+                        <div class="animation-content">
+                            <div class="animation-text-wrap">
+                                <span class="animation-numbering">1&#47;5</span>
+                                <h4 class="animation-title">
+                                    CSS Tail
+                                    <br />
+                                    Animation
+                                </h4>
+                                <p class="animation-desc">
+                                    CSS 효과를 이용한 "Tail" 애니메이션 입니다. HTML에서 구조를 잡은 후 각각의 class에 맞게 CSS효과를 적용했습니다. 또한,
+                                    animation(keyframes)과 transform의 translate 속성을 이용하여 자연스럽게 움직일 수 있도록 제작한
+                                    애니메이션입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank" href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="animation-card-wrap" href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                <div class="animation-card">
+                                    <div class="animation-card__bar">
+                                        <div class="animation-card__bar-bg">
+                                            <span class="animation-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="animation-card-content">
+                                        <iframe src="../assets/link/animation-tail.html" title="Animation Tail"
+                                            width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //animation--01 -->
+                <!-- animation--02 -->
+                <div class="animation-slide animation--02">
+                    <div class="animation-slide-wrap">
+                        <div class="animation-bg animation-bg-round"></div>
+                        <div class="animation-content">
+                            <div class="animation-text-wrap">
+                                <span class="animation-numbering">2&#47;5</span>
+                                <h4 class="animation-title">
+                                    CSS Dot
+                                    <br />
+                                    Animation
+                                </h4>
+                                <p class="animation-desc">
+                                    CSS 효과를 이용한 "Dot" 애니메이션 입니다. HTML에서 구조를 잡은 후 각각의 class에 맞게 CSS효과를 적용했습니다. 또한,
+                                    animation(keyframes)과 transform의 translate 속성을 이용하여 자연스럽게 움직일 수 있도록 제작한
+                                    애니메이션입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank"
+                                    href="https://codepen.io/hyojudev/pen/eYBJEgQ?editors=1100">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="animation-card-wrap"
+                                href="https://codepen.io/hyojudev/pen/eYBJEgQ?editors=1100">
+                                <div class="animation-card">
+                                    <div class="animation-card__bar">
+                                        <div class="animation-card__bar-bg">
+                                            <span class="animation-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="animation-card-content">
+                                        <iframe src="../assets/link/animation-dot.html" title="Animation Dot"
+                                            width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //animation--02 -->
+                <!-- animation--03 -->
+                <div class="animation-slide animation--03">
+                    <div class="animation-slide-wrap">
+                        <div class="animation-bg animation-bg-round"></div>
+                        <div class="animation-content">
+                            <div class="animation-text-wrap">
+                                <span class="animation-numbering">3&#47;5</span>
+                                <h4 class="animation-title">
+                                    CSS Cube
+                                    <br />
+                                    Animation
+                                </h4>
+                                <p class="animation-desc">
+                                    CSS 효과를 이용한 "Cube" 애니메이션 입니다. HTML에서 구조를 잡은 후 각각의 class에 맞게 CSS효과를 적용했습니다. 또한,
+                                    animation(keyframes)과 transform의 translate 속성을 이용하여 자연스럽게 움직일 수 있도록 제작한
+                                    애니메이션입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank" href="https://codepen.io/hyojudev/pen/RworLpQ">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="animation-card-wrap" href="https://codepen.io/hyojudev/pen/RworLpQ">
+                                <div class="animation-card">
+                                    <div class="animation-card__bar">
+                                        <div class="animation-card__bar-bg">
+                                            <span class="animation-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="animation-card-content">
+                                        <iframe src="../assets/link/animation-cube.html" title="Animation Tail"
+                                            width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //animation--03 -->
+                <!-- animation--04 -->
+                <div class="animation-slide animation--04">
+                    <div class="animation-slide-wrap">
+                        <div class="animation-bg animation-bg-round"></div>
+                        <div class="animation-content">
+                            <div class="animation-text-wrap">
+                                <span class="animation-numbering">4&#47;5</span>
+                                <h4 class="animation-title">
+                                    CSS Wave
+                                    <br />
+                                    Animation
+                                </h4>
+                                <p class="animation-desc">
+                                    CSS 효과를 이용한 "Wave" 애니메이션 입니다. HTML에서 구조를 잡은 후 각각의 class에 맞게 CSS효과를 적용했습니다. 또한,
+                                    animation(keyframes)과 transform의 translate 속성을 이용하여 자연스럽게 움직일 수 있도록 제작한
+                                    애니메이션입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank" href="https://codepen.io/hyojudev/pen/OJbMvEy">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="animation-card-wrap" href="https://codepen.io/hyojudev/pen/OJbMvEy">
+                                <div class="animation-card">
+                                    <div class="animation-card__bar">
+                                        <div class="animation-card__bar-bg">
+                                            <span class="animation-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="animation-card-content">
+                                        <iframe src="../assets/link/animation-wave.html" title="Animation Tail"
+                                            width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //animation--04 -->
+                <!-- animation--05 -->
+                <div class="animation-slide animation--05">
+                    <div class="animation-slide-wrap">
+                        <div class="animation-bg animation-bg-round"></div>
+                        <div class="animation-content">
+                            <div class="animation-text-wrap">
+                                <span class="animation-numbering">5&#47;5</span>
+                                <h4 class="animation-title">
+                                    Loading
+                                    <br />
+                                    Animation
+                                </h4>
+                                <p class="animation-desc">
+                                    CSS 효과를 이용한 "Loading" 애니메이션 입니다. HTML에서 구조를 잡은 후 각각의 class에 맞게 CSS효과를 적용했습니다. 또한,
+                                    animation(keyframes)과 transform의 translate 속성을 이용하여 자연스럽게 움직일 수 있도록 제작한
+                                    애니메이션입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank" href="https://codepen.io/hyojudev/pen/MWbKGJq">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="animation-card-wrap" href="https://codepen.io/hyojudev/pen/MWbKGJq">
+                                <div class="animation-card">
+                                    <div class="animation-card__bar">
+                                        <div class="animation-card__bar-bg">
+                                            <span class="animation-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="animation-card-content">
+                                        <iframe src="../assets/link/animation-box-loading.html" title="Animation Tail"
+                                            width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://codepen.io/hyojudev/pen/OJbMgZy">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //animation--05 -->
+            </div>
+        </section>
+        <!-- //animation -->
+
+        <!-- script -->
+        <section id="script" class="page__script">
+            <div class="script-slider">
+                <!-- script-headline -->
+                <div class="script-headline">
+                    <div class="script-headline-title">
+                        <h2>
+                            JavaScript
+                            <br />
+                            collection
+                        </h2>
+                    </div>
+                </div>
+                <!-- //script-headline -->
+
+                <!-- script--01 -->
+                <div class="script-slide script--01">
+                    <div class="script-slide-wrap">
+                        <div class="script-bg script-bg-round"></div>
+                        <div class="script-content">
+                            <div class="script-text-wrap">
+                                <span class="script-numbering">1&#47;3</span>
+                                <h4 class="script-title">
+                                    To Do List
+                                    <br />
+                                    Javascript
+                                </h4>
+                                <p class="script-desc">
+                                    순수 100% Vanilla JavaScript로 만든 크롬 앱 서비스입니다. 현재 시간을 가져오는 시계를 구현했으며, 할 일 목록을 생성하고 완료된
+                                    것은 삭제할 수 있습니다. 또한, 지역기반으로 API를 가져와 날씨를 보여주며, 랜덤 배경 사진 기능을 구현했습니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank"
+                                    href="https://github.com/hyojudev/study__script.git">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="script-card-wrap" href="#">
+                                <div class="script-card">
+                                    <div class="script-card__bar">
+                                        <div class="script-card__bar-bg">
+                                            <span class="script-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="script-card-content">
+                                        <iframe
+                                            src="https://hyojudev.github.io/study__script/vanillaJS__momentum--02/index.html"
+                                            title="MOMENTUM" width="100%" height="100%" scrolling="yes"
+                                            frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://github.com/hyojudev/study__script.git">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //script--01 -->
+
+                <!-- script--02 -->
+                <div class="script-slide script--02">
+                    <div class="script-slide-wrap">
+                        <div class="script-bg script-bg-round"></div>
+                        <div class="script-content">
+                            <div class="script-text-wrap">
+                                <span class="script-numbering">2&#47;3</span>
+                                <h4 class="script-title">
+                                    Painting
+                                    <br />
+                                    Board
+                                </h4>
+                                <p class="script-desc">
+                                    순수 100% Vanilla JavaScript로 만든 그림판입니다. HTML의 &lt;canvas&gt;기능을 사용했습니다. 캔버스 안에서
+                                    클릭,드래그를 하게되면 path가 그려지고, ragne를 이용해서 브러쉬의 크기를 조절할 수 있습니다. "fill" 버튼을 클릭 한 후에 컬러
+                                    팔레트에서 컬러를 가져와 캔버스를 클릭하면 배경색이 채워지며, 캔버스에서 그린 그림을 "png"파일로 저장도 가능합니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank"
+                                    href="https://github.com/hyojudev/study__script.git">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="script-card-wrap" href="#">
+                                <div class="script-card">
+                                    <div class="script-card__bar">
+                                        <div class="script-card__bar-bg">
+                                            <span class="script-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="script-card-content">
+                                        <iframe
+                                            src="https://hyojudev.github.io/study__script/vanillaJS__painting-board--02/index.html"
+                                            title="MOMENTUM" width="100%" height="100%" scrolling="yes"
+                                            frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://github.com/hyojudev/study__script.git">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //script--02 -->
+
+                <!-- script--03 -->
+                <div class="script-slide script--03">
+                    <div class="script-slide-wrap">
+                        <div class="script-bg script-bg-round"></div>
+                        <div class="script-content">
+                            <div class="script-text-wrap">
+                                <span class="script-numbering">3&#47;3</span>
+                                <h4 class="script-title">
+                                    Parallax
+                                    <br />
+                                    Scrolling
+                                </h4>
+                                <p class="script-desc">
+                                    순수 JavaScript를 사용한 패럴랙스 스크롤링 효과입니다. 윈도우에 스크롤이 될 때, 해당 섹션의 offsetTop값이 pageYOffset 값
+                                    보다 작아질 때 classList.add, classlist.remove로 요소를 추가, 삭제하는 스크립트입니다.
+                                </p>
+                                <a class="codeView-btn" target="_blank"
+                                    href="https://github.com/hyojudev/study__script.git">
+                                    code view
+                                </a>
+                            </div>
+                            <div class="script-card-wrap" href="#">
+                                <div class="script-card">
+                                    <div class="script-card__bar">
+                                        <div class="script-card__bar-bg">
+                                            <span class="script-card__circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="script-card-content">
+                                        <iframe
+                                            src="https://hyojudev.github.io/study__script/js__parallax-effect--01/index.html"
+                                            title="MOMENTUM" width="100%" height="100%" scrolling="yes"
+                                            frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView-btn-mobile" target="_blank"
+                                href="https://github.com/hyojudev/study__script.git">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //script--03 -->
+            </div>
+        </section>
+        <!-- //script -->
+
+        <!-- footer -->
+        <footer id="contact" class="page__footer section">
+            <div class="footer-contact">
+                <div class="footer-text-wrap">
+                    <div class="footer-text">
+                        <div class="ftText ftText--1">If you like my</div>
+                        <div class="ftText ftText--1">portfolio</div>
+                        <img class="footer-smile" src="../assets/img/footer-smile.svg" alt="footer-smile">
+                    </div>
+                    <div class="footer-image">
+                        <img src="../assets/img/footer-img.png" alt="My profile image">
+                    </div>
+                    <div class="footer-text">
+                        <div class="ftText ftText--2">please</div>
+                        <div class="ftText ftText--2">contact me!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="footer-sns">
+                    <h2>hyoju</h2>
+                    <div class="footer-sns-nav">
+                        <ul>
+                            <li><a href="https://github.com/hyojudev" target="_blank">Github</a></li>
+                            <li><a href="https://hyojudev.gitbook.io/study/" target="_blank">Gitbook</a></li>
+                            <li><a href="mailto:hyojudev@gmail.com" target="_blank">Gmail</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>&#169; COPYRIGHT 2021 HAN HYO JU</span>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- <?php
+            echo '<pre>';
+            var_dump($_SESSION);
+            echo '<pre>';
+        ?> -->
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+    <script src="../assets/js/scroll.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- //script -->
+</body>
+
+</html>

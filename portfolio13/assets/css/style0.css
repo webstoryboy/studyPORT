@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* layout */
+#contents {}
+#section1 {height: 100vh; background: #2C3641; overflow: hidden;}
+#section2 {position: relative; height: 3000px; background: #2C3641;}
+#section3 {position: relative; height: 3000px; background: #2C3d41;}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    left: 10px; top:10px;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 50px;
+    z-index: 200000;
+}
+
+.fixed {
+    position: absolute;
+    left: 50%; top: 50%;
+}
+
+/* sec1 */
+.sec1 {
+    height: 100vh;
+}
+.sec1 .wave1 {
+    position: absolute;
+    left: 0; bottom: 0px; 
+    width: 100%; 
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sec1 .wave2 {
+    position: absolute;
+    left: 0; bottom: 0px;
+    width: 100%; 
+    z-index: 900;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sec1 .dog {
+    position: absolute;
+    left: 50%; bottom: 50px;
+    width: 200px; 
+    z-index: 1100;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+.sec3 {
+    position: relative;
+    height: 3000px;
+}
+.sec3 .wave1 {
+    position: absolute;
+    left: 0; bottom: 0px;
+    width: 100%; 
+    z-index: 1000;
+
+}
+.sec3 .wave2 {
+    position: absolute;
+    left: 0; bottom: 0px;
+    width: 100%; 
+    z-index: 900;
+}
+
+
+.sec4 {
+    position: fixed;
+    left: 100%; top: 0;
+    overflow: hidden;
+    width: 600vw;
+}
+.sec4 > div {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+}
+.sec4 > div:nth-child(1){background: #111;}
+.sec4 > div:nth-child(2){background: #222;}
+.sec4 > div:nth-child(3){background: #333;}
+.sec4 > div:nth-child(4){background: #444;}
+.sec4 > div:nth-child(5){background: #555;}
+.sec4 > div:nth-child(6){background: #666;}
+
+
+
+
+

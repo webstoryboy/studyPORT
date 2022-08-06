@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 반응형 X-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>국가기념관 스마트전시 안내시스템</title>
+
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+
+        <!-- Bootstrap core js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+        <script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script>
+
+        <!-- jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- main css -->
+        <link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/main.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <link href="../css/xeicon.css" rel="stylesheet">
+
+
+        <!-- main js -->
+        <script src="../js/main.js"></script>
+
+    </head>
+
+    <body class="pt0">
+        <header>
+            <nav class="nav-bar">
+                <div class="container">
+                    <div class="navbar-brand" href="#">
+                        <ul>
+                            <a href="../_main/main.html">
+                                <li style="margin-right:10px;"><img src="../images/logo.svg"></li>
+                                <li>국가기념관 스마트 전시안내 시스템</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                        <ul class="row">
+                            <li class=" ">
+                                <a class="nav-link" href="../_styleGuide/component.html"><span class="btn btn-xs btn-secondary"><i class="xi-cog"></i> 스타일가이드</span></a>
+                            </li>
+                            <li class="dropdown-select">
+                                <select class="custom-select" style="background-color: #f3f5f7;">
+                                    <option selected>독립기념관</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#"><img src="../images/icon/notice.png" class="ico-box">공지사항</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false"><img src="../images/icon/alert.png"
+                                        class="ico-box">알림<span class="alarm-num">12</span></a>
+                                <div class="dropdown-menu alarm-menu" aria-labelledby="alarm-notice"
+                                    style="transform: translate3d(0px, 54px, 0px);!important">
+                                    <button class="dropdown-item" type="button">기념관 및 계정생성 신청<span class="alarm-num"
+                                            style="position: absolute;">4</span></button>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="dropdown-item" type="button">비콘 베터리 교체<span
+                                            class="alarm-num">33</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#"><img src="../images/icon/mypage.png" class="ico-box">마이페이지</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="../_main/login.html"><img src="../images/icon/logout.png"
+                                        class="ico-box">로그아웃</a>
+                            </li>
+                            <li>
+                                <button class="btn search-btn" type="submit"><img src="../images/icon/search.png"></button>
+                            </li>
+    
+                        </ul>
+                        <div class="search-bar">
+                            <!-- D : search-btn 클릭 나타나기 -->
+                            <div class="search-bar-box float-right">
+                                <form class="" style="width: 670px;">
+                                    <select class="custom-select " style="width: 175px; background-color:#ffffff">
+                                        <option selected>전시품명</option>
+                                        <option value="1">전시안내번호</option>
+                                        <option value="2">전시품 ID</option>
+                                        <option value="3">전시안내내용</option>
+                                    </select>
+                                    <input class="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="Search">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+            <section class="menu">
+                <div class="container">
+                    <ul class="menu-list">
+                        <li class="col-md-2">전시품 전시안내 관리</li><!-- D : 활성화페이지일 경우 : on 처리 -->
+                        <li class="col-md-2">실내측위 관리</li>
+                        <li class="col-md-2">기념관,전시품 관리</li>
+                        <li class="col-md-2">주요통계</li>
+                        <li class="col-md-2">시스템관리</li>
+                        <li class="col-md-2">컨텐츠 및 서비스 관리</li>
+                    </ul>
+                </div>
+                <!-- 메뉴드롭 -->
+                <div class="menu-drop" id="multiCollapseExample1">
+                    <div class="container">
+                        <ul class="menu-drop-list">
+                            <li class="col-md-2">
+                                <ul>
+                                    <li class="on"><a href="../_01_exhibit-info/sub1-1-1.html">기념관 APP메인 관리</a></li>
+                                    <!-- D : 활성화페이지일 경우 : on 처리 -->
+                                    <li><a href="../_01_exhibit-info/sub1-2-1.html">카테고리별 전시안내 관리</a></li>
+                                    <li><a href="../_01_exhibit-info/sub1-3.html">현충시설 컨텐츠 관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2 ">
+                                <ul>
+                                    <li><a href="../_02_indoor-position/sub2-1-1.html">비콘 기본정보 관리</a></li>
+                                    <li><a href="../_02_indoor-position/sub2-2-1.html">Zoning 관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2 ">
+                                <ul>
+                                    <li><a href="../_03.memorial-exhibit/sub3-1-1.html">전시품 정보 관리</a></li>
+                                    <li><a href="../_03.memorial-exhibit/sub3-2-1.html">기념관 정보 관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2 ">
+                                <ul>
+                                    <li><a href="../_04.statistics/sub4-1.html">방문자 이용현황</a></li>
+                                    <li><a href="../_04.statistics/sub4-2.html">전시품별 전시안내 이용현황</a></li>
+                                    <li><a href="../_04.statistics/sub4-3.html">ICT 컨텐츠 이용현황</a></li>
+                                    <li><a href="../_04.statistics/sub4-4.html">군장병 관람인증 현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2 ">
+                                <ul>
+                                    <li><a href="../_05.system/sub5-1-1.html">시스템 공지사항</a></li>
+                                    <li><a href="../_05.system/sub5-2.html">계정요청처리</a></li>
+                                    <li><a href="../_05.system/sub5-2-1.html">관리자 계정관리</a></li>
+                                    <li><a href="../_05.system/sub5-3.html">그룹/권한 관리</a></li>
+                                    <li><a href="../_05.system/sub5-4.html">공통코드 관리</a></li>
+                                    <li><a href="../_05.system/sub5-5-1.html">컨텐츠 변경이력관리</a></li>
+                                    <li><a href="../_05.system/sub5-6-1.html">로그 관리</a></li>
+                                    <li><a href="../_05.system/sub5-7.html">데이터연동 수동관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2 ">
+                                <ul>
+                                    <li><a href="../_06.contents-service/sub6-1.html">영상 컨텐츠 관리</a></li>
+                                    <li><a href="../_06.contents-service/sub6-0.html">텍스트AR 정보 관리</a></li>
+                                    <li><a href="../_06.contents-service/sub6-2.html">APP 공지사항 관리</a></li>
+                                    <li><a href="../_06.contents-service/sub6-3.html">군인별 관람인증 관리</a></li>
+                                    <li><a href="../_06.contents-service/sub6-4.html">관람인증 문제은행 관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </header>
+            
+        <section class="main">
+            <div class="container">
+                <div class="tit-area clear-fix">
+                    <div class="title">
+                        <h2>컨텐츠 변경이력관리 <span> 목록</span> </h2>
+                    </div>
+                    <div class="loc-line float-right">
+                        <a href="#">홈</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                        <a href="#">시스템 관리</a><img src="../images/icon/right01.png" alt="" class="arrow-right-m">
+                        <a href="#" class="active">컨텐츠 변경이력관리</a>
+                    </div>
+                </div>
+                <div class="main-box filter" style="margin-bottom:20px;">
+                    <div>
+                        <ul class="row" style="margin-bottom: 14px;">
+                            <li class="col-1 name">
+                                카테고리
+                            </li>
+                            <li class="col-4 pl0 d-flex">
+                                <select class="custom-select mr5">
+                                    <option selected>1depth</option>
+                                    <option value="1">신청중</option>
+                                    <option value="2">완료</option>
+                                </select>
+                                <select class="custom-select mr5">
+                                    <option selected>2depth</option>
+                                    <option value="1">신청중</option>
+                                    <option value="2">완료</option>
+                                </select>
+                                <select class="custom-select">
+                                    <option selected>3depth</option>
+                                    <option value="1">신청중</option>
+                                    <option value="2">완료</option>
+                                </select>
+                            </li>
+
+                            <li class="col-1 name">
+                                등록일
+                            </li>
+                            <li class="col-4  docs-datepicker">
+                               
+                                <div class="input-group h-100">
+                                    <input class="form-control start-date" name="START_DATE" type="text" value="" id="datepicker" autocomplete="off" data-toggle="datepicker">
+                                        <button class="custom-day-btn docs-datepicker-trigger" type="button">검색</button>
+                                    <div class="input-group-prepend input-group-append">
+                                        <span class="input-group-text border-0 bg-white">~</span>
+                                    </div>
+                                    <input class="form-control end-date" name="END_DATE" type="text" value="" id="datepicker" autocomplete="off" data-toggle="datepicker">
+                                        <button class="custom-day-btn docs-datepicker-trigger" type="button">검색</button>
+                                </div>
+                                
+                            </li>
+
+
+
+                        </ul>
+                        <ul class="row">
+
+
+                            <li class="col-1 name">
+                                구분
+                            </li>
+                            <li class="col-2 pl0">
+                                <select class="custom-select  pl0" style="background-color:#ffffff">
+                                    <option selected>전체</option>
+                                    <option value="1">관리자 명</option>
+                                    <option value="1">등록자</option>
+                                </select>
+                            </li>
+                            <li class="col-1 name">
+                                수정자
+                            </li>
+                            <div class="col-8">
+		                		<div class="input-group">
+									<input type="search" name="SEARCH_STR" value="" class="form-control form-control-md">
+								 	<div class="input-group-append ml-3" style="width:100px">
+		                       			<button type="submit" class="btn btn-keyword btn-block">검색  <i class="fa fa-search ml-1"></i></button>
+		                    		</div>
+								</div>
+							</div>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="main-box mb80">
+                    <ul class="table-con justify-content-between">
+                        <li class="table-tit">
+                            목록
+                            <span class="table-search-num">총 <strong>012</strong>건</span>
+                            <span class="table-num-view">
+                                <select class="custom-select">
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                            </span>
+                        </li>
+                    </ul>
+                    <table class="table table-bordered table-list">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">일시</th>
+                                <th colspan="3">메뉴</th>
+                                <th colspan="3">변경 데이터</th>
+                                <th rowspan="2">수정자</th>
+                            </tr>
+                            <tr>
+                                <th>1depth</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>대상데아터</th>
+                                <th>구분</th>
+                                <th>변경항목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">201934</a></td>
+                                <td>수정</td>
+                                <td>전시품명, 사용여부, 한국어>전시용안내</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-2.html">201934</a></td>
+                                <td>등록</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">201913</a></td>
+                                <td>수정</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">301925</a></td>
+                                <td>수정</td>
+                                <td>전시품이미지</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">643521</a></td>
+                                <td>수정</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">201934</a></td>
+                                <td>수정</td>
+                                <td>전시품명, 사용여부, 한국어>전시용안내</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-2.html">201934</a></td>
+                                <td>등록</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">201913</a></td>
+                                <td>수정</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-2.html">301925</a></td>
+                                <td>등록</td>
+                                <td>전시품이미지</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>2019-1212 13:00:00</td>
+                                <td>기념관,전시품관리</td>
+                                <td>전시품관리</td>
+                                <td>-</td>
+                                <td><a href="sub5-5-3.html">643521</a></td>
+                                <td>삭제</td>
+                                <td>-</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                    <div class="paging-box">
+                        <ul class="btn-group">
+                            <li class="btn_arr"><a href="#" class="first">first</a></li>
+                            <li class="btn_arr " style="margin-right: 8px;"><a href="#" class="prev">prev</a></li>
+                            <li class="num active"><a href="#">1</a></li><!-- D : 활성화페이지일 경우 : active 처리 -->
+                            <li class="num"><a href="#">2</a></li>
+                            <li class="num"><a href="#">3</a></li>
+                            <li class="num"><a href="#">4</a></li>
+                            <li class="num"><a href="#">5</a></li>
+                            <li class="num"><a href="#">6</a></li>
+                            <li class="num"><a href="#">7</a></li>
+                            <li class="num"><a href="#">8</a></li>
+                            <li class="num"><a href="#">9</a></li>
+                            <li class="num"><a href="#">10</a></li>
+                            <li class="btn_arr" style="margin-left: 8px;"><a href="#" class="next">next</a></li>
+                            <li class="btn_arr"><a href="#" class="last">last</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+
+                <h5>Copyrights © NATIONAL MUSEUM OF KOREA. All right reserved.</h5>
+
+            </div>
+        </footer>
+
+    </body>
+
+</span>

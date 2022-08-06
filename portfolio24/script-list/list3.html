@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="assets/fonts/font3.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style5.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+   
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    
+    body {
+      background: #121013;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    
+    .cards__wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .cards__wrapper .card {
+      position: relative;
+      width: 340px;
+      height: 400px;
+      margin: 3rem 5rem;
+      pointer-events: none;
+    }
+    .cards__wrapper .card__image--wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      filter: grayscale(0);
+      transition: filter 0.5s ease;
+    }
+    .cards__wrapper .card__image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.15);
+      transition: transform 0.5s ease, opacity 0.35s ease;
+    }
+    .cards__wrapper .card__image--outer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .cards__wrapper .card__text {
+      position: absolute;
+      left: 0;
+      bottom: 25%;
+      transform: translateX(-8rem);
+      pointer-events: none;
+      user-select: none;
+      mix-blend-mode: difference;
+    }
+    .cards__wrapper .card__text--inner {
+      display: inline-block;
+      color: #fff;
+      font-size: 5rem;
+      font-family: "Red Rose", Roboto;
+      font-weight: 700;
+      overflow: hidden;
+    }
+    .cards__wrapper .card__text--inner .word {
+      white-space: nowrap;
+    }
+    .cards__wrapper .card__text--inner .char {
+      display: inline-block;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
+      transition-delay: calc(0ms + var(--char-index) * 20ms);
+    }
+    .cards__wrapper .card:hover .card__image {
+      transform: scale(1);
+    }
+    .cards__wrapper .card:hover .card__text--inner .char {
+      transform: translateY(0%);
+    }
+    .cards__wrapper:hover > .card:not(:hover) .card__image--wrapper {
+      filter: grayscale(1);
+    }
+    .cards__wrapper:hover > .card:not(:hover) .card__image {
+      opacity: 0.8;
+    }
+    
+    .support {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      padding: 10px;
+      display: flex;
+    }
+    .support a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.8rem;
+      backface-visibility: hidden;
+      transition: all 150ms ease;
+    }
+    .support a:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+  
+
+
+
+
+
+
+
+<body translate="no" >
+  <section class="cards__wrapper">
+			<figure class="card">
+				<div class="card__image--wrapper">
+					<div class="card__image--outer">
+						<img src="https://source.unsplash.com/UCEtRnp8qR0/340x400" alt="Portrait" class="card__image" />
+					</div>
+				</div>
+				<div class="card__text">
+					<span class="card__text--inner" data-splitting>STYLE</span>
+				</div>
+			</figure>
+
+			<figure class="card">
+				<div class="card__image--wrapper">
+					<div class="card__image--outer">
+						<img src="https://source.unsplash.com/vh_pAs2FH_8/340x400" alt="Portrait" class="card__image" />
+					</div>
+				</div>
+				<div class="card__text">
+					<span class="card__text--inner" data-splitting>PRAISE</span>
+				</div>
+			</figure>
+
+			<figure class="card">
+				<div class="card__image--wrapper">
+					<div class="card__image--outer">
+						<img src="https://source.unsplash.com/m663zRzRe40/340x400" alt="Portrait" class="card__image" />
+					</div>
+				</div>
+				<div class="card__text">
+					<span class="card__text--inner" data-splitting>FASHION</span>
+				</div>
+			</figure>
+		</section>
+
+<div class="support">
+	<a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+	<a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
+<script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+      <script id="rendered-js" >
+console.clear();
+
+const { gsap, Splitting } = window;
+
+Splitting();
+
+gsap.set('.cards__wrapper', { autoAlpha: 1 });
+
+gsap.timeline({
+  defaults: {
+    duration: 1.25,
+    stagger: 0.125,
+    ease: "expo.inOut" } }).
+
+
+fromTo(".card__image--wrapper", { yPercent: 110 }, { yPercent: 0 }, 0).
+fromTo(".card__image--outer", { yPercent: -110 }, { yPercent: 0 }, 0).
+set(".cards__wrapper, .card", { pointerEvents: "all" }, "-=1");
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

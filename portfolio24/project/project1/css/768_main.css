@@ -1,0 +1,54 @@
+@media (min-width:768px) and (max-width:1300px) {
+    
+    .center{ width:730px; margin: auto; }
+    
+    /* header */
+    #headerWrap{height: 120px;}
+    .header1 .mainLink li{ padding-right: 12px;}
+    .header1 .mainLink li img{ width: 14px; height: 14px;}
+    .header1 .sns{ display: none;}
+    .header2{ height: 80px;}
+    .header2 .mainLogo{ width: 45%;}
+    .header2 .mainLogo .logoL{ padding: 8px 0px;}
+    .header2 .mainLogo .logoL img{width:167px; height: 28px; }
+    .header2 .mainLogo .logoR{ margin-left: 10px;}
+    .header2 .mainLogo .logoR img{width:111px; height: 44px; }
+    .header2 .nav .gnb{ width: 92%; }
+    .header2 .nav .gnb>li {width: 24.999%; padding-top:25px;}
+    .header2 .nav .gnb .menu3 .menuBox3 span{ font-size: 13px;}
+    .header2 .nav .search{ width: 8%; padding-top: 31px;}
+    .header2 .nav .cart{ display: none;}
+
+    /* visual */
+    #slideWrap{ height: 500px;}
+    #slideWrap .prev{ left:7px; }
+    #slideWrap .next{ right:7px; }
+
+    /* slide_b */
+    #slide_b{ height: 80px;}
+    #slide_b .inner{padding:14px 0px; }
+    #slide_b .inner p{font-size: 16px;}
+    #slide_b .inner .joinLink{padding: 15px 7px 15px 0px;}
+
+    /* section1 */
+    #section1 .inner{padding: 65px 0px;}
+    #section1 li>img{width: 152px; height: 152px; margin:0px 0px 45px 0px;}
+
+    /* section2 */
+    #section2 .video{ height:400px; margin-top: 40px; }
+    #section2 .video iframe{width: 730px;}
+    #section2 .infoBox li{width: 31%; margin-right: 3.5%;}
+    #section2 .infoBox li div{margin-left: -16px;}
+    #section2 .infoWrap{height: 472px;}
+    #section2 .infoWrap .inner{height: 430px;}
+    #section2 .infoWrap .inner>div{width: 48%;}
+    #section2 .infoWrap .img{width: 100%; height: 40%;}
+    #section2 .infoWrap .img div{padding:18%;}
+    #section2 .infoWrap .text{width: 100%; height: 60%; padding: 32px 48px 0px 48px;  }
+    #section2 .infoWrap .text .title{text-align: center; margin-bottom:22px;}
+    #section2 .newsSlide .frame li .subTitle{font-size: 20px;}
+    #section2 .articleBox .textBox .title{font-size: 19px; padding-bottom:20px;}
+    #section2 .articleBox .textBox .spans{padding-bottom:18px;}
+    #section2 .articleBox .textBox .date{font-size: 14px;}
+    #section2 .articleBox .textBox .colorPink{font-size: 15px;}
+}

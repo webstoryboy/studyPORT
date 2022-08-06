@@ -1,0 +1,624 @@
+@font-face { 
+    font-family: 'CanvasBlack'; 
+    src: url('../fonts/CanvasBlack.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { 
+    font-family: 'CanvasLight'; 
+    src: url('../fonts/CanvasLight.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { 
+    font-family: 'CanvasRegular'; 
+    src: url('../fonts/CanvasRegular.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face { 
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+/* fixed */
+.fixed {}
+.fixed .menu {
+    position: fixed;
+    top: 5%; right: 2%;
+    z-index: 999;
+}
+.fixed .menu span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+/*    background-color: #fff;*/
+}
+.fixed .menu span::before, .fixed .menu span::after {content: '';
+position: absolute; top: 0; bottom: 0; right: 0; left: 0; width: 30px; height: 2px; background-color:#9E7B5D; }
+.fixed .menu span::before {}
+.fixed .menu span::after {top: 10px;}
+
+
+
+/* contents */
+#contents {}
+#section1 {height: 100vh; background: #1A1A1A;}
+#section2 {position: relative; background: #DAC7B7;}
+#section3 {position: relative; background: #DAC7B7;}
+#section4 {position: relative;}
+#section5 {position: relative; background: #323C33;}
+#section6 {height: 1600px;  position: relative; background: #DAC7B7;}
+#section7 {}
+
+/* container */
+.container {
+/*    padding: 100px; */
+    max-width: 1300px; 
+    margin: 0 auto;
+/*    width: 100%;*/
+/*    background: rgba(0,0,0,.3);*/
+}
+
+/* sec1 */
+.sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.sec1 p {font-family: 'Nanum Myeongjo';}
+
+.sec1 h1 {
+    padding: 4% 0;
+    font-size: 8vw;
+    line-height: 8vw;
+    color: #9E7B5D;
+    text-align: center;
+    font-family: 'CanvasLight'; 
+}
+.sec1 h1 strong {
+    font-size: 10vw;
+    display: block;
+    font-family: 'CanvasLight'; 
+    font-weight: normal;
+}
+.sec1 p {
+    padding-top: 10px;
+    color: #9E7B5D;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 30px;
+    font-family: 'CanvasLight'; 
+    
+}
+
+
+/* sec2 */
+.sec2 {
+    padding: 8vw 0;
+}
+
+.sec2 span {
+    display: block;
+    font-size: 1.2vw;
+    margin-bottom: -4vw;
+}
+.sec2 h2 {
+    color: #2d382f;
+/*  text-shadow: 1px 1px 2px #333; */
+    line-height: 8vw;
+    font-size: 8vw;
+    font-family: 'CanvasBlack'; 
+}
+
+.sec2_mt {
+    float: left;
+    width: 50%;
+}
+.sec2_mt h3 {
+    padding-top: 17vw;
+    color: #121212;
+    font-size: 2.2vw;
+    font-family: 'CanvasLight';
+}
+.sec2_mt p {
+/*    line-height: 1.5;*/
+    padding-top: 5vw;
+    color: #424242;
+    font-size: 1.5vw;
+    font-family: 'Chosunilbo_myungjo';
+}
+.sec2_m {overflow: hidden;}
+.sec2_mi {
+    float: right;
+    width: 40%;
+    padding: 10vw 0 0 8vw;
+}
+.sec2_mi .img_box {
+    width: 100%;
+    height: 35vw;
+}
+.sec2_mi .img_box img {
+    width: 100%;
+    height: 100%;
+}
+.sec2_mi div{
+    display: block;
+    text-align: right;
+    font-size: 1vw;
+    font-family: 'CanvasLight';
+}
+
+.sec2_mi div p {
+    padding-top: 1vw;
+    color: #564537;
+    font-family: 'CanvasLight';
+}
+.sec2_mi div .pos {
+    padding-top: 0.2vw;
+    color: #AB6144;
+}
+
+.sec2_st {
+    overflow: hidden;
+/*    display: block;*/
+    position: relative;
+    margin-top: 10vw;
+
+}
+.st_left {float: left; width: 70%; }
+.st_left div {
+    padding-bottom: 4vw;
+}
+.st_left h3 {
+    position: absolute;
+    left: 0;
+/*    padding-top: 2vw;*/
+    font-size: 2.2vw;
+    font-family: 'CanvasLight';
+}
+.st_left p {
+    padding:0.5vw 0 0 13vw;
+    font-size: 1.5vw;
+    font-family: 'Chosunilbo_myungjo';
+}
+.st_right {float: right; width: 30%;}
+.st_right h3 {
+    float: left;
+    width: 50%;
+    font-size: 2.2vw;
+    font-family: 'CanvasLight';
+}
+.st_right ul {
+    float: left;
+    width: 50%;
+    font-size: 1.5vw;
+    font-family: 'CanvasLight';
+}
+
+
+/* sec3 */
+.sec3 { 
+    padding: 20vh 0;
+}
+.sec3 h2 { 
+    font-size: 8vw;
+    line-height: 8vw;
+    text-align: right;
+    font-family: 'CanvasBlack'; 
+    color: #2d382f;
+    margin-bottom: 10vh;
+}
+.sec3 h2 span {
+    display: block;
+    font-size: 1.2vw;
+    margin-bottom: -4vw;
+}
+
+
+.site-wrap {}
+.site-wrap .site {
+    margin-bottom: 15%;
+}
+.site-wrap .site .site-view {
+    display: flex;
+    justify-content: space-between;
+}
+.site-wrap .site .site-view > div {
+    flex-basis: 24.7%;
+/*    width: 24.3%;*/
+    height: 500px; 
+    background: #000;
+    position: relative;
+}
+.site-wrap .site .site-view > div::before{
+    position: absolute; left: 0px; bottom: -30px;
+    font-size: 14px; 
+    text-transform: uppercase;
+    font-family: 'IropkeBatangM';
+}
+.site-wrap .site .site-view > div:nth-child(1){
+    background: url(../img/standard01.jpg);
+    background-size: cover;
+    background-position: 0px 0;
+}
+.site-wrap .site .site-view > div:nth-child(2){
+    background: url(../img/standard01.jpg);
+    background-size: cover;
+    background-position: 200px 0;
+}
+.site-wrap .site .site-view > div:nth-child(3){
+    background: url(../img/standard01.jpg);
+    background-size: cover;
+    background-position: 500px 0;
+}
+.site-wrap .site .site-view > div:nth-child(4){
+    background: url(../img/standard01.jpg);
+    background-size: cover;
+    background-position: 700px 0;
+}
+/*
+.site-wrap .site .site-view > div:nth-child(1):before{
+    content: '웹표준을 준수한 사이트를 만들었습니다.?';
+}
+.site-wrap .site .site-view > div:nth-child(2):before{
+    content: '웹표준을 준수하여 탭 메뉴를 완성하였습니다.?';
+}
+.site-wrap .site .site-view > div:nth-child(3):before{
+    content: '제이쿼리 플러그인을 사용하여 완성하였습니다.';
+}
+.site-wrap .site .site-view > div:nth-child(4):before{
+    content: '웹표준을 준수한 사이트를 만들었습니다.?';
+}
+*/
+
+.site-wrap .site .site-coding {
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-between;
+}
+.site-wrap .site .site-coding .sc-left {
+    width: 35%; 
+}
+.site-wrap .site .site-coding .sc-right {
+    position: relative;
+    width: 60%; height: 535px; 
+/*    background: #000;*/
+    border-radius: 5px;
+}
+
+.site-wrap .site .site-coding h3 {
+    font-size: 4.5vw;
+    line-height: 5vw;
+    font-family: 'CanvasBlack'; 
+    padding-bottom: 2vw;
+}
+.site-wrap .site .site-coding p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000;
+}
+.site-wrap .site .site-coding a {
+    border: 1px dashed #000;
+    margin: 0;
+    display: block;
+    color: #000;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 17px;
+}
+.site-wrap .site .site-coding .list {
+    margin-top: 4vw;
+}
+.site-wrap .site .site-coding .list li {
+    display: inline-block;
+    margin-top: 5px;
+}
+.site-wrap .site .site-coding .list li.active {
+    background: #000; color: #fff;
+}
+.site-wrap .site .site-coding .list li.active a {
+    color: #fff;
+}
+
+.site-wrap .site .site-coding .list li a {
+    margin-top: 5px;
+    font-size: 17px;
+    font-family: 'Chosunilbo_myungjo';
+}
+.site-wrap .site .site-coding .sc-btn {
+    background: #a28872;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Chosunilbo_myungjo';
+    border-style: dashed
+}
+
+
+
+
+/* sc-btn */
+.site-wrap .site .site-coding .sc-btn-box  {
+  width:100%;
+  height:62px;
+  border: 1px dashed #000;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 62px;
+  margin-top: 4%;
+    
+}
+/*
+.site-wrap .site .site-coding .sc-btn-box .sc-btn {
+  font-family: 'Chosunilbo_myungjo';
+  font-size: 24px;
+  color:#fff;
+  text-decoration:none;
+  transition:all .5s ease;
+  z-index:1;
+  position:relative;
+  background-color: #a28872;
+  padding: 2px;
+  display: block;
+  height: 62px;
+  border: 0;
+  margin: 0;
+}
+
+.site-wrap .site .site-coding .sc-btn-box .eff{
+    width: 100%;
+    height: 62px;
+    left: -100%;
+    top: 0;
+    background: #313131;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+.site-wrap .site .site-coding .sc-btn-box:hover .eff{
+    left:0;
+    border: 2px solid #313131;
+}
+
+.site-wrap .site .site-coding .sc-btn-box:hover .sc-btn {
+  color:#fff;
+}
+*/
+
+
+
+
+
+/* sc-box */
+.site-coding .sc-right .sc-box{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+/* sec4 */
+#section4 .container {padding: 0; margin: 0;}
+
+.sec4 {
+    width: 240vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #323C33;
+}
+.sec4 .ani_img01 {
+    width: 18vw;
+    height: 18vw;
+    overflow: hidden;
+    display: inline-block;
+    background: red;
+}
+.sec4 .ani_img01 img {
+    width: auto;
+    height: 100%;
+    -webkit-filter: grayscale(50%);
+filter: gray;
+}
+.sec4 p {
+    display: inline-block;
+    padding-left: 1.2vw;
+    color: #E3CAB6;
+    font-size: 1.2vw;
+    font-family: 'CanvasLight';
+}
+.sec4 span {
+    font-family: 'Chosunilbo_myungjo';
+}
+.sec4 .ani_tit {
+/*    background: red;*/
+    position: absolute;
+    left: 16vw;
+    top: 22vw;
+    width: 40vw;
+}
+.sec4 .ani_tit h2 {
+    color: #9C795D;
+    font-size: 8vw;
+    line-height: 8vw;
+    font-family: 'CanvasLight';
+}
+.sec4 .ani_tit p {
+    display: block;
+    padding: 0;
+    font-size: 1.5vw;
+}
+.ani_box_wrap {
+    position: absolute;
+    bottom: 0;
+    left: 70vw;
+    width: 150vw;
+/*    background: red;*/
+}
+.ani_box {
+    float: left;
+/*    padding: 10px;*/
+    width: 27vw;
+    margin-right: 10vw;
+    text-align: right;
+/*    background: blue;*/
+}
+.ani_box h3 {
+    color: #9C795D;
+    font-size: 3.5vw;
+    font-family: 'CanvasLight';
+}
+.ani_box p {
+    padding: 0.5vw 0;
+    font-size: 1vw;
+/*    background: blue;*/
+}
+.abox_img {
+    float: right;
+    width: 27vw;
+    height: 27vw;
+    background: black;
+}
+
+/* sec5 */
+.sec5 {padding: 15vw 0;}
+.sec5 h2 {
+    text-align: right;
+/*    padding-top: 10vw;*/
+/*  text-shadow: 1px 1px 2px #333; */
+    line-height: 8vw;
+    color:#9C795D;
+    font-size: 8vw;
+    font-family: 'CanvasLight';
+}
+.sec5 h2 span {
+    display: block;
+    font-size: 1.2vw;
+    margin-bottom: -4vw;
+}
+.script_wrap {
+    overflow: hidden;
+    margin-top: 18vw;}
+.script_wrap .script_left {
+    float: left;
+    width: 40%;
+}
+.script_wrap .script_left a {
+    display: block;
+    width: 35vw;
+    height: 25vw;
+    border-radius: 2%;
+    background: #000;
+}
+.script_wrap .script_left a img {}
+.script_wrap .script_left p {
+    display: block;
+    text-align: right;
+    color: #C5AA93;
+    font-size: 2vw;
+    font-family: 'Chosunilbo_myungjo';
+}
+.script_wrap .script_right {
+    float: right;
+    width: 50%;
+    height: 40vw;
+    border-radius: 2%;
+    background: #000;
+}
+
+/* sec6 */
+.sec6 {}
+.sec6 h2 {
+    text-align: right;
+    padding-top: 10vw;
+/*  text-shadow: 1px 1px 2px #333; */
+    line-height: 8vw;
+    color:#292017;
+    font-size: 8vw;
+    font-family: 'CanvasLight';
+}
+.sec6 h2 span{
+    display: block;
+    font-size: 1.2vw;
+    margin-bottom: -4vw;
+}
+.sec6 .contact_box {padding-top: 13vw;}
+.sec6 .contact_box .contact_left {
+/*
+    float: left;
+    width: 30%;
+    height: 40vw;
+    background: red;
+*/
+}
+.sec6 .contact_box .contact_left p {
+    position: absolute;
+    left: -15vw;
+    width: 65vw;
+/*    background: blue;*/
+    -webkit-transform: rotate(-90deg);
+    font-size: 8vw;
+    line-height: 8vw;
+    color: transparent;
+    -webkit-text-stroke: 1px #927E6D;
+    font-family: 'CanvasRegular'; 
+    }
+
+.sec6 .contact_box .contact_right {
+    float: right;
+    width: 65%;
+}
+.sec6 .contact_box .contact_right p {
+    padding-bottom: 0.8vw;
+    color: #6A4F2F;
+    font-size: 1.5vw;
+    font-family: 'Chosunilbo_myungjo';
+}
+.sec6 .contact_box .contact_right input,textarea,.submit {
+    width: 100%;
+    height: 3.5vw;
+    padding: 10px;
+    margin-bottom: 2vh;
+    border: 1px solid #564537;
+    box-sizing: border-box;
+    opacity: 0.5;
+    color: #88705C;
+    font-size: 1.3em;
+    background: #fff;
+    
+}
+.sec6 .contact_box .contact_right textarea {
+    height: 35vh;
+}
+.sec6 .contact_box .contact_right .submit {
+    width: 25%;
+    float: right;
+    margin-top: 2vw;
+    cursor: pointer;
+    border: 1px solid #564537;
+    font-size: 1.2vw;
+}
+
+
+
+
+
+
+
+
+

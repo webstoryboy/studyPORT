@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>테트리스</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,div {
+            margin: 0;
+            padding: 0;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .iframe_body {
+            width: 28rem;
+            height: 28rem;
+            border-radius: 50%;
+            background: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #wrapper {
+            width: 20rem;
+            height: 20rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        #tetris, #next-table {
+            border-collapse: collapse;
+        }
+        #next-table {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        #tetris td {
+            border: 1px solid black;
+            width: 18px;
+            height: 18px;
+        }
+        #next-table td {
+            border: 1px solid black;
+            width: 15px;
+            height: 15px;
+        }
+        td.white {
+            background-color: white;
+        }
+        td.red {
+            background-color: red;
+        }
+        td.blue {
+            background-color: blue;
+        }
+        td.orange {
+            background-color: orange;
+        }
+        td.green {
+            background-color: green;
+        }
+        td.navy {
+            background-color: navy;
+        }
+        td.violet {
+            background-color: violet;
+        }
+        td.yellow {
+            background-color: yellow;
+        }
+        td.black {
+            background-color: black;
+        }
+
+        .button_wrap {
+            width: 7rem;
+            height: 7rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            background: gray;
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+        }
+
+        .button_wrap a {
+            font-size: 0.7rem;
+            padding: 0 0.3rem;
+            width: 3rem;
+            background: #fff;
+        }
+
+        .button_wrap button {
+            width: 3rem;
+            font-size: 0.7rem;
+            padding: 0 0.3rem;
+            background: #fff;
+        }
+
+        button {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="iframe_body">
+        <div class="wrap">
+            <table id="tetris">
+            </table>
+            <table id="next-table"> <!-- 다음 블록을 그려준다. -->
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+            <div class="button_wrap">
+                <a onClick="window.location.reload()" style="cursor: pointer;">reset</a>
+                <button id="stop">중단</button>
+                <button id="start">재개</button>
+                <button id="mute">소리끔</button>
+                <div>점수: <span id="score">0</span></div>
+                <!-- <audio id="bgm" src="./Tetris_theme.ogg.mp3" autoplay></audio> -->
+            </div>
+        </div>
+    </div>
+    <script src="./custom13-1.js"></script>
+
+</body>
+</html>

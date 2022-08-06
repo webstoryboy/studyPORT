@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uj REACT Portfolio</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/portfolio_css/base.0b18b771.css">
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/icon/favicon_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="../assets/icon/favicon_96.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/icon/favicon_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="../assets/icon/favicon_192.png">
+
+    <!-- path animation js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>document.documentElement.className = "js";
+        var supportsCssVars = function supportsCssVars() {
+          var e,
+              t = document.createElement("style");
+          return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+  </head>
+
+  <body>
+    <!-- page transition -->
+    <div id="cover"></div>
+
+    <header>
+        <nav class="foot_menu">
+            <ul>
+                <li class="menu">
+                    <a href="../pages/about.html" class="page__click" data-name="about">ABOUT</a>
+                    <span>*</span>
+                </li>
+                <li class="menu active">
+                    <a href="../pages/portfolio.html" class="page__click" data-name="portfolio">PORTFOLIO</a>
+                    <span>*</span>
+                </li>
+                <li class="menu">
+                    <a href="../pages/animation.html" class="page__click" data-name="animation">ANIMATION</a>
+                    <span>*</span>
+                </li>
+                <li class="menu">
+                    <a href="../pages/contact.html" class="page__click" data-name="contact">CONTACT</a>
+                    <span>*</span>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mid_menu mid_fff">
+            <a href="../pages/main.html" class="menu_btn">
+                <svg width="71" height="68" viewBox="0 0 71 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.5 0L40.6891 22.0017L60.6023 9.95837L48.0276 29.0301L71 34L48.0276 38.9698L60.6023 58.0416L40.6891 45.9983L35.5 68L30.3109 45.9983L10.3977 58.0416L22.9724 38.9698L0 34L22.9724 29.0301L10.3977 9.95837L30.3109 22.0017L35.5 0Z" fill="#1052FA"/>
+                    </svg>                           
+            </a>
+            <a href="http://ujjj.dothome.co.kr/port/index3.html#" target="_blank" class="site_btn_a">
+                <div class="site_btn">
+                <span>other site</span>
+                </div>
+            </a>
+        </nav>
+    </header>
+    <!-- <?php
+        include '../component/header.php'
+    ?> -->
+    
+    <main id="wrap">
+      <section id="portfolio">
+        <div class="repeat_title">
+            <h1 class="repeat">PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO</h1>
+            <h1 class="repeat_reverse">MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB MOBILE WEB</h1>
+        </div>
+        <div class="port_subtitle web">
+            <h2 class="split">WEB SITE</h2><h6>*</h6>
+        </div>
+        <div class="port_cont_wrap cont1">
+            <div class="container">
+                <div class="port_cont_left">
+                    <div class="port_cont_title">
+                        <span>01</span>
+                        <svg viewBox="0 0 778 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M105 209C132.378 209 157.308 198.572 176 181.489C194.692 198.572 219.622 209 247 209C274.378 209 299.308 198.572 318 181.489C336.692 198.572 361.622 209 389 209C416.378 209 441.308 198.572 460 181.489C478.692 198.572 503.622 209 531 209C558.378 209 583.308 198.572 602 181.489C620.692 198.572 645.622 209 673 209C730.99 209 778 162.214 778 104.5C778 46.7863 730.99 0 673 0C645.622 0 620.692 10.4282 602 27.5113C583.308 10.4282 558.378 0 531 0C503.622 0 478.692 10.4282 460 27.5113C441.308 10.4282 416.378 0 389 0C361.622 0 336.692 10.4282 318 27.5113C299.308 10.4282 274.378 0 247 0C219.622 0 194.692 10.4282 176 27.5113C157.308 10.4282 132.378 0 105 0C47.0103 0 0 46.7863 0 104.5C0 162.214 47.0103 209 105 209Z" fill="#1052FA"/>
+                        </svg>
+                        <h1>WEB STANDARD</h1>
+                    </div>
+                    <div class="port_cont_text">
+                        <p>웹표준을 준수하여 작업한 웹표준 사이트입니다.<br>
+                            크로스 브라우징이 가능합니다.<br>
+                            웹접근성을 고려해 탭 메뉴를 만들었고,<br>
+                            slick.js를 사용해 슬라이더를, lightbox를 활용해 모달창을 만들었습니다.</p>
+                    </div>
+                    <a target="_blank" href="http://ujjj.dothome.co.kr/webStandard/" class="view_btn">
+                        <span class="repeat">VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE</span>
+                    </a>
+                </div>
+                <div class="port_cont_right">
+                    <div class="port_right_s1"></div>
+                </div>
+            </div>
+            <div class="port_keyword">
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>IR효과</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Tab Menu</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Slick.js</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Slide Menu</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Image Sprite</h6>
+                </div>
+            </div>
+        </div>
+        <!-- /.port_cont_wrap .cont1 -->
+
+        <div class="port_cont_wrap cont2">
+            <div class="container">
+                <div class="port_cont_left">
+                    <div class="port_cont_title">
+                        <span>02</span>
+                        <svg viewBox="0 0 778 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M105 209C132.378 209 157.308 198.572 176 181.489C194.692 198.572 219.622 209 247 209C274.378 209 299.308 198.572 318 181.489C336.692 198.572 361.622 209 389 209C416.378 209 441.308 198.572 460 181.489C478.692 198.572 503.622 209 531 209C558.378 209 583.308 198.572 602 181.489C620.692 198.572 645.622 209 673 209C730.99 209 778 162.214 778 104.5C778 46.7863 730.99 0 673 0C645.622 0 620.692 10.4282 602 27.5113C583.308 10.4282 558.378 0 531 0C503.622 0 478.692 10.4282 460 27.5113C441.308 10.4282 416.378 0 389 0C361.622 0 336.692 10.4282 318 27.5113C299.308 10.4282 274.378 0 247 0C219.622 0 194.692 10.4282 176 27.5113C157.308 10.4282 132.378 0 105 0C47.0103 0 0 46.7863 0 104.5C0 162.214 47.0103 209 105 209Z" fill="#1052FA"/>
+                        </svg>
+                        <h1>MEGABOX</h1>
+                    </div>
+                    <div class="port_cont_text">
+                        <p>swiper 자바스크립트 라이브러리를 사용해 image slide를 구현했고,<br>
+                            SVG를 활용해 icon 작업을 했습니다.<br>
+                            mediaquery로 반응형 사이트로 제작했고,<br>
+                            시맨틱 태그를 사용하여 코딩했습니다.<br>
+                            구글의 웹 API를 사용하여 유튜브의 영상이<br>
+                            레이어 팝업으로 나타나도록 작업했습니다.
+                    </div>
+                    <a target="_blank" href="http://ujjj.dothome.co.kr/mega/mega01.html" class="view_btn">
+                        <span class="repeat">VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE</span>
+                    </a>
+                </div>
+                <div class="port_cont_right">
+                    <div class="port_right_s1"></div>
+                    <div class="port_right_s2"></div>
+                    <div class="port_right_s3"></div>
+                </div>
+            </div>
+            <div class="port_keyword">
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Swiper.js</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Youtube API</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>MediaQuery</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Hambuger Menu</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Image Sprite</h6>
+                </div>
+            </div>
+        </div>
+        <!-- /.port_cont_wrap .cont2 -->
+
+        <div class="port_cont_wrap cont3">
+            <div class="container">
+                <div class="port_cont_left">
+                    <div class="port_cont_title">
+                        <span>03</span>
+                        <svg viewBox="0 0 778 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M105 209C132.378 209 157.308 198.572 176 181.489C194.692 198.572 219.622 209 247 209C274.378 209 299.308 198.572 318 181.489C336.692 198.572 361.622 209 389 209C416.378 209 441.308 198.572 460 181.489C478.692 198.572 503.622 209 531 209C558.378 209 583.308 198.572 602 181.489C620.692 198.572 645.622 209 673 209C730.99 209 778 162.214 778 104.5C778 46.7863 730.99 0 673 0C645.622 0 620.692 10.4282 602 27.5113C583.308 10.4282 558.378 0 531 0C503.622 0 478.692 10.4282 460 27.5113C441.308 10.4282 416.378 0 389 0C361.622 0 336.692 10.4282 318 27.5113C299.308 10.4282 274.378 0 247 0C219.622 0 194.692 10.4282 176 27.5113C157.308 10.4282 132.378 0 105 0C47.0103 0 0 46.7863 0 104.5C0 162.214 47.0103 209 105 209Z" fill="#1052FA"/>
+                        </svg>
+                        <h1>RESPONSIVE WEB</h1>
+                    </div>
+                    <div class="port_cont_text">
+                        <p>
+                            해상도에 따라 이미지를 다르게 표현하는 방법과<br>
+                            lightbox.js와 slick.js를 이용한 이미지 슬라이드 등 반응형에 맞게<br>
+                            미디어쿼리를 사용하여 각 해상도 마다 컨텐츠 요소들의 위치가 바뀌게<br>
+                            반응형 사이트를 완성하였습니다.
+                        </p>
+                    </div>
+                    <a target="_blank" href="http://ujjj.dothome.co.kr/responsiveWeb/index.html" class="view_btn">
+                        <span class="repeat">VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE</span>
+                    </a>
+                </div>
+                <div class="port_cont_right">
+                    <div class="port_right_s1"></div>
+                    <div class="port_right_s2"></div>
+                    <div class="port_right_s3"></div>
+                </div>
+            </div>
+            <div class="port_keyword">
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>MediaQuery</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Image Slide</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>LightBox</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Hover Effect</h6>
+                </div>
+                <div class="key">
+                    <span class="port_dot"></span>
+                    <h6>Web Icon Font</h6>
+                </div>
+            </div>
+        </div>
+        <!-- /.port_cont_wrap .cont3 -->
+
+        <!-- svg text path -->
+        <svg class="svgtext svgtext--1" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 200">
+            <path id="text-curve1" d="M 0 100 Q 250 200 500 100 Q 750 0 1000 100" fill="none"></path>
+            <text>
+                <textPath href="#text-curve1" startOffset="0">
+                    HELLO, I AM FRONTEND DEVELOPER CHO YOO JUNG.
+                </textPath>
+            </text>
+        </svg>
+        <svg class="svgtext" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 200">
+            <path id="text-curve11" d="M 0 100 Q 250 0 500 100 Q 750 200 1000 100" fill="none"></path>
+            <text filter="">
+                <textPath href="#text-curve11" startOffset="0">
+                    THIS SITE IS BEING CREATED USING REACT.
+                </textPath>
+            </text>
+        </svg>
+        <!-- /svg text path -->
+
+        <div class="port_subtitle mobile">
+            <h2 class="split">MOBILE SITE</h2><h6>*</h6>
+        </div>
+        <div class="port_mobile_wrap">
+            <div class="border_text">
+                <p>MOBILE SITE MOBILE SITE MOBILE SITE</p>
+                <p style="margin-top: -0.5em;">MOBILE SITE MOBILE SITE MOBILE SITE</p>
+            </div>
+            <div class="container">
+                <div class="mobile_page_wrap">
+                    <div class="mobile_page page_1">
+                        <img src="../assets/img/kurly_page1.png" alt="marketKurly_page1">
+                    </div>
+                    <div class="mobile_page page_2">
+                        <img src="../assets/img/kurly_page2.png" alt="marketKurly_page1">
+                    </div>
+                    <div class="mobile_page page_3">
+                        <img src="../assets/img/kurly_page4.png" alt="marketKurly_page1">
+                    </div>
+                </div>
+                <div class="port_mobile_title">
+                    <h2><span>MARKET</span> KURLY</h2>
+                    <a href="#" class="view_btn">
+                        <span class="repeat">VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE VIEW SITE</span>
+                    </a>
+                </div>
+            </div><!-- /.container -->
+        </div>
+        <!-- /.port_mobile_wrap -->
+
+        <div class="next_container">
+            <div class="container">
+                <a href="../pages/animation.html" class="next page__click" data-name="animation">
+                <span>NEXT</span>
+                <div class="next_line"></div>
+                <div class="next_wrap">
+                    <h2 class="next_title">ANIMATION</h2>
+                    <img src="../assets/img/symbol-4-fff.png" alt="next_symbol">
+                </div>
+                </a>
+            </div>
+        </div><!-- /.next_container -->
+      </section>
+      <!-- /#portfolio -->
+    </main>
+    <!-- /#wrap -->
+     
+    <!-- <?php
+        include '../component/footer.php'
+    ?> -->
+    <footer>
+        <div class="footer_title">
+          <p>I AM FRONTEND DEVELOPER CHO YOO JUNG.</p>
+          <h2>THANK YOU FOR COMING BY.</h2>
+        </div>
+        <div class="footer_line"></div>
+        <div class="container">
+          <ul>
+              <li>CHO YOO JUNG</li>
+              <li>+82 10 9342 0506</li>
+              <li>ujjj56@naver.com</li>
+              <li><a href="#">github</a></li>
+              <li><a href="#">study</a></li>
+          </ul>
+      </div>
+        <address>COPYRIGHT © 2021 CHO YOO JUNG. WEBSITE MADE BY ME.</address>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="../assets/js/portfolio_js/js.c39dff1f.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/portfolio.js"></script>
+  </body>
+</html>

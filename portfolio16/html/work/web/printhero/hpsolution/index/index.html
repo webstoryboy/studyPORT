@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!-- title -->
+	<title>프린트 히어로 :: 프린트 문제해결 10분이면 충분합니다. ::</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- for-mobile-apps -->
+	<link href="./images/favicon.ico" rel="shortcut icon" />
+	<!-- title -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="국내 최초 프린팅 서비스 플랫폼">
+	<meta property="og:url" content="http://oaic.co.kr:8090/">
+	<meta property="og:description" content="프린팅 서비스 습관을 혁신합니다.">
+	<meta property="og:image" content="./images/thumnail.jpg">
+	<meta name="robots" content="index,follow">
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="HP Solution">
+	<!-- description -->
+	<meta name="description" content="프린팅 서비스 습관을 혁신합니다.">
+	<!-- keywords -->
+	<meta name="keywords" content="프린트 히어로">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--메인 슬라이드-->
+	<script type="text/javascript" src="./js/slide.js"></script>
+	<script type="text/javascript" src="./js/main-slide.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<!--//슬라이드끝-->
+
+	<!-- main js -->
+	<script src="./js/main2.js"></script>
+	<!-- //main js -->
+
+	<!--//tags -->
+	<link href="./js/bootstrap.js" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/main-style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/demo.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<!-- jquery -->
+	<link href="./css/font-awesome.css" rel="stylesheet">
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<!-- //jquery -->
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.counterup.min.js"></script>
+	<!-- price range (top products) -->
+	<script src="./js/jquery-ui.js"></script>
+	<!-- //price range (top products) -->
+	<!-- flexisel (for special offers) -->
+	<script src="./js/jquery.flexisel.js"></script>
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+	<!-- //flexisel (for special offers) -->
+	<!-- 탑클릭 부드럽게 -->
+	<script>
+		$('.banner').click(function () {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 0);
+			return false;
+		});
+	</script>
+	<!--// 탑클릭 부드럽게 -->
+	<!-- smoothscroll -->
+	<script src="./js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+	<!-- start-smooth-scrolling -->
+	<script src="./js/move-top.js"></script>
+	<script src="./js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!--고정배너 스크립트 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.show-on-scroll');
+			if ($(this).scrollTop() >= 600) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//고정배너 스크립트 -->
+	<!--탑서칭 -->
+	<script>
+		$(window).scroll(function () {
+			var $el = $('.top-search-show-on-scroll');
+			if ($(this).scrollTop() >= 500) $el.addClass('shown');
+			else $el.removeClass('shown');
+		});
+	</script>
+	<!--//탑서칭 -->
+
+
+
+</head>
+
+<body>
+
+	<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+	<div class="mnk-main-menu-toggle menu-container">
+		<div class="fdr-menu-box">
+			<div class="container">
+				<div class="logo" style="float: none; margin-right: 10px;">
+					<div class="site-logo">
+						<a href="index.html">
+							<img src="images/logo.png" alt="로고">
+							<img src="images/logo.png" alt="로고작은거">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+							<ul class="menu-line">
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 active">
+									<a href="shopping-center/shop-main.html">쇼핑센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="repair-center/repair-main.html">수리센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="rental-center/rental-main.html">렌탈센터</a>
+								</li>
+
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="edu-center/edu-main.html">교육센터</a>
+								</li>
+								<li
+									class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+									<a href="#">고객센터</a>
+								</li>
+								<li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064 hvr-icon-buzz-out"
+									style="margin-right: 40px;  background-color:#000;">
+									<a target="_blank" onclick="location.href='partner-zone.html'"><span>파트너존 &nbsp;<i class="fa fa-flag hvr-icon" aria-hidden="true"></i></span></a>
+								</li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<input type="checkbox" id="menuicon2">
+			<label for="menuicon2">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<!--전체메뉴 토글버튼-->
+			<div class="sidebar">
+				<div class="mobile-toggle-bar">
+					<div class="box-m1 service-m">
+						<h4>전체서비스</h4>
+						<table class="info2">
+							<tbody>
+								<tr>
+									<td>
+										<img src="./images/shopping-ct-ico.png" alt="쇼핑센타아이콘"
+											onclick="location.href='./shopping-center/shop-main.html'"><br>
+										<a>쇼핑센터</a>
+									</td>
+									<td>
+										<img src="./images/repair-ct-ico.png" alt="수리센타아이콘"
+											onclick="location.href='./repair-center/repair-main.html'"><br>
+										<a>수리센터</a>
+									</td>
+									<td>
+										<img src="./images/rental-ct-ico.png" alt="렌탈센타아이콘"
+											onclick="location.href='./rental-center/rental-main.html'"><br>
+										<a>렌탈센터</a>
+									</td>
+									<td>
+										<img src="./images/edu-ct-ico.png" alt="교육센타아이콘"
+											onclick="location.href='./edu-center/edu-main.html'"><br>
+										<a>교육센터</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<table class="info1" style="margin-bottom:10px;">
+						<tbody>
+							<tr>
+								<td>
+									<h5><img src="./images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;고객센터
+									</h5>
+								</td>
+								<td>
+									<h5><img src="./images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;회사소개
+									</h5>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="info1" style="background:#3399FD; color: #fff; padding:5px;margin-bottom:10px;">
+						<tbody>
+							<tr>
+								<td style="border:none;" onclick="location.href='./partner-form.html'">
+									<h5>파트너 신청 <i class="fa fa-paper-plane" aria-hidden="true"></i></h5>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="info1" style="border-bottom: 1px solid #ddd; padding:5px">
+						<tbody>
+							<tr>
+								<td style="border:none;" onclick="location.href='./partner-zone.html'">
+									<h5>파트너 존 <i class="fa fa-flag" aria-hidden="true"></i></h5>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+	<div class="height-70">
+	</div>
+	<!-- //header 메뉴 시작 전면수정-->
+	<!--메인대치-->
+	<div class="main-slide main-slide-height">
+		<ul class="main-panel">
+			<li class="sub-text2 main-bg" style="text-align: center">
+				<div>
+					<h3 class="wow fadeInUp" data-wow-delay="0.3s" >프린터 구매의 모든 것</h3>
+					<h5 class="wow fadeInUp" data-wow-delay="0.6s" >모든 프린터를 한눈에!</h5>
+					<button  class="wow flipInX btn white-border-btn" data-wow-delay=".3s"  class="btn white-border-btn" style="text-align: center; margin-top: 34px;"
+						onclick="location.href='/shopping-center/shop-main.html'">쇼핑센터 바로가기 &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				</div>
+			</li>
+			<li class="sub-text2 main-bg" style="text-align: center">
+				<div>
+					<h3 class="wow fadeInUp" data-wow-delay="1.6s">프린트를 위한 플랫폼</h3>
+					<h5 class="wow fadeInUp" data-wow-delay="1.9s">프린트 히어로를 소개합니다.</h5>
+					<button  class="wow flipInX btn white-border-btn" data-wow-delay="1.9s"  style="text-align: center; margin-top: 34px;"
+						onclick="location.href='company-intro.html'">회사소개 바로가기 &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				</div>
+			</li>
+			<li class="sub-text2 main-bg" style="text-align: center">
+				<div>
+					<h3 class="wow fadeInUp" data-wow-delay="2.6s">프린터에 문제가 생기셨나요?</h3>
+					<h5 class="wow fadeInUp" data-wow-delay="2.9s"><strong>10분</strong>이면 충분합니다.</h5>
+					<button   class="wow flipInX btn white-border-btn" data-wow-delay="2.9s" style="text-align: center; margin-top: 34px;"
+						onclick="location.href='./repair-center/repair-main.html'">수리센터 바로가기 &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				</div>
+			</li>
+			<li class="sub-text2 main-bg" style="text-align: center">
+				<div>
+					<h3 class="wow fadeInUp" data-wow-delay="3.6s">업계최초!  렌탈 비교견적</h3>
+					<h5 class="wow fadeInUp" data-wow-delay="3.9s"><strong>프린트에 대해서만 한눈에!</strong></h5>
+					<button   class="wow flipInX btn white-border-btn" data-wow-delay="3.9s" style="text-align: center; margin-top: 34px;"
+						onclick="location.href='./rental-center/rental-main.html'">렌탈문의 바로가기 &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				</div>
+			</li>
+
+		</ul>
+		<ul class="dot">
+			<li class="on">슬라이드 버튼1번</li>
+			<li>슬라이드 버튼2번</li>
+			<li>슬라이드 버튼3번</li>
+			<li>슬라이드 버튼4번</li>
+		</ul>
+		<div class="prev">
+		</div>
+		<div class="next">
+		</div>
+	</div>
+	<!--//메인대치-->
+	<div class="clear">
+	</div>
+	<!--메인 중앙 네비-->
+	<div class="main-middle-nav">
+		<div class="container">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<!--좌측네비-->
+				<div class="left-nav">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box active" value="sh-cot">
+						<div class="main-btn-cot">
+							<img src="images/shopping-ico.svg">
+							<img src="images/shopping-ico-w.svg">
+							<!--이미지호버-->
+							<p>쇼핑센터</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box" value="rp-cot">
+						<div class="main-btn-cot">
+							<img src="images/repair-ico.svg">
+							<img src="images/repair-ico-w.svg">
+							<!--이미지호버-->
+							<p>수리센터</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box" value="rt-cot">
+						<div class="main-btn-cot">
+							<img src="images/rental-ico.svg">
+							<img src="images/rental-ico-w.svg">
+							<!--이미지호버-->
+							<p>렌탈센터</p>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 box" value="ed-cot">
+						<div class="main-btn-cot">
+							<img src="images/edu-ico.svg">
+							<img src="images/edu-ico-w.svg">
+							<!--이미지호버-->
+							<p>교육센터</p>
+						</div>
+					</div>
+					<div class="clear">
+					</div>
+					<div class="nav-tit mobile-no pad-no">
+						<ul class="slide-nav">
+							<li>
+								<p>Shopping Center</p>
+								<h3>쇼핑센터</h3>
+								<h5>부품부터 완제품까지 구매를 원하신다면</h5>
+								<button class="wow flipInX blue-btn now-btn" style="margin-top: 40px;"
+									onclick="location.href='./shopping-center/shop-main.html'">쇼핑하러가기<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>Repair Center</p>
+								<h3>수리센터</h3>
+								<h5>1855-4832 <span
+										style="color:#ccc; display: inline-block; padding:2px 7px; margin-left:5px; border: 1px solid #ccc;border-radius: 2px;">대물보험
+										가입</span></h5>
+								<button class="wow flipInX blue-btn now-btn" style="margin-bottom: 10px;"
+									onclick="location.href='./repair-center/repair-main.html'">고장문의 / 수리신청 <i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+								<button class="wow flipInX border-btn now-btn"
+									onclick="location.href='./repair-center/repair-list.html'">수리진행조회<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>Rental Center</p>
+								<h3>렌탈센터</h3>
+								<h5>다양한 사무기기 렌탈 제품을 모아모아!</h5>
+								<button class="wow flipInX blue-btn now-btn" style="margin-bottom: 10px;"
+									onclick="location.href='./rental-center/rental-letter2.html'">실시간 견적문의<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+								<button class="wow flipInX border-btn now-btn"
+									onclick="location.href='./rental-center/rental-main.html'">비교견적<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>Education Center</p>
+								<h3>교육센터</h3>
+								<h5>현재 준비중입니다.</h5>
+								<button class="wow flipInX blue-btn now-btn" style="margin-top: 40px;"
+									onclick="location.href='./edu-center/edu-main.html'">교육일정보기<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+						</ul>
+					</div>
+					<div class="tit-nav mobile-no pad-no">
+						<a class="tit-prev"></a>
+						<a class="tit-next"></a>
+					</div>
+				</div>
+			</div>
+			<!--//좌측네비-->
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 right-nav-box">
+				<!--우측컨텐츠-->
+				<ul class="right-nav-slide">
+					<li class="right-nav active" id="sh-cot" name="right-contents" value="sh-cot">
+						<!--//쇼핑컨텐츠-->
+						<h5 style="padding:0 5px;"><i class="fa fa-search" aria-hidden="true"></i> 찾으시는 제품은?
+						<a href="#" class="btn badge" style="background: #3399ff; margin-left: 10px; font-size: 12px; font-weight: 500; margin-bottom: 2px;">바로가기 <i class="fa fa-caret-right" aria-hidden="true"></i></a></h5>
+						<table class="sh-ct">
+							<tr>
+								<td>
+									<div class="q-btn2">
+										부품
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										토너<br>
+										잉크<br>
+										용지
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										옵션<br>
+										악세서리<br>
+										아답터
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										공급기<br>
+										수리기자재
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										완제품
+									</div>
+								</td>
+							</tr>
+						</table>
+						<div class="clear">
+						</div>
+						<h5 style="margin-top: 28px; padding:3px 5px;"><i class="fa fa-thumbs-o-up"
+								aria-hidden="true"></i> Best 상품 <span class="float-right pointer"
+								onclick="location.href='./repair-center/repair-list.html'"><img
+									src="./images/plus-icon-w.png" style="width: 18px; margin-right: 10px;"></span>
+						</h5>
+						<div class="product-sec2">
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop01.jpg" alt="img1" width="100%">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop02.jpg" alt="img1" width="100%">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop03.jpg" alt="img1" width="100%">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix">
+						</div>
+						<h5 style="margin-top: 28px; padding:3px 5px;"><i class="fa fa-heart-o" aria-hidden="true"></i>
+							이벤트 </h5>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:5px;">
+							<div id="slide2">
+								<input type="radio" name="pos" id="pos1" checked="">
+								<input type="radio" name="pos" id="pos2">
+								<input type="radio" name="pos" id="pos3">
+								<ul id="ticker_none" class="ticker">
+									<li><img src="./images/promotion-banner.jpg" class="mobile-no" width="100%"><img
+											src="./images/promotion-banner-m.jpg" class="mobile-yes" width="100%">
+									</li>
+									<li><img src="./images/promotion-banner2.jpg" class="mobile-no" width="100%"><img
+											src="./images/promotion-banner2-m.jpg" class="mobile-yes" width="100%">
+									</li>
+									<li><img src="./images/promotion-banner3.jpg" class="mobile-no" width="100%"><img
+											src="./images/promotion-banner3-m.jpg" class="mobile-yes" width="100%">
+									</li>
+								</ul>
+								<p class="pos">
+									<label for="pos1">1</label>
+									<label for="pos2">2</label>
+									<label for="pos3">3</label>
+								</p>
+								<script>
+									function tick3() {
+										$('#ticker_03 li:first').animate({
+											'opacity': 0
+										}, 200, function () {
+											$(this).appendTo($('#ticker_03')).css('opacity', 1);
+										});
+									}
+									setInterval(function () {
+										tick3()
+									}, 4000);
+								</script>
+							</div>
+						</div>
+						<div class="clear">
+						</div>
+					</li>
+					<!--//쇼핑컨텐츠-->
+					<li class="right-nav" id="rp-cot" name="right-contents" value="rp-cot">
+						<!--//수리컨텐츠
+						<h5 style="padding: 5px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i> 자주하는
+							고장문의
+						</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding:5px;">
+							<div class="q-btn" style="background: #ECF0F6" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 용지걸림
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding:5px;">
+							<div class="q-btn" style="background: #F6ECEC" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 인쇄가 안되요
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding:5px;">
+							<div class="q-btn" style="background: #FFF3D6" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 프린트 연결오류
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding: 5px;">
+							<div class="q-btn" style="background: #F4F6EC" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 수리비용은?
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding:5px;">
+							<div class="q-btn" style="background: #F6F3EC" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 수리가능한가요?
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" style="padding:5px;">
+							<div class="q-btn" style="background: #F2EDFF" type="button" data-toggle="modal"
+								data-target="#faq-re-modal">
+								<i class="fa fa-quora" aria-hidden="true"></i> 출장 수리가능한가요?
+							</div>
+						</div>-->
+						<h5 style="padding: 5px; margin-bottom:0;"><i class="fa fa-question-circle-o"
+								aria-hidden="true"></i>
+							수리센터 이용안내
+						</h5>
+						<div class="rp-info-imgbox"
+							style=" border: 1px solid #eee;border-radius: 5px;overflow: hidden;padding: 5px 0 5px 0;margin-top: 10px;">
+							<img src="images/rp-process.jpg"></div>
+
+
+						<div class="clear">
+						</div>
+						<h5 style="margin-top: 28px; padding:3px 5px;"><i class="fa fa-wrench" aria-hidden="true"></i>
+							수리신청 현황 <span class="float-right pointer"
+								onclick="location.href='./repair-center/repair-list.html'"><img
+									src="./images/plus-icon-w.png" style="width: 18px; margin-right: 10px;"></span>
+						</h5>
+						<div class="flow-list">
+							<ul id="ticker_03">
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>택배수리</a>
+												</td>
+												<td>
+													<span class="name">박**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류3
+													</div>
+												</td>
+												<td>
+													<span class="day">19.05.30</span><br>
+													<i class="fa fa-check-circle" style="color:#007bbe"></i> 처리완료
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>출장요청</a>
+												</td>
+												<td>
+													<span class="name">김**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류4
+													</div>
+												</td>
+												<td>
+													<span class="day">19.06.14</span><br>
+													<i class="fa fa-circle" style="color:#f9d423"></i> 접수대기
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>온라인상담</a>
+												</td>
+												<td>
+													<span class="name">이**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류5
+													</div>
+												</td>
+												<td>
+													<span class="day">19.06.01</span><br>
+													<i class="fa fa-refresh fa-spin" style="color:green"></i> 진행중
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>택배수리</a>
+												</td>
+												<td>
+													<span class="name">박**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류6
+													</div>
+												</td>
+												<td>
+													<span class="day">19.05.30</span><br>
+													<i class="fa fa-check-circle" style="color:#007bbe"></i> 처리완료
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>출장요청</a>
+												</td>
+												<td>
+													<span class="name">김**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류1 내용이 길어요.
+													</div>
+												</td>
+												<td>
+													<span class="day">19.06.14</span><br>
+													<i class="fa fa-circle" style="color:#f9d423"></i> 접수대기
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li style="display: list-item;">
+									<table class="now-box">
+										<tbody>
+											<tr>
+												<td rowspan="2">
+													<a>온라인상담</a>
+												</td>
+												<td>
+													<span class="name">이**</span><br>
+													<div class="tt-omit">
+														시스템 오류, 잉크오류2
+													</div>
+												</td>
+												<td>
+													<span class="day">19.06.01</span><br>
+													<i class="fa fa-refresh fa-spin" style="color:green"></i> 진행중
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+							</ul>
+							<div class="clear">
+							</div>
+						</div>
+					</li>
+					<!--//수리컨텐츠-->
+					<li class="right-nav" id="rt-cot" name="right-contents" value="rt-cot">
+						<!--//렌탈컨텐츠-->
+						<h5 style="padding: 5px;"><i class="fa fa-search" aria-hidden="true"></i> 찾으시는 렌탈 제품은?</h5>
+						<table class="rt-ct">
+							<tr>
+								<td>
+									<div class="q-btn2">
+										레이저 프린터
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										잉크젯 프린터
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										특수프린터
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										스캐너
+									</div>
+								</td>
+								<td>
+									<div class="q-btn2">
+										PC&#38;OA기기
+									</div>
+								</td>
+							</tr>
+						</table>
+						<div class="clear">
+						</div>
+						<h5 style="margin-top: 28px; padding:3px 5px;"><i class="fa fa-star-o" aria-hidden="true"></i>
+							추천상품 </h5>
+						<div class="product-sec2">
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop01.jpg" alt="img1" width="100%">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop04.jpg" alt="img1">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 product-men2">
+								<div class="men-pro-item simpleCart_shelfItem ">
+									<div class="men-thumb-item w3l-specilamk2">
+										<img src="./images/shop03.jpg" alt="img1" width="100%">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<div class="item-info-product ">
+													<h4>
+														<a href="#" class="sh-title">HP 레이저젯 M602n</a>
+													</h4>
+													<div class="info-product-price">
+														<span class="item_price">199,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<h5 style="margin-top: 28px; padding:3px 5px;"><i class="fa fa-bell-o" aria-hidden="true"></i>
+							실시간문의 <span class="float-right pointer"
+								onclick="location.href='./repair-center/repair-list.html'"><img
+									src="./images/plus-icon-w.png" style="width: 18px; margin-right: 10px;"></span>
+						</h5>
+						<div class="cc-box2 rental-letter">
+							<ul>
+								<li>
+									<table class="table table-hover" id="scroll-03" onmouseover="stopRepeat3();"
+										onmouseout="startRepeat3();">
+										<tbody>
+											<tr>
+												<th style="color: #555">[견적문의]</th>
+												<td class="tt">
+													<div class="tt-omit">렌탈10대 문의 글이 길어요</div>
+												</td>
+												<td class="name">(주)에드***</td>
+												<td class="day">19.06.17</td>
+
+											</tr>
+											<tr>
+												<th style="color: #555">[견적문의]</th>
+												<td class="tt">
+													<div class="tt-omit">견적문의합니다. 글이 길어요</div>
+												</td>
+												<td class="name">김**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+											<tr>
+												<th style="color: blue">[렌탈신청]</th>
+												<td class="tt">
+													<div class="tt-omit">[HP]컬러레이저 M750 글이 길어요</div>
+												</td>
+												<td class="name">서**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+											<tr>
+												<th style="color: blue">[렌탈신청]</th>
+												<td class="tt">
+													<div class="tt-omit">[삼성]컬러레이저 M122 글이 길어요</div>
+												</td>
+												<td class="name">오**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+											<tr>
+												<th style="color: #555">2[견적문의]</th>
+												<td class="tt">
+													<div class="tt-omit">렌탈10대 문의 글이 길어요</div>
+												</td>
+												<td class="name">(주)에드***</td>
+												<td class="day">19.06.17</td>
+
+											</tr>
+											<tr>
+												<th style="color: #555">2[견적문의]</th>
+												<td class="tt">
+													<div class="tt-omit">견적문의합니다. 글이 길어요</div>
+												</td>
+												<td class="name">김**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+											<tr>
+												<th style="color: blue">2[렌탈신청]</th>
+												<td class="tt">
+													<div class="tt-omit">[HP]컬러레이저 M750 글이 길어요</div>
+												</td>
+												<td class="name">서**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+											<tr>
+												<th style="color: blue">2[렌탈신청]</th>
+												<td class="tt">
+													<div class="tt-omit">[삼성]컬러레이저 M122 글이 길어요</div>
+												</td>
+												<td class="name">오**</td>
+												<td class="day">19.06.17</td>
+											</tr>
+
+
+
+										</tbody>
+									</table>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!--//렌탈컨텐츠-->
+
+					<li class="right-nav" id="ed-cot" name="right-contents" value="ed-cot">
+						<!--//교육컨텐츠-->
+						<div style="text-align: center;">
+
+							<h5 style="padding: 5px;">현재 카테고리는 준비중입니다.</h5>
+							<img src="images/prmini.svg">
+						</div>
+
+
+					</li>
+					<!--//교육컨텐츠-->
+				</ul>
+			</div>
+			<!--//우측컨텐츠-->
+
+
+
+		</div>
+	</div>
+
+
+
+
+	<!--모바일 하단 이미지-->
+	<div class="main-middle-nav mobile-yes pad-yes">
+		<div class="container">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="left-nav2 ">
+					<div class="nav-tit2">
+						<ul class="slide-nav2">
+							<li>
+								<p>
+									Shopping Center
+								</p>
+								<h3>쇼핑센터</h3>
+								<h5>부품부터 완제품까지 구매를 원하신다면</h5>
+								<button class="wow flipInX blue-btn now-btn" style="margin-top: 40px;"
+									onclick="location.href='./shopping-center/shop-main.html'">쇼핑하러가기<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>
+									Repair Center
+								</p>
+								<h3>수리센터</h3>
+								<h5>1855-4832 <span
+										style="color:#ccc; display: inline-block; padding:2px 7px; margin-left:5px; border: 1px solid #ccc;border-radius: 2px;">대물보험
+										가입</span></h5>
+								<button class="blue-btn now-btn" style="margin-bottom: 10px;"
+									onclick="location.href='./repair-center/repair-main.html'">고장문의 / 수리신청 <i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+								<button class="border-btn now-btn"
+									onclick="location.href='./repair-center/repair-list.html'">수리진행조회<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>
+									Rental Center
+								</p>
+								<h3>렌탈센터</h3>
+								<h5>다양한 사무기기 렌탈 제품을 모아모아!</h5>
+								<button class="blue-btn now-btn" style="margin-bottom: 10px;"
+									onclick="location.href='./rental-center/rental-letter2.html'">실시간 견적문의<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+								<button class="border-btn now-btn"
+									onclick="location.href='./rental-center/rental-main.html'">비교견적<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+							</li>
+							<li>
+								<p>
+									Education Center
+								</p>
+								<h3>교육센터</h3>
+								<h5>현재 준비중입니다.</h5>
+								<button class="blue-btn now-btn" style="margin-top: 40px;"
+									onclick="location.href='./edu-center/edu-main.html'">교육일정보기<i
+										class="fa fa-angle-right float-right" aria-hidden="true"></i></button>
+
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--//메인 중앙 네비-->
+	<div class="m-gap-part">
+	</div>
+	<!--메인하단버튼-->
+	<div class="bottom-btn-group">
+		<div class="container">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border-right">
+				<ul class="div-box wow ">
+					<li >
+						<div class="circle wow flipInY" >
+							파트너존
+						</div>
+					</li>
+					<li>프린트 문제 해결을 위한 만능키 검색 시스템으로 파트너존에서 다양하게 누리세요!</li>
+					<li class="button-circle"></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border-right">
+				<ul class="div-box">
+					<li>
+						<div class="circle wow flipInY" data-wow-delay="0.2s" style="background: #FFD200;">
+							입점신청
+						</div>
+					</li>
+					<li>상품런칭, 매입요청 및 판매자분들의 제안을 기다립니다.</li>
+					<li class="button-circle"></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<ul class="div-box">
+					<li>
+						<div class="circle wow flipInY" data-wow-delay="0.4s" style="background: #6ECFF9;">
+							회사소개
+						</div>
+					</li>
+					<li>프린트 히어로의 모든 것을 알려드립니다.</li>
+					<li class="button-circle"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--//메인하단버튼-->
+	<div class="m-gap-part">
+	</div>
+	<!--고객센터 정보-->
+	<div class="customer-center" >
+		<div class="container">
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 main-notice-box">
+				<div class="wow fadeInLeft">
+					<h3>공지사항</h3>
+					<h5>프린트 히어로의 다양한 소식을 빠르게 알려드립니다. <span class="float-right" onclick="location.href='#'"><img
+								src="./images/plus-icon.png" style="width: 18px"></span>
+					</h5>
+					<div class="nt-d-box">
+						<div class="nt-box">
+							<div class="tt-omit">
+								[ 공지 ] 7.1 신규 홈페이지를 오픈했습니다.
+							</div>
+							<span>19.03.21</span>
+						</div>
+						<div class="nt-box">
+							<div class="tt-omit">
+								[ 수리 ] 시스템점검 2019년 2월 26일(일)
+							</div>
+							<span>19.02.19</span>
+						</div>
+						<div class="nt-box">
+							<div class="tt-omit">
+								[ 렌탈 ] 시스템점검 2019년 2월 26일(일)
+							</div>
+							<span>19.02.19</span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 cc-inner-box wow fadeInRight" data-wow-delay="0.3s">
+				<div class="bg-info">
+					<h4>고객센터</h4>
+					<h5>상담을 원하실때는!</h5>
+					<h2>1855-4832</h2>
+					<h5 style="font-size: 13px; margin-bottom: 5px;">상담시간 | 평일 오전 10:00 ~ 오후 6:00</h5>
+					<h5 style="font-size: 13px; margin-bottom: 20px;">점심시간 | 평일 오전 12:00 ~ 오후 1:00</h5>
+					<div class="cc-icon-box">
+						<ul>
+							<li><img src="images/info-icon.png">이용안내</li>
+							<li><img src="images/faq-icon.png">자주묻는 질문</li>
+							<li><img src="images/company-intro.png">회사소개</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!--고객센터 정보-->
+
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<!-- footer third section -->
+			<div class="footer-info2">
+				<!-- quick links -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-inner">
+					<div class="col-lg-8 col-md-10 col-sm-10 col-xs-12 footer-inner2">
+						<div class="footerbox-1 mobile-no">
+							<img src="images/logo-w.png">
+						</div>
+						<div class="footerbox-1">
+							<ul class="footer-grid">
+								<li>
+									<a href="#">회사소개</a>
+								</li>
+								<li>
+									<a href="#">파트너신청</a>
+								</li>
+								<li>
+									<a href="#">이용안내</a>
+								</li>
+								<li>
+										<a href="#">이용약관</a>
+									</li>
+								<li>
+									<a href="#">개인정보 취급방침</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-2 col-sm-2 col-xs-12 footer-inner2 sns-right float-right" style="">
+						<ul>
+							<i class="fa fa-2x"><img src="./images/blog.png" alt="블로그" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/insta.png" alt="인스타그램" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/facebook.png" alt="페이스북" class="sns"></i>
+							<i class="fa fa-2x"><img src="./images/youtube.png" alt="유튜브" class="sns"></i>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-xs-12 footerbox-2">
+						<h5 class="">
+							<span
+								style="color:#2AFADF; font-size: 18px; font-weight: 500; letter-spacing: 1.2px; line-height:2.2;">대표전화
+								1855-4832</span><br>
+							본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055<br>
+							공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+							대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+							통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+						</h5>
+						<p class="copyright-text">
+							© Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved
+							<!-- 3.5일 수정 -->
+						</p>
+						<div class="top-button" onclick="window.scrollTo(0,0);">
+							<span><i class="fa fa-arrow-up"></i></span>
+							<sapn>TOP</sapn>
+						</div>
+					</div>
+				</div>
+				<!-- //quick links -->
+				<!-- social icons -->
+				<!-- //social icons -->
+				<div class="clearfix">
+				</div>
+			</div>
+			<!-- //footer third section -->
+			<!-- footer fourth section (text) -->
+			<!-- //footer fourth section (text) -->
+		</div>
+	</footer>
+	<!-- //footer -->
+	<!--자주하는 고장문의 모달-->
+	<div class="modal fade" id="faq-re-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+		<div class="modal-dialog" role="document" style="max-width:800px; width:100%; padding: 0; margin:0 auto;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">×</span></button>
+					<h4 class="modal-title" style="font-size: 15px; font-weight: 600;">
+						<i class="fa fa-quora" aria-hidden="true"></i> 잉크가 안나와요.</h4>
+				</div>
+				<div class="modal-body">
+
+					<img src="./images/sample-repair-info.jpg" style="width: 100%;">
+					<hr>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn gray-btn" data-dismiss="modal" style="width: 30%">닫기</button>
+					<button type="button" class="btn blue-btn" style="width: 30%">수리신청</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!--//자주하는 고장문의 모달-->
+	<script src="js/bootstrap.js"></script>
+
+
+
+</body>
+<!-- scrolltrigger -->
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+window.counter = function() {
+	// this refers to the html element with the data-scroll-showCallback tag
+	var span = this.querySelector('span');
+	var current = parseInt(span.textContent);
+
+	span.textContent = current + 1;
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+	  addHeight: true
+  });
+});
+</script>
+<!--wow animation-->
+<script type="text/javascript" src="./js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</html>

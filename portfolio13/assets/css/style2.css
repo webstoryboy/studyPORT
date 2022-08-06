@@ -1,0 +1,522 @@
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 10px; top:10px;
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    line-height: 50px;
+    z-index: 8000;
+}
+
+/* character */
+.heewon {
+    position: fixed;
+    width: 350px; height: 270px;
+    left: 45%; bottom: 8%;
+    background: url(../img/walk_character01.png);
+    background-size: 2800px;
+    z-index: 5000;
+}
+.heewon.walk {
+    animation: walk 0.8s steps(8, start) infinite;
+}
+@keyframes walk {
+    0% {background-position: 0px 0px;}
+    100% {background-position: -2800px 0px;}
+}
+.heewon.left {
+    background-position: 0px -270px;
+}
+.heewon.leftWalk {
+    animation: walk2 0.8s steps(8, start) infinite;
+}
+@keyframes walk2 {
+    0% {background-position: 0px -270px;}
+    100% {background-position: -2800px -270px;}
+}
+
+/* main */
+#main {
+    background-color: #2C3641;
+    position: relative;
+}
+.main {width: 100%; height: 100vh;}
+.main .star {
+    background-image: url(../img/star.png);
+    width: 100%; height: 100vh;
+    background-size: contain;
+    animation: flash 4s infinite linear;
+}
+.main .star.loading {
+    animation: flash 1s 1 linear;
+}
+.main .cloud {
+    background: url(../img/cloud.png) no-repeat;
+    background-size: contain;
+    width: 11vw; height: 15vh;
+    animation: cloudMove 5s infinite ease;
+}
+@keyframes cloudMove {
+    0% {transform: translateX(20px);}
+    50% {transform: translateX(0px);}
+    100% {transform: translateX(20px);}
+}
+.main .cloud.loading {
+    animation: heartBeat .5s 1 ease;
+}
+.main .cloud.cloud1 {
+    position: absolute;
+    left: 10%; top: 18%;
+    
+}
+.main .cloud.cloud2 {
+    position: absolute;
+    left: 35%; top: 5%;
+}
+.main .cloud.cloud3 {
+    position: absolute;
+    right: 10%; top: 28%;
+}
+.main .tree1 {
+    background-image: url(../img/tree_left04.png);
+    background-size: cover;
+    width: 18vw; height: 22vw;
+    position: absolute;
+    left: 3%; bottom: 8%;
+    z-index: 400;
+    animation: treeMove1 4s infinite ease;
+}
+@keyframes treeMove1 {
+    0% {transform: translateX(5px);}
+    50% {transform: translateX(0);}
+    100% {transform: translateX(5px);}
+}
+.main > div.loading .tree1 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .tree2 {
+    background-image: url(../img/tree_left03.png);
+    background-size: cover;
+    width: 14vw; height: 18vw;
+    position: absolute;
+    left: 25%; bottom: 9%;
+    z-index: 400;
+    animation: treeMove2 5s infinite ease;
+}
+@keyframes treeMove2 {
+    0% {transform: translateX(-5px);}
+    50% {transform: translateX(0);}
+    100% {transform: translateX(-5px);}
+}
+.main > div.loading .tree2 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .tree3 {
+    background-image: url(../img/tree_left01.png);
+    background-size: cover;
+    width: 19vw; height: 24vw;
+    position: absolute;
+    left: 13%; bottom: 8%;
+    z-index: 400;
+    animation: treeMove3 3s infinite ease;
+}
+@keyframes treeMove3 {
+    0% {transform: translateX(3px);}
+    50% {transform: translateX(0);}
+    100% {transform: translateX(3px);}
+}
+.main > div.loading .tree3 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .tree4 {
+    background-image: url(../img/tree_right01.png);
+    background-size: cover;
+    width: 10vw; height: 13vw;
+    position: absolute;
+    right: 23%; bottom: 8%;
+    z-index: 400;
+    animation: treeMove3 4s infinite ease;
+}
+.main > div.loading .tree4 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .tree5 {
+    background-image: url(../img/tree_right03.png);
+    background-size: cover;
+    width: 16vw; height: 20vw;
+    position: absolute;
+    right: 14%; bottom: 8%;
+    z-index: 400;
+    animation: treeMove2 5s infinite ease;
+}
+.main >div.loading .tree5 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .tree6 {
+    background-image: url(../img/tree_right02.png);
+    background-size: cover;
+    width: 14vw; height: 18vw;
+    position: absolute;
+    right: 4%; bottom: 10%;
+    animation: bounceInUp 1s 1 ease;
+    z-index: 400;
+    animation: treeMove1 3s infinite ease;
+}
+.main > div.loading .tree6 {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .waveTop {
+    overflow: hidden;
+    background-image: url(../img/main_wave_01.png);
+    background-size: cover;
+    width: 100%; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 600;
+    animation: wave 6s infinite linear;
+}
+@keyframes wave {
+    0% {transform: translateY(10px) scaleY(1.3);}
+    20% {transform: translateY(5px) scaleY(1);}
+    40% {transform: translateY(10px) scaleY(1);}
+    60% {transform: translateY(10px) scaleY(1.2);}
+    80% {transform: translateY(5px) scaleY(1.5);}
+    100% {transform: translateY(10px) scaleY(1.3);}
+}
+.main .waveTop.loading {
+    animation: loadingWave 1s 1 ease;
+}
+@keyframes loadingWave {
+    0% {transform: translateY(100%);}
+    50% {transform: translateY(50%) scaleY(3);}
+}
+.main .waveBottom {
+    background-image: url(../img/main_wave_02.png);
+    background-size: cover;
+    width: 100%; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+    animation: wave2 7s infinite linear;
+}
+@keyframes wave2 {
+    0% {transform: translateY(5px) scaleY(1);}
+    20% {transform: translateY(0px) scaleY(0.8);}
+    40% {transform: translateY(8px) scaleY(1.2);}
+    60% {transform: translateY(5px) scaleY(1);}
+    80% {transform: translateY(10px) scaleY(1.3);}
+    100% {transform: translateY(5px) scaleY(1);}
+}
+.main .waveBottom.loading {
+    animation: loadingWave 1s 1 ease;
+}
+.main .mainCha {
+    background-image: url(../img/cha_hand.png);
+    background-size: cover;
+    width: 10vw; height: 14vw;
+    position: absolute;
+    left: 43%; bottom: 10%;
+    z-index: 500;
+    animation: chaMove 6s infinite ease;
+}
+@keyframes chaMove {
+    0% {transform: translateY(-5px);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(-5px);}
+}
+.main > div.loading .mainCha {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .mainChaDog {
+    background-image: url(../img/cha_hand_dog.png);
+    background-size: cover;
+    width: 5vw; height: 6vw;
+    position: absolute;
+    right: 43%; bottom: 10%;
+    z-index: 500;
+    animation: chaMove 6s infinite;
+}
+.main > div.loading .mainChaDog {
+    animation: bounceInUp 1s 1 ease;
+}
+.main .introTitle {
+    width: 18vw;
+    position: absolute;
+    left: 6%; bottom: 9%;
+    z-index: 500;
+    animation: chaMove 10s infinite ease;
+}
+.main .introTitle.loading {
+    z-index: 600;
+    animation: tada 1s 1 ease;
+}
+.main .introTitle h2 {
+    font-size: 3vw;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* about */
+#about {
+    overflow: hidden;
+    font-family: 'yg-jalnan';
+    color: #fff;
+}
+.about1 {
+    position: relative;
+    width: 100%; height: 100vh;
+    background-color: #d4d77d;
+}
+.about1 > div {
+    position: absolute; 
+    left: 50%; bottom: 0%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.3;
+}
+.about1 .textEffect1 {
+    display: inline-block;
+    animation: swing 1s infinite alternate;
+}
+.about1 .textEffect2 {
+    display: inline-block;
+    animation: swing 2s infinite linear;
+}
+.about2 {
+    width: 100%; height: 100vh;
+    background-image: linear-gradient(to bottom, #D4D77D , #BEC1B7);
+}
+
+/* skills */
+.skills {
+    position: relative;
+    width: 100%; height: 100vh;
+}
+.skills .waveFixed .waveTop {
+    width: 100%; height: 66vh;
+    background-image: url(../img/skills_wave_top_01.png);
+    background-size: cover;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 5000;
+}
+.skills .waveFixed .skillsTitle {
+    display: inline-block;
+    font-family: 'yg-jalnan';
+    font-size: 1.5vw;
+    width: 10vw;
+    position: absolute;
+    color: #fff;
+    line-height: 1.2;
+    z-index: 6000;
+}
+.skills .waveFixed .skillsTitle h2 span {
+    display: inline-block;
+    animation: tada 1s infinite;
+}
+.skills .waveFixed .skillsItem {
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+}
+.skills .waveFixed .skillsItem .itemName h3{
+    font-size: 1.5vw;
+    color: #2C3641;
+    opacity: 0.2;
+}
+.skills .waveFixed .skillsItem .itemPer {
+    font-size: 4vw;
+    display: inline-block;
+    opacity: 0.8;
+}
+.skills .waveFixed .skillsItem .itemPer span {
+    margin-left: 3%;
+    font-size: 3vw;
+}
+.skills .waveFixed .skillsItem .item {
+    position: relative;
+}
+.skills .waveFixed .skillsItem .item::before {
+    content: '';
+    width: 7vw; height: 7vw;
+    border: 1vw solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    position: absolute;
+    left: 0; top: 0;
+}
+.skills .waveFixed .skillsItem .item1 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item2 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item3 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item4 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item5 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item6 {
+    position: absolute;
+    z-index: 7000;
+}
+.skills .waveFixed .skillsItem .item7 {
+    position: absolute;
+    z-index: 7000;
+}
+
+.skillsWrap1 {
+    width: 100%; height: 100vh;
+    background-color: #2C3641;
+}
+.skillsWrap1 .star {
+    background-image: url(../img/star.png);
+    width: 1920px; height: 100vh;
+    background-size: contain;
+}
+.skillsWrap1 .waveBottom2 {
+    background-image: url(../img/skils_wave_back_01.png);
+    background-size: cover;
+    width: 1920px; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.skillsWrap1 .tree1 {
+    width: 19vw; height: 24vw;
+    background-image: url(../img/tree_left01.png);
+    background-size: cover;
+    position: absolute;
+    left: 2%; bottom: 9%;
+}
+.skillsWrap1 .tree2 {
+    width: 14vw; height: 18vw;
+    background-image: url(../img/tree_left03.png);
+    background-size: cover;
+    position: absolute;
+    left: 25%; bottom: 10%;
+}
+.skillsWrap1 .tree3 {
+    width: 10vw; height: 13vw;
+    background-image: url(../img/tree_right01.png);
+    background-size: cover;
+    position: absolute;
+    right: 30%; bottom: 9%;
+}
+.skillsWrap1 .tree4 {
+    width: 16vw; height: 20vw;
+    background-image: url(../img/tree_right03.png);
+    background-size: cover;
+    position: absolute;
+    right: 2%; bottom: 10%;
+}
+.skillsWrap1 .waveBottom1 {
+    background-image: url(../img/skils_wave_top_01.png);
+    background-size: cover;
+    width: 100%; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 5000;
+}
+
+.skillsWrap2 {
+    position: relative;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    background-color: #2C3641;
+}
+.skillsWrap2 .star {
+    background-image: url(../img/star.png);
+    width: 100%; height: 100vh;
+    background-size: contain;
+}
+.skillsWrap2 .waveBottom2 {
+    background-image: url(../img/skils_wave_back_02.png);
+    background-size: cover;
+    width: 100%; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.skillsWrap2 .tree1 {
+    background-image: url(../img/tree_left03.png);
+    width: 18vw; height: 22vw;
+    background-size: cover;
+    position: absolute;
+    left: 5%; bottom: 10%;
+
+}
+.skillsWrap2 .tree2 {
+    background-image: url(../img/tree_left05.png);
+    width: 14vw; height: 18vw;
+    background-size: cover;
+    position: absolute;
+    left: 30%; bottom: 10%;
+}
+.skillsWrap2 .tree3 {
+    background-image: url(../img/tree_right03.png);
+    width: 16vw; height: 20vw;
+    background-size: cover;
+    position: absolute;
+    right: 4%; bottom: 8%;
+}
+.skillsWrap2 .waveBottom1 {
+    background-image: url(../img/skils_wave_top_02.png);
+    background-size: cover;
+    width: 100%; height: 16vh;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 5500;
+}
+.skillsWrap2 .door {
+    width: 37vw; height: 52vw;
+    background-image: url(../img/door_blue.png);
+    background-size: cover;
+    position: absolute;
+    right: 0; top: 0;
+    z-index: 5000;
+}
+.blueDoor{
+    width: 4.4vw; height: 25vw;
+    position: absolute;
+    right: 4.9%; bottom: 0;
+    background-color: #447BA0;
+    z-index: 9999;
+}
+.blueDoor::after {
+    content: '';
+    width: 4.9vw; height: 25vw;
+    position: absolute;
+    right: -110%; bottom: 0;
+    background-color: #2D5D84;
+    z-index: 9999;
+}
+.skillsWrap2 .door h2 {
+    font-family: 'yg-jalnan';
+    width: 20vw;
+    font-size: 2.5vw;
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    left: 13%; top: 7.5%;
+}
+.skillsWrap2 .door h2 span {
+    display: inline-block;
+    animation: headShake 1s infinite;
+}
+
+/* siteWrap */
+#siteWrap {display: flex;}
+#car {width: 100%; height: 100vh; background-color: #ccc;}
+#site {width: 100%; height: 100vh; background-color: #ccc;}
+#mart {width: 100%; height: 100vh; background-color: #ccc;}
+#react {width: 100%; height: 100vh; background-color: #ccc;}
+#figma {width: 100%; height: 100vh; background-color: #ccc;}
+#siteDoor {width: 100%; height: 100vh; background-color: #ccc;}

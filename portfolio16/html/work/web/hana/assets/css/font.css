@@ -1,0 +1,21 @@
+@charset "euc-kr";
+/*
+    Font.css
+*/
+
+@font-face {
+       font-family: 'HanaB';
+       font-style: normal;
+       src: url(../font/HanaB.woff2) format('woff2'),
+	     url(../font/HanaB.woff) format('woff');
+}
+
+@font-face {
+       font-family: 'HanaL';
+       font-style: normal;
+       src: 
+       url(../font/HanaL.woff2) format('woff2'),
+       url(../font/HanaL.woff) format('woff');
+       font-weight: 200;
+}
+

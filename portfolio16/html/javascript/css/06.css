@@ -1,0 +1,65 @@
+/* to do list */
+body {background: #eaf4ff;}
+h1{text-align: center;}
+.result{display: block; }
+.result h2{display: inline-block;}
+.result ul.member{
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0px;
+    float: right;
+    margin: 25px 0;
+}
+.result ul.member li{margin-right: 10px;}
+
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+.table-list thead th {
+    vertical-align: inherit;
+    border: 1px solid #e1e1e1;
+    border-top: 1px solid #8c919d;
+    background-color: #ebeef0;
+    font-size: 13px;
+    text-align: center;
+    height: 44px;
+    padding: 0;
+    font-weight: 500;
+}
+.table-list tbody tr td {
+    vertical-align: inherit;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+    height: 44px;
+    padding: 0 8px;
+    background: #ffffff;
+}
+.table-list tbody tr:nth-child(2n){
+    background-color: #f5f7f8;
+}
+.table-list tbody tr:hover{
+    background-color: #ecf4ff;
+}
+
+.sex{
+    color:#fff; 
+    border: none; 
+    border-radius: 3px;
+    padding:.35rem 1rem;
+}
+.sex.female{
+    background:#f06595;
+}
+.sex.male{
+    background:#339af0;
+}

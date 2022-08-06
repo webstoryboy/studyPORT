@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- title -->
+<title>HP Solution 프린팅 서비스 플랫폼</title>
+<!--/tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- for-mobile-apps -->
+<link href="./images/favicon.png" rel="shortcut icon"/>
+<!-- title -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="./css/animate.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="프린트 히어로 - 프린팅 서비스 플랫폼ㅁ">
+<meta property="og:url" content="http://oaic.co.kr:8090/">
+<meta property="og:description" content="고객의 프린팅 서비스 습관을 혁신합니다.">
+<meta property="og:image" content="./images/thumnail.jpg">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="HP Solution">
+<!-- description -->
+<meta name="description" content="대한민국 최초의 프린팅 서비스 플랫폼">
+<!-- keywords -->
+<meta name="keywords" content="hp솔루션">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script>
+			addEventListener("load", function () {
+				setTimeout(hideURLbar, 0);
+			}, false);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+</script>
+<!-- jquery -->
+<script src="./js/jquery-2.1.4.min.js"></script>
+<!-- //jquery -->
+
+<script src="./js/waypoints.min.js"></script>
+<script src="./js/jquery.counterup.min.js"></script>
+<!--카운터 -->
+<script> 
+			jQuery(document).ready(function($) { 
+				$('.counter2').counterUp({ 
+					delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+					time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+				}); 
+			}); 
+</script>
+<!--//카운터 -->	
+<!--//js-카운터 -->
+<!-- price range (top products) -->
+<script src="./js/jquery-ui.js"></script>
+<!-- //price range (top products) -->
+<!-- flexisel (for special offers) -->
+<script src="./js/jquery.flexisel.js"></script>
+<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+<!-- //flexisel (for special offers) -->
+<!-- 탑클릭 부드럽게 -->
+<script>
+		$( '.banner' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 0);
+		return false;
+	} );
+	</script>
+<!--// 탑클릭 부드럽게 -->
+<!-- smoothscroll -->
+<script src="./js/SmoothScroll.min.js"></script>
+<!-- //smoothscroll -->
+<!-- start-smooth-scrolling -->
+<script src="./js/move-top.js"></script>
+<script src="./js/easing.js"></script>
+<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+<!-- //end-smooth-scrolling -->
+<!--고정배너 스크립트 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.show-on-scroll');
+  if($(this).scrollTop() >= 600) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//고정배너 스크립트 -->
+<!--탑서칭 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.top-search-show-on-scroll');
+  if($(this).scrollTop() >= 500) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//탑서칭 -->
+	
+<!-- for bootstrap working -->
+<script src="./js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+
+<!-- //js-files -->
+<!--//tags -->
+<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="./css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="./css/font-awesome.css" rel="stylesheet">
+<!--pop-up-box-->
+<link href="./css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<!--//pop-up-box-->
+<!-- price range -->
+<link rel="stylesheet" type="text/css" href="./css/jquery-ui1.css">
+
+</head>
+<body>
+<!--top 네비 고정-->
+
+<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="mnk-main-menu-toggle menu-container">
+     <div class="fdr-menu-box">
+		 
+        <div class="container">
+               <div class="logo" style="float: none; margin-right: 10px; ">
+					<div class="site-logo">
+						<a href="./index.html">
+						<img src="./images/logo.png" alt="로고">
+						<img src="./images/logo-small.png" alt="로고작은거">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+                        
+                        <ul class="menu-line">
+							
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 active">
+								<a href="../shopping-center/shop-main.html">쇼핑센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../repair-center/repair-main.html">수리센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../rental-center/rental-main.html">렌탈센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../edu-center/edu-main.html">교육센터</a>
+							</li>
+                            <li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064" style="margin-right: 40px;">
+                            <a target="_blank"  onclick="location.href='./partner-form.html'"><span>파트너신청 &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+                            </li>
+                        </ul>
+
+                        </nav>
+					</div>
+					
+				</div>
+                
+         </div>
+     </div>
+     <div class="container">
+	    
+		<input type="checkbox" id="menuicon2">
+		<label for="menuicon2">
+		<span></span>
+		<span></span>
+		<span></span>
+		</label>
+		<!--전체메뉴 토글버튼-->
+		<div class="sidebar2">
+			<div class="side-inner">
+				<div class="side-section">
+					<ul class="panel-group side-box " id="accordion" role="tablist" aria-multiselectable="true">
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#shop-ct" aria-expanded="true" aria-controls="shop-ct" class="heading-tt" id="heading1">
+							<img src="../images/shopping-ct-ico.png" class="side-menu-icon"> 쇼핑센터 <i class="fa fa-angle-down"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="shop-ct" role="tabpanel" aria-labelledby="heading1">
+								<ul>
+									<li><a href="../shopping-center/shop-sub2.html">부품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">토너/잉크/용지</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">옵션/악세사리/아답터</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">공급기/수리기자재</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">완제품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">특가상품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">협력사전용</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#repair-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading2">
+							<img src="../images/repair-ct-ico.png" class="side-menu-icon"> 수리센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="repair-ct" role="tabpanel" aria-labelledby="heading2">
+								<ul>
+									<li><a href="../repair-center/repair-letter.html">고장문의</a></li>
+									<li><a href="../repair-center/repair-main.html">수리신청</a></li>
+									<li><a href="../repair-center/repair-list.html">수리상태조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#rental-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading3">
+							<img src="../images/rental-ct-ico.png" class="side-menu-icon"> 렌탈센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="rental-ct" role="tabpanel" aria-labelledby="heading3">
+								<ul>
+									<li><a href="../rental-center/rental-main.html">제품검색</a></li>
+									<li><a href="../rental-center/rental-letter2.html">실시간렌탈문의</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#edu-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading4">
+							<img src="../images/edu-ct-ico.png" class="side-menu-icon"> 교육센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="edu-ct" role="tabpanel" aria-labelledby="heading4">
+								<ul>
+									<li><a href="../edu-center/edu-main.html">교육일정</a></li>
+									<li><a href="../edu-center/edu-main.html">자료/기술 문서실</a></li>
+									<li><a href="../edu-center/edu-main.html">Q&amp;A</a></li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="side-section2">
+					<ul>
+						<li><a href="#">파트너신청</a></li>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">이용안내</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="height-70">
+</div>
+<!-- //top 네비 고정-->
+<!--section1(회사소개탑)-->
+<div class="company-intro-top">
+
+	<h2 class="banner-logo">hpsolution-logo</h2>
+	<h3 class="form-title-w" style="margin-bottom: 40px;">대한민국 1등 프린팅 서비스 플랫폼 기업</h3>
+   
+    <div class="link-menu container">
+       
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 box">
+                <div class="inner-box-anchor"><a href="company-intro.html#whyhero">왜 프린트 히어로인가?</a></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 box">
+                 <div class="inner-box-anchor"><a href="company-intro.html#section-history">회사 연혁</a></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 box">
+                 <div class="inner-box-anchor"><a href="company-intro.html#section-award">특허 및 저작권</a></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 box">
+                <div class="inner-box-anchor"><a href="company-intro.html#section-location">오시는 길</a></div>
+            </div>
+        
+    </div>
+</div>
+<!--//section1(회사소개탑)-->
+
+
+<!--section2-->
+<div class="whyhero" id="whyhero">
+	<h3 class="form-title2 wow pulse"><strong>[&nbsp;&nbsp;</strong>왜 <span>프린트 히어로</span>인가? <strong>&nbsp;&nbsp;]</strong></h3>
+	<h5 class="form-subtitle2 wow flipInX"  data-wow-delay=".4s">10년 이상의 업계 경험을 통해 자체개발을 이루었습니다.</h5>
+	<div class="container">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<div class="box001 wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+				<div class="box001-tit">
+					PMS
+				</div>
+				<div class="box001-tit-s">
+					<img src="images/s-ico1.png">
+					<ul>
+						<li><strong>업무 자동화 툴</strong></li>
+						<li>1.원격검침</li>
+						<li>2.온라인자동출금</li>
+						<li>3.렌탈전용 ERP</li>
+						<li>4.수리관리</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box001 wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+				<div class="box001-tit">
+					만능키 AI
+				</div>
+				<div class="box001-tit-s">
+					<img src="images/s-ico2.png">
+					<ul>
+						<li><strong>독자개발 인공지능 고객 분석 알고리즘</strong></li>
+						<li>1.지역고객 행동패턴 분석</li>
+						<li>2.물류/재고분석</li>
+						<li>3.인공지능을 통한 문제 해결력 확대</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="box001 wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">
+				<div class="box001-tit">
+					프린트 히어로
+				</div>
+				<div class="box001-tit-s">
+					<img src="images/s-ico3.png">
+					<ul>
+						<li><strong>프린팅 서비스 플랫폼</strong></li>
+						<li>1.고객의 프린터 문제 해결</li>
+						<li>2.방대한 프린터 정보</li>
+						<li>3.검증된 업체 연결</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear">
+</div>
+<!--//section2-->
+
+
+
+<!--section3(프린터히어로 설명)-->
+<div class="section-f">
+	<div class="container">
+		<h3 class="form-title wow pulse" style="font-weight: 800" data-wow-duration=".5s" data-wow-delay="1s" data-wow-offset="5"><img src="images/pr-ico.png" style="width: 100px; padding: 20px;"><br>
+		 프린트 히어로 ?!</h3>
+		<h5 class="form-subtitle2 wow flipInX" data-wow-duration="1s" data-wow-delay=".8s" data-wow-offset="3">프린트 히어로는 고객의 프린터 문제 해결을 위한 검증된 업체를 연결하고 <br>
+		 다년간의 부품 제조와 서비스센터 경험을 통해 독자 개발 툴을 통해 고객의 프린터 습관을 혁신하기 위해 노력하는 기업입니다.</h5>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" >
+			<div class="ph-box wow fadeInUp"  data-wow-delay=".5s">
+				<div class="comImg">
+					<img class="image fit" src="./images/c-01.png" alt="">
+				</div>
+				<div class="ph-tit">
+					 만능키 검색시스템
+				</div>
+				<div class="ph-tit-s">
+					<ul>
+						<li>20여 특허/기술 기반</li>
+						<li>1500만가지 관련정보에서 최적화 됨</li>
+						<li>원-클릭 네이게이터 검색 시스템</li>
+					</ul>
+				</div>
+				<button class="btn border-btn">바로가기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<div class="ph-box wow fadeInUp"  data-wow-delay=".8s" >
+				<div class="comImg">
+					<img class="image fit" src="./images/c-02.png" alt="">
+				</div>
+				<div class="ph-tit">
+					 수리센터
+				</div>
+				<div class="ph-tit-s">
+					<ul>
+						<li>실시간 문제 분석</li>
+						<li>수리접수에서 처리까지 원-클릭 수리진행</li>
+					</ul>
+				</div>
+				<button class="btn border-btn">바로가기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<div class="ph-box wow fadeInUp"  data-wow-delay="1.1s" >
+				<div class="comImg">
+					<img class="image fit" src="./images/c-03.png" alt="">
+				</div>
+				<div class="ph-tit">
+					 렌탈센터
+				</div>
+				<div class="ph-tit-s">
+					<ul>
+						<li>사용환경 자동분선</li>
+						<li>가장 적합한 장비를 선택해주는 선택 시스템</li>
+						<li>출력한 만큼 납부하는 국내 최종 종량제 시스템</li>
+					</ul>
+				</div>
+				<button class="btn border-btn">바로가기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+			<div class="ph-box wow fadeInUp"  data-wow-delay="1.4s" >
+				<div class="comImg">
+					<img class="image fit" src="./images/c-04.png" alt="">
+				</div>
+				<div class="ph-tit">
+					 교육센터
+				</div>
+				<div class="ph-tit-s">
+					<ul>
+						<li>데이터센터 운영</li>
+						<li>국내 최대 자료 보유</li>
+						<li>국내 최초 1:1 프린팅 전문 교육</li>
+					</ul>
+				</div>
+				<button class="btn border-btn">바로가기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//section3(프린터히어로 설명)-->
+<!--파트너신청 배너-->
+<div class="shop-ad-banner" style="text-align: center;"  onclick="location.href='./partner-form.html'"><img src="./images/main-center-ad2.jpg" class="mobile-no pad-no" style="width: 100%; max-width: 1800px; min-width: 700px;"> <img src="./images/mobile-main-ad2.jpg" class="mobile-yes pad-yes" style="width: 100%;"></div>
+<!--//파트너신청 배너-->
+<!--section4(연혁)-->
+<div class="section-history wow fadeInUp" data-wow-delay="1s" id="section-history">
+	<div class="container">
+		<h3 class="form-title" style="font-weight: 800"><img src="images/history-ico.png" style="width: 100px; padding: 20px;"><br>
+		 회사 연혁</h3>
+
+
+			<div class="sec wow fadeInUp">
+				<dl>
+					<dt>브랜드 런칭</dt>
+					<dd><span>2019</span> 프린트 히어로 브랜드 런칭</dd>
+					<dd><span>2016</span> 온라인 출력센터, 교육센터 오픈 </dd>
+					<dd><span>2015</span> 온라인 수리센터, 렌탈센터 오픈</dd>
+					<dd><span>2012</span> 국내 최초 프린터 부품 쇼핑몰 오픈</dd>
+				</dl>
+				<p>
+				</p>
+			</div>
+			<div class="sec wow fadeInUp"  data-wow-delay=".5s">
+				<dl>
+					<dt>연구개발</dt>
+					<dd><span>2019</span> 중기부 창업성장기술개발 기술혁신형 R&amp;D 선정</dd>
+					<dd><span>2018</span> 온라인 출력센터, 교육센터 오픈 </dd>
+					<dd><span>2017</span> 온라인 수리센터, 렌탈센터 오픈</dd>
+					<dd><span>2016</span> 국내 최초 프린터 부품 쇼핑몰 오픈</dd>
+				</dl>
+				<p>
+				</p>
+			</div>
+			<div class="sec wow fadeInUp"  data-wow-delay="1s">
+				<dl>
+					<dt>기반조정</dt>
+					<dd><span>2013</span> 캐논 공식 서비스센터 운영</dd>
+					<dd><span>2012</span> 국내 최초 중고 프린터 수입, 수리 진행 </dd>
+					<dd><span>2009</span> 프린터 부품제조, OEM생산</dd>
+					<dd><span>2008</span> 해외(중국 심천) 사무실, 홍콩 물류 창고 오픈</dd>
+					<dd><span>2005</span> 개인사업자 등록</dd>
+				</dl>
+				<p>
+				</p>
+			</div>
+
+	</div>
+</div>
+<!--//section4(연혁)-->
+<!--section5(수상내역)-->
+<div class="section-award"  id="section-award">
+	<div class="container">
+		<h3 class="form-title  wow pulse" style="font-weight: 800">
+		<img src="images/patant-ico.png" style="width: 100px; padding: 20px;"><br>특허 및 저작권</h3>
+		
+		<div class="award-img-sec wow fadeInUp"  data-wow-delay="1s">
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-01.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-02.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-03.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-04.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-05.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-06.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-07.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-08.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-09.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-10.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-11.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-12.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-13.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-14.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-15.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-16.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-17.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-18.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-19.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-20.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-21.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-22.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-23.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-24.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-25.jpg"></div>
+		    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3"><img src="./images/t-26.jpg"></div>
+		</div>
+	</div>
+</div>
+<!--//section5(수상내역)-->
+<!--section6(오시는길)-->
+<div class="section-location wow fadeInUp" data-wow-delay="1s" id="section-location">
+	<div class="container">
+		<h3 class="form-title" style="font-weight: 800"><img src="images/location-ico.png" style="width: 100px; padding: 20px;"><br>
+		오시는 길</h3>
+		
+             <div class="map_google">
+                 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12680.702046925104!2d126.9451916!3d37.3856814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7b3be38586f88f0!2zKOyjvCnsl5DsnbTsuZjtlLzshpTro6jshZg!5e0!3m2!1sko!2skr!4v1562308653360!5m2!1sko!2skr" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>  
+            </div>    
+        
+        <div class="n_map_text ft_reset">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <dl>
+                                    <dt>회사위치</dt>
+                                    <dd>본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055</dd>
+                                    <dd>공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079</dd>
+                                    <dd>대표문의 : 1855-4832</dd>
+                                    <dd>팩스 : 02-3446-7305</dd>
+                                    <dd>이메일 : info@hpsolution.co.kr</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-6">
+                                <dl>
+                                    <dt>주변 지하철</dt>
+                                    <dd>범계역</dd>
+                                    
+                                </dl>
+                            </div>
+                            <div class="clearfix visible-md-block"></div>
+                            <div class="clearfix visible-lg-block"></div>
+                            <div class="col-md-6">
+                                <dl>
+                                    <dt>주변 정류장</dt>
+                                    <dd>롯데백화점</dd>
+                                    <dd>동안경찰서</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-6">
+                                <dl>
+                                    <dt>주변 버스</dt>
+                                    <dd>마을 : 10-1</dd>
+                                    <dd>일반 : 917, 1, 간선542</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+		
+	</div>
+</div>
+<!--//section6(오시는길)-->
+<!-- footer -->
+<footer>
+<div class="container">
+	<!-- footer third section -->
+	<div class="footer-info2">
+		<!-- quick links -->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-inner">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 footer-inner2">
+				<div class="footerbox-1 mobile-no">
+					<img src="images/logo-w.png">
+				</div>
+				<div class="footerbox-1">
+					<ul class="footer-grid">
+						<li>
+						<a href="#">회사소개</a>
+						</li>
+						<li>
+						<a href="#">입점신청</a>
+						</li>
+						<li>
+						<a href="#">고객센터</a>
+						</li>
+						<li>
+						<a href="#">개인정보취급방법</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-inner2 sns-right ">
+				<ul>
+					<i class="fa fa-2x"><img src="./images/blog.png" alt="블로그" class="sns"></i>
+					<i class="fa fa-2x"><img src="./images/insta.png" alt="인스타그램" class="sns"></i>
+					<i class="fa fa-2x"><img src="./images/facebook.png" alt="페이스북" class="sns"></i>
+					<i class="fa fa-2x"><img src="./images/youtube.png" alt="유튜브" class="sns"></i>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-xs-12 footerbox-2">
+				<h5 class="">
+				<span style="color:#2AFADF; font-size: 18px; font-weight: 500; letter-spacing: 1.2px; line-height:2.2;">대표전화 1855-4832</span><br>
+				 본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055<br>
+				 공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+				 대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+				 통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+				</h5>
+				<p class="copyright-text">
+					 © Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved 
+					<!-- 3.5일 수정 -->
+				</p>
+				<div class="top-button" onclick="window.scrollTo(0,0);">
+					<span><i class="fa fa-arrow-up"></i></span><sapn>TOP</sapn>
+				</div>
+			</div>
+		</div>
+		<!-- //quick links -->
+		<!-- social icons -->
+		<!-- //social icons -->
+		<div class="clearfix">
+		</div>
+	</div>
+	<!-- //footer third section -->
+	<!-- footer fourth section (text) -->
+	<!-- //footer fourth section (text) -->
+</div>
+</footer>
+<!-- //footer -->
+<!-- 사이드 배너 -->
+<div class="banner show-on-scroll btn-top">
+	<div class="ban-inner">
+		<div class="ban" onclick="location.href='./company-intro.html'">
+			<img src="./images/mini-company.png"><br>
+			 회사소개
+		</div>
+		<div class="ban" onclick="location.href='./total-info.html'">
+			<img src="./images/mini-info-ico.png"><br>
+			 이용안내
+		</div>
+		<div class="ban" onclick="location.href='./partner-form.html'">
+			<img src="./images/mini-parner-ico.png"><br>
+			 파트너신청
+		</div>
+	</div>
+	<a class="btn-top" href="#">TOP<i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+</div>
+<!-- 사이드 배너 -->
+</body>
+<!-- scrolltrigger -->
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+window.counter = function() {
+	// this refers to the html element with the data-scroll-showCallback tag
+	var span = this.querySelector('span');
+	var current = parseInt(span.textContent);
+
+	span.textContent = current + 1;
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+	  addHeight: true
+  });
+});
+</script>
+<!--wow animation-->
+<script type="text/javascript" src="./js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="portfolio" />
+        <meta property="og:description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주" />
+        <meta name="description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주" />
+        <meta name="keywords" content="portfolio" />
+        <meta property="og:url" content="portfolio" />
+        <meta property="og:image" content="../assets/img/thumb.png" />
+        <link href="./assets/img/favicon.png" rel="shortcut icon" />
+        <title>PORTFOLIO-CONTACT</title>
+
+        <!-- 부트스트랩 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+        <!-- 스타일 -->
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <!-- aos-js 스타일-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    </head>
+
+    <body>
+        <a href="../index.html" class="logo"></a>
+        <header>
+            <nav class="">
+                <span class="title">I create digital awesomeness.</span>
+
+                <div class="nav-right">
+                    <button class="top-menu-btn open">
+                        <span class="text">menu</span>
+                        <span></span>
+                    </button>
+                    <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                    <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <button class="side-menu-btn open">
+                <span class="text">menu</span>
+                <span></span>
+            </button>
+        </aside>
+        <section class="side-menu">
+            <header class="fixed ml-0">
+                <nav>
+                    <span class="title">I create digital awesomeness.</span>
+
+                    <div class="nav-right">
+                        <button class="top-menu-btn open">
+                            <span class="text">menu</span>
+                            <span></span>
+                        </button>
+                        <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                        <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+                    </div>
+                </nav>
+            </header>
+            <div class="menu-text">
+                <ul class="w-100">
+                    <li onclick="location.href='../index.html#aboutUs">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/profile-b.png)')">
+                            <h3>ABOUT US</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/web.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/bg-sample.png)')">
+                            <h3>WESITE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/mobile.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/1.jpg)')">
+                            <h3>MOBILE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/javascript.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/2.jpg)')">
+                            <h3>JAVASCRIPT</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/animation.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/3.jpg)')">
+                            <h3>ANIMATION</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-img" style="background: url(../assets/img/bg-sample.png) no-repeat center; background-size: cover">
+                <div class="h-100 hover-menu" id="slideImg"></div>
+            </div>
+        </section>
+
+        <a href="../sub/gallery.html" class="all-btn" title="갤러리">갤러리</a>
+        <span class="scroll-btn">SCROLL</span>
+        <a href="../sub/contact.html" class="contact-btn" title="contact">Contact</a>
+
+        <main>
+            <section class="sec1">
+                <div class="col-md-5 col-12 left-sec px-0">
+                    <div class="main-text">
+                        <h1></h1>
+                        <h1><span class="hide-text i1">LET's MAKE</span></h1>
+                        <h2><span class="hide-text i2">AWESOMENESS</span></h2>
+                        <h1><span class="hide-text i3">TOGHTHER</span></h1>
+                    </div>
+                </div>
+                <div class="col-md-7 col-12 right-sec px-0">
+                    <form class="send-message text-center">
+                        <div class="w-100">
+                            <p class="mb-5 send-title" data-aos="fade-up">
+                                <!-- <i class="fa fa-envelope fa-2x mb-2" aria-hidden="true"></i><br /> -->
+                                함께 하고 싶은 인재 나윤주에게<br />
+                                메세지를 보내주세요.
+                            </p>
+                            <div class="form-floating mb-3" data-aos="fade-up" data-aos-delay="100">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3" data-aos="fade-up" data-aos-delay="200">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Password" />
+                                <label for="floatingPassword">Title</label>
+                            </div>
+                            <div class="form-floating mb-3" data-aos="fade-up" data-aos-delay="300">
+                                <textarea class="form-control" placeholder="함께 일하고 싶어요" id="floatingTextarea2" style="height: 20vh"></textarea>
+                                <label for="floatingTextarea2">Message</label>
+                            </div>
+                            <button class="btn btn-dark px-5">보내기</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="footer-box mb-5">
+                            <h3>Let's talk</h3>
+                            <a class="" href="sub/contact.html">You can send me the message -></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-box">
+                            <h3>Contents</h3>
+                            <ul>
+                                <li><a href="#">About me</a></li>
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Javascript</a></li>
+                                <li><a href="#">Animation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="footer-box d-flex">
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right w-100 d-block">Copyright© 2020 naynara</div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+        <script src="../assets/js/sub.js"></script>
+        <!-- 스크롤시 하나씩 나옴 -->
+        <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+        <script src="../assets/js/aos-scroll.js"></script>
+    </body>
+</html>

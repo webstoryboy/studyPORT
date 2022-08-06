@@ -1,0 +1,863 @@
+/*######### 레이아웃 #########*/
+
+/* section : main */
+#main {
+  height: 290vw;
+  background: #F8F6F1;
+}
+/* section : about */
+#about {
+  height: 600vw;
+  background: #F8F6F1;
+}
+/* section : site */
+#site {
+  height: 1100vw;
+  background:  rgb(19,19,19);
+}
+/* section : ani */
+#ani {
+  height: 300vw;
+  background:  rgb(19, 19, 19);
+}
+/* section : script */
+#script {
+  height: 700vw;
+  background:  rgb(19, 19, 19);
+}
+/* section : php */
+#php {
+  height: 300vw;
+}
+#contact {
+  height: 1200vw;
+  background: #C4C4C4;
+}
+
+
+/*######### 스크롤 #########*/
+.scroll {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*######### fixed #########*/
+.fixed {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(0deg);
+}
+
+/*######### 메인 #########*/
+.main-inner .cover {
+  width: 100%;
+  height: 100vh;
+  background: #112F97;
+}
+.main-inner .title {
+  line-height: 0.9;
+  font-family: "NewYork";
+  overflow: hidden;
+}
+.main-inner .title h1 {
+  display: inline-block;
+  font-size: 7vw;
+  color: #F8F6F1;
+  transform: translateY(100px);
+}
+/* 메인 텍스트 */
+.main-inner .text-area {
+  display: none;
+  position: fixed;
+  top: 50%; right: 0;
+  transform: translateY(-50%);
+  width: 76%;
+  font-size: 10vw;
+  line-height: 0.9;
+  text-align: right;
+  padding: 3vw 4vw 3vw 0;
+}
+.main-inner .text-area div {
+  overflow: hidden;
+  font-family: "NewYork";
+  transform: translateY(0px) rotate(0deg);
+}
+.main-inner .text-area div span {
+  display: inline-block;
+  transform: translate(0,150px);
+  color: #112F97;
+}
+.main-inner .text-area div:nth-child(1) {
+  margin-right: 24vw;
+}
+.main-inner .text-area div:nth-child(3) {
+  margin-right: 10vw;
+}
+.main-inner .text-area div:nth-child(4) {
+  margin-right: 30vw;
+}
+
+
+/*###### about ######*/
+.about-cover {
+  width: 0%;
+  height: 100vh;
+  overflow: hidden;
+}
+.profile {
+  width: 25vw;
+  height: 38vw;
+  overflow: hidden;
+}
+.profile img{
+  height: 110%;
+  transform: translateY(-100px);
+  object-fit: cover;
+}
+.about-title {
+  position: fixed;
+  top: 11.3vw;
+  left: 15.2vw;
+  height: 5vw;
+  font-family: "NewYork";
+  font-size: 8.3vw;
+  color: #fff;
+}
+.about-title div {
+  line-height: 8.3vw;
+  overflow: hidden;
+  transform: translate(0px,0px) rotate(0deg);
+}
+.about-title div span{
+  display: inline-block;
+  transform: translate(-600px, -300px);
+}
+.about-title div:nth-child(1) span{
+  transform: translate(-600px, 0px);
+}
+.about-title div em {
+  display: inline-block;
+  padding-right: 1vw;
+  font-family: 'Chosunilbo_myungjo';
+  font-size: 6vw;
+  vertical-align: top;
+  transform: translate(-600px, 0px);
+}
+.about-text{
+  position: fixed;
+  top: 66%;
+  right: 11%;
+  text-align: justify;
+  width: 24vw;
+  overflow: hidden;
+  transform: rotate(0deg);
+}
+.about-text p{
+  transform: translate(-500px,0px);
+  line-height: 1.4;
+  font-family: 'Chosunilbo_myungjo';
+  font-weight: 100;
+  font-size: 1vw;
+  color: #DCDCDC;
+}
+.about-inner > img {
+  position: fixed;
+  top: 3.8vw;
+  right: 30%;
+  width: 95px;
+  opacity: 0;
+  transform: rotate(0deg);
+}
+
+
+/* site */
+
+svg {
+  height: 400vh;
+  transform: translate(0px, 0px) rotate(0deg);
+}
+svg text {
+  font-family: "NewYork";
+  fill: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.site-title {
+  font-family: "NewYork";
+}
+.site-title h2 {
+  font-size: 5vw;
+  color: rgb(31, 31, 31);
+  opacity: 0;
+  background: rgb(19, 19, 19);
+  line-height: 1.2;
+}
+
+.site-list ul {
+  position: fixed;
+  width: 600%;
+  top: 50%;
+  left: 150%;
+  transform: translateY(-50%);
+}
+.site-list ul li {
+  display: inline-block;
+  position: relative;
+  width: 36.1vw;
+  height: 19.4vw;
+  margin-right: 9.1vw;
+  padding: 18px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  background: rgb(19, 19, 19);
+  color: #fff;
+}
+.site-list ul li:hover {
+  border: none;
+}
+
+/* cover */
+.site-list ul li .site-cover {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.site-list ul li .site-cover::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 0px;
+  height: 0px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 1s;
+}
+.site-list ul li:hover .site-cover::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+  height: 1000px;
+  background: #92B9CF;
+  border-radius: 50%;
+}
+.site-list ul li:nth-child(1):hover .site-cover::before {
+  background: #E888B0;
+}
+.site-list ul li:nth-child(2):hover .site-cover::before {
+  background: #DDAE54;
+}
+.site-list ul li:nth-child(3):hover .site-cover::before {
+  background: #92B9CF;
+}
+.site-list ul li:nth-child(4):hover .site-cover::before {
+  background: #6693D6;
+}
+.site-list ul li:nth-child(5):hover .site-cover::before {
+  background: #AF3434;
+}
+.site-list ul li:nth-child(6):hover .site-cover::before {
+  background: #B489C3;
+}
+
+
+
+.site-list ul li a > div {
+  font-size: 1.6vw;
+  font-family: "NewYork";
+  line-height: 1
+}
+.site-list ul li a .num {
+  position: relative;
+}
+.site-list ul li a img {
+  position: absolute;
+  display: block;
+  transform:  translate(-50%,-10%) rotate(11deg);
+  left: 52%;
+  width: 24vw;
+  transition: all .2s;
+}
+
+.site-list ul li:nth-child(2) img {
+  transform:  translate(-50%,-8%) rotate(11deg);
+}
+.site-list ul li:nth-child(4) img {
+  transform:  translate(-50%,-8%) rotate(11deg);
+}
+.site-list ul li:nth-child(6) img {
+  transform:  translate(-50%,-8%) rotate(11deg);
+}
+
+
+.site-list ul li a .more {
+  position: relative;
+  writing-mode: vertical-rl;
+  float: right;
+  padding-top: 11.8vw;
+  transition: all 1.5s;
+}
+.site-list ul li a .more::before {
+  content: '';
+  position: absolute;
+  top: 8.5vw;
+  right: 0.7vw;
+  width: 2px;
+  height: 55px;
+  background: #fff;
+  transition: all 1.5s;
+  
+}
+
+
+/* ani */
+.ani-inner {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+.ani-title {
+  overflow: hidden;
+}
+.ani-title h2 {
+  font-family: "NewYork";
+  font-size: 5.8vw;
+  line-height: 1;
+  color: #fff;
+  transform: translateY(-200px);
+}
+.left-box {
+  position: fixed;
+  top: 100%;
+  left: 52%;
+  width: 20vw;
+}
+.right-box {
+  position: fixed;
+  top: -180%;
+  left: 77%;
+  width: 20vw;
+}
+.gallery ul li {
+  position: relative;
+  width: 15.7vw;
+  height: 19.7vw;
+  margin: 2.6vw auto;
+  background: #EFEFEF;
+  border-radius: 15px;
+  transition: all .5s;
+}
+.gallery ul li:hover {
+  transform: scale(1.2);
+}
+.gallery ul li .ani-cover{
+  position: absolute;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+}
+.gallery ul li span {
+  display: none;
+  position: absolute;
+  top: 3%;
+  right: -13%;
+  font-size: 1.3vw;
+  font-family: "Lato";
+  writing-mode: vertical-rl;
+  color: #fff;
+  font-weight: 300;
+}
+.gallery ul li:hover span{
+  display: block;
+}
+
+
+/* 애니메이션 코드  */
+/* 1. 물결 */
+.water{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width:150px;
+  height: 150px;
+  background-color: skyblue;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+  overflow: hidden;
+}
+.water:before, .water:after{
+  content:'';
+  position: absolute;
+  width:150px;
+  height: 150px;
+  top:-97px;
+  background-color: #fff;
+}
+.water:before{
+  border-radius: 45%;
+  background:rgba(255,255,255,.7);
+  animation:wave 5s linear infinite;
+}
+.water:after{
+  border-radius: 35%;
+  background:rgba(255,255,255,.3);
+  animation:wave 5s linear infinite;
+}
+@keyframes wave{
+  0%{
+      transform: rotate(0);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+
+/* 2. 커피 */
+.steam_box {
+  position: relative;
+  top: 51%; left: 53%;
+  transform: translate(-50%,-50%);
+}
+.steam {
+  height: 110px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: -76px;
+  margin-left: 37px;
+  z-index: 0;
+  opacity: 0;
+}
+#steam1 {
+  -webkit-animation: steam1 4s ease-out infinite;
+  animation: steam1 4s ease-out infinite;
+}
+#steam3 {
+  -webkit-animation: steam1 4s ease-out 1s infinite;
+  animation: steam1 4s ease-out 1s infinite;
+}
+
+@-webkit-keyframes steam1 {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+}
+@keyframes steam1 {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+}
+
+#steam2 {
+  -webkit-animation: steam2 4s ease-out 0.5s infinite;
+  animation: steam2 4s ease-out 0.5s infinite;
+}
+#steam4 {
+  -webkit-animation: steam2 4s ease-out 1.5s infinite;
+  animation: steam2 4s ease-out 1.5s infinite;
+}
+
+@-webkit-keyframes steam2 {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+}
+@keyframes steam2 {
+  0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+  100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+}
+
+#cup {
+  z-index: 1;
+}
+#cup-body {
+  position: absolute;
+  height: 136px;
+  width: 200px;
+  border-radius: 0 0 150px 150px;
+  background-color: #fff;
+  margin: auto;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+}
+#cup-shade {
+  position: relative;
+  height: 261px;
+  width: 190px;
+  background-color: #F3F3F3;
+  display: inline-block;
+  margin-left: 35%;
+  margin-top: -3px;
+  transform: rotate(47deg);
+  z-index: 1;
+}
+#cup-handle {
+  position: relative;
+  height: 54px;
+  width: 41px;
+  border-radius: 0 150px 150px 0;
+  border: 15px solid #F3F3F3;
+  margin-bottom: 100px;
+  margin-left: 185px;
+  display: inline-block;
+  z-index: 0;
+}
+#saucer {
+  height: 21px;
+  width: 200px;  
+  border-radius: 0 0 100px 100px;
+  background-color: #F9F9F9;
+  margin-top: -67px;
+  margin-left: 5px;
+  z-index: 2;
+}
+#shadow {
+  height: 10px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-left: 6px;
+  background-color: #3c3d3d;
+}
+
+/* 3. wave cirdle */
+.circle-wrap {
+ position: absolute;
+ top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ani-row .circle {
+	border-radius : 50%;
+	width: 10px; height: 10px; background: rgb(255, 255, 255);
+	margin: 5px 10px;
+	transform-origin: top center;
+	animation: spin 1s linear infinite;
+}
+.row {
+	display:flex;
+}
+@keyframes spin {
+	0% {transform: scale(1.1) rotate(0);}
+	50% {transform: scale(0.2) rotate(180deg);}
+	100% {transform: scale(1.1) rotate(360deg);}
+}
+.row:nth-child(1) .circle {animation-delay: 100ms}
+.row:nth-child(2) .circle {animation-delay: 200ms}
+.row:nth-child(3) .circle {animation-delay: 300ms}
+.row:nth-child(4) .circle {animation-delay: 400ms}
+.row:nth-child(5) .circle {animation-delay: 500ms}
+.row:nth-child(6) .circle {animation-delay: 600ms}
+.row:nth-child(7) .circle {animation-delay: 700ms}
+.row:nth-child(8) .circle {animation-delay: 800ms}
+.row:nth-child(9) .circle {animation-delay: 900ms}
+
+/* 4. 하트 */
+.back {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fde7e7;
+  animation-name: backdiv;
+  animation-duration: 1.5s; 
+  animation-iteration-count: infinite;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  background-color: rgb(221, 125, 141);
+  height: 50px;
+  width: 50px;
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.heart:after {
+  background-color: rgb(221, 125, 141);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart:before {
+  background-color: rgb(221, 125, 141);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+
+@keyframes backdiv {
+  50% {
+    background: rgb(219, 221, 248);
+  }
+  }
+@keyframes beat {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(-45deg);
+  }
+  50% {
+    transform:  translate(-50%, -50%) scale(0.6) rotate(-45deg);
+  }
+  }
+
+/* script */
+.script-inner {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+.script-title {
+  overflow: hidden;
+}
+.script-title h2{
+  font-family: "NewYork";
+  font-size: 5.8vw;
+  line-height: 1;
+  color: #fff;
+  transform: translateY(-200px);
+}
+.script-inner .bg {
+  position: fixed;
+  top: 0; left: -50%;
+  background: #333;
+  width: 32.5vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.script-inner .bg > div{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+}
+.script-inner .bg > div:nth-child(1) {
+  background: #873136;
+}
+.script-inner .bg > div:nth-child(2) {
+  background: #DA2F38;
+}
+.script-inner .bg > div:nth-child(3) {
+  background: #5f5f5f;
+}
+.script-inner .bg > div:nth-child(4) {
+  background: #707070;
+}
+.script-inner .bg > div:nth-child(5) {
+  background: #7b7b7b;
+}
+.script-inner .bg > div:nth-child(6) {
+  background: #898989;
+}
+.script-inner .bg > div:nth-child(7) {
+  background: #b3b3b3;
+}
+.script-inner .bg > div:nth-child(8) {
+  background: #d1d1d1;
+}
+
+.script-inner .script-box li {
+  position: fixed;
+  top: 50%; left: -70%;
+  transform: translate(0%,-50%);
+  width: 53.5vw;
+  height: 29.5vw;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  /* 임시 */
+  line-height: 29.5vw;
+  font-size: 3vw;
+}
+
+.script-inner .script-box li:nth-child(1) {
+  background: #05113B;
+}
+.script-inner .script-box li:nth-child(2) {
+  background: rgb(219, 217, 228);
+}
+.script-inner .script-box li:nth-child(4) {
+  background: rgb(219, 217, 228);
+}
+.script-inner .script-box li img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  
+}
+
+
+/* script-title, bg 모션 */
+/* data-43500 = "left:50%;"
+data-44500 = "left:80%;"
+data-53800 = "left:80%;"
+data-54700 = "left: 42%;"
+data-54800 = "left: 50%;"
+data-55000 = "left: 50%;"
+data-57000 = "left: -15%;" 
+
+data-43500 = "left: -50%;"
+data-44500 = "left: 0%;"
+data-54700 = "left: 0%;"
+data-54800 = "left: -5%;"
+data-55350 = "left: -5%;"
+data-57000 = "left: -55%;"*/
+
+
+.php-inner {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 2.3vw;
+  box-sizing: border-box;
+}
+.php-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.php-title {
+  overflow: hidden;
+  z-index: -1;
+}
+.php-title h2 {
+  font-family: "NewYork";
+  font-size: 5.8vw;
+  line-height: 1;
+  color: rgb(19, 19, 19);
+  transform: translateY(-200px)
+}
+.php-box {
+  display: flex;
+  width: 31vw;
+  height: 20vw;
+  background: #313131;
+  cursor: pointer;
+  border-radius:15px;
+}
+.php-box:hover .cont::after {
+  display: none;
+}
+.php-box:hover:nth-child(4) .cont::after {
+  display: block;
+}
+.php-box:nth-child(2) {
+  position: absolute;
+  top: -60%; left: 0;
+}
+.php-box:nth-child(3) {
+  position: absolute;
+  top: 0; right: -50%;
+}
+.php-box:nth-child(4) {
+  position: absolute;
+  bottom: 0; left: -50%;
+}
+.php-box:nth-child(5) {
+  position: absolute;
+  bottom: -60%; right: 0;
+}
+.php-box .cont {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  height: 85%;
+  background: #000;
+}
+.php-box .cont::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.9);
+}
+.php-box .cont img{
+  width: 80%;
+  margin: auto;
+}
+.php-box h3 {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: "ChosunNm";
+  font-size: 1.45vw;
+  color: #090909;
+}
+
+
+/* contact */
+.contact-inner {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 3.5vw 4.9vw;
+  box-sizing: border-box;
+}
+.contact-inner > div {
+  font-family: "NewYork";
+  line-height: 0.85;
+  font-size: 13vw;
+  color: #071E14;
+}
+.contact-inner > div:nth-child(1) {
+ transform: translateX(150%);
+}
+.contact-inner > div:nth-child(2) {
+  transform: translateX(150%);
+}
+.contact-inner > div:nth-child(3) {
+  position: relative;
+  text-align: right;
+  transform: translateX(-150%);
+}
+.contact-inner > div > div.hid {
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid #fff;
+  height: 0vw; 
+  width: 30vw;
+  overflow: hidden;
+}
+.contact-inner > div:nth-child(4) {
+  text-align: right;
+  transform: translateX(-150%);
+}
+.contact-inner ul li {
+  position: absolute;
+  right: -100%;
+  font-size: 1.2vw;
+  line-height: 9vw;
+  font-family: 'Chosunilbo_myungjo';
+  font-weight: 300;
+  color: #fff;
+
+}
+.contact-inner ul li span {
+  /* font-family: 'Chosunilbo_myungjo'; */
+}

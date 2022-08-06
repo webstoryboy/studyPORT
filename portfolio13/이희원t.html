@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cha {
+            position: fixed;
+            width: 350px; height: 270px;
+            left: 35vw; bottom: 4vw;
+            background: url(./assets/img/cha_walk.png);
+            background-size: 2800px;
+            z-index: 9999;
+        }
+        .cha.walk {
+            animation: walk 0.8s steps(8, start) infinite;
+        }
+        .cha.left {
+            background-position: 0px -270px;
+        }
+        .cha.leftWalk {
+            animation: walk2 0.8s steps(8, start) infinite;
+        }
+        @keyframes walk {
+            0% {background-position: 0px 0px;}
+            100% {background-position: -2800px 0px;}
+        }
+        @keyframes walk2 {
+            0% {background-position: 0px -270px;}
+            100% {background-position: -2800px -270px;}
+        }
+
+        * {margin: 0; padding: 0;}
+        .item1 {width: 100%; height: 100vh; background: #aaa; font-size: 100vw;}
+        .item2 {width: 100%; height: 100vh; background: #bbb;  font-size: 100vw;}
+        .item3 {width: 100%; height: 100vh; background: #ccc;  font-size: 100vw;}
+        .item4 {width: 100%; height: 100vh; background: #ddd;  font-size: 100vw;}
+        .item5 {width: 100%; height: 100vh; background: #eee;  font-size: 100vw;}
+    </style>
+</head>
+<body>
+    <div class="cha"></div>
+
+    <div class="item1"><h2>1</h2></div>
+    <div class="item2"><h2>2</h2></div>
+    <div class="item3"><h2>3</h2></div>
+    <div class="item4"><h2>4</h2></div>
+    <div class="item5"><h2>5</h2></div>
+
+
+
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script>
+        let lastScrollTop = 0;
+
+        // $(document).scroll(function(){
+        //     let scrollTop = $(document).scrollTop();
+        //     console.log("lastScrollTop : "+lastScrollTop);
+
+        //     clearTimeout($.data(this,"scrollCheck"));
+
+        //     $.data(this, "scrollCheck", setTimeout(function(){
+        //         $(".cha").removeClass("walk");
+        //         $(".cha").removeClass("leftWalk");
+        //     },100))
+
+        //     if(scrollTop > lastScrollTop){
+        //         $(".cha").removeClass("left");
+        //         $(".cha").addClass("walk");
+        //     } else {
+        //         $(".cha").addClass("left");
+        //         $(".cha").addClass("leftWalk");
+        //     }
+        //     lastScrollTop = scrollTop;
+        // });
+
+        let lastTouch = 0;
+
+        $(document).on("touchstart touchmove", function(e){
+            let screenY = e.originalEvent.touches[0].screenY;
+            let pageY = e.originalEvent.touches[0].pageY;
+            let division = (pageY/screenY)+1000;
+            
+            clearTimeout($.data(this,"touchstart"));
+
+            $.data(this, "touchend", setTimeout(function(){
+                $(".cha").removeClass("walk");
+                $(".cha").removeClass("leftWalk");
+            },100))
+
+            if(division >= lastTouch){
+                $(".cha").removeClass("left");
+                $(".cha").addClass("walk");
+            } else {
+                $(".cha").addClass("left");
+                $(".cha").addClass("leftWalk");
+            }
+            lastTouch = division;
+        })
+    </script>
+</body>
+</html>

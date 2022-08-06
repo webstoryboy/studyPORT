@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <!-- 스크립트 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+   
+    <div id="header_login">
+        
+            <h1 class="mainH1">
+                <a href="./index.html">
+                    <img src="./assets/images/logo_b.jpg" alt="compuzone">
+                </a>
+            </h1>
+       
+	</div>
+    <!-- //header -->
+    <div id="loginvisual">
+        <div class="inner">
+            <img src="./assets/images/welcome2.jpg">
+        </div>
+    </div>
+    <div id="contents_area" style="padding-bottom:35px;">
+		<div id="loginmenu1">
+            <a href="./login.html">
+                <span class="btn1">LOG-IN</span>
+            </a>
+            <a href="./search_member_id.html">
+                <span class="btn2">아이디찾기</span>
+            </a>
+            <a href="./search_member_pw.html">
+                <span class="btn3">비밀번호찾기</span>
+            </a>
+        </div>
+
+		<div id="loginhome">
+			<form name="global_form" method="post">
+				<input type="hidden" name="remote">
+				<input type="hidden" name="actype">
+				<input type="hidden" name="base">
+				<input type="hidden" name="check_base">
+				<input type="hidden" name="cp" value="">
+				<input type="hidden" id="NoMemberOrder" value="">
+				<input type="hidden" name="ProductNo" id="ProductNo" value="">
+				<input type="hidden" name="myfilter_nonmember" id="myfilter_nonmember" value="">
+				<input type="hidden" name="PreChkSearchBottomNo" id="PreChkSearchBottomNo" value="">
+				<input type="hidden" name="MediumDivNo" id="MediumDivNo" value="">
+				<input type="hidden" name="DivNo" id="DivNo" value="">
+				<div class="list">
+					<div class="list1">
+						<p class="item">
+							<label class="id_ipt login_ipt_box">
+								<strong id="user_blind" style="display: block;">아이디</strong>
+								<input type="text" name="member_id" id="member_id" tabindex="1" value="">
+							</label>
+							</p>
+							<p class="item" style="position:relative;">
+								<label class="pw_ipt login_ipt_box">
+									<strong id="user_blind">비밀번호</strong>
+									<input type="password" autocomplete="off" name="member_password" id="member_password" tabindex="2">
+								</label>
+								
+							<p></p>
+							<p class="btn">
+								<a href="#" style="line-height:74px; " tabindex="3">로그인</a>
+							</p>
+							<p class="chk">
+								<label style="letter-spacing:-1px;">
+									<input type="checkbox" name="id_cookie" id="SaveLoginID" value="1" style="width:17px; height:17px; border:#707070 1px solid; vertical-align:text-top;"> 아이디 저장
+								</label>
+							</p>
+							<p class="naverlogin" style="margin-right:4px;">
+								<a href="#">
+									<span class="ico"></span>네이버 ID 로그인
+								</a>
+							</p>
+							<p class="naverlogin">
+								<a href="#">
+									<span class="ico kakao"></span>카카오계정 로그인
+								</a>
+							</p>
+					</div>
+					<!-- ### 비회원 주문조회 시 ### -->
+					<div class="list3" style="display:none;">
+                        <p class="item">
+                        <label class="name_ipt login_ipt_box">
+                            <strong id="user_blind">이름</strong>
+                            <input type="text" name="nonmember_name" tabindex="4">
+                        </label>
+                        </p>
+                        <p class="item">
+                            <label class="phone_ipt login_ipt_box">
+                                <strong id="user_blind">핸드폰번호 뒤 4자리</strong>
+                                <input type="text" name="nonmember_handphone3" tabindex="5">
+                            </label>
+                        </p>
+                        <p class="item">
+                            <label class="phone_ipt login_ipt_box">
+                                <strong id="user_blind">주문번호</strong>
+                                <input type="text" name="nonmember_orderno" tabindex="6">
+                            </label>
+                        </p>
+                        <p class="btn" style="height:113px;">
+                            <a href="javascript:ChkNonMemberOrder();" style="line-height:20px; padding:37px 0;" tabindex="7">주문내역<br>조회</a>
+                        </p>
+                            <p class="chk">
+                            ※ 비회원 주문정보를 기입해주세요.
+                        </p>
+					</div>
+					<!-- ### 비회원 주문조회 시 끝 ### -->
+
+					<!-- ### 비회원 문의조회 시 ### -->
+					<div class="list4" style="display:none;">
+                        <p class="item">
+                            <label class="name_ipt login_ipt_box">
+                            <strong id="user_blind">이름</strong>
+                            <input type="text" name="nonmember_name4" tabindex="4">
+                        </label>
+                        </p>
+                        <p class="item">
+                            <label class="pw_ipt login_ipt_box">
+                            <strong id="user_blind">비밀번호</strong>
+                            <input type="password" tabindex="5" autocomplete="off">
+                        </label>
+                        </p>
+                        <p class="item">
+                            <label class="phone_ipt login_ipt_box">
+                            <strong id="user_blind">핸드폰번호 뒤 4자리</strong>
+                            <input type="text" name="nonmember_handphone4">
+                        </label>
+                        </p>
+                        <p class="btn" style="height:113px;">
+                            <a href="#" style="line-height:20px; padding:37px 0;" tabindex="7">상담내역<br>조회</a>
+                        </p>
+                        <p class="chk">
+                            ※비회원 문의시 입력하셨던 정보를 기재해주세요.
+                        </p>
+					</div>
+					<!-- ### 비회원 문의조회 시 끝 ### -->
+					<!--문의조회-->
+
+					<!--// 문의조회-->
+						<div class="list5 nomember_box" style="left:0px;">
+
+							<span class="subtit">비회원 <span class="list-arrow"></span></span>
+                            <ul>
+                                <li class="menu ChangeLoginFrm"><a href="#">주문조회</a></li>
+                                <li class="menu ChangeLoginFrm4"><a href="#">상담내역 조회</a></li>
+                                <li class="menu"><a href="#">A/S,반품,교환 신청</a></li>
+                            </ul>
+						</div>
+					<div class="list2" style="left:0px; margin:0 20px;">
+						<dl>
+							<dt class=" list-dot Sblack11">아직 컴퓨존 회원이 아니신가요?</dt><dd class="btn-S" style="cursor:pointer; float:right;">회원가입</dd>
+						</dl>
+						<dl>
+							<dt class=" list-dot Sblack11">회원 아이디를 잊으셨나요?</dt><dd class="btn-S" style="cursor:pointer; float:right;">아이디찾기</dd>
+						</dl>
+						<dl>
+							<dt class=" list-dot Sblack11">비밀번호를 잊으셨나요?</dt><dd class="btn-S" style="cursor:pointer; float:right;">비밀번호찾기</dd>
+						</dl>
+					</div>
+				</div>
+
+				<a href="#" target="_blank">
+					<div class="banner"><img src="./assets/images/log_banner.jpg"></div>
+				</a>
+
+			</form>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

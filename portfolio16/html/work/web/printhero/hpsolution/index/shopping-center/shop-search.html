@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- title -->
+<title>HP Solution 프린팅 서비스 플랫폼</title>
+<!--/tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- for-mobile-apps -->
+<link href="../images/favicon.png" rel="shortcut icon"/>
+<!-- title -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../css/animate.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="프린팅 서비스의 모든 것 HP 솔루션">
+<meta property="og:url" content="http://oaic.co.kr:8090/">
+<meta property="og:description" content="고객의 프린팅 서비스 습관을 혁신합니다.">
+<meta property="og:image" content="../images/thumnail.jpg">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="HP Solution">
+<!-- description -->
+<meta name="description" content="대한민국 최초의 프린팅 서비스 플랫폼">
+<!-- keywords -->
+<meta name="keywords" content="hp솔루션">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="text/javascript" src="../js/wow.js"></script>
+<script type="text/javascript" src="../js/wow.min.js"></script>
+<script> new WOW().init(); </script>
+<script>
+			addEventListener("load", function () {
+				setTimeout(hideURLbar, 0);
+			}, false);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+<!-- jquery -->
+<script src="../js/jquery-2.1.4.min.js"></script>
+<!-- //jquery -->
+<!-- js-카운터 -->
+<script> 
+			jQuery(document).ready(function($) { 
+				$('.counter').counterUp({ 
+					delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+					time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+				}); 
+			}); 
+		</script>
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<!--//js-카운터 -->
+<!-- price range (top products) -->
+<script src="../js/jquery-ui.js"></script>
+<!-- //price range (top products) -->
+<!-- flexisel (for special offers) -->
+<script src="../js/jquery.flexisel.js"></script>
+<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+<!-- //flexisel (for special offers) -->
+<!-- 탑클릭 부드럽게 -->
+<script>
+		$( '.banner' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 0);
+		return false;
+	} );
+	</script>
+<!--// 탑클릭 부드럽게 -->
+<!-- smoothscroll -->
+<script src="../js/SmoothScroll.min.js"></script>
+<!-- //smoothscroll -->
+<!-- start-smooth-scrolling -->
+<script src="../js/move-top.js"></script>
+<script src="../js/easing.js"></script>
+<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+<!-- //end-smooth-scrolling -->
+<!--고정배너 스크립트 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.show-on-scroll');
+  if($(this).scrollTop() >= 600) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//고정배너 스크립트 -->
+<!--탑서칭 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.top-search-show-on-scroll');
+  if($(this).scrollTop() >= 500) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//탑서칭 -->
+<!--알람 -->
+<script>function button1_click() {
+	alert("준비중입니다.");
+}
+</script>
+<!--//알람 -->
+<!--첨부파일-->
+<script>
+		$(document).ready(function(){ 
+			var fileTarget = $('.filebox .upload-hidden'); 
+			fileTarget.on('change', function(){ // 값이 변경되면 
+			if(window.FileReader){ // modern browser 
+				var filename = $(this)[0].files[0].name; 
+			} 
+				else { // old IE 
+				var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+				} 
+				// 추출한 파일명 삽입 
+				$(this).siblings('.upload-name').val(filename); 
+			}); 
+		}); 
+		var imgTarget = $('.preview-image .upload-hidden'); 
+		imgTarget.on('change', function(){ 
+			var parent = $(this).parent(); 
+			parent.children('.upload-display').remove(); 
+			if(window.FileReader){ 
+				//image 파일만 
+				   if (!$(this)[0].files[0].type.match(/image\//)) return; 
+				var reader = new FileReader(); 
+				reader.onload = function(e){ 
+					var src = e.target.result; 
+					parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>'); 
+				} 
+				reader.readAsDataURL($(this)[0].files[0]); } 
+			else { 
+					$(this)[0].select(); 
+				$(this)[0].blur(); 
+				var imgSrc = document.selection.createRange().text; 
+				parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>'); 
+				var img = $(this).siblings('.upload-display').find('img'); 
+				img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")"; 
+				} 
+		});
+	</script>
+<!--첨부파일-->
+<!-- for bootstrap working -->
+<script src="../js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- //js-files -->
+<!--//tags -->
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/font-awesome.css" rel="stylesheet">
+<!--pop-up-box-->
+<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<!--//pop-up-box-->
+<!-- price range -->
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui1.css">
+<!-- fonts -->
+</head>
+<body>
+
+
+	
+<div class="m-shoppingcenter-text">
+	<a href="./shop-main.html">쇼핑센터</a>
+</div>
+
+<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="mnk-main-menu-toggle menu-container" style="padding: 0; ">
+     <div class="fdr-menu-box border-shadow" style="padding: 0; ">
+		 <header class="login-top mobile-no pad-no">
+		<div class="container">
+			<div class="login-text">
+				<h6 onclick="location.href='../member/login.html'">로그인</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6 onclick="location.href='../member/member-join.html'">회원가입</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>마이페이지</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>장바구니</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>배송조회</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6 onclick="location.href='../sitemap.html'">사이트맵</h6>
+			</div>
+		</div>
+		</header>
+        <div class="container" style="padding: 5px 0;">
+               <div class="logo" style="float: none; margin-right: 10px; ">
+					<div class="site-logo">
+						<a href="../index.html">
+						<img src="../images/logo.png" alt="로고">
+						<img src="../images/logo-small.png" alt="로고작은거" style="padding-left: 7px;">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+                        
+                        <ul class="menu-line">
+							
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 ">
+								<a href="../shopping-center/shop-main.html" class="active">쇼핑센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../repair-center/repair-main.html">수리센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../rental-center/rental-main.html">렌탈센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../edu-center/edu-main.html">교육센터</a>
+							</li>
+                            <li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064" >
+                            <a target="_blank"  onclick="location.href='../partner-form.html'"><span>파트너신청 &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+                            </li>
+                        </ul>
+
+                        </nav>
+					</div>
+					
+				</div>
+                
+         </div>
+     </div>
+     <div class="container">
+	    
+		<input type="checkbox" id="menuicon2">
+		<label for="menuicon2">
+		<span></span>
+		<span></span>
+		<span></span>
+		</label>
+		<!--전체메뉴 토글버튼-->
+		 <div class="sidebar">
+		<div class="mobile-toggle-bar">
+			<div class="login-section box-m1">
+				<h5>로그인하시면 더 많은 서비스를<br>
+				 얻으실 수 있습니다.</h5>
+				<button class="btn blue-btn" onclick="location.href='../member/login.html'">로그인</button>
+				<button class="btn border-btn" onclick="location.href='../member/member-join.html'">회원가입</button>
+			</div>
+			<table class="info1" style="margin-bottom:10px;">
+			<tr>
+				<td>
+					<i class="fa fa-id-badge" aria-hidden="true"></i>&nbsp;마이페이지
+				</td>
+				<td>
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-truck" aria-hidden="true"></i>&nbsp;배송조회
+				</td>
+				<td>
+					<i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;이용안내
+				</td>
+			</tr>
+			</table>
+			<div class="box-m1 service-m">
+				<h4>전체서비스</h4>
+				<table class="info2">
+					<tr>
+						<td>
+							<img src="../images/shopping-ct-ico.png" alt="쇼핑센타아이콘" onclick="location.href='../shopping-center/shop-main.html'"><br><a>쇼핑센터</a>
+						</td>
+						<td>
+							<img src="../images/repair-ct-ico.png" alt="수리센타아이콘" onclick="location.href='../repair-center/repair-main.html'"><br><a>수리센터</a>
+						</td>
+						<td>
+							<img src="../images/rental-ct-ico.png" alt="렌탈센타아이콘" onclick="location.href='../rental-center/rental-main.html'"><br><a>렌탈센터</a>
+						</td>
+						<td>
+							<img src="../images/edu-ct-ico.png" alt="교육센타아이콘" onclick="location.href='../edu-center/edu-main.html'"><br><a>교육센터</a>
+						</td>
+					</tr>
+				</table>
+				<!-- 
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="찾으시는 물건을 검색하세요.">
+					<span class="input-group-btn">
+					<button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</span>
+				</div>
+				input-group -->
+			</div>
+			<!-- /input-group
+			<div class="simple-cart box-m1">
+				<h5>최근 본 상품<span>상품더보기&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span></h5>
+				<div class="cart-img">
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+				</div>
+				<div><h6>최근 본 상품이 등록됩니다.</h6></div>등록 안된상태는 이 화면 보여주기
+			</div> -->
+			
+			<table class="info1" style="margin-bottom:10px;">
+			   
+				<tr>
+					<td>
+						<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;고객센터</h5>
+					</td>
+					<td>
+						<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;회사소개</h5>
+					</td>
+				</tr>
+				
+			</table>
+			<table class="info1" style="background:#3399FD; color: #fff; padding:5px;margin-bottom:10px;">
+			    <tr>
+					<td  style="border:none;"  onclick="location.href='../partner.html'">
+						<h5>파트너 신청 <i class="fa fa-paper-plane" aria-hidden="true"></i></h5>
+					</td>
+				</tr>
+				
+				
+			</table>
+			
+		</div>
+	</div>
+	</div>
+</div>
+<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+
+<div class="login-gap">
+</div>
+
+<!--쇼핑몰메인-->
+<div class="shop-top-catagory">
+	<div class="container">
+		<div class="menu-button" type="button" aria-hidden="true" data-toggle="collapse" data-target="#menu-button-toggle" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="border1px">
+			</div>
+			<button class="shop-hamtap" data-target="#total-menu" data-toggle="collapse" aria-label="Toggle navigation" type="button">
+				     <img src="../images/tot-btn.png" width="25px;">
+			 </button>
+			<div class="shop-hamtap-text">
+				전체카테고리
+			</div>
+			<div class="border1px">
+			</div>
+		</div>
+		<div class="menu-total collapse" id="menu-button-toggle" role="navigation">
+			<ul>
+				<li><strong><a href="./shop-sub.html">부품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코,미놀타</a></li>
+				<li><a href="./shop-sub.html">제록스</a></li>
+				<li><a href="./shop-sub.html">교세라</a></li>
+				<li><a href="./shop-sub.html">앱손</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">소모품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+				<li><a href="./shop-sub.html">제록스(준비중)</a></li>
+				<li><a href="./shop-sub.html">교세라(준비중)</a></li>
+				<li><a href="./shop-sub.html">앱손(준비중)</a></li>
+				<li><a href="./shop-sub.html">브라더 (준비중)</a></li>
+				<li><a href="./shop-sub.html">용지</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">옵션/악세사리</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">완제품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+				<li><a href="./shop-sub.html">미놀타</a></li>
+				<li><a href="./shop-sub.html">제록스</a></li>
+				<li><a href="./shop-sub.html">옙손</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">협력사 전용</a></strong></li>
+				<li style="border: 0;"><strong><a href="./shop-sub.html">특가/베스트</a></strong></li>
+				<img src="images/shop022.png" style="width: 100%;">
+			</ul>
+		</div>
+		<div class="shop-search">
+			<form action="#" method="post" class="">
+				<div class="shop-search-btn" onclick="location.href='./shop-search.html'">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<input type="text" name="text" placeholder="부품번호 또는 모델명을 입력해 주세요.">
+			</form>
+		</div>
+	</div>
+</div>
+	
+	
+	<!--검색어가 없을 경우-->
+	<div class="search-info-box"><br>
+	   <div class="container ">
+	        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 search-info-text" style="padding-top: 50px;padding-bottom: 50px;">
+				<img src="../images/alert.jpg" alt="오류아이콘" style="padding-bottom: 20px;">
+		        <h4 style="padding-bottom: 20px;">
+				<span style="color:red; font-weight: bold;">"검색내용"</span>에 대한 검색결과가 없습니다.
+				</h4>
+				
+				<div class="">
+					<button class="btn gray-btn" onclick="javascript:history.back()" value="뒤로"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> 뒤로가기</button><!--전 페이지로 돌아기-->
+					<button class="btn blue-btn"><i class="fa fa-refresh" aria-hidden="true"></i> 다시 검색하기</button><!--버튼을 눌렀을떄 커서 포인트 상단으로 올리기-->
+				</div>
+				
+		     </div>
+		 </div>
+	</div>
+	<!--//검색어가 없을 경우-->
+	<!--검색어가 있을 경우-->
+   <div class="search-info-box"><br>
+	   <div class="container ">
+	        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 search-info-text ">
+				<img src="../images/shop-search.jpg" alt="오류아이콘" style="width:250px;  padding-bottom: 20px;">
+		        <h4>
+				찾으시는 검색어는 <span style="color:red; font-weight: bold;">"검색내용"</span>입니다. 
+				</h4>
+				
+				<h5>입력하신 검색어로 <span style="color:red; font-weight: bold;">총335건</span>의 상품이 검색되었습니다. </h5>
+				<h5><marquee direction="down"  scrollamount="2" style="text-align: center;"><i class="fa fa-angle-double-down" aria-hidden="true"></i></marquee></h5>
+		     </div>
+		 </div>
+	</div>	
+	<!--//검색어가 있을 경우-->
+		 
+		 
+				<div class="catagory-brand2">
+				    <div class="container">
+                        <table class="table-bordered">
+                        <tr>
+                            <td class="active">
+                                전체
+                                <h5>(232건)</h5>
+                            </td>
+                            <td>
+                                부품
+                                <h5>(1건)</h5>
+                            </td>
+                            <td>
+                                소모품
+                                <h5>(122건)</h5>
+                            </td>
+                            <td>
+                                옵션/악세사리
+                                <h5>(32건)</h5>
+                            </td>
+
+                            <td>
+                                완제품
+                                <h5>(24건)</h5>
+                            </td>
+
+                            <td>
+                                특가이벤트
+                                <h5>(1건)</h5>
+                            </td>
+                        </tr>	
+                        </table>
+					</div>
+				</div>
+
+	
+<!--본문-->
+<div class="sub-category">
+	<div class="container">
+		<div class="right-container">
+		
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 catagory-box2">
+				<div class="top-filter">
+					
+					<div class="filter col-md-10 col-lg-10 col-sm-10 col-xs-6">
+						
+											<div class="filter-box">
+
+													<div class="active box2">판매많은순</div>
+													<div class="box2">낮은가격순</div>
+													<div class="box2">높은가격순</div>
+													<div class="box2">평점높은순</div>
+													<div class="box2">후기많은순</div>
+													<div class="box2">최근등록순</div>
+
+
+											</div>
+						        
+
+					 </div>
+					<div class="col-md-10 col-lg-10 col-sm-10 col-xs-6 float-left search-count">
+						
+							<div>총 <span style="color: red;">335</span>개의 상품</div>
+
+					 </div>
+					<div class="th-box col-md-2 col-lg-2 col-sm-2 col-xs-6">
+						<div class="th-change">
+							<div class="box3">
+								<i class="fa fa-th-list" aria-hidden="true" style="color:#046586;"  id="th-list" onclick="location.href='./shop-search.html'"></i>
+							</div>
+							<div class="box3">
+								<i class="fa fa-th-large" aria-hidden="true" id="th-large" onclick="location.href='./shop-search2.html'"></i>
+							</div>
+							<div class="box3 filter-no">
+								<i class="fa fa-filter" data-toggle="modal" data-target=".m-filter"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--만능키 검색결과-->
+		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 shop-result" style="padding-left: 0;">
+			<!--검색결과 1x4-->
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop01.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop02.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop03.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop04.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop01.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop02.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop03.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop04.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop01.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop02.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop03.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 shop-class2">
+					<div class="shop-box2">
+						<div class="img">
+							<img src="../images/shop04.jpg" class="img03">
+						</div>
+						<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+						<h5 class="type"><span>리페어</span></h5>
+						<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+						<!--<h3>비회원가/회원가<span>58,000원</span></h3>
+						<h3>딜러가격<span>33,000원</span></h3>
+						<h3>협력사가격 <span>7,700원</span></h3>
+						<h3>원가<span>7,700원</span></h3>-->
+						<h4>판매가<span>15,700원</span></h4>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<!--//검색결과 1x4-->
+			<div class="bottom-number col-md-12 col-lg-12 col-sm-12 col-xs-12">
+				<div class="nb row row--horizontal-center">
+					<a><i class="fa fa-chevron-left" aria-hidden="true"></i></a><a class="active">1</a><a>2</a><a>3</a><a>4</a>
+					<a><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//만능키 검색결과-->
+</div>
+<!--//세로 카테고리용-->
+<div class="height-50">
+</div>
+<!-- footer -->
+<footer>
+<div class="container">
+	<!-- footer third section -->
+	<div class="footer-info w3-agileits-info">
+		<!-- quick links -->
+		<div class="col-sm-2 col-xs-3 address-right ">
+			<div class="col-xs-12 footer-grids site-hidden">
+				<h3>사이트맵</h3>
+				<ul>
+					<li>
+					<a href="../shopping-center/shop-main.html">쇼핑센터</a>
+					</li>
+					<li>
+					<a href="../repair-center/repair-main.html">수리센터</a>
+					</li>
+					<li>
+					<a href="../rental-center/rental-main.html">렌탈센터</a>
+					</li>
+					<li>
+					<a href="../edu-center/edu-main.html">교육센터</a>
+					</li>
+					<li>
+					<a href="#">협력사 신청</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-6 address-right">
+			<div class="col-xs-12 footer-grids site-hidden">
+				<h3 style="color: transparent"> - </h3>
+				<ul>
+					<li>
+					<a href="../aboutus.html">회사소개</a>
+					</li>
+					<li>
+					<a href="../joinshop.html">입점신청</a>
+					</li>
+					<li>
+					<a href="../total-info.html">이용안내</a>
+					</li>
+					<li>
+					<a href="../pt-info.html">개인정보취급방법</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3 col-xs-6 address-right">
+			<div class="col-xs-12 footer-grids">
+				<h3>고객센터</h3>
+				<ul>
+					<li>
+					<strong style="font-weight:300; color:#007bbe;">부품/재고</strong> &nbsp;1855-4832<br>
+					</li>
+					<li>
+					<strong style="font-weight:300; color:#007bbe;">제품/기술</strong> &nbsp;031-429-9884 </li>
+					<li>
+					<img src="../images/fax.png" alt="팩스" class="contact-icon">0303-3448-4832 </li>
+					<li>
+					<img src="../images/mail.png" alt="메일" class="contact-icon"><a href="mailto:hpsolution@hpsolution.co.kr">hpsolution@hpsolution.co.kr</a>
+					</li>
+					<li>
+					<i class="fa fa-2x"><img src="../images/blog.png" alt="블로그" class="sns"></i><i class="fa fa-2x"><img src="../images/insta.png" alt="인스타그램" class="sns"></i><i class="fa fa-2x"><img src="../images/facebook.png" alt="페이스북" class="sns"></i><i class="fa fa-2x"><img src="../images/youtube.png" alt="유튜브" class="sns"></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //quick links -->
+		<!-- social icons -->
+		<div class="col-sm-4 col-sm-12 footer-grids w3l-socialmk">
+			<div class="agile-sometext">
+				<div class="sub-some">
+					<h5>주식회사 에이치피솔루션</h5>
+					<p>
+						 본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 <br>
+						(관양동, 안양창조경제융합센터) (우)14055<br>
+						 공장 : 경기도 안양시 동안구 시민대로98번길 15 <br>
+						 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+						 대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+						 통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+					</p>
+					<p class="copyright-mobile">
+						© Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved 
+						<!-- 3.5일 수정 -->
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- //social icons -->
+		<div class="clearfix">
+		</div>
+	</div>
+	<!-- //footer third section -->
+	<!-- footer fourth section (text) -->
+	<!-- //footer fourth section (text) -->
+</div>
+</footer>
+<!-- //footer -->	
+<!--모바일 필터-->
+<section>
+<div class="modal fade m-filter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding:0px;">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			
+			<div class="modal-body filter-text" style="padding: 35px 25px;">
+				<center>
+						<h4>
+							판매가 많은순
+						</h4>
+
+						<h4>
+							낮은 가격순
+						</h4>
+
+						<h4>
+							높은 가격순
+						</h4>
+
+						<h4>
+							평점 높은순
+						</h4>
+
+						<h4>
+							후기 많은순
+						</h4>
+
+			         	<h4>
+							최근 등록순
+						</h4>
+				 </center>
+
+			</div>
+			
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+</section>
+<!--//모바일 필터-->
+
+<div class="banner show-on-scroll btn-top">
+	<div class="ban-inner">
+		<div class="ban">
+			<img src="../images/cpicon.jpg"><br>
+			회사소개
+		</div>
+		<div class="ban" onclick="location.href='../total-info.html'">
+			<img src="../images/faqicon.jpg"><br>
+			이용안내
+		</div>
+	</div>
+	<a class="btn-top" href="#">TOP<i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+</div>
+</body>
+</html>

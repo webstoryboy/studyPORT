@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- title -->
+<title>HP Solution 프린팅 서비스 플랫폼</title>
+<!--/tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- for-mobile-apps -->
+<link href="../images/favicon.png" rel="shortcut icon"/>
+<!-- title -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../css/animate.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="프린팅 서비스의 모든 것 HP 솔루션">
+<meta property="og:url" content="http://oaic.co.kr:8090/">
+<meta property="og:description" content="고객의 프린팅 서비스 습관을 혁신합니다.">
+<meta property="og:image" content="../images/thumnail.jpg">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="HP Solution">
+<!-- description -->
+<meta name="description" content="대한민국 최초의 프린팅 서비스 플랫폼">
+<!-- keywords -->
+<meta name="keywords" content="hp솔루션">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="text/javascript" src="../js/wow.js"></script>
+<script type="text/javascript" src="../js/wow.min.js"></script>
+<script> new WOW().init(); </script>
+<script>
+			addEventListener("load", function () {
+				setTimeout(hideURLbar, 0);
+			}, false);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+</script>
+<!-- jquery -->
+<script src="../js/jquery-2.1.4.min.js"></script>
+<!-- //jquery -->
+<!-- js-카운터 -->
+<script> 
+			jQuery(document).ready(function($) { 
+				$('.counter').counterUp({ 
+					delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+					time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+				}); 
+			}); 
+		</script>
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<!--//js-카운터 -->
+<!-- price range (top products) -->
+<script src="../js/jquery-ui.js"></script>
+<!-- //price range (top products) -->
+<!-- flexisel (for special offers) -->
+<script src="../js/jquery.flexisel.js"></script>
+<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+<!-- //flexisel (for special offers) -->
+<!-- 탑클릭 부드럽게 -->
+<script>
+		$( '.banner' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 0);
+		return false;
+	} );
+	</script>
+<!--// 탑클릭 부드럽게 -->
+<!-- smoothscroll -->
+<script src="../js/SmoothScroll.min.js"></script>
+<!-- //smoothscroll -->
+<!-- start-smooth-scrolling -->
+<script src="../js/move-top.js"></script>
+<script src="../js/easing.js"></script>
+<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+<!-- //end-smooth-scrolling -->
+<!--고정배너 스크립트 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.show-on-scroll');
+  if($(this).scrollTop() >= 600) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//고정배너 스크립트 -->
+<!--탑서칭 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.top-search-show-on-scroll');
+  if($(this).scrollTop() >= 500) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//탑서칭 -->
+<!--알람 -->
+<script>function button1_click() {
+	alert("준비중입니다.");
+}
+</script>
+<!--//알람 -->
+<!--첨부파일-->
+<script>
+		$(document).ready(function(){ 
+			var fileTarget = $('.filebox .upload-hidden'); 
+			fileTarget.on('change', function(){ // 값이 변경되면 
+			if(window.FileReader){ // modern browser 
+				var filename = $(this)[0].files[0].name; 
+			} 
+				else { // old IE 
+				var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+				} 
+				// 추출한 파일명 삽입 
+				$(this).siblings('.upload-name').val(filename); 
+			}); 
+		}); 
+		var imgTarget = $('.preview-image .upload-hidden'); 
+		imgTarget.on('change', function(){ 
+			var parent = $(this).parent(); 
+			parent.children('.upload-display').remove(); 
+			if(window.FileReader){ 
+				//image 파일만 
+				   if (!$(this)[0].files[0].type.match(/image\//)) return; 
+				var reader = new FileReader(); 
+				reader.onload = function(e){ 
+					var src = e.target.result; 
+					parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>'); 
+				} 
+				reader.readAsDataURL($(this)[0].files[0]); } 
+			else { 
+					$(this)[0].select(); 
+				$(this)[0].blur(); 
+				var imgSrc = document.selection.createRange().text; 
+				parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>'); 
+				var img = $(this).siblings('.upload-display').find('img'); 
+				img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")"; 
+				} 
+		});
+	</script>
+<!--첨부파일-->
+<!-- for bootstrap working -->
+<script src="../js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- //js-files -->
+<!--//tags -->
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/font-awesome.css" rel="stylesheet">
+<!--pop-up-box-->
+<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<!--//pop-up-box-->
+<!-- price range -->
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui1.css">
+<!-- fonts -->
+</head>
+<body>
+
+	
+<div class="m-shoppingcenter-text">
+	<a href="./shop-main.html">쇼핑센터</a>
+</div>
+
+<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="mnk-main-menu-toggle menu-container" style="padding: 0; ">
+     <div class="fdr-menu-box border-shadow" style="padding: 0; ">
+		 <header class="login-top mobile-no pad-no">
+		<div class="container">
+			<div class="login-text">
+				<h6 onclick="location.href='../member/login.html'">로그인</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6 onclick="location.href='../member/member-join.html'">회원가입</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>마이페이지</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>장바구니</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6>배송조회</h6>
+				<h6 style="color:#ddd;">|</h6>
+				<h6 onclick="location.href='../sitemap.html'">사이트맵</h6>
+			</div>
+		</div>
+		</header>
+        <div class="container" style="padding: 5px 0;">
+               <div class="logo" style="float: none; margin-right: 10px; ">
+					<div class="site-logo">
+						<a href="../index.html">
+						<img src="../images/logo.png" alt="로고">
+						<img src="../images/logo-small.png" alt="로고작은거" style="padding-left: 7px;">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+                        
+                        <ul class="menu-line">
+							
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 ">
+								<a href="../shopping-center/shop-main.html" class="active">쇼핑센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../repair-center/repair-main.html">수리센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../rental-center/rental-main.html">렌탈센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../edu-center/edu-main.html">교육센터</a>
+							</li>
+                            <li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064" >
+                            <a target="_blank"  onclick="location.href='../partner-form.html'"><span>파트너신청 &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+                            </li>
+                        </ul>
+
+                        </nav>
+					</div>
+					
+				</div>
+                
+         </div>
+     </div>
+     <div class="container">
+	    
+		<input type="checkbox" id="menuicon2">
+		<label for="menuicon2">
+		<span></span>
+		<span></span>
+		<span></span>
+		</label>
+		<!--전체메뉴 토글버튼-->
+		 <div class="sidebar">
+		<div class="mobile-toggle-bar">
+			<div class="login-section box-m1">
+				<h5>로그인하시면 더 많은 서비스를<br>
+				 얻으실 수 있습니다.</h5>
+				<button class="btn blue-btn" onclick="location.href='../member/login.html'">로그인</button>
+				<button class="btn border-btn" onclick="location.href='../member/member-join.html'">회원가입</button>
+			</div>
+			<table class="info1" style="margin-bottom:10px;">
+			<tr>
+				<td>
+					<i class="fa fa-id-badge" aria-hidden="true"></i>&nbsp;마이페이지
+				</td>
+				<td>
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-truck" aria-hidden="true"></i>&nbsp;배송조회
+				</td>
+				<td>
+					<i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;이용안내
+				</td>
+			</tr>
+			</table>
+			<div class="box-m1 service-m">
+				<h4>전체서비스</h4>
+				<table class="info2">
+					<tr>
+						<td>
+							<img src="../images/shopping-ct-ico.png" alt="쇼핑센타아이콘" onclick="location.href='../shopping-center/shop-main.html'"><br><a>쇼핑센터</a>
+						</td>
+						<td>
+							<img src="../images/repair-ct-ico.png" alt="수리센타아이콘" onclick="location.href='../repair-center/repair-main.html'"><br><a>수리센터</a>
+						</td>
+						<td>
+							<img src="../images/rental-ct-ico.png" alt="렌탈센타아이콘" onclick="location.href='../rental-center/rental-main.html'"><br><a>렌탈센터</a>
+						</td>
+						<td>
+							<img src="../images/edu-ct-ico.png" alt="교육센타아이콘" onclick="location.href='../edu-center/edu-main.html'"><br><a>교육센터</a>
+						</td>
+					</tr>
+				</table>
+				<!-- 
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="찾으시는 물건을 검색하세요.">
+					<span class="input-group-btn">
+					<button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+					</span>
+				</div>
+				input-group -->
+			</div>
+			<!-- /input-group
+			<div class="simple-cart box-m1">
+				<h5>최근 본 상품<span>상품더보기&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></span></h5>
+				<div class="cart-img">
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+					<div class="box-m2">
+						<img src="../images/imgsample.jpg">
+					</div>
+				</div>
+				<div><h6>최근 본 상품이 등록됩니다.</h6></div>등록 안된상태는 이 화면 보여주기
+			</div> -->
+			
+			<table class="info1" style="margin-bottom:10px;">
+			   
+				<tr>
+					<td>
+						<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;고객센터</h5>
+					</td>
+					<td>
+						<h5><img src="../images/info-ico.png" alt="고객센터이모티콘" style="width: 25px;">&nbsp;회사소개</h5>
+					</td>
+				</tr>
+				
+			</table>
+			<table class="info1" style="background:#3399FD; color: #fff; padding:5px;margin-bottom:10px;">
+			    <tr>
+					<td  style="border:none;"  onclick="location.href='../partner.html'">
+						<h5>파트너 신청 <i class="fa fa-paper-plane" aria-hidden="true"></i></h5>
+					</td>
+				</tr>
+				
+				
+			</table>
+			
+		</div>
+	</div>
+	</div>
+</div>
+<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="login-gap">
+</div>
+
+		
+<!--쇼핑몰메인-->
+<div class="shop-top-catagory">
+	<div class="container">
+		<div class="menu-button" type="button" aria-hidden="true" data-toggle="collapse" data-target="#menu-button-toggle" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="border1px">
+			</div>
+			<button class="shop-hamtap" data-target="#total-menu" data-toggle="collapse" aria-label="Toggle navigation" type="button">
+			<img src="../images/tot-btn.png" width="25px;">
+			</button>
+			<div class="shop-hamtap-text">
+				전체카테고리
+			</div>
+			<div class="border1px">
+			</div>
+		</div>
+		<div class="menu-total collapse" id="menu-button-toggle" role="navigation">
+			<ul>
+				<li><strong><a href="./shop-sub.html">부품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코,미놀타</a></li>
+				<li><a href="./shop-sub.html">제록스</a></li>
+				<li><a href="./shop-sub.html">교세라</a></li>
+				<li><a href="./shop-sub.html">앱손</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">소모품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+				<li><a href="./shop-sub.html">제록스(준비중)</a></li>
+				<li><a href="./shop-sub.html">교세라(준비중)</a></li>
+				<li><a href="./shop-sub.html">앱손(준비중)</a></li>
+				<li><a href="./shop-sub.html">브라더 (준비중)</a></li>
+				<li><a href="./shop-sub.html">용지</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">옵션/악세사리</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">완제품</a></strong></li>
+				<li><a href="./shop-sub.html">HP</a></li>
+				<li><a href="./shop-sub.html">캐논</a></li>
+				<li><a href="./shop-sub.html">삼성</a></li>
+				<li><a href="./shop-sub.html">신도리코</a></li>
+				<li><a href="./shop-sub.html">미놀타</a></li>
+				<li><a href="./shop-sub.html">제록스</a></li>
+				<li><a href="./shop-sub.html">옙손</a></li>
+			</ul>
+			<ul>
+				<li><strong><a href="./shop-sub.html">협력사 전용</a></strong></li>
+				<li style="border: 0;"><strong><a href="./shop-sub.html">특가/베스트</a></strong></li>
+			</ul>
+		</div>
+		<div class="shop-search">
+			<form action="#" method="post" class="">
+				<div class="shop-search-btn">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<input type="text" name="text" placeholder="찾으시는 물건을 검색하세요.">
+			</form>
+		</div>
+	</div>
+</div>
+<!--상품 상세보기 시작-->
+<div class="detail-info">
+	<div class="container">
+		<div class="product-nav col-md-12 col-lg-12 col-sm-12 col-xs-12 catagory-box">
+			<h4 style="text-align: left;"><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a> &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp; <a href="./rental-main.html">렌탈센터</a> &nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<a href="#">[삼성] SL-X7400LX 컬러레이저복사기</a></h4>
+		</div>
+		<div class="sub-content">
+			<form name="fitem" method="post">
+				<div class="goods-info">
+					<div class="inner">
+						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12" style="padding: 5px;">
+							<div class="detail-box mobile-yes">
+									<h3>[삼성] SL-X7400LX 컬러레이저복사기 </h3>
+							</div>
+							<div class="zoom-img thumbnail product_pictures">
+								<a href="http://hpsolution.co.kr/shop/largeimage.php?it_id=1537246628&amp;no=1" target="_blank" class="popup_item_image"><img src="../images/rental-big_1.jpg" alt="렌탈샘플" class="big_img"></a>
+
+							</div>
+							<table class="thumb-img-wrap product_pictures_mini">
+								<tr>
+									<td class="active"><img src="../images/rental-thumb_1.jpg" alt="" data-target="rental-thumb_1.jpg" class="pImg"></td>
+									<td><img src="../images/rental-thumb_2.jpg" alt="" data-target="rental-thumb_2.jpg" class="pImg"></td>
+									<td><img src="../images/rental-thumb_3.jpg" alt="" data-target="rental-thumb_3.jpg" class="pImg"></td>
+									<td><img src="../images/rental-thumb_4.jpg" alt="" data-target="rental-thumb_4.jpg" class="pImg"></td>
+									<td><img src="../images/rental-thumb_5.jpg" alt="" data-target="rental-thumb_5.jpg" class="pImg"></td>
+								</tr>
+
+							</table>
+							<div class="goods-info-txt2">
+								<div class="good-code-text">
+									<h5><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> &nbsp;상품코드 : 1537246628 </h5>
+									<h5><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> &nbsp;파트번호 : CN598-80026-h/CN491-80023-h/CV037-67001-h/CN463-67002-h/CN463-67004-h</h5>
+									<h5><i class="fa fa-eye" aria-hidden="true"></i> &nbsp;조회수 : 1</h5>
+									<h5><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;재고위치 : 0000</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5 col-lg-5 col-sm-5 col-xs-12">
+							<form name="dataForm" method="POST">
+								<div class="detail-title">
+									<div class="detail-box mobile-no">
+									<h3>[삼성] SL-X7400LX 컬러레이저복사기 </h3>
+								</div>
+								</div>
+								<div class="goods-info-txt">
+									<div class="float-left p-type">
+										 중고
+									</div>
+									<div class="float-right mark-icon2">
+										<div class="mark-img float-left" onclick="copyLink('yourlink.com');">
+											<img src="../images/mark.png" alt="공유" width="40px" height="40px;">
+											<img src="../images/mark-hover.png" alt="공유-마우스오버" width="40px" height="40px;">
+										</div>
+										<div class="mark-img float-left" onclick="button1_click();">
+											<img src="../images/mark2.png" alt="찜하기" width="40px" height="40px;">
+											<img src="../images/mark2-hover.png" alt="찜하기" width="40px" height="40px;">
+										</div>
+									</div>
+									<div class="float-right good-spec">
+										<h4>
+										컬러 출력 | 35PPM | 1200dpi | USB | 유선 네트워크 | 전자민원발급 | Mac 지원 | 256MB 이상 메모리: 512MB | 새 재생토너 선택가능<br/>
+										</h4>
+									</div>
+									<table class="goods-info-txt-table2" style="margin: 0">
+										<tbody>
+											<tr>
+												<th>
+													 비/회원가격
+												</th>
+												<td class="now_price">
+													<!-- 천단위 콤마 요청사항 -->
+													 350,000원 <input type="hidden" id="it_price" value="340000">
+												</td>
+											</tr>
+											<tr class="it-active">
+												<!-- it-active 쓰면 강조됨 -->
+												<th>
+													 딜러가 <span>5% 할인</span>
+												</th>
+												<td id="lv1_price">
+													 340,000원
+												</td>
+											</tr>
+											<tr>
+												<th>
+													 협력사회원가 <span>10% 할인</span>
+												</th>
+												<td id="lv2_price">
+													 200,000원
+												</td>
+											</tr>
+											<tr>
+												<th>
+													 지사회원가 <span>13% 할인</span>
+												</th>
+												<td id="lv3_price">
+													 100,000원
+												</td>
+											</tr>
+											<tr>
+												<th>
+													 적립금
+												</th>
+												<td>
+													<span style="font-weight: bold">15</span> Point
+												</td>
+											</tr>
+											<tr>
+												<th>
+													 재고
+												</th>
+												<td>
+													 50 개
+												</td>
+											</tr>
+											<tr>
+												<th>
+													 배송상태
+												</th>
+												<td>
+													<div class="delivery-box">
+														 무료배송
+													</div>
+													<div class="delivery-box2">
+														 개별포장배송
+													</div>
+												</td>
+											</tr>
+											<th class="pt_name">
+												 구매수량
+											</th>
+											<td class="pt_count" style="padding: 5px 10px;">
+												<button type="button" class="sit_qty"><i class="fa fa-minus" aria-hidden="true"></i></button>
+												<input type="text" name="ct_qty[1378092857][]" value="1" id="ct_qty_11" class="num_input" size="5">
+												<button type="button" class="sit_qty"><i class="fa fa-plus" aria-hidden="true"></i></button>
+												<!-- <span class="sit_opt_prc">+0원</span> -->
+											</td>
+										</tbody>
+									</table>
+									<!-- 선택옵션 -->
+									<div class="option-class">
+										<table style="margin: 0">
+										<tr>
+											<th>
+												 선택옵션
+											</th>
+											<td class="option1">
+												<select>
+													<option>01 선택옵션 ( + 9,000원 ) </option>
+													<option>02 선택옵션 ( + 5,000원 ) </option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												 추가옵션
+											</th>
+											<td class="option1">
+												<select>
+													<option>01 추가옵션 ( + 9,000원) </option>
+													<option>02 추가옵션 ( + 5,000원) </option>
+												</select>
+											</td>
+										</tr>
+										</table>
+									</div>
+									<!-- 수량 -->
+									<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+									<script src="js/jquery.min.js"></script>
+									<script>$(document).ready(function(c) {
+										$('.close-01').on('click', function(c){
+											$('.opt_add1').fadeOut('fast', function(c){
+												$('.opt_add1').remove();
+											});
+										});	  
+									});
+									    </script>
+									<!-- 옵션 지우기 기능 -->
+									<script>$(document).ready(function(c) {
+											$('.close-02').on('click', function(c){
+												$('.opt_add2').fadeOut('fast', function(c){
+													$('.opt_add2').remove();
+												});
+											});	  
+										});
+											</script>
+									<!-- 옵션 지우기 기능 -->
+									<div class="sit_opt_added">
+										<table style="margin: 0;">
+										<tr class="opt_add1" style="border-bottom: 1px solid #ddd;">
+											<th class="opt_name">
+												<h4>일반 A4용지 /500매</h4>
+												<button type="button" class="sit_qty"><i class="fa fa-minus" aria-hidden="true"></i></button>
+												<input type="text" name="ct_qty[1378092857][]" value="1" id="ct_qty_11" class="num_input" size="5">
+												<button type="button" class="sit_qty"><i class="fa fa-plus" aria-hidden="true"></i></button>
+											</th>
+											<td>
+												<span class="sit_opt_prc">+ 9,000원</span>
+												&nbsp;&nbsp; <button type="button" class="close close-01" data-dismiss=".opt_add1" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											</td>
+										</tr>
+										<tr class="opt_add2">
+											<th class="opt_name">
+												<h4>일반 A4용지 /1000매</h4>
+												<button type="button" class="sit_qty"><i class="fa fa-minus" aria-hidden="true"></i></button>
+												<input type="text" name="ct_qty[1378092857][]" value="1" id="ct_qty_11" class="num_input" size="5">
+												<button type="button" class="sit_qty"><i class="fa fa-plus" aria-hidden="true"></i></button>
+											</th>
+											<td>
+												<span class="sit_opt_prc">+ 5,000원</span>
+												&nbsp;&nbsp; <button type="button" class="close close-02" data-dismiss=".opt_add2" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											</td>
+										</tr>
+										</table>
+									</div>
+									<!-- 총 구매액 -->
+									<div class="sit_tot_price">
+										<table>
+											<tr>
+												<td>
+													<strong>총 상품 금액 :</strong>
+												</td>
+												<td class="price-tot">
+													 680,000<span style="font-size:15px; color: #555;"> 원</span>
+												</td>
+											</tr>
+											<tr style="width:100%; text-align: center;">
+												<td colspan="2" style="color: orangered; background:#eee; font-size: 14px;">
+													<i class="fa fa-exclamation-circle" aria-hidden="true"></i> 재고가 부족하여 구매 할 수 없습니다.
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="btn-group" style="margin-top: 10px; display: table;width:100%;">
+										<button type="submit" class="btn blue-btn" style="display: table-cell; width:50%">바로구매</button>
+										<button type="submit" class="btn gray-btn" style="display: table-cell; width:50%">장바구니</button>
+									</div>
+									<div class="itemform-naverpay" style="text-align: center; width:100%; background:url(../images/border-back.jpg) no-repeat top 0px center;">
+										<script type="text/javascript" src="https://pay.naver.com/customer/js/naverPayButton.js" charset="UTF-8"></script>
+										<script type="text/javascript" src="https://pay.naver.com/customer/js/innerNaverPayButton.js?site_preference=normal&amp;432218" charset="UTF-8"></script>
+										<link id="NAVER_PAY_STYLE" type="text/css" rel="stylesheet" href="https://img.pay.naver.net/static/css/button/button2.css?432218">
+										<script type="text/javascript">//<![CDATA[
+										naver.NaverPayButton.apply({
+										BUTTON_KEY: "672D04F2-F726-4218-B004-6ED26FE5AAD8", // 페이에서 제공받은 버튼 인증 키 입력
+										TYPE: "B", // 버튼 모음 종류 설정
+										COLOR: 1, // 버튼 모음의 색 설정
+										COUNT: 2, // 버튼 개수 설정. 구매하기 버튼만 있으면 1, 찜하기 버튼도 있으면 2를 입력.
+										ENABLE: "Y", // 품절 등의 이유로 버튼 모음을 비활성화할 때에는 "N" 입력
+										BUY_BUTTON_HANDLER : buy_nc, // 구매하기 버튼 이벤트 Handler 함수 등록, 품절인 경우 not_buy_nc 함수 사용
+										WISHLIST_BUTTON_HANDLER : wishlist_nc, // 찜하기 버튼 이벤트 Handler 함수 등록
+										"":""
+										});
+										//]]>
+										</script>
+										<div id="NC_ID_1555984436084938" class="npay_storebtn_bx npay_type_A_2 float-left">
+											<div id="NPAY_BUTTON_BOX_ID" class="npay_button_box ">
+												<div class="npay_button">
+													<div class="npay_text">
+														<span class="npay_blind">NAVER 네이버 ID로 간편구매 네이버페이</span>
+													</div>
+													<table class="npay_btn_list" cellspacing="0" cellpadding="0">
+													<tbody>
+													<tr>
+														<td class="npay_btn_item">
+															<a id="NPAY_BUY_LINK_IDNC_ID_1555984436084938" href="#" class="npay_btn_link npay_btn_pay btn_green" style="box-sizing:content-box; " title="새창"><span class="npay_blind">네이버페이 구매하기</span></a>
+														</td>
+														<td class="npay_btn_item btn_width">
+															<a id="NPAY_WISH_LINK_IDNC_ID_1555984436084938" href="#" class="npay_btn_link npay_btn_zzim " style="box-sizing:content-box; " title="새창"><span class="npay_blind">찜하기</span></a>
+														</td>
+														<td class="npay_btn_item btn_width">
+															<a id="NPAY_TALK_LINK_IDNC_ID_1555984436084938" href="#" class="npay_btn_link npay_btn_talk " style="box-sizing:content-box; " title="새창"><span class="npay_blind">톡톡</span></a>
+														</td>
+													</tr>
+													</tbody>
+													</table>
+												</div>
+												<div id="NPAY_EVENT_ID" class="npay_event">
+													<a id="NPAY_PROMOTION_PREV_IDNC_ID_1555984436084938" href="#" class="npay_more npay_more_prev"><span class="npay_blind">이전</span></a>
+													<p id="NPAY_PROMOTION_IDNC_ID_1555984436084938" class="npay_event_text">
+														<strong class="event_title">이벤트</strong><a href="http://event2.pay.naver.com/event/benefit/list" class="event_link" target="_blank">네이버페이</a>
+													</p>
+													<a id="NPAY_PROMOTION_NEXT_IDNC_ID_1555984436084938" href="#" class="npay_more npay_more_next"><span class="npay_blind">다음</span></a>
+												</div>
+											</div>
+										</div>
+										<input type="hidden" name="naverpay_form" value="item.php">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--추천상품-->
+<div class="product-info-box">
+	<div class="container">
+		<div class="info-title">
+			<h4 style="font-weight: bold; line-height: 3;">
+			<i class="fa fa-star" aria-hidden="true" style="color:#F8D800;font-weight: 600; "></i> 관련상품
+			<div class="slideshow-nav float-right">
+				<a class="slide-nav-btn btn left-button"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+				<a class="slide-nav-btn btn right-button"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			</div>
+			<!--좌우롤링-->
+		
+			</h4>
+			<div class="sildeshow">
+				<div class="slide-inner">
+					<ul class="slide-line">
+						<li class="shop-recommend-item">
+						<div class="shop-box" onclick="location.href='./shop-detail.html'" alt="추천상품1">
+							<div class="img">
+								<img src="../images/shop01.jpg" class="img01">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+						<li class="shop-recommend-item">
+						<div class="shop-box " onclick="location.href='./shop-detail.html'" alt="추천상품2">
+							<div class="img">
+								<img src="../images/shop02.jpg" class="img02">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+						<li class="shop-recommend-item">
+						<div class="shop-box " onclick="location.href='./shop-detail.html'" alt="추천상품3">
+							<div class="img">
+								<img src="../images/shop03.jpg" class="img03">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+						<li class="shop-recommend-item">
+						<div class="shop-box " onclick="location.href='./shop-detail.html'" alt="추천상품4">
+							<div class="img">
+								<img src="../images/shop04.jpg" class="img04">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+						<li class="shop-recommend-item">
+						<div class="shop-box " onclick="location.href='./shop-detail.html'" alt="추천상품5">
+							<div class="img">
+								<img src="../images/shop01.jpg" class="img01">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+						<li class="shop-recommend-item">
+						<div class="shop-box " onclick="location.href='./shop-detail.html'" alt="추천상품6">
+							<div class="img">
+								<img src="../images/shop02.jpg" class="img02">
+							</div>
+							<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+							<h5 class="type"><span>정품</span></h5>
+							<h4>판매가<span>15,700원</span></h4>
+						</div>
+						</li>
+					</ul>
+				</div>
+				<!--//추천상품 슬라이드--->
+			</div>
+		</div>
+	</div>
+</div>
+<!--클릭하면 지점 이동-->
+<script>
+$(document).ready(function(){
+ $('.view-menus li a').click(function(e){
+    $('.view-menus li').removeClass('active'); //클릭시 변화가 필요하니, 효과 클래스빼기
+    $(this).parent('li').addClass('active');//선택된 것에 효과클래스넣기
+      e.preventDefault(); //a태그이기때문에 버벅거림?빼기
+     $('html,body').animate({scrollTop:$(this.hash).offset().top -138}, 500);//부드럽게 스크롤 이동하는부분 - 53부분은 고정 header이기때문에 추가됨, 고정 header가 아닌 경우 삭제
+   });
+})
+</script>
+<!--클릭하면 지점 이동-->
+<div class="product-info-box2" id="item-nav">
+	<div class="container">
+		<ul class="nav nav-tabs nav-justified view-menus">
+			<li role="presentation" class="active"><a href="#viewDetail">상세정보</a></li>
+			<li role="presentation"><a href="#viewReview">구매후기 <span>(2)</span></a></li>
+			<li role="presentation"><a href="#viewComment">상품문의 <span>(4)</span></a></li>
+			<li role="presentation"><a href="#viewEtc">배송/교환/환불</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="product-info-box2 info-group">
+	<div class="container">
+		<div class="nav-content" id="viewDetail">
+			<table class="table-bordered detail-table">
+			<tr>
+				<th>
+					 품명 및 모델명
+				</th>
+				<td>
+					 정품무한잉크팩스복합기//MFC-T910DW
+				</td>
+				<th>
+					 동일모델의 출시년월
+				</th>
+				<td>
+					 2018-01
+				</td>
+			</tr>
+			<tr>
+				<th>
+					 크기, 무게 (무게는 노트북에 한함
+				</th>
+				<td>
+					 상품상세 참조
+				</td>
+				<th>
+					 주요 사양
+				</th>
+				<td>
+					 상품상세 참조
+				</td>
+			</tr>
+			<tr>
+				<th>
+					 정격전압, 소비전력, 에너지소비효율등급
+				</th>
+				<td>
+					 상품상세 참조//상품상세 참조//해당없음
+				</td>
+				<th>
+					 제조국
+				</th>
+				<td>
+					 MADE IN CHINA
+				</td>
+			</tr>
+			<tr>
+				<th>
+					 제조자, 수입자
+				</th>
+				<td>
+					 상품상세 참조
+				</td>
+				<th>
+					 품질보증기준
+				</th>
+				<td>
+					 관련법 및 소비자분쟁해결기준에 따름
+				</td>
+			</tr>
+			<tr>
+				<th colspan="1">
+					 A/S 책임자와 전화번호
+				</th>
+				<td colspan="3">
+					 상품상세 참조//상품상세 참조
+				</td>
+			</tr>
+			</table>
+			<center>
+			<img src="../images/sample-detail-info.jpg">
+			</center>
+		</div>
+		<div class="gap">
+		</div>
+		<div class="nav-content" id="viewReview">
+			<h4><strong><i class="fa fa-commenting" aria-hidden="true"></i> 구매후기</strong></h4>
+			<h5>본 상품평은 해당상품을 구매하신 고객님께서 쓰시는 주관적인 의견입니다. 사실과 다르거나 읽는 고객님에 따라 달리 해석될 수 있음을 알려드립니다.</h5>
+			<div class="inner-custom-box">
+				<div class="custom-box col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<div class="custom-val">
+						 고객평점 &nbsp;<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+						<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+						<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+						<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+						<i class="fa fa-star-o" aria-hidden="true" style="color: #FCAE12"></i>
+						<span>(총 <del>1</del>건 구매 후기 기준)</span>
+					</div>
+					<div class="custom-btn-box float-right">
+						<button class="btn blue-btn" style="margin-right: 10px;">사용후기쓰기</button><button class="btn gray-border-btn">더보기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+					</div>
+				</div>
+			</div>
+			<h5 style="font-size: 12px;">&#45; 구매후기는 구매완료 후 마이페이지 <i class="fa fa-angle-right" aria-hidden="true"></i> 주문배송조회에서 작성하실 수 있습니다. </h5>
+			<div>
+				<table class="table table-hover custom-after-list" style="margin-top: 10px; ">
+				<tbody>
+				<tr aria-hidden="true" data-toggle="collapse" data-target="#text-box2" aria-expanded="false" aria-label="Toggle navigation">
+					<td>
+						<div class="star">
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star-half-o" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star-o" aria-hidden="true" style="color: #FCAE12"></i>
+						</div>
+						<h6>hp고객 <span>&nbsp;&nbsp;<i class="fa fa-clock-o" aria-hidden="true"></i> 19-04-25</span></h6>
+					</td>
+					<td class="title" style="text-align: left;">
+						 빠른 배송 감사합니다. 잘사용중입니다.<br>
+					</td>
+					<td>
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #999;"></i>
+					</td>
+				</tr>
+				<tr class="text-box collapse" aria-expanded="false" role="tablist" id="text-box2">
+					<td colspan="3" style="padding:20px; font-size: 13px; text-align: left;">
+						 내용입니다.<br>
+						 빠른 배송 감사합니다. 잘사용중입니다.<br>
+						 빠른 배송 감사합니다. 잘사용중입니다.<br>
+					</td>
+				</tr>
+				<tr aria-hidden="true" data-toggle="collapse" data-target="#text-box3" aria-expanded="false" aria-label="Toggle navigation">
+					<td>
+						<div class="star">
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+							<i class="fa fa-star" aria-hidden="true" style="color: #FCAE12"></i>
+						</div>
+						<h6>홍길동 <span>&nbsp;&nbsp;<i class="fa fa-clock-o" aria-hidden="true"></i> 19-04-29</span></h6>
+					</td>
+					<td class="title" style="text-align: left;">
+						 빠르고 좋습니다.
+					</td>
+					<td>
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #999;"></i>
+					</td>
+				</tr>
+				<tr class="text-box collapse" aria-expanded="false" role="tablist" id="text-box3">
+					<td colspan="3" style="padding:20px; font-size: 13px; text-align: left;">
+						 내용입니다.<br>
+						 빠른 배송 감사합니다. 잘사용중입니다.<br>
+						 빠른 배송 감사합니다. 잘사용중입니다.<br>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="bottom-number">
+					<div class="nb row row-horizontal-center">
+						<a><i class="fa fa-chevron-left" aria-hidden="true"></i></a><a class="active">1</a><a>2</a><a>3</a><a>4</a>
+						<a><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gap">
+		</div>
+		<div class="nav-content" id="viewComment">
+			<div>
+				<h4>
+				<strong><i class="fa fa-question-circle" aria-hidden="true"></i> 상품문의</strong>
+				<div class="custom-btn-box float-right m-bg-gray" style="margin-bottom:10px;">
+					<button class="btn blue-btn" style="margin-right: 10px;">상품문의하기</button><button class="btn gray-border-btn">더보기 <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+				</div>
+				</h4>
+				<div style="display: contents">
+					<table class="table table-hover faq-list">
+					<thead>
+					<tr>
+						<th scope="col" colspan="2" style="color: #fff;">
+							 문의 / 답변
+						</th>
+						<th scope="col" style="color: #fff;">
+							 작성자
+						</th>
+						<th scope="col" style="color: #fff;">
+							 작성일
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							<span class="mini-box">답변대기</span>
+						</td>
+						<td data-target=".rp-password" data-toggle="modal">
+							 전용토너는 얼마인가요? 몇장정도 출력한 뒤 교체시기 좀 알려주세요. <i class="fa fa-lock" aria-hidden="true"></i>
+						</td>
+						<td>
+							 mei***
+						</td>
+						<td>
+							 19-01-23 12:32
+						</td>
+					</tr>
+					<tr aria-hidden="true" data-toggle="collapse" data-target="#text-box4" aria-expanded="false" aria-label="Toggle navigation">
+						<td>
+							<span class="mini-box">답변완료</span>
+						</td>
+						<td>
+							 흑백만 출력되나요?
+						</td>
+						<td>
+							 hps***
+						</td>
+						<td>
+							 19-01-23 12:32
+						</td>
+					</tr>
+					<tr class="text-box collapse" aria-expanded="false" role="tablist" id="text-box4">
+						<td colspan="4" class="text-box-content" style="text-align: left; padding: 15px 20px;">
+							 흑백만 출력되나요?
+							<div class="reply-text">
+								<span style="color: #2B54AF;"><i class="fa fa-reply fa-rotate-180" aria-hidden="true"></i> A.</span> 네 출력됩니다.
+							</div>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+					<div class="bottom-number">
+						<div class="nb row row--horizontal-center">
+							<a><i class="fa fa-chevron-left" aria-hidden="true"></i></a><a class="active">1</a><a>2</a><a>3</a><a>4</a>
+							<a><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gap">
+		</div>
+		<div class="nav-content" id="viewEtc">
+			<h4><strong><i class="fa fa-truck" aria-hidden="true"></i> 배송/교환/반품</strong></h4>
+			<h5 style="margin-top: 20px; font-size: 15px;">&#8226;배송안내</h5>
+			<table class="table-bordered detail-table" style="margin-bottom: 5px;">
+					<thead>
+						<tr>
+							<td>
+								 구 분
+							</td>
+							<td>
+								 부 품
+							</td>
+							<td>
+								 완제품
+							</td>
+							<td>
+								 비 고
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>
+								 기본배송
+							</th>
+							<td>
+								 16시까지 결제시 당일 출고
+							</td>
+							<td>
+								 15시까지 결제하면 당일 출고
+							</td>
+							<td>
+								 로젠택배
+							</td>
+						</tr>
+						<tr>
+							<th>
+								 방문수령
+							</th>
+							<td>
+								 16시까지 결제시 당일 수령 (제품 준비시간:결제후 2시간)
+							</td>
+							<td>
+								 15시까지 결제하면 당일 수령 (제품준비시간: 결제후 2시간)
+							</td>
+							<td>
+								 물류센터 <br>
+								 하단 약도 참고
+							</td>
+						</tr>
+						<tr>
+							<th>
+								 퀵서비스
+							</th>
+							<td>
+								 16시까지 결제시 (4시간 30분이내 도착)
+							</td>
+							<td>
+								 15시까지 결제시 (4시간 30분이내 도착)
+							</td>
+							<td>
+								 오토바이 / 다미스 퀵
+							</td>
+						</tr>
+					</tbody>
+			</table>
+			<table class="table-bordered detail-table" style="margin-bottom: 5px;">
+				<thead>
+					<tr>
+						<td>
+							배송 특이사항
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="color: red; font-weight: bold;">
+							 &#8226; 네이버페이로 결제하면 일반배송만 가능합니다.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							① 상품의 수령은 발송일로부터 1~3일 소요되며 도서 산간지역은 2~3이 추가 소요됩니다. (제품마다 상이함)
+						</td>
+					</tr>
+					<tr>
+						<td>
+							② 제주도 및 산간도서지역의 경우, 추가 배송료가 발생할 수 있습니다.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							③ 택배비는 상품별 무게, 크기에 따라 별도로 산정되어 있습니다.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							④ 주문확인 및 배송여부 결정은 결제완료시간 기준으로 24시간 이내에 진행됩니다. (영업일 기준, 주말 및 공휴일 제외)
+						</td>
+					</tr>
+					<tr>
+						<td>
+							⑤ 모든 배송은 로젠택배(소형, 중형) 경동화물(대형)을 통해 발송되며 익일부터 이동경로의 확인이 가능합니다.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							⑥ 일시품절 및 주문폭주로 인한 지연시 미리 알려드립니다.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table-bordered detail-table">
+				<thead>
+					<tr>
+						<td>
+							방문수령 지점
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<img src="../images/map-img.jpg" style="width: 100%;" class="mobile-no">
+							<img src="../images/m-map-img.jpg" style="width: 100%;" class="mobile-yes">
+						</td>
+					</tr>
+					
+						<tr>
+							<td>
+								<strong>(주) 에이치피솔루션 물류센터</strong><br>
+								<strong>T.</strong> 031) 429-9884 / <strong>주소.</strong> 경기도 안양시 동안구 시민대로98번길 15 B103, B104 (호계동, 금남빌딩)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>지하철</strong>&nbsp;|&nbsp; 4호선 범계역 <i class="fa fa-angle-right" aria-hidden="true"></i> 7번출구 700m
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>주차장</strong>&nbsp;|&nbsp; 건물 6층 옥외주차장 <i class="fa fa-angle-right" aria-hidden="true"></i> 무료주차
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>버스</strong>&nbsp;|&nbsp; 1, 1-2, 6, 6-3, 32, 35, 350, 917, 542, 333, 1303, 3030, 10-1, 10-2
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<strong>※ 방문수령 유의사항 </strong><br>
+								 방문수령을 원하실 경우 주문시에 필히 방문수령으로 선택 후 사전에 미리 연락 주셔야 가능합니다.<br>
+								 방문 수령 가능시간&nbsp;|&nbsp;평일 10:00~18:00 / 점심시간 12:00~13:00 (토요일,일요일 및 공유일 휴무)
+							</td>
+						</tr>
+					
+				</tbody>
+			</table>
+			<h5 style="font-size: 15px;">&#8226;교환 및 반품</h5>
+			<table class="table-bordered detail-table" style="margin-bottom: 5px;">
+			<thead>
+			<tr>
+				<td>
+					교환 및 반품 안내
+				</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					① 교환, 반품은 원칙적으로 제품 수령일로부터 7일 이내에 가능합니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					② 제품이 표시ㆍ광고의 내용과 다르거나 제품의 불량 ㆍ하자 등 계약내용과 다르게 이행된 경우 제품 수령일수부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내 교환/반품이 가능합니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					③ 제품을 교환/반품 하기 전 고객센터로 미리 연락을 주셔야 합니다. 사전연락 없는 경우 처리지연 및 추가비용이 발생 할 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					④ 제품 자체에 하자가 있는 경우 본 사이트 1:1 문의 게시판으로 문의 주시거나 메신저를 통해 문의 주시면 빠르게 처리하여 드립니다.
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<table class="table-bordered detail-table" style="margin-bottom: 5px;">
+			<thead>
+			<tr>
+				<td>
+					교환 및 반품 불가 안내
+				</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					① 소비자의 책임 있는 사유로 상품 등이 멸실/훼손된 경우 (상품 확인을 위한 포장 훼손 제외)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					② 소비자의 사용/소비에 의해 상품 등의 가치가 현저히 감소한 경우
+				</td>
+			</tr>
+			<tr>
+				<td>
+					③ 시간의 경과에 의해 재판매가 곤란할 정도로 상품 등의 가치가 현저히 감소한 경우
+				</td>
+			</tr>
+			<tr>
+				<td>
+					④ 복제가 가능한 상품 등의 포장을 훼손한 경우
+				</td>
+			</tr>
+			<tr>
+				<td>
+					⑤ 그 밖에 교환/반품을 인정하는 경우 통신판매업자에게 회복할 수 없는 중대한 피해가 예상되는 경우
+				</td>
+			</tr>
+			<tr>
+				<td>
+					* 본사 중고제품의 경우 특성상 미세한 흠집을 이유로 교환, 반품이 되지 않습니다.
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<table class="table-bordered detail-table">
+			<thead>
+			<tr>
+				<td>
+					반품 회수(배송) 비용
+				</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					① 제품 수령 후 보증서비스 기간 3개월이내 제품불량 발생시 교환이나 환불에 필요한 운송비는 전액(왕복) 본사에서 부담
+				</td>
+			</tr>
+			<tr>
+				<td>
+					② 제품 보증서비스 만료(배송완료 후 3개월) 후 제품 불량시 수리에 필요한 운송비는 반액(편도)만 본사에서 부담
+				</td>
+			</tr>
+			<tr>
+				<td>
+					③ 색상교환, 사이즈교환, 모델변경 등의 교환시에는 운송비 전액(왕복)을 고객이 부담.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					④ 소비자 변심에 의해 반품하는 경우 운송비 전액(왕복) 고객이 부담해야 합니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					⑤ 제품포장상태(박스,내용물)이 완벽해야 하며 제품 발송시 구매내역을 확인할 수 있는 영수증등이 포함되어 있어야 합니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					⑥ 반품 및 교환시에는 로젠택배를 이용해 주시기 바라며, 타 택배사 이용의 경우 고객님께 비용이 청구됨을 알려드립니다.
+				</td>
+			</tr>
+			<tr>
+				<td style="color: red; font-weight: bold;">
+					 반송주소 : 경기도 안양시 동안구 시민대로98번길 15, B103호(호계동, 금남빌딩)
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<h5 style="font-size: 15px;">&#8226;A/S</h5>
+			<table class="table-bordered detail-table" style="margin-bottom:5px;">
+			<thead>
+			<tr>
+				<td>
+					A/S 이용안내 참고
+				</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					① A/S 문의는 정책상 유선으로 지원되지 않으니 양해 바랍니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					② 접수는 반드시 본 사이트의 수리 접수페이지에서 진행해 주셔야 수리진행이 원활하게 이루어 질 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					③ 접수 시 구매한 사이트명 (예: 옥션, 지마켓, 스토어팜 등) 구매일자, 구매자성명, 연락처등 필요한 항목을 모두 빠짐없이 입력하여 주시기 바랍니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					④ 정보가 부정확하거나 누락된 경우, A/S 접수가 불가할 뿐 아니라 진행이 원활하지 않을 수 있습니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					⑤ A/S는 본사 또는 협력수리점을 통해 직접 내방 또는 택배 접수를 통해 진행되는 것이 원칙이며, 별도의 방문서비스를 요청하실 경우에는 별도의 출장비가 청구 됩니다.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					⑥ 구매 시 포장된 박스는 별도로 보관하여 A/S접수할 때 사용해 주시기 바랍니다. (고객님의 포장과실로 인한 제품 파손은 별도의 수리비가 청구 됩니다.)
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script>
+$(function() {
+  $(document).ready(function() {
+    var scrollOffset = $('#item-nav').offset();
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > scrollOffset.top) {
+        $('#item-nav').addClass('sticky');
+      }
+      else {
+        $('#item-nav').removeClass('sticky');
+      }
+    });
+  } );
+});
+</script>
+<!--//세로 카테고리용-->
+<div class="height-50">
+</div>
+<!-- footer -->
+<footer>
+<div class="container">
+	<!-- footer third section -->
+	<div class="footer-info w3-agileits-info">
+		<!-- quick links -->
+		<div class="col-sm-2 col-xs-3 address-right ">
+			<div class="col-xs-12 footer-grids site-hidden">
+				<h3>사이트맵</h3>
+				<ul>
+					<li>
+					<a href="../shopping-center/shop-main.html">쇼핑센터</a>
+					</li>
+					<li>
+					<a href="../repair-center/repair-main.html">수리센터</a>
+					</li>
+					<li>
+					<a href="../rental-center/rental-main.html">렌탈센터</a>
+					</li>
+					<li>
+					<a href="../edu-center/edu-main.html">교육센터</a>
+					</li>
+					<li>
+					<a href="#">협력사 신청</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-2 col-xs-6 address-right">
+			<div class="col-xs-12 footer-grids site-hidden">
+				<h3 style="color: transparent"> - </h3>
+				<ul>
+					<li>
+					<a href="../aboutus.html">회사소개</a>
+					</li>
+					<li>
+					<a href="../joinshop.html">입점신청</a>
+					</li>
+					<li>
+					<a href="../total-info.html">이용안내</a>
+					</li>
+					<li>
+					<a href="../pt-info.html">개인정보취급방법</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3 col-xs-6 address-right">
+			<div class="col-xs-12 footer-grids">
+				<h3>고객센터</h3>
+				<ul>
+					<li>
+					<strong style="font-weight:300; color:#007bbe;">부품/재고</strong> &nbsp;1855-4832<br>
+					</li>
+					<li>
+					<strong style="font-weight:300; color:#007bbe;">제품/기술</strong> &nbsp;031-429-9884 </li>
+					<li>
+					<img src="../images/fax.png" alt="팩스" class="contact-icon">0303-3448-4832 </li>
+					<li>
+					<img src="../images/mail.png" alt="메일" class="contact-icon"><a href="mailto:hpsolution@hpsolution.co.kr">hpsolution@hpsolution.co.kr</a>
+					</li>
+					<li>
+					<i class="fa fa-2x"><img src="../images/blog.png" alt="블로그" class="sns"></i><i class="fa fa-2x"><img src="../images/insta.png" alt="인스타그램" class="sns"></i><i class="fa fa-2x"><img src="../images/facebook.png" alt="페이스북" class="sns"></i><i class="fa fa-2x"><img src="../images/youtube.png" alt="유튜브" class="sns"></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //quick links -->
+		<!-- social icons -->
+		<div class="col-sm-4 col-sm-12 footer-grids w3l-socialmk">
+			<div class="agile-sometext">
+				<div class="sub-some">
+					<h5>주식회사 에이치피솔루션</h5>
+					<p>
+						 본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 <br>
+						 (관양동, 안양창조경제융합센터) (우)14055<br>
+						 공장 : 경기도 안양시 동안구 시민대로98번길 15 <br>
+						 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+						 대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+						 통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+					</p>
+					<p class="copyright-mobile">
+						 © Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved 
+						<!-- 3.5일 수정 -->
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- //social icons -->
+		<div class="clearfix">
+		</div>
+	</div>
+	<!-- //footer third section -->
+	<!-- footer fourth section (text) -->
+	<!-- //footer fourth section (text) -->
+</div>
+</footer>
+<!-- //footer -->
+<div class="banner show-on-scroll btn-top">
+	<div class="ban-inner">
+		<div class="ban">
+			<img src="../images/cpicon.jpg"><br>
+			 회사소개
+		</div>
+		<div class="ban" onclick="location.href='../total-info.html'">
+			<img src="../images/faqicon.jpg"><br>
+			 이용안내
+		</div>
+	</div>
+	<a class="btn-top" href="#">TOP<i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+</div>
+
+</body>
+<!--메인 자바스크립트-->
+<script type="text/javascript" src="../js/main.js"></script>
+</html>

@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uj REACT Portfolio</title>
+
+    <!-- css -->
+    <link href="../assets/css/animation_css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/animation_css/animation_page.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+    <!-- web font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/icon/favicon_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="../assets/icon/favicon_96.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/icon/favicon_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="../assets/icon/favicon_192.png">
+  </head>
+
+  <body>
+    <!-- page transition -->
+    <div id="cover"></div>
+
+    <header>
+        <nav class="foot_menu">
+            <ul>
+                <li class="menu">
+                    <a href="../pages/about.html" class="page__click" data-name="about">ABOUT</a>
+                    <span>*</span>
+                </li>
+                <li class="menu">
+                    <a href="../pages/portfolio.html" class="page__click" data-name="portfolio">PORTFOLIO</a>
+                    <span>*</span>
+                </li>
+                <li class="menu active">
+                    <a href="../pages/animation.html" class="page__click" data-name="animation">ANIMATION</a>
+                    <span>*</span>
+                </li>
+                <li class="menu">
+                    <a href="../pages/contact.html" class="page__click" data-name="contact">CONTACT</a>
+                    <span>*</span>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mid_menu">
+            <a href="../pages/main.html" class="menu_btn">
+                <svg width="71" height="68" viewBox="0 0 71 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.5 0L40.6891 22.0017L60.6023 9.95837L48.0276 29.0301L71 34L48.0276 38.9698L60.6023 58.0416L40.6891 45.9983L35.5 68L30.3109 45.9983L10.3977 58.0416L22.9724 38.9698L0 34L22.9724 29.0301L10.3977 9.95837L30.3109 22.0017L35.5 0Z" fill="#1052FA"/>
+                    </svg>                           
+            </a>
+            <a href="http://ujjj.dothome.co.kr/port/index3.html#" target="_blank" class="site_btn_a">
+                <div class="site_btn">
+                <span>other site</span>
+                </div>
+            </a>
+        </nav>
+    </header>
+    <!-- <?php
+        include '../component/header.php'
+    ?> -->
+
+    <main id="wrap">
+      <section id="animation">
+        <div class="repeat_title">
+            <h1 class="repeat">ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION ANIMATION</h1>
+            <h1 class="repeat_reverse">CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT CSS JAVASCRIPT</h1>
+        </div>
+
+        <div class="grid-wrap">
+            <div class="grid">
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css1.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Cube Animation</h3>
+                    <h4 class="grid__item-number">CSS <span> 01</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css2.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Ellipse Animation</h3>
+                    <h4 class="grid__item-number">CSS <span> 02</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css3.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Heart Animation</h3>
+                    <h4 class="grid__item-number">CSS <span> 03</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css4.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Circle Animation</h3>
+                    <h4 class="grid__item-number">CSS <span> 04</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css5.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Card Game</h3>
+                    <h4 class="grid__item-number">SCRIPT <span> 01</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css6.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Minesweeper</h3>
+                    <h4 class="grid__item-number">SCRIPT <span> 02</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css7.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">tetris</h3>
+                    <h4 class="grid__item-number">SCRIPT <span> 03</span></h4>
+                </a>
+                <a href="#" class="grid__item">
+                    <div class="grid__item-bg"></div>
+                    <div class="grid__item-wrap">
+                        <img class="grid__item-img" src="../assets/img/animation_img/ani_css8.png" alt="Some image" />
+                    </div>
+                    <h3 class="grid__item-title">Minesweeper</h3>
+                    <h4 class="grid__item-number">SCRIPT <span> 04</span></h4>
+                </a>
+            </div>
+        </div><!-- /grid-wrap -->
+        <div class="content">
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/animation/cube.html"></iframe>
+                    <h5 class="content__item-title-2">CSS ANIMATION</h5>
+                    <h2 class="content__item-title">CSS 01</h2>
+                </div>
+                <h3 class="content__item-subtitle">Cube Animation</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;div id="wrap"&gt;
+    &lt;section id="animation"&gt;
+        &lt;div class="cube_box"&gt;
+            &lt;div class="cube_ani"&gt;
+                &lt;div class="face front"&gt;&lt;/div&gt;
+                &lt;div class="face back"&gt;&lt;/div&gt;
+                &lt;div class="face left"&gt;&lt;/div&gt;
+                &lt;div class="face right"&gt;&lt;/div&gt;
+                &lt;div class="face top"&gt;&lt;/div&gt;
+                &lt;div class="face bottom"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+                        </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+.cube_ani {
+  animation: cube_rotate 9s linear infinite;
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  transform-style: preserve-3d;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+@keyframes cube_rotate {
+  100% {
+    transform: rotateY(360deg) 
+    rotateX(720deg) rotateZ(1080deg);
+  }
+}
+
+.face {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.front {
+  border: 1px solid #1052fa;
+  transform: translateZ(50px);
+}
+
+.back {
+  border: 1px solid #1052fa;
+  transform: translateZ(-50px);
+}
+
+.left {
+  border: 1px solid #1052fa;
+  transform: translateX(-50px) rotateY(90deg);
+}
+
+.right {
+  border: 1px solid #1052fa;
+  transform: translateX(50px) rotateY(90deg);
+}
+
+.top {
+  border: 1px solid #1052fa;
+  transform: translateY(-50px) rotateX(90deg);
+}
+
+.bottom {
+  border: 1px solid #1052fa;
+  transform: translateY(50px) rotateX(90deg);
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/animation/ellipse.html"></iframe>
+                    <h5 class="content__item-title-2">CSS ANIMATION</h5>
+                    <h2 class="content__item-title">CSS 02</h2>
+                </div>
+                <h3 class="content__item-subtitle">Ellipse Animation</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;div id="wrap"&gt;
+    &lt;section id="animation"&gt;
+        &lt;div class="ellipse_box"&gt;
+            &lt;div class="blob"&gt;
+                &lt;svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 310 350"&gt;
+                &lt;path
+                d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,
+                40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  
+                c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.
+                5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,
+                48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,
+                27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"&gt;
+                &lt;div class="face left"&gt;&lt;/div&gt;
+                &lt;div class="face right"&gt;&lt;/div&gt;
+                &lt;div class="face top"&gt;&lt;/div&gt;
+                &lt;div class="face bottom"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                        </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #86a3ef;
+  width: 15rem;
+  z-index: -1;
+  animation: circle_move 7s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes circle_move {
+  0% {
+    transform: scale(1) translate(1px, -3px);
+  }
+  38% {
+    transform: scale(0.8, 1) translate(30rem, 5rem) rotate(160deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(30rem, 5rem) rotate(160deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0rem, 10rem) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1.3) translate(0rem, 10rem) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translate(1px, -3px);
+  }
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/animation/heart.html"></iframe>
+                    <h5 class="content__item-title-2">CSS ANIMATION</h5>
+                    <h2 class="content__item-title">CSS 03</h2>
+                </div>
+                <h3 class="content__item-subtitle">Heart Animation</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;div id="wrap"&gt;
+    &lt;section id="animation"&gt;
+        &lt;div class="heart_box"&gt;
+            &lt;div class="heart_ani"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                  </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+.heart_box .heart_ani {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e3c3c3;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.heart_box .heart_ani:after {
+  background-color: #e3c3c3;
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+
+.heart_box .heart_ani:before {
+  background-color: #e3c3c3;
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+
+  50% {
+    transform: scale(0.6) rotate(-45deg);
+  }
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/animation/circle.html"></iframe>
+                    <h5 class="content__item-title-2">CSS ANIMATION</h5>
+                    <h2 class="content__item-title">CSS 04</h2>
+                </div>
+                <h3 class="content__item-subtitle">Circle Animation</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;div class="circle_box"&gt;
+    &lt;div class="all"&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="circle_container"&gt;
+            &lt;div class="ani_circle"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="loader"&gt;
+            &lt;div class="load"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+          
+    &lt;svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"&gt;
+        &lt;defs&gt;
+            &lt;filter id="goo"&gt;
+            &lt;feGaussianBlur in="SourceGraphic" 
+            stdDeviation="10" result="blur" /&gt;
+            &lt;feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  
+                                0 1 0 0 0  
+                                0 0 1 0 0  
+                                0 0 0 25 -8"
+            result="goo"
+            /&gt;
+            &lt;feBlend in="SourceGraphic"
+             in2="goo" /&gt;
+            &lt;/filter&gt;
+        &lt;/defs&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+
+                        </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+.all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.5) translate(-50%, -50%);
+  filter: url('#goo');
+}
+
+.circle_container,
+.loader {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  transform-origin: center;
+}
+
+.ani_circle,
+.load-circle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-color: #add8da;
+  left: calc(50% - 40px);
+  border-radius: 50px;
+}
+
+.circle_container:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.circle_container:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.circle_container:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.circle_container:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.circle_container:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.circle_container:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.circle_container:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.loader {
+  transform-origin: center;
+  animation: anim 5s infinite ease-in-out;
+}
+
+.load-circle {
+  width: 60px;
+  height: 60px;
+  top: 20px;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#link {
+  bottom: 20px;
+  color: #000;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#link p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: 5px;
+}
+
+#link:hover {
+  opacity: 1;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img" style="padding-bottom: 5em;"  scrolling="no" src="../component/game/card/index10.html"></iframe>
+                    <h5 class="content__item-title-2">SCRIPT ANIMATION</h5>
+                    <h2 class="content__item-title">SCRIPT 01</h2>
+                </div>
+                <h3 class="content__item-subtitle">Card Game Script</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;style&gt;
+.card {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 80px;
+    perspective: 140px;
+}
+
+.card:nth-child(9),
+.card:nth-child(10),
+.card:nth-child(11),
+.card:nth-child(12) {
+    margin-bottom: 0;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    background: #5f85c7;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+&lt;/style&gt;
+&lt;div class="iframe_body"&gt;
+    &lt;div id="wrapper"&gt;&lt;/div&gt;
+    &lt;a class="reset_btn" onclick="window.location.reload()" 
+    style="cursor: pointer"&gt;reset&lt;/a&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>script</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+var 가로 = 4;
+var 세로 = 3;
+var 색들 = ['red', 'red', 'orange', 'orange',
+'green', 'green', 'yellow', 'yellow', 
+'white', 'white', 'pink', 'pink'];
+var 색후보 = 색들.slice();
+var 색 = [];
+var 클릭플래그 = true;
+var 클릭카드 = [];
+var 완성카드 = [];
+var 시작시간;
+function 셔플() { // 피셔예이츠 셔플
+  for (var i = 0; 색후보.length > 0; i += 1) {
+    색 = 색.concat(색후보.splice(Math.floor
+    (Math.random() * 색후보.length), 1));
+  }
+}
+
+function 카드세팅(가로, 세로) {
+  클릭플래그 = false;
+  for (var i = 0; i < 가로 * 세로; i += 1) {
+    var card = document.createElement('div');
+    card.className = 'card';
+    var cardInner = document.createElement('div');
+    cardInner.className = 'card-inner';
+    var cardFront = document.createElement('div');
+    cardFront.className = 'card-front';
+    var cardBack = document.createElement('div');
+    cardBack.className = 'card-back';
+    cardBack.style.backgroundColor = 색[i];
+    cardInner.appendChild(cardFront);
+    cardInner.appendChild(cardBack);
+    card.appendChild(cardInner);
+    (function (c) { // 클로저 문제 해결
+      card.addEventListener('click', function() {
+        if (클릭플래그 && !완성카드.includes(c)) {
+          c.classList.toggle('flipped');
+          클릭카드.push(c);
+          if (클릭카드.length === 2) {
+            if (클릭카드[0].querySelector('.card-back')
+            .style.backgroundColor 
+            === 클릭카드[1].querySelector('.card-back')
+            .style.backgroundColor) {
+              완성카드.push(클릭카드[0]);
+              완성카드.push(클릭카드[1]);
+              클릭카드 = [];
+              if (완성카드.length === 12) {
+                var 끝시간 = new Date();
+                alert('축하합니다!' + (끝시간 - 시작시간) / 1000 
+                + '초 걸렸습니다.');
+                document.querySelector('#wrapper').innerHTML = '';
+                  //
+                색후보 = 색들.slice(); //색 후보들을 다시 만들어주고
+                색 = []; //색들을 비워주고
+                완성카드 = []; //완성카드도 비워주고
+                시작시간 = null;
+                셔플();
+                카드세팅(가로, 세로);
+              }
+            } else { // 두 카드의 색이 다르면
+              클릭플래그 = false;
+              setTimeout(function() {
+                클릭카드[0].classList.remove('flipped');
+                클릭카드[1].classList.remove('flipped');
+                클릭플래그 = true;
+                클릭카드 = [];
+              }, 1000);
+            }
+          }
+        }
+      });
+    })(card);
+    document.querySelector('#wrapper').appendChild(card);
+  }
+
+  document.querySelectorAll('.card').forEach(function (card, index) 
+  { // 초반 카드 공개
+    setTimeout(function() {
+      card.classList.add('flipped');
+    }, 1000 + 100 * index);
+  });
+
+  setTimeout(function() { // 카드 감추기
+    document.querySelectorAll('.card').forEach(function (card) {
+      card.classList.remove('flipped');
+    });
+    클릭플래그 = true;
+    시작시간 = new Date();
+  }, 5000);
+}
+
+셔플();
+카드세팅(가로, 세로);
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe style="padding-bottom: 6em;" class="content__item-img" scrolling="no" src="../component/game/mine/index7.html"></iframe>
+                    <h5 class="content__item-title-2">SCRIPT ANIMATION</h5>
+                    <h2 class="content__item-title">SCRIPT 02</h2>
+                </div>
+                <h3 class="content__item-subtitle">Minesweeper</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;style&gt;
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid #bbb;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: #222;
+}
+td.opened {
+    background: white;
+}
+td.flag {
+    background: red;
+}
+td.question {
+    background: orange;
+}
+&lt;/style&gt;
+&lt;div class="wrap"&gt;
+    &lt;input id="hor" type="number" 
+    placeholder="가로" value="10"&gt;
+    &lt;input id="ver" type="number" 
+    placeholder="세로" value="10"&gt;
+    &lt;input id="mine" type="number" 
+    placeholder="지뢰" value="20"&gt;
+    &lt;button id="exec"&gt;실행&lt;/button&gt;
+
+    &lt;table id="table"&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;span id="timer"&gt;0&lt;/span&gt;초&lt;/td&gt;
+    &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;div id="result"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+var dataset = [];
+var tbody = document.querySelector
+('#table tbody');
+var 중단플래그 = false;
+var 열은칸 = 0;
+var 코드표 = {
+  연칸: -1,
+  물음표: -2,
+  깃발: -3,
+  깃발지뢰: -4,
+  물음표지뢰: -5,
+  지뢰: 1,
+  보통칸: 0,
+};
+
+// document.querySelector('#exec')
+.addEventListener('click', function() {
+  // 내부 먼저 초기화
+//   tbody.innerHTML = '';
+//   document.querySelector('#result')
+.textContent = '';
+  dataset = [];
+  열은칸 = 0;
+  중단플래그 = false;
+  var hor = parseInt(document
+  .querySelector('#hor').value);
+  var ver = parseInt(document
+  .querySelector('#ver').value);
+  var mine = parseInt(document
+  .querySelector('#mine').value);
+  var hor = 10;
+  var ver = 10;
+  var mine= 20;
+
+  // 지뢰 위치 뽑기
+  var 후보군 = Array(hor * ver)
+    .fill()
+    .map(function (요소, 인덱스) {
+      return 인덱스;
+    });
+  var 셔플 = [];
+
+  while (후보군.length > hor * ver - mine) {
+    var 이동값 = 후보군.splice(Math.floor(Math
+    .random() * 후보군.length), 1)[0];
+    셔플.push(이동값);
+  }
+
+//   console.log(셔플);
+  // 지뢰 테이블 만들기
+  for (var i = 0; i < ver; i += 1) {
+    var arr = [];
+    var tr = document.createElement('tr');
+    dataset.push(arr);
+    for (var j = 0; j < hor; j += 1) {
+      arr.push(코드표.보통칸);
+      var td = document.createElement('td');
+      td.addEventListener('contextmenu',
+       function (e) {
+        e.preventDefault();
+        if (중단플래그) {
+          return;
+        }
+        var 부모tr = e.currentTarget.parentNode;
+        var 부모tbody = e.currentTarget.parentNode
+        .parentNode;
+        var 칸 = Array.prototype.indexOf.call
+        (부모tr.children, e.currentTarget);
+        var 줄 = Array.prototype.indexOf.call
+        (부모tbody.children, 부모tr);
+        if (dataset[줄][칸] === 코드표.연칸) {
+             // 이미 연 칸은 오른쪽 눌러도 효과 없게
+          return;
+        }
+        if (e.currentTarget.textContent === 'X' || 
+        e.currentTarget.textContent === '') {
+          e.currentTarget.textContent = '❗';
+          e.currentTarget.classList.add('flag');
+          if (dataset[줄][칸] === 코드표.지뢰) {
+            dataset[줄][칸] = 코드표.깃발지뢰;
+          } else {
+            dataset[줄][칸] = 코드표.깃발;
+          }
+        } else if (e.currentTarget.textContent 
+        === '❗') {
+          e.currentTarget.textContent = '❔';
+          e.currentTarget.classList.remove('flag');
+          e.currentTarget.classList.add('question');
+          if (dataset[줄][칸] === 코드표.깃발지뢰) {
+            dataset[줄][칸] = 코드표.물음표지뢰;
+          } else {
+            dataset[줄][칸] = 코드표.물음표;
+          }
+        } else if (e.currentTarget.textContent 
+        === '❔') {
+          e.currentTarget.classList.remove('question');
+          if (dataset[줄][칸] === 코드표.물음표지뢰) {
+            e.currentTarget.textContent = '';
+            dataset[줄][칸] = 코드표.지뢰;
+          } else {
+            e.currentTarget.textContent = '';
+            dataset[줄][칸] = 코드표.보통칸;
+          }
+        }
+      });
+      td.addEventListener('click', function (e) {
+        if (중단플래그) {
+          return;
+        }
+        var 부모tr = e.currentTarget.parentNode;
+        var 부모tbody = e.currentTarget.parentNode
+        .parentNode;
+        var 칸 = Array.prototype.indexOf.call(부모tr
+        .children, e.currentTarget);
+        var 줄 = Array.prototype.indexOf.call(부모tbody
+        .children, 부모tr);
+        if ([코드표.연칸, 코드표.깃발, 코드표.깃발지뢰,
+         코드표.물음표지뢰, 코드표.물음표].includes
+         (dataset[줄][칸])) {
+          return;
+        }
+        // 클릭했을때
+        e.currentTarget.classList.add('opened');
+        열은칸 += 1;
+        if (dataset[줄][칸] === 코드표.지뢰) { 
+            // 지뢰 클릭
+          e.currentTarget.textContent = '💣';
+          document.querySelector('#result')
+          .textContent = '💣';
+          중단플래그 = true;
+        } else { // 지뢰가 아닌 경우 주변 지뢰 개수
+          var 주변 = [
+            dataset[줄][칸-1], dataset[줄][칸+1],
+          ];
+          if (dataset[줄-1]) {
+            주변 = 주변.concat([dataset[줄-1][칸-1],
+             dataset[줄-1][칸], dataset[줄-1][칸+1]]);
+          }
+          if (dataset[줄+1]) {
+            주변 = 주변.concat([dataset[줄+1][칸-1],
+             dataset[줄+1][칸], dataset[줄+1][칸+1]]);
+          }
+          var 주변지뢰개수 = 주변.filter(function(v) {
+            return [코드표.지뢰, 코드표.깃발지뢰,
+             코드표.물음표지뢰].includes(v);
+          }).length;
+          // 거짓인 값: false, '', 0, null, undefined, NaN
+          e.currentTarget.textContent = 
+          주변지뢰개수 || '';
+          dataset[줄][칸] = 코드표.연칸;
+          if (주변지뢰개수 === 0) {
+            // console.log('주변을 엽니다');
+            var 주변칸 = [];
+            if (tbody.children[줄-1]) {
+              주변칸 = 주변칸.concat([
+                tbody.children[줄 - 1].children[칸 - 1],
+                tbody.children[줄 - 1].children[칸],
+                tbody.children[줄 - 1].children[칸 + 1],
+              ]);
+            }
+            주변칸 = 주변칸.concat([
+              tbody.children[줄].children[칸 - 1],
+              tbody.children[줄].children[칸 + 1],
+            ]);
+
+            if (tbody.children[줄+1]) {
+              주변칸 = 주변칸.concat([
+                tbody.children[줄 + 1].children[칸 - 1],
+                tbody.children[줄 + 1].children[칸],
+                tbody.children[줄 + 1].children[칸 + 1],
+              ]);
+            }
+            주변칸.filter(function (v) {
+              return !!v;
+            }).forEach(function(옆칸) {
+              var 부모tr = 옆칸.parentNode;
+              var 부모tbody = 옆칸.parentNode.parentNode;
+              var 옆칸칸 = Array.prototype.indexOf
+              .call(부모tr.children, 옆칸);
+              var 옆칸줄 = Array.prototype.indexOf
+              .call(부모tbody.children, 부모tr);
+              if (dataset[옆칸줄][옆칸칸] !== 코드표.연칸) {
+                옆칸.click();
+              }
+            });
+          }
+        }
+        // console.log(열은칸, hor * ver - mine);
+        if (열은칸 === hor * ver - mine) {
+          중단플래그 = true;
+          document.querySelector('#result')
+          .textContent = '승리 ^^';
+        }
+      });
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+  // 지뢰 심기
+  for (var k = 0; k < 셔플.length; k++) { 
+      // 예 60
+    var 세로 = Math.floor(셔플[k] / ver);  
+    // 예 7 -> 6
+    var 가로 = 셔플[k] % ver; // 예 0 -> 0
+    // console.dir(tbody);
+    // console.log(세로);
+    tbody.children[세로].children[가로]
+    .textContent = '';
+    dataset[세로][가로] = 코드표.지뢰;
+  }
+// });
+
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/game/tetris/index13-1.html"></iframe>
+                    <h5 class="content__item-title-2">SCRIPT ANIMATION</h5>
+                    <h2 class="content__item-title">SCRIPT 03</h2>
+                </div>
+                <h3 class="content__item-subtitle">Tettris Script</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="language-html line-numbers">
+                            <code class="language-html">
+&lt;style&gt;
+#tetris,
+#next-table {
+    border-collapse: collapse;
+}
+
+#next-table {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tetris td {
+    border: 1px solid #cbcbcb;
+    width: 18px;
+    height: 18px;
+}
+
+#next-table td {
+    border: 1px solid #cbcbcb;
+    width: 15px;
+    height: 15px;
+}
+
+td.white {
+    background-color: #ffffe9;
+}
+
+td.red {
+    background-color: rgb(235, 84, 84);
+}
+
+td.blue {
+    background-color: rgb(76, 76, 238);
+}
+
+td.orange {
+    background-color: rgb(255, 173, 22);
+}
+
+td.green {
+    background-color: rgb(58, 193, 58);
+}
+
+td.navy {
+    background-color: rgb(38, 38, 109);
+}
+
+td.violet {
+    background-color: rgb(238, 159, 238);
+}
+
+td.yellow {
+    background-color: rgb(255, 225, 0);
+}
+
+td.black {
+    background-color: black;
+}
+&lt;/style&gt;
+
+&lt;div class="wrap"&gt;
+    &lt;table id="tetris"&gt;&lt;/table&gt;
+    &lt;table id="next-table"&gt;
+        &lt;!-- 다음 블록을 그려준다. --&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;div class="button_wrap"&gt;
+        &lt;button class="reset_btn" onClick="window.location.reload()" style="cursor: pointer"&gt;
+        reset
+        &lt;/button&gt;
+        &lt;button id="stop"&gt;stop&lt;/button&gt;
+        &lt;button id="start"&gt;start&lt;/button&gt;
+        &lt;button id="mute" style="display: none"&gt;소리끔&lt;/button&gt;
+        &lt;div class="score"&gt;score : &lt;span id="score"&gt;0&lt;/span&gt;&lt;/div&gt;
+        &lt;!-- &lt;audio id="bgm" src="./Tetris_theme.ogg.mp3" autoplay&gt;&lt;/audio&gt; --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+//테트리스
+let tetris = document.querySelector('#tetris');
+let tetrisData = [];
+let currentBlock;
+let nextBlock;
+let currentTopLeft = [0, 3];
+let blocks = [
+  {
+    name: 's', // 네모
+    center: false,
+    numCode: 1,
+    color: 'red',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [0, 1, 1],
+        [0, 1, 1],
+      ]
+    ],
+  },
+  {
+    name: 't', // T자
+    center: true,
+    numCode: 2,
+    color: 'orange',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [1, 1, 1],
+        [0, 1, 0],
+      ],
+      [
+        [0, 1, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+      ],
+      [
+        [0, 1, 0],
+        [1, 1, 1],
+        [0, 0, 0],
+      ],
+      [
+        [0, 1, 0],
+        [0, 1, 1],
+        [0, 1, 0],
+      ],
+    ]
+  },
+  {
+    name: 'z', // 지그재그
+    center: true,
+    numCode: 3,
+    color: 'yellow',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [1, 1, 0],
+        [0, 1, 1],
+      ],
+      [
+        [0, 1, 0],
+        [1, 1, 0],
+        [1, 0, 0],
+      ],
+      [
+        [1, 1, 0],
+        [0, 1, 1],
+        [0, 0, 0],
+      ],
+      [
+        [0, 0, 1],
+        [0, 1, 1],
+        [0, 1, 0],
+      ],
+    ]
+  },
+  {
+    name: 'zr', // 반대 지그재그
+    center: true,
+    numCode: 4,
+    color: 'green',
+    startRow: 1,
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 1, 0],
+      ],
+      [
+        [1, 0, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+      ],
+      [
+        [0, 1, 1],
+        [1, 1, 0],
+        [0, 0, 0],
+      ],
+      [
+        [0, 1, 0],
+        [0, 1, 1],
+        [0, 0, 1],
+      ],
+    ]
+  },
+  {
+    name: 'l', // L자
+    center: true,
+    numCode: 5,
+    color: 'blue',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [1, 1, 1],
+        [1, 0, 0],
+      ],
+      [
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0],
+      ],
+      [
+        [0, 0, 1],
+        [1, 1, 1],
+        [0, 0, 0],
+      ],
+      [
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 1],
+      ],
+    ]
+  },
+  {
+    name: 'lr', // 반대 L자
+    center: true,
+    numCode: 6,
+    color: 'navy',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0],
+        [1, 1, 1],
+        [0, 0, 1],
+      ],
+      [
+        [0, 1, 0],
+        [0, 1, 0],
+        [1, 1, 0],
+      ],
+      [
+        [1, 0, 0],
+        [1, 1, 1],
+        [0, 0, 0],
+      ],
+      [
+        [0, 1, 1],
+        [0, 1, 0],
+        [0, 1, 0],
+      ],
+    ]
+  },
+  {
+    name: 'b', // 1자
+    center: true,
+    numCode: 7,
+    color: 'violet',
+    currentShapeIndex: 0,
+    shape: [
+      [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+      ],
+      [
+        [0, 1, 0, 0],
+        [0, 1, 0, 0],
+        [0, 1, 0, 0],
+        [0, 1, 0, 0],
+      ],
+      [
+        [0, 0, 0, 0],
+        [1, 1, 1, 1],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+      ],
+      [
+        [0, 0, 1, 0],
+        [0, 0, 1, 0],
+        [0, 0, 1, 0],
+        [0, 0, 1, 0],
+      ],
+    ]
+  },
+];
+
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet'];
+const isActiveBlock = value => (value > 0 && value < 10);
+const isInvalidBlock = value => (value === undefined || value >= 10);
+
+function init() {
+  const fragment = document.createDocumentFragment(); 
+  [...Array(20).keys()].forEach((col, i) => { 
+    const tr = document.createElement('tr');
+    fragment.appendChild(tr);
+    [...Array(10).keys()].forEach((row, j) => {
+      const td = document.createElement('td');
+      tr.appendChild(td);
+    });
+    const column = Array(10).fill(0);
+    tetrisData.push(column);
+  });
+  tetris.appendChild(fragment);
+}
+
+function draw() {
+  tetrisData.forEach((col, i) => {
+    col.forEach((row, j) => {
+      if (row > 0) {
+        tetris.children[i].children[j].className = tetrisData[i][j] >= 10 ? colors[tetrisData[i][j] / 10 - 1]: colors[tetrisData[i][j] - 1];
+      } else {
+        tetris.children[i].children[j].className = '';
+      }
+    });
+  });
+}
+
+
+function drawNext() { // 다음 블록 그리는 함수
+  const nextTable = document.getElementById('next-table');
+  nextTable.querySelectorAll('tr').forEach((col, i) => {
+    Array.from(col.children).forEach((row, j) => {
+      if (nextBlock.shape[0][i] && nextBlock.shape[0][i][j] > 0) {
+        nextTable.querySelectorAll('tr')[i].children[j].className = colors[nextBlock.numCode - 1];
+      } else {
+        nextTable.querySelectorAll('tr')[i].children[j].className = 'white';
+      }
+    });
+  })
+}
+
+function generate() { // 테트리스 블록 생성
+  if (!currentBlock) {
+    currentBlock = blocks[Math.floor(Math.random() * blocks.length)];	
+  } else {
+    currentBlock = nextBlock;
+  }
+  currentBlock.currentShapeIndex = 0;
+  nextBlock = blocks[Math.floor(Math.random() * blocks.length)]; // 다음 블록 미리 생성
+ 
+  drawNext();
+  currentTopLeft = [-1, 3];
+  let isGameOver = false;
+  currentBlock.shape[0].slice(1).forEach((col, i) => { // 게임 오버 판단
+    col.forEach((row, j) => {
+      if (row && tetrisData[i][j + 3]) {
+        isGameOver = true;
+      }
+	  
+    });
+  });
+  currentBlock.shape[0].slice(1).forEach((col, i) => { // 블록 데이터 생성
+    col.forEach((row, j) => {
+      if (row) {
+        tetrisData[i][j + 3] = currentBlock.numCode;
+      }
+    });
+  });
+
+  if (isGameOver) {
+    clearInterval(int);
+    draw();
+    // alert('game over');
+  } else {
+    draw();
+  }
+}
+
+function checkRows() { // 한 줄 다 찼는지 검사
+  const fullRows = [];
+  tetrisData.forEach((col, i) => {
+    let count = 0;
+    col.forEach((row, j) => {
+      if (row > 0) {
+        count++;
+      }
+    });
+    if (count === 10) {
+      fullRows.push(i);
+    }
+  });
+  const fullRowsCount = fullRows.length;
+  tetrisData = tetrisData.filter((row, i) => !fullRows.includes(i));
+  for (let i = 0; i < fullRowsCount; i++) {
+    tetrisData.unshift([0,0,0,0,0,0,0,0,0,0]);
+  }
+  let score = parseInt(document.getElementById('score').textContent, 10);
+  score += fullRowsCount ** 2;
+  document.getElementById('score').textContent = String(score);
+}
+
+function tick() { // 한 칸 아래로
+  const nextTopLeft = [currentTopLeft[0] + 1, currentTopLeft[1]];
+  const activeBlocks = [];
+  let canGoDown = true;
+  let currentBlockShape = currentBlock.shape[currentBlock.currentShapeIndex];
+  for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 아래 블럭이 있으면
+    if (i < 0 || i >= 20) continue;
+    for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
+      if (isActiveBlock(tetrisData[i][j])) { // 현재 움직이는 블럭이면
+        activeBlocks.push([i, j]);
+        if (isInvalidBlock(tetrisData[i + 1] && tetrisData[i + 1][j])) {
+          canGoDown = false;
+        }
+      }
+    }
+  }
+  if (!canGoDown) {
+    activeBlocks.forEach((blocks) => {
+      tetrisData[blocks[0]][blocks[1]] *= 10;
+    });
+    checkRows(); // 지워질 줄 있나 확인
+    generate(); // 새 블록 생성
+    return false;
+  } else if (canGoDown) {
+    for (let i = tetrisData.length - 1; i >= 0; i--) {
+      const col = tetrisData[i];
+      col.forEach((row, j) => {
+        if (row < 10 && tetrisData[i + 1] && tetrisData[i + 1][j] < 10) {
+          tetrisData[i + 1][j] = row;
+          tetrisData[i][j] = 0;
+        }
+      });
+    }
+    currentTopLeft = nextTopLeft;
+    draw();
+    return true;
+  }
+}
+
+let int = setInterval(tick, 500);
+init();
+generate();
+
+document.getElementById('stop').addEventListener('click', function() {
+  clearInterval(int);
+});
+document.getElementById('start').addEventListener('click', function() {
+  if (int) {
+    clearInterval(int);
+  }
+  int = setInterval(tick, 500);
+});
+
+window.addEventListener('keydown', (e) => {
+  switch (e.code) {
+    case 'ArrowLeft': { // 키보드 왼쪽 클릭 = 좌측 한 칸 이동
+      const nextTopLeft = [currentTopLeft[0], currentTopLeft[1] - 1];
+      let isMovable = true;
+      let currentBlockShape = currentBlock.shape[currentBlock.currentShapeIndex];
+      for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 왼쪽 공간 체크
+        if (!isMovable) break;
+        for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
+          if (!tetrisData[i] || !tetrisData[i][j]) continue;
+          if (isActiveBlock(tetrisData[i][j]) && isInvalidBlock(tetrisData[i] && tetrisData[i][j - 1])) {
+            isMovable = false;
+          }
+        }
+      }
+      if (isMovable) {
+        currentTopLeft = nextTopLeft;
+        tetrisData.forEach((col, i) => {
+          for (var j = 0; j < col.length; j++) {
+            const row = col[j];
+            if (tetrisData[i][j - 1] === 0 && row < 10) {
+              tetrisData[i][j - 1] = row;
+              tetrisData[i][j] = 0;
+            }
+          }
+        });
+        draw();
+      }
+      break;
+    }
+    case 'ArrowRight': { // 키보드 오른쪽 클릭 = 우측 한 칸 이동
+      const nextTopLeft = [currentTopLeft[0], currentTopLeft[1] + 1];
+      let isMovable = true;
+      let currentBlockShape = currentBlock.shape[currentBlock.currentShapeIndex];
+      for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 오른쪽 공간 체크
+        if (!isMovable) break;
+        for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
+          if (!tetrisData[i] || !tetrisData[i][j]) continue;
+          if (isActiveBlock(tetrisData[i][j]) && isInvalidBlock(tetrisData[i] && tetrisData[i][j + 1])) {  
+            isMovable = false;
+          }
+        }
+      } 
+      if (isMovable) {
+        currentTopLeft = nextTopLeft;
+        tetrisData.forEach((col, i) => {
+          for (var j = col.length - 1; j >= 0; j--) {
+            const row = col[j];
+            if (tetrisData[i][j + 1] === 0 && row < 10) {
+              tetrisData[i][j + 1] = row;
+              tetrisData[i][j] = 0;
+            }
+          }
+        });
+        draw();
+      }
+      break;
+    }
+    case 'ArrowDown': { // 키보드 아래쪽 클릭 = 하방측 한 칸 이동
+      tick();
+    }
+  }
+});
+window.addEventListener('keyup', (e) => {
+  switch (e.code) {
+    case 'ArrowUp': { // 방향 전환
+      let currentBlockShape = currentBlock.shape[currentBlock.currentShapeIndex];
+      let isChangeable = true;
+      const nextShapeIndex = currentBlock.currentShapeIndex + 1 === currentBlock.shape.length
+        ? 0
+        : currentBlock.currentShapeIndex + 1;
+      const nextBlockShape = currentBlock.shape[nextShapeIndex];
+      for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 돌린 이후 공간 체크
+        if (!isChangeable) break;
+        for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
+          if (!tetrisData[i]) continue;
+          if (nextBlockShape[i - currentTopLeft[0]][j - currentTopLeft[1]] > 0 && isInvalidBlock(tetrisData[i] && tetrisData[i][j])) {    
+            isChangeable = false;
+          }
+        }
+      }
+      if (isChangeable) {
+        while (currentTopLeft[0] < 0) {
+          tick();
+        }
+        for (let i = currentTopLeft[0]; i < currentTopLeft[0] + currentBlockShape.length; i++) { // 돌린 이후 공간 체크
+          for (let j = currentTopLeft[1]; j < currentTopLeft[1] + currentBlockShape.length; j++) {
+            if (!tetrisData[i]) continue;
+            let nextBlockShapeCell = nextBlockShape[i - currentTopLeft[0]][j - currentTopLeft[1]];
+            if (nextBlockShapeCell > 0 && tetrisData[i][j] === 0) {
+              // 다음 모양은 있는데 현재 칸이 없으면
+              tetrisData[i][j] = currentBlock.numCode;
+            } else if (nextBlockShapeCell === 0 && tetrisData[i][j] && tetrisData[i][j] < 10) {
+              // 다음 모양은 없는데  현재 칸이 있으면
+              tetrisData[i][j] = 0;
+            }
+          }
+        }
+        currentBlock.currentShapeIndex = nextShapeIndex;
+      }
+      draw();
+      break;
+    }
+    case 'Space': // 한방에 쭉 떨구기
+      while (tick()) {}
+      break;
+  }
+});
+
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <div class="content__item">
+                <div class="content__item-intro">
+                    <iframe class="content__item-img"  scrolling="no" src="../component/game/tetris/index13-1.html"></iframe>
+                    <h5 class="content__item-title-2">SCRIPT ANIMATION</h5>
+                    <h2 class="content__item-title">SCRIPT 04</h2>
+                </div>
+                <h3 class="content__item-subtitle">Lotto Animation</h3>
+                <div class="content__item-text">
+                    <div class="code_title" style="margin-right: -1px;">
+                        <h3>html</h3>
+                    </div>
+                    <div class="code_table" style="margin-right: -1px;">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+/* IR 효과 3가지 */
+
+/* 1. 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_pm {
+display: block;
+overflow: hidden;
+font-size: 0;
+line-height: 0;
+text-indent: -9999px;
+}
+
+/* 2. 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+.ir_wa {
+display: block;
+overflow: hidden;
+position: relative;
+z-index: -1;
+width: 100%;
+height: 100%;
+}
+
+/* 3. 대체 텍스트가 아닌 접근성을 위한 숨긴 텍스트를 제공할 때 */
+.ir_su {
+overflow: hidden;
+position: absolute;
+width: 0;
+height: 0;
+line-height: 0;
+text-indent: -9999px;
+}
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="code_title">
+                        <h3>css</h3>
+                    </div>
+                    <div class="code_table">
+                        <pre class="line-numbers">
+                            <code class="language-css">
+/* IR 효과 3가지 */
+
+/* 1. 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_pm {
+display: block;
+overflow: hidden;
+font-size: 0;
+line-height: 0;
+text-indent: -9999px;
+}
+
+/* 2. 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+.ir_wa {
+display: block;
+overflow: hidden;
+position: relative;
+z-index: -1;
+width: 100%;
+height: 100%;
+}
+
+/* 3. 대체 텍스트가 아닌 접근성을 위한 숨긴 텍스트를 제공할 때 */
+.ir_su {
+overflow: hidden;
+position: absolute;
+width: 0;
+height: 0;
+line-height: 0;
+text-indent: -9999px;
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div><!-- /content__item -->
+            <button class="content__close">
+                <svg width="68" height="70" viewBox="0 0 68 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6486 36.0628L66.468 67.8822L67.8822 66.468L36.0628 34.6486L67.883 2.82843L66.4688 1.41422L34.6486 33.2344L1.41421 0L0 1.41422L33.2344 34.6486L0.000708103 67.8822L1.41492 69.2965L34.6486 36.0628Z" fill="#1052FA"/>
+                </svg>
+            </button>
+            <!-- <a href="#" class="content__prv">PREVIOUS</a>
+            <a href="#" class="content__nxt">NEXT</a> -->
+            <svg class="content__indicator icon icon--caret"><use xlink:href="#icon-caret"></use></svg>
+        </div>
+        
+        <div class="next_container">
+            <div class="container">
+                <a href="../pages/contact.html" class="next page__click" data-name="contact">
+                <span>NEXT</span>
+                <div class="next_line"></div>
+                <div class="next_wrap">
+                    <h2 class="next_title">CONTACT</h2>
+                    <img src="../assets/img/symbol-4-fff.png" alt="next_symbol">
+                </div>
+                </a>
+            </div>
+        </div><!-- /.next_container -->
+      </section>
+      <!-- /#portfolio -->
+    </main>
+    <!-- /#wrap -->
+     
+    <!-- <?php
+        include '../component/footer.php'
+    ?> -->
+    <footer>
+        <div class="footer_title">
+          <p>I AM FRONTEND DEVELOPER CHO YOO JUNG.</p>
+          <h2>THANK YOU FOR COMING BY.</h2>
+        </div>
+        <div class="footer_line"></div>
+        <div class="container">
+          <ul>
+              <li>CHO YOO JUNG</li>
+              <li>+82 10 9342 0506</li>
+              <li>ujjj56@naver.com</li>
+              <li><a href="#">github</a></li>
+              <li><a href="#">study</a></li>
+          </ul>
+      </div>
+        <address>COPYRIGHT © 2021 CHO YOO JUNG. WEBSITE MADE BY ME.</address>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/animation_js/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/js/animation_js/masonry.pkgd.min.js"></script>
+    <script src="../assets/js/animation_js/charming.min.js"></script>
+    <script src="../assets/js/animation_js/TweenMax.min.js"></script>
+    <script src="../assets/js/animation_js/demo.js"></script>
+    <script src="../assets/js/animation_js/prism.js"></script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/animation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+/* container */
+.container {
+    width: 100%; height: 100vh; 
+    position: relative;
+}
+
+/* main */
+.main {background: #2C3641; overflow: hidden;}
+.main .waveBack {
+    z-index: 500;
+    position: absolute;
+    left: 0; bottom: 0;
+    animation: waveBack 7s infinite linear;
+}
+.main .waveBack > div {
+    width: 100%; height: 20vh;
+    background: #b3b15c;
+}
+.main .waveFront {
+    position: absolute;
+    left: 0; bottom: 0;
+    z-index: 600;
+    animation: waveFront 6s infinite linear;
+}
+.main .waveFront > div {
+    width: 100%; height: 20vh;
+    background: #d4d77d;
+}
+.main .tree1 {
+    width: 50vw;
+    position: absolute;
+    left: 4%; bottom: 22%;
+    z-index: 500;
+    animation: treeMove 4s infinite ease;
+}
+.main .cloud {
+    width: 15vw;
+}
+.main .cloud1 {
+    position: absolute;
+    left: 6%; top: 19%;
+    transform: scale(1.3);
+}
+.main .cloud2 {
+    position: absolute;
+    left: 35%; top: 5%;
+    transform: scale(1.3);
+}
+.main .cloud3 {
+    position: absolute;
+    right: 6%; top: 40%;
+    transform: scale(1.3);
+}
+.main .mainCha {
+    width: 50vw;
+    position: absolute;
+    right: 6%; bottom: 20%;
+    z-index: 600;
+    animation: chaMove 6s linear infinite;
+}
+.main .introTitle {
+    width: 18vw;
+    position: absolute;
+    left: 8%; bottom: 20%;
+    z-index: 600;
+}
+.main .introTitle h2 {
+    font-size: 5vw;
+    font-family: var(--font-eng);
+    color: #fff;
+    letter-spacing: 0.1vw;
+    line-height: 1.1;
+}
+.main .scrollStart {
+    position: absolute;
+    left: 33%; top: 35%;
+    text-align: center;
+    z-index: 600;
+    animation: flash 2.5s infinite linear;
+}
+.main .scrollStart h2 {
+    font-size: 4vw;
+    font-family: var(--font-eng);
+    color: #fff;
+    letter-spacing: 0.1vw;
+    line-height: 1.1;
+    margin-bottom: 5%;
+}
+
+/* main keyframes */
+@keyframes waveBack {
+    0% {transform: translateY(2px) scaleY(1);}
+    20% {transform: translateY(0px) scaleY(1);}
+    40% {transform: translateY(3px) scaleY(1.1);}
+    60% {transform: translateY(2px) scaleY(1);}
+    80% {transform: translateY(3px) scaleY(1.1);}
+    100% {transform: translateY(2px) scaleY(1);}
+}
+@keyframes waveFront {
+    0% {transform: translateY(3px) scaleY(1.1);}
+    20% {transform: translateY(2px) scaleY(1);}
+    40% {transform: translateY(3px) scaleY(1);}
+    60% {transform: translateY(3px) scaleY(1.1);}
+    80% {transform: translateY(2px) scaleY(1);}
+    100% {transform: translateY(3px) scaleY(1.1);}
+}
+@keyframes treeMove {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(5px);}
+    50% {transform: translateY(-3px);}
+    100% {transform: translateY(0);}
+}
+@keyframes chaMove {
+    0% {transform: translateY(0);}
+    20% {transform: translateY(0px);}
+    40% {transform: translateY(0px);}
+    60% {transform: translateY(-5px);}
+    80% {transform: translateY(-7px);}
+    100% {transform: translateY(0);}
+}
+
+/* about */
+.about1 {background: #d4d77d;}
+.about1 .aboutText {
+    position: absolute; 
+    left: 50%; bottom: 35%; 
+    transform: translate(-50%, -50%);
+    font-family: var(--font-kor);
+    text-align: center;
+    font-size: 3.5vw;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+.about1 .aboutText .textEffect1 {
+    display: inline-block;
+    animation: swing 1s infinite alternate;
+}
+.about1 .aboutText .textEffect2 {
+    display: inline-block;
+    animation: swing 2s infinite linear;
+}
+
+/* skills */
+.skills {background: #2C3641;}
+.skills .waveFront {
+    position: absolute;
+    left: 0; top: 0;
+    transform: rotate(180deg);
+}
+.skills .waveFront > div {
+    width: 100%; height: 10vh;
+    background: #d4d77d;
+}
+.skillsTitle h2 {
+    font-family: var(--font-eng);
+    font-size: 7vw;
+    text-decoration: underline;
+    position: absolute;
+    left: 35%; top: 20%;
+}
+.skillsItem {
+    position: absolute;
+    left: 0; bottom: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.item {
+    flex: 0 0 30%; 
+    margin-bottom: 10%;
+    font-family: var(--font-eng);
+    text-align: center;
+}
+.item .itemName h3 {
+    font-size: 4vw;
+}
+.item .itemPer h3 {
+    font-size: 8vw;
+}
+.item .itemPer span {
+    font-size: 4vw; margin-left: 1%;
+}
+
+.skillsCha {
+    width: 40vw;
+    position: absolute;
+    left: 0%; bottom: 0%;
+    transform: rotate(50deg);
+    animation: skillsCha 1.2s linear infinite;
+}
+@keyframes skillsCha {
+    0% {transform:translate(-20%,20%) rotate(50deg);}
+    25% {transform:translate(40%,-40%) rotate(50deg);}
+    50% {transform:translate(100%,-100%) rotate(50deg);}
+    75% {transform:translate(160%, -160%) rotate(50deg);}
+    100% {transform:translate(220%, -220%) rotate(50deg);}
+}
+
+/* site - site */
+.site {background: #2C3641;}
+.site .siteStore {
+    width: 80vw;
+    position: absolute;
+    left: 0; bottom: 7vw;
+}
+.site .siteStore .siteTitle {
+    position: absolute;
+    top: 8%;
+    margin-left: 25%;
+    font-family: var(--font-eng);
+    width: 18vw;
+    font-size: 4.5vw;
+    line-height: 1;
+    position: absolute;
+    left: 0; bottom: 0%;
+}
+.site .light {
+    width: 12vw; height: 40vw;
+    animation: flash 2s linear infinite;
+}
+.site .light.siteLight1 {
+    position: absolute;
+    left: 14.3%; top: 5%;
+}
+.site .light.siteLight2 {
+    position: absolute;
+    left: 33%; top: 5%;
+}
+.site .light.siteLight3 {
+    position: absolute;
+    left: 51.53%; top: 5%;
+}
+.site .light.siteLight4 {
+    position: absolute;
+    left: 70.5%; top: 5%;
+}
+.site .subCha {
+    width: 22vw;
+    position: absolute;
+    right: 0%; bottom: 6vw;
+}
+.site .siteTalk {
+    width: 17vw;
+    position: absolute;
+    right: 21%; top: 33%;
+    animation: bounceIn 1.2s 1 ease;
+}
+.sitePopup ul {
+    width: 80vw; height: 25vh;
+    position: absolute; 
+    left: 5%; top: 6%; right: 0; bottom: 0; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sitePopup li {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    letter-spacing: 0.05vw;
+}
+.sitePopup li .num {
+    font-family: var(--font-eng);
+    font-size: 4vw;
+    letter-spacing: 0.1vw;
+    transition: all 0.2s;
+}
+.sitePopup li .sub {
+    font-family: var(--font-eng);
+    font-size: 5vw;
+    transition: all 0.2s;
+}
+
+/* react */
+.react {background: #B5B5B5;}
+
+
+
+/* sitepage */
+.sitePage {
+    width: 100%; height: 100vh;
+    overflow: hidden;
+    transition:  all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+    z-index: 99999;
+    top: -100%;
+    opacity: 0;
+}
+.sitePage .siteWave {
+    width: 100%; height: 400px;
+    background: url(../img/waveBlue.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0; left: 0;
+}
+.sitePage .siteInfo {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.sitePage .videoWrap {
+    width: 80vw; height: 32vh;
+    overflow: hidden;
+}
+.sitePage .siteText {
+    font-family: var(--font-eng);
+    color: #fff;
+    display: inline-block;
+    margin-top: 7%;
+}
+.sitePage .siteText .left h2 {
+    font-size: 7vw;
+}
+.sitePage .siteText .left ul {
+    margin-top: 4vw;
+}
+.sitePage .siteText .left li {
+    font-size: 4vw;
+    line-height: 1.3;
+}
+.sitePage .siteText .right {
+    display: flex;
+    margin-top: 5%;
+}
+.sitePage .siteText .right a {
+    font-size: 10px;
+    padding: 5% 8%;
+    border-radius: 15px;
+    display: block;
+    background: #2D5E85;
+    margin-right: 2%;
+}
+.video1 {width: 768px; height: 423px;}
+.video2 {width: 768px; height: 390px;}
+.video3 {width: 768px; height: 391.2px;}
+.video4 {width: 768px; height: 398px;}
+.siteClose {
+    font-family: var(--font-eng);
+    font-size: 6vw;
+    color: #fff;
+    position: absolute;
+    left: 7%; top: 3%;
+    transform: rotate(270deg);
+}

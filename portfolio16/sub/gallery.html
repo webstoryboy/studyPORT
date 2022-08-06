@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="portfolio" />
+        <meta property="og:description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주" />
+        <meta name="description" content="portfolio #재밌는 #시크한척 #꿈꾸는 #바보 #퍼블리셔 #나윤주" />
+        <meta name="keywords" content="portfolio" />
+        <meta property="og:url" content="portfolio" />
+        <meta property="og:image" content="../assets/img/thumb.png" />
+        <link href="../assets/img/favicon.png" rel="shortcut icon" />
+        <title>PORTFOLIO-Gallery</title>
+
+        <!-- 부트스트랩 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+        <!-- 스타일 -->
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <!-- <link rel="stylesheet" href="assets/css/bootstrap-grid.css"> -->
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/gallery.css" />
+
+        <!-- aos-js 스타일-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    </head>
+
+    <body>
+        <a href="../index.html" class="logo"></a>
+        <header>
+            <nav class="">
+                <span class="title">I create digital awesomeness.</span>
+
+                <div class="nav-right">
+                    <button class="top-menu-btn open">
+                        <span class="text">menu</span>
+                        <span></span>
+                    </button>
+                    <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                    <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <button class="side-menu-btn open">
+                <span class="text">menu</span>
+                <span></span>
+            </button>
+        </aside>
+        <section class="side-menu">
+            <header class="fixed ml-0">
+                <nav>
+                    <span class="title">I create digital awesomeness.</span>
+
+                    <div class="nav-right">
+                        <button class="top-menu-btn open">
+                            <span class="text">menu</span>
+                            <span></span>
+                        </button>
+                        <a href="http://momo87.dothome.co.kr/php/sign/logIn.php" target="_blanck" class="login">로그인</a>
+                        <a href="http://momo87.dothome.co.kr/php/board/board.php" target="_blanck" class="board-btn">게시판</a>
+                    </div>
+                </nav>
+            </header>
+            <div class="menu-text">
+                <ul class="w-100">
+                    <li onclick="location.href='../index.html#aboutUs">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/profile-b.png)')">
+                            <h3>ABOUT US</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/web.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/bg-sample.png)')">
+                            <h3>WESITE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/mobile.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/1.jpg)')">
+                            <h3>MOBILE</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/javascript.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/2.jpg)')">
+                            <h3>JAVASCRIPT</h3>
+                        </a>
+                    </li>
+                    <li onclick="location.href='../sub/animation.html'">
+                        <a href="#none" onmouseenter="changeImage('url(../assets/img/3.jpg)')">
+                            <h3>ANIMATION</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-img" style="background: url(../assets/img/bg-sample.png) no-repeat center; background-size: cover">
+                <div class="h-100 hover-menu" id="slideImg"></div>
+            </div>
+        </section>
+
+        <a href="../sub/gallery.html" class="all-btn" title="전체보기"> <img src="../assets/img/all-btn.svg" alt="" />전체보기 </a>
+        <span class="scroll-btn">SCROLL</span>
+        <a href="../sub/contact.html" class="contact-btn" title="contact">Contact</a>
+
+        <main>
+            <section class="sub-sec1" style="height: 100vh">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 col-6 cont p-0">
+                            <div id="image-container" class="image-container">
+                                <div id="image1" class="image"></div>
+                                <div id="image2" class="image1"></div>
+                                <div id="image3" class="image2"></div>
+                                <div id="image4" class="image"></div>
+                                <div id="image5" class="image1"></div>
+                                <div id="image6" class="image2"></div>
+                                <div id="image7" class="image"></div>
+                                <div id="image8" class="image1"></div>
+                                <div id="image9" class="image2"></div>
+                                <div id="image10" class="image"></div>
+                                <div id="image11" class="image1"></div>
+                                <div id="image12" class="image2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col cont p-0">
+                            <div id="image-container1" class="image-container">
+                                <div id="image-1" class="image1"></div>
+                                <div id="image-2" class="image2"></div>
+                                <div id="image-3" class="image"></div>
+                                <div id="image-4" class="image1"></div>
+                                <div id="image-5" class="image2"></div>
+                                <div id="image-6" class="image"></div>
+                                <div id="image-7" class="image1"></div>
+                                <div id="image-8" class="image2"></div>
+                                <div id="image-9" class="image"></div>
+                                <div id="image-10" class="image1"></div>
+                                <div id="image-11" class="image2"></div>
+                                <div id="image-12" class="image"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 cont p-0">
+                            <div id="image-container2" class="image-container">
+                                <div id="image_1" class="image2"></div>
+                                <div id="image_2" class="image"></div>
+                                <div id="image_3" class="image1"></div>
+                                <div id="image_4" class="image2"></div>
+                                <div id="image_5" class="image"></div>
+                                <div id="image_6" class="image1"></div>
+                                <div id="image_7" class="image2"></div>
+                                <div id="image_8" class="image"></div>
+                                <div id="image_9" class="image1"></div>
+                                <div id="image_10" class="image2"></div>
+                                <div id="image_11" class="image"></div>
+                                <div id="image_12" class="image1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrap">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="footer-box mb-5">
+                            <h3>Let's talk</h3>
+                            <a class="" href="../sub/contact.html">You can send me the message -></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-box">
+                            <h3>Contents</h3>
+                            <ul>
+                                <li><a href="#">About me</a></li>
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Javascript</a></li>
+                                <li><a href="#">Animation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="footer-box d-flex">
+                            <li><a href="#">Behance</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Github</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right w-100 d-block">Copyright© 2020 naynara</div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+        <script src="../assets/js/sub.js"></script>
+        <script src="../assets/js/work.js"></script>
+        <!-- 스크롤시 하나씩 나옴 -->
+        <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+        <script src="../assets/js/aos-scroll.js"></script>
+    </body>
+</html>

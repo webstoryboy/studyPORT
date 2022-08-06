@@ -1,0 +1,97 @@
+@import url(//db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama);
+@font-face { font-family: 'SeoulNamsanM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* wrap */
+#wrap {
+    background: #000; width: 100%;
+}
+
+/* grid_line */
+#grid_line > div {width: 1px; height: 100vh; position: fixed; top: 0; background: rgba(255,255,255,.2);}
+#grid_line > div:nth-child(1) {left: 20vw;}
+#grid_line > div:nth-child(2) {left: 50vw;}
+#grid_line > div:nth-child(3) {right: 20vw;}
+
+
+
+/* contents */
+#section1 { height: 100vh; overflow: hidden;  display: flex; justify-content: center; align-items: center; }
+#section2 {height: 350vh; overflow: hidden; position: relative;}
+#section3 {height: 300vh;}
+#section4 { width: 100%; overflow: hidden;}
+#section5 {height: 500vh;}
+
+
+/* nav */
+#nav {position: fixed; top: 150px; left: 30px; z-index: 20; display: none; }
+#nav a {font-size: 24px; text-transform: uppercase;}
+#nav a:hover {color: #ffad1e;}
+
+/* main */
+.main  {width: 800px; height: 800px; position: relative; display: flex; justify-content: center; align-items: center;  }
+.main h1 svg{position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); width: 800px; height: 800px; animation: main_ani 13s infinite linear;  transition: all .6s;}
+@keyframes main_ani {
+    0% {transform: translate(-50%, -50%) rotate(180deg);}
+    100% {transform: translate(-50%, -50%) rotate(-180deg);}
+}
+.main .circle {width: 450px; height: 450px; background: #fff url(../img/main.jpg) center;  background-size: cover; border-radius: 50%;}
+
+.main.small {
+    width: 150px; height: 150px; position: fixed; top: 0; left: 0; transition: all .7s; z-index: 20; cursor: pointer;
+}
+.main.small .circle {width: 50px; height: 50px; }
+.main.small h1 svg {width: 100px; height: 100px; transition: width .5s;}
+
+
+/* who */
+.who {margin-top: 200px;}
+.who .who_tit h2 {text-align: center;  font-weight: 900; font-size: 27vw; position: relative;}
+.who .who_tit h2 span {position: absolute; top: 200px; left: 50%; transform: translate( -50%); }
+.who .who_stroke_tit h2 {text-align: center;  font-weight: 900; font-size: 27vw; position: relative;}
+.who .who_stroke_tit h2 span {position: absolute; top: 200px; left: 50%; transform: translate( -50%); -webkit-text-fill-color: transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff; z-index: 2;}
+.who  .who_img {position: relative;}
+.who  .who_img > div {position: absolute; }
+.who  .who_img > div >  img {width: 80%;}
+.who  .who_img > div:nth-child(1) {left: 350px; top: 250px; }
+.who  .who_img > div:nth-child(2) {left: 0px; top: 565px; }
+.who  .who_img > div:nth-child(3){right: -300px; top: 535px;}
+.who_text {position: absolute; top: 55%; left: 50%; transform: translate( -50%); width: 70vw}
+.who_text p {font-family: 'SeoulNamsanM'; font-size: 60px; line-height: 2.5;}
+
+/* skills */
+.skills h3 {text-align: center;  font-weight: 900; font-size: 18vw; color: #ffad1e; margin-bottom: 200px;}
+.skill_list {margin-right: 19%;}
+.skill_list p {text-align: right; font-size: 90px; margin-bottom: 160px; font-family: 'Posterama'; }
+.skill_list p span {display: block; height: 10px;}
+.skill_list p  .rect1 {fill: #fff; }
+.skill_list p  .rect2 {fill: #ffad1e;  transform: translateX(100%); }
+.skill_list p  .rect2.fill {transform: translateX(0%);  transition: transform 1.5s cubic-bezier(1,-0.01, 0, 0.9);}
+
+/* site */
+.site .site_main {height: 150vh}
+.site .site_main .site_tit h2 {text-align: center;  font-weight: 900; font-size: 27vw; position: relative; letter-spacing: 30px; }
+.site .site_main .site_tit h2 span {position: absolute; top: 200px; left: 50%; transform: translate( -50%);  z-index: 0}
+.site .site_main .site_stroke_tit h2 {text-align: center;  font-weight: 900; font-size: 27vw; position: relative; letter-spacing: 30px; }
+.site .site_main .site_stroke_tit h2 span {position: absolute; top: 200px; left: 50%; transform: translate( -50%); -webkit-text-fill-color: transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #fff; z-index: 3;}
+.site_img {position: relative;}
+.site_img > div {width: 1200px; z-index: 2; position: absolute; }
+.site_img  div:nth-child(1) {top: 30%; left: 130%; transform: rotate(0deg); transition: all 2.6s cubic-bezier(1,-0.01, 0, 0.9);  }
+.site_img  div:nth-child(2) {top: 40%; left: -50%;  transform: rotate(0deg); transition: all 2.6s cubic-bezier(1,-0.01, 0, 0.9);}
+.site_img.motion  div:nth-child(1) {top: 30%; left: 35%; transform: rotate(770deg);}
+.site_img.motion  div:nth-child(2) {top: 65%; left: -5%; transform: rotate(638deg);}
+.site_img >div img {width: 100%;}
+
+.site_intro {display: flex; flex-direction: column; align-items: center;}
+.site_intro >div {width: 70%; height: 1500px;}
+.site_intro .site01 {position: relative; }
+.site_intro .site01 .site_mockup > img {position: absolute; }
+.site_intro .site01 .site_mockup > img:nth-child(1) {top: 15%; left: 50%; transform: translatex(-50%);}
+.site_intro .site01 .site_mockup > img:nth-child(2) {top: 10%; right: 20%; transition: all 2.3s cubic-bezier(0, 1.18, 1, 0.76); }
+.site_intro .site01 .site_mockup.active > img:nth-child(2) {top: 0%; right: -5%;}
+
+
+.site_intro .site02 {background: #265432;}
+.site_txt {margin-top: 65%; text-align: center; }
+.site_txt h4 {font-size: 40px;  font-family: 'Posterama';font-weight: 100; margin-bottom: 10px;}
+.site_txt p {font-size: 28px;  font-family: 'SeoulNamsanM'; margin-bottom: 30px; }
+.site_btn button {font-size: 18px; background: transparent; border: 1px solid #fff; border-radius: 50px; padding:10px 50px; margin: 5px; }

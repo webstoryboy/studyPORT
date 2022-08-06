@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pageYOffset">0</div><!-- pageYOffset -->
+    
+    <header id="header">
+        <div class="logo"><a href="#">pw</a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Site</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div id="contents">
+        <div id="section1">
+            <div class="container">
+                <div class="sec1">
+                   section1
+                    <div class="text-wrap">
+                        <p 
+                            data-0 = "transform: translatex(0px)"
+                            data-1000 = "transform: translatex(1000px)"
+                            >web publisher portfolio web publisher portfolio web publisher portfolio</p>
+                        <p
+                            data-0 = "transform: translatex(0px)"
+                            data-1000 = "transform: translatex(-1000px)"
+                        >web publisher portfolio web publisher portfolio web publisher portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //section1 -->
+
+        <div id="section2">
+        section2
+        </div>
+        <!-- //section2 -->
+        
+        <div id="section3">section3</div><!-- //section3 -->
+        <div id="section4">
+           section4
+            <div class="sec4">
+                sec4    
+            </div>    
+        </div>
+        <!-- //section4 -->
+        <div id="section5">section5</div><!-- //section5 -->
+        <div id="section6"></div><!-- //section6 -->
+    </div>
+    <!-- //contents -->
+
+    <script src="http://dasolyoo.dothome.co.kr/port/assets/js/jquery-1.12.4.min.js"></script>
+    <script src="http://dasolyoo.dothome.co.kr/port/assets/js/skrollr.min.js"></script>
+    <script>
+        //skrollr
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+
+        // window.addEventListener("scroll", () => { 
+        //     let pageYOffset = parseInt(window.pageYOffset || document.documentElement.scrollTop);
+        //     document.querySelector(".pageYOffset").textContent = pageYOffset;
+        // });
+
+        $(window).scroll(function(){
+            let pageYOffset = $(window).scrollTop();
+            $(".pageYOffset").text(pageYOffset)
+
+            let off4 = $("#section4").offset().top
+
+            let oaa = pageYOffset - $("#section4").offset().top
+            
+            if(pageYOffset > off4){
+                $(".sec4").css("transform","translatex("+ -oaa+"px)")
+            } else {
+                $(".sec4").css("background","red")
+            }
+        }); 
+
+
+
+
+    </script>
+</body>
+</html>

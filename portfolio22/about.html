@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT ME</title>
+    <link rel="stylesheet" hrep="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- web font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <style>
+        #loading1 {
+            background: #333;
+            position: fixed;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 10000  ;
+            transition: all 0.3s;
+            
+        }
+        #loading2{
+          background: #333;
+            position: fixed;
+            right: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 10000  ;
+            transition: all 0.3s;
+
+        }
+        #loading1.active,
+        #loading2.active{
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div id="loading1" class="active"></div>
+    <div id="loading2" class="active"></div>
+
+
+
+    <header id="header">
+      <nav id="nav">
+        <div class="scroll">0</div>
+        <li class="react_btn">
+          <a href="index.html">REACT</a>
+        </li>
+        <ul>
+          <li><a href="works.html" class="page__click">SITE</a></li>
+          <li><a href="js.html">CSS/ANI</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <span class="sub_title animate__animated animate__jello ">I'm Ready to work</span>
+        <h2 class="animate__animated animate__jello">ABOUT ME</h2>
+        <p class="title_desc animate__animated animate__jello">저의 이야기를 소개합니다</p>
+        <div class="animal">
+          <img src="./assets/img/g2.svg" alt="" />
+        </div>
+        <i class="bg-item2 paperplane2"></i>
+        <i class="bg-item3"></i>
+        <i class="bg-item4"></i>
+      </div>
+    </header>
+    <section id="about_main">
+      <i class="character"></i>
+
+      <div class="container">
+        <div class="about_desc">
+          <div class="star">
+            <img 
+            src="assets/img/star.svg" alt="">
+          </div>
+          <p class="about_p">Effort is the</p>
+          <svg id="redline">
+            <path stroke-width='8' fill='none' stroke="#c01b1b" 
+                  d="M 0,0 C 0,10 200,10 300,1 " />
+          </svg>
+          <p class="about_p">best way to</p>
+          <p class="about_p">realizing your</p>
+          <p class="about_p">
+            Dreams. <span class="about_p_span"> “노력은 꿈을 실현하는 최고의 방법이다.” </span>
+          </p>
+        </div>
+      </div><!--container-->
+      <div class="menu--item">
+        <div class="menu--word">
+          Everything will be done if you try hard.
+          Everything will be done if you try hard.
+          Everything will be done if you try hard.
+          Everything will be done if you try hard.
+        </div>
+      </div>
+        <div class="about_site">
+          <div class="about_left">
+            “노력은 꿈을 실현하는 최고의 방법이다.”, “열심히 노력한다면, 모든 것은 성취될 것이다.”
+            항상 가슴 속에 새기고 되짚어보는 말입니다. 프론트엔드 개발자가 되기 위한 공부를
+            계속하면서 낯선 개념들과 새로 알아가야 할 개발지식들이 걷잡을 수 없이 많다는 생각에
+            막막한 느낌이 든 적이 많습니다. 꾸준히 개발공부하는 환경을 위해 대학 앞의 스터디카페에서
+            몇 달간 아침 10시 - 밤 9시까지의 패턴을 지키며 살아보니
+          </div>
+          <div class="about_right">
+            세상에 결코 쉽게 얻어지는 것은 없구나 느낍니다. 그럼에도 계속 공부하는 것은 웹사이트를
+            구현하고, 코드가 실현될때 느껴지는 성취감과 기쁨 때문입니다. 매일의 노력이 쌓이면
+            개발자라는 꿈이 어느새 이루어질 것이라 믿습니다. 지치지 않고 매일 꾸준히 묵묵히,
+            어렵더라도 포기하지 않고 방법을 찾아나가는 것이 진정한 개발자의 자세라고 생각합니다.
+            저의 진심이 닿았으면 좋겠습니다.
+          </div>
+        </div>
+        <div class="about_site clearfix">
+          <div class="about_left">
+            <div class="about_imgbox1"><img src="./assets/img/me_1.png" alt="" /></div>
+            <div class="about_imgbox2"><img src="./assets/img/me_2.png" alt="" /></div>
+          </div>
+          <div class="about_right">
+            <span class="starbox1"><img class="star1 animate__animated animate__tada animate__infinite" src="assets/img/3_2.png" alt=""></span>
+            <span class="starbox2"><img class="star1 animate__animated animate__tada animate__infinite " src="assets/img/3_2.png" alt=""></span>
+            <p class="about_right_desc">I WANT TO WORK FRONT_END DEV</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="about_footer">
+      <div class="container1">
+        <div class="footer_left">
+          <span class="s_title">62, Ewhayeodae 8-gil, Seodaemun-gu,<br>
+            Seoul, Republic of Korea</span>
+          <div class="ul_box">
+            <ul class="ul_sitemap">
+              <div class="li_left">
+                <span> SITEMAP </span>
+                <li><a href="">HOME</a></li>
+                <li><a href="">WORKS1</a></li>
+                <li><a href="">WORKS2</a></li>
+              </div>
+              <div class="li_right">
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">ABOUT</a></li>
+              </div>
+            </ul>
+            <ul class="ul_social">
+              <div class="li_left">
+                <span> SOCIAL </span>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">BEHANCE</a></li>
+              </div>
+              <div class="li_right">
+                <li><a href="">LINKDIN</a></li>
+                <li><a href="">GITHUB</a></li>
+                <li><a href="">GITBOOK</a></li>
+              </div>
+            </ul>
+          </div>
+          <!--ulbox-->
+          <p class="big_title">Get in Touch</p>
+          <div class="line_ani">ease</div>
+          <p>Copyright 2021 ⓒ Kim Hye Su. All rights reserved.</p>
+        </div>
+        <div class="footer_right">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+            <defs>
+              <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+              </path>
+              <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_bottom">
+                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250" to="555 250 250" repeatCount="indefinite" />
+              </path>
+            </defs>
+              <text dy="70" textLength="1220">
+                <!-- textLength (essentially the circumference of the circle) is used as an alternative to letter-spacing for Firefox, which currently doesn't support letter-spacing for SVG -->
+                <textPath xlink:href="#textcircle_top">FRONT_END DEV</textPath>
+                <textPath xlink:href="#textcircle_bottom">CONTACT ME </textPath>
+              </text>
+            </svg>
+          <div class="profile_box">
+            <img src="assets/img/profile.jpg">
+          </div>
+        </div>
+     
+      </div>
+    </footer>
+    <script src="assets/js/jquery-1.12.4.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+    <!-- 원형텍스트회전 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+
+        setTimeout(function(){
+            $("#loading1,#loading2").removeClass();
+        },300)
+
+
+        document.querySelectorAll('.page__click').forEach(elem => {
+            elem.addEventListener("click", e => {
+                e.preventDefault();
+                
+                const href = elem.innerText.toLowerCase();
+                
+                document.querySelector('#loading').classList.add('active');
+                setTimeout( () => { 
+                    window.location.href = "http://designerkhs.dothome.co.kr/port2/"+href+".html";
+                }, 1400);
+            })
+        })
+    
+
+      //스크롤 애니
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        $('.scroll').text(scroll);
+      
+        let offset = scroll - $('#about_footer').offset().top;
+      
+
+         if (scroll > $('.about_imgbox1').offset().top) {
+           $('.line_ani').addClass('on')
+         } else {
+           $('.line_ani').removeClass('on')
+         }
+      
+      });
+      </script>
+  </body>
+</html>

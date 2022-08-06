@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <title>국가기념관 스마트전시 안내시스템</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+    <script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script> 
+    
+    
+    <!-- jquery -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- main css -->
+    <link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/font.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="../css/xeicon.css" rel="stylesheet">
+    <link href="../css/datepicker.css" rel="stylesheet">
+
+    
+
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+
+</head>
+
+<header>
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="navbar-brand" href="#">
+                <ul>
+                    <a href="../_main/main.html">
+                        <li style="margin-right:10px;"><img src="../images/logo.svg"></li>
+                        <li>국가기념관 스마트 전시안내 시스템</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul class="row">
+                    <li class=" ">
+                        <a class="nav-link" href="../_styleGuide/component.html"><span class="btn btn-xs btn-secondary"><i class="xi-cog"></i> 스타일가이드</span></a>
+                    </li>
+                    <li class="dropdown-select">
+                        <select class="custom-select" style="background-color: #f3f5f7;">
+                            <option selected>독립기념관</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#"><img src="../images/icon/notice.png" class="ico-box">공지사항</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false"><img src="../images/icon/alert.png"
+                                class="ico-box">알림<span class="alarm-num">12</span></a>
+                        <div class="dropdown-menu alarm-menu" aria-labelledby="alarm-notice"
+                            style="transform: translate3d(0px, 54px, 0px);!important">
+                            <button class="dropdown-item" type="button">기념관 및 계정생성 신청<span class="alarm-num"
+                                    style="position: absolute;">4</span></button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" type="button">비콘 베터리 교체<span
+                                    class="alarm-num">33</span></button>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#"><img src="../images/icon/mypage.png" class="ico-box">마이페이지</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="../_main/login.html"><img src="../images/icon/logout.png"
+                                class="ico-box">로그아웃</a>
+                    </li>
+                    <li>
+                        <button class="btn search-btn" type="submit"><img src="../images/icon/search.png"></button>
+                    </li>
+
+                </ul>
+                <div class="search-bar">
+                    <!-- D : search-btn 클릭 나타나기 -->
+                    <div class="search-bar-box float-right">
+                        <form class="" style="width: 670px;">
+                            <select class="custom-select " style="width: 175px; background-color:#ffffff">
+                                <option selected>전시품명</option>
+                                <option value="1">전시안내번호</option>
+                                <option value="2">전시품 ID</option>
+                                <option value="3">전시안내내용</option>
+                            </select>
+                            <input class="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <section class="menu">
+        <div class="container">
+            <ul class="menu-list">
+                <li class="col-md-2">전시품 전시안내 관리</li><!-- D : 활성화페이지일 경우 : on 처리 -->
+                <li class="col-md-2">실내측위 관리</li>
+                <li class="col-md-2">기념관,전시품 관리</li>
+                <li class="col-md-2">주요통계</li>
+                <li class="col-md-2">시스템관리</li>
+                <li class="col-md-2">컨텐츠 및 서비스 관리</li>
+            </ul>
+        </div>
+        <!-- 메뉴드롭 -->
+        <div class="menu-drop" id="multiCollapseExample1">
+            <div class="container">
+                <ul class="menu-drop-list">
+                    <li class="col-md-2">
+                        <ul>
+                            <li class="on"><a href="../_01_exhibit-info/sub1-1-1.html">기념관 APP메인 관리</a></li>
+                            <!-- D : 활성화페이지일 경우 : on 처리 -->
+                            <li><a href="../_01_exhibit-info/sub1-2-1.html">카테고리별 전시안내 관리</a></li>
+                            <li><a href="../_01_exhibit-info/sub1-3.html">현충시설 컨텐츠 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 ">
+                        <ul>
+                            <li><a href="../_02_indoor-position/sub2-1-1.html">비콘 기본정보 관리</a></li>
+                            <li><a href="../_02_indoor-position/sub2-2-1.html">Zoning 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 ">
+                        <ul>
+                            <li><a href="../_03.memorial-exhibit/sub3-1-1.html">전시품 정보 관리</a></li>
+                            <li><a href="../_03.memorial-exhibit/sub3-2-1.html">기념관 정보 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 ">
+                        <ul>
+                            <li><a href="../_04.statistics/sub4-1.html">방문자 이용현황</a></li>
+                            <li><a href="../_04.statistics/sub4-2.html">전시품별 전시안내 이용현황</a></li>
+                            <li><a href="../_04.statistics/sub4-3.html">ICT 컨텐츠 이용현황</a></li>
+                            <li><a href="../_04.statistics/sub4-4.html">군장병 관람인증 현황</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 ">
+                        <ul>
+                            <li><a href="../_05.system/sub5-1-1.html">시스템 공지사항</a></li>
+                            <li><a href="../_05.system/sub5-2.html">계정요청처리</a></li>
+                            <li><a href="../_05.system/sub5-2-1.html">관리자 계정관리</a></li>
+                            <li><a href="../_05.system/sub5-3.html">그룹/권한 관리</a></li>
+                            <li><a href="../_05.system/sub5-4.html">공통코드 관리</a></li>
+                            <li><a href="../_05.system/sub5-5-1.html">컨텐츠 변경이력관리</a></li>
+                            <li><a href="../_05.system/sub5-6-1.html">로그 관리</a></li>
+                            <li><a href="../_05.system/sub5-7.html">데이터연동 수동관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-2 ">
+                        <ul>
+                            <li><a href="../_06.contents-service/sub6-1.html">영상 컨텐츠 관리</a></li>
+                            <li><a href="../_06.contents-service/sub6-0.html">텍스트AR 정보 관리</a></li>
+                            <li><a href="../_06.contents-service/sub6-2.html">APP 공지사항 관리</a></li>
+                            <li><a href="../_06.contents-service/sub6-3.html">군인별 관람인증 관리</a></li>
+                            <li><a href="../_06.contents-service/sub6-4.html">관람인증 문제은행 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</header>
+
+</html>

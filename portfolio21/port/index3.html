@@ -1,0 +1,1858 @@
+<?php
+    include './connect/connect.php';
+    include './connect/session.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="author" content="ujjj">
+    <meta name="description" content="uj Portfolio">
+    <title>uj Portfolio</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://unpkg.com/swiper@5.2.0/css/swiper.min.css'>
+    <!-- <link rel="stylesheet" href="assets/css/cursor.css"> -->
+
+    <link rel="stylesheet" href="assets/css/reset3.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="assets/icon/favicon_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icon/favicon_96.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icon/favicon_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icon/favicon_192.png">
+    
+
+    <!-- web font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- cursor -->
+    <!-- <script>document.documentElement.className = "js";
+        var supportsCssVars = function supportsCssVars() {
+          var e,
+              t = document.createElement("style");
+          return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script> -->
+</head>
+
+<body id="skrollr-body">
+    <div id="wrap">
+        <div class="pageYOffset" data-position="fixed">0</div><!-- pageYOffset -->
+        <!-- <svg class="cursor" width="200" height="200" viewBox="0 0 200 200">
+			<defs>
+				<filter id="filter-1" x="-50%" y="-50%" width="200%" height="200%" 
+				filterUnits="objectBoundingBox">
+					<feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="5" result="warp" />
+					<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="90" in="SourceGraphic" in2="warp" />
+				</filter>
+			</defs>
+			<circle class="cursor__inner" cx="100" cy="100" r="60"/>
+		</svg> -->
+        <header id="header" data-position="fixed">
+            <div class="logo homeBtn">
+                <a href="#" class="logo_1"><img src="assets/img/logo.png" alt="홈버튼"></a>
+                <a href="#" class="logo_2"><img src="assets/img/logo_white.png" alt="홈버튼"></a>
+            </div>
+            <nav class="menu">
+                <a href="#" class="menuBtn"></a>
+                <ul>
+                    <?php if( isset($_SESSION['memberID']) ){ ?>
+                            <li class="line" style="color: #575656;"><?=$_SESSION['youNickName']?></li>
+                            <li><a href="./sign/logOut.php"><span>LOGOUT</span></a></li>
+                    <?php } else { ?>
+                            <li><a href="./sign/logIn.php"><span>LOGIN</span></a></li>
+                            <li><a href="./sign/signUp.php"><span>SIGNUP</span></a></li>                
+                    <?php } ?> 
+                    <li><a href="./board/board.php"><span>BOARD</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /#header -->
+
+        <!-- php_btn -->
+        <div class="php">
+            <div class="sign">
+                <?php if( isset($_SESSION['memberID']) ){ ?>
+                    <a href="#"><?=$_SESSION['youNickName']?></a>
+                    <a href="./sign/logOut.php"><span>logOut</span></a>
+                <?php } else { ?>
+                    <a href="./sign/logIn.php"><span>logIn</span></a>
+                    <a href="./sign/signUp.php"><span>signUp</span></a>                
+                <?php } ?> 
+            </div>
+            <div class="php_open_btn"><a href="#"></a></div>
+        </div>
+        <!-- /php_btn -->
+
+        <section id="main" class="point">
+            <div class="container section_main">
+                <h2 class="ir_so">메인페이지</h2>
+                <div class="main_title">
+                    <div class="text_wrap">
+                        <h1 data-0="transform: translatex(0px)" data-1000="transform: translatex(1000px)">
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                        </h1>
+                        <h1 data-0="transform: translatex(0px)" data-1000="transform: translatex(-1000px)">
+                            <span>portfolio</span>
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                            <span>web</span>
+                            <span>publisher</span>
+                            <span>portfolio</span>
+                        </h1>
+                    </div>
+                </div>
+            </div><!-- /.section_main -->
+        </section>
+        <!-- /#main -->
+
+        <section id="about" class="point">
+            <div class="title">
+                <h1 class="split">About Me</h1>
+                <div class="title_line"></div>
+            </div>
+            <div class="container section_about">
+                <div class="about">
+                    <h2><span>안녕하세요,</span> <span class="mq_br">Web Publisher</span> <span
+                            class="mq_br_m">조유정입니다.</span></h2>
+                    <div class="about_container cont1">
+                        <div class="about_text">
+                            <div class="about_text_line"></div>
+                            <div class="about_dot_right"></div>
+                            <p>
+                                저는 4년간 광고디자이너로 일했습니다. 화보집&middot;광고이미지&middot;카달로그 등을 만들었고, 브랜드 로고디자인&middot;화장품 패키지디자인
+                                등 작업했습니다. 삼성물산&middot;한섬 등 대형 패션회사와 일하면서 <span>트렌드를 가까이</span> 했고, 커리어도 쌓으며 <span>자부심을
+                                    가지고 일했습니다.</span> 또한 여러 클라이언트들을 만나면서 <span>대화와 소통의 중요성</span>을 깨달았고, <span>이해심과 빠른
+                                    적응력</span>도 길렀습니다. 워낙 업무량이 많고 클라이언트와 일정을 조율하는게 매번 빠듯했기에 야근도 잦았지만 <span>데드라인에 맞춰 시간을
+                                    컨트롤</span>하며 작업하는 걸 확실히 배웠습니다.
+                            </p>
+                        </div><!-- /.about_text -->
+                        <div class="about_img_wrap">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 707.5 177.04">
+                                <line y1="0.5" x2="706.44" y2="0.5" />
+                                <line x1="1.06" y1="22.51" x2="707.5" y2="22.51" />
+                                <line x1="1.06" y1="66.52" x2="707.5" y2="66.52" />
+                                <line y1="88.52" x2="706.44" y2="88.52" />
+                                <line x1="1.06" y1="44.51" x2="707.5" y2="44.51" />
+                                <line x1="1.06" y1="110.53" x2="707.5" y2="110.53" />
+                                <line y1="132.53" x2="706.44" y2="132.53" />
+                                <line x1="1.06" y1="154.54" x2="707.5" y2="154.54" />
+                                <line x1="1.06" y1="176.54" x2="707.5" y2="176.54" />
+                            </svg>
+                            <div class="about_img">
+                                <img src="assets/img/about_img_1.jpeg">
+                            </div>
+                            <div class="about_circle_line"></div>
+                        </div><!-- /.about_img_wrap -->
+                    </div><!-- /.about_container .cont1 -->
+
+                    <div class="about_container cont2">
+                        <div class="about_img_wrap">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 707.5 111.03">
+                                <line y1="0.5" x2="706.44" y2="0.5" />
+                                <line x1="1.06" y1="22.51" x2="707.5" y2="22.51" />
+                                <line x1="1.06" y1="66.52" x2="707.5" y2="66.52" />
+                                <line y1="88.52" x2="706.44" y2="88.52" />
+                                <line x1="1.06" y1="44.51" x2="707.5" y2="44.51" />
+                                <line x1="1.06" y1="110.53" x2="707.5" y2="110.53" />
+                            </svg>
+                            <div class="about_img">
+                                <img src="assets/img/about_img_2.jpeg">
+                            </div>
+                            <div class="about_circle_line"></div>
+                        </div><!-- /.about_img_wrap -->
+                        <div class="about_text">
+                            <div class="about_text_line"></div>
+                            <div class="about_dot_left"></div>
+                            <p>
+                                점차 광고시장이 좁아지면서 진로를 고민하다 코딩수업을 듣게 되었습니다. 처음엔 가벼운 마음으로 공부했지만 점차 코딩의 매력을 느끼게 되었습니다. 머릿속에
+                                상상하는 이미지를 코드를 통해 구현하는 것이 흥미로웠고, 한줄 한줄 작성하며 바로 결과를 확인할 수 있는 것이 <span>정직하고 순수하게</span>
+                                느껴졌습니다. 시각적으로 어려움이 있는 사람들을 위해 <span>웹표준을 준수</span>하며 작업을 한다는 점도 제 마음에 작은 울림을 주었습니다.
+                            </p>
+                        </div><!-- /.about_text -->
+                    </div><!-- /.about_container .cont2 -->
+
+                    <div class="about_container cont3">
+                        <div class="about_text">
+                            <div class="about_text_line"></div>
+                            <div class="about_dot_right"></div>
+                            <p>
+                                어느 순간, 코드를 작성하며 집중하고 몰두하는 저를 발견하게 되면서 <span>배움으로 끝나기보다 더 발전시켜보고 싶어</span> 웹디자이너로 이직을
+                                했습니다. 이직한 회사에서는 주로 템플릿을 활용해 반응형 홈페이지와 모바일App의 코딩을 했습니다. 디자인업무 60% 코딩업무 40% 정도의 비중이었는데,
+                                점차 디자인보다 <span>코딩에 더 매료되었고</span> 템플릿 베이스보다는 <span>좀더 탄탄하게 코딩</span>을 해보고 싶어 웹퍼블리셔로 진로를
+                                결정했습니다.
+                            </p>
+                        </div><!-- /.about_text -->
+                        <div class="about_img_wrap">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 707.5 67.02">
+                                <line y1="0.5" x2="706.44" y2="0.5" />
+                                <line x1="1.06" y1="22.51" x2="707.5" y2="22.51" />
+                                <line x1="1.06" y1="66.52" x2="707.5" y2="66.52" />
+                                <line x1="1.06" y1="44.51" x2="707.5" y2="44.51" />
+                            </svg>
+                            <div class="about_img">
+                                <img src="assets/img/about_img_3.jpeg">
+                            </div>
+                            <div class="about_circle_line"></div>
+                        </div><!-- /.about_img_wrap -->
+                    </div><!-- /.about_container .cont3 -->
+                    <div class="about_text float_right cont4">
+                        <div class="about_text_line"></div>
+                        <div class="about_dot_left"></div>
+                        <p class="">
+                            저에겐 <span>배움이 삶의 원동력이고 곧 발전</span>이라 생각합니다. 항상 배움에 열려있고 발전에 목말라있습니다. 빠르게 변화하는 웹 시장에 맞춰 공부할
+                            자신이 있습니다. 앞으로 <span>회사에 실질적인 도움이 되는 웹퍼블리셔</span>로 일하고 싶습니다.
+                        </p>
+                    </div><!-- /.about_text_wrap -->
+                </div><!-- /.about -->
+
+                <div class="keyword">
+                    <h2 class="split keyword_h2_ani">my keyword</h2>
+                    <svg id="keyword_arrow" data-name="keyword_arrow" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 28.28 63.09">
+                        <title>keyword_arrow</title>
+                        <line x1="14.14" y1="62.84" x2="14.14" />
+                        <line x1="28.11" y1="48.78" x2="13.97" y2="62.92" />
+                        <line x1="14.32" y1="62.92" x2="0.18" y2="48.78" />
+                    </svg>
+                    <div class="keyword_h2_bg"></div>
+                    <div class="keyword_svg">
+                        <svg id="keyword_horizon" data-name="keyword_horizon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 994.83 386.21">
+                            <title>keyword_horizon</title>
+                            <polygon class="kh_p1"
+                                points="875.63 385.83 994.45 385.83 994.45 267.01 994.45 148.18 994.45 0.38 875.63 0.38 875.63 148.18 875.63 267.01 756.8 267.01 756.8 385.83 875.63 385.83" />
+                            <polygon class="kh_p2"
+                                points="742.31 0.38 623.49 0.38 504.66 0.38 385.83 0.38 385.83 119.2 504.66 119.2 623.49 119.2 742.31 119.2 861.14 119.2 861.14 0.38 742.31 0.38" />
+                            <polygon class="kh_p3"
+                                points="623.49 133.69 504.66 133.69 385.83 133.69 385.83 252.52 504.66 252.52 623.49 252.52 623.49 385.83 742.31 385.83 742.31 252.52 742.31 133.69 623.49 133.69" />
+                            <polygon class="kh_p4"
+                                points="490.17 267.01 371.34 267.01 252.52 267.01 133.69 267.01 133.69 385.83 252.52 385.83 371.34 385.83 490.17 385.83 609 385.83 609 267.01 490.17 267.01" />
+                            <polygon class="kh_p5"
+                                points="252.52 0.38 252.52 133.69 133.69 133.69 133.69 252.52 252.52 252.52 371.34 252.52 371.34 133.69 371.34 0.38 252.52 0.38" />
+                            <polygon class="kh_p6"
+                                points="119.2 0.38 0.38 0.38 0.38 119.2 0.38 238.03 0.38 385.83 119.2 385.83 119.2 238.03 119.2 119.2 238.03 119.2 238.03 0.38 119.2 0.38" />
+                            <text class="kh_t1" transform="translate(42.8 192.59)">정직</text>
+                            <text class="kh_t2" transform="translate(280.45 192.59)">끈기</text>
+                            <text class="kh_t3" transform="translate(345.86 340.41)">책임감</text>
+                            <text class="kh_t4" transform="translate(578.06 69.44)">깔끔한 성격</text>
+                            <text class="kh_t5" transform="translate(598.01 207.1)">트렌드</text>
+                            <text class="kh_t6" transform="translate(909.57 207.1)">진정성</text>
+                        </svg>
+                        <svg id="keyword_star" class="star_h" data-name="keyword_star"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.39 185.39">
+                            <title>keyword_star</title>
+                            <polygon
+                                points="92.69 0 106.16 60.19 158.24 27.15 125.2 79.23 185.38 92.69 125.2 106.16 158.24 158.24 106.16 125.2 92.69 185.38 79.23 125.2 27.15 158.24 60.19 106.16 0 92.69 60.19 79.23 27.15 27.15 79.23 60.19 92.69 0" />
+                            <text transform="translate(65.94 101.9)">i <tspan x="12.74" y="0"
+                                    style="letter-spacing:-0.009974888392857142em">a</tspan>
+                                <tspan x="27.69" y="0" style="letter-spacing:0.00003487723214285714em">m</tspan>
+                            </text>
+                        </svg>
+                        <svg id="keyword_vertical" data-name="keyword_vertical" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 386.21 994.83">
+                            <title>keyword_v</title>
+                            <polygon class="kv_p1"
+                                points="385.83 875.63 385.83 994.45 267.01 994.45 148.18 994.45 0.38 994.45 0.38 875.63 148.18 875.63 267.01 875.63 267.01 756.8 385.83 756.8 385.83 875.63" />
+                            <polygon class="kv_p2"
+                                points="0.38 742.31 0.38 623.49 0.38 504.66 0.38 385.83 119.2 385.83 119.2 504.66 119.2 623.49 119.2 742.31 119.2 861.14 0.38 861.14 0.38 742.31" />
+                            <polygon class="kv_p3"
+                                points="133.69 623.49 133.69 504.66 133.69 385.83 252.52 385.83 252.52 504.66 252.52 623.49 385.83 623.49 385.83 742.31 252.52 742.31 133.69 742.31 133.69 623.49" />
+                            <polygon class="kv_p4"
+                                points="267.01 490.17 267.01 371.34 267.01 252.52 267.01 133.69 385.83 133.69 385.83 252.52 385.83 371.34 385.83 490.17 385.83 609 267.01 609 267.01 490.17" />
+                            <polygon class="kv_p5"
+                                points="0.38 252.52 133.69 252.52 133.69 133.69 252.52 133.69 252.52 252.52 252.52 371.34 133.69 371.34 0.38 371.34 0.38 252.52" />
+                            <polygon class="kv_p6"
+                                points="0.38 119.2 0.38 0.38 119.2 0.38 238.03 0.38 385.83 0.38 385.83 119.2 238.03 119.2 119.2 119.2 119.2 238.03 0.38 238.03 0.38 119.2" />
+                            <text class="kv_t1" transform="translate(176.11 68.34)">정직</text>
+                            <text class="kv_t2" transform="translate(109.45 317.56)">끈기</text>
+                            <text class="kv_t3" transform="translate(300.93 377.06)">책임감</text>
+                            <text class="kv_t4" transform="translate(34.3 618.4)">깔끔한<tspan x="8.5" y="21.6">성격</tspan>
+                                </text>
+                            <text class="kv_t5" transform="translate(234.28 689.92)">트렌드</text><text class="kv_t6"
+                                transform="translate(167.62 948.76)">진정성</text>
+                        </svg>
+                        <svg id="keyword_star" class="star_v" data-name="keyword_star"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.39 185.39">
+                            <title>keyword_star</title>
+                            <polygon
+                                points="92.69 0 106.16 60.19 158.24 27.15 125.2 79.23 185.38 92.69 125.2 106.16 158.24 158.24 106.16 125.2 92.69 185.38 79.23 125.2 27.15 158.24 60.19 106.16 0 92.69 60.19 79.23 27.15 27.15 79.23 60.19 92.69 0" />
+                            <text transform="translate(65.94 101.9)">i <tspan x="12.74" y="0"
+                                    style="letter-spacing:-0.009974888392857142em">a</tspan>
+                                <tspan x="27.69" y="0" style="letter-spacing:0.00003487723214285714em">m</tspan>
+                            </text>
+                        </svg>
+                    </div>
+                </div><!-- /.keyword -->
+            </div><!-- /.container .section_about -->
+        </section>
+        <!-- /#about -->
+
+        <section id="skill">
+            <div class="menu">
+                <div class="menu--item">
+                    <div class="menu--word">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu2">
+                <div class="menu--item2">
+                    <div class="menu--word2">
+                        <span>Photoshop</span>
+                        <span>Illustration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /#skill -->
+
+        <section id="make" class="point">
+            <div class="title">
+                <h1 class="split">Make</h1>
+                <div class="title_line point"></div>
+            </div>
+            <div class="container section_make">
+                <div class="site_index">
+                    <ul class="index_half">
+                        <li class="index_head"><span>Web Site</span></li>
+                        <li class="index_li">
+                            <a href="#st1">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>01</span></div>
+                                        <!--                                            <svg id="index_number" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98"><title>무제-1</title><circle class="index_circle" cx="49" cy="49" r="49"/></svg>-->
+                                    </li>
+                                    <li class="index_title before"><span>Web Standard</span></li>
+                                </ul>
+
+                            </a>
+                        </li>
+                        <li class="index_li">
+                            <a href="#st2">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>02</span></div>
+                                    </li>
+                                    <li class="index_title"><span>MEGA BOX</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="index_li">
+                            <a href="#st3">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>03</span></div>
+                                    </li>
+                                    <li class="index_title"><span>Responsive Web</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="index_li">
+                            <a href="#">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>04</span></div>
+                                    </li>
+                                    <li class="index_title"><span>Responsive Web</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul><!-- /.index_half1 -->
+
+                    <ul class="index_half">
+                        <li class="index_head"><span>Mobile Site</span></li>
+                        <li class="index_li">
+                            <a href="#kurly">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>01</span></div>
+                                        <!--                                            <svg id="index_number" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98"><title>무제-1</title><circle class="index_circle" cx="49" cy="49" r="49"/></svg>-->
+                                    </li>
+                                    <li class="index_title"><span>Market Kurly</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="index_li">
+                            <a href="#">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>02</span></div>
+                                    </li>
+                                    <li class="index_title"><span>MEGA BOX</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="index_li">
+                            <a href="#">
+                                <ul class="index_text">
+                                    <li class="index_number">
+                                        <div><span>03</span></div>
+                                    </li>
+                                    <li class="index_title"><span>Responsive Web</span></li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul><!-- /.index_half2 -->
+                </div>
+                <!-- /.site_index -->
+
+                <div class="subtitle web">
+                    <h2 class="split"><span>Web Site</span></h2>
+                    <div class="subtitle_line"></div>
+                </div><!-- /.subtitle -->
+                <div class="site mb150">
+                    <ul class="site_table st1" id="st1">
+                        <li class="site_title">
+                            <ul>
+                                <!--                                <li class="site_num"><span>01</span></li>-->
+                                <li class="site_name"><span>Web Standard</span></li>
+                            </ul>
+                        </li>
+                        <li class="site_contents">
+                            <ul>
+                                <li class="site_img">
+                                    <figure><img src="assets/img/webstandard_mockup.png" alt="웹표준사이트이미지"></figure>
+                                </li>
+                                <li class="site_text">
+                                    <p>
+                                        웹표준을 준수하여 작업한<br class="site_text_br">
+                                        웹표준 사이트입니다.<br class="site_text_br">
+                                        웹접근성을 고려해 탭 메뉴를 만들었고,<br class="site_text_br">
+                                        slick.js를 사용해 슬라이더를,<br class="site_text_br">
+                                        lightbox를 활용해 모달창을 만들었습니다.<br class="site_text_br">
+                                        크로스 브라우징이 가능합니다.
+                                    </p>
+                                </li>
+                                <li class="site_link">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/webStandard/"><span>view site</span></a>
+                                    <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 28.28 33.25">
+                                        <title>무제-2</title>
+                                        <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                        <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                        <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                    </svg>
+                                </li>
+                                <li class="site_link_t">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/webStandard/">
+                                        <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 28.28 33.25">
+                                            <title>무제-2</title>
+                                            <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                            <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                            <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="site_link_m">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/webStandard/"><span>view site</span></a>
+                                    <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 28.28 33.25">
+                                        <title>무제-2</title>
+                                        <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                        <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                        <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="site_tabmenu">
+                            <ul class="tab_btn">
+                                <li class="active"><span><a href="#">IR효과</a></span></li>
+                                <li><span><a href="#">탭 메뉴</a></span></li>
+                                <li><span><a href="#">slick.js</a></span></li>
+                                <li><span><a href="#">슬라이드 메뉴</a></span></li>
+                                <li><span><a href="#">Image Sprite</a></span></li>
+                            </ul>
+                            <div class="tab_content">
+                                <div class="tab_code code_1">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* IR 효과 3가지 */
+
+    /* 1. 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+    .ir_pm {
+        display: block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+
+    /* 2. 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+    .ir_wa {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 3. 대체 텍스트가 아닌 접근성을 위한 숨긴 텍스트를 제공할 때 */
+    .ir_su {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_2">
+                                    <pre class="line-numbers">
+                                        <code class="language-js">
+    /* tab menu */
+
+    var $tab_list = $(".tab_menu");
+
+    $tab_list.find("ul ul").hide();
+    $tab_list.find("li.active > ul").show();
+
+    function tabMenu(e){
+        e.preventDefault();
+        var $this = $(this);
+
+        $this.next("ul").show().parent("li").addClass("active").siblings("li")
+        .removeClass("active").find(">ul").hide();
+    }
+
+    $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_3">
+                                    <pre class="line-numbers">
+                                        <code class="language-js">
+    /* slick.js */
+
+    //html 마크업 세팅 -> css 연동 -> 제이쿼리 연동 -> 제이쿼리 호출
+    $(".ban").slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true
+    });
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_4">
+                                    <pre class="line-numbers">
+                                        <code class="language-js">
+    /* slide menu */
+
+    $(".gallery_img").slick({
+        fade: true,
+        pauseOnHover: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 300,
+        slidesToShow: 1
+    });
+
+    $(".play").click(function(e){
+        $(".gallery_img").slick("slickPlay");
+    });
+
+    $(".pause").click(function(e){
+        $(".gallery_img").slick("slickPause");
+    });
+
+    $(".prev").click(function(e){
+        $(".gallery_img").slick("slickPrev");
+    });
+
+    $(".next").click(function(e){
+        $(".gallery_img").slick("slickNext");
+    });
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_5">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* image sprite */
+
+    /* 1. 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+    .ir_pm {
+        display: block;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+
+    /* 2. 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+    .ir_wa {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 3. 대체 텍스트가 아닌 접근성을 위한 숨긴 텍스트를 제공할 때 */
+    .ir_su {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div><!-- /.tab_content -->
+                        </div><!-- /.site_tabmenu -->
+                    </ul><!-- /.st1 -->
+
+                    <ul class="site_table st2 mb150" id="st2">
+                        <li class="site_title">
+                            <ul>
+                                <!--                                <li class="site_num"><span>02</span></li>-->
+                                <li class="site_name"><span>MEGA BOX</span></li>
+                            </ul>
+                        </li>
+                        <li class="site_contents">
+                            <ul>
+                                <li class="site_img">
+                                    <figure><img src="assets/img/mega_mockup.png" alt="메가박스이미지"></figure>
+                                </li>
+                                <li class="site_text">
+                                    <p>
+
+                                        swiper 자바스크립트 라이브러리를<br class="site_text_br">
+                                        사용해 image slide를 구현했고,<br class="site_text_br">
+                                        SVG를 활용해 icon 작업을 했습니다.<br class="site_text_br">
+                                        mediaquery로 반응형 사이트로 제작했고,<br class="site_text_br">
+                                        시맨틱 태그를 사용하여 코딩했습니다.<br class="site_text_br">
+                                        구글의 웹 API를 사용하여 유튜브의 영상이<br class="site_text_br">
+                                        레이어 팝업으로 나타나도록 작업했습니다.
+                                    </p>
+                                </li>
+                                <li class="site_link">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/mega/mega01.html"><span>view site</span></a>
+                                    <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 28.28 33.25">
+                                        <title>무제-2</title>
+                                        <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                        <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                        <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                    </svg>
+                                </li>
+                                <li class="site_link_t">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/mega/mega01.html">
+                                        <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 28.28 33.25">
+                                            <title>무제-2</title>
+                                            <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                            <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                            <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="site_link_m">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/mega/mega01.html"><span>view site</span></a>
+                                    <div class="arrow">
+                                        <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 28.28 33.25">
+                                            <title>무제-2</title>
+                                            <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                            <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                            <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="site_tabmenu">
+                            <ul class="tab_btn">
+                                <li class="active"><span><a href="#">Swiper.js</a></span></li>
+                                <li><span><a href="#">Youtube API</a></span></li>
+                                <li><span><a href="#">MediaQuery</a></span></li>
+                                <li><span><a href="#">Hambuger Menu</a></span></li>
+                                <li><span><a href="#">Image Sprite</a></span></li>
+                            </ul>
+                            <div class="tab_content">
+                                <div class="tab_code code_1">
+                                    <pre class="line-numbers">
+                                        <code class="language-js">
+    // swiper.js
+
+    //banner image slide
+    var mySwiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        autoplay: {
+                delay: 5000,
+        },
+    });
+
+    //chart image slide
+    var mySwiper = new Swiper('.swiper-container2', {
+        slidesPerView: 4,
+        spaceBetween: 24,
+    //  mousewheel: {
+    //  nvert: true,
+    //  },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        autoplay: {
+            delay: 6000,
+        },
+    });
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_2">
+                                    <pre class="line-numbers">
+                                        <code class="language-js">
+    // Youtube API
+
+    (function($){
+        (function handleTrailer(){
+            // selector
+            var $selector = {
+                body: $( "body" ),
+                overlay: $( "#blackout" ),
+                modal: $( "#trailerModal" ),
+                showButton: $( "#showTrailer" ),
+                hideButton: $( "#hideTrailer" ),
+            };
+            
+            // player
+            var player = {
+                obj: null, // player object
+                query : {
+                    theme: "dark",
+                    color: "white",
+                    controls: 1, 
+                    autoplay: 1,
+                    enablejsapi: 1,
+                    modestbranding: 0, // YouTube 로고 감춤
+                    rel: 0,  // 관련 동영상 표시
+                    showinfo: 0, // 제목, 업로더 감춤
+                    iv_load_policy: 3 // effect 감춤
+                },
+                visible: false
+            };
+            
+            // 보이기, 숨기기 버튼 활성화
+            $selector.showButton.on( "click", showPlayer );
+            $selector.hideButton.on( "click", hidePlayer );
+            
+            // YouTube API를 이용해 iframe을 생성
+            function setPlayer( id ){
+                player.obj = new YT.Player( "trailer", {
+                    width: 480,
+                    height: 282,
+                    videoId: id,    
+                    playerVars: player.query
+                });
+                
+                // 처음 플레이어 크기 설정
+                resizePlayer();
+                
+                // resize 화면 회전시 플레이어 크기 다시 설정
+                $( window ).on( "resize orientationchange", function() {
+                    resizePlayer();
+                });
+            }
+            
+            function resizePlayer() {
+                var viewport = {}, frame = {}, modal = {};
+                viewport.width = $( window ).width();
+                viewport.height = $( window ).height();
+                frame.width = viewport.width;
+                frame.height = frame.width / 1.6; // 16 : 10
+                modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
+                modal.left = "0px";
+                $selector.modal.css( modal );
+                player.obj.setSize( frame.width, frame.height );
+            }
+
+            // iframe 보이기
+            function showPlayer() {
+                if ( !player.obj ) {
+                    setPlayer( $selector.showButton.data("youtube") );
+                }
+                $selector.body.addClass("modal_on");
+                $selector.overlay.show();
+                player.visible = true;
+            };
+            
+            // iframe 감추기
+            function hidePlayer (){
+                player.obj.stopVideo();
+                $selector.overlay.hide();
+                $selector.body.removeClass("modal_on");
+                player.visible = false;
+            };
+        })();
+        
+    })(jQuery);
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_3">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* mediaquery */
+
+    @media (max-width: 1290px){
+        .container {width: 100%;}
+        .header .nav li {width: 93px;}
+        .header .nav li a {font-size: 15px; padding: 17px 10px;}
+        .header h1 em {padding: 11px 8px 5px 0;}
+        .header h1 strong {top: 19px;}
+        .swiper-button-prev, .swiper-button-next {display: none;}
+        
+    }
+
+    @media (max-width: 1024px){
+        #mNav {display: block;}
+        .nav {display: none;}
+        .row {padding: 0 24px;}
+        .header h1 {float: none; text-align: center;}
+        .header h1 strong {left: 24px;}
+        .banner_menu .bm_left ul {display: none;}
+        .banner_menu .bm_right ul:first-child {display: none;}
+        .help {padding-bottom: 100px;}
+        .help article {height: auto;}
+        .help article.help_box1 {width: 49%; margin-right: 2%;}
+        .help article.help_box2 {width: 49%; margin-right: 0;}
+        .help article.help_box3 {width: 100%; margin-top: 2%;}
+        .help article.help_box3 > div {border: 1px solid #dbdbdb; height: auto;}
+        .service li {width: 25%; height: auto; border: 0;}
+        .service li:nth-child(1) {border-right: 0; border-bottom: 0;}
+        .service li:nth-child(2) {border-right: 0; border-bottom: 0;}
+        .service li a strong {display: block; padding-bottom: 10%;}
+    }
+
+    @media (max-width: 960px){
+        .slider {height: 500px;}
+        .slider .swiper-slide h2 {margin-top: 170px; font-size: 37px; line-height: 45px;}
+        .slider .swiper-slide h2:after {bottom: -15px;}
+        .slider .swiper-slide h2 em {font-size: 34px;}
+        .slider .swiper-slide p {font-size: 16px; padding-top: 35px;}
+        .movie_title ul {width: auto;}
+        .movie_title li {width: 25%; box-sizing: border-box;}
+        .opening .open_box {padding: 50px 0;}
+        .opening .open_box{display: none;}
+        .opening .desc {font-size: 25px; background: none;}
+        .new .new_left {margin-right: 0; height: 400px;}
+        .new .new_right {position: relative; top: 0; width: 100%; height: auto;}
+        .footer_sns {position: static; text-align: center; background: #352c2c; padding-bottom: 15px;}
+        .footer_sns .tel {display: none;}
+        .footer_info {width: 100%; text-align: center;}
+    }
+
+    @media (max-width: 768px){
+        body {background: #d9d7e0;}
+        
+        #mNav {right: 6px;}
+        .row {padding: 0 16px;}
+        .header h1 strong {display: none;}
+        .header h1 {text-align: left;}
+        #movie {background: none;}
+        #movie .row {background: #fff; margin: 24px 24px 0 24px; padding: 24px;}
+        #movie .ir_so {position: static; width: auto; height: auto; line-height: normal; text-indent: 0; font-size: 24px; font-weight: bold; padding-bottom: 20px;}
+        .movie {padding: 0;}
+        .movie_title {margin-bottom: 30px;}
+        .movie_title ul {position: relative; padding-bottom: 10px;}
+        .movie_title ul:before {content: ''; position: absolute; z-index: 1; left: 0; bottom: 0;
+                        width: 100%; height: 2px; background: #e1e1e1;}
+        .movie_title li {width: auto; border: 0;}
+        .movie_title li a {font-size: 18px; color: #666; font-weight: 400; padding: 0; margin-right: 35px;}
+        .movie_title li.active a {background: none; color: #666; position: relative;}
+        .movie_title li.active a:before {content: ''; position: absolute; z-index: 2; left: 0; bottom: -10px; width: 100%; height: 2px; background: #666; }
+        #event .row {padding: 24px;}
+        .event {padding: 24px; background: #fff;}
+        .event h2 {font-size: 24px; font-weight: 700;}
+        .event .event_left {width: 100%; margin-right: 0;}
+        .event .event_right {display: none;}
+        #opening {margin: 0;}
+        #new .row {padding: 0 24px;}
+        .new {padding: 24px; background: #fff; margin-top: 24px;}
+        .new h2 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+        .new .new_right {padding: 24px;}
+        #help .row {padding: 0 24px;}
+        .help {padding-bottom: 24px;}
+        .help article.help_box1 {box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0; margin-top: 24px;}
+        .help article.help_box2 {box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0; margin-top: 24px;}
+        .help article.help_box3 {box-sizing: border-box; width: 100%; background: #fff; margin-top: 0; margin-top: 24px;}
+        .help article.help_box1 h3 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+        .help article.help_box2 h3 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+        .help article.help_box3 h3 {display: none;}
+        .help article.help_box3 > div {height: auto;}
+        .service li {border: 0;}
+    }
+
+    @media (max-width: 600px){
+        .slider {height: 400px;}
+        .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
+        .slider .swiper-slide h2:after {bottom: -5px;}
+        .slider .swiper-slide h2 em {font-size: 20px;}
+        .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
+        .banner_menu {top: 16px;}
+        .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+        .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+        .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
+        #movie .container {}
+        #movie .container:after {content: ''; position: absolute; z-index: 20; top: 0; right: 0; width: 8px; height: 100%; background: #d9d7e0;}
+        #movie .row {position: relative; margin: 8px; padding: 16px; margin-right: 0; padding-right: 0;}
+        #movie .row:after {content: ''; position: absolute; z-index: 10; top: 0; right: 0; width: 24px; height: 100%; background: #fff;}
+        #movie .ir_so {font-size: 18px; padding-bottom: 10px;}
+        .movie_title {margin-bottom: 20px;}
+        .movie_title ul {padding-bottom: 8px; white-space: nowrap; overflow-x: auto;}
+        .movie_title li a {font-size: 14px; margin-right: 15px;}
+        .movie_title li.active a:before {bottom: -8px;}
+        .movie_chart {position: relative; z-index: 30;}
+        .movie_chart > div > div > div .infor {padding: 5px;}
+        .movie_chart > div > div > div .infor h3 {text-align: center; margin: 5px 0 10px;}
+        .movie_chart > div > div > div .infor h3 strong {display: block; font-size: 19px; color: #222;
+                                                        font-weight: 300;}
+        .movie_chart > div > div > div .infor h3 span {display: none;}
+        .movie_chart > div > div > div .infor .infor_btn a {width: 52%; margin-left: 24%; display: block; margin-right: 0; padding: 5px; color: #777; margin-bottom: 5px; box-sizing: border-box;
+        font-size: 14px; background: none; border: 1px solid #ddd; }
+        .movie_chart > div > div > div .infor .infor_btn a:last-child {display: none;}
+        #event .row {padding: 0 8px;}
+        .event {padding: 16px;}
+        .event h2 {font-size: 18px; margin-bottom: 10px;}
+        #opening {margin: 8px 0;}
+        .opening {padding: 20px 0;}
+        .opening h2 {margin-bottom: 10px;}
+        .opening h2 .grand {background-size: 300px; background-position: 0 -105px; width: 197px; height: 24px;}
+        .opening .date {display: none;}
+        .opening .desc {font-size: 16px; font-weight: 400; padding-bottom: 0;}
+        #new .row {padding: 0 8px;}
+        .new {padding: 16px; margin-top: 8px;}
+        .new h2 {font-size: 18px; margin-bottom: 0;}
+        .new .new_left {height: 300px;}
+        .new .new_right {padding: 17px;}
+        .new .new_right .title {font-size: 22px;}
+        .new .new_right .star {padding: 9px 0;}
+        .new .new_right .select .s1 {width: 100%; margin-right: 0; margin-bottom: 2%;}
+        .new .new_right .select .s2 {width: 100%;}
+        #help .row {padding: 0 8px;}
+        .help article.help_box1 {margin-top: 8px; padding: 16px;}
+        .help article.help_box2 {margin-top: 8px; padding: 16px;}
+        .help article.help_box3 {margin-top: 8px;}
+        .help article.help_box1 h3 {font-size: 18px; margin-bottom: 0;}
+        .help article.help_box2 h3 {font-size: 18px; margin-bottom: 0;}
+        .card {padding: 8px;}
+        .service li {width: 50%;}
+        .service li:nth-child(1) {border-right: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7;}
+        .service li:nth-child(2) {border-bottom: 1px solid #d7d7d7;}
+        .service li:nth-child(3) {border-right: 1px solid #d7d7d7; }
+    }
+
+    @media (max-width: 320px){
+        .movie_title li a {margin-right: 9px;}
+        .notice {padding: 8px;}
+        .notice ul li ul {left: 9px; top: 56px;}
+        .notice ul li ul li {padding: 8px;}
+        .notice ul li a {padding: 5px 10px; font-size: 14px;}
+        .help article > div {height: 287px;}
+        .card li span {left: 11px; top: 20px;}
+        .card li span img {width: 60px;}
+        .card li strong {padding-left: 75px; font-size: 14px;}
+        .card li em {padding-left: 75px; font-size: 13px;}
+        .card li {padding: 8px; margin-bottom: 8px; min-height: 90px;}
+        .service li a span {width: 70px; height: 70px;}
+        .service li a strong {font-size: 14px;}
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_4">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* mobile hambuger menu */
+    .ham {display: block; width: 25px; height: 10px; padding: 15px 10px 10px 10px;}
+    .ham span {position: relative; display: block; width: 25px; height: 4px; background: #39106a;}
+    .ham span:before {
+        content: '';
+        width: 25px; height: 4px; background: #39106a;
+        position: absolute; left: 0; bottom: -7px;
+    }
+
+    .ham span:after {
+        content: '';
+        width: 25px; height: 4px; background: #39106a;
+        position: absolute; left: 0; top: -7px;
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_5">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* image sprite */
+
+    &lt;div class="footer_sns"&gt;
+        &lt;ul&gt;
+            &lt;li class="icon s1"&gt;&lt;a href="#"&gt;&lt;span class="ir_pm"&gt;트위터&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="icon s2"&gt;&lt;a href="#"&gt;&lt;span class="ir_pm"&gt;페이스북&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="icon s3"&gt;&lt;a href="#"&gt;&lt;span class="ir_pm"&gt;인스타그램&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="icon s4"&gt;&lt;a href="#"&gt;&lt;span class="ir_pm"&gt;구글플레이&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="icon s5"&gt;&lt;a href="#"&gt;&lt;span class="ir_pm"&gt;아이폰 앱스토어&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="tel"&gt;
+            &lt;a href="#"&gt;ARS &lt;em&gt;1544-0070&lt;/em&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div><!-- /.tab_content -->
+                        </div><!-- /.site_tabmenu -->
+                    </ul><!-- /.st2 -->
+
+                    <ul class="site_table st3 mb150" id="st3">
+                        <li class="site_title">
+                            <ul>
+                                <!--                                <li class="site_num"><span>03</span></li>-->
+                                <li class="site_name"><span>Responsive Web</span></li>
+                            </ul>
+                        </li>
+                        <li class="site_contents">
+                            <ul>
+                                <li class="site_img">
+                                    <figure><img src="assets/img/responsive_mockup.png" alt="반응형사이트이미지"></figure>
+                                </li>
+                                <li class="site_text">
+                                    <p>
+                                        해상도에 따라 이미지를 다르게 표현하는<br class="site_text_br">
+                                        방법과 lightbox.js와 slick.js를 이용한<br class="site_text_br">
+                                        이미지 슬라이드 등 반응형에 맞게<br class="site_text_br">
+                                        미디어쿼리를 사용하여 각 해상도 마다<br class="site_text_br">
+                                        컨텐츠 요소들의 위치가 바뀌게 반응형 사이트를 완성하였습니다.
+                                    </p>
+                                </li>
+                                <li class="site_link">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/responsiveWeb/index.html"><span>view site</span></a>
+                                    <div class="arrow">
+                                        <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 28.28 33.25">
+                                            <title>무제-2</title>
+                                            <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                            <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                            <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="site_link_t">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/responsiveWeb/index.html">
+                                        <div class="arrow">
+                                            <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 28.28 33.25">
+                                                <title>무제-2</title>
+                                                <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                                <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                                <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="site_link_m">
+                                    <a target="_blank" href="http://ujjj.dothome.co.kr/responsiveWeb/index.html"><span>view site</span></a>
+                                    <div class="arrow">
+                                        <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 28.28 33.25">
+                                            <title>무제-2</title>
+                                            <line x1="14.14" y1="0.25" x2="14.14" y2="33.25" />
+                                            <line x1="0.18" y1="14.32" x2="14.32" y2="0.18" />
+                                            <line x1="13.97" y1="0.18" x2="28.11" y2="14.32" />
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="site_tabmenu">
+                            <ul class="tab_btn">
+                                <li class="active"><span><a href="#">MediaQuery</a></span></li>
+                                <li><span><a href="#">Image Slide</a></span></li>
+                                <li><span><a href="#">LightBox</a></span></li>
+                                <li><span><a href="#">Hover Effect</a></span></li>
+                                <li><span><a href="#">Web Icon Font</a></span></li>
+                            </ul>
+                            <div class="tab_content">
+                                <div class="tab_code code_1">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* mediaquery */
+
+    /* 화면 너비 0 ~ 1220px */
+    @media (max-width: 1220px){
+        .container {width: 100%;}
+        .row {padding: 0 15px;}
+        #contents .container {border: 0;}
+        #cont_center {min-height: 1340px;}
+        .title .btn {right: 5px;}
+
+        .square a {width: 24%;}
+        .square a:nth-child(5n) {display: none;} 
+    }
+
+    /* 화면 너비 0 ~ 1024px */
+    @media (max-width: 1024px){
+        .square a {width: 32.333%;}
+        .square a:nth-child(5) {display: block;} 
+    }
+
+    /* 화면 너비 0 ~ 960px */
+    @media (max-width: 960px){
+        .nav > div {float: none; width: 100%;}
+        .nav > div:last-child {width: 100%;}
+        .nav > div li {width: 33.333%;}
+        .nav > div:last-child li {width: 33.333%;}
+        .nav > div ol {margin-bottom: 10px;}
+
+        #cont_right {position: static; width: 100%; border-top: 1px solid #dbdbdb;}
+        #cont_center {margin-right: 0; border-right: 0;}
+
+        #cont_right {overflow: hidden;}
+        #cont_right .column {float: left; width: 33.333%; box-sizing: border-box;}
+        #cont_right .column.col7 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
+        #cont_right .column.col8 {border-right: 1px solid #dbdbdb; border-bottom: 0;}
+    }
+
+    /* 화면 너비 0 ~ 768px */
+    @media (max-width: 768px){
+        #cont_left {float: none; width: 100%;}
+        #cont_center {border-left: 0;}
+    }
+
+    /* 화면 너비 0 ~ 600px */
+    @media (max-width: 600px){
+        .header {height: auto;}
+        .header .header_tit {display: none;}
+        .header .header_icon {display: none;}
+        .title .btn {display: none;}
+        .title h2 {font-size: 32px;}
+
+        .nav > div li {width: 50%;}
+        .nav > div:last-child li {width: 50%;}
+
+        .column.col1 .col_tit {display: none;}
+        .column.col1 .col_desc {display: none;}
+        .column.col1 .menu li i {display: none;}
+        .column.col1 {padding: 0; border-bottom: 0;}
+        .column.col1 .menu ul {overflow: hidden;}
+        .column.col1 .menu li {float: left; width: 33.333%; text-align: center; border-right: 1px solid #dbdbdb; box-sizing: border-box;}
+        .column.col1 .menu li:nth(3n) {border-right: 0;}
+        .column.col1 .menu li a {color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.7);}
+        .column.col1 .menu li a:hover {box-shadow: none; background: rgba(36,130,174,0.3);}
+        .column.col2 {background: #fff;}
+        .column.col4 {border-top: 1px solid #dbdbdb;}
+
+        .slider figcaption {padding: 10px;}
+        .slider figcaption em {font-size: 18px;}
+        .slider figcaption span {font-size: 14px;}
+
+        .square a {width: 49%;}
+        .square a:nth-child(5) {display: none;} 
+
+        #cont_right .column {width: 50%;}
+        #cont_right .column.col8 {border-right: 0;}
+        #cont_right .column.col9 {display: none;}
+    }
+
+    /* 화면 너비 0 ~ 480px */
+    @media (max-width: 480px){
+        .title h2 {font-size: 22px;}
+    }
+
+    /* 화면 너비 0 ~ 320px */
+    @media (max-width: 320px){
+        .nav > div li {width: 100%;}
+        .nav > div:last-child li {width: 100%;}
+
+        .square a {width: 100%; margin-right: 0; margin-left: 0;}
+
+        #cont_right .column {width: 100%;}
+        #cont_right .column.col7 {border-right: 0; border-bottom: 1px solid #dbdbdb;}
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_2">
+                                    <pre class="line-numbers">
+                                        <code class="language-html">
+    &lt;!-- image slide --&gt;
+
+    &lt;div class="slider"&gt;
+        &lt;div&gt;
+            &lt;figure&gt;
+                &lt;img src="img/slider001.jpg" alt="이미지1"&gt;
+                &lt;figcaption&gt;
+                    &lt;em&gt;Responsive Site1&lt;/em&gt;
+                    &lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;figure&gt;
+                &lt;img src="img/slider001.jpg" alt="이미지2"&gt;
+                &lt;figcaption&gt;
+                    &lt;em&gt;Responsive Site2&lt;/em&gt;
+                    &lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;figure&gt;
+                &lt;img src="img/slider001.jpg" alt="이미지3"&gt;
+                &lt;figcaption&gt;
+                    &lt;em&gt;Responsive Site3&lt;/em&gt;
+                    &lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+    // slick.js 사용
+    $(".slider").slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                autoplay: false,
+                }
+            }
+        ]
+    });
+    &lt;/script&gt;        
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_3">
+                                    <pre class="line-numbers">
+                                        <code class="language-html">
+    &lt;!-- lightbox --&gt;
+
+    &lt;article class="column col5"&gt;
+        &lt;h4 class="col_tit"&gt;Blend Effect&lt;/h4&gt;
+        &lt;p class="col_desc"&gt;Background-blend-mode와 mix-blend-mode&lt;/p&gt;
+                                
+        &lt;div class="lightbox square clearfix"&gt;
+            &lt;a href="img/light01_s.jpg"&gt;&lt;img src="img/light01.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light02_s.jpg"&gt;&lt;img src="img/light02.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light03_s.jpg"&gt;&lt;img src="img/light03.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light04_s.jpg"&gt;&lt;img src="img/light04.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light05_s.jpg"&gt;&lt;img src="img/light05.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light06_s.jpg"&gt;&lt;img src="img/light06.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light07_s.jpg"&gt;&lt;img src="img/light07.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light08_s.jpg"&gt;&lt;img src="img/light08.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light09_s.jpg"&gt;&lt;img src="img/light09.jpg" alt="이미지"&gt;&lt;/a&gt;
+            &lt;a href="img/light10_s.jpg"&gt;&lt;img src="img/light10.jpg" alt="이미지"&gt;&lt;/a&gt;
+        &lt;/div&gt;                   
+    &lt;/article&gt;
+
+    &lt;style&gt;             
+    /* lightbox */
+    .square a {float: left; width: 19%; margin: 0.5%;}
+    .square a img {width: 100%; display: block;}
+
+    /* media query*/
+    /* 화면 너비 0 ~ 1220px */
+    @media (max-width: 1220px){
+        .square a {width: 24%;}  //안에있는 컨텐츠가 4개보이도록 지정
+        .square a:nth-child(5n) {display: none;}
+    }
+    /* 화면 너비 0 ~ 1024px */
+    @media (max-width: 1024px){
+        .square a {width: 32.3333%;}  //안에있는 컨텐츠가 3개보이도록 지정
+        .square a:nth-child(5) {display: block;}
+    }
+    /* 화면 너비 0 ~ 600px */
+    @media (max-width: 600px){
+        .square a {width: 49%;}  //안에있는 컨텐츠가 2개보이도록 지정
+        .square a:nth-child(5) {display: none;}
+    }
+    /* 화면 너비 0 ~ 320px */
+    @media (max-width: 320px){
+    .square a {width: 100%; margin-right: 0; margin-left: 0;}
+    }
+    &lt;/style&gt;
+
+    &lt;script&gt;
+
+    //lightbox.js 플러그인 사용
+    $(".lightbox").lightGallery({
+
+    }); 
+    &lt;/script&gt;          
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="tab_code code_4">
+                                    <pre class="line-numbers">
+                                        <code class="language-css">
+    /* image hover effect */                                            
+
+    .square a {
+        position: relative; 
+        overflow: hidden; 
+        float: left; 
+        width: 19%; 
+        margin: 0.5%;
+    }
+    .square a img {
+        width: 100%; 
+        display: block;
+    }
+    .square a em {
+        background: rgba(0,0,0,.77); 
+        color: #fff; 
+        width: 100%; 
+        text-align: center; 
+        position: absolute; 
+        left: 0; bottom: -30px; 
+        opacity: 1; 
+        transition: all .3s ease;
+    }
+    .square a:hover em {
+        bottom: 0; 
+        background: rgba(0,0,0,.57);
+    }
+
+    .square a:nth-child(1):hover img {filter: blur(2px);}
+    .square a:nth-child(2):hover img {filter: brightness(50%);}
+    .square a:nth-child(3):hover img {filter: contrast(10%);}
+    .square a:nth-child(4):hover img {filter: grayscale(100%);}
+    .square a:nth-child(5):hover img {filter: hue-rotate(120deg);}
+    .square a:nth-child(6):hover img {filter: invert(100%);}
+    .square a:nth-child(7):hover img {filter: opacity(10%);}
+    .square a:nth-child(8):hover img {filter: saturate(10%);}
+    .square a:nth-child(9):hover img {filter: sepia(120%);}
+    .square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);} 
+                                            </code>
+                                        </pre>
+                                    </div>
+                                    <div class="tab_code code_5">
+                                        <pre class="line-numbers">
+                                            <code class="language-html">
+    &lt;!-- web icon font --&gt;
+
+    &lt;div class="menu"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Cafe &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Github &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Gitbook &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Tistory &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;CSS3 &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;HTML5 &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div><!-- /.tab_content -->
+                        </div><!-- /.site_tabmenu -->
+                    </ul><!-- /.st3 -->
+                </div><!-- /.site -->
+            </div><!-- /.container .section_make -->
+
+            <div class="section_make_mobile mb150" id="kurly">
+            <div class="container">
+                <div class="subtitle mobile">
+                    <h2 class="split"><span>Mobile Site</span></h2>
+                    <div class="subtitle_line"></div>
+                </div><!-- /.subtitle -->
+                <div class="mobile_wrap">
+                    <div class="phone_img">
+                        <img src="assets/img/kurly_mockup.png" alt="모바일이미지">
+                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page1.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page2.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page3.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page4.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page1.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page2.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page3.jpg)">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div 
+                                    class="slide-image" 
+                                    style="background-image: url(./assets/img/kurly_page4.jpg)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- mobile_img_list -->
+                <div class="mobile_text">
+                    <h1>market Kurly</h1>
+                    <button type="button">
+                        <a href="#">
+                            <span>view site</span>
+                            <div class="arrow">
+                                <svg id="site_arrow" data-name="site_arrow" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 28.28 33.25">
+                                    <title>무제-2</title>
+                                    <line x1="14.14" y1="0.25" x2="14.14" y2="33.25"></line>
+                                    <line x1="0.18" y1="14.32" x2="14.32" y2="0.18"></line>
+                                    <line x1="13.97" y1="0.18" x2="28.11" y2="14.32"></line>
+                                </svg>
+                            </div>
+                        </a>
+                    </button>
+                </div>
+            </div><!-- /container -->
+            </div><!-- /.section_make_mobile -->
+        </section>
+        <!-- /#make -->
+
+        <section id="animation" class="point">
+            <div class="title">
+                <h1 class="split">Animation</h1>
+                <div class="title_line point"></div>
+            </div>
+            <div class="container section_animation">
+                <div class="ani_article_list list_1">
+                    <article class="ani_article art_cube">
+                        <div class="ani_tape">
+                            <svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 66">
+                                <title>무제-1</title>
+                                <polygon
+                                    points="0 0 5 6 5 9 4 11 10 17 7 21 5 24 8 26 4 31 3 35 3 37 4 41 1 46 3 50 2 53 3 57 4 59 1 61 3 64 3 66 255 66 253 63 255 61 259 58 258 56 257 52 257 50 255 48 256 47 253 43 251 40 252 37 253 36 249 32 253 28 252 27 258 22 257 20 257 18 259 17 255 13 257 10 255 8 254 7 256 3 259 0 0 0"
+                                    style="fill:rgba(208, 169, 75, 0.36)" />
+                            </svg>
+                        </div>
+                        <div class="ani_box">
+                            <p>
+                                cube안에 6개의 div를 넣고 transform의 rotate, translate로 육면체의 위치를 각 각 잡았습니다.
+                                translateZ값으로 입체감을 주었고 애니메이션 효과를 주었습니다.
+                            </p>
+                            <button type="button">view</button>
+                            <div class="cube_box">
+                                <div class="cube_ani">
+                                    <div class="face front"></div>
+                                    <div class="face back"></div>
+                                    <div class="face left"></div>
+                                    <div class="face right"></div>
+                                    <div class="face top"></div>
+                                    <div class="face bottom"></div>
+                                </div>
+                            </div>
+                            <h2>Cube</h2>
+                        </div>
+                    </article><!-- /.ani_article .cube -->
+                    <article class="ani_article art_ellipse">
+                        <div class="ani_tape">
+                            <svg id="레이어_2" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 66">
+                                <title>무제-1</title>
+                                <polygon
+                                    points="0 0 5 6 5 9 4 11 10 17 7 21 5 24 8 26 4 31 3 35 3 37 4 41 1 46 3 50 2 53 3 57 4 59 1 61 3 64 3 66 255 66 253 63 255 61 259 58 258 56 257 52 257 50 255 48 256 47 253 43 251 40 252 37 253 36 249 32 253 28 252 27 258 22 257 20 257 18 259 17 255 13 257 10 255 8 254 7 256 3 259 0 0 0"
+                                    style="fill:rgba(135, 150, 46, 0.36)" />
+                            </svg>
+                        </div>
+                        <div class="ani_box">
+                            <h2>Ellipse</h2>
+                            <p>
+                                svg로 만든 도형에 transform으로 scale값과 translate값을 조절해 크기 변화를 주었고, 
+                                rotate와 animation으로 동적인 움직임을 주었습니다.
+                            </p>
+                            <button type="button">view</button>
+                            <div class="ellipse_box">
+                                <body>
+                                    <div class="blob">
+                                        <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+                                        <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
+                                        </svg>
+                                      </div>
+                                </body>
+                            </iframe>
+                        </div>
+                    </article><!-- /.ani_article .circle -->
+                </div><!-- /.ani_article_list1 -->
+
+                <div class="ani_article_list list_2">
+                    <article class="ani_article art_heart">
+                        <div class="ani_tape">
+                            <svg id="레이어_3" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 66">
+                                <title>무제-1</title>
+                                <polygon
+                                    points="0 0 5 6 5 9 4 11 10 17 7 21 5 24 8 26 4 31 3 35 3 37 4 41 1 46 3 50 2 53 3 57 4 59 1 61 3 64 3 66 255 66 253 63 255 61 259 58 258 56 257 52 257 50 255 48 256 47 253 43 251 40 252 37 253 36 249 32 253 28 252 27 258 22 257 20 257 18 259 17 255 13 257 10 255 8 254 7 256 3 259 0 0 0"
+                                    style="fill:rgba(180, 128, 128, 0.44)" />
+                            </svg>
+                        </div>
+                        <div class="ani_box">
+                            <p>
+                                svg로 만든 도형에 before와 after로 같은 크기의 도형을 만들었고, scale과 rotate로 심장박동이 뛰는 듯한 효과를 주었습니다. 
+                            </p>
+                            <button type="button">view</button>
+                            <div class="heart_box">
+                                <div class="heart_ani"></div>
+                            </div>
+                            <h2>Heart</h2>
+                        </div>
+                    </article><!-- /.ani_article .art_heart -->
+                    <article class="ani_article art_circle">
+                        <div class="ani_tape">
+                            <svg id="레이어_4" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 66">
+                                <title>무제-1</title>
+                                <polygon
+                                    points="0 0 5 6 5 9 4 11 10 17 7 21 5 24 8 26 4 31 3 35 3 37 4 41 1 46 3 50 2 53 3 57 4 59 1 61 3 64 3 66 255 66 253 63 255 61 259 58 258 56 257 52 257 50 255 48 256 47 253 43 251 40 252 37 253 36 249 32 253 28 252 27 258 22 257 20 257 18 259 17 255 13 257 10 255 8 254 7 256 3 259 0 0 0"
+                                    style="fill:rgba(79, 133, 136, 0.38)" />
+                            </svg>
+                        </div>
+                        <div class="ani_box">
+                            <h2>Circle</h2>
+                            <div class="circle_box">
+                                <div class="all">
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="circle_container">
+                                      <div class="ani_circle"></div>
+                                    </div>
+                                    <div class="loader">
+                                      <div class="load-circle"></div>
+                                    </div>
+                                </div>
+                                  
+                                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                    <defs>
+                                      <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                        <feColorMatrix in="blur" mode="matrix" 
+                                                    values="1 0 0 0 0  
+                                                            0 1 0 0 0  
+                                                            0 0 1 0 0  
+                                                            0 0 0 25 -8" result="goo" />
+                                        <feBlend in="SourceGraphic" in2="goo" />
+                                        </filter>
+                                    </defs>
+                                  </svg>
+                            </div>
+                            <p>
+                                같은 크기의 원 위에 rotate로 움직이는 도형을 만들었고, feGaussianBlur와 feColorMatrix의 효과를 주어 부드럽게 합쳐지고 퍼지는 움직임을 주었습니다.
+                            </p>
+                            <button type="button">view</button>
+                        </div>
+                    </article><!-- /.ani_article .art_circle -->
+                </div><!-- /.ani_article_list2 -->
+            </div>
+        </section>
+        <!-- /#animation -->
+
+        <section id="javascript">
+            <div class="container section_js" data-position="fixed">
+                <div class="title">
+                    <h1 class="split">Java Script</h1>
+                    <div class="title_line"></div>
+                </div><!-- /.title -->
+                <div class="arrow">
+                    <div class="arrow_right"></div>
+                    <div class="arrow_right"></div>
+                </div>
+                <div class="js_cont_wrap">
+                    <div class="js_cont cont1 js_point">
+                        <div class="js_cont_index js_act">
+                            <div>
+                                <h2>Java Script</h2>
+                                <h1>01</h1>
+                            </div>
+                            <div class="js_index_circle"></div>
+                        </div>
+                        <div class="js_cont_text js_act">
+                            <h2>Minesweeper</h2>
+                            <h1>지뢰찾기게임</h1>
+                            <div class="cont_line">
+                                <div class="js_title_circle circle_front"></div>
+                                <div class="js_title_circle circle_back"></div>
+                            </div>
+                            <p>
+                                자바스크립트 클로저, 렉시컬 스코프, 스코프 체인,<br>데이터 딕셔너리의 전반적인 이해를 위해 지뢰찾기를 제작
+                            </p>
+                            <a href="./game/mine/index7.html" target="_blank" class="js_btn"><span>view project</span></a>
+                        </div>
+                        <div class="js_cont_game js_act">
+                            <iframe scrolling="no" src="./game/mine/index7.html"></iframe>
+                        </div>
+                        <div class="js_cont_keyword js_act">
+                            <span># 자바스크립트 클로저</span>
+                            <span># 렉시컬 스코프</span>
+                            <span># 스코프 체인</span>
+                            <span># 데이터 딕셔너리</span>
+                        </div>
+                    </div>
+                    <!-- /.js_cont .cont1 -->
+                    
+                    <div class="js_cont cont2 js_point">
+                        <div class="js_cont_index js_act">
+                            <div>
+                                <h2>Java Script</h2>
+                                <h1>02</h1>
+                            </div>
+                            <div class="js_index_circle"></div>
+                        </div>
+                        <div class="js_cont_text js_act">
+                            <h2>Play Card</h2>
+                            <h1>카드뒤집기게임</h1>
+                            <div class="cont_line">
+                                <div class="js_title_circle circle_front"></div>
+                                <div class="js_title_circle circle_back"></div>
+                            </div>
+                            <p>
+                                자바스크립트 팩토리 패턴, 프로토 타입, 참조,<br>
+                                깊은 복사의 전반적인 이해를 위해 카드게임 제작
+                            </p>
+                            <a href="./game/card/index10.html" target="_blank" class="js_btn"><span>view project</span></a>
+                        </div>
+                        <div class="js_cont_game js_act">
+                            <iframe scrolling="no" src="./game/card/index10.html"></iframe>
+                        </div>
+                        <div class="js_cont_keyword js_act">
+                            <span># 팩토리 패턴</span>
+                            <span># 프로토 타입</span>
+                            <span># 참조와 깊은 복사</span>
+                            <span># Object.create()</span>
+                        </div>
+                    </div>
+                    <!-- /.js_cont .cont2 -->
+                    
+                    <div class="js_cont cont3 js_point">
+                        <div class="js_cont_index js_act">
+                            <div>
+                                <h2>Java Script</h2>
+                                <h1>03</h1>
+                            </div>
+                            <div class="js_index_circle"></div>
+                        </div>
+                        <div class="js_cont_text js_act">
+                            <h2>Minesweeper</h2>
+                            <h1>테트리스</h1>
+                            <div class="cont_line">
+                                <div class="js_title_circle circle_front"></div>
+                                <div class="js_title_circle circle_back"></div>
+                            </div>
+                            <p>
+                                자바스크립트 최신 문법, 호출 스택, 이벤트 루프의<br>
+                                전반적인 이해를 위해 테트리스를 제작
+                            </p>
+                            <a href="./game/tetris/index13-1.html" target="_blank" class="js_btn"><span>view project</span></a>
+                        </div>
+                        <div class="js_cont_game js_act">
+                            <iframe scrolling="no" src="./game/tetris/index13-1.html"></iframe>
+                        </div>
+                        <div class="js_cont_keyword js_act">
+                            <span># 화살표 함수</span>
+                            <span># 호출 스택</span>
+                            <span># 이벤트 루프</span>
+                            <span># JSON.parse()</span>
+                        </div>
+                    </div><!-- /.js_cont .cont3 -->
+                </div><!-- /.js_cont_wrap -->
+            </div><!-- /.container -->
+        </section>
+        <!-- /#javascript -->
+
+        <section id="contact" class="point">
+            <div class="title">
+                <h1 class="split">Contact</h1>
+                <div class="title_line point"></div>
+            </div>
+            <div class="container section_contact">
+                <div class="contact_box point">
+                    <div class="contact_box_circle"></div>
+                    <div class="contact_box_title">
+                        <h1>Do you <br class="mq_br_m">want</h1>
+                        <h1><span>WORK</span> <br class="mq_br_m">with me?</h1>
+                    </div>
+                    <form action="https://formspree.io/f/mwkakpvo" method="POST">
+                        <div class="input_box">
+                            <div class="label_wrap"><label for="name">Name</label></div>
+                            <div class="input_wrap"><input type="text" id="name" name="name"></div>
+                            <div class="input_wrap input_m"><input type="text" id="name" name="name" placeholder="Name"></div>
+                        </div>
+                        <div class="input_box">
+                            <div class="label_wrap"><label for="mail">Mail Address</label></div>
+                            <div class="input_wrap"><input type="email" id="mail" name="mail"></div>
+                            <div class="input_wrap input_m"><input type="email" id="mail" name="mail" placeholder="Mail Address"></div>
+                        </div>
+                        <div class="input_box">
+                            <div class="label_wrap msg_box"><label for="message">Message</label></div>
+                            <div class="input_wrap"><input type="text" id="message" name="message" class="msg_input_box"></div>
+                            <div class="input_wrap input_m"><input type="text" id="message" name="message" class="msg_input_box" placeholder="Message"></div>
+                        </div>
+                        <button type="submit" class="submit_btn"><a href="#"><span>Send</span></a></button>
+                    </form>
+                    <div class="contact_box_footer point">
+                        <h2>I’m Web Publisher yoojung</h2>
+                    </div>
+                </div><!-- /.contact_box -->
+                <div class="thank_box_wrap">
+                    <div class="thank_box point">
+                        <div class="thank_box_title">
+                            <h1>Thank you for</h1>
+                            <h1>coming by.</h1>
+                        </div>
+                        <p class="act">Cho yoojung</p>
+                        <div class="thank_box_circle"></div>
+                    </div>
+                </div>
+                <!-- ./thank_box -->
+            </div>
+            <a href="#" class="ct_arrow">
+                <svg id="레이어_1" data-name="레이어 1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.54 330.51"><title>무제-3</title>
+                    <line x1="141.77" x2="141.77" y2="330.51"/>
+                    <line x1="0.22" y1="141.86" x2="141.86" y2="0.22"/>
+                    <line x1="141.68" y1="0.22" x2="283.32" y2="141.86"/>
+                </svg>
+            </a>
+        </section>
+        <!-- /#contact -->
+
+        <footer id="footer">
+            <ul>
+                <li>
+                    <ul class="info_list">
+                        <li class="">mail</li>
+                        <li><a href="#">ujjj56@naver.com</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="info_list">
+                        <li>phone number</li>
+                        <li><a href="#">+82 10 9342 0506</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="info_list">
+                        <li>gitbook</li>
+                        <li><a href="#">https://app.gitbook.com/@ujjj0506/spaces</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <address>COPYRIGHT © 2021 Cho yoojung. WEBSITE MADE BY ME.</address>
+                </li>
+            </ul>
+        </footer>
+        <!-- /#footer -->
+    </div>
+    
+    <!-- <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/index4.js"></script>
+    <script src="./assets/js/cursor4.js"></script> -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/clone.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
+    <script src="assets/js/custom3.js"></script>
+</body>
+
+</html>

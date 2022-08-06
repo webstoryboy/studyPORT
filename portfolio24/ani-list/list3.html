@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* 4. 하트 */
+body {
+  background: #F3C758;
+}
+.back {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #fde7e7;
+  animation-name: backdiv;
+  animation-duration: 1.5s; 
+  animation-iteration-count: infinite;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  background-color: rgb(221, 125, 141);
+  height: 50px;
+  width: 50px;
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.heart:after {
+  background-color: rgb(221, 125, 141);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart:before {
+  background-color: rgb(221, 125, 141);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+
+@keyframes backdiv {
+  50% {
+    background: rgb(248, 221, 219);
+  }
+  }
+@keyframes beat {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(-45deg);
+  }
+  50% {
+    transform:  translate(-50%, -50%) scale(0.6) rotate(-45deg);
+  }
+  }
+
+
+  @keyframes rotate {
+    0%   { transform: rotateX(0) rotateZ(0); }
+    20%  { transform: rotateX(60deg) rotateZ(0);   }
+    40%  { transform: rotateX(60deg) rotateZ(60deg); }
+    60%  { transform: rotateX(60deg) rotateZ(60deg) rotateX(90deg); }
+    80%  { transform: rotateY(120deg) rotateX(120deg) rotateZ(30deg); }
+    100% { transform: rotateY(0) rotateX(0) rotateZ(0); }
+  }
+  div.circle {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    animation: rotate 5s infinite;
+    transform-origin: center center;
+  }
+  
+  div.side {
+    background: rgba(255, 255, 255, 0.3);
+    width: 200px;
+    height: 200px;
+    transform: rotateX(0deg);
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  div.side:nth-child(2) { transform: rotateX(30deg); }
+  div.side:nth-child(3) { transform: rotateX(60deg); }
+  div.side:nth-child(4) { transform: rotateX(90deg); }
+  div.side:nth-child(5) { transform: rotateX(120deg); }
+  div.side:nth-child(6) { transform: rotateX(150deg); }
+  
+  </style>
+    
+
+<body>
+  <div class="back"></div>
+  <div class="heart"></div>
+</body>
+
+</html>
+ 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <!-- 스크립트 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+   
+    <div id="header_login">
+        
+            <h1 class="mainH1">
+                <a href="./index.html">
+                    <img src="./assets/images/logo_b.jpg" alt="compuzone">
+                </a>
+            </h1>
+       
+	</div>
+    <!-- //header -->
+    <div id="loginvisual">
+        <div class="inner">
+            <img src="./assets/images/welcome2.jpg">
+        </div>
+    </div>
+    <div id="contents_area">
+		<div id="loginmenu3">
+            <a href="./login.html">
+                <span class="btn1">LOG-IN</span>
+            </a>
+            <a href="./search_member_id.html">
+                <span class="btn2">아이디찾기</span>
+            </a>
+            <a href="./search_member_pw.html">
+                <span class="btn3">비밀번호찾기</span>
+            </a>
+        </div>
+
+		<div id="findid">
+			<div class="menu1">
+				<div class="title_box">
+                  <dl>
+                    <dt class="Fblue2" style="font-weight:bold; font-size:50px; height:30px; margin-top:-15px;">2</dt>
+                    <dd style="float:left; padding-left:5px; padding-top:2px;">
+                      <p class="bold">등록된 정보로 찾기</p>
+                      <p class="Sblack12 dodum">회원가입 시 등록한 정보로 찾을 수 있습니다.</p>
+                    </dd>
+                  </dl>
+                </div>
+				<div class="radiobtn">
+					<input type="radio" class="SecurityType" name="SecurityType" value="phone" id="SecurityTypeM" style="border:none; float:left; margin-left:45px; height: 16px; vertical-align:middle;" checked="checked"><label for="SecurityTypeM" style="float:left; margin-right:15px;"><div class="bold" style="margin-top:-2px; padding-left:3px;">휴대폰</div></label>
+					<input type="radio" class="SecurityType" name="SecurityType" value="email" id="SecurityTypeE" style="border:none; height: 16px; float:left; vertical-align:middle;"><label for="SecurityTypeE" style="float:left; margin-right:15px;"><div class="bold" style="margin-top:-2px; padding-left:3px;">이메일</div></label>
+					<input type="radio" class="SecurityType" name="SecurityType" value="birth" id="SecurityTypeB" style="border:none; height: 16px; float:left; vertical-align:middle;"><label for="SecurityTypeB" style="float:left;"><div class="bold" style="margin-top:-2px; padding-left:3px;">생년월일</div></label>
+				</div>
+				<!--휴대폰으로 찾기-->
+				<div class="SecurityTypeFrm phone box">
+
+						<dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="bold Fblack" style="width:60px; line-height: 25px;">이름</dt>
+                          <dd><input type="text" name="member_name_phone" style="width:183px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9; ime-mode:active;"></dd>
+                        </dl>
+						<dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="bold Fblack" style="width:60px; line-height: 25px;">휴대폰</dt>
+                          <dd>
+							<input type="text" class="OnlyNumber" name="member_phone_1" style="width:49px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="3">&nbsp;-&nbsp;
+							<input type="text" class="OnlyNumber" name="member_phone_2" style="width:49px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="4">&nbsp;-&nbsp;
+							<input type="text" class="OnlyNumber" name="member_phone_3" style="width:49px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="4">
+                          </dd>
+						</dl>
+					
+				</div>
+				<!--휴대폰으로 찾기 끝-->
+
+				<!--이메일로 찾기-->
+				<div class="SecurityTypeFrm email box" style="display:none;">
+						<dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="black12B Fblack" style="width:60px; padding-top:5px;">이름</dt>
+                          <dd><input type="text" name="member_name_email" style="width:183px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9; ime-mode:active;"></dd>
+                        </dl>
+                        <dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="black12B Fblack" style="width:60px; padding-top:5px;">이메일</dt>
+                          <dd><input type="text" name="member_email" style="width:183px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9; "></dd>
+					    </dl>
+				</div>
+				<!--이메일로 찾기 끝-->
+
+				<!--생년월일으로 찾기-->
+				<div class="SecurityTypeFrm birth box" style="display:none;">
+
+						<dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="black12B Fblack" style="width:60px; padding-top:5px;">이름</dt>
+                          <dd><input type="text" name="member_name_birth" style="width:183px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9; ime-mode:active;"></dd>
+						</dl>
+						<dl style=" margin-bottom:7px; padding-left:20px;">
+                          <dt class="black12B Fblack" style="width:60px; padding-top:5px;">생년월일</dt>
+                          <dd>
+							<input type="text" class="OnlyNumber" name="member_birth_y" style="float:left; width:51px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="4"><div class="Sblack12B" style="float:left; padding-top:4px; margin-right:7px;">년</div>
+							<input type="text" class="OnlyNumber" name="member_birth_m" style="float:left; width:30px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="2"><div class="Sblack12B" style="float:left; padding-top:4px; margin-right:7px;">월</div>
+							<input type="text" class="OnlyNumber" name="member_birth_d" style="float:left; width:30px; height: 25px; padding:5px 0 0 2px; border:1px solid #c9c9c9;" maxlength="2"><div class="Sblack12B" style="float:left; padding-top:4px; margin-right:7px;">일</div>
+                          </dd>
+						</dl>
+						<dl style="padding-left:20px;">
+                          <dt class="black12B Fblack" style="width:60px; padding-top:5px;">성별</dt>
+                          <dd>
+							<input type="radio" name="member_gender" value="1" checked="checked" style="height:25px; vertical-align:middle; float:left; border:none;"><div class="Sblack12B" style="float:left; padding-top:4px; margin-right:7px;"> 남</div>
+							<input type="radio" name="member_gender" value="2" style="height:25px; vertical-align:middle; float:left; border:none;"><div class="Sblack12B" style="float:left; padding-top:4px; margin-right:7px;">여</div>
+                          </dd>
+						</dl>
+				</div>
+				<!--생년월일으로 찾기 끝-->
+				<div class="box2"><div class="BtnSecurityType btn-M btn-blue " style="cursor:pointer;">확인<span class="list-arrow"></span></div></div>
+			</div>
+			<div class="menu2">
+				<div class="title_box">
+                  <dl>
+                    <dt class="Fpurple" style="font-weight:bold; font-size:50px; height:30px; margin-top:-15px;">1</dt>
+                    <dd style="float:left; padding-left:0px; padding-top:2px;">
+                      <p class="bold">본인인증 수단으로 찾기</p>
+                      <p class="Sblack12 dodum">아이핀 또는 본인 명의의 휴대폰으로 찾을 수 있습니다.</p>
+                    </dd>
+                  </dl>
+                </div>
+				<div class="radiobtn">
+					<input type="radio" class="SecuritySelf" name="SecuritySelf" value="i-pin" id="SecuritySelfI" style="border:none; margin-left:95px; height:17px; float:left; vertical-align:middle;" checked="checked"><label for="SecuritySelfI" style="float:left; margin-right:15px;"><div class="bold" style="margin-top:-2px; padding-left:3px;">아이핀</div></label>
+					<input type="radio" class="SecuritySelf" name="SecuritySelf" value="phone2" id="SecuritySelfP" style="border:none; float:left; height:17px; vertical-align:middle;"><label for="SecuritySelfP" style="float:left; margin-right:15px;"><div class="bold" style="margin-top:-2px; padding-left:3px;">휴대폰</div></label>
+				</div>
+
+				<!--휴대폰으로 본인인증하기-->
+				<div class="SecuritySelfFrm phone2 box" style="display:none;">
+					<div style="width:316px; padding:18px 15px 13px 15px; background-color:#f0f0f0; float:left;" class="Sblack11 dodum">[확인]을 클릭하여 본인명의의 휴대폰 정보를 통해 <br>아이디를 찾으실 수 있습니다.</div>
+				</div>
+
+				<!--아이핀으로 본인인증하기-->
+				<div class="SecuritySelfFrm i-pin box">
+					<div style="width:316px; padding:10px 15px 15px 15px; background-color:#f0f0f0; float:left;" class="Sblack11 dodum">[확인]을 클릭하여 아이핀 인증 후 아이핀 정보를 통해 <br>아이디를 찾을 수 있습니다. <br>아이핀이 없을 경우, 신규 발급 후 이용하실 수 있습니다.</div>
+				</div>
+
+				<div class="box2"><div id="BtnSecuritySelf" class="btn-M btn-blue" style="cursor:pointer;">확인<span class="list-arrow"></span></div></div>
+			</div>
+		</div>
+    </div>
+    <div class="endtextt2"><span class="Eblack12" style="float:left;">
+        ※ 휴면 회원인 경우 개인 정보 삭제로 인하여 본인인증 수단으로만 이용 가능합니다.
+        <br>
+        ※ 휴면 회원 중 비밀번호 찾기가 불가능한 경우 <strong>고객센터(1588-8377)</strong>로 문의 부탁드립니다.
+    </span></div>
+
+
+</body>
+
+</html>

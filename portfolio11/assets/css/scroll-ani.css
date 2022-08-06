@@ -1,0 +1,29 @@
+
+.fade-top {
+    transform: translateY(-200px);
+    opacity: 0;
+}
+.fade-left {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.fade-right {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0;
+}
+
+/*.gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0s;
+}
+.on.show {
+    transition: .5s;
+    animation: fadeInLeft 1s ease .5s; 
+    opacity:1;
+    left: -100px;
+}*/
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>짝맞추기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,div {
+            margin: 0;
+            padding: 0;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .iframe_body {
+            width: 28rem;
+            height: 28rem;
+            border-radius: 50%;
+            background: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #wrapper {
+            width: 20rem;
+            height: 20rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .card {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 60px;
+            height: 80px;
+            perspective: 140px;
+        }
+
+        .card:nth-child(9),.card:nth-child(10),.card:nth-child(11),.card:nth-child(12) {
+            margin-bottom: 0;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front {
+            background: navy;
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe_body">
+        <div id="wrapper">
+        </div>
+    </div>
+    <script src="./custom10.js"></script>
+</body>
+</html>

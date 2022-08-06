@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- title -->
+<title>HP Solution 프린팅 서비스 플랫폼</title>
+<!--/tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- for-mobile-apps -->
+<link href="../images/favicon.png" rel="shortcut icon"/>
+<!-- title -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="../css/animate.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="프린팅 서비스의 모든 것 HP 솔루션">
+<meta property="og:url" content="http://oaic.co.kr:8090/">
+<meta property="og:description" content="고객의 프린팅 서비스 습관을 혁신합니다.">
+<meta property="og:image" content="../images/thumnail.jpg">
+<meta name="robots" content="index,follow">
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="author" content="HP Solution">
+<!-- description -->
+<meta name="description" content="대한민국 최초의 프린팅 서비스 플랫폼">
+<!-- keywords -->
+<meta name="keywords" content="hp솔루션">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="text/javascript" src="../js/wow.js"></script>
+<script type="text/javascript" src="../js/wow.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script> new WOW().init(); </script>
+<script>
+			addEventListener("load", function () {
+				setTimeout(hideURLbar, 0);
+			}, false);
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+<!-- jquery -->
+<script src="../js/jquery-2.1.4.min.js"></script>
+<!-- //jquery -->
+<!-- js-카운터 -->
+<script> 
+			jQuery(document).ready(function($) { 
+				$('.counter').counterUp({ 
+					delay: 10, // 숫자당 돌아가는 속도를 지연시켜주는 요소이며  숫자가 높으면 높을 수록 숫자가 돌아가는 속도가 느려집니다.   
+					time: 1000 // 카운트업 해주는 애니메이션의 전체 지속시간으로 1000일 경우, 1초를 의미합니다.  
+				}); 
+			}); 
+		</script>
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<!--//js-카운터 -->
+<!-- price range (top products) -->
+<script src="../js/jquery-ui.js"></script>
+<!-- //price range (top products) -->
+<!-- flexisel (for special offers) -->
+<script src="../js/jquery.flexisel.js"></script>
+<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
+		});
+	</script>
+<!-- //flexisel (for special offers) -->
+<!-- 탑클릭 부드럽게 -->
+<script>
+		$( '.banner' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 0);
+		return false;
+	} );
+	</script>
+<!--// 탑클릭 부드럽게 -->
+<!-- smoothscroll -->
+<script src="../js/SmoothScroll.min.js"></script>
+<!-- //smoothscroll -->
+<!-- start-smooth-scrolling -->
+<script src="../js/move-top.js"></script>
+<script src="../js/easing.js"></script>
+<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+<!-- //end-smooth-scrolling -->
+<!--고정배너 스크립트 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.show-on-scroll');
+  if($(this).scrollTop() >= 600) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//고정배너 스크립트 -->
+<!--탑서칭 -->
+<script>
+$(window).scroll(function() {
+  var $el = $('.top-search-show-on-scroll');
+  if($(this).scrollTop() >= 500) $el.addClass('shown');
+  else $el.removeClass('shown');
+});
+</script>
+<!--//탑서칭 -->
+<!--알람 -->
+<script>function button1_click() {
+	alert("준비중입니다.");
+}
+</script>
+<!--//알람 -->
+<!--첨부파일-->
+<script>
+		$(document).ready(function(){ 
+			var fileTarget = $('.filebox .upload-hidden'); 
+			fileTarget.on('change', function(){ // 값이 변경되면 
+			if(window.FileReader){ // modern browser 
+				var filename = $(this)[0].files[0].name; 
+			} 
+				else { // old IE 
+				var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+				} 
+				// 추출한 파일명 삽입 
+				$(this).siblings('.upload-name').val(filename); 
+			}); 
+		}); 
+		var imgTarget = $('.preview-image .upload-hidden'); 
+		imgTarget.on('change', function(){ 
+			var parent = $(this).parent(); 
+			parent.children('.upload-display').remove(); 
+			if(window.FileReader){ 
+				//image 파일만 
+				   if (!$(this)[0].files[0].type.match(/image\//)) return; 
+				var reader = new FileReader(); 
+				reader.onload = function(e){ 
+					var src = e.target.result; 
+					parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>'); 
+				} 
+				reader.readAsDataURL($(this)[0].files[0]); } 
+			else { 
+					$(this)[0].select(); 
+				$(this)[0].blur(); 
+				var imgSrc = document.selection.createRange().text; 
+				parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>'); 
+				var img = $(this).siblings('.upload-display').find('img'); 
+				img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")"; 
+				} 
+		});
+	</script>
+<!--첨부파일-->
+<!-- for bootstrap working -->
+<script src="../js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- //js-files -->
+<!--//tags -->
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/font-awesome.css" rel="stylesheet">
+<!--pop-up-box-->
+<link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<!--//pop-up-box-->
+<!-- price range -->
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui1.css">
+<!-- fonts -->
+</head>
+<body>
+
+
+
+
+<!--상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+<div class="mnk-main-menu-toggle menu-container">
+     <div class="fdr-menu-box">
+		 
+        <div class="container">
+               <div class="logo" style="float: none; margin-right: 10px;">
+					<div class="site-logo">
+						<a href="../index.html">
+						<img src="../images/logo.png" alt="로고">
+						<img src="../images/logo-small.png" alt="로고작은거">
+						</a>
+						<nav class="fdr-menu" style="float: right;">
+                        
+                        <ul class="menu-line">
+							
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064 active">
+								<a href="../shopping-center/shop-main.html">쇼핑센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../repair-center/repair-main.html" >수리센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../rental-center/rental-main.html">렌탈센터</a>
+							</li>
+							<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-1064">
+								<a href="../edu-center/edu-main.html">교육센터</a>
+							</li>
+                            <li class="partner-btn menu-item menu-item-object-category current-menu-item menu-item-1064" style="margin-right: 40px;">
+                            <a target="_blank"  onclick="location.href='../partner-form.html'"><span>파트너신청 &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></span></a>
+                            </li>
+                        </ul>
+
+                        </nav>
+					</div>
+					
+				</div>
+                
+         </div>
+     </div>
+     <div class="container">
+	    
+		<input type="checkbox" id="menuicon2">
+		<label for="menuicon2">
+		<span></span>
+		<span></span>
+		<span></span>
+		</label>
+		<!--전체메뉴 토글버튼-->
+		<div class="sidebar2">
+			<div class="side-inner">
+				<div class="side-section">
+					<ul class="panel-group side-box " id="accordion" role="tablist" aria-multiselectable="true">
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#shop-ct" aria-expanded="true" aria-controls="shop-ct" class="heading-tt" id="heading1">
+							<img src="../images/shopping-ct-ico.png" class="side-menu-icon"> 쇼핑센터 <i class="fa fa-angle-down"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="shop-ct" role="tabpanel" aria-labelledby="heading1">
+								<ul>
+									<li><a href="../shopping-center/shop-sub2.html">부품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">토너/잉크/용지</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">옵션/악세사리/아답터</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">공급기/수리기자재</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">완제품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">특가상품</a></li>
+									<li><a href="../shopping-center/shop-sub2.html">협력사전용</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#repair-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading2">
+							<img src="../images/repair-ct-ico.png" class="side-menu-icon"> 수리센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="repair-ct" role="tabpanel" aria-labelledby="heading2">
+								<ul>
+									<li><a href="../repair-center/repair-letter.html">고장문의</a></li>
+									<li><a href="../repair-center/repair-main.html">수리신청</a></li>
+									<li><a href="../repair-center/repair-list.html">수리상태조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#rental-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading3">
+							<img src="../images/rental-ct-ico.png" class="side-menu-icon"> 렌탈센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="rental-ct" role="tabpanel" aria-labelledby="heading3">
+								<ul>
+									<li><a href="../rental-center/rental-main.html">제품검색</a></li>
+									<li><a href="../rental-center/rental-letter2.html">실시간렌탈문의</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel panel-default">
+							<h5 role="button" data-toggle="collapse" data-parent="#accordion" href="#edu-ct" aria-expanded="true" aria-controls="repair-ct" class="heading-tt" id="heading4">
+							<img src="../images/edu-ct-ico.png" class="side-menu-icon"> 교육센터 <i class="fa fa-angle-down" style="color: #555;"></i>
+							</h5>
+							<div class="sub-ct3 panel-collapse collapse" id="edu-ct" role="tabpanel" aria-labelledby="heading4">
+								<ul>
+									<li><a href="../edu-center/edu-main.html">교육일정</a></li>
+									<li><a href="../edu-center/edu-main.html">자료/기술 문서실</a></li>
+									<li><a href="../edu-center/edu-main.html">Q&amp;A</a></li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="side-section2">
+					<ul>
+						<li><a href="#">파트너신청</a></li>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">이용안내</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//상단 메뉴바 (쇼핑,수리,렌탈,교육) 전체 적용 부탁드립니다.-->
+
+<!-- header 메뉴 시작 전면수정-->
+<div class="height-70">
+</div>
+<!-- //top 네비 고정-->
+
+
+<!--상단검색-->
+<div class="fix-search top-search-show-on-scroll scroll-top">
+		<div class="container">
+			<div class="input-group" style="margin-bottom: 0px;">
+			<input type="text" class="form-control" placeholder="부품번호 또는 모델명 입력을 하세요.">
+			<span class="input-group-btn " style="height: 45px; ">
+			<button class="btn btn-default inset-shadow" type="button"><i class="fa fa-search " aria-hidden="true" type="submit"></i></button>
+			</span>
+			<span class="input-group-btn side-btn-box" style="color: #fff;">
+			<button class="btn side-btn-top" type="button"><i class="fa fa-wrench " aria-hidden="true" type="submit" style="color: #fff;"></i><a>수리</a></button>
+			</span>
+			<span class="input-group-btn side-btn-top" style=" color: #fff;">
+			<button class="btn side-btn-top" type="button"><i class="fa fa-handshake-o " aria-hidden="true" type="submit" style="color: #fff;"></i><a>렌탈</a></button>
+			</span>
+		</div>
+			<!-- /input-group -->
+		</div>
+	</div>
+	<!--//상단검색바-->
+	<!-- 메인 검색창 -->
+<div class="sub-top-mnk">
+	<div class="container">
+			<div class="sub-text">
+				<h3>대한민국 최초의 프린팅 서비스 플랫폼</h3>
+				<h5>고객의 프린팅 서비스 습관을 혁신합니다.</h5>
+				<div class="mnk-bar">
+					<!--만능키-->
+					<form action="#" method="post" class="">
+						<table>
+						<tr>
+							<td rowspan="2" class="mnk-text">
+								만능키
+							</td>
+							<td colspan="2">
+								<div>
+									<input class="mnk-searchbox1" type="text" name="text" placeholder="부품번호 또는 모델명을 입력해주세요." required="">
+									<span class="mnk-searchbox-button"></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select class="mnk-searchbox2" style="border-left: 0;">
+									<option selected>브랜드<span class="fa fa-arrow-circle-down" aria-hidden="true"></span></option>
+									<option value="1">HP</option>
+									<option value="2">samsung</option>
+									<option value="3">shindorikoDssfgffgfgfg333399999999999999999999999999999999999999999999999909080808098098098</option>
+								</select>
+							</td>
+							<td>
+								<select class="mnk-searchbox2">
+									<option selected>모델명<span class="fa fa-sort-down " aria-hidden="true"></span></option>
+									<option value="1">HP</option>
+									<option value="2">samsung</option>
+									<option value="3">shindorikodfdfdfdfdfdfdfddDssfgffgfgfg333399999999999999999999999999999999999999999999999909080808098098098</option>
+								</select>
+							</td>
+						</tr>
+						</table>
+						<span class="update2">검색엔진 업데이트 : 2019년 3월 28일</span>
+					</form>
+					<!-- //만능키--->
+				</div>
+			</div>
+		</div>
+</div>
+	<!-- //메인 검색창 banner -->
+	
+<!--만능키카테고리탭-->	
+<div class="mnktab">
+	<div class="container">
+		<div class="">
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="active mnktab-box" onclick="location.href='mnk-total.html'">
+					<img src="../images/mnk-c1.png" class="img01" alt="통합검색">
+					<img src="../images/mnk-c1-o.png" alt="통합검색-마우스오버">
+					통합검색
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="mnktab-box" onclick="location.href='mnk-errorcode.html'">
+					<img src="../images/mnk-c2.png" class="img02" alt="에러코드">
+					<img src="../images/mnk-c2-o.png" alt="에러코드-마우스오버">
+					에러코드
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="mnktab-box" onclick="location.href='exinfo.html'">
+					<img src="../images/mnk-c3.png" class="img03" alt="소모품정보">
+					<img src="../images/mnk-c3-o.png" alt="소모품정보-마우스오버">
+					구매정보
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="mnktab-box" onclick="location.href='mapinfo.html'">
+					<img src="../images/mnk-c4.png" class="img04" alt="도면정보">
+					<img src="../images/mnk-c4-o.png" alt="도면정보-마우스오버">
+					도면정보
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="mnktab-box" onclick="location.href='partinfo.html'">
+					<img src="../images/mnk-c5.png" class="img05" alt="부품정보">
+					<img src="../images/mnk-c5-o.png" alt="부품정보-마우스오버">
+					부품정보
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class">
+				<div class="mnktab-box" aria-hidden="true" data-toggle="collapse" data-target=".menu-plus" aria-expanded="false" aria-label="Toggle navigation">
+					<img src="../images/mnk-c6.png" class="img06" alt="더보기">
+					<img src="../images/mnk-c6-o.png" class="img06" alt="더보기">
+					더 보 기
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class collapse menu-plus" aria-expanded="false" role="tablist" id="menu-plus">
+				<div class="mnktab-box" onclick="location.href='partinfo.html'">
+					<img src="../images/mnk-c5.png" class="img05" alt="부품정보">
+					<img src="../images/mnk-c5-o.png" alt="부품정보-마우스오버">
+					드라이버
+				</div>
+			</div>
+			<div class="col-md-2 col-lg-2 col-sm-3 col-xs-4 mnktab-class collapse menu-plus" aria-expanded="false" role="tablist" id="menu-plus2">
+				<div class="mnktab-box" onclick="location.href='partinfo.html'">
+					<img src="../images/mnk-c5.png" class="img05" alt="부품정보">
+					<img src="../images/mnk-c5-o.png" alt="부품정보-마우스오버">
+					프로그램
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//만능키카테고리탭-->
+<!--에러코드 5단 검색결과-->
+<div class="smpinfo-1 total-category">
+	<div class="container">
+		<div class="float-left">
+			<h4><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>에러코드</strong></h4>
+		</div>
+		<div class="float-right ">
+			더보기<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+	</div>
+	<!--//에러코드 5단 검색결과-->
+	<div class="container" style="background-color: #FAFCFF;">
+		<div class="border-bottom" style="height: 25px;">
+		</div>
+	</div>
+</div>
+<!--만능키 검색결과-->
+<div class="mnk-result">
+	<div class="container">
+		<div class="accordion vertical">
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>HP</strong>
+						<h9>
+						HP Stylus Pro 118s<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>123</span>
+						<i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+						<i class="fa fa-plus-square icon" aria-hidden="true"></i>
+						<i class="fa fa-sitemap icon" aria-hidden="true"></i>
+						<h8>한글</h8>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>HP</strong>
+						<h9>
+						HP Stylus Pro 118s<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color:#ddd"></i><span>123</span>
+						<i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+						<i class="fa fa-plus-square icon" aria-hidden="true"></i>
+						<i class="fa fa-sitemap icon" aria-hidden="true"></i>
+						<h8>한글</h8>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>HP</strong>
+						<h9>
+						HP Stylus Pro 118s<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>123</span>
+						<i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+						<i class="fa fa-plus-square icon" aria-hidden="true"></i>
+						<i class="fa fa-sitemap icon" aria-hidden="true"></i>
+						<h8>한글</h8>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>HP</strong>
+						<h9>
+						HP Stylus Pro 118s<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>123</span>
+						<i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+						<i class="fa fa-plus-square icon" aria-hidden="true"></i>
+						<i class="fa fa-sitemap icon" aria-hidden="true"></i>
+						<h8>한글</h8>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>HP</strong>
+						<h9>
+						HP Stylus Pro 118s<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>123</span>
+						<i class="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+						<i class="fa fa-plus-square icon" aria-hidden="true"></i>
+						<i class="fa fa-sitemap icon" aria-hidden="true"></i>
+						<h8>한글</h8>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-down" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+		</div>
+	</div>
+</div>
+<!--//만능키 검색결과-->
+<!--소모품정보 1단 검색결과-->
+<div class="smpinfo-1 total-category">
+	<div class="container">
+		<div class="float-left">
+			<h4><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>소모품 정보</strong></h4>
+		</div>
+		<div class="float-right">
+			더보기<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="container" style="background-color: #FAFCFF;">
+		<div class="border-bottom" style="height: 25px;">
+		</div>
+	</div>
+</div>
+<!--//소모품정보 1단 검색결과-->
+<div class="smpinfo">
+	<div class="container">
+		<div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 shop-class">
+				<div class="shop-box">
+					<div class="img">
+						<img src="../images/shop01.jpg" class="img03">
+					</div>
+					<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+					<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+					<h4>소비자가<span>15,700원</span></h4>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 shop-class">
+				<div class="shop-box">
+					<div class="img">
+						<img src="../images/shop03.jpg" class="img03">
+					</div>
+					<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+					<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+					<h4>소비자가<span>15,700원</span></h4>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 shop-class">
+				<div class="shop-box">
+					<div class="img">
+						<img src="../images/shop02.jpg" class="img03">
+					</div>
+					<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+					<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+					<h4>소비자가<span>15,700원</span></h4>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 shop-class">
+				<div class="shop-box">
+					<div class="img">
+						<img src="../images/shop04.jpg" class="img03">
+					</div>
+					<h5 class="title">Epson Stylus Pro 1180 제목이 길어요. 제목이 길어요. 제목이 길어요.</h5>
+					<h5 class="detail">설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.설명이 길어요.</h5>
+					<h4>소비자가<span>15,700원</span></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--도면정보 5단 검색결과-->
+<div class="mapinfo-5 total-category">
+	<div class="container">
+		<div class="float-left">
+			<h4><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>도면정보 96건 검색</strong></h4>
+		</div>
+		<div class="float-right">
+			더보기<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="container" style="background-color: #FAFCFF;">
+		<div class="border-bottom" style="height: 25px;">
+		</div>
+	</div>
+</div>
+<!--//도면정보 5단 검색결과-->
+<!--만능키 검색결과-->
+<div class="mnk-result">
+	<div class="container">
+		<div class="accordion vertical">
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+		</div>
+	</div>
+</div>
+<!--//만능키 검색결과-->
+<!--부품정보 5단 검색결과-->
+<div class="partinfo-5 total-category">
+	<div class="container">
+		<div class="float-left">
+			<h4><i class="fa fa-check-square-o" aria-hidden="true"></i><strong>부품정보</strong></h4>
+		</div>
+		<div class="float-right">
+			더보기<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="container" style="background-color: #FAFCFF;">
+		<div class="border-bottom" style="height: 25px;">
+		</div>
+	</div>
+</div>
+<!--//부품정보 5단 검색결과-->
+<!--만능키 검색결과-->
+<div class="mnk-result">
+	<div class="container">
+		<div class="accordion vertical">
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+			<div class="list">
+				<div class="label-button clearfix">
+					<div class="panel-heading">
+						<h3>
+						<strong>SAMSUNG</strong>
+						<h9>
+						SAMSUNG Stylus Pro 118s <i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1441<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i>1112<i class="fa fa-caret-right" aria-hidden="true" style="color: #ddd"></i><span>검색결과 하이라이트</span>
+						</h9>
+						</h3>
+					</div>
+					<div class="icon-list">
+						<i class="fa fa-chevron-up" aria-hidden="true" style="color: #ddd"></i>
+					</div>
+				</div>
+			</div>
+			<!--//list 끝-->
+		</div>
+	</div>
+	<div class="height-50">
+	</div>
+</div>
+<!--//만능키 검색결과-->
+	
+	
+	
+
+
+<!-- footer -->
+	<footer>
+	<div class="container">
+		<!-- footer third section -->
+		<div class="footer-info2">
+			<!-- quick links -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-inner" >
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 footer-inner2" >
+				         <div class="footerbox-1 mobile-no">
+				           <img src="../images/logo-w.png" >
+						 </div>
+						 <div class="footerbox-1">
+								<ul class="footer-grid">
+									<li>
+										<a href="./aboutus.html">회사소개</a>
+									</li>
+									<li>
+										<a href="./joinshop.html">입점신청</a>
+									</li>
+									<li>
+										<a href="./total-info.html">고객센터</a>
+									</li>
+									<li>
+										<a href="./pt-info.html">개인정보취급방법</a>
+									</li>
+							    </ul>
+					     </div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-inner2 sns-right ">
+					
+					<ul>
+						
+						<i class="fa fa-2x"><img src="../images/blog.png" alt="블로그" class="sns"></i>
+						<i class="fa fa-2x"><img src="../images/insta.png" alt="인스타그램" class="sns"></i>
+						<i class="fa fa-2x"><img src="../images/facebook.png" alt="페이스북" class="sns"></i>
+						<i class="fa fa-2x"><img src="../images/youtube.png" alt="유튜브" class="sns"></i>
+					
+					</ul>
+				</div>
+			 </div>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-xs-12 footerbox-2">
+					    
+						<h5 class="">
+						     <span style="color:#2AFADF; font-size: 18px; font-weight: 500; letter-spacing: 1.2px; line-height:2.2;">대표전화 1855-4832</span><br>
+							 본사 : 경기도 안양시 동안구 시민대로327번길 11-41, 706호 (관양동, 안양창조경제융합센터) (우)14055<br>
+							 공장 : 경기도 안양시 동안구 시민대로98번길 15 (호계동 현대자동차그랜드정비사업소) 지층 4호 (우)14079<br>
+							 대표 : 배용준 | 사업자등록번호 : (법인) 789-81-00437 <br>
+							 통신판매업신고번호 : 제 2018-안양동안-0076호<br>
+						</h5>
+						<p class="copyright-text">
+							 © Copyright 2019 주식회사 에이치피솔루션 All Rights Reserved 
+							<!-- 3.5일 수정 -->
+						</p>
+						<div class="top-button" onclick="window.scrollTo(0,0);">
+								<span><i class="fa fa-arrow-up"></i></span><sapn>TOP</sapn>
+						</div>
+				</div>
+				
+			</div>
+			
+			<!-- //quick links -->
+			<!-- social icons -->
+		
+			<!-- //social icons -->
+			<div class="clearfix">
+			</div>
+		</div>
+		<!-- //footer third section -->
+		<!-- footer fourth section (text) -->
+		<!-- //footer fourth section (text) -->
+	</div>
+	</footer>
+<!-- //footer -->
+	
+</body>
+</html>

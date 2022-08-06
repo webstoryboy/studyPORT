@@ -1,0 +1,92 @@
+/* 폰트 링크 */
+/* font-family: 'Rajdhani', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Cinzel', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;800&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Cormorant', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600;700&display=swap');
+/* font-family: 'Reem Kufi', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+/* font-family: 'NewYork'; */
+
+
+
+@font-face {
+    font-family: 'NewYork';
+    src: url('newyork-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewYork';
+    src: url('newyork-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@import url(//db.onlinewebfonts.com/c/4c4c08af466e9ad071b6d69cf44093df?family=Saol+Display+Regular);
+
+@font-face {
+    font-family: "Saol Display Regular";
+    src: url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot");
+    src: url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular") format("svg");
+}
+
+;
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+;
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+;
+
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+;
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('../fonts/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+;
+
+@font-face {
+    font-family: 'Saol_Display_Regular';
+    src: url('../fonts/Saol_Display_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+;

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>테트리스</title>
+    <style>
+      @font-face {
+        font-family: 'NEXON Lv1 Gothic OTF';
+        src: url('../../assets/fonts/NEXONLv1GothicLowOTF.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+
+      body::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .iframe_body {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 50%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      #wrapper {
+        width: 20rem;
+        height: 20rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+
+      #tetris,
+      #next-table {
+        border-collapse: collapse;
+      }
+
+      #next-table {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #tetris td {
+        border: 1px solid #cbcbcb;
+        width: 18px;
+        height: 18px;
+      }
+      #next-table td {
+        border: 1px solid #cbcbcb;
+        width: 15px;
+        height: 15px;
+      }
+
+      td.white {
+        background-color: #ffffe9;
+      }
+      td.red {
+        background-color: rgb(235, 84, 84);
+      }
+      td.blue {
+        background-color: rgb(76, 76, 238);
+      }
+      td.orange {
+        background-color: rgb(255, 173, 22);
+      }
+      td.green {
+        background-color: rgb(58, 193, 58);
+      }
+      td.navy {
+        background-color: rgb(38, 38, 109);
+      }
+      td.violet {
+        background-color: rgb(238, 159, 238);
+      }
+      td.yellow {
+        background-color: rgb(255, 225, 0);
+      }
+      td.black {
+        background-color: black;
+      }
+
+      .button_wrap {
+        width: 7rem;
+        height: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+      }
+
+      .button_wrap button {
+        padding: 0.5rem 1rem;
+        background: #8edef0;
+        color: #f1efed;
+        border-radius: 5px;
+        width: 4rem;
+      }
+
+      .button_wrap button.reset_btn {
+        background: #288181;
+      }
+
+      #stop {
+        background: rgb(235, 117, 117);
+      }
+
+      #start {
+        background: rgb(93, 105, 179);
+      }
+
+      button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      .score {
+        font-family: 'NEXON Lv1 Gothic OTF';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iframe_body">
+      <div class="wrap">
+        <table id="tetris"></table>
+        <table id="next-table">
+          <!-- 다음 블록을 그려준다. -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <div class="button_wrap">
+          <button class="reset_btn" onClick="window.location.reload()" style="cursor: pointer">
+            reset
+          </button>
+          <button id="stop">stop</button>
+          <button id="start">start</button>
+          <button id="mute" style="display: none">소리끔</button>
+          <div class="score">score : <span id="score">0</span></div>
+          <!-- <audio id="bgm" src="./Tetris_theme.ogg.mp3" autoplay></audio> -->
+        </div>
+      </div>
+    </div>
+    <script src="./custom13-1.js"></script>
+  </body>
+</html>

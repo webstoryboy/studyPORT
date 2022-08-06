@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+  font-family: 'futura';
+  src: url('../fonts/Futura-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futuraBold';
+  src: url('../fonts/Futura-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gmarketLight';
+  src: url('../fonts/GmarketSansLight.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gmarketMedium';
+  src: url('../fonts/GmarketSansMedium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gmarketBold';
+  src: url('../fonts/GmarketSansBold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'wondar';
+  src: url('../fonts/WondarQuasonFree.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helveticaThinItalic';
+  src: url('../fonts/HelveticaNeueLTStd-ThIt.otf');
+  font-weight: normal;
+}

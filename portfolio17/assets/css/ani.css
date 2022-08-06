@@ -1,0 +1,486 @@
+:root {
+  /* color */
+  --black: #070707;
+  --ivory: #fffcf7;
+  --beige: #fff9f1;
+  --mint: #d3dcd9;
+  --blue: #366eff;
+}
+#header {
+  transform: translateY(-10vh);
+}
+/* 나타나는 애니메이션 */
+.ani-top {
+  opacity: 0;
+  transform: translateY(400px);
+}
+.ani-right {
+  opacity: 0;
+  transform: translateX(-400px);
+}
+.ani-bottom {
+  opacity: 0;
+  transform: translateY(-400px);
+}
+.ani-left {
+  opacity: 0;
+  transform: translateX(400px);
+}
+.ani-top-left {
+  opacity: 0;
+  transform: translate(-400px, -400px);
+}
+.ani-top-right {
+  opacity: 0;
+  transform: translate(400px, -400px);
+}
+.ani-bottom-left {
+  opacity: 0;
+  transform: translate(-400px, 400px);
+}
+.ani-bottom-right {
+  opacity: 0;
+  transform: translate(400px, 400px);
+}
+.fade-in {
+  opacity: 0;
+}
+/* rotate-animation */
+.ani-top-left-rt {
+  opacity: 0;
+  transform: translate(-400px, -400px) rotate(-100deg);
+}
+.ani-top-right-rt {
+  opacity: 0;
+  transform: translate(400px, -400px) rotate(100deg);
+}
+.ani-bottom-left-rt {
+  opacity: 0;
+  transform: translate(-400px, 400px) rotate(-100deg);
+}
+.ani-bottom-right-rt {
+  opacity: 0;
+  transform: translate(400px, 400px) rotate(100deg);
+}
+
+/* fade-box animation*/
+.fade-box-white,
+.fade-box-blue {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  opacity: 1 !important;
+}
+
+.fade-box-white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: a-ltr-after 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transform: translateX(-101%);
+}
+.fade-box-blue::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--blue);
+  animation: a-ltr-after 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transform: translateX(-101%);
+}
+.fade-box-white::before,
+.fade-box-blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  animation: a-ltr-before 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transform: translateX(0);
+}
+.fade-box-white#mint::before,
+.fade-box-blue#mint::before {
+  background: var(--mint);
+}
+.fade-box-white#beige::before,
+.fade-box-blue#beige::before {
+  background: var(--beige);
+}
+.fade-box-white#ivory::before,
+.fade-box-blue#ivory::before {
+  background: var(--ivory);
+}
+.fade-box-white#black::before,
+.fade-box-blue#black::before {
+  background: var(--black);
+}
+@keyframes a-ltr-after {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes a-ltr-before {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+/* main-img-wrap animation */
+#main-img-wrap {
+  background-color: var(--black);
+  overflow: hidden;
+}
+#main-img-wrap:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 120%;
+  background-color: var(--black);
+}
+
+.hide:before {
+  display: none;
+}
+
+@keyframes hide {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 100%;
+  }
+  51% {
+    height: 0%;
+  }
+}
+
+#main-img-wrap:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--blue);
+  transform: translate(101%);
+}
+
+.wow:after {
+  animation: wow 2s ease;
+}
+
+@keyframes wow {
+  0% {
+    height: 0;
+    width: 1vw;
+    transform: translate(0);
+  }
+  25% {
+    height: 100%;
+    width: 1vw;
+  }
+  50% {
+    width: 100%;
+  }
+  51% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+/* contact phone animation */
+#contact #hand {
+  animation: hand-touch 2s ease-in-out infinite;
+}
+@keyframes hand-touch {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#contact #touch-effect {
+  animation: touch-effect 2s linear infinite;
+}
+@keyframes touch-effect {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* about img click animation */
+#body #about .about1 .about-img.appear {
+  transform: rotate(0);
+  transform: scale(1.4);
+  transition: 1s;
+  top: 25%;
+  left: 30%;
+  z-index: 999;
+}
+/* skills ani */
+#skills #fly-person {
+  animation: float 3s linear infinite;
+}
+@keyframes float {
+  0% {
+    bottom: 16%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 16%;
+  }
+}
+#skills #airplane {
+  animation: float2 2.5s linear infinite;
+}
+@keyframes float2 {
+  0% {
+    top: -5%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+/* project float-img */
+.float-img1 {
+  animation: float-img 2.8s linear infinite;
+}
+.float-img2 {
+  animation: float-img 2.8s linear 0.8s infinite;
+}
+.float-img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-img {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* css-ani svg ani */
+#spaceship {
+  animation: float-svg 2.8s linear 0.8s infinite;
+}
+#astronaut,
+#hose {
+  animation: float-svg 2.8s linear infinite;
+}
+@keyframes float-svg {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(2%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+#twinkle1 {
+  animation: fade-in-infi 2s ease-in-out infinite;
+}
+#twinkle2 {
+  animation: fade-in-infi 1.5s linear 1s infinite;
+}
+#twinkle3 {
+  animation: fade-in-infi 1.8s ease-out infinite;
+}
+#twinkle4 {
+  animation: fade-in-infi 2s linear infinite;
+}
+
+@keyframes fade-in-infi {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#blackhole {
+  width: 10vw !important;
+  height: 10vw !important;
+  transform-origin: bottom center;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+/* cloud */
+.cloud {
+  animation: cloud 2.8s linear infinite;
+}
+.cloud:nth-child(even) {
+  animation: cloud 2s linear 0.8s infinite;
+}
+.cloud.cloud2-1 {
+  animation: cloud 3s linear infinite;
+}
+.cloud {
+  animation: cloud 2.8s linear infinite;
+}
+@keyframes cloud {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* contact */
+#wave4 {
+  animation: wave 2.8s linear infinite;
+}
+#wave3 {
+  animation: wave 2.8s linear 0.5s infinite;
+}
+#wave2 {
+  animation: wave 2.8s linear 1s infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1.5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* contact */
+.float-email.typing p {
+  animation: typing 4s steps(25), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* blue effect svg -  */
+#skills #blue-path.dash {
+  animation-delay: 0.5s;
+}
+#blue-path.dash {
+  stroke-dasharray: 1410;
+  stroke-dashoffset: 1410;
+  animation: dash 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.3s;
+  opacity: 1;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#blue-line.dash {
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: dash 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.3s;
+  opacity: 1;
+}
+#blue-line2.dash {
+  stroke-dasharray: 560;
+  stroke-dashoffset: 560;
+  animation: dash 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.3s;
+  opacity: 1;
+}
+#blue-star.dash {
+  stroke-dasharray: 123;
+  stroke-dashoffset: 123;
+  animation: dash 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.3s;
+  opacity: 1;
+}

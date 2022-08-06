@@ -1,0 +1,271 @@
+<?php
+    include '../connect/connect.php';
+    include '../connect/session.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HYO JU DEV</title>
+
+    <!-- 문서 형식 설정 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <meta name="author" content="hyojudev">
+    <meta name="description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="리액트, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 프론트엔드, 개발자한효주">
+    <meta name="robots" content="all">
+
+    <!-- facebook -->
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hyojudev Portfolio App">
+    <meta property="og:description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta property="og:image" content="#">
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React Portfolio App">
+    <meta name="twitter:url" content="#">
+    <meta name="twitter:image" content="#">
+    <meta name="twitter:description" content="프론트 엔트 개발자 한효주 포트폴리오 사이트입니다.">
+
+    <!-- Mobile -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-title" content="Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <noscript>페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다. You need to enable JavaScript to run this app.</noscript>
+
+    <!-- header -->
+    <header>
+        <div class="other-project-btn">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
+        </div>
+        <div class="nav-bg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="main-menu">
+            <li class="main-menu__link page__link"><a href="../pages/home.html">home</a></li>
+            <li class="main-menu__link page__link menu-active"><a href="../pages/about.html">about</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/projects.html">projects</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/script.html">script</a></li>
+            <li class="main-menu__link page__link-php"><a href="../board/board.php">board</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/contact.html">contact</a></li>
+        </nav>
+        <ul class="sign-menu">
+            <?php if ( isset($_SESSION['memberID']) ) { ?>
+            <li><a href="#">
+                    <?= $_SESSION['youNickName'] ?>님👻
+                </a></li>
+            <li><a href="../sign/logOut.php">LOGOUT</a></li>
+            <?php } else { ?>
+            <li><a href="../sign/logIn.php">LOGIN</a></li>
+            <li><a href="../sign/signUp.php">SIGNUP</a></li>
+            <?php } ?>
+        </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- about__page -->
+    <section class="about__page">
+        <!-- about__main -->
+        <div class="about__main">
+            <div class="main-bubble">
+                <div class="m-bubble m-bubble__1"></div>
+                <div class="m-bubble m-bubble__2"></div>
+                <div class="m-bubble m-bubble__3"></div>
+                <div class="m-bubble m-bubble__4"></div>
+                <div class="m-bubble m-bubble__5"></div>
+                <div class="m-bubble m-bubble__6"></div>
+                <div class="m-bubble m-bubble__7"></div>
+                <div class="m-bubble m-bubble__8"></div>
+                <div class="m-bubble m-bubble__9"></div>
+                <div class="m-bubble m-bubble__10"></div>
+                <div class="m-bubble m-bubble__11"></div>
+            </div>
+            <div class="about__main-title">
+                <div class="about__main-title__text">Let me</div>
+                <div class="about__main-title__text">Show you</div>
+                <div class="about__main-title__text">Who I am&#42;</div>
+            </div>
+            <div class="main-subTitle">
+                <div class="main-subTitle__text">&#47;</div>
+                <div class="main-subTitle__text">It’s nice to meet you.</div>
+                <div class="main-subTitle__text">I’m front-end developer</div>
+                <div class="main-subTitle__text">from south korea.</div>
+                <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
+            </div>
+        </div>
+        <!-- //about__main -->
+
+        <!-- about__profile-photo -->
+        <div class="about__profile-photo">
+            <div class="profile-photo__wrap">
+                <div class="profile-photo__img" aria-label="porfile-photo"></div>
+                <svg class="profile-photo__text" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                    <defs>
+                        <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                            id="profile-text-path">
+                            <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate"
+                                from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                        </path>
+                    </defs>
+                    <text class="profile-photo__text-desc" dy="-10" textLength="50">
+                        <textPath xlink:href="#profile-text-path">Hello! I'm Hyo-ju Han, Front-end developer from South
+                            Korea.
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <!-- //about__profile-photo -->
+
+        <!-- about__profile-introduction -->
+        <div class="about__profile-introduction">
+            <h3 class="profile-title profile-split">I can make it better</h3>
+            <div class="profile-intro__wrap">
+                <div class="profile-intro intro__1">
+                    논리적으로 사고하고 표현하는 프론트
+                </div>
+                <div class="profile-intro intro__2">
+                    개발자 <strong class="profile-intro__en">{DEVELOPER}</strong> 로 성장하고
+                </div>
+                <div class="profile-intro intro__3">
+                    싶은 한효주입니다<span class="profile-intro__sign">****</span> 빠르게
+                </div>
+                <div class="profile-intro intro__4">
+                    발전하는<span class="profile-intro__sign">>>></span>기술속에서
+                    끊임없는
+                </div>
+                <div class="profile-intro intro__5">
+                    연구 <strong class="profile-intro__en"> {STUDY} </strong> 를 하며
+                    <div class="profile-intro__icon-smile">
+                        <svg viewBox="0 0 97 59" width="97" height="59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.821 29.678c5.422 0 9.832-6.644 9.832-14.81S30.243.057 24.821.057c-5.422 0-9.833 6.644-9.833 14.81s4.412 14.81 9.833 14.81zM71.604 29.678c5.422 0 9.833-6.644 9.833-14.81S77.027.057 71.604.057c-5.42 0-9.83 6.644-9.83 14.81s4.41 14.81 9.83 14.81zM95.855 36.806a1.998 1.998 0 00-2.285-.4C81.232 42.29 65.125 45.53 48.214 45.53c-16.907 0-33.015-3.24-45.354-9.123a2 2 0 00-2.653 2.69c5.606 11.351 25.35 19.277 48.008 19.277 22.668 0 42.412-7.929 48.012-19.279a2.002 2.002 0 00-.372-2.289z"
+                                fill="#88B2C4" />
+                        </svg>
+                    </div>
+                    매일매일
+                </div>
+                <div class="profile-intro intro__6">
+                    발전하는 사람이 되겠습니다<span class="profile-intro__sign">/*~*/</span>
+                    <svg class="profile-intro__icon-circle" viewBox="0 0 196 140" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-circle__path"
+                            d="M191.41 79.9103C139.199 99.6364 6.70764 137.661 2.26974 70.7736C-1.30155 16.8998 83.645 7.74363 91.1253 5.97163C98.6056 4.19963 190.784 -10.0441 193.496 30.8044C197.566 92.132 71.5 132.5 56.944 137.807"
+                            stroke="#88B2C4" stroke-width="4" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- //about__profile-introduction -->
+
+    </section>
+    <!-- //about__page -->
+
+    <!-- footer -->
+    <footer class="footer bg-color__white">
+        <div class="footer__wrap">
+            <div class="footer__contact">
+                <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
+                <h1 class="footer__contact-title">
+                    <div class="footer__contact-title__text">If you like my</div>
+                    <div class="footer__contact-title__text">portfolio please</div>
+                    <div class="footer__contact-title__text">contact me!</div>
+                </h1>
+                <button type="button" class="footer__contact-btn smile-motion">
+                    hyojudev@gmail.com
+                </button>
+            </div>
+            <div class="footer__socials">
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__1">
+                        <a href="https://github.com/hyojudev" target="_blank">github</a>
+                    </li>
+                    <li class="social__btn social__btn__2">
+                        <a href="https://hyojudev.gitbook.io/study/" target="_blank">gitbook</a>
+                    </li>
+                    <li class="social__btn social__btn__3">
+                        <a href="https://codepen.io/hyojudev/pen/RworLpQ" target="_blank">codepen</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__4">
+                        <a href="#" target="_blank">instagram</a>
+                    </li>
+                    <li class="social__btn social__btn__5">
+                        <a href="mailto:hyojudev@gmail.com" target="_blank">gmail</a>
+                    </li>
+                </ul>
+            </div>
+            <canvas id="footer__canvas"></canvas>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/about.js"></script>
+    <script src="../assets/js/footer.js"></script>
+
+</body>
+
+</html>

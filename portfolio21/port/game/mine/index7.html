@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>지뢰찾기</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+
+      body::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .wrap {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #fffcfa;
+        text-align: center;
+        line-height: 20px;
+        width: 28px;
+        height: 28px;
+        background: #d9d7d4;
+      }
+      td.opened {
+        background: #999;
+      }
+      td.flag {
+        background: #d5f2d9;
+      }
+      td.question {
+        background: #ded5f2;
+      }
+
+      .reset_btn {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 0.5rem 1rem;
+        background: #a69c92;
+        color: #f1efed;
+        border-radius: 5px;
+      }
+      #result {
+        position: absolute;
+        bottom: 4rem;
+        left: 50%;
+        transform: translate(-50%);
+        background: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <input id="hor" type="number" placeholder="가로" value="10" style="display: none" />
+      <input id="ver" type="number" placeholder="세로" value="10" style="display: none" />
+      <input id="mine" type="number" placeholder="지뢰" value="20" style="display: none" />
+      <!-- <button id="exec">실행</button> -->
+      <table id="table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+      <div id="result" style="display: none"></div>
+      <a class="reset_btn" onclick="window.location.reload()" style="cursor: pointer">reset</a>
+    </div>
+    <script src="./custom7-1.js"></script>
+  </body>
+</html>

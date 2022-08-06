@@ -1,0 +1,250 @@
+@font-face { font-family: 'S-CoreDream-3Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+/* layout */
+#section1 {height: 100vh; background: #FFF3F4;}
+#section2 {}
+#section3 {background: #000;}
+#section4 {height: 4000px; background: #fff;}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {
+    max-width: 1400px; 
+    margin: 0 auto;
+    width: 100%;
+    
+}
+
+/* scroll */
+.scroll {
+    position: fixed; left: 10px; top: 10px; 
+    width: 40px; height: 40px;
+    background: rgba(0,0,0,0.3);
+    line-height: 40px; text-align: center;
+    color: #fff;
+}
+
+/* sec1 */
+.sec1 {height: 100vh; overflow: hidden;}
+.sec1 .title h1 {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.sec1 .title h1 strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18vw;
+    line-height: 15vw;
+    font-weight: 900;
+    display: block;
+    white-space: nowrap;
+}
+.sec1 .title h1 strong:nth-child(1) {
+    padding-left: 30vw;
+}
+.sec1 .title h1 strong:nth-child(2) {
+    padding-right: 30vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+.sec1 .title h1 strong span {
+    opacity: 0;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+
+
+/* sec3 */
+.sec2 {}
+.sec2 .s2Img {
+    display: flex;
+    padding-top: 50vh;
+    position: relative;
+}
+.sec2 .s2Img .s2Img-tit {
+    position: absolute; left: 35%; top: 30%;
+    z-index: 100;
+    font-size: 26px;
+}
+.sec2 .s2Img .s2Img-tit2 {
+    position: absolute; right: 5%; bottom: 5%;
+    z-index: 100;
+    font-size: 26px;
+}
+.sec2 .s2Img .left {
+    width: 30%; height: 1000px; background: rgb(231, 198, 191);
+    margin-top: 50vh;
+}
+.sec2 .s2Img .left h3 {
+    font-size: 20px; 
+    text-transform: uppercase;
+    text-align: right;
+    padding: 80px 30px 10px 20px;
+}
+.sec2 .s2Img .right {
+    width: 70%; 
+    position: relative;
+    overflow: hidden;
+}
+.sec2 .s2Img .right .img-wrap {
+    width: 100%; height: 100%;
+    background: url(http://flavinsky.com/static/images/cover_hrh@2x.jpg);
+    background-size: 120%;
+    position: absolute; 
+    left: 0%; top: -10%;
+}
+
+.sec2 .s2Img .right::after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    right: 0px; top: 0px;
+}
+
+
+/* sec3 */
+.sec3 {padding: 50vh 0; }
+.sec3 h2 {
+    position: relative;
+    z-index: 10;
+}
+.sec3 h2 strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12vw;
+    line-height: .74;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 30px;
+}
+.sec3 h2 strong span {
+    display: inline-block;
+    opacity: 0;
+    transform: translatey(300px);
+}
+
+
+.sec3 h2 strong:nth-child(2) {
+    color: #A99163;
+}
+.sec3 h2::before {
+    content: '';
+    background: url(../images/sec3_img.jpg);
+    background-size: 150px;
+    width: 35vw; height: 40vw;
+    position: absolute; right: 0vw; top: 0vw;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+.sec3 .intro {
+    position: relative; z-index: 20;
+    color: #fff; width: 30vw; margin-left: auto;
+    margin-top: 5vw;
+}
+.sec3 .intro h3 {
+    font-size: 40px; padding-bottom: 1vw;
+}
+.sec3 .intro h3::before {
+    content: '';
+    position: absolute; top: -20px;
+    width: 70px; height: 2px;
+    background: #A99163;
+}
+.sec3 .intro p {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 18px;
+    margin-right: 5vw;
+}
+
+
+/* sec4 */
+.sec4 {padding: 50vh 0;}
+
+.stie-wrap {}
+.stie-wrap .site {
+    position: relative;
+    padding: 5vw 0 7vw 0;
+    border-top: 1px solid #000; border-bottom: 1px solid #000;
+}
+.stie-wrap .site.s1 {
+    background: url(../images/mock_1.jpg) no-repeat right 10% bottom;
+    background-size: 40%;
+}
+.stie-wrap .site .site-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.stie-wrap .site .site-tit {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9vw;
+    line-height: 9vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-left: 2vw;
+}
+.stie-wrap .site .site-tit strong {
+    display: block;
+    font-weight: 100;
+    padding-bottom: 2vw;
+}
+.stie-wrap .site .site-desc {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 24px;
+    padding-right: 50%;
+    padding-left: 7vw;
+}
+.stie-wrap .site .site-btn {
+    position: absolute; left: 45%; bottom: 40px;
+    color: #000;
+    font-size: 26px;
+    border-bottom: 1px solid #000;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.stie-wrap .code {}
+.stie-wrap .code .code-btn {
+    
+}
+.stie-wrap .code .code-btn ul {
+    display: flex;
+    justify-content: space-around;
+}
+.stie-wrap .code .code-btn li {
+    
+}
+.stie-wrap .code .code-btn li a{
+    display: inline-block; 
+    padding: 1vw 3vw;
+    color: #000;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 17px;
+}
+.stie-wrap .code .code-btn li.active a {
+    background: #000;
+    color: #fff;
+}
+.stie-wrap .code .code-view { 
+    border-top: 1px solid #000; border-bottom: 1px solid #000;
+    height: 400px;
+    
+}
+
+
+
+
+
+
+
+
+
+

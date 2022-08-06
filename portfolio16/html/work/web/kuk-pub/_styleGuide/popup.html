@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+	<meta http-equiv="Content-Type" charset="utf-8">
+	<title>스타일가이드</title>
+
+
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-grid.min.css" rel="stylesheet">
+	<link href="../plugins/datepicker/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+	<!-- Bootstrap core js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8" href="../js/bootstrap.bundle.min.js" rel="stylesheet"></script>
+	<script type="text/javascript" charset="utf-8" href="../js/bootstrap.min.js" rel="stylesheet"></script>
+	<script type="text/javascript" src="../plugins/datepicker/js/moment.min.js"></script>
+	<script type="text/javascript" src="../plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- jquery -->
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- main css -->
+	<link href="../css/style-main.css" rel="stylesheet" type="text/css" media="all">
+	<link href="../css/sub1-1.css" rel="stylesheet" type="text/css" media="all">
+	<link href="../css/font.css" rel="stylesheet">
+	<link href="../css/font-awesome.css" rel="stylesheet">
+
+	<!-- main js -->
+	<script src="../js/main.js"></script>
+
+</head>
+
+<body>
+
+	<div class="popup-box">
+		<div class="modal-header ">
+			<h5 class="modal-title" id="exampleModalLabel">팝업 타이틀</h5>
+			<button type="button" class="close" onclick="window.close();">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+
+			<div class="filter-box-gray mb15">
+				<ul class="row">
+					<li class="col-3 table-tit pr-0">
+						<div class="input-group">
+							<div class="input-group-append">
+								<h5>상태</h5>
+							</div>
+							<select class="custom-select custom-select-sm">
+								<option>전체</option>
+								<option>미전시</option>
+								<option>전시</option>
+							</select>
+						</div>
+					</li>
+					<li class="col-2 table-tit px-0">
+						<h5>검색어</h5>
+					</li>
+					<li class="col-7 pl-0">
+						<div class="input-group input-group-sm">
+							<div class="input-group-append" style="width:87px;">
+								<select class="custom-select custom-select-sm">
+									<option>전시품 ID</option>
+									<option>201934</option>
+									<option>432142</option>
+								</select>
+							</div>
+							<input type="text" class="form-control" style="height:35px;">
+							<div class="input-group-append" style="width:78px;">
+								<button class="btn btn-keyword btn-block">검색 <i class="fa fa-search ml-1"></i></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="table-tit bt0 d-inline" style="line-height: 3;">
+				목록 <span class="float-right table-search-num" style="margin:0; text-align: right;">총
+					<strong>100</strong>건</span>
+			</div>
+			<div class="inner pt0" style="padding-top: 0;">
+				<table class="table table-bordered table-list-t3">
+					<thead>
+						<tr>
+							<th>상태</th>
+							<th>전시품ID</th>
+							<th width="50%">전시품명</th>
+							<th>사용여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>미전시</td>
+							<td>523432</td>
+							<td>전시품명AA</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>미전시</td>
+							<td>523432</td>
+							<td>전시품명AA</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>미전시</td>
+							<td>523432</td>
+							<td>전시품명AA</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>미전시</td>
+							<td>523432</td>
+							<td>전시품명AA</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>미전시</td>
+							<td>523432</td>
+							<td>전시품명AA</td>
+							<td>Y</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+
+
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn apply-btn" style="background: #e4032e;">적용</button>
+			<button type="button" class="btn cancel-btn" onclick="window.close();">닫기</button>
+		</div>
+	</div>
+</body>
+
+</html>
