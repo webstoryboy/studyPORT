@@ -1,0 +1,10 @@
+:root {
+    font-size: 16px;
+    line-height: 1.4;
+    --font-main: 'jostblack';
+    --font-main2: 'jostregular';
+    --font-sub1: 'atheneregular';
+    --font-sub2: 'montserratregular';
+    --font-kor: 'Chosunilbo_myungjo';
+    --bg-color-main: #EBE8E4;
+}

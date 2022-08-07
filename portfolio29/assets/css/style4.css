@@ -1,0 +1,840 @@
+@charset "utf-8";
+
+body {
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+    background: var(--bg-color-main);
+}
+
+/* 스크롤 */
+.scroll {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(199, 212, 18, 0.8);
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+    z-index: 10000;
+}
+
+/* 가운데 영역 */
+.container {
+    position: relative;
+    width: 1520px;
+    /* height: 100%; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+.row {
+    position: relative;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/* 레이아웃 */
+#header {}
+#main {}
+
+#section1 {
+    max-height: 2468px;
+    margin-bottom: 36%;
+}
+#section2 {
+    margin-bottom: 10%;
+}
+#section3 {}
+#section4 {
+    overflow: hidden;
+}
+#section5 {
+    overflow: hidden;
+}
+#section6 {
+    background: #000;
+    padding: 1% 0;
+}
+#section7 {
+    background: #000;
+    padding-bottom: 4%;
+    overflow: hidden;
+}
+#section8 {}
+#section9 {
+    height: 100vw;
+    max-height: 1280px;
+    background: url(../img/animation.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+#section10 {
+    padding: 40% 0 10%;
+}
+#footer {
+    background: #000;
+}
+
+
+
+
+
+/* 헤더 영역 */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+#header h1 {
+    padding: 10px 5px;
+    font-weight: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#header h1 a {
+    color: #fff;
+    padding: 0 10px;
+}
+
+#header .nav {
+    padding-right: 10px;
+}
+
+#header .nav li {
+    display: inline;
+}
+
+#header .nav li a {
+    color: #fff;
+    padding: 23px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.7vw;
+    display: inline-block;
+}
+
+/* 배너 영역 */
+.banner {
+    /* background: url(../img/main@2x.jpg) no-repeat center top;
+    background-size: cover; */
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    height: 100%;
+}
+
+.banner h2 {
+    font-size: 13vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    overflow: hidden;
+    text-align: center;
+    animation: banner 40s linear infinite;
+    position: absolute;
+    top: 4%;
+}
+
+.banner h2 span {}
+.banner .banner__sub__title {
+    width: 100%;
+    position: absolute;
+    left: 0; top: 16.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.banner .banner__sub__title span {
+    color: #fff;
+    font-family: var(--font-main2);
+    font-size: 1vw;
+    margin-left: 1%;
+    opacity: 0.7;
+}
+.banner .banner__sub__title span:last-child {
+    text-align: right;
+    margin-left: 0;
+    margin-right: 1%;
+}
+.banner__center__box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13vw;
+    font-family: var(--font-main);
+}
+
+.banner__center__box__text {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.banner__center__box__text.text2 {
+    color: #EC1717;
+}
+
+.banner__center__box__img {
+    width: 43vw;
+    height: 43vw;
+    background: url(../img/main2.jpg) no-repeat center top;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner__center__box__img img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+.banner__desc {
+    position: sticky;
+    left: 50%;
+    bottom: 6%;
+    transform: translate(-50%, -50%);
+}
+
+.banner__desc p {
+    text-align: center;
+    font-size: 1.1vw;
+    font-family: var(--font-sub2);
+}
+
+/* 어바웃 크동 영역 */
+.about__kdong {
+    font-size: 14vw;
+    color: #000;
+    font-family: var(--font-sub1);
+}
+
+.about__kdong h2 {
+    line-height: 0.1;
+}
+
+.about__kdong__img {
+    height: 70%;
+}
+
+.about__kdong__desc {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.about__kdong__desc .about__desc1 {
+    text-align: left;
+    font-size: 1.1vw;
+    display: inline-block;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-family: var(--font-main2);
+}
+
+.about__kdong__desc .about__desc2 {
+    text-align: right;
+    line-height: 1.7;
+}
+
+/* 어바웃 미 영역 */
+.about__me {
+    font-family: var(--font-kor);
+    color: #000;
+}
+
+.about__me h2 {
+    font-size: 5.2vw;
+    text-align: center;
+}
+
+.about__me .about__me__desc {
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 25%;
+    margin-top: .8%;
+}
+
+.about__me .about__me__desc span {
+    display: inline-block;
+    width: 12vw;
+    height: 1.5vw;
+    position: relative;
+}
+.about__me .about__me__desc span::before {
+    content: '';
+    width: 12vw;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 0; bottom: 40%;
+}
+
+.about__me__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__me__box__img {
+    flex: 0 0 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.about__me__box__text {
+    flex: 0 0 50%;
+    height: 100%;
+}
+
+.about__me__box__desc {
+    font-size: 1.8vw;
+    padding-bottom: 37.5%;
+    height: 50%;
+    text-align: justify;
+}
+
+.about__me__box__desc__text {
+    display: block;
+    text-indent: 22vw;
+    text-align: left;
+    line-height: 160%;
+    font-size: 1.9vw;
+}
+
+.about__me__box__more {
+    font-size: 3vw;
+    font-family: var(--font-main2);
+    text-transform: uppercase;
+    height: 50%;
+}
+
+.about__me__box__hash {
+    font-size: 1.5vw;
+}
+
+.about__me__box__hash a {
+    padding-right: 1.2vw;
+}
+
+.about__me__box__learn {
+    display: block;
+    font-size: 2.6vw;
+    font-family: var(--font-main);
+}
+
+/* 사이트 소개 글 */
+.text__header {
+    text-align: center;
+    color: #000;
+    font-size: 9vw;
+    font-family: var(--font-sub1);
+    margin: 45% 0 42%;
+}
+
+.text__header__text {
+    display: block;
+    line-height: 1.2;
+}
+
+.text__header .text__header__text.site2 {
+    display: flex;
+    justify-content: center;
+}
+
+.text__header .text__header__text.site2 .text__header__text__img {
+    background: url(../img/sites.jpg) no-repeat center center;
+    background-size: cover;
+    width: 10vw;
+    height: 8vw;
+    margin: -2.2vw 2vw 0;
+}
+
+.text__header .text__header__text.site4 {
+    font-family: var(--font-kor);
+    font-size: 1.6vw;
+    margin-top: -4%;
+}
+
+/* 사이트 목업 영역 */
+.sites__info {
+    position: relative;
+    margin-bottom: 40vw;
+}
+.sites__info.info7 {
+    margin-bottom: 25vw;
+}
+.site__title {}
+
+.site__title span {
+    display: block;
+    font-size: 13vw;
+    font-family: var(--font-main);
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.site__title span:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    text-indent: -3vw;
+}
+.container.site {
+    margin-top: -28%;
+}
+.site__info__text {
+    font-family: var(--font-kor);
+    overflow: hidden;
+}
+
+.site__img {
+    width: 60%;
+    float: left;
+}
+
+.site__info__desc {
+    width: 55%;
+    float: right;
+}
+
+.site__desc {
+    font-size: 1.2vw;
+    text-align: justify;
+    text-indent: 22vw;
+}
+
+.site__desc p {
+    margin-bottom: 2%;
+}
+
+.site__desc p span {
+    border-bottom: 1.2px solid #000;
+}
+
+.site__btn {
+    font-size: 1.2vw;
+    text-align: right;
+}
+
+.site__btn a {
+    padding: 1.5% 15%;
+    display: inline-block;
+    border: solid 1px #000;
+}
+
+.site__btn a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.sites__info:nth-child(even) .site__img {
+    /* margin-left: 100%; */
+    float: right;
+}
+
+.sites__info:nth-child(even) .site__info__desc {
+    float: left;
+}
+.sites__info:nth-child(even) .site__btn {
+    text-align: left;
+}
+
+/* 스크립트 소개 글 영역 */
+.text__header.script {
+    color: #fff;
+}
+.text__header__text.script1 {
+    display: flex;
+    justify-content: center;
+}
+
+.text__header__text.script1 .imgBox {
+    background-size: 100%;
+    width: 10vw;
+    height: 8vw;
+    margin: -2.1vw 2vw 0;
+}
+
+.text__header__text.script1 .imgBox.box1 {
+    background: url(../img/script01@2x.jpg) no-repeat center center;
+}
+
+.text__header__text.script1 .imgBox.box2 {
+    background: url(../img/script02.jpg) no-repeat center center;
+}
+
+.text__header .text__header__text.script4 {
+    font-family: var(--font-kor);
+    font-size: 1.6vw;
+    margin-top: -4%;
+}
+
+/* 스크립트 뷰 영역 */
+.script__wrap {}
+.script__info {
+    position: relative;
+    margin-bottom: 40vw;
+    color: #fff;
+}
+.container.script {
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+    left: 50%; top: 29%;
+    transform: translateX(-50%);
+}
+.script__title {}
+
+.script__title span {
+    display: block;
+    font-size: 13vw;
+    font-family: var(--font-main);
+    white-space: nowrap;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.script__title span:nth-child(2) {
+    text-indent: -3vw;
+    opacity: .5;
+}
+
+.script__title span:nth-child(3) {
+    text-indent: -3vw;
+    opacity: .3;
+}
+
+.script__info__text {
+    width: 90vw;
+    font-family: var(--font-kor);
+    overflow: hidden;
+}
+
+.script__info:nth-child(odd) .script__info__text {
+    margin-left: 10vw;
+}
+
+.script__iframes {}
+
+.script__iframes iframe {
+    width: 100%;
+    height: 35vw;
+}
+
+.script__info__desc {
+    width: 48vw;
+    margin-top: 1.8vw;
+    margin-bottom: 1.5vw;
+    float: right;
+}
+
+.script__info:nth-child(odd) .script__info__desc {
+    float: left;
+}
+
+.script__desc {
+    font-size: 1.2vw;
+    text-align: right;
+    margin-bottom: 1.2vw;
+    margin-top: 1vw;
+}
+
+.script__info:nth-child(odd) .script__desc {
+    text-align: left;
+}
+
+.script__desc p {
+    margin-bottom: 2%;
+}
+
+.script__desc p span {
+    border-bottom: 1.2px solid #fff;
+}
+
+.script__btn {
+    font-size: 1.2vw;
+    width: 48vw;
+    text-align: right;
+}
+
+.script__btn a {
+    padding: 1.5% 15%;
+    display: inline-block;
+    border: solid 1px #fff;
+    text-align: left;
+}
+
+.script__btn a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.script__info:nth-child(odd) .script__btn {
+    text-align: left;
+}
+
+/* 애니메이션 소개 글 */
+.text__header .text__header__text.ani2 {
+    display: flex;
+    justify-content: center;
+}
+
+.text__header .text__header__text.ani4 {
+    font-family: var(--font-kor);
+    font-size: 1.6vw;
+    margin-top: -3%;
+}
+
+.text__header__text.ani2 .imgBox {
+    background-size: cover;
+    width: 10vw;
+    height: 8vw;
+    margin: -2.2vw 2vw 0;
+}
+
+.text__header__text.ani2 .imgBox.box1 {
+    background: url(../img/css01.jpg) no-repeat center center;
+}
+
+.text__header__text.ani2 .imgBox.box2 {
+    background: url(../img/css02.jpg) no-repeat center center;
+}
+
+/* 애니메이션 영역 */
+/* .ani__wrap {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ani__wrap .ani__card {
+    width: 25vw;
+    height: 35vw;
+    transform-style: preserve-3d;
+    transition: all 0.6s;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 4vw;
+}
+
+.ani__wrap .ani__card>div {
+    background: #EAB4D0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+} */
+
+/* .ani__wrap .ani__card .front {
+    transform: rotateY(0deg);
+}
+
+.ani__wrap .ani__card .back {
+    transform: rotateY(-180deg);
+}
+
+.ani__wrap .ani__card .front.rocket {
+    background-image: url(../img/rocket.jpg);
+    background-size: cover;
+}
+
+.ani__wrap .ani__card .front.radio {
+    background-image: url(../img/radio.jpg);
+    background-size: cover;
+}
+
+.ani__wrap .ani__card .front.csso {
+    background-image: url(../img/cssometric.jpg);
+    background-size: cover;
+}
+
+.ani__wrap .ani__card .front.cloudy {
+    background-image: url(../img/cloudy.jpg);
+    background-size: cover;
+} */
+
+.c-exp-gallery {
+    padding-bottom: calc(500 * (100vw / 1440));
+}
+
+.c-exp-gallery__slider {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.c-exp-gallery__inner {
+    white-space: nowrap;
+}
+
+.c-exp-gallery-slide {
+    display: inline-block;
+    position: relative;
+    padding: 0 calc(180 * (100vw / 1440));
+}
+
+/* .c-exp-gallery-slide.ani.js-experience-slide {
+    padding-left: 0 calc(550 * (100vw / 1440));
+} */
+
+.c-exp-gallery-slide__img {
+    width: 30vw;
+}
+
+.proxy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* .c-exp-gallery-slide__content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-top: calc(35 * (100vw / 1440));
+} */
+
+/* 무너지는 박스들 영역 */
+.skill__wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+.svg {
+    position: absolute;
+}
+.skill__wrap img {
+    width: 28%;
+}
+.skill__wrap .img__svg1 {
+    left: 0; top: 19%;
+    width: 20%;
+}
+.skill__wrap .img__svg2 {
+    left: 0; top: 37%;
+}
+.skill__wrap .img__svg3 {
+    left: 0; top: 54%;
+}
+.skill__wrap .img__svg4 {
+    left: 0; top: 72%;
+    width: 20%;
+}
+.skill__wrap .img__svg5 {
+    left: 23.5%; top: 40%;
+    width: 20%;
+    transform: rotate(102deg);
+}
+.skill__wrap .img__svg6 {
+    left: 18%; top: 70%;
+    transform: rotate(-18deg);
+}
+.skill__wrap .img__svg7 {
+    left: 38%; top: 26%;
+    transform: rotate(-30deg);
+}
+.skill__wrap .img__svg8 {
+    left: 43%; top: 42%;
+    transform: rotate(-30deg);
+}
+.skill__wrap .img__svg9 {
+    left: 42%; top: 80%;
+    transform: rotate(5deg);
+}
+.skill__wrap .img__svg10 {
+    left: 60%; top: 55%;
+    transform: rotate(-25deg);
+}
+.skill__wrap .img__svg11 {
+    left: 69%; top: 76%;
+}
+.skill__wrap .img__svg12 {
+    left: 80%; top: 62%;
+    width: 13%;
+    transform: rotate(-15deg);
+}
+.skill__wrap .img__svg13 {
+    left: 79%; top: 36%;
+    transform: rotate(90deg);
+    width: 32%;
+}
+.skill__wrap .img__svg14 {
+    width: 10%;
+    left: 69%; top: 38%;
+    transform: rotate(20deg);
+}
+.skill__wrap .img__svg15 {
+    width: 10%;
+    left: 80%; top: 30%;
+    transform: rotate(50deg);
+}
+.skill__wrap .img__svg16 {
+    width: 8%;
+    left: 37%; top: 50%;
+}
+.skill__wrap .img__svg17 {
+    width: 12%;
+    left: 82%; top: 17%;
+    transform: rotate(20deg);
+}
+
+/* 풋터 영역 */
+.contact__wrap {
+    color: #fff;
+    padding-top: 20%;
+}
+
+.contact__box {
+    border: solid 2px #ded7cc;
+    padding: 5% 0;
+    text-align: center;
+    border-radius: 115px;
+    transition: all .2s;
+}
+.contact__box:hover {
+    border-radius: 40px;
+}
+
+.contact__box span {
+    font-size: 3.8vw;
+    font-family: var(--font-sub2);
+}
+
+.contact__wrap h2 {
+    font-size: 13vw;
+    text-align: center;
+    font-family: var(--font-sub1);
+    margin-top: 10%;
+    letter-spacing: .4vw;
+}
+
+.contact__copyright {
+    text-align: center;
+    font-family: var(--font-sub2);
+}
+
+.contact__copyright span {
+    font-size: 1vw;
+    padding: 1.2% 0;
+    display: block;
+}

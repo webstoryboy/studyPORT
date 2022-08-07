@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+body {
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+    background: var(--bg-color-main);
+}
+
+/* 레이아웃 */
+#header {
+    position: relative;
+}
+#main {
+    color: #fff;
+}
+#section1 {
+    height: 290vh;
+    margin-bottom: 500px;
+}
+#section2 {
+    height: 150vh;
+}
+#section3 {
+    height: 180vh;
+}
+#section4 {
+    height: 250vh;
+}
+#section5 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 가운데 영역 */
+.container {
+    position: relative;
+    width: 98vw;
+    margin: 0 auto;
+}
+
+/* 스크롤 */
+.scroll {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgba(199, 212, 18, 0.8);
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+    z-index: 10000;
+}
+.fixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 헤더 영역 */
+.header {
+    font-family: var(--font-sub2);
+    display: flex;
+    position: relative;
+    z-index: 9999;
+    color: #fff;
+}
+.header h2 {
+    margin-left: 1vw;
+    font-size: 1vw;
+    position: absolute;
+    left: 0; top: 20px;
+}
+.header nav {
+    margin-right: 1vw;
+    position: absolute;
+    right: 0; top: 20px;
+}
+.header nav ul {
+    display: flex;
+}
+.header nav ul li .btn-sound {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.header nav ul li .btn-sound.active {
+    color: #EC1717;
+    background: #fff;
+    border-radius: 5px;
+}
+.header nav ul li .btn-sound:hover {
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+}
+.header nav ul li a {
+    font-size: 1vw;
+    padding: 10px 20px;
+}
+.header nav ul li a:hover {
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+}
+
+/* 배너 영역 */
+.banner {
+    background: url(../img/main@2x.jpg) no-repeat center top;
+    background-size: cover;
+    height: 255vh;
+    position: relative;
+    overflow: hidden;
+}
+.banner h2 span {
+    font-size: 17vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    overflow: hidden;
+    text-align: center;
+    animation: banner 40s linear infinite;
+    position: absolute;
+    top: 5vw;
+}
+/* @keyframes banner {
+    100% { text-indent: -22em; }
+} */
+.banner__center__box {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12vw;
+    font-family: var(--font-main);
+}
+.banner__center__box__text {
+    position: absolute;
+    left: 50%; top: 100%;
+    transform: translate(-50%, -50%);
+}
+.banner__center__box__text.text2 {
+    color: #EC1717;
+}
+.banner__center__box__img {
+    width: 45vw;
+    height: 45vw;
+    background: url(../img/main2.jpg) no-repeat center top;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.banner__center__box__img img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+.banner__desc {
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translate(-50%, -50%);
+}
+.banner__desc p {
+    text-align: center;
+    font-size: 1vw;
+}
+
+/* 어바웃 크동 영역 */
+.about__kdong {
+    font-size: 14vw;
+    color: #000;
+    font-family: var(--font-sub1);
+}
+.about__kdong h2 {
+    line-height: 0.1;
+}
+.about__kdong__img {
+    background: url(../img/aboutMe.jpg) no-repeat center top;
+    background-size: cover;
+    /* height: 70vh; */
+}
+.about__kdong__desc {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100%;
+}
+.about__kdong__desc .about__desc1 {
+    text-align: left;
+    font-size: 1.2vw;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-family: var(--font-main2);
+}
+.about__kdong__desc .about__desc2 {
+    text-align: right;
+    line-height: 1.7;
+}
+
+/* 어바웃 미 영역 */
+.about__me {
+    font-family: var(--font-kor);
+    color: #000;
+}
+.about__me h2 {
+    font-size: 5vw;
+    text-align: center;
+}
+.about__me .about__me__desc {
+    font-size: 1.8vw;
+    text-align: center;
+}
+.about__me .about__me__desc span {
+    display: inline-block;
+    width: 12vw;
+    height: 1px;
+    background: #000;
+}
+.about__me__box {
+    display: flex;
+    justify-content: space-around;
+}
+.about__me__box__img {
+    flex: 0 0 40%;
+    height: 100%;
+    overflow: hidden;
+}
+.about__me__box__img img {}
+.about__me__box__text {
+    flex: 0 0 50%;
+}
+.about__me__box__desc {
+    font-size: 1.8vw;
+    padding-bottom: 39%;
+}
+.about__me__box__desc p {
+    display: inline-block;
+    text-indent: 22vw;
+    text-align: left;
+    line-height: 160%;
+}
+.about__me__box__more {
+    font-size: 3vw;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+}
+.about__me__box__hash {
+    font-size: 1.5vw;
+    display: block;
+}
+.about__me__box__hash a {
+    padding-right: 1.2vw;
+}
+.about__me__box__learn {
+    margin-top: 1.2vw;
+    display: block;
+}
+
+/* 사이트 소개 글 */
+.sites__header {
+    text-align: center;
+    color: #000;
+    font-size: 8vw;
+    font-family: var(--font-sub1);
+    padding: 100vh 0;
+}
+.sites__header__text {
+    display: block;
+    line-height: 1.2;
+}
+.sites__header .sites__header__text.text2 {
+    display: flex;
+    justify-content: center;
+}
+.sites__header .sites__header__text.text2 .sites__header__text__img {
+    background: url(../img/sites.jpg) no-repeat center center;
+    background-size: cover;
+    width: 10vw; height: 8vw;
+    margin: -2.2vw 2vw 0;
+}
+.sites__header .sites__header__text.text4 {
+    font-family: var(--font-kor);
+    font-size: 1.8vw;
+    line-height: 1;
+}
+
+/* 사이트 소개 */
+.sites__box {
+    position: relative;
+}
+.site__text {
+    white-space: nowrap;
+    font-family: var(--font-main);
+    overflow: hidden;
+    height: 30vh;
+    position: relative;
+    font-size: 15vw;
+}
+.site__view {
+    position: absolute;
+    top: 0%;
+    color: #000;
+}
+.site__view2 {
+    position: absolute;
+    top: 0%;
+    color: var(--bg-color-main);
+    -webkit-text-stroke: 1px #000;
+}
+.site__text .text {
+    line-height: 1;
+    animation: sites 40s linear infinite;
+}
+.site__text .text2 {
+    line-height: 1;
+    animation: sites2 20s linear infinite;
+}
+.site__text .text3 {
+    line-height: 1;
+    animation: sites3 20s linear infinite;
+}
+/* @keyframes sites {
+    100% { text-indent: -22em; }
+}
+@keyframes sites2 {
+    100% { text-indent: -15em; }
+}
+@keyframes sites3 {
+    100% { text-indent: -5em; }
+} */

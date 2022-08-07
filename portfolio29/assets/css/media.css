@@ -1,0 +1,272 @@
+@media(max-width: 1700px) {
+    #header .nav li a {
+        font-size: 0.8vw;
+    }
+    #section1 {
+        height: 200vh;
+    }
+    .about__kdong__img {
+        height: 60vh;
+    }
+}
+
+@media(max-width: 1290px) {
+    #section1 {
+        height: 180vh;
+    }
+    .about__kdong__img {
+        height: 50vh;
+    }
+    .sites__info {
+        height: 120vh;
+    }
+    .script__iframes iframe {
+        display: none;
+    }
+    .script__iframes img {
+        display: block;
+    }
+    .site__desc p {
+        font-size: 18px;
+    }
+    .script__info__desc {
+        width: 70vw;
+    }
+    .script__desc p {
+        font-size: 18px;
+    }
+    .script__btn {
+        width: 70vw;
+    }
+}
+
+@media(max-width: 1024px) {
+    #section1 {
+        height: 150vh;
+    }
+    .about__kdong__img {
+        height: 40vh;
+    }
+    .sites__info {
+        height: 100vh;
+    }
+    .site__info__desc {
+        width: 100%;
+        margin-top: 2%;
+    }
+    .swiper-slide {
+        width: 25%;
+    }
+    .slide-content h4 {
+        font-size: 1.5vw;
+    }
+    .slide-content p {
+        font-size: 1vw;
+    }
+    .slide-content a {
+        font-size: 0.8vw;
+    }
+    #section9 {
+        max-height: 600px;
+    }
+}
+
+@media(max-width: 960px) {
+    #section1 {
+        height: 120vh;
+    }
+    .about__kdong__img {
+        height: 30vh;
+    }
+    .site__desc p {
+        font-size: 15px;
+    }
+    .script__desc p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    #section1 {
+        height: 100vh;
+    }
+    .about__kdong__img {
+        height: 30vh;
+    }
+    .about__me__box__img .kdongImg {
+        margin-top: 85%;
+    }
+    .sites__info {
+        height: 80vh;
+    }
+    .site__desc p {
+        font-size: 13px;
+    }
+    .script__desc p {
+        font-size: 13px;
+    }
+    .swiper-container {
+        height: 35vw !important;
+    }
+    .swiper-slide {
+        width: 33.333333%;
+    }
+    .swiper-slide.swiper-slide-next .slide-image,
+    .swiper-slide.swiper-slide-prev .slide-image,
+    .swiper-slide.swiper-slide-duplicate-next .slide-image,
+    .swiper-slide.swiper-slide-duplicate-prev .slide-image {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@media(max-width: 676px) {
+    .script__btn a {
+        padding: 1.2vw 7vw;
+    }
+    .container.site.mockup3 {
+        margin-top: 35%;
+    }
+    .container.site.mockup4 {
+        margin-top: 48%;
+    }
+    .container.site.mockup5 {
+        margin-top: 59%;
+    }
+    .container.site.mockup6 {
+        margin-top: 70%;
+    }
+    .container.site.mockup7 {
+        margin-top: 82%;
+    }
+    .swiper-slide {
+        width: 50%;
+    }
+    .swiper-wrapper {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    #section1 {
+        height: 80vh;
+    }
+    .about__kdong__img {
+        height: 20vh;
+    }
+    .site__btn a {
+        padding: 0.8vw 4vw 0.9vw;
+    }
+    .container.site.mockup4 {
+        margin-top: 45%;
+    }
+    .container.site.mockup5 {
+        margin-top: 61%;
+    }
+    .container.site.mockup6 {
+        margin-top: 73%;
+    }
+    .container.site.mockup7 {
+        margin-top: 87%;
+    }
+    .script__btn a {
+        padding: 1vw 5vw;
+    }
+}
+
+@media(max-width: 480px) {
+    #header {
+        top: 3px;
+    }
+    #header .nav li a {
+        font-size: 8px
+    }
+    .insta {
+        width: 396px;
+    }
+    .insta__top__wrap {
+        width: 396px;
+    }
+    .insta__top {
+        width: 396px;
+    }
+    #section1 {
+        height: 70vh;
+    }
+    .about__kdong__img {
+        height: 15vh;
+    }
+    .about__me__box__img .kdongImg {
+        background-size: 120%;
+        margin-top: 80%;
+    }
+    .sites__info {
+        height: 50vh;
+    }
+    .site__title__cont .site__cont:nth-child(2) {
+        -webkit-text-stroke: 0.8px #000;
+    }
+    .container.site.mockup4 {
+        margin-top: 42%;
+    }
+    .container.site.mockup5 {
+        margin-top: 51%;
+    }
+    .container.site.mockup6 {
+        margin-top: 62%;
+    }
+    .container.site.mockup7 {
+        margin-top: 72%;
+    }
+    .script__info {
+        margin-bottom: 60vw;
+    }
+    .script__title__cont .script__cont {
+        -webkit-text-stroke: 0.8px #fff;
+    }
+    .site__desc p {
+        font-size: 10px;
+    }
+    .script__desc p {
+        font-size: 10px;
+    }
+    .site__info__desc {
+        width: 100%;
+        margin-top: 2%;
+    }
+    .script__info__desc {
+        width: 88vw;
+    }
+    .swiper-container {
+        height: 20vw !important;
+    }
+    .slide-content h4 {
+        font-size: 1.5vw;
+    }
+    .slide-content p {
+        font-size: 1vw;
+    }
+    .slide-content a {
+        font-size: 0.8vw;
+    }
+}
+
+@media(max-width: 414px) {
+    .swiper-slide {
+        width: 80%;
+    }
+    .swiper-container {
+        height: 50vw !important;
+    }
+    .contact__box {
+        top: 60%;
+    }
+}
+
+@media(max-width: 320px) {
+    #section1 {
+        height: 50vh;
+    }
+    .about__kdong__img {
+        height: 10vh;
+    }
+}

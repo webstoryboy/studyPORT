@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "GmarketSans";
+}
+body {
+  background-image: url("../img/mainBG1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 101vw 101vh;
+  overflow: hidden;
+}
+
+#section1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#section1 h1 {
+  margin-top: 11vw;
+  font-size: 9.5vw;
+  display: flex;
+  font-weight: bold;
+  user-select: none;
+  animation-name: bounce;
+  animation-delay: 1s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+#section1 h1 > span {
+  display: inline-block;
+  width: 9.5vw;
+  height: 9.5vw;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+#section1 h1 .o1 {
+  background-image: url("../img/basketball1.png");
+  animation-delay: 1.2s;
+}
+#section1 h1 .o2 {
+  background-image: url("../img/football1.png");
+  animation-delay: 1.4s;
+}
+#section1 h1 .o3 {
+  background-image: url("../img/tennis_ball1.png");
+  animation-delay: 1.6s;
+}
+#section1 p {
+  font-size: 2.5vw;
+  font-weight: bold;
+  user-select: none;
+  animation-name: bounce;
+  animation-delay: 1s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  3% {
+    transform: scale(1.05);
+  }
+  6% {
+    transform: scale(1);
+  }
+  9% {
+    transform: scale(1.025);
+  }
+  12% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotateZ(0);
+  }
+  8% {
+    transform: rotateZ(-10deg);
+  }
+  16% {
+    transform: rotateZ(10deg);
+  }
+  24% {
+    transform: rotateZ(-5deg);
+  }
+  32% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.goBtn {
+  margin-top: 3.5vw;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background: #30eb00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  transition: background-color 0.5s;
+}
+.goBtn:hover {
+  background-color: #ff00ff;
+}
+.btnDeco {
+  position: absolute;
+  width: 1vw;
+  height: 9vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+.btnDeco2 {
+  transform: rotateZ(20deg);
+}
+.btnDeco3 {
+  transform: rotateZ(40deg);
+}
+.btnDeco4 {
+  transform: rotateZ(60deg);
+}
+.btnDeco5 {
+  transform: rotateZ(80deg);
+}
+.btnDeco6 {
+  transform: rotateZ(100deg);
+}
+.btnDeco7 {
+  transform: rotateZ(120deg);
+}
+.btnDeco8 {
+  transform: rotateZ(140deg);
+}
+.btnDeco9 {
+  transform: rotateZ(160deg);
+}
+.goBtn:hover .btnDeco1 {
+  transform: rotateZ(900deg);
+}
+.goBtn:hover .btnDeco2 {
+  transform: rotateZ(920deg);
+}
+.goBtn:hover .btnDeco3 {
+  transform: rotateZ(940deg);
+}
+.goBtn:hover .btnDeco4 {
+  transform: rotateZ(960deg);
+}
+.goBtn:hover .btnDeco5 {
+  transform: rotateZ(980deg);
+}
+.goBtn:hover .btnDeco6 {
+  transform: rotateZ(1000deg);
+}
+.goBtn:hover .btnDeco7 {
+  transform: rotateZ(1020deg);
+}
+.goBtn:hover .btnDeco8 {
+  transform: rotateZ(1040deg);
+}
+.goBtn:hover .btnDeco9 {
+  transform: rotateZ(1060deg);
+}
+.btnDeco > div {
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  background: #000;
+}
+#section2 {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#section2 .box {
+  user-select: none;
+  width: 23vw;
+  height: 28vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+#section2.next .box {
+  transform: scale(1);
+}
+#section2 .box:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+#section2 .box1 {
+  background-image: url(../img//box1.jpg);
+  margin-right: 2vw;
+}
+#section2 .box2 {
+  background-image: url(../img//box2.jpg);
+  margin-left: 2vw;
+}
+#section2 .box h3 {
+  font-size: 10vw;
+  position: absolute;
+  top: 53%;
+  transform: translateY(-47%) scale(0) rotateY(720deg);
+}
+#section2.next .box h3 {
+  transform: translateY(-47%) scale(1) rotateY(0deg);
+}
+#section2 .box1 h3 {
+  left: -7vw;
+  -webkit-text-stroke: 0.3vw #e15587;
+  transition: transform 0.7s 0.2s;
+}
+#section2 .box2 h3 {
+  left: -5vw;
+  color: #fff;
+  -webkit-text-stroke: 0.3vw #30eb00;
+  transition: transform 0.7s 0.4s;
+}
+#section2 .ball {
+  width: 9.5vw;
+  height: 9.5vw;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-50%) scale(3);
+}
+#section2 .ball1 {
+  background-image: url(../img/basketball1.png);
+  top: 50%;
+  left: 20%;
+}
+#section2.next .ball1 {
+  animation: moveBall1 1.5s 0.5s forwards, rotateBall 6s 0s linear infinite;
+}
+@keyframes moveBall1 {
+  0% {
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(3);
+  }
+  10% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    top: 13%;
+    left: 18%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#section2 .ball2 {
+  background-image: url(../img/football1.png);
+  bottom: 50%;
+  left: 65%;
+}
+#section2.next .ball2 {
+  animation: moveBall2 1.2s 0.6s forwards, rotateBall 4s 0s linear infinite;
+}
+@keyframes moveBall2 {
+  0% {
+    opacity: 0;
+    bottom: 50%;
+    transform: translateY(-50%) scale(2);
+  }
+  10% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    bottom: 12%;
+    left: 26%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#section2 .ball3 {
+  width: 8.5vw;
+  height: 8.5vw;
+  background-image: url(../img/tennis_ball1.png);
+  top: 10%;
+  right: 70%;
+}
+#section2.next .ball3 {
+  animation: moveBall3 1.8s 0.4s forwards, rotateBall 5s 0s linear infinite;
+}
+@keyframes moveBall3 {
+  0% {
+    top: 10%;
+    right: 70%;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    top: 15%;
+    right: 18.5%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotateBall {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#section2 .octo {
+  width: 9.5vw;
+  height: 9.5vw;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  background-image: url(../img/octo1.png);
+  bottom: 0;
+  right: 0;
+  user-select: none;
+  pointer-events: none;
+}
+#section2.next .octo {
+  animation: moveOcto 100s 0s linear infinite, shakeOcto 3s 0s linear infinite;
+}
+@keyframes moveOcto {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  12% {
+    bottom: 80%;
+    right: 70%;
+  }
+  20% {
+    bottom: 0;
+    right: 55%;
+  }
+  26% {
+    bottom: 25%;
+    right: 90%;
+  }
+  40% {
+    bottom: 80%;
+    right: 10%;
+  }
+  50% {
+    bottom: 40%;
+    right: 50%;
+  }
+  60% {
+    bottom: 10%;
+    right: 0;
+  }
+  70% {
+    bottom: 0;
+    right: 60%;
+  }
+  80% {
+    bottom: 80%;
+    right: 40%;
+  }
+  90% {
+    bottom: 75%;
+    right: 10%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+@keyframes shakeOcto {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  30% {
+    transform: rotateZ(20deg);
+  }
+  70% {
+    transform: rotateZ(-20deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}

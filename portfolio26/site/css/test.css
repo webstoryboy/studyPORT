@@ -1,0 +1,27 @@
+@keyframes aa {
+  0% {
+    transform: translate(50vw, 0) scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    transform: translate(10vw, -25vh) scale(0.2);
+  }
+  40% {
+    transform: translate(15vw, -15vh) scale(0.4);
+  }
+  60% {
+    transform: translate(5vw, -10vh) scale(0.6);
+  }
+  80% {
+    transform: translate(10vw, -5vh) scale(0.8);
+  }
+  95% {
+    transform: translate(-5vw, -5vh) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}

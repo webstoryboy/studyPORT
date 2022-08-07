@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+
+    <link
+      href="https://webfontworld.github.io/gmarket/GmarketSans.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style></style>
+  </head>
+  <body class="">
+    <div id="wrap">
+      <section id="section1">
+        <h1>
+          P<span class="o1"></span>RTF<span class="o2"></span>LI<span
+            class="o3"
+          ></span>
+        </h1>
+        <p>프론트를 위해 달리는 개발자 포트폴리오</p>
+        <div class="goBtn">
+          고고
+          <div class="btnDeco btnDeco1">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco2">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco3">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco4">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco5">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco6">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco7">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco8">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="btnDeco btnDeco9">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section2">
+        <div class="box box1">
+          <h3>SITE</h3>
+        </div>
+        <div class="box box2">
+          <h3>SCRIPT</h3>
+        </div>
+        <div class="ball ball1"></div>
+        <div class="ball ball2"></div>
+        <div class="ball ball3"></div>
+        <div class="octo"></div>
+      </section>
+    </div>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+      gsap.fromTo(
+        "body",
+        {
+          backgroundSize: "200vw 200vh",
+        },
+        {
+          duration: 1.5,
+          backgroundSize: "101vw 101vh",
+          ease: "ease-in-out",
+        }
+      );
+      gsap.fromTo(
+        "body",
+        {
+          scale: 2,
+          opacity: 0,
+        },
+        {
+          duration: 1.5,
+          delay: 1,
+          scale: 1,
+          opacity: 1,
+          ease: "ease-in-out",
+        }
+      );
+
+      const box1 = document.querySelector("#section2 .box1");
+      const box1H3 = document.querySelector("#section2 .box1 h3");
+      const box2 = document.querySelector("#section2 .box2");
+      const box2H3 = document.querySelector("#section2 .box2 h3");
+      document.querySelector(".goBtn").addEventListener("click", () => {
+        gsap.to("body", {
+          duration: 1,
+          backgroundSize: "125vw 125vh",
+        });
+        gsap.to("#section1", {
+          duration: 1,
+          scale: 2,
+          opacity: 0,
+          visibility: "hidden",
+        });
+
+        setTimeout(() => {
+          document.querySelector("#section1").style.display = "none";
+          document.querySelector("#section2").style.display = "flex";
+          box1.style.pointerEvents = "none";
+          box2.style.pointerEvents = "none";
+          setTimeout(() => {
+            document.querySelector("#section2").classList.add("next");
+            setTimeout(() => {
+              box1.style.pointerEvents = "auto";
+              box2.style.pointerEvents = "auto";
+              box1H3.style.transition = "transform 0.2s";
+              box2H3.style.transition = "transform 0.2s";
+            }, 1500);
+          }, 50);
+        }, 1000);
+      });
+
+      // $(".box").mouseover(function () {
+      //   $(this).find("h3").stop(false, false);
+      //   gsap.to($(this).find("h3"), {
+      //     duration: 1,
+      //     rotateZ: "-40deg",
+      //     y: "-70%",
+      //     ease: "back.out(1.7)",
+      //   });
+      // });
+      // $(".box").mouseout(function () {
+      //   $(this).find("h3").stop(false, false);
+      //   gsap.to($(this).find("h3"), {
+      //     duration: 0.2,
+      //     rotateZ: "0",
+      //     y: "-47%",
+      //     ease: "back.out(1.7)",
+      //   });
+      // });
+      let xxx = false;
+      box1.addEventListener("mouseover", () => {
+        gsap
+          .to(box1H3, {
+            duration: 0.6,
+            rotateZ: "-40deg",
+            y: "-70%",
+            ease: "back.out(1.7)",
+          })
+          .reverse(2, false);
+      });
+      // box1.addEventListener("mouseleave", () => {
+      //   gsap.to(box1H3, {
+      //     duration: 0.2,
+      //     rotateZ: "0",
+      //     y: "-47%",
+      //     ease: "back.out(1.7)",
+      //   });
+      // });
+      box2.addEventListener("mouseover", () => {
+        gsap
+          .to(box2H3, {
+            duration: 0.6,
+            rotateZ: "30deg",
+            y: "-70%",
+            ease: "back.out(1.7)",
+          })
+          .reverse(true);
+      });
+      // box2.addEventListener("mouseleave", () => {
+      //   gsap.to(box2H3, {
+      //     duration: 0.2,
+      //     rotateZ: "0",
+      //     y: "-47%",
+      //     ease: "back.out(1.7)",
+      //   });
+      // });
+
+      box1.addEventListener("click", () => {
+        gsap.to(document.querySelector("body"), {
+          duration: 0,
+          background: "#8219C6",
+        });
+        gsap.to(document.querySelector("body"), {
+          duration: 2,
+          background: "#E3FE78",
+        });
+        gsap.to("#wrap", {
+          duration: 1.5,
+          opacity: 0,
+          scale: 2,
+        });
+
+        setTimeout(() => {
+          location.href = "site/index.html";
+        }, 2000);
+      });
+      box2.addEventListener("click", () => {
+        gsap.to(document.querySelector("body"), {
+          duration: 0,
+          background: "#8219C6",
+        });
+        gsap.to(document.querySelector("body"), {
+          duration: 2,
+          background: "#AEE3FF",
+        });
+        gsap.to("#wrap", {
+          duration: 1.5,
+          opacity: 0,
+          scale: 2,
+        });
+
+        setTimeout(() => {
+          location.href = "script/index.html";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
