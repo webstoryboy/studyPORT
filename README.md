@@ -29,4 +29,5 @@
 27. 송준* : https://webstoryboy.github.io/studyPORT/portfolio27/index04.html <br>
 28. 이현* : https://webstoryboy.github.io/studyPORT/portfolio28/index.html <br>
 29. 강동* : https://webstoryboy.github.io/studyPORT/portfolio29/index.html <br>
-20. 박준* : https://webstoryboy.github.io/studyPORT/portfolio30/index.html <br>
+30. 박준* : https://webstoryboy.github.io/studyPORT/portfolio30/index.html <br>
+31. 이용* : https://webstoryboy.github.io/studyPORT/portfolio31/index.html <br>
