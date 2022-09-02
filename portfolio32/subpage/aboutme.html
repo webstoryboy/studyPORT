@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/subpage/aboutme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+            <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div> 
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <img src="../assets/img/profile2.jpg" alt="프로필">
+        </div>
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>
+        <div class="box4 active">
+            <div class="desc">
+                <p><a href="../index.html" class="link arr">home</a></p>
+                <a href="./index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                    
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active"></div>
+        <div class="box6 active"></div>
+        <div class="box7 active"></div>
+        <div class="box8 active2 box_hover">
+            <div class="desc">
+                <p>passion</p>
+                <p>저는 언어를 배우는 것에 흥미가 있습니다.
+                    컴퓨터에도 언어가 있다는 사실을 알고 묘한 매력에 빠져 우연히 접하게 됐습니다.
+                    열심히 공부한 결과 NCS 웹 디자인 기능사 자격증 취득했고 더 나아가 Javascipt, React, Vue, PHP 등 현재까지도 공부 중에 있습니다.</p>
+            </div>           
+            <div class="hover_bg"></div>                   
+        </div>
+        <!-- //box8 -->        
+        <div class="box9 active"></div>
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active box_hover">
+            <div class="desc">
+                <p>creative</p>
+                <p>자유로웠던 성장 환경이 제 창의력의 원동력입니다.</p>
+            </div>   
+            <div class="hover_bg"></div>               
+        </div>
+        <!-- //box12 -->        
+        <div class="box13 active">
+            <a href="#"><img src="../assets/img/instagram.svg" alt="인스타그램"></a>
+            <a href="#"><img src="../assets/img/github.svg" alt="깃헙"></a>
+            <a href="#"><img src="../assets/img/link.svg" alt="링크"></a>            
+        </div>
+        <!-- //box13 -->        
+        <div class="box14 active box_hover">
+            <div class="desc">
+                <p>dream</p>
+                <p>제 인생의 키워드는 ‘도전’입니다
+                    호주 워홀부터 인도네시아에서의 성공적인 취업까지,
+                    끊임없이 새로운 것을 시도했습니다.
+                    인생의 마지막 도전은 프론트앤드 개발자가 되는 것으로 열심히 배우며 달려왔습니다.</p>
+            </div>             
+            <div class="hover_bg"></div>                
+        </div>
+        <!-- //box14 -->        
+        <div class="box15 active2"> 
+            <p><a href="./index.html" class="link">about me</a></p>
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active"></div>
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <script>
+        
+        // black bar
+        const rightMove = document.querySelectorAll('.box_hover');
+        const hoverBg = document.querySelectorAll('.hover_bg');
+        const desc = document.querySelectorAll('.box_hover .desc');
+
+        for(var i=0; i<rightMove.length; i++) right(i);
+        function right(i){
+            rightMove[i].addEventListener("mouseover", () => {
+                hoverBg[i].style.left = "0";
+                desc[i].style.marginLeft = "10px";   
+            })       
+        }
+
+        for(var e=0; e<rightMove.length; e++) left(e);
+        function left(e){
+            rightMove[e].addEventListener("mouseout", () => {
+                hoverBg[e].style.left = "-0.625rem";
+                desc[e].style.marginLeft = "0";   
+            })       
+        }   
+        
+        // arrow_animation
+        const arrow = document.querySelector('.arrow');
+        const arr = document.querySelector('.arr');
+
+        function arr_ani() {
+          arr.addEventListener('mouseover', function(){
+            arrow.classList.add('active3');
+          })
+
+          arr.addEventListener('mouseout', function(){
+            arrow.classList.remove('active3');
+          })  
+        }
+        
+        arr_ani();        
+    </script>
+</body>
+</html>

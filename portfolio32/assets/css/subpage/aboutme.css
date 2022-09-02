@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+/* container */
+#container {
+    overflow: hidden;
+    height: 100vh;
+    box-sizing: border-box;
+    border-top: 0;
+    display: grid;
+    grid-template-areas: 
+    "box1 box1 box1 box4"
+    "box1 box1 box1 box8"
+    "box1 box1 box1 box12"
+    "box13 box14 box15 box15";
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-columns: repeat(4, 25%);
+
+}
+
+#container .box1 {grid-area: box1;}
+#container .box2 {grid-area: box2;}
+#container .box3 {grid-area: box3;}
+#container .box4 {grid-area: box4;}
+#container .box5 {grid-area: box5;}
+#container .box6 {grid-area: box6;}
+#container .box7 {grid-area: box7;}
+#container .box8 {grid-area: box8;}
+#container .box9 {grid-area: box9;}
+#container .box10 {grid-area: box10;}
+#container .box11 {grid-area: box11;}
+#container .box12 {grid-area: box12;}
+#container .box13 {grid-area: box13;}
+#container .box14 {grid-area: box14;}
+#container .box15 {grid-area: box15;}
+#container .box16 {grid-area: box16;}
+
+/* active1 */
+.contents > div {
+    border-right: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 3%;
+    position: relative;
+    z-index: 100;
+}
+.contents > div::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: width 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > div.active::before {
+    width: 100%;
+}
+
+/* acitive2 */
+.contents > .box8::before {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: height 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > .box15::before {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: height 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > div.active2::before {
+    height: 100%;
+}
+
+/* contents > div:nth-child() */
+.contents > div:nth-child(4n){
+    border-right: 0;
+}
+.contents > div:nth-child(13){
+    border-bottom: 0;
+}
+.contents > div:nth-child(14){
+    border-bottom: 0;
+}
+.contents > div:nth-child(15){
+    border-bottom: 0;
+    border-right: 0;
+}
+
+/* desc */
+.desc {       
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 16px;  
+    height: 60%;
+    text-transform: uppercase;
+}
+
+/* box1 */
+.box1 {
+    padding: 0 !important;
+    overflow: hidden;
+}
+.box1 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* box4 */
+.box4 .desc {
+    text-align: right;
+    font-family: 'ChosunNm';      
+}
+.box4 .desc p {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 80px;
+}
+/* arrow animation */
+.box4 .active3 {
+    animation-duration: 0.8s;
+    animation-name: arrow_right;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow_right{
+    0%{margin-right:0px;}
+    50%{margin-right:28px;}
+    100%{margin-right:0px;}
+}
+
+/* box8 */
+.box8 {
+    position: relative;
+    overflow: hidden;
+}
+.box8 .desc {
+    height: 100%;
+    font-family: 'ChosunNm';     
+    overflow: hidden; 
+    -webkit-transition: margin-left .3s ease;
+    transition: margin-left .3s ease;      
+}
+.box8 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    height: 30%;   
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box8 .desc p:last-child {
+    height: 70%;
+    text-align: justify;
+}
+
+/* box12 */
+.box12 {
+    position: relative;
+    overflow: hidden;
+}
+.box12 .desc {
+    height: 100%;
+    font-family: 'ChosunNm';      
+    -webkit-transition: margin-left .3s ease;
+    transition: margin-left .3s ease;      
+}
+.box12 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    height: 30%;   
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box12 .desc p:last-child {
+    height: 70%;
+    text-align: justify;
+}
+
+/* box13 */
+.box13 {
+    position: relative;
+}
+.box13 a:first-child {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+.box13 a:nth-child(2) {
+    position: absolute;
+    bottom: 25px;
+    left: 60px;
+}
+.box13 a:last-child {
+    position: absolute;
+    bottom: 25px;
+    left: 100px;
+}
+
+/* box14 */
+.box14 {
+    position: relative;
+    overflow: hidden;
+}
+.box14 .desc {
+    height: 100%;
+    font-family: 'ChosunNm';      
+    -webkit-transition: margin-left .3s ease;
+    transition: margin-left .3s ease;      
+}
+.box14 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    height: 30%;   
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box14 .desc p:last-child {
+    height: 70%;
+    text-align: justify;
+}
+
+/* box15 */
+.box15 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    align-items: center; 
+}
+.box15 p {
+    font-size: 7vmax;
+    font-weight: 700;
+    font-family: 'GmarketSans';    
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+/* resize */
+.resize {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'ChosunNm';
+    display: none;  
+}
+.resize__inner {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;    
+}
+
+/* hover_bg */
+.hover_bg {
+    position: absolute;
+    height: 100%;
+    width: 0.625rem;
+    background-color: #000;
+    left: -0.625rem;
+    top: 0;
+    -webkit-transition: left .3s ease;
+    transition: left .3s ease;
+}
+
+/* max-width: 1000px */
+@media (max-width:1000px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "box3 box4"
+        "box15 box15"        
+        "box1 box1"
+        "box1 box1"
+        "box8 box12"
+        "box14 box13";
+        grid-template-rows: repeat(6, 25vh);
+        grid-template-columns: repeat(2, 50%);
+        height: 150vh;
+    }
+
+    /* box8 */
+    #container > div:nth-child(8) {
+        border-right: 1px solid #D6D6D6;
+    }
+
+    /* box15 */
+    .box15 p {
+        font-size: 14vmin;
+    }
+}
+
+/* max-width: 600px */
+@media (max-width: 600px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "box4" 
+        "box15"
+        "box1" 
+        "box1"
+        "box8"
+        "box12"
+        "box14"
+        "box13";
+        grid-template-rows: repeat(8, 25vh);
+        grid-template-columns: 100%;
+        height: 200vh;
+    }
+
+    /* box8 */
+    #container > div:nth-child(8){
+        width:100vw;
+    }
+    #container > div:nth-child(8) .desc{
+        width:92vw;
+    }
+    
+    /* box12 */
+    #container > div:nth-child(12){
+        width:100vw
+    }
+    #container > div:nth-child(12) .desc{
+        width:92vw;
+    }
+
+    /* box13 */
+    .box13 {
+        border-top: 1px solid #D6D6D6;
+    }
+
+    /* box14 */
+    #container > div:nth-child(14){
+        width:100vw
+    }
+    #container > div:nth-child(14) .desc{
+        width:92vw;
+    }
+
+    /* #container > div:nth-child */
+    #container > div:nth-child(13) {
+        border-right: 0;
+    }
+
+    #container > div:nth-child(14) {
+        border-right: 0;
+    }
+
+    #container > div:nth-child(8) {
+        border-right: 0;
+    }
+}

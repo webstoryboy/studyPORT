@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/javascript_06.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">    
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active2">
+            <div class="desc">
+                <ul>
+                    <li><a href="./javascript_01.html" class="link">1</a></li>
+                    <li><a href="./javascript_02.html" class="link">2</a></li>
+                    <li><a href="./javascript_03.html" class="link">3</a></li>
+                    <li><a href="./javascript_04.html" class="link">4</a></li>
+                    <li><a href="./javascript_05.html" class="link">5</a></li>
+                    <li><a href="#">6</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">music</a></p>
+            </div>
+            <!-- //box1 -->
+        </div>
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>
+        <div class="box4 active">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>  
+            <!-- //box4  -->
+        </div>
+        <div class="box5 active"></div>
+        <div class="box6 active"></div>
+        <div class="box7 active box_hover">
+            <div class="desc">
+                <div class="tab_menu">
+                    <ul class="menu">
+                        <li class="tab-button trigger">play&pause</li>
+                        <li class="tab-button">time</li>
+                        <li class="tab-button">hex code</li>
+                        <li class="close"><i class="fa-solid fa-xmark"></i></li>
+                    </ul>
+                </div>
+                <div class="tab_code">
+        <div class="show tab con1">
+<pre><code class="language-jsx">    
+    //재생일 시 play() 메서드와 classList.add()로 앨범 커버가 회전할 수 있도록 해주고 설정해 놓은 변수에 true 값을 넣어 재생 시킬 수 있도록 만들어 주었습니다.
+    //정지는 반대로 pause() 메서드와 remove(), false 값을 넣어 음악을 정지시킬 수 있습니다.
+
+    function playTrack(){
+        curr_track.play();
+        isPlaying = true;
+        track_art.classList.add('rotate');
+        wave.classList.add('loader');
+        playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+    }
+    
+    function pauseTrack() {
+        curr_track.pause();
+        isPlaying = false;
+        track_art.classList.remove('rotate');
+        wave.classList.remove('loader');
+        playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    }
+
+
+
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-jsx">
+    // currentTime 속성에 60을 나누고 Math.floor()를 감싸주어 분을 만들어 변수에 담아주었고 currentTime에 분을 만든 변수를 빼고 60 곱해 초를 만들어 변수에 담아주었습니다.
+    // 시간의 간격을 구하기 위해 duration으로 똑같이 분, 초로 만들어 변수에 담아주었습니다.
+    // 담아준 변수들로 재생시간과 노래가 끝나는 시간을 html에 텍스트를 추가시켰습니다.     
+
+    function setUpdate(){
+        let seekPosition = 0;
+        if(!isNaN(curr_track.duration)){
+            seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+            seek_slider.value = seekPosition;
+    
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+            
+            if(currentSeconds &lt; 10) {currentSeconds = "0" + currentSeconds; }
+            if(durationSeconds &lt; 10) {durationSeconds = "0" + durationSeconds; }
+            if(currentMinutes &lt; 10) {currentMinutes = "0" + currentMinutes; }
+            if(durationMinutes &lt; 10) {durationMinutes = "0" + durationMinutes; }
+    
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds
+        }
+    }
+
+    
+
+</code></pre>
+</div>
+<div class="tab con3">
+<pre><code class="language-js">
+    // 16진수가 포함하는 숫자와 알파벳 배열을 먼저 만들었습니다.
+    // 무작위 여섯 자리 코드를 만들기 위해 for 반복문과 Math.random()과 소수점이 나오지 않게 하기 위해 
+    // Math.round()안에 집어넣었고 만들어진 Hex 코드를 자바스크립트로 css를 조작하여 배경화면을 만들었습니다.
+
+    function random_bg_color(){
+        let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
+        let a;
+    
+        function populate(a){
+            for(let i=0; i<6; i++){
+                let x = Math.round(Math.random() * 14);
+                let y = hex[x];
+                a += y;
+            }
+            return a;
+        }
+        let Color1 = populate('#');
+        let Color2 = populate('#');
+        var angle = 'to right';
+    
+        let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
+        document.body.style.background = gradient;
+    }
+
+
+
+
+</code></pre>
+</div>
+                    </div>      
+                </div>                
+                <div class="hover_txt hover_bg"><span class="view">view</span></div> 
+        </div>
+        </div>
+        <div class="box8 active"></div>
+        <div class="box9 active"></div>
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/js-music" target="_blank">code view</a></p>
+                <p>자바스크립트하여 만든 소스를 깃을 통해 볼 수 있습니다. </p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/js-music" target="_blank">view</a></div>                     
+        </div>
+        <!-- //box13 -->
+        <div class="box14 active"></div>
+        <div class="box15 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://javascript-music.netlify.app/" target="_blank">site view</a></p>
+                <p>네틀리파이에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://javascript-music.netlify.app/" target="_blank">view</a></div>                     
+        </div>
+        <!-- //box15 -->
+        <div class="box16 active"></div>
+    </section>
+    <!-- //container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../assets/js/transition.js"></script>  
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>       
+    <!-- <script src="./assets/js/script.js"></script>     -->
+    <script>
+
+        // Arrow Animation
+        const arrow = document.querySelector('.arrow');
+        const arr = document.querySelector('.arr');
+
+        function arr_ani() {
+          arr.addEventListener('mouseover', function(){
+            arrow.classList.add('active3');
+          })
+
+          arr.addEventListener('mouseout', function(){
+            arrow.classList.remove('active3');
+          })  
+        }
+        
+        arr_ani();
+
+        function arr_ani2() {
+          arrow.addEventListener('mouseover', function(){
+            arrow.classList.add('active3');
+          })
+
+          arrow.addEventListener('mouseout', function(){
+            arrow.classList.remove('active3');
+          })  
+        }
+
+        arr_ani2();
+
+        // resize
+        const resize = document.querySelector(".resize");
+
+        window.onresize = function(event){
+          event.preventDefault();
+        var innerHeight = window.innerHeight;
+        innerHeight <= "750" ? resize.style.display = "block" : resize.style.display = "none";
+        }   
+
+        // tab-menu
+        const view = document.querySelectorAll('.view');
+        const closeTab = document.querySelector('.close');
+        const codeView = document.querySelector('.tab_menu');
+        const tabMenu = document.querySelectorAll('.tab_menu .menu');
+        const tabCon = document.querySelectorAll('.tab');
+        const tabCode = document.querySelector('.tab_code');
+        const tabBtn = document.querySelectorAll(".tab-button");
+        const con1 = document.querySelector(".con1");
+        const con2 = document.querySelector(".con2");
+        const con3 = document.querySelector(".con3");
+        const boxDesc = document.querySelector(".box7 > .desc");
+
+        // tab show
+        for(var i=0; i<view.length; i++) viewCode(i);
+            function viewCode(i){
+                view[i].addEventListener('click', () => {
+                    codeView.style.display = "block";
+                    tabCode.style.display = "block";
+                })
+            }
+        // tab hide
+        for(var i=0; i<view.length; i++) closeCode(i);
+            function closeCode(i){
+                closeTab.addEventListener('click', () => {
+                    codeView.style.display = "none";
+                    tabCode.style.display = "none";
+                })
+            }        
+
+        // tab click
+        tabBtn[0].addEventListener('click', function(){
+            tabBtn.forEach((el) => {
+                el.classList.remove('trigger');
+            });
+
+            tabBtn[0].classList.add('trigger');
+
+            tabCon.forEach((e) => {
+                e.classList.remove('show');
+            });
+
+            con1.classList.add('show');
+        });
+
+        tabBtn[1].addEventListener('click', function(){
+            tabBtn.forEach((el) => {
+                el.classList.remove('trigger');
+            });
+
+            tabBtn[1].classList.add('trigger');
+
+            tabCon.forEach((e) => {
+                e.classList.remove('show');
+            });
+
+            con2.classList.add('show');
+        });        
+
+        tabBtn[2].addEventListener('click', function(){
+            tabBtn.forEach((el) => {
+                el.classList.remove('trigger');
+            });
+
+            tabBtn[2].classList.add('trigger');
+
+            tabCon.forEach((e) => {
+                e.classList.remove('show');
+            });
+
+            con3.classList.add('show');
+        });            
+
+        // black bar 
+        const upMove = document.querySelectorAll('.box_hover');
+        const hoverBg = document.querySelectorAll('.hover_bg');
+        const desc = document.querySelectorAll('.box_hover .desc');
+
+        for(var i = 0; i<upMove.length; i++) up(i);
+        function up(i){
+            upMove[i].addEventListener("mouseover", () => {
+                hoverBg[i].style.bottom = "0";
+                desc[i].style.marginTop = "-10px";   
+                boxDesc.style.marginTop = "0px";   
+            })       
+        }
+
+        for(var e = 0; e<upMove.length; e++) down(e);
+        function down(e){
+            upMove[e].addEventListener("mouseout", () => {
+                hoverBg[e].style.bottom = "-2.5rem";
+                desc[e].style.marginTop = "0px";    
+            })       
+        }           
+    </script>
+</body>
+</html>

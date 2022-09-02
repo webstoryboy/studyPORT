@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/javascript_00.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <div class="desc">
+                <ul>
+                    <li><a href="./threejs_01.html" class="link">1</a></li>
+                    <li><a href="#" class="link">2</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">javascript</a></p>
+            </div>
+        </div>
+        <!-- //box1 -->        
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>      
+        <div class="box4 active2">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                   
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active box_hover">
+            <div class="desc">
+                <p class="view">site coding</p>
+                <p>javascript 내용 정리 사이트를 제작하였습니다. 클릭하시면 사용한 코드를 볼 수 있습니다.</p>
+            </div>               
+            <div class="hover_txt hover_bg"><span class="view">view</span></div>            
+        </div>
+        <!-- //box5 -->        
+        <div class="box6 active">
+            <div class="desc">
+                <p class="view">programmers</p>
+                <p>programmers 사이트의 자바스트립트 알고리즘 문제들을 정리하였습니다.
+                </p>
+                <ul>
+                    <li><a href="./programmers_01.html" target="_blank">1</a></li>
+                    <li><a href="./programmers_02.html" target="_blank">2</a></li>
+                    <li><a href="./programmers_03.html" target="_blank">3</a></li>
+                    <li><a href="./programmers_04.html" target="_blank">4</a></li>
+                    <li><a href="./programmers_05.html" target="_blank">5</a></li>
+                </ul>
+            </div>            
+        </div>
+        <div class="box7 active site__desc">
+          <div class="tab_menu">
+            <ul class="menu">
+                <li class="tab-button trigger">함수</li>
+                <li class="tab-button">조건문</li>
+                <li class="tab-button">반복문</li>
+                <li class="close"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="tab_code">
+<div class="show tab con1">
+<pre><code class="language-js">  
+
+    // 선언적 함수                                                                     
+    {
+        function func(){
+            document.write("함수가 실행되었습니다.1 ");
+        }
+        func();
+    }
+
+    // 익명 함수
+    {
+        const func = function(){
+            document.write("함수가 실행되었습니다.2 ");
+        }
+        func();
+    }
+    
+    // 매개변수 함수
+    {
+        function func(str){
+            document.write(str);
+        }
+        func("함수가 실행되었습니다.3");
+    }
+    
+    // 리턴값 함수
+    {
+        function func(){
+            const str = "함수가 실행되었습니다.4 ";
+            return str;
+        }
+        document.write(func());
+    }
+    
+    // 화살표 함수 : 선언적 함수
+    {
+        func = () => {
+            document.write("함수가 실행되었습니다.5");
+        }
+        func();
+    }    
+
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-js">
+
+    // if문 생략
+    {
+        const num = 100;
+    
+        if(num == 100) document.write("실행되었습니다.(true)");
+        else document.write("실행되었습니다.(false)");
+    }
+
+    // 다중 if문
+    {
+        const num = 100;
+    
+        if(num == 90){
+            document.write("실행되었습니다.(num==90)");
+        } else if (num == 100){
+            document.write("실행되었습니다.(num==100)");
+        } else if (num == 110){
+            document.write("실행되었습니다.(num==110)");
+        } else if (num == 120){
+            document.write("실행되었습니다.(num==120)");
+        } else {
+            document.write("실행되었습니다.(num==값이없음)");
+        }
+    }
+    
+    // 중첩 if문
+    {
+        const num = 100;
+    
+        if(num == 100){
+            document.write("실행되었습니다.(1)");
+            if(num == 100){
+                document.write("실행되었습니다.(2)");
+                if(num == 100){
+                    document.write("실행되었습니다.(3)");
+                }
+            }
+        } else {
+            document.write("실행되었습니다.(4)");
+        }
+    }
+    
+    // 삼항 연산자(조건부 연산자)
+    {
+        const num = 100;
+    
+        //if(num == 100){
+        //    document.write("true");
+        //} else {
+        //    document.write("false");
+        //}
+    
+        (num == 100) ? document.write("true") : document.write("false");
+    }    
+
+</code></pre>
+</div>
+<div class="tab con3">
+<pre><code class="language-js">
+
+    // for문
+    {
+        for(let i=1; i&lt;=5; i++){
+            document.write(i + ". 실행되었습니다.");
+        }
+    }    
+
+    // 중첩 for문
+    {
+        for(let i=1; i&lt;=2; i++){
+            document.write(i + ". 실행(i)되었습니다.");
+            for(let j=1; j&lt;=3; j++){
+                document.write(j + ". 실행(j)되었습니다.");
+            }
+        }
+    }
+
+    // forEach
+    {
+        {
+            const num = [100, 200, 300, 400, 500];
+        
+            document.write(num[0]);
+            document.write(num[1]);
+            document.write(num[2]);
+            document.write(num[3]);
+            document.write(num[4]);
+        
+            // for문
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]); // 100200300400500
+            }
+            
+        
+    
+            num.forEach(function(el){
+                document.write(el); // 100200300400500
+            });
+        
+            //forEach(element, index, array)
+            num.forEach((element, index, array) => {
+                document.write(element);
+                document.write(index);
+                document.write(array);
+    
+                // 100 0 100200300400500
+                // 200 0 100200300400500
+                // 300 0 100200300400500
+                // 400 0 100200300400500
+                // 500 0 100200300400500              
+            });
+    }    
+</code></pre>
+</div>
+            </div>      
+        </div>
+        <!-- //box7 -->
+        <div class="box8 active"></div>
+        <div class="box9 active site__desc">
+            <div class="desc">
+                <h3>데이터 저장하기</h3>
+                <p>자바스크립트 코드에서는 ‘변수'에 ‘값'을 할당하는 방식으로 데이터를 다루며, 변수와 값을 각각 메모리 영역에 저장합니다. 값에는 타입이 존재하고, 변수에는 타입이 존재하지 않습니다. 자바스크립트에서는 타입 강제를 하지 않기 때문에 변수는 어떠한 타입의 값이라도 가질 수 있습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    {
+        var/let/const x = 100;            
+        var/let/const y = 200;            
+        var/let/const z = "javascript";  
+    
+        document.write(x);
+        document.write(y);
+        document.write(z);
+    }        
+</code></pre>
+</div>
+
+                <h3>데이터 불러오기</h3>
+                <p>'객체'는 0개 이상의 요소로 구성 됐으며, 요소는 키(key)와 값(value)으로 구성됩니다. '배열'은 순서가 있는 값을 의미하며 배열에 들어있는 값을 요소(element)라고 합니다. 배열의 순서는 인덱스(index)라고 부르고 0부터 시작합니다.
+<div class="code">
+<pre><code class="language-js">
+    {
+        const arr = [100, 200, ["javascript", "jquery"]];   // 배열
+    
+        document.write(arr[0]);
+        document.write(arr[1]);
+        document.write(arr[2]);
+        document.write(arr[2][0]);
+        document.write(arr[2][1]);
+    }
+
+    {
+        const obj = {   // 객체
+            a: 100,
+            b: 200,
+            c: "javascript"
+        };
+    
+        document.write(obj.a);
+        document.write(obj.b);
+        document.write(obj.c);
+        document.write(obj['a'])
+        document.write(obj['b'])
+        document.write(obj['c'])
+    }    
+</code></pre>
+</div>
+
+                <h3>데이터 실행하기</h3>
+                <p>함수는 어떠한 목적을 가진 작업들을 수행하는 코드들이 모인 블럭으로 지시사항들의 묶음입니다. 함수의 특징으로 function 키워드로 시작하고 정의/생성할 수 있으며, 출력할 수도 있습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    {
+        function func(){
+            document.write("함수가 실행되었습니다.1 ");
+        }
+        func();
+    }
+</code></pre>
+</div>
+
+                <h3>데이터 제어하기</h3>
+                <p>조건문은 특정 조건 만족 시(참인 경우) 실행하는 명령의 집합 이며, 어떤 작업을 수행하고 싶을 때 사용합니다. 반복문은 어떤 것을 반복적으로 시행할 때 사용하는 것으로 빠르고 간편하게 사용할 수 있습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    {
+        if(true){   // 조건문
+            document.write("살행되었습니다.(true)"); 
+         } else {
+             document.write("실행되었습니다.(false)")
+         }
+    }
+
+    {
+        for(let i=1; i&lt;=5; i++){ // 반복문
+            document.write(i + ". 실행되었습니다.");
+        }
+    }    
+</code></pre>
+</div>
+            </div>
+        </div>
+        <!-- //box9 -->        
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active"></div>
+        <div class="box14 active"></div>
+        <div class="box15 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/javascript" target="_blank">code view</a></p>
+                <p>javascript 내용 정리 사이트 소스를 깃을 통해 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/javascript" target="_blank">view</a></div>                
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://javascript-desc.netlify.app/" target="_blank">site view</a></p>
+                <p>netlify에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>                         
+            <div class="hover_txt hover_bg"><a href="https://javascript-desc.netlify.app/" target="_blank">view</a></div>    
+        </div>
+        <!-- //box16 -->        
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>         
+</body>
+</html>

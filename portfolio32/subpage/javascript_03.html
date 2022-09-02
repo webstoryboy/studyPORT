@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript3</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/javascript_03.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <div class="desc">
+                <ul>
+                    <li><a href="./javascript_01.html" class="link">1</a></li>
+                    <li><a href="./javascript_02.html" class="link">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="./javascript_04.html" class="link">4</a></li>
+                    <li><a href="./javascript_05.html" class="link">5</a></li>
+                    <li><a href="./javascript_06.html" class="link">6</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">javascript</a></p>
+            </div>
+        </div>
+        <!-- //box1 -->        
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>      
+        <div class="box4 active2">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                   
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active box_hover">
+            <div class="desc">
+                <p class="view">site coding</p>
+                <p>카드 게임을 제작하였습니다. 클릭하시면 사용한 코드를 볼 수 있습니다.</p>
+            </div>               
+            <div class="hover_txt hover_bg"><span class="view">view</span></div>            
+        </div>
+        <!-- //box5 -->        
+        <div class="box6 active"></div>
+        <div class="box7 active site__desc">
+          <div class="tab_menu">
+            <ul class="menu">
+                <li class="tab-button trigger">const&let</li>
+                <li class="tab-button">timer</li>
+                <li class="close"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="tab_code">
+<div class="show tab con1">
+<pre><code class="language-js">    
+
+    const cards = document.querySelectorAll(".card"),
+    timeTag = document.querySelector(".time b"),
+    flipsTag = document.querySelector(".flips b"),
+    refreshBtn = document.querySelector(".details button");
+    
+    let maxTime = 30;
+    let timeLeft = maxTime;
+    let flips = 0;
+    let matchedCard = 0;
+    let disableDeck = false;
+    let isPlaying = false;
+    let cardOne, cardTwo, timer;
+    
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-js">
+
+    function initTimer() {
+        if(timeLeft &lt;= 0) {
+            return clearInterval(timer);
+        }
+        timeLeft--;
+        timeTag.innerText = timeLeft;
+    }
+
+</code></pre>
+</div>
+            </div>      
+        </div>
+        <!-- //box7 -->
+        <div class="box8 active"></div>
+        <div class="box9 active site__desc">
+            <div class="desc">
+                <h3>card flip</h3>
+                <p>if 조건문과 비교연산자를 통해 카드가 서로 맞지 않을 경우 카드가 다시 뒤집어지고 카드가 서로 맞을 경우 카드 뒤집기를 멈추도록 식을 짰습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    function flipCard(e) {
+        if(!isPlaying) {
+            isPlaying = true;
+            timer = setInterval(initTimer, 1000);
+        }
+        let clickedCard = e.target;
+        if(clickedCard !== cardOne && !disableDeck && timeLeft > 0) {
+            flips++;
+            flipsTag.innerText = flips;
+            clickedCard.classList.add("flip");
+            if(!cardOne) {
+                return cardOne = clickedCard;
+            }
+            cardTwo = clickedCard;
+            disableDeck = true;
+            let cardOneImg = cardOne.querySelector(".back-view img").src,
+            cardTwoImg = cardTwo.querySelector(".back-view img").src;
+            matchCards(cardOneImg, cardTwoImg);
+        }
+    }
+</code></pre>
+</div>
+
+<h3>card match</h3>
+<p>if문과 비교연산자로 카드가 모두 일치하고 시간이 남는 다면 clearInterval()로 타이머를 즉시 종료 시켰고 removeEventListener 두 카드가 일치 하지 않을때 기존에 사용됐던 addEventListener를 제거하고 카드를 뒷면으로 뒤집어 주었습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    function matchCards(img1, img2) {
+        if(img1 === img2) {
+            matchedCard++;
+            if(matchedCard == 6 && timeLeft > 0) {
+                return clearInterval(timer);
+            }
+            cardOne.removeEventListener("click", flipCard);
+            cardTwo.removeEventListener("click", flipCard);
+            cardOne = cardTwo = "";
+            return disableDeck = false;
+        }
+    
+        setTimeout(() => {
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+        }, 400);
+    
+        setTimeout(() => {
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            cardOne = cardTwo = "";
+            disableDeck = false;
+        }, 1200);
+    }
+</code></pre>
+</div>
+
+<h3>card shuffle</h3>
+<p>카드 숫자만큼 배열을 만들고 삼항연산자 식으로 Math.random()과 sort() 함수로 카드가 무작위로 섞일수 있도록 만들었습니다. 모든 카드에 클래스를 지우고 이미지를 반복해서 불러올 수 있게 forEach()문도 사용했습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    function shuffleCard() {
+        timeLeft = maxTime;
+        flips = matchedCard = 0;
+        cardOne = cardTwo = "";
+        clearInterval(timer);
+        timeTag.innerText = timeLeft;
+        flipsTag.innerText = flips;
+        disableDeck = isPlaying = false;
+    
+        let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+        arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    
+        cards.forEach((card, index) => {
+            card.classList.remove("flip");
+            let imgTag = card.querySelector(".back-view img");
+            setTimeout(() => {
+                imgTag.src = `./assets/images/img-${arr[index]}.png`;
+            }, 500);
+            card.addEventListener("click", flipCard);
+        });
+    }
+</code></pre>
+</div>
+            </div>
+        </div>
+        <!-- //box9 -->        
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active"></div>
+        <div class="box14 active"></div>
+        <div class="box15 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/card" target="_blank">code view</a></p>
+                <p>카드 게임 사이트 소스를 깃을 통해 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/card" target="_blank">view</a></div>                
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://javascript-card-game.netlify.app/" target="_blank">site view</a></p>
+                <p>netlify에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>                         
+            <div class="hover_txt hover_bg"><a href="https://javascript-card-game.netlify.app/" target="_blank">view</a></div>    
+        </div>
+        <!-- //box16 -->        
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>         
+</body>
+</html>

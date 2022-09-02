@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript4</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/javascript_04.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <div class="desc">
+                <ul>
+                    <li><a href="./javascript_01.html" class="link">1</a></li>
+                    <li><a href="./javascript_02.html" class="link">2</a></li>
+                    <li><a href="./javascript_03.html" class="link">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="./javascript_05.html" class="link">5</a></li>
+                    <li><a href="./javascript_06.html" class="link">6</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">javascript</a></p>
+            </div>
+        </div>
+        <!-- //box1 -->        
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>      
+        <div class="box4 active2">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                   
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active box_hover">
+            <div class="desc">
+                <p class="view">site coding</p>
+                <p>타이핑 게임을 제작하였습니다. 클릭하시면 사용한 코드를 볼 수 있습니다.</p>
+            </div>               
+            <div class="hover_txt hover_bg"><span class="view">view</span></div>            
+        </div>
+        <!-- //box5 -->        
+        <div class="box6 active"></div>
+        <div class="box7 active site__desc">
+          <div class="tab_menu">
+            <ul class="menu">
+                <li class="tab-button trigger">const&let</li>
+                <li class="tab-button">run</li>
+                <li class="tab-button">countDown</li>
+                <li class="tab-button">buttonChange</li>
+                <li class="close"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="tab_code">
+<div class="show tab con1">
+<pre><code class="language-js">    
+
+    const GAME_TIME = 9;
+    let score = 0;
+    let time = GAME_TIME;
+    let isPlaying = false;
+    let timeInterval;
+    let checkInterval;
+    let words = [];
+    
+    const wordInput = document.querySelector(".word-input");
+    const wordDisplay = document.querySelector(".word-display");
+    const scoreDisplay = document.querySelector(".score");
+    const timeDisplay = document.querySelector(".time");
+    const button = document.querySelector('.button');
+
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-js">
+
+    function run(){
+        if(isPlaying){
+            return;
+        }
+        isPlaying = true;
+        time = GAME_TIME;
+        wordInput.focus();
+        scoreDisplay.innerText = 0;
+        timeInterval = setInterval(countDown, 1000);
+        checkInterval = setInterval(checkStatus, 50);
+        buttonChange('in game...')
+    }
+    
+    
+    function checkStatus(){
+        if(!isPlaying && time === 0){
+            buttonChange("start")
+            clearInterval(checkInterval)
+        }
+    }
+
+</code></pre>
+</div>
+<div class="tab con3">
+<pre><code class="language-js">
+
+    function countDown(){
+        time > 0 ? time-- : isPlaying = false;
+        if(!isPlaying){
+            clearInterval(timeInterval);
+        }
+        timeDisplay.innerText = time;
+    }
+
+</code></pre>
+</div>
+<div class="tab con4">
+    <pre><code class="language-js">
+    
+        function buttonChange(text){
+            button.innerText = text;
+            text === 'start' ? button.classList.remove('loading') : button.classList.add('loading');
+        }
+    
+    </code></pre>
+    </div>
+            </div>      
+        </div>
+        <!-- //box7 -->
+        <div class="box8 active"></div>
+        <div class="box9 active site__desc">
+            <div class="desc">
+                <h3>단어 불러오기</h3>
+                <p>random word api사이트에서 url을 호출시켜 무작위 단어를 갖고왔습니다. api를 호출하기 위해 axios 사용했고 html 상단에 링크를 걸었습니다. forEach() 반복문과 조건문으로 배열안에 있는 단어 중 길이가 긴 단어들은 제외 시켰습니다. </p>
+<div class="code">
+<pre><code class="language-js">
+    function getWords(){
+        axios.get('https://random-word-api.herokuapp.com/word?number=100')
+            .then(function (response) {
+            response.data.forEach((word)=>{
+    
+                if(word.length &lt; 10){
+                    words.push(word)
+                }
+            })
+            buttonChange('start')
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })    
+    }
+</code></pre>
+</div>
+
+                <h3>단어 일치 체크</h3>
+                <p>html에서 입력했던 단어와 input 태그의 값이 서로 일치하기 위해 비교연산자와 input 이벤트를 실행시켰습니다. 조건문을 사용해 단어가 일치했을때 점수 증가, 화면에 출력된 단어가 일치하였을 때 다음 단어가 무작위로 나올 수 있게 Math.random()과 소수점을 없애기 위해 Math.floor()를 사용했습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    function checkMatch(){
+        if (wordInput.value.toLowerCase() === wordDisplay.innerText.toLowerCase()){
+            wordInput.value = "";
+            if (!isPlaying){
+                return;
+            }
+            score++;
+            scoreDisplay.innerText = score;
+            time = GAME_TIME;
+            const randomIndex = Math.floor(Math.random() * words.length);
+            wordDisplay.innerText = words[randomIndex];
+        }
+    }
+</code></pre>
+</div>  
+            </div>
+        </div>
+        <!-- //box9 -->        
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active"></div>
+        <div class="box14 active"></div>
+        <div class="box15 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/js-typing" target="_blank">code view</a></p>
+                <p>타이핑 게임 사이트 소스를 깃을 통해 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/js-typing" target="_blank">view</a></div>                
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://javascript-typing-game.netlify.app/" target="_blank">site view</a></p>
+                <p>netlify에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>                         
+            <div class="hover_txt hover_bg"><a href="https://javascript-typing-game.netlify.app/" target="_blank">view</a></div>    
+        </div>
+        <!-- //box16 -->        
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>         
+</body>
+</html>

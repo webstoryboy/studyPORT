@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/vue_01.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <div class="desc">
+                <ul>
+                    <li><a href="./react_01.html" class="link">1</a></li>
+                    <li><a href="./react_02.html" class="link">2</a></li>
+                    <li><a href="./react_03.html">3</a></li>
+                    <li><a href="./react_04.html">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">vue.js</a></p>
+            </div>
+        </div>
+        <!-- //box1 -->        
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>      
+        <div class="box4 active2">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                   
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active box_hover">
+            <div class="desc">
+                <p class="view">site coding</p>
+                <p>뷰 사이트를 제작하였습니다. 클릭하시면 사용한 코드를 볼 수 있습니다.</p>
+            </div>               
+            <div class="hover_txt hover_bg"><span class="view">view</span></div>            
+        </div>
+        <!-- //box5 -->        
+        <div class="box6 active"></div>
+        <div class="box7 active site__desc">
+          <div class="tab_menu">
+            <ul class="menu">
+                <li class="tab-button trigger">App.vue</li>
+                <li class="tab-button">components</li>
+                <li class="close"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="tab_code">
+<div class="show tab con1">
+<pre><code class="language-html">    
+
+    &lt;template&gt;
+        &lt;HeaderSection fonts="gmarket" /&gt;
+        &lt;SliderSection /&gt;
+        &lt;TextSection fonts="gmarket" /&gt;
+        &lt;CardSection fonts="gmarket" /&gt;
+        &lt;ImgSection fonts="gmarket" /&gt;
+        &lt;BannerSection fonts="gmarket" /&gt;
+        &lt;ReviewSection fonts="gmarket" /&gt;
+        &lt;FooterSection fonts="gmarket" /&gt;
+    &lt;/template&gt;
+    
+    &lt;script&gt;
+      import HeaderSection from "./components/HeaderSection.vue";
+      import SliderSection from "./components/SliderSection.vue";
+      import TextSection from "./components/TextSection.vue";
+      import CardSection from "./components/CardSection.vue";
+      import ImgSection from "./components/ImgSection.vue";
+      import BannerSection from "./components/BannerSection.vue";
+      import ReviewSection from "./components/ReviewSection.vue";
+      import FooterSection from "./components/FooterSection.vue";
+      export default {
+          name: 'App',
+          components: {
+            HeaderSection,
+            SliderSection,
+            TextSection,
+            CardSection,
+            ImgSection,
+            BannerSection,
+            ReviewSection,
+            FooterSection
+          }  
+    }
+    &lt;/script&gt;
+    
+    &lt;style&gt;
+      @import "./App.css";
+    &lt;/style&gt;
+
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-jsx">
+
+    &lt;template&gt;
+        &lt;section id="cardType" class="card__wrap section" v-bind:class="fonts"&gt;
+            &lt;h2&gt;스킬UP 교육&lt;/h2&gt;
+            &lt;p&gt;국가 대표 최고의 강사진&lt;br /&gt;우수한 교수진들의 높은 교육 완성도를 자랑합니다.&lt;/p&gt;
+            &lt;div class="card__inner container"&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header"&gt;
+                        &lt;img class="img" src="../assets/img/card01.jpg" alt="이미지1" /&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body card_color01"&gt;
+                        &lt;h3 class="title"&gt;행동교정&lt;/h3&gt;
+                        &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header "&gt;
+                        &lt;img class="img" src="../assets/img/card02.jpg" alt="이미지2"/&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body card_color02"&gt;
+                        &lt;h3 class="title"&gt;펫푸드&lt;/h3&gt;
+                        &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+                &lt;article class="card"&gt;
+                    &lt;figure class="card__header"&gt;
+                        &lt;img class="img" src="../assets/img/card03.jpg" alt="이미지3" /&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="card__body card_color03"&gt;
+                        &lt;h3 class="title"&gt;펫미용&lt;/h3&gt;
+                        &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;    
+    &lt;/template&gt;
+    
+    &lt;style scoped&gt;
+    #cardType {
+        height: 945px;
+        background: #ffffff;
+      }
+      
+      #cardType > h2 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+      }
+      
+      #cardType > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin: 40px;
+        text-align: center;
+      }
+      /* card_inner */
+      .card__inner {
+        display: flex;
+        width: 1160px;
+        margin: 0 auto;
+      }
+      /* card_header */
+      .card__header img {
+        width: 376px;
+        height: 525px;
+      }
+      /* card */
+      .card {
+        margin: 30px auto;
+        padding-top: 80px;
+      }
+      /* card_body */
+      .card__body {
+        padding: 27px;
+        text-align: center;
+        position: relative;
+        top: -100px;
+      }
+      /* color */
+      .card_color01 {
+        background-color: #9bb3d7;
+        opacity: 0.7;
+      }
+      .card_color01 a {
+        text-decoration: underline;
+        display: inline-block;
+      }
+      .card_color02 {
+        background-color: #cdeeff;
+        opacity: 0.7;
+      }
+      .card_color03 {
+        background-color: #ffd7d7;
+        opacity: 0.7;
+      }
+      /* title */
+      .card__body .title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #103b31;
+        line-height: 1.2;
+      }
+      /* btn */
+      .card__body .btn {
+        color: #103b31;
+        font-size: 14px;
+      }
+    &lt;/style&gt;
+
+</code></pre>
+</div>
+            </div>      
+        </div>
+        <!-- //box7 -->
+        <div class="box8 active"></div>
+        <div class="box9 active site__desc">
+            <div class="desc">
+                <h3>description</h3>
+                <p>vue 설치부터 기본 작동 원리, 문법 등을 배웠습니다. vue 설치 시 생성되는 파일마다 기본 개념들을 숙지했으며 기본 흐름을 이해했습니다. 본 사이트는 html 섹션별로 컴포넌트를 구성하여 정상적으로 브라우저에 출력하였습니다.</p>
+<div class="code">
+<pre><code class="language-jsx">
+    &lt;template&gt;
+        &lt;HeaderSection fonts="gmarket" /&gt;
+        &lt;SliderSection /&gt;
+        &lt;TextSection fonts="gmarket" /&gt;
+        &lt;CardSection fonts="gmarket" /&gt;
+        &lt;ImgSection fonts="gmarket" /&gt;
+        &lt;BannerSection fonts="gmarket" /&gt;
+        &lt;ReviewSection fonts="gmarket" /&gt;
+        &lt;FooterSection fonts="gmarket" /&gt;
+    &lt;/template>    
+</code></pre>
+</div>
+
+<h3>v-bind</h3>
+<p>HTML 태그 속성처럼, 한 컴포넌트의 요소에 v-bind value를 지정하면 다른 컴포넌트에서 그 value에 값을 넣어 사용 할 수 있습니다. 즉, v-bind란 컴포넌트끼리 값을 전달하는 수단입니다. 본 사이트에서는 value값을 지정해주어 클래스에 넣어 사용하였습니다.</p>
+<div class="code">
+<pre><code class="language-jsx">
+    &lt;template&gt;
+        &lt;section id="reviewType" v-bind:class="fonts"&gt;
+            &lt;h2&gt;수업 후기&lt;/h2&gt;
+            &lt;p&gt;수강생들의 솔직한 후기를 보실 수 있습니다.&lt;/p&gt;
+</code></pre>
+</div>
+
+<h3>scoped</h3>
+<p>Vue를 사용하는 프로젝트는 다수의 컴포넌트를 사용하여 하나의 앱을 구현합니다. 각각의 컴포넌트에 선언된 스타일이 의도하지 않거나 실수 등에 의해 다른 컴포넌트에 영향을 줄 수 있게 됩니다. 그렇기 때문에 오직 특정 컴포넌트에 고유의 스타일을 선언하기 위한 방법으로 vue-loader가 제공합니다.</p>
+<div class="code">
+<pre><code class="language-jsx">
+    &lt;style scoped&gt;
+        #headerType {
+            height: 200px;
+            background-color: #fff;
+          }
+</code></pre>
+</div>
+            </div>
+        </div>
+        <!-- //box9 -->        
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active"></div>
+        <div class="box14 active"></div>
+        <div class="box15 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/vue-site2" target="_blank">code view</a></p>
+                <p>뷰 사이트 소스를 깃을 통해 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/vue-site2" target="_blank">view</a></div>                
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://vue-site2222.netlify.app/" target="_blank">site view</a></p>
+                <p>netlify에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>                         
+            <div class="hover_txt hover_bg"><a href="https://vue-site2222.netlify.app/" target="_blank">view</a></div>    
+        </div>
+        <!-- //box16 -->        
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>         
+</body>
+</html>

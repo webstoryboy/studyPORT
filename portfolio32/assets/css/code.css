@@ -1,0 +1,51 @@
+/* code-view */
+.code-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* display: none; */
+}
+.code-view .tab-menu {
+    display: flex;
+    justify-content: space-between;
+}
+.code-view .tab-menu .menu {
+    display: flex;
+}
+.code-view .tab-menu .menu li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+.code-view .tab-menu .menu li.active {
+    background: #282934;
+}
+
+.code-view .close {
+    border: none;
+    line-height: 2.6em;
+    width: 20%;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+}
+
+.code-view .tab-con {
+    height: calc(100% - 46px);
+}
+.code-view .tab-con .con {
+    height: 100%;
+    /* display: none; */
+}
+.code-view .tab-con .con.active {
+    display: block;
+}
+
+.code-view .tab-con div pre {
+    height: 100%;
+}

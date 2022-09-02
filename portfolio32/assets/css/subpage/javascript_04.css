@@ -1,0 +1,537 @@
+@charset "utf-8";
+
+/* container */
+#container {
+    overflow: hidden;
+    height: 100vh;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-areas: 
+    "box1 box1 box1 box4"
+    "box5 box6 box7 box7"
+    "box9 box9 box7 box7"
+    "box9 box9 box15 box16";
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-columns: repeat(4, 25%);
+
+}
+
+#container .box1 {grid-area: box1;}
+#container .box2 {grid-area: box2;}
+#container .box3 {grid-area: box3;}
+#container .box4 {grid-area: box4;}
+#container .box5 {grid-area: box5;}
+#container .box6 {grid-area: box6;}
+#container .box7 {grid-area: box7;}
+#container .box8 {grid-area: box8;}
+#container .box9 {grid-area: box9;}
+#container .box10 {grid-area: box10;}
+#container .box11 {grid-area: box11;}
+#container .box12 {grid-area: box12;}
+#container .box13 {grid-area: box13;}
+#container .box14 {grid-area: box14;}
+#container .box15 {grid-area: box15;}
+#container .box16 {grid-area: box16;}
+
+/* active1 */
+.contents > div {
+    border-right: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 3%;
+    position: relative;
+    z-index: 100;
+}
+.contents > div::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: width 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > div.active::before {
+    width: 100%;
+}
+
+/* acitive2 */
+.contents > .box4::before {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: height 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > .box16::before {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #000;
+    position: absolute;
+    left: 0; top: 0;
+    transition: height 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1000;
+}
+.contents > div.active2::before {
+    height: 100%;
+}
+
+/* contents > div:nth-child() */
+.contents > div:nth-child(4n){
+    border-right: 0;
+}
+.contents > div:nth-child(7) {
+    border-right: 0;
+}
+.contents > div:nth-child(9){
+    border-bottom: 0;
+}
+.contents > div:nth-child(15){
+    border-bottom: 0;
+}
+.contents > div:nth-child(16){
+    border-bottom: 0;
+    border-right: 0;
+}
+
+/* li a */
+li a {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+}
+
+/* a:hover */
+li a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* desc */
+.desc {       
+    position: relative;    
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* box1 */
+.box1 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    align-items: center;     
+}
+.box1 p {
+    font-size: 7vmax;
+    font-weight: 700;
+    font-family: 'GmarketSans';  
+    clear: both;
+}
+.box1 li a{
+    width: 43px;
+    height: 43px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    float: left;
+    transition: 0.5s;
+    margin: 50px 0 0 9px;
+}
+.box1 li:nth-child(4) a {
+    background-color: #000;
+    color: #fff;
+}
+.box1 li:nth-child(n+2) a {
+    margin-left: 10px;
+}
+
+/* box4 */
+.box4 .desc {
+    text-align: right;
+    font-family: 'ChosunNm';      
+}
+.box4 .desc p {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 80px;
+}
+/* arrow animation */
+.box4 .active3 {
+    animation-duration: 0.8s;
+    animation-name: arrow_right;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow_right{
+    0%{margin-right:0px;}
+    50%{margin-right:28px;}
+    100%{margin-right:0px;}
+}
+
+/* box5 */
+.box5 {
+    position: relative;
+    overflow: hidden;
+}
+.box5 .desc {
+    font-family: 'ChosunNm';     
+    -webkit-transition: margin-top .3s ease;
+    transition: margin-top .3s ease;        
+}
+.box5 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.box5 .desc p:last-child {
+    text-align: justify;
+}
+
+/* box7 */
+.box7 {
+    padding: 0 !important;
+    background: url("../../img/typing1.jpg") no-repeat center center;  
+    background-size: cover;
+    overflow: auto;
+    position: relative;
+}
+.box7 pre code {
+    font-family: "GmarketSans";
+    font-size: 14px;
+}
+.site__desc::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+/* box9 */
+.box9 {
+    background-color: #000;
+    color: #fff;
+    font-family: 'ChosunNm';
+    overflow: auto;    
+}
+.box9 p {
+    line-height: 1.7;
+}
+.box9 pre {
+    margin-top: 10px;
+}
+
+
+/* box15 */
+.box15 {
+    position: relative;
+    overflow: hidden;
+}
+.box15 .desc {
+    font-family: 'ChosunNm';      
+    -webkit-transition: margin-top .3s ease;
+    transition: margin-top .3s ease;       
+}
+.box15 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box15 .desc p:last-child {
+    text-align: justify;
+}
+
+/* box16 */
+.box16 {
+    position: relative;
+    overflow: hidden;
+}
+.box16 .desc {
+    font-family: 'ChosunNm';     
+    -webkit-transition: margin-top .3s ease;
+    transition: margin-top .3s ease;        
+}
+.box16 .desc p:first-child {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 40px;  
+    white-space: nowrap;
+    overflow: hidden;
+}
+.box16 .desc p:last-child {
+    text-align: justify;
+}
+
+/* resize */
+.resize {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'ChosunNm';
+    display: none;  
+}
+.resize__inner {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;    
+}
+
+/* hover_bg */
+.hover_bg {
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #000;
+    bottom: -2.5rem;
+    left: 0;
+    -webkit-transition: bottom .3s ease;
+    transition: bottom .3s ease;
+}
+.hover_txt a {
+    float: right;
+    margin: 5px 25px 0 0;    
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: 'GmarketSans';
+}
+.hover_txt span {
+    float: right;
+    margin: 5px 25px 0 0;    
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: 'GmarketSans';
+    cursor: pointer;
+}
+
+/* code_box */
+.tab_menu {
+    display: none;
+    padding: 0 !important;
+    width: 50%;
+    height: 7%;  
+    position: fixed;
+    z-index: 100;
+}
+.menu {
+    background-color: #fff;
+    height: 50px;
+    margin: 0;
+}
+.menu li {
+    display: block;
+    width: 140px;
+    height: 50px;
+    padding-top: 15px;
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;   
+    transition: 0.3s;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #d6d6d6;    
+}
+.menu li:last-child {
+    float: right;
+}
+.menu li:last-child {
+    width: 50px;
+    font-size: 20px;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+}
+.menu li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* .tab_code */
+.tab_code {
+    position: relative;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'GmarketSans';
+    display: none;
+}
+.tab_code .language-css, .language-html, .language-js {
+    border-radius: 0 !important;
+}
+.tab {
+    display: none;
+}
+.tab pre {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 !important;
+}
+.trigger {
+    background: #000;
+    color: #fff !important;
+}
+.show {
+    display: block;
+}
+
+/* code description */
+.site__desc .desc h3 {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+}
+.site__desc .desc p {
+    color: #fff;
+    display: block;
+    padding: 0;
+    background: #000;
+    font-size: 16px;
+    overflow: auto;
+    text-transform: none;
+}
+.site__desc .code {
+    padding: 0;
+    margin-bottom: 30px;
+}
+.site__desc .code pre {
+    padding: 0;
+    padding-bottom: 30px; 
+}
+.site__desc .code pre code {
+    font-family: 'GmarketSans';
+    font-size: 14px;
+    text-transform: none;
+}
+.site__desc::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000;
+}
+.site__desc::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+}            
+.site__desc::-webkit-scrollbar-track {
+    background-color: gray;
+}
+pre::-webkit-scrollbar {
+    width: 10px;
+    background-color: #000;
+}
+pre::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+}            
+pre::-webkit-scrollbar-track {
+    background-color: gray;
+}  
+
+/* max-width: 1000px */
+@media (max-width:1000px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "box3 box4"
+        "box1 box1"        
+        "box7 box7"
+        "box7 box7"
+        "box5 box5"
+        "box9 box9"
+        "box9 box9"
+        "box15 box16";
+        grid-template-rows: repeat(8, 25vh);
+        grid-template-columns: repeat(2, 50%);
+        height: 200vh;
+    }
+
+    /* box1 */
+    .box1 p{
+        font-size: 10vmin;
+        margin-top: 100px;        
+    }
+    .box1 li a {
+        margin-left: 0;
+    }
+
+    /* cotents > div:nth:child */
+    .contents > div:nth-child(1){
+        border-right: 0;
+    }   
+    .contents > div:nth-child(5){
+        border-right: 0;
+    }   
+    .contents > div:nth-child(15){
+        border-right: 1px solid #D6D6D6;
+    } 
+
+    .tab_menu {
+        position: static;
+        width: 100%;
+        height: 10%;
+    }       
+}
+
+/* max-width: 600px */
+@media (max-width: 600px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        "box4"
+        "box1" 
+        "box7"
+        "box7"
+        "box5"
+        "box9"
+        "box9"        
+        "box15"
+        "box16";
+        grid-template-rows: repeat(10, 25vh);
+        grid-template-columns: 100%;
+        height: 225vh;
+    }
+
+    /* box1 */
+    .box1 .desc{
+        width: 100%;
+    }
+
+    /* cotents > div:nth:child */
+    .contents > div:nth-child(1){
+        border-right: 0;
+    }   
+    .contents > div:nth-child(5){
+        border-right: 0;
+    }   
+    .contents > div:nth-child(15){
+        border-right: 0;
+        border-bottom: 1px solid #D6D6D6;
+    }     
+
+}

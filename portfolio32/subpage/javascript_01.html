@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript1</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css"  href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/subpage/javascript_01.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="../assets/css/prism.css">
+
+</head>
+<body>
+    <!-- resize -->
+    <div class="resize">
+        <div class="resize__inner">
+          <p>전체 페이지 모드로 봐주시기 바랍니다.</p>
+        </div>
+    </div>    
+
+    <section id="container" class="contents">
+        <div class="box1 active">
+            <div class="desc">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="./javascript_02.html" class="link">2</a></li>
+                    <li><a href="./javascript_03.html" class="link">3</a></li>
+                    <li><a href="./javascript_04.html" class="link">4</a></li>
+                    <li><a href="./javascript_05.html" class="link">5</a></li>
+                    <li><a href="./javascript_06.html" class="link">6</a></li>
+                </ul>
+                <p><a href="../index.html" class="link">javascript</a></p>
+            </div>
+        </div>
+        <!-- //box1 -->        
+        <div class="box2 active"></div>
+        <div class="box3 active"></div>      
+        <div class="box4 active2">
+            <div class="desc">
+                <p class="arr"><a href="../index.html" class="link arr">home</a></p>
+                <a href="../index.html" class="arrow"><svg width="313" height="8" viewBox="0 0 313 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M312.354 4.35355C312.549 4.15829 312.549 3.84171 312.354 3.64645L309.172 0.464466C308.976 0.269204 308.66 0.269204 308.464 0.464466C308.269 0.659728 308.269 0.976311 308.464 1.17157L311.293 4L308.464 6.82843C308.269 7.02369 308.269 7.34027 308.464 7.53553C308.66 7.7308 308.976 7.7308 309.172 7.53553L312.354 4.35355ZM0 4.5H312V3.5H0V4.5Z" fill="black"/>
+                    </svg>
+                    </a>
+            </div>                   
+        </div>
+        <!-- //box4 -->        
+        <div class="box5 active box_hover">
+            <div class="desc">
+                <p class="view">site coding</p>
+                <p>퍼즐 게임을 제작하였습니다. 클릭하시면 사용한 코드를 볼 수 있습니다.</p>
+            </div>               
+            <div class="hover_txt hover_bg"><span class="view">view</span></div>            
+        </div>
+        <!-- //box5 -->        
+        <div class="box6 active"></div>
+        <div class="box7 active site__desc">
+          <div class="tab_menu">
+            <ul class="menu">
+                <li class="tab-button trigger">const&let</li>
+                <li class="tab-button">setGame</li>
+                <li class="tab-button">checkStatus</li>
+                <li class="close"><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+        <div class="tab_code">
+<div class="show tab con1">
+<pre><code class="language-js">    
+
+    const container = document.querySelector('.image-container');
+    const startButton = document.querySelector('.start-button');
+    const gameText = document.querySelector('.game-text');
+    const playTime = document.querySelector('.play-time');
+    
+    const tileCount = 16;
+    
+    let tiles = [];
+    const dragged = {
+        el: null,
+        class: null,
+        index: null,
+    }
+    let isPlaying = false;
+    let timeInterval = null;
+    let time = 0;
+    
+
+
+</code></pre>
+</div>    
+<div class="tab con2">
+<pre><code class="language-jsx">
+
+    function setGame(){
+        isPlaying = true;
+        time = 0;
+        container.innerHTML = ""; 
+        gameText.style.display = "none";
+        clearInterval(timeInterval)
+    
+        tiles = createImagesTiles();
+        tiles.forEach(tile=> container.appendChild(tile)) 
+        setTimeout(()=>{
+            container.innerHTML = ""; 
+            shuffle(tiles).forEach(tile=> container.appendChild(tile)) 
+            timeInterval = setInterval(() => {
+                playTime.innerText = "start : " + time;
+                time++;
+            }, 1000)
+        }, 3000)
+    }
+
+</code></pre>
+</div>
+<div class="tab con3">
+<pre><code class="language-js">
+
+    function checkStatus(){
+        const currentList = [...container.children];
+        const unMatchedList = currentList.filter((child, index) => Number(child.getAttribute("data-index")) !== index); 
+        if(unMatchedList.length === 0){
+            gameText.style.display = "block";
+            isPlaying = false;
+            clearInterval(timeInterval)
+        }
+    }
+
+</code></pre>
+</div>
+            </div>      
+        </div>
+        <!-- //box7 -->
+        <div class="box8 active"></div>
+        <div class="box9 active site__desc">
+            <div class="desc">
+                <h3>이미지 조각 만들기</h3>
+                <p>이미지를 16등분을 하기 위해 우선 Array(), fill() 명령어를 통해 배열을 만들어 주었습니다. 그 다음 forEach() 반복문으로 16개의 li태그를 반복하여 만들어 주었습니다. 인덱스와 data-type의 위치가 맞는지를 비교하기 위해 setAttribute()를 사용하여 위치 또한 확인하였습니다.</p>
+<div class="code">
+<pre><code class="language-js">
+    function createImagesTiles(){
+        const tempArray = [];
+        Array(tileCount).fill().forEach((_, i) => {
+            const li = document.createElement("li");
+            li.setAttribute('data-index', i)
+            li.setAttribute('draggable', 'true');
+            li.classList.add(`list${i}`)
+            tempArray.push(li)
+        })
+        return tempArray;
+    }
+</code></pre>
+</div>
+
+<h3>drag event</h3>
+<p>drag를 깔끔하게 실행하기 위해 먼저 li에 setAttribute('draggable', 'true') 속성을 주었습니다. 'dragstart'에서 indexOf를 사용하기 위해 object를 [...]을 통해 강제로 배열로 만들어 주었습니다. 'dragover'에선 어떠한 element 위에 오버된 상태에서 놓으면 drop이 발생 하지 않아 'dragover' 이벤트가 발생하지 않도록 preventDefault() 메소드를 사용했습니다. 'drop'에선 조건문과 before(), after() 메소드로 인덱스를 이동 시켰을때 위치해 있던 인덱스도 자동으로 자신의 위치에 이동할 수 있게 만들었습니다. </p>
+<div class="code">
+<pre><code class="language-jsx">
+    container.addEventListener('dragstart', e => {
+        if(!isPlaying) return;
+        const obj = e.target;
+        dragged.el = obj;
+        dragged.class= obj.className;
+        dragged.index = [...obj.parentNode.children].indexOf(obj)
+    })
+    container.addEventListener('dragover', e => {
+        e.preventDefault();
+    })
+    container.addEventListener('drop', e => {
+        if(!isPlaying) return;
+       const obj = e.target;
+       if(obj.className !== dragged.class){
+        let originPlace;
+        let isLast = false;
+    
+        if(dragged.el.nextSibling){
+            originPlace = dragged.el.nextSibling
+        } else {
+            originPlace = dragged.el.previousSibling
+            isLast = true;
+        }    
+        const droppedIndex = [...obj.parentNode.children].indexOf(obj);
+            dragged.index > droppedIndex ? obj.before(dragged.el) : obj.after(dragged.el)
+            isLast ? originPlace.after(obj) : originPlace.before(obj)
+       }
+       checkStatus();
+    })
+</code></pre>
+</div>
+
+<h3>puzzle shuffle</h3>
+<p>16개 등분한 li 태그를 무작위 순으로 만들기 위해서 while문과 Math.random(), 소수점을 없애기 위해 Math.floor()로 감싸주어 배열 원소의 순서를 바꾸는 로직으로 순서가 뒤섞인 배열을 나타냈습니다.</p>
+<div class="code">
+<pre><code class="language-jsx">
+    function shuffle(array){
+        let index = array.length -1;
+        while(index > 0){
+            const randomIndex = Math.floor(Math.random()*(index+1));
+            [array[index], array[randomIndex]] = [array[randomIndex], array[index]]
+            index--;
+        }
+        return array;
+    }
+</code></pre>
+</div>
+            </div>
+        </div>
+        <!-- //box9 -->        
+        <div class="box10 active"></div>
+        <div class="box11 active"></div>
+        <div class="box12 active"></div>
+        <div class="box13 active"></div>
+        <div class="box14 active"></div>
+        <div class="box15 active box_hover">
+            <div class="desc">
+                <p><a href="https://github1s.com/eeenlighten/js-puzzle" target="_blank">code view</a></p>
+                <p>퍼즐 게임 사이트 소스를 깃을 통해 볼 수 있습니다.</p>
+            </div>   
+            <div class="hover_txt hover_bg"><a href="https://github1s.com/eeenlighten/js-puzzle" target="_blank">view</a></div>                
+        </div>
+        <!-- //box15 -->        
+        <div class="box16 active2 box_hover">
+            <div class="desc">
+                <p><a href="https://javascript-puzzle-game.netlify.app/" target="_blank">site view</a></p>
+                <p>netlify에 올린 파일을 직접 볼 수 있습니다.</p>
+            </div>                         
+            <div class="hover_txt hover_bg"><a href="https://javascript-puzzle-game.netlify.app/" target="_blank">view</a></div>    
+        </div>
+        <!-- //box16 -->        
+    </section>
+    <!-- //section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>    
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/script.js"></script>    
+    <script src="../assets/js/prism.js"></script> 
+    <script src="https://kit.fontawesome.com/efd0a3a664.js" crossorigin="anonymous"></script>         
+</body>
+</html>
