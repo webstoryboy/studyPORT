@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+
+    <!--animation-->
+    <link rel="stylesheet" href="assets/animation/dotWave.css" />
+    <link rel="stylesheet" href="assets/animation/animation.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <!-- WebFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;700;900&family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--favicon-->
+    <link
+      href="./assets/svg/logo_icon.svg"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+
+    <!-- fontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;700;900&family=Poppins:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 폰트 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css"
+    />
+  </head>
+
+  <body>
+    <div class="scroll">1000</div>
+
+    <!-- progress -->
+    <div class="progress" id ="progress">
+      <div class="loader">
+        <h2 class="loading_text">I'm <span class="auto-type"></span></h2>
+      </div> 
+      <span class="progress-text"></span> 
+    </div>
+      <!-- // progress -->    
+
+    <!-- desktop_nav -->
+    <nav
+      id="nav"
+      class="nav"
+      data-7600="transform: translatey(-150%);"
+      data-8600="transform: translatey(0%);"
+    >
+      <div class="logo_cont">
+        <div class="logo_icon"></div>
+        <strong class="logo_txt">CHOISUNA - PORTFOLIO</strong>
+      </div>
+
+      <input type="checkbox" id="active" class="menu" />
+      <label for="active" class="menu-btn"><span></span></label>
+      <div class="wrapper">
+        <ul>
+          <li><a href="#aboutMe" class="aboutMe_menu">ABOUT ME</a></li>
+          <li><a href="#skills" class="skills_menu">SKILLS</a></li>
+          <li><a href="#javascript" class="javascript_menu">JAVASCRIPT</a></li>
+          <li><a href="#siteWorks" class="siteWorks_menu">SITE WORKS</a></li>
+          <li><a href="#frontEnd" class="frontEnd_menu">FRONT-END</a></li>
+          <li><a href="#footer" class="footer_menu">THANK YOU</a></li>
+        </ul>
+      </div>
+      <!-- //side_menu -->
+    </nav>
+    <!-- //desktop_nav -->
+
+    <!-- mobile_nav -->
+    <nav id="mobile_nav" class="mobile_nav">
+      <div class="logo_cont">
+        <div class="logo_icon"></div>
+        <strong class="logo_txt">PORTFOLIO</strong>
+      </div>
+      <div class="menu">
+        <a href="#"> </a>
+      </div>
+    </nav>
+    <!-- //mobile_nav -->
+
+    <!-- cover -->
+    <div
+      class="cover section"
+      data-100="transform: scale(1); opacity: 1;"
+      data-1000="transform: scale(1); opacity: 1;"
+      data-2800="transform: scale(3); opacity: 1;"
+      data-3000="transform: scale(3); opacity: 0;"
+    >
+      <div
+        class="text_wrap gothic_200"
+        data-0="opacity: 1"
+        data-1000="opacity: 1"
+        data-2000="opacity: 0"
+      >
+        <span>안녕하세요.</span>
+        <span>어제보다 오늘 더 발전하는</span>
+        <span>개발자가 되겠습니다.</span>
+      </div>
+      <!-- //text_wrap -->
+
+      <div class="star_wrap">
+        <i class="star star1"></i>
+        <i class="star star2"></i>
+        <i class="star star3"></i>
+        <i class="star star4"></i>
+        <i class="star star5"></i>
+        <i class="star star6"></i>
+        <i class="star star7"></i>
+        <i class="star star8"></i>
+        <i class="star star9"></i>
+        <i class="star star10"></i>
+      </div>
+
+      <div class="cloud_wrap">
+        <div
+          class="cloud_left"
+          data-0="left: 0%; opacity: 1;"
+          data-1000="left: -60%; opacity: 1;"
+          data-2000="left: -230%; opacity: 0;"
+        ></div>
+
+        <div
+          class="cloud_right"
+          data-0="right: -2%; opacity: 1;"
+          data-1000="right: -60%; opacity: 1;"
+          data-2000="right: -230%; opacity: 0;"
+        ></div>
+
+        <div
+          class="min_cloud_left"
+          data-100="left: 4%; opacity: 1;"
+          data-1500="left: -10%; opacity: 1;"
+          data-2300="left: -40%; opacity: 0;"
+        ></div>
+        <div
+          class="min_cloud_right"
+          data-200="right: 4%; opacity: 1;"
+          data-1600="right: -10%; opacity: 1;"
+          data-2300="right: -40%; opacity: 0;"
+        ></div>
+      </div>
+      <!-- //cloud_wrap -->
+    </div>
+    <!-- //cover -->
+
+    <!-- header -->
+    <header id="header" class="header">
+      <div class="header section main_container">
+        <section class="header_title_wrap">
+          <div class="title Hanson-bold">
+            <strong
+              data-3500="transform:translatex(-100%)"
+              data-4500="transform:translatex(0%)"
+              >FRONTEND</strong
+            >
+            <div
+              class="middle_text_wrap"
+              data-3700="transform:translatex(-150%)"
+              data-4700="transform:translatex(0%)"
+            >
+              <strong>DEV</strong>
+              <div class="arrow_icon"></div>
+            </div>
+            <span
+              data-3900="transform:translatex(-200%)"
+              data-4900="transform:translatex(0%)"
+              >PORTFOLIO</span
+            >
+          </div>
+          <div class="email">
+            <span
+              class="name"
+              data-5000="transform:translatey(350%)"
+              data-5300="transform:translatey(0%)"
+              >CHOI SUN A</span
+            >
+            <address
+              data-5000="transform:translatey(350%)"
+              data-5500="transform:translatey(0%)"
+            >
+              <a href="mailto: choisuna0615@gmail.com"
+                >choisuna0615@gmail.com</a
+              >
+            </address>
+          </div>
+        </section>
+
+        <div class="v-line"></div>
+
+        <section class="img_wrap">
+          <div
+            class="airplane_img_wrap"
+            data-2800="transform: scale(10);"
+            data-4000="transform: scale(1);"
+          >
+            <div class="airplane_img"></div>
+            <div class="clouds_img"></div>
+            <div class="star_bg">
+              <i class="star star1"></i>
+              <i class="star star2"></i>
+              <i class="star star3"></i>
+              <i class="star star4"></i>
+              <i class="star star5"></i>
+              <i class="star star6"></i>
+            </div>
+          </div>
+        </section>
+
+        <div class="v-line"></div>
+
+        <section class="portfolio_list">
+          <ul
+            data-5500="transform:translatex(-150%);"
+            data-6000="transform:translatex(0%);"
+          >
+            <li>
+              <a href="#aboutMe" class="aboutMe flip-btn">
+                <div class="front">
+                  <span class="list_num">01</span>
+                  <strong class="list_tit">ABOUT ME</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">01</span>
+                  <strong class="list_tit">ABOUT ME</strong>
+                </div>
+              </a>
+              <div class="h-line"></div>
+            </li>
+            <li>
+              <a href="#skills" class="skills flip-btn">
+                <div class="front">
+                  <span class="list_num">02</span>
+                  <strong class="list_tit">SKILLS</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">02</span>
+                  <strong class="list_tit">SKILLS</strong>
+                </div>
+              </a>
+              <div class="h-line"></div>
+            </li>
+            <li>
+              <a href="#javascript" class="javascript flip-btn">
+                <div class="front">
+                  <span class="list_num">03</span>
+                  <strong class="list_tit">JAVASCRIPT</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">03</span>
+                  <strong class="list_tit">JAVASCRIPT</strong>
+                </div>
+              </a>
+              <div class="h-line"></div>
+            </li>
+            <li>
+              <a href="#siteWorks" class="siteWorks flip-btn">
+                <div class="front">
+                  <span class="list_num">04</span>
+                  <strong class="list_tit">SITE WORKS</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">04</span>
+                  <strong class="list_tit">SITE WORKS</strong>
+                </div>
+              </a>
+              <div class="h-line"></div>
+            </li>
+            <li>
+              <a href="#frontEnd" class="frontEnd flip-btn">
+                <div class="front">
+                  <span class="list_num">05</span>
+                  <strong class="list_tit">FRONT-END</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">05</span>
+                  <strong class="list_tit">FRONT-END</strong>
+                </div>
+              </a>
+              <div class="h-line"></div>
+            </li>
+            <li>
+              <a href="#footer" class="footer flip-btn">
+                <div class="front">
+                  <span class="list_num">06</span>
+                  <strong class="list_tit">THANK YOU</strong>
+                </div>
+                <div class="back">
+                  <span class="list_num">06</span>
+                  <strong class="list_tit">THANK YOU</strong>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main id="main">
+      <!-- section1 -->
+      <!--  about me img-->
+      <section id="section1" class="section1">
+        <div
+          class="sec1 section"
+          data-6400="transform: translatex(100%); background: none;"
+          data-7000="transform: translatex(0%); background: none;"
+          data-7500="transform: translatex(0%); background: #fff;"
+        >
+          <div class="sec1_cont_wrap">
+            <div class="arrow">
+              <svg
+                width="1925"
+                height="24"
+                viewBox="0 0 1925 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1923 13.5C1923.83 13.5 1924.5 12.8284 1924.5 12C1924.5 11.1716 1923.83 10.5 1923 10.5V13.5ZM0.939321 10.9393C0.353534 11.5251 0.353534 12.4749 0.939321 13.0607L10.4853 22.6066C11.071 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.1213 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.807612 11.071 0.807612 10.4853 1.3934L0.939321 10.9393ZM1923 10.5L1.99998 10.5V13.5L1923 13.5V10.5Z"
+                  fill="#1941B8"
+                />
+              </svg>
+            </div>
+            <div class="sec1_img_wrap">
+              <div
+                class="img"
+                data-7001="width: 100%; height: 0%;"
+                data-7500="width: 100%; height: 100%;"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section1 -->
+
+      <!-- section2 sub -->
+      <!--  about me sub txt -->
+      <section id="section2" class="section2 sub section">
+        <div class="sec2">
+          <div
+            id="aboutMe"
+            class="sub_contain"
+            data-8700="transform: scaleX(0)"
+            data-9000="transform: scaleX(1)"
+          >
+            <div class="sub_title">
+              <strong
+                data-9050="transform: translateY(250%)"
+                data-9500="transform: translateY(0%)"
+                >ABOUT</strong
+              >
+              <span
+                data-9150="transform: translateY(250%)"
+                data-9700="transform: translateY(0%)"
+                >ME</span
+              >
+            </div>
+            <div class="sub_desc">
+              <div class="sub_desc_wrap">
+                <p
+                  data-9750="transform: translateY(-250%)"
+                  data-10500="transform: translateY(0%)"
+                >
+                  <span class="text_line">UXUI를 전공하여 기획부터 디자인</span
+                  >까지 꾸준히 공부하고 경험하면서 점차 개발에도 흥미가 생기기
+                  시작했습니다. 2019년도부터 안드로이드를 공부하여 6개의 어플을
+                  출시하였고,
+                  <span class="text_line"
+                    >지금은 프론트엔드 개발자로서 첫발을 내딛으려고
+                    합니다.</span
+                  >
+                </p>
+              </div>
+
+              <div class="sub_desc_wrap">
+                <p
+                  data-9900="transform: translateY(-250%)"
+                  data-12000="transform: translateY(0%)"
+                >
+                  최신 UXUI를 반영한 웹&모바일 트렌드에 민감하게 반응하고
+                  뒤처지지 않기 위해 스터디 모임과 세미나에 참여하여 핵심
+                  사이트를 벤치마킹하고 업무 시간 외에도 꾸준히 부족한 부분과
+                  유행하는 기술들을 공부하여
+                  <span class="text_line">자기 계발에 힘쓰겠습니다.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- sub_contain -->
+        </div>
+      </section>
+      <!-- //section2 sub -->
+
+      <!-- section3 -->
+      <!--   skills -->
+      <section id="section3" class="section3">
+        <div
+          id="skills"
+          class="airplane_img"
+          data-12000="transform: translateX(-150%); opacity:1;"
+          data-16000="transform: translateX(0%); opacity:1;"
+          data-16500="transform: translateX(0%); opacity:1;"
+          data-17000="transform: translateX(0%); opacity:0;"
+        >
+          <div class="airplane_img_wrap">
+            <div class="airplane_line">
+              <div id="wave-container" class="wave-container">
+                <div class="dot" id="d1"></div>
+                <div class="dot" id="d2"></div>
+                <div class="dot" id="d3"></div>
+                <div class="dot" id="d4"></div>
+                <div class="dot" id="d5"></div>
+                <div class="dot" id="d6"></div>
+                <div class="dot" id="d7"></div>
+                <div class="dot" id="d8"></div>
+                <div class="dot" id="d9"></div>
+                <div class="dot" id="d10"></div>
+                <div class="dot" id="d11"></div>
+                <div class="dot" id="d12"></div>
+                <div class="dot" id="d13"></div>
+                <div class="dot" id="d14"></div>
+                <div class="dot" id="d15"></div>
+                <div class="dot" id="d16"></div>
+                <div class="dot" id="d17"></div>
+                <div class="dot" id="d18"></div>
+                <div class="dot" id="d19"></div>
+                <div class="dot" id="d20"></div>
+                <div class="dot" id="d21"></div>
+                <div class="dot" id="d22"></div>
+                <div class="dot" id="d23"></div>
+                <div class="dot" id="d24"></div>
+                <div class="dot" id="d25"></div>
+                <div class="dot" id="d26"></div>
+                <div class="dot" id="d27"></div>
+                <div class="dot" id="d28"></div>
+                <div class="dot" id="d29"></div>
+                <div class="dot" id="d30"></div>
+                <div class="dot" id="d31"></div>
+                <div class="dot" id="d32"></div>
+                <div class="dot" id="d33"></div>
+                <div class="dot" id="d34"></div>
+                <div class="dot" id="d35"></div>
+                <div class="dot" id="d36"></div>
+                <div class="dot" id="d37"></div>
+                <div class="dot" id="d38"></div>
+                <div class="dot" id="d39"></div>
+                <div class="dot" id="d40"></div>
+                <div class="dot" id="d41"></div>
+                <div class="dot" id="d42"></div>
+                <div class="dot" id="d43"></div>
+                <div class="dot" id="d44"></div>
+                <div class="dot" id="d45"></div>
+                <div class="dot" id="d46"></div>
+                <div class="dot" id="d47"></div>
+                <div class="dot" id="d48"></div>
+                <div class="dot" id="d49"></div>
+                <div class="dot" id="d50"></div>
+                <div class="dot" id="d51"></div>
+                <div class="dot" id="d52"></div>
+                <div class="dot" id="d53"></div>
+                <div class="dot" id="d54"></div>
+                <div class="dot" id="d55"></div>
+                <div class="dot" id="d56"></div>
+                <div class="dot" id="d57"></div>
+                <div class="dot" id="d58"></div>
+                <div class="dot" id="d59"></div>
+                <div class="dot" id="d60"></div>
+                <div class="dot" id="d61"></div>
+                <div class="dot" id="d62"></div>
+                <div class="dot" id="d63"></div>
+                <div class="dot" id="d64"></div>
+                <div class="dot" id="d65"></div>
+                <div class="dot" id="d66"></div>
+                <div class="dot" id="d67"></div>
+                <div class="dot" id="d68"></div>
+                <div class="dot" id="d69"></div>
+                <div class="dot" id="d70"></div>
+                <div class="dot" id="d71"></div>
+                <div class="dot" id="d72"></div>
+                <div class="dot" id="d73"></div>
+                <div class="dot" id="d74"></div>
+                <div class="dot" id="d75"></div>
+                <div class="dot" id="d76"></div>
+                <div class="dot" id="d77"></div>
+                <div class="dot" id="d78"></div>
+                <div class="dot" id="d79"></div>
+                <div class="dot" id="d80"></div>
+                <div class="dot" id="d81"></div>
+                <div class="dot" id="d82"></div>
+                <div class="dot" id="d83"></div>
+                <div class="dot" id="d84"></div>
+                <div class="dot" id="d85"></div>
+                <div class="dot" id="d86"></div>
+                <div class="dot" id="d87"></div>
+                <div class="dot" id="d88"></div>
+                <div class="dot" id="d89"></div>
+                <div class="dot" id="d90"></div>
+                <div class="dot" id="d91"></div>
+                <div class="dot" id="d92"></div>
+                <div class="dot" id="d93"></div>
+                <div class="dot" id="d94"></div>
+                <div class="dot" id="d95"></div>
+                <div class="dot" id="d96"></div>
+                <div class="dot" id="d97"></div>
+                <div class="dot" id="d98"></div>
+                <div class="dot" id="d99"></div>
+                <div class="dot" id="d100"></div>
+                <div class="dot" id="d101"></div>
+                <div class="dot" id="d102"></div>
+                <div class="dot" id="d103"></div>
+                <div class="dot" id="d104"></div>
+                <div class="dot" id="d105"></div>
+                <div class="dot" id="d106"></div>
+                <div class="dot" id="d107"></div>
+                <div class="dot" id="d108"></div>
+                <div class="dot" id="d109"></div>
+                <div class="dot" id="d110"></div>
+                <div class="dot" id="d111"></div>
+                <div class="dot" id="d112"></div>
+                <div class="dot" id="d113"></div>
+                <div class="dot" id="d114"></div>
+                <div class="dot" id="d115"></div>
+                <div class="dot" id="d116"></div>
+                <div class="dot" id="d117"></div>
+                <div class="dot" id="d118"></div>
+                <div class="dot" id="d119"></div>
+                <div class="dot" id="d120"></div>
+                <div class="dot" id="d121"></div>
+                <div class="dot" id="d122"></div>
+                <div class="dot" id="d123"></div>
+                <div class="dot" id="d124"></div>
+                <div class="dot" id="d125"></div>
+                <div class="dot" id="d126"></div>
+                <div class="dot" id="d127"></div>
+                <div class="dot" id="d128"></div>
+                <div class="dot" id="d129"></div>
+                <div class="dot" id="d130"></div>
+                <div class="dot" id="d131"></div>
+                <div class="dot" id="d132"></div>
+                <div class="dot" id="d133"></div>
+                <div class="dot" id="d134"></div>
+                <div class="dot" id="d135"></div>
+                <div class="dot" id="d136"></div>
+                <div class="dot" id="d137"></div>
+                <div class="dot" id="d138"></div>
+                <div class="dot" id="d139"></div>
+                <div class="dot" id="d140"></div>
+                <div class="dot" id="d141"></div>
+                <div class="dot" id="d142"></div>
+                <div class="dot" id="d143"></div>
+                <div class="dot" id="d144"></div>
+                <div class="dot" id="d145"></div>
+                <div class="dot" id="d146"></div>
+                <div class="dot" id="d147"></div>
+                <div class="dot" id="d148"></div>
+                <div class="dot" id="d149"></div>
+                <div class="dot" id="d150"></div>
+              </div>
+              <div id="wave-container" class="wave-container">
+                <div class="dot" id="d1"></div>
+                <div class="dot" id="d2"></div>
+                <div class="dot" id="d3"></div>
+                <div class="dot" id="d4"></div>
+                <div class="dot" id="d5"></div>
+                <div class="dot" id="d6"></div>
+                <div class="dot" id="d7"></div>
+                <div class="dot" id="d8"></div>
+                <div class="dot" id="d9"></div>
+                <div class="dot" id="d10"></div>
+                <div class="dot" id="d11"></div>
+                <div class="dot" id="d12"></div>
+                <div class="dot" id="d13"></div>
+                <div class="dot" id="d14"></div>
+                <div class="dot" id="d15"></div>
+                <div class="dot" id="d16"></div>
+                <div class="dot" id="d17"></div>
+                <div class="dot" id="d18"></div>
+                <div class="dot" id="d19"></div>
+                <div class="dot" id="d20"></div>
+                <div class="dot" id="d21"></div>
+                <div class="dot" id="d22"></div>
+                <div class="dot" id="d23"></div>
+                <div class="dot" id="d24"></div>
+                <div class="dot" id="d25"></div>
+                <div class="dot" id="d26"></div>
+                <div class="dot" id="d27"></div>
+                <div class="dot" id="d28"></div>
+                <div class="dot" id="d29"></div>
+                <div class="dot" id="d30"></div>
+                <div class="dot" id="d31"></div>
+                <div class="dot" id="d32"></div>
+                <div class="dot" id="d33"></div>
+                <div class="dot" id="d34"></div>
+                <div class="dot" id="d35"></div>
+                <div class="dot" id="d36"></div>
+                <div class="dot" id="d37"></div>
+                <div class="dot" id="d38"></div>
+                <div class="dot" id="d39"></div>
+                <div class="dot" id="d40"></div>
+                <div class="dot" id="d41"></div>
+                <div class="dot" id="d42"></div>
+                <div class="dot" id="d43"></div>
+                <div class="dot" id="d44"></div>
+                <div class="dot" id="d45"></div>
+                <div class="dot" id="d46"></div>
+                <div class="dot" id="d47"></div>
+                <div class="dot" id="d48"></div>
+                <div class="dot" id="d49"></div>
+                <div class="dot" id="d50"></div>
+                <div class="dot" id="d51"></div>
+                <div class="dot" id="d52"></div>
+                <div class="dot" id="d53"></div>
+                <div class="dot" id="d54"></div>
+                <div class="dot" id="d55"></div>
+                <div class="dot" id="d56"></div>
+                <div class="dot" id="d57"></div>
+                <div class="dot" id="d58"></div>
+                <div class="dot" id="d59"></div>
+                <div class="dot" id="d60"></div>
+                <div class="dot" id="d61"></div>
+                <div class="dot" id="d62"></div>
+                <div class="dot" id="d63"></div>
+                <div class="dot" id="d64"></div>
+                <div class="dot" id="d65"></div>
+                <div class="dot" id="d66"></div>
+                <div class="dot" id="d67"></div>
+                <div class="dot" id="d68"></div>
+                <div class="dot" id="d69"></div>
+                <div class="dot" id="d70"></div>
+                <div class="dot" id="d71"></div>
+                <div class="dot" id="d72"></div>
+                <div class="dot" id="d73"></div>
+                <div class="dot" id="d74"></div>
+                <div class="dot" id="d75"></div>
+                <div class="dot" id="d76"></div>
+                <div class="dot" id="d77"></div>
+                <div class="dot" id="d78"></div>
+                <div class="dot" id="d79"></div>
+                <div class="dot" id="d80"></div>
+                <div class="dot" id="d81"></div>
+                <div class="dot" id="d82"></div>
+                <div class="dot" id="d83"></div>
+                <div class="dot" id="d84"></div>
+                <div class="dot" id="d85"></div>
+                <div class="dot" id="d86"></div>
+                <div class="dot" id="d87"></div>
+                <div class="dot" id="d88"></div>
+                <div class="dot" id="d89"></div>
+                <div class="dot" id="d90"></div>
+                <div class="dot" id="d91"></div>
+                <div class="dot" id="d92"></div>
+                <div class="dot" id="d93"></div>
+                <div class="dot" id="d94"></div>
+                <div class="dot" id="d95"></div>
+                <div class="dot" id="d96"></div>
+                <div class="dot" id="d97"></div>
+                <div class="dot" id="d98"></div>
+                <div class="dot" id="d99"></div>
+                <div class="dot" id="d100"></div>
+                <div class="dot" id="d101"></div>
+                <div class="dot" id="d102"></div>
+                <div class="dot" id="d103"></div>
+                <div class="dot" id="d104"></div>
+                <div class="dot" id="d105"></div>
+                <div class="dot" id="d106"></div>
+                <div class="dot" id="d107"></div>
+                <div class="dot" id="d108"></div>
+                <div class="dot" id="d109"></div>
+                <div class="dot" id="d110"></div>
+                <div class="dot" id="d111"></div>
+                <div class="dot" id="d112"></div>
+                <div class="dot" id="d113"></div>
+                <div class="dot" id="d114"></div>
+                <div class="dot" id="d115"></div>
+                <div class="dot" id="d116"></div>
+                <div class="dot" id="d117"></div>
+                <div class="dot" id="d118"></div>
+                <div class="dot" id="d119"></div>
+                <div class="dot" id="d120"></div>
+                <div class="dot" id="d121"></div>
+                <div class="dot" id="d122"></div>
+                <div class="dot" id="d123"></div>
+                <div class="dot" id="d124"></div>
+                <div class="dot" id="d125"></div>
+                <div class="dot" id="d126"></div>
+                <div class="dot" id="d127"></div>
+                <div class="dot" id="d128"></div>
+                <div class="dot" id="d129"></div>
+                <div class="dot" id="d130"></div>
+                <div class="dot" id="d131"></div>
+                <div class="dot" id="d132"></div>
+                <div class="dot" id="d133"></div>
+                <div class="dot" id="d134"></div>
+                <div class="dot" id="d135"></div>
+                <div class="dot" id="d136"></div>
+                <div class="dot" id="d137"></div>
+                <div class="dot" id="d138"></div>
+                <div class="dot" id="d139"></div>
+                <div class="dot" id="d140"></div>
+                <div class="dot" id="d141"></div>
+                <div class="dot" id="d142"></div>
+                <div class="dot" id="d143"></div>
+                <div class="dot" id="d144"></div>
+                <div class="dot" id="d145"></div>
+                <div class="dot" id="d146"></div>
+                <div class="dot" id="d147"></div>
+                <div class="dot" id="d148"></div>
+                <div class="dot" id="d149"></div>
+                <div class="dot" id="d150"></div>
+              </div>
+            </div>
+            <div class="airplane_path"></div>
+          </div>
+        </div>
+        <div
+          class="sec3"
+          data-13000="transform: translate(0%, 100%);"
+          data-13500="transform: translate(0%, 0%);"
+          data-14500="transform: translate(0%, 0%);"
+          data-17500="transform: translate(-71.99%, 0%);"
+        >
+          <div class="sec3_1 container">
+            <div class="text_wrap">
+              <strong
+                data-13500="transform: translateY(150%) rotate(45deg);"
+                data-13700="transform: translateY(0%) rotate(0deg);"
+              >
+                L
+              </strong>
+              <strong
+                data-13700="transform: translateY(150%) rotate(45deg);"
+                data-13900="transform: translateY(0%) rotate(0deg);"
+                >I</strong
+              >
+              <strong
+                data-13900="transform: translateY(150%) rotate(45deg);"
+                data-14100="transform: translateY(0%) rotate(0deg);"
+                >F</strong
+              >
+              <strong
+                data-14100="transform: translateY(150%) rotate(45deg);"
+                data-14300="transform: translateY(0%) rotate(0deg);"
+                >E</strong
+              >
+              <span
+                data-14300="transform: translateY(150%) rotate(45deg);"
+                data-14500="transform: translateY(0%) rotate(0deg);"
+                >I</span
+              >
+              <span
+                data-14500="transform: translateY(150%) rotate(45deg);"
+                data-14700="transform: translateY(0%) rotate(0deg);"
+                >S</span
+              >
+              <span
+                data-14700="transform: translateY(150%) rotate(45deg);"
+                data-14900="transform: translateY(0%) rotate(0deg);"
+                >A</span
+              >
+              <strong
+                data-14900="transform: translateY(150%) rotate(45deg);"
+                data-15100="transform: translateY(0%) rotate(0deg);"
+                >J</strong
+              >
+              <strong
+                data-15100="transform: translateY(150%) rotate(45deg);"
+                data-15300="transform: translateY(0%) rotate(0deg);"
+                >O</strong
+              >
+              <strong
+                data-15300="transform: translateY(150%) rotate(45deg);"
+                data-15500="transform: translateY(0%) rotate(0deg);"
+                >U</strong
+              >
+              <strong
+                data-15500="transform: translateY(150%) rotate(45deg);"
+                data-15700="transform: translateY(0%) rotate(0deg);"
+                >R</strong
+              >
+              <strong
+                data-15700="transform: translateY(150%) rotate(45deg);"
+                data-15900="transform: translateY(0%) rotate(0deg);"
+                >N</strong
+              >
+              <strong
+                data-15900="transform: translateY(150%) rotate(45deg);"
+                data-16100="transform: translateY(0%) rotate(0deg);"
+                >E</strong
+              >
+              <strong
+                data-16100="transform: translateY(150%) rotate(45deg);"
+                data-16300="transform: translateY(0%) rotate(0deg);"
+                >Y</strong
+              >
+            </div>
+          </div>
+          <!-- //sec3_1 container -->
+
+          <div class="sec3_2">
+            <div class="container">
+              <div class="sec3_2_cont">
+                <div class="sec3_2_header_contain">
+                  <div class="sec3_2_header_contain_wrap">
+                    <div class="sec3_2_title_wrap">
+                      <div
+                        class="sec3_2_title"
+                        data-17500="transform: translateY(200%);"
+                        data-18000="transform: translateY(0%);"
+                      >
+                        SKILLS
+                      </div>
+                      <div
+                        class="thin_arrow_icon"
+                        data-17500="transform: translateY(200%);"
+                        data-18000="transform: translateY(0%);"
+                      ></div>
+                    </div>
+                    <div class="sec3_2_desc">
+                      <p
+                        data-18000="transform: translateY(-200%);"
+                        data-18500="transform: translateY(0%);"
+                      >
+                        UXUI 인터렉션 디자인을 전공으로 4년 동안 공부하였고, 그
+                        기초를 바탕으로 프론트엔드 개발자로서 다양한 기술들을
+                        배우고 익히며 더 발전해 나가겠습니다!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="v-line"></div>
+            </div>
+          </div>
+          <!-- //sec3_2 container -->
+        </div>
+      </section>
+
+      <!-- section4 sub -->
+      <!--   skills sub -->
+      <section id="section4" class="section4 sub">
+        <div class="sec4">
+          <div
+            class="sub_contain_wrap"
+            data-18000="transform: translatey(150%);"
+            data-22000="transform: translatey(-65%);"
+          >
+            <div class="sub_contain">
+              <h3 class="sub_title">
+                <strong>HTML & CSS</strong>
+              </h3>
+              <div class="sub_desc">
+                <span>
+                  웹을 구현하는데 있어 가장 중요하고 기초적인 HTML과 CSS를 공부하고 중요한 부분은 notion과 T-story에 정리해나가고 있습니다. <br>html ꞏ css ꞏ scss ꞏ PostCSS
+                </span>
+                <span>
+                  <a
+                    href="https://cheese-donut.tistory.com/category/front-end%20%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0/Html%20%2B%20CSS"
+                    target="_blank"
+                  >
+                    T-story 바로가기
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- //sub_contain1 -->
+
+            <div class="h-line"></div>
+
+            <div class="sub_contain">
+              <h3 class="sub_title">
+                <strong>JavaScript & jQuery</strong>
+              </h3>
+              <div class="sub_desc">
+                <span>
+                  알고리즘을 공부하고 자바스크립을 정리한 노트와 자바스크립 & 제이쿼리를 이용한
+                  Parallax Effect와 Mouse Effect를 정리해 놓았습니다.
+                </span>
+                <span>
+                  <a
+                    href="https://suna99.github.io/javascript-note/"
+                    target="_blank"
+                  >
+                    자바스크립 노트 바로가기
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- //sub_contain2 -->
+
+            <div class="h-line"></div>
+
+            <div class="sub_contain">
+              <h3 class="sub_title">
+                <strong>React</strong>
+              </h3>
+              <div class="sub_desc">
+                <span>
+                  REST API를 이용하여 react에 연동하고, component, jsx, React Hook(REact 16.8) 등을 공부하였습니다
+                </span>
+                <span>
+                  <a
+                    href="https://github.com/suna99/habit-tracker"
+                    target="_blank"
+                  >
+                    깃헙 보러가기
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- //sub_contain2 -->
+
+            <div class="h-line"></div>
+
+            <div class="sub_contain">
+              <h3 class="sub_title">
+                <strong>Android</strong>
+              </h3>
+              <div class="sub_desc">
+                <span>
+                  android studio를 이용하여 다양한 어플을 만들었습니다. <br />
+                  - realm을 통해 db에 저장하기 / 불러오기 / 삭제하기 <br />
+                  - 좋아하는 상품 저장 후 불러오기 기능 <br />
+                  - firebase를 이용한 백업 기능
+                </span>
+                <span>
+                  <a
+                    href="https://play.google.com/store/apps/developer?id=emotionalLabs"
+                    target="_blank"
+                  >
+                    구글 플레이스토어 바로가기
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- //sub_contain3 -->
+
+            <div class="h-line"></div>
+
+            <div class="sub_contain">
+              <h3 class="sub_title">
+                <strong>Design</strong>
+              </h3>
+              <div class="sub_desc">
+                <span> Photoshop / Illustration / XD / Figma / Effect </span>
+              </div>
+            </div>
+            <!-- //sub_contain4 -->
+          </div>
+        </div>
+      </section>
+      <!-- //section4 sub -->
+
+      <!-- section5 -->
+      <!--  1. earth work
+          2. javascript -->
+      <section id="section5" class="section5">
+        <!-- sec5_1 -->
+        <div class="sec5_1">
+          <div class="sec5_1_wrap">
+            <div
+              id="javascript"
+              class="sec5_1_cont section"
+              data-22500="transform: translatey(150%); "
+              data-24500="transform: translatey(0%);"
+            >
+              <div class="airplane_wrap"></div>
+              <div class="earth_wrap">
+                <div class="earth"></div>
+              </div>
+              <div class="move_text_wrap">
+                <div class="move_text_middle">
+                  <div class="marquee_wrap">
+                    <div class="marquee">
+                      <div class="marquee_cont">
+                        <span
+                          >&nbsp;&nbsp;&nbsp;LIFE&nbsp;IS&nbsp; A &nbsp;JOURNEY!
+                          &nbsp;&nbsp;&nbsp; NO PAIN,&nbsp; NO GAIN
+                          &nbsp;&nbsp;&nbsp; LIFE&nbsp;IS&nbsp;A&nbsp;JOURNEY!
+                          &nbsp;&nbsp;&nbsp; NO PAIN,&nbsp;NO GAIN</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="marquee_wrap2">
+                    <div class="marquee">
+                      <div class="marquee_cont">
+                        <span
+                          >&nbsp;&nbsp;&nbsp;JUST &nbsp;DO&nbsp; IT.&nbsp;&nbsp;
+                          &nbsp; HARD&nbsp; WORK&nbsp; ALWAYS &nbsp;PAYS
+                          &nbsp;OFF&nbsp;&nbsp;&nbsp;JUST &nbsp;DO&nbsp;
+                          IT.&nbsp;&nbsp; &nbsp; HARD&nbsp; WORK&nbsp; ALWAYS
+                          &nbsp;PAYS &nbsp;OFF
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="move_text_bottom">
+                  <div class="marquee_wrap">
+                    <div class="marquee">
+                      <div class="marquee_cont">
+                        <span>
+                          <strong>FRONTEND DEVELOPER -</strong>
+                          PORTFOLIO -
+                          <strong>CHOISUNA -</strong>
+                          FRONTEND DEVELOPER -
+                          <strong>PORTFOLIO -</strong>
+                          CHOISUNA -
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //sec5_1 -->
+
+        <!-- sec5_2 -->
+        <div class="sec5_2 section">
+          <div class="sec5_2_wrap">
+            <div
+              class="sec5_2_cont_title"
+              data-24500="transform: translatey(-250%);"
+              data-25500="transform: translatey(0%);"
+            >
+              <strong>JAVASCRIPT</strong>
+              <div
+                class="progress_bar"
+                data-22500="transform: translatex(-250%);"
+                data-29500="transform: translatex(0);"
+              ></div>
+            </div>
+            <div
+              class="sec5_2_cont_wrap"
+              data-22500="transform: translatex(250%);"
+              data-26500="transform: translatex(0%);"
+              data-27000="transform: translatex(0%);"
+              data-28000="transform: translatex(-33.3333%);"
+              data-28500="transform: translatex(-33.3333%);"
+              data-29500="transform: translatex(-66.6666%);"
+            >
+              <div class="cont_1 sec5_2_cont">
+                <div class="sec5_2_article">
+                  <div class="sec5_2_text_wrap">
+                    <h3 class="right_cont_title">
+                      <strong>Music Player</strong>
+                    </h3>
+                    <div class="right_cont_desc">
+                      <div class="desc_info">
+                        <div class="first_row row">
+                          <span class="desc_info_title">제작 기간</span>
+                          <span class="desc_info_desc">2022.09.19</span>
+                        </div>
+                        <div class="second_row row">
+                          <span class="desc_info_title">기여도</span>
+                          <span class="desc_info_desc">100%</span>
+                        </div>
+                      </div>
+                      <div class="desc_box">
+                        <span>
+                          레코드판 턴테이블 컨셉인 Music Player입니다.
+                        </span>
+                        <ul>
+                          <li>play / puase / next & prev 기능 구현</li>
+                          <li>repeat / repeat_one / shuffle 기능 구현</li>
+                          <li>music list.js를 통해 데이터 불러오기</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="right_cont_btn">
+                      <div class="view_btn">
+                        <a
+                          href="https://music-player-list.netlify.app"
+                          target="_blank"
+                          >VIEW</a
+                        >
+                      </div>
+                      <div class="code_btn"><a href="#">CODE</a></div>
+                    </div>
+                  </div>
+                  <div class="mac_img">
+                    <img src="./assets/svg/mac01.svg" alt="mac_img" />
+                  </div>
+                </div>
+                <div class="mac_img_bg"></div>
+              </div>
+              <div class="cont_2 sec5_2_cont">
+                <div class="sec5_2_article">
+                  <div class="sec5_2_text_wrap">
+                    <h3 class="right_cont_title">
+                      <strong>Typing Game</strong>
+                    </h3>
+                    <div class="right_cont_desc">
+                      <div class="desc_info">
+                        <div class="first_row">
+                          <span class="desc_info_title">제작 기간</span>
+                          <span class="desc_info_desc">2022.09.20</span>
+                        </div>
+                        <div class="second_row">
+                          <span class="desc_info_title">기여도</span>
+                          <span class="desc_info_desc">100%</span>
+                        </div>
+                      </div>
+                      <div class="desc_box">
+                        <span> Typing Speed Test Game입니다. </span>
+                        <ul>
+                          <li>Time / Mistakes / WPM / CPM 기능 구현</li>
+                          <li>랜덤으로 Lorem-Ipsum 생성</li>
+                          <li>paragraphs.js를 통해 데이터 불러오기</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="right_cont_btn">
+                      <div class="view_btn">
+                        <a
+                          href="https://typing-speed-test-game.netlify.app"
+                          target="_blank"
+                          >VIEW</a
+                        >
+                      </div>
+                      <div class="code_btn"><a href="#">CODE</a></div>
+                    </div>
+                  </div>
+                  <div class="mac_img">
+                    <img src="./assets/svg/mac02.svg" alt="mac_img" />
+                  </div>
+                </div>
+                <div class="mac_img_bg"></div>
+              </div>
+              <div class="cont_3 sec5_2_cont">
+                <div class="sec5_2_article">
+                  <div class="sec5_2_text_wrap">
+                    <h3 class="right_cont_title">
+                      <strong>Card Game</strong>
+                    </h3>
+                    <div class="right_cont_desc">
+                      <div class="desc_info">
+                        <div class="first_row">
+                          <span class="desc_info_title">제작 기간</span>
+                          <spans class="desc_info_desc">2022.09.21</spans>
+                        </div>
+                        <div class="second_row">
+                          <span class="desc_info_title">기여도</span>
+                          <span class="desc_info_desc">100%</span>
+                        </div>
+                      </div>
+                      <div class="desc_box">
+                        <span> 간단한 Memory Card Game입니다. </span>
+                        <ul>
+                          <li>랜덤으로 이미지 배치</li>
+                          <li>두개의 클릭된 카드 비교 기능 구현</li>
+                          <li>게임이 끝난 후 resetGame 기능 구현</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="right_cont_btn">
+                      <div class="view_btn">
+                        <a
+                          href="https://mermory-card-game.netlify.app"
+                          target="_blank"
+                          >VIEW</a
+                        >
+                      </div>
+                      <div class="code_btn"><a href="#">CODE</a></div>
+                    </div>
+                  </div>
+                  <div class="mac_img">
+                    <img src="./assets/svg/mac03.svg" alt="mac_img" /
+                  </div>
+                </div>
+                <div class="mac_img_bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section5 -->
+
+      <!-- section6 -->
+      <!--   site work -->
+      <section id="section6" class="section6">
+        <!-- sec6_1 -->
+        <div class="sec6_1">
+          <div
+            id="siteWorks"
+            class="sec6_1_wrap section"
+            data-30000="transform: translate(0%, 100%);"
+            data-31000="transform: translate(0%, 0%);"
+          >
+            <div class="text_wrap">
+              <div
+                class="line_1 text_line"
+                data-30000="transform: translate(-120%, 0%);"
+                data-34000="transform: translate(0%, 0%);"
+              >
+                <strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span>
+              </div>
+
+              <div
+                class="line_2 text_line"
+                data-30000="transform: translate(0%, 0%);"
+                data-34000="transform: translate(-70%, 0%);"
+              >
+                <strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span>
+              </div>
+
+              <div
+                class="line_3 text_line"
+                data-30000="transform: translate(-120%, 0%);"
+                data-34000="transform: translate(0%, 0%);"
+              >
+                <strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span
+                ><strong>SITE</strong><span>WORKS</span><strong>SITE</strong
+                ><span>WORKS</span><strong>SITE</strong><span>WORKS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //sec6_1 -->
+
+        <!-- sec6_2 -->
+        <div class="sec6_2">
+          <div class="sec6_2_wrap">
+            <div
+              class="cont_1 sec6_2_cont section"
+              data-31500="transform: translatex(250%);"
+              data-33000="transform: translatex(0%);"
+            >
+              <div class="sec6_2_cont_wrap">
+                <div class="sec6_2_cont_title">
+                  <strong>WED STANDARD</strong>
+                </div>
+                <div class="sec6_2_text_wrap">
+                  <div class="right_cont_title">
+                    <strong>WED STANDARD</strong>
+                  </div>
+                  <div class="right_cont_desc">
+                    <div class="desc_info">
+                      <div class="first_row row">
+                        <span class="desc_info_title">제작 기간</span>
+                        <span class="desc_info_desc"
+                          >2022.07.02~2022.07.15</span
+                        >
+                      </div>
+                      <div class="second_row row">
+                        <span class="desc_info_title">기여도</span>
+                        <span class="desc_info_desc">100%</span>
+                      </div>
+                    </div>
+                    <div class="desc_box">
+                      <span> 웹 표준 사이트를 제작하였습니다. </span>
+                      <ul>
+                        <li>
+                          웹표준 문법을 준수하여 IR(Image Replacement) 기법 사용
+                        </li>
+                        <li>
+                          jQuery plugin인 'slick'과 'lightgallery'를 사용하여
+                          슬라이드와 이미지 갤러리 팝업 구현
+                        </li>
+                        <li>해당도에 따른 이미지 구현</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="right_cont_btn">
+                    <div class="view_btn">
+                      <a
+                        href="https://suna99.github.io/web-standard.github.io/"
+                        target="_blank"
+                        >VIEW</a
+                      >
+                    </div>
+                    <div class="code_btn"><a href="#">CODE</a></div>
+                  </div>
+                </div>
+                <div class="computer_img_wrap">
+                  <div class="computer_img img1">
+                    <img
+                      src="./assets/svg/computer01_img.svg"
+                      alt="computer_img"
+                    />
+                  </div>
+                  <div class="web_img web1"></div>
+                </div>
+              </div>
+            </div>
+            <!-- //cont_1 -->
+            <div
+              class="cont_2 sec6_2_cont section"
+              data-33500="transform: translatex(250%);"
+              data-34500="transform: translatex(5%);"
+            >
+              <div class="sec6_2_cont_wrap">
+                <div class="sec6_2_cont_title">
+                  <strong>MEGABOX</strong>
+                </div>
+                <div class="sec6_2_text_wrap">
+                  <div class="right_cont_title">
+                    <strong>MEGABOX</strong>
+                  </div>
+                  <div class="right_cont_desc">
+                    <div class="desc_info">
+                      <div class="first_row row">
+                        <span class="desc_info_title">제작 기간</span>
+                        <span class="desc_info_desc"
+                          >2022.07.16~2022.07.25</span
+                        >
+                      </div>
+                      <div class="second_row row">
+                        <span class="desc_info_title">기여도</span>
+                        <span class="desc_info_desc">100%</span>
+                      </div>
+                    </div>
+                    <div class="desc_box">
+                      <span> MEGABOX의 메인 페이지를 제작하였습니다. </span>
+                      <ul>
+                        <li>
+                          jQuery plugin인 'slick'과 'lightgallery'를 사용하여
+                          슬라이드와 이미지 갤러리 팝업 구현
+                        </li>
+                        <li>영화차트 탭 메뉴 및 공지사항 탭 기능 구현</li>
+                        <li>Youtuve API를 이용하여 iFrame 삽입</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="right_cont_btn">
+                    <div class="view_btn">
+                      <a
+                        href="https://suna99.github.io/mega-box.github.io/"
+                        target="_blank"
+                        >VIEW</a
+                      >
+                    </div>
+                    <div class="code_btn"><a href="#">CODE</a></div>
+                  </div>
+                </div>
+                <div class="computer_img_wrap">
+                  <div class="computer_img img2">
+                    <img
+                      src="./assets/svg/computer02_img.svg"
+                      alt="computer_img"
+                    />
+                  </div>
+                  <div class="web_img web2"></div>
+                </div>
+              </div>
+            </div>
+            <!-- //cont_2 -->
+            <div
+              class="cont_3 sec6_2_cont section"
+              data-35000="transform: translatex(250%);"
+              data-36000="transform: translatex(10%);"
+            >
+              <div class="sec6_2_cont_wrap">
+                <div class="sec6_2_cont_title">
+                  <strong>WED STANDARD</strong>
+                </div>
+                <div class="sec6_2_text_wrap">
+                  <div class="right_cont_title">
+                    <strong>WED STANDARD</strong>
+                  </div>
+                  <div class="right_cont_desc">
+                    <div class="desc_info">
+                      <div class="first_row row">
+                        <span class="desc_info_title">제작 기간</span>
+                        <span class="desc_info_desc"
+                          >2022.09.07~2022.09.08</span
+                        >
+                      </div>
+                      <div class="second_row row">
+                        <span class="desc_info_title">기여도</span>
+                        <span class="desc_info_desc">100%</span>
+                      </div>
+                    </div>
+                    <div class="desc_box">
+                      <span> 웹 표준 사이트를 제작하였습니다. </span>
+                      <ul>
+                        <li>
+                          웹표준 문법을 준수하여 IR(Image Replacement) 기법 사용
+                        </li>
+                        <li>
+                          jQuery plugin인 'slick'과 'lightgallery'를 사용하여
+                          슬라이드와 이미지 갤러리 팝업 구현
+                        </li>
+                        <li>해당도에 따른 이미지 해상도 다르게 구현</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="right_cont_btn">
+                    <div class="view_btn"><a href="#">VIEW</a></div>
+                    <div class="code_btn"><a href="#">CODE</a></div>
+                  </div>
+                </div>
+                <div class="computer_img_wrap">
+                  <div class="computer_img img3">
+                    <img
+                      src="./assets/svg/computer02_img.svg"
+                      alt="computer_img"
+                    />
+                  </div>
+                  <div class="web_img web3"></div>
+                </div>
+              </div>
+            </div>
+            <!-- //cont_3 -->
+          </div>
+        </div>
+        <!-- //sec6_2 -->
+      </section>
+      <!-- //section6 -->
+
+      <!-- section7 -->
+      <!--   front-end -->
+      <section id="section7" class="section7">
+        <div
+          id="frontEnd"
+          class="sec7"
+          data-36500="transform: translatey(100%);"
+          data-37500="transform: translatey(0%); "
+        >
+          <div class="sec7_container">
+            <div class="sec7_title">
+              <div>FRONT-END</div>
+            </div>
+            <div
+              class="sec7_wrap"
+              data-38000="transform: translatey(0%);"
+              data-39000="transform: translatey(-45%);>"
+            >
+              <div class="cont_1 sec7_cont">
+                <img
+                  class="cont_1_img"
+                  src="./assets/svg/pad_img_left.png"
+                  alt=""
+                />
+                <div class="sec7_cont_wrap">
+                  <div class="sec7_cont_txt_wrap">
+                    <div class="sec7_cont_title">
+                      <h3>PHP</h3>
+                    </div>
+                    <div class="sec7_cont_desc">
+                      <span>
+                        php를 이용하여 만든 반려식물 웹 페이지입니다. <br />
+                        <em>이메일 : admin@naver.com / 비밀번호 : 1111 </em>
+                        <ul>
+                          <li>
+                            <span>- phpMyAdmin을 이용하여 DB를 관리함</span>
+                          </li>
+                          <li>
+                            <span
+                              >- 회원가입 / 댓글 / 블로그 / 게시판 기능
+                              구현</span
+                            >
+                          </li>
+                          <li>
+                            <span
+                              >- 데이터베이스, 테이블, 필드, 열의 작성, 수정,
+                              삭제 기능 구현</span
+                            >
+                          </li>
+                        </ul>
+                      </span>
+                    </div>
+                    <div class="right_cont_btn white">
+                      <div class="view_btn">
+                        <a
+                          href="http://suna.dothome.co.kr/php2/main/main.php"
+                          target="_blank"
+                          >VIEW</a
+                        >
+                      </div>
+                      <div class="code_btn"><a href="#">CODE</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cont_2 sec7_cont">
+                <img
+                  class="cont_2_img"
+                  src="./assets/svg/pad_img_right.svg"
+                  alt=""
+                />
+                <div class="sec7_cont_wrap">
+                  <div class="sec7_cont_txt_wrap">
+                    <div class="sec7_cont_title">
+                      <h3>PHP</h3>
+                    </div>
+                    <div class="sec7_cont_desc">
+                      <span>
+                        php를 이용하여 만든 반려식물 웹 페이지입니다. <br />
+                        <em>이메일 : admin@naver.com / 비밀번호 : 1111 </em>
+                        <ul>
+                          <li>
+                            <span>- phpMyAdmin을 이용하여 DB를 관리함</span>
+                          </li>
+                          <li>
+                            <span
+                              >- 회원가입 / 댓글 / 블로그 / 게시판 기능
+                              구현</span
+                            >
+                          </li>
+                          <li>
+                            <span
+                              >- 데이터베이스, 테이블, 필드, 열의 작성, 수정,
+                              삭제 기능 구현</span
+                            >
+                          </li>
+                        </ul>
+                      </span>
+                    </div>
+                    <div class="right_cont_btn white">
+                      <div class="view_btn"><a href="#">VIEW</a></div>
+                      <div class="code_btn"><a href="#">CODE</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section7 -->
+    </main>
+    <!-- //main -->
+
+    <!-- //footer -->
+    <!--   thanks -->
+    <footer
+      id="footer"
+      class="section"
+      data-39000="transform: translatey(200%);"
+      data-40000="transform: translatey(0%);>"
+    >
+      <div class="footer_cont">
+        <div class="footer_wrap">
+          <div class="top_wrap">
+            <div class="circle_wrap">
+              <div class="circle_txt">
+                <img src="/assets/svg/circle_txt.svg" alt="" />
+              </div>
+              <div class="airplane_img">
+                <img src="/assets/svg/sec7_airplane_img.svg" alt="" />
+              </div>
+            </div>
+            <div class="line_txt">
+              <div class="marquee_wrap">
+                <div class="marquee">
+                  <div class="marquee_cont">
+                    <span>
+                      <strong>&nbsp;FRONTEND&nbsp;DEVELOPER&nbsp;-</strong>
+                      &nbsp;PORTFOLIO&nbsp;-&nbsp;
+                      <strong>CHOISUNA&nbsp;-</strong>
+                      &nbsp;FRONTEND&nbsp;DEVELOPER&nbsp;&nbsp;
+                      <strong>PORTFOLIO&nbsp;-&nbsp;</strong>
+                      CHOISUNA&nbsp;-
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //top_wrap -->
+          <div class="middle_wrap">
+            <div
+              class="middle_txt"
+              data-40000="transform: translatey(200%);"
+              data-41000="transform: translatey(0%);"
+            >
+              <strong> Thank You! </strong>
+            </div>
+          </div>
+          <!-- //middle_wrap -->
+
+          <div class="bottom_wrap">
+            <div
+              class="bottom_info"
+              data-39500="transform: translatey(200%);"
+              data-40500="transform: translatey(0%);"
+            >
+              <div class="info_name">
+                <span> CHOI SUN A </span>
+              </div>
+              <div class="info_email_wrap">
+                <div class="contact">
+                  <address class="info_email_contact">
+                    <a href="mailto:choisuna0615@gmail.com"> Contact Me! </a>
+                  </address>
+                </div>
+                <address class="info_email">
+                  <a href="mailto:choisuna0615@gmail.com">
+                    choisuna0615@gmail.com
+                  </a>
+                </address>
+              </div>
+            </div>
+          </div>
+          <!-- //bottom_wrap -->
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
