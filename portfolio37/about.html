@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="apple-touch-icon" type="image/png" href="https://img.icons8.com/doodle/344/hello--v1.png" />
+  <meta name="apple-mobile-web-app-title" content="CodePen" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/doodle/344/hello--v1.png" />
+
+  <link rel="mask-icon" type="image/x-icon" href="https://img.icons8.com/doodle/344/hello--v1.png" color="#111" />
+
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    window.console = window.console || function (t) {};
+  </script>
+
+</head>
+
+<body translate="no">
+  <a class="logo logo--top js-trigger" href="index.html">PORTFOLIO</a>
+
+  <div class="resize">
+    <div class="resize__inner">
+      <p>Please view in <span>full page</span> mode</p>
+    </div>
+  </div>
+
+  <div class="scroll" data-scroll>
+    <nav class="filter">
+      <ul class="filter__list">
+        <li class="filter__item">
+          <a href="about.html" class="filter__link is-active js-trigger" draggable="false">
+            <div class="filter__link-mask" area-hidden="">
+              <span>About</span>
+            </div>
+            About
+          </a>
+        </li>
+        <li class="filter__item">
+          <a href="site.html" class="filter__link js-trigger" draggable="false">
+            <div class="filter__link-mask" area-hidden="">
+              <span>Site</span>
+            </div>
+            Site
+          </a>
+        </li>
+        <li class="filter__item">
+          <a href="script.html" class="filter__link js-trigger" draggable="false">
+            <div class="filter__link-mask" area-hidden="">
+              <span>Script</span>
+            </div>
+            Script
+          </a>
+        </li>
+        <li class="filter__item">
+          <a href="study.html" class="filter__link js-trigger" draggable="false">
+            <div class="filter__link-mask" area-hidden="">
+              <span>Study</span>
+            </div>
+            Study
+          </a>
+        </li>
+        <li class="filter__item">
+          <a href="contact.html" class="filter__link js-trigger" draggable="false">
+            <div class="filter__link-mask" area-hidden="">
+              <span>Contact</span>
+            </div>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="scroll-content" data-scroll-content>
+      <article class="slide slide--1 js-slide">
+        <div class="slide__inner" style="padding: 0">
+          <div class="slide__img js-transition-img">
+            <figure class="js-transition-img__inner">
+              <div class="face"></div>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="about js-slide"></article>
+    </div>
+
+    <div class="scroll-content scroll-content--last" data-scroll-content>
+      <article class="slide slide--1 slide--4 js-slide">
+        <div class="slide__inner" style="padding: 0">
+          <div class="slide__sub-title"><span>Introductions</span></div>
+          <h2 class="slide__title">
+            <div class="js-transition-title"></div>
+          </h2>
+          <div class="slide__img slide__img--proxy">
+            <span class="js-transition-title"></span>
+          </div>
+          <a target="" href="javascript:void(0);" class="slide__project" draggable="false"></a>
+        </div>
+      </article>
+
+      <article class="about js-slide">
+        <div>
+          <div class="about_item js-transition-title">
+            <div class="title">CREATIVE</div>
+            <p class="desc">
+              저는 항상 새로운 것을 창조하고 싶었습니다.
+              독특한 경험을 하고, 웹 개발 공부에 참여하면서
+              제게 많은 것을 변화시켰습니다.
+              그리고 그 이후로, 저는 항상 품질을 최우선으로 하면서,
+              제 일을 새로운 지평으로 밀고 나가려고 노력합니다.
+            </p>
+          </div>
+          <div class="about_item js-transition-title">
+            <div class="title">PERFORMANCE</div>
+            <p class="desc">
+              저는 여러분의 필요와 욕구에 귀를 기울이고 여러분의 프로젝트를 최대한 활용하기 위해 저의 관점을 제시함으로써 여러분의 새로운 웹사이트를 개발하는데 힘이 되겠습니다.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="about_item js-transition-title">
+            <div class="title">PASSION</div>
+            <p class="desc">
+              사용자의 즐거운 경험을 통해 프로젝트의 애니메이션과 상호작용을 경험하고, 부드럽고 놀라운 탐색을 위해 상상하고 디자인하는 시간을 보냅니다.
+            </p>
+          </div>
+          <div class="about_item js-transition-title">
+            <div class="title">DREAM</div>
+            <p class="desc">
+              이 모든 것은 시작에 불과하며,
+              다음 프로젝트에서 여러분과 함께 일함으로써
+              더 나아가고 싶습니다.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+
+  <div class="mask js-mask">
+    <div class="mask__slice js-mask__slice"></div>
+    <div class="mask__slice js-mask__slice"></div>
+    <div class="mask__slice js-mask__slice"></div>
+    <div class="mask__slice js-mask__slice"></div>
+    <div class="mask__slice js-mask__slice"></div>
+    <div class="mask__inner">
+      <figure class="logo logo--mask">
+        <div class="js-logo">developer</div>
+      </figure>
+      <div class="mask-line js-mask-line">
+        <div class="mask-line__inner js-mask-line"></div>
+      </div>
+    </div>
+  </div>
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js">
+  </script>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script id="rendered-js" src="assets/js/link.js"></script>
+</body>
+
+</html>

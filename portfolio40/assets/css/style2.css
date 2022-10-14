@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* layout */
+#contents {}
+#section1 {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(259.48deg, #EBCDC7 -18.12%, #C0D4DD 105.56%);
+}
+#section2 {
+    height: 4000px;
+    background: rgba(211,141,141,1);
+}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 20px; top: 20px;
+    font-family: 'Cafe24SsurroundAir';
+    z-index: 10000;
+}
+
+/* fixed */
+.fixed {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+#header h1 {
+    font-family: 'Abel';
+    font-weight: normal;
+    font-size: 18px;
+    color: rgb(61, 61, 61);
+    display: none;
+}
+
+
+
+/* section1 */
+.ship {
+    width: 300px;
+    top: 80%;
+    animation: up 2s infinite alternate;
+}
+@keyframes up {
+    0% {top: 80%;}
+    100% {top: 85%;}
+}
+.name {
+    position: fixed;
+    left: 5vw; bottom: 5vw;
+    font-family: 'Cafe24SsurroundAir';
+    font-size: 40px;
+    color: #3D3D3E;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.name em {
+    font-style: normal;
+    display: block;
+}
+.name strong {
+    font-size: 20px;
+    display: block;
+    margin-top: 4px;
+}
+.sun {
+    position: absolute;
+    border-radius: 50%;
+    width: 30vw; height: 30vw;
+    background: linear-gradient(138.24deg, #FCAC95 15.69%, #F37666 86.32%);
+    backdrop-filter: blur(30px);
+}
+.waveWrap {
+    position: relative;
+    height: 100vh;
+}
+.waveWrap::after {
+    content: '';
+    width: 100%;
+    height: 30vh;
+    background: rgba(211,141,141,1);
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+}
+.waves {
+    position:absolute;
+    left: 0; bottom: 30vh;
+    width: 100%;
+    height: 35vh;
+    margin-bottom:-7px; 
+    min-height: 100px;
+    max-height: 150px;
+}
+.waves .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.waves .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 4s;
+}
+.waves .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 7s;
+}
+/* .waves .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.waves .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+} */
+@keyframes move-forever {
+    0% {transform: translate3d(-90px,0,0);}
+    100% {transform: translate3d(85px,0,0);}
+}
+@media (max-width: 768px) {
+  .waves {height:40px; min-height:40px;}
+}
+
+
+/* section2 */
+.intImg {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 30vw;
+    height: 30vw;
+    display: none;
+}
+.intImg svg {
+    width: 100%; height: 100%;
+}
+.cls-2 {
+    clip-path: url(#clip-path);
+}

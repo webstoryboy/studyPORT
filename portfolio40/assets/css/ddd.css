@@ -1,0 +1,627 @@
+* {
+    user-select: none;
+    -ms-user-select: none;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #fff;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.paraScroll {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 20px;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* //setting */
+
+#contents {
+    background: linear-gradient(rgb(214, 141, 141), rgb(238, 194, 179), rgb(249, 223, 215));
+}
+
+#main {
+    height: 100vh;
+    overflow: hidden;
+    background: #9f979f
+}
+
+.container {
+    max-width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#waves {
+    opacity: .99;
+    z-index: 1;
+}
+
+.main_title {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    z-index: 10;
+}
+
+.title {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    font-size: 45px;
+    color: #3d3d3e;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-family: 'ML';
+    font-size: 20px;
+    color: #3d3d3e;
+    text-transform: uppercase;
+}
+
+.land img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 0;
+}
+
+.sun {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    border-radius: 50%;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(252, 172, 149), rgba(243, 118, 102));
+}
+
+.ship img {
+    width: 200px;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    animation: ship 0.8s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99)
+}
+
+@keyframes ship {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 15px);
+    }
+}
+
+/* //main */
+
+#section01 {
+    position: relative;
+    width: 100%;
+    height: 1500px;
+}
+
+.bubble {
+    background: rgb(255, 255, 255);
+    opacity: .2;
+    position: absolute;
+    border-radius: 100%
+}
+
+.me img {
+    width: 10vw;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    z-index: 8;
+    display: inline-block;
+}
+
+.meLeft img {
+    width: 10vw;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 8;
+    display: inline-block;
+}
+
+.introduce {
+    width: 100%;
+    height: 100%;
+    padding-top: 350px;
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    display: block;
+}
+
+.intImg {
+    z-index: 1000;
+    height: 30vw;
+}
+
+.intImg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cls-2 {
+    clip-path: url(#clip-path);
+}
+
+.cls-2 image {
+    object-fit: cover;
+}
+
+#introduce p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+}
+
+/* //section01 */
+
+
+
+#section02 {
+    width: 100%;
+    height: 5000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.s2 {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+}
+
+.floor img {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.stoneLeft img {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    transform: translate(0, 0);
+    z-index: 2;
+    width: 100%;
+}
+
+.sealWrap {}
+
+.seal img {
+    position: absolute;
+    bottom: 26%;
+    left: 16%;
+    z-index: 4;
+    width: 13vw;
+}
+
+/* .sealTail img {
+  position: absolute;
+  bottom: 10%;
+  left: 9%;
+  z-index: 4;
+  width: 13vw;
+  animation: sealTail 2s linear infinite;
+}
+@keyframes sealTail {
+  from, to {
+    transform: rotate(10deg);
+  }
+  50%, 60% {
+    transform: rotate(30deg) translateX(10px) translateY(2px);
+  }
+} */
+
+.pink_leaf {
+    position: absolute;
+    left: -0.2%;
+    bottom: 0%;
+    z-index: 5;
+    width: 5vw;
+    animation: leaf 3s linear infinite;
+
+}
+
+.babyPink_leaf {
+    position: absolute;
+    left: 1%;
+    bottom: 0%;
+    z-index: 5;
+    width: 7vw;
+    animation: leaf2 3s linear infinite;
+}
+
+.purple_leaf {
+    position: absolute;
+    left: -0.4%;
+    bottom: 0%;
+    z-index: 4;
+    width: 7vw;
+    animation: leaf2 3s linear infinite;
+}
+
+.yell_leaf {
+    position: absolute;
+    bottom: 0%;
+    left: 7%;
+    z-index: 5;
+    width: 7vw;
+    animation: leaf 3s linear infinite;
+}
+
+.red_left {
+    position: absolute;
+    left: 0%;
+    bottom: 3%;
+    z-index: 4;
+    width: 9vw;
+    animation: leaf2 5s linear infinite;
+}
+
+.red_left2 {
+    position: absolute;
+    left: 8%;
+    bottom: 0%;
+    z-index: 4;
+    width: 8vw;
+    animation: leaf3 5s linear infinite;
+}
+
+.babyPurple_leaf {
+    position: absolute;
+    left: 3%;
+    bottom: 0%;
+    z-index: 4;
+    width: 10vw;
+    animation: leaf3 3s linear infinite;
+}
+
+.tree1 {
+    position: absolute;
+    left: 28%;
+    bottom: 29%;
+    z-index: 5;
+    width: 6vw;
+}
+
+.tree2 {
+    position: absolute;
+    left: 30%;
+    bottom: 29%;
+    z-index: 5;
+    width: 7vw;
+}
+
+/* leaf_Left */
+
+
+.pink_leaf2 {
+    position: absolute;
+    left: 63%;
+    bottom: -0.2%;
+    z-index: 4;
+    width: 12vw;
+    animation: leaf2 2s linear infinite;
+}
+
+.babyPink_leaf2 {
+    position: absolute;
+    left: 62%;
+    bottom: -0.2%;
+    z-index: 5;
+    width: 10vw;
+    animation: leaf 5s linear infinite;
+}
+
+.red_right {
+    position: absolute;
+    left: 61%;
+    bottom: -0.2%;
+    z-index: 4;
+    width: 4vw;
+    animation: leaf2 2s linear infinite;
+}
+
+.red_right2 {
+    position: absolute;
+    left: 69%;
+    bottom: -0.2%;
+    z-index: 3;
+    width: 3.7vw;
+    animation: leaf3 3s linear infinite;
+}
+
+.babyPurple_leaf2 {
+    position: absolute;
+    left: 59%;
+    bottom: -0.2%;
+    z-index: 4;
+    width: 12vw;
+    animation: leaf3 4s linear infinite;
+}
+
+.yell_leaf2 {
+    position: absolute;
+    left: 56%;
+    bottom: -0.2%;
+    z-index: 4;
+    width: 10vw;
+    animation: leaf2 2s linear infinite;
+}
+
+/* leaf_Right */
+
+.hippocampus {
+    position: absolute;
+    left: 30%;
+    bottom: 47%;
+    z-index: 1;
+    width: 2vw;
+    animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+.hippocampus2 {
+    position: absolute;
+    left: 32.5%;
+    bottom: 47%;
+    z-index: 1;
+    width: 1.5vw;
+    animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+    animation-delay: 0.4s;
+}
+
+.hippocampus3 {
+    position: absolute;
+    left: 34.5%;
+    bottom: 47.5%;
+    z-index: 1;
+    width: 1vw;
+    animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+    animation-delay: 0.3s;
+}
+
+.miniFish {
+    position: absolute;
+    left: 21%;
+    bottom: 65%;
+    z-index: 1;
+    width: 7vw;
+    animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+.miniFish2 {
+    animation-delay: 0.3s;
+}
+
+.yellFish {
+    position: absolute;
+    left: 55%;
+    bottom: 25%;
+    z-index: 4;
+    width: 5vw;
+    animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+.nimoFish {
+    position: absolute;
+    left: 64%;
+    bottom: 24%;
+    z-index: 4;
+    width: 5vw;
+    animation: nimo 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+.nimoFish2 {
+    position: absolute;
+    left: 68%;
+    bottom: 23%;
+    z-index: 4;
+    width: 3vw;
+    transform: rotate(12deg);
+    animation: nimo 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+
+@keyframes fish {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 10px);
+    }
+}
+
+@keyframes hipo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 10px);
+    }
+}
+
+@keyframes nimo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-10px, 10px);
+    }
+}
+
+@keyframes dori {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(5px, 10px);
+    }
+}
+
+@keyframes leaf {
+    0% {
+        transform: rotate(2deg);
+        transform-origin: 0% 100%;
+    }
+
+    50% {
+        transform: rotate(-2deg);
+        transform-origin: 0% 100%;
+    }
+
+    100% {
+        transform: rotate(2deg);
+        transform-origin: 0% 100%;
+    }
+}
+
+@keyframes leaf2 {
+    0% {
+        transform: rotate(1deg);
+        transform-origin: 0% 100%;
+    }
+
+    50% {
+        transform: rotate(3deg);
+        transform-origin: 0% 100%;
+    }
+
+    100% {
+        transform: rotate(1deg);
+        transform-origin: 0% 100%;
+    }
+}
+
+@keyframes leaf3 {
+    0% {
+        transform: rotate(4deg);
+        transform-origin: 0% 100%;
+    }
+
+    50% {
+        transform: rotate(-3deg);
+        transform-origin: 0% 100%;
+    }
+
+    100% {
+        transform: rotate(4deg);
+        transform-origin: 0% 100%;
+    }
+}
+
+/* //section02 */
+
+
+#section03 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.s3 {
+    width: 100%;
+    height: 100%;
+    left: 150%;
+}
+
+.octopus {
+    position: absolute;
+    left: 25%;
+    bottom: 0%;
+    z-index: 1;
+    width: 100%;
+}
+
+
+#section04 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.s4 {
+    width: 100%;
+    height: 100%;
+    left: 150%;
+}
+
+#section05 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.s5 {
+    width: 100%;
+    height: 100%;
+    left: 150%;
+}

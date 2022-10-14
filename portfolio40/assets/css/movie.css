@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+#banner {
+    background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/fzKWwcaam9QSTaMSJlORuSojxio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right -200px top;
+    border-bottom: 1px solid #130f0f;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.bannerBg {
+    background-image: linear-gradient(to right, rgba(7.45%, 5.88%, 5.88%, 1.00) 150px, rgba(7.45%, 5.88%, 5.88%, 0.84) 100%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container {max-width: 1320px;margin: 0 auto;}
+.padding {
+    padding: 30px 0;
+}
+.bannerWrap {
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.posterWrap {
+    min-width: 300px;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+.posterWrap img {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    outline: none;
+}
+
+
+.infoWrap {
+    display: flex;
+}
+.infoList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    padding-left: 40px;
+}
+.infoList .title {
+    width: 100%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.infoList .title h2 {
+    width: 100%;
+    margin-bottom: -20px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.infoList .title h2 a {
+    font-weight: 700;
+}
+.infoList .title h2 .tagDate {
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.infoList .facts {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.infoList .facts .certification {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    align-content: center;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
+    padding: 0.06em 4px 0.15em 4px;
+    border-radius: 2px;
+    margin-right: 7px;
+    font-size: 14px;
+    line-height: 1;
+}
+.infoList .facts .release {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.infoList .facts .release:before {
+    content: '';
+    font-size: 1.1em;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.infoList .facts .genres {
+    padding-left: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.infoList .facts .genres:before {
+    font-size: 1.1em;
+    line-height: 1;
+    content: '\2022';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.infoList .facts .runtime {
+    padding-left: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.infoList .facts .runtime:before {
+    font-size: 1.1em;
+    line-height: 1;
+    content: '\2022';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.infoList .miniMenu {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 68px;
+    align-items: center;
+}
+.infoList .miniMenu .chart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 68px;
+    margin-right: 20px;
+}
+.infoList .miniMenu .chart .percent {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #081c22;
+    text-align: center;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+.infoList .miniMenu .chart .text {
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 6px;
+}
+
+.infoList .miniMenu .tooltip {
+    padding: 3px 0;
+    margin-right: 20px;
+}
+.infoList .miniMenu .tooltip a {
+    border-radius: 50%;
+    width: 46px; height: 46px;
+    background-color: rgba(3,37,65);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.infoList .miniMenu .tooltip #favourite {}
+.infoList .miniMenu .tooltip #watchlist {}
+.infoList .miniMenu .tooltip #star {}
+.infoList .miniMenu .tooltip #boock {}
+.infoList .miniMenu .tooltip #star {}
+.infoList .miniMenu .tooltip .icon {}
+
+
+
+.explain {
+    width: 100%;
+}
+.explain h3 {
+    width: 100%;
+    margin: 0 0 8px 0;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+}
+.explain h2 {
+    width: 100%;
+    margin: 10px 0 8px 0;
+    font-weight: 600;
+    font-size: 22px;
+}
+.explain .overview {}
+.explain .overview p {
+    font-size: 15px;
+}
+
+
+
+.people {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 1000px;
+}
+.people .profile {
+    width: 33%;
+    height: auto;
+    flex-basis: 33%;
+    padding-right: 20px;
+}
+.people .profile .name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.people .profile .character {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.character.noM {
+    margin-bottom: 0 !important;
+}
+
+
+
+#main {
+    color: #000;
+}
+section.secList {}
+.secList h3 {}
+#cast_scroller {}
+#cast_scroller .people {}
+.scroller {}
+#cast_scroller ol .card {
+    margin: 10px 4px 10px 10px;
+    border: 1px solid rgba(227,227,227,1);
+    padding-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 140px;
+    width: 140px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+#cast_scroller ol .card a {
+    display: block;
+}
+#cast_scroller ol .card .profile {
+    width: 100%;
+    height: 100%;
+    padding-right: 0;
+}
+#cast_scroller ol .card p {
+    padding: 10px 10px 0 10px;
+}
+#cast_scroller ol .card p a {
+    font-weight: bold;
+}
+#cast_scroller ol .card .character {
+    padding: 0 10px;
+}
+#cast_scroller ol .view_more {}
+#cast_scroller ol .view_more p a {}
+#cast_scroller ol .view_more p a .arrow {}
+
+
+
+section.review {}
+.menu {}
+.menu h3 {}
+.menu ul {}
+.menu ul li {}
+.menu ul li.active {}
+.review .content {}
+
+
+
+section.media {}
+.media_scroller {}
+.media_scroller .content {}
+.media_scroller .content .card {}
+.media_scroller .content .card .cardWrap {}
+.cardWrap .play_trailer {}
+
+
+
+section.recommend {}
+section.recommend h3 {}
+.recommend_scroller {}
+.scroller {}
+.scroller .mini_card {
+    display: inline-block;
+    width: 250px;
+    margin: 0 15px 0 0;
+}
+.scroller .mini_card .imgCont {
+    width: 250px;
+    height: 141px;
+}
+.scroller .mini_card .imgCont a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.scroller .mini_card .imgCont img {
+    width: 250px;
+    height: 141px;
+    border-radius: 8px;
+}
+.scroller .mini_card .movieTitle {}
+.scroller .mini_card .movieTitle .title {}
+.scroller .mini_card .movieTitle .average {}
