@@ -40,3 +40,15 @@
 38. 송준* : https://webstoryboy.github.io/studyPORT/portfolio38/index4.html <br>
 39. 허아* : https://webstoryboy.github.io/studyPORT/portfolio39/index.html <br>
 40. 김현* : https://webstoryboy.github.io/studyPORT/portfolio40/index.html <br>
+41. 김은* : https://webstoryboy.github.io/studyPORT/portfolio41/index.html <br>
+42. 김현* : https://webstoryboy.github.io/studyPORT/portfolio42/index.html <br>
+43. 진재* : https://webstoryboy.github.io/studyPORT/portfolio43/index5.html <br>
+44. 장동* : https://webstoryboy.github.io/studyPORT/portfolio44/index.html <br>
+45. 조재* : https://webstoryboy.github.io/studyPORT/portfolio45/index.html <br>
+46. 정범* : https://webstoryboy.github.io/studyPORT/portfolio46/index.html <br>
+47. 재수* : https://webstoryboy.github.io/studyPORT/portfolio47/index.html <br>
+48. 김지* : https://webstoryboy.github.io/studyPORT/portfolio48/index.html <br>
+49. 전현* : https://webstoryboy.github.io/studyPORT/portfolio49/index.html <br>
+50. 서혜* : https://webstoryboy.github.io/studyPORT/portfolio50/index.html <br>
+51. 조서* : https://webstoryboy.github.io/studyPORT/portfolio51/index.html <br>
+52. 이강* : https://webstoryboy.github.io/studyPORT/portfolio52/index.html <br>

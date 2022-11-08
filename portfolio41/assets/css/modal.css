@@ -1,0 +1,393 @@
+.source {
+    position: absolute;
+    top: 32vh;
+    left: 140vh;
+}
+
+ .source button {
+    width: 19vh;
+    height: 5vh;
+    font-size: 2.5vh;
+    color: #fff;
+    background: #000;
+    line-height: 5vh;
+    text-align: center;
+    border: transparent;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.source button:hover {
+    background: #ccc;
+    color: #000;
+} 
+
+
+
+button.modal_index{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    top: 12vh;
+    right: -5vh;
+}
+
+button.modal_index:hover {
+  color: #fff;
+  background: transparent;
+}
+
+
+#section6 .source {
+    position: absolute;
+    top: 64vh;
+    left: 140vh;
+}
+
+ #section6 .source button:hover {
+    background: #fff;
+} 
+
+#section6 button.modal_index:hover {
+    color: #fff;
+    background: transparent;
+  }
+
+
+
+/* modal */
+#modal1 {
+    position: absolute;
+    top: -13vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+
+#modal2 {
+    position: absolute;
+    top: -13vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+
+#modal3 {
+    position: absolute;
+    top: -13vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+
+#modal4 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+#modal5 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+#modal6 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+
+#modal7 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    border-radius: 10px;
+    background: #1e1e1e;
+}
+
+#modal1.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+
+#modal1.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal2.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal2.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal3.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal3.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal4.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal4.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal5.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal5.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+
+#modal6.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal6.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal7.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal7.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+
+
+.modal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0)
+}
+#modal1.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal1.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+#modal2.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal2.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+#modal3.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal3.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+#modal4.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal4.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+#modal5.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal5.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+#modal6.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal6.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+#modal7.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal7.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+   
+@keyframes foldOut {
+    0%   {transform: scaleX(0) scaleY(0.005)}
+    50%  {transform: scaleX(1) scaleY(0.005)}
+    100% {transform: scaleX(1) scaleY(1)}
+}
+@keyframes foldIn {
+    0%   {transform: scaleX(1) scaleY(1)}
+    50%  {transform: scaleX(1) scaleY(0.005)}
+    100% {transform: scaleX(0) scaleY(0.005)}
+}
+@keyframes zoomOut {
+    0%   {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes zoomIn {
+    0%   {transform: scale(1)}
+    100% {transform: scale(0)}
+}
+.modal-close1 {
+    margin-top: 10px;
+}
+ .modal-close2 {
+    margin-top: 10px;
+}
+.modal-close3 {
+    margin-top: 10px;
+}
+
+.modal-close4 {
+    margin-top: 10px;
+}
+
+.modal-close5 {
+    margin-top: 10px;
+}
+
+.modal-close6 {
+    margin-top: 10px;
+} 
+
+.modal-close7 {
+    margin-top: 10px;
+}
+
+
+.modal-cont {
+    opacity: 1;
+    position: relative;
+}
+.code-view {
+    width: 54vw;
+    height: 60vh;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.view-header {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 32px;
+    background: #fff;
+    padding: 7px 0 7px 10px;
+    border-bottom: 1px solid #eee;
+    border-radius: 5px 5px 0 0;
+}
+.view-header > span {
+    width: 10px; 
+    height: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}    
+.view-header > span:nth-child(1) {
+    background-color: #f1b5b5;
+}
+.view-header > span:nth-child(2) {
+    background-color: #eec1a1;
+}
+.view-header > span:nth-child(3) {
+    background-color: #a1d4a3;
+}
+.view-title {
+    position: absolute;
+    left: 0; 
+    top: 32px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0 7px;
+    height: 37px;
+}
+.view-title li {
+    display: inline;
+}
+.view-title li a {
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    padding: 12px 20px 8px 20px;
+    margin: 2px 0 0 0;
+}
+.view-title li.active a {
+    color: #000;
+    background: #f0f0f4;
+}
+
+.view-cont {
+      height: 100%;
+      padding-top: 50px;
+}
+
+.view-cont > div {
+    display: none;
+}
+.view-cont > div:first-child {
+    display: block;
+}
+.view-cont pre code.hljs {
+    line-height: 1.6;
+}
